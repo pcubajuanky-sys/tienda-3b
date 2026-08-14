@@ -2,7 +2,25 @@
 // Sin dependencias, sin backend: todo pasa en el navegador del cliente.
 let CAT = null;          // el catalogo.json cargado
 let filtroCat = '';      // categoría activa ('' = todas)
+let filtroOferta = false;
 let busqueda = '';
+let elementoAnteriorFoco = null;   // para devolver el foco al cerrar modal/carrito
+let productoModal = null;
+
+// ── Utilidades ──
+
+function fmt(n) { return Number(n).toLocaleString('es-MX', { maximumFractionDigits: 0 }); }
+
+// Búsqueda insensible a acentos: "audifonos" debe encontrar "Audífonos".
+function normaliza(s) {
+  return (s || '').toString().normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+}
+
+function escapeHtml(s) {
+  return (s || '').toString()
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+}
 
 // El código del vendedor sobrevive a la navegación: se guarda al entrar por su enlace.
 function resolverVendedor() {
@@ -14,41 +32,175 @@ function resolverVendedor() {
   return v;
 }
 
-function fmt(n) { return Number(n).toLocaleString('es-MX', { maximumFractionDigits: 0 }); }
+// ── Cloudinary: transformación de URL (rendimiento en móvil) ──
+// Guarda: solo se toca si la URL trae /image/upload/ y NO trae ya una transformación.
+// Los 2 productos que no están en Cloudinary se sirven tal cual (no entran a esta rama).
+function esCloudinary(url) {
+  return !!url && url.indexOf('/image/upload/') !== -1;
+}
+
+function fotoUrl(url, transform) {
+  const marcador = '/image/upload/';
+  const i = url.indexOf(marcador);
+  if (i === -1) return url;
+  const despues = url.slice(i + marcador.length);
+  const primerSegmento = despues.split('/')[0];
+  const yaTransformada = !/^v\d+$/.test(primerSegmento) &&
+    primerSegmento.split(',').every((tok) => /^[a-z]+_[\w.:]+$/i.test(tok));
+  if (yaTransformada) return url;
+  return url.slice(0, i + marcador.length) + transform + '/' + despues;
+}
+
+function fotoCard(url) {
+  if (!esCloudinary(url)) return { src: url, srcset: '' };
+  const w400 = fotoUrl(url, 'f_auto,q_auto,w_400,c_limit');
+  const w800 = fotoUrl(url, 'f_auto,q_auto,w_800,c_limit');
+  return { src: w400, srcset: `${w400} 400w, ${w800} 800w` };
+}
+
+function fotoDetalle(url) {
+  return esCloudinary(url) ? fotoUrl(url, 'f_auto,q_auto,w_900,c_limit') : url;
+}
+
+function fotoMosaico(url) {
+  return esCloudinary(url) ? fotoUrl(url, 'f_auto,q_auto,w_200,c_limit') : url;
+}
+
+// Recuadro con la inicial cuando la foto no carga.
+function imgFallback(img) {
+  const cont = img.closest('.card-foto') || img.closest('.modal-foto');
+  if (!cont) return;
+  const nombre = (img.alt || '').trim();
+  const inicial = nombre.charAt(0).toUpperCase() || '?';
+  cont.innerHTML = `<div class="inicial" aria-hidden="true">${inicial}</div>`;
+}
+
+// ── Filtro y búsqueda ──
 
 function visibles() {
-  const q = busqueda.trim().toLowerCase();
+  const q = normaliza(busqueda);
   return (CAT.items || []).filter((p) => {
-    if (filtroCat && p.cat !== filtroCat) return false;
+    if (filtroOferta && !p.enOferta) return false;
+    if (!filtroOferta && filtroCat && p.cat !== filtroCat) return false;
     if (!q) return true;
-    return (p.name + ' ' + p.notes + ' ' + p.subcat).toLowerCase().includes(q);
+    return normaliza(p.name + ' ' + p.notes + ' ' + p.subcat).includes(q);
   });
 }
 
+function setCat(n) { filtroCat = n; filtroOferta = false; renderFiltros(); renderGrid(); }
+function setOferta() { filtroOferta = true; filtroCat = ''; renderFiltros(); renderGrid(); }
+
 function renderFiltros() {
-  const cats = (CAT.categorias || []).filter((c) => (CAT.items || []).some((p) => p.cat === c.n));
+  const items = CAT.items || [];
+  const cats = (CAT.categorias || []).filter((c) => items.some((p) => p.cat === c.n));
+  const nOfertas = items.filter((p) => p.enOferta).length;
+  const chipsCat = cats.map((c) => {
+    const n = items.filter((p) => p.cat === c.n).length;
+    const activo = !filtroOferta && filtroCat === c.n;
+    return `<button class="chip ${activo ? 'on' : ''}" aria-pressed="${activo}" onclick="setCat('${c.n}')">` +
+      `<span class="icono" aria-hidden="true">${c.e || ''}</span> ${escapeHtml(c.n)} <span class="n">${n}</span></button>`;
+  }).join('');
+  const activoTodo = !filtroOferta && filtroCat === '';
   document.getElementById('filtros').innerHTML =
-    `<button class="chip ${filtroCat === '' ? 'on' : ''}" onclick="setCat('')">Todo</button>` +
-    cats.map((c) => `<button class="chip ${filtroCat === c.n ? 'on' : ''}" onclick="setCat('${c.n}')">${c.e || ''} ${c.n}</button>`).join('');
+    `<button class="chip ${activoTodo ? 'on' : ''}" aria-pressed="${activoTodo}" onclick="setCat('')">Todo</button>` +
+    (nOfertas > 0 ? `<button class="chip ${filtroOferta ? 'on' : ''}" aria-pressed="${filtroOferta}" onclick="setOferta()">🏷️ Ofertas <span class="n">${nOfertas}</span></button>` : '') +
+    chipsCat;
 }
 
-function setCat(n) { filtroCat = n; renderFiltros(); renderGrid(); }
+// ── Parrilla ──
+
+function accionHtml(id) {
+  const q = carrito[id] || 0;
+  if (q === 0) return `<button class="add" data-add="${id}">Añadir</button>`;
+  return `<div class="qty">` +
+    `<button data-minus="${id}" aria-label="Quitar una unidad">−</button>` +
+    `<strong aria-hidden="true">${q}</strong><span class="sr-only">${q} en el pedido</span>` +
+    `<button data-plus="${id}" aria-label="Añadir una unidad">+</button>` +
+    `</div>`;
+}
+
+function tarjetaHtml(p) {
+  const foto = fotoCard(p.photo);
+  return `
+    <div class="card" data-id="${p.id}" role="button" tabindex="0" aria-label="Ver detalle de ${escapeHtml(p.name)}">
+      <div class="card-foto">
+        <img src="${foto.src}" ${foto.srcset ? `srcset="${foto.srcset}" sizes="(max-width:480px) 45vw, 220px"` : ''}
+             alt="${escapeHtml(p.name)}" loading="lazy" decoding="async" onerror="imgFallback(this)">
+        ${p.enOferta ? `<span class="card-oferta">OFERTA</span>` : ''}
+      </div>
+      <div class="body">
+        <div class="nom">${escapeHtml(p.name)}</div>
+        ${p.notes ? `<div class="desc">${escapeHtml(p.notes)}</div>` : ''}
+        <div class="precio-linea">
+          ${p.enOferta ? `<span class="tachado">${fmt(p.precioNormalCUP)} CUP</span>` : ''}
+          <span class="precio">${fmt(p.precioCUP)} CUP<span class="usd">· $${p.precioUSD}</span></span>
+        </div>
+        <div class="card-accion" id="acc-${p.id}">${accionHtml(p.id)}</div>
+      </div>
+    </div>`;
+}
 
 function renderGrid() {
   const items = visibles();
-  document.getElementById('vacio').hidden = items.length > 0;
-  document.getElementById('grid').innerHTML = items.map((p) => `
-    <div class="card">
-      <img src="${p.photo}" alt="${p.name}" loading="lazy">
-      <div class="body">
-        <div class="nom">${p.name}</div>
-        ${p.notes ? `<div class="desc">${p.notes}</div>` : ''}
-        ${p.enOferta ? `<div><span class="badge">OFERTA</span> <span class="tachado">${fmt(p.precioNormalCUP)} CUP</span></div>` : ''}
-        <div class="precio">${fmt(p.precioCUP)} CUP <span class="usd">· $${p.precioUSD}</span></div>
-        <div class="acc" id="acc-${p.id}"></div>
-      </div>
-    </div>`).join('');
-  items.forEach((p) => renderAccion(p.id));
+  const buscando = busqueda.trim() !== '' || filtroCat !== '' || filtroOferta;
+  document.getElementById('vacio').hidden = !(items.length === 0 && buscando);
+  document.getElementById('grid').innerHTML = items.map(tarjetaHtml).join('');
+}
+
+function refrescarAcciones(id) {
+  const el = document.getElementById('acc-' + id);
+  if (el) el.innerHTML = accionHtml(id);
+  if (productoModal === id) {
+    const m = document.getElementById('modal-accion');
+    if (m) m.innerHTML = accionHtml(id);
+  }
+}
+
+// ── Detalle de producto (modal) ──
+
+function abrirDetalle(id) {
+  const p = (CAT.items || []).find((x) => x.id === id);
+  if (!p) return;
+  productoModal = id;
+  document.getElementById('modal-img').src = fotoDetalle(p.photo);
+  document.getElementById('modal-img').alt = p.name;
+  document.getElementById('modal-img').setAttribute('onerror', 'imgFallback(this)');
+  document.getElementById('modal-cat').textContent = p.cat || '';
+  document.getElementById('modal-nombre').textContent = p.name;
+  document.getElementById('modal-desc').textContent = p.notes || '';
+  document.getElementById('modal-precio').innerHTML =
+    (p.enOferta ? `<span class="tachado">${fmt(p.precioNormalCUP)} CUP</span>` : '') +
+    `<span class="precio">${fmt(p.precioCUP)} CUP<span class="usd">· $${p.precioUSD}</span></span>`;
+  document.getElementById('modal-accion').innerHTML = accionHtml(id);
+
+  elementoAnteriorFoco = document.activeElement;
+  const modal = document.getElementById('modal-detalle');
+  modal.hidden = false;
+  document.getElementById('modal-cerrar').focus();
+  document.addEventListener('keydown', capturarTecladoModal);
+}
+
+function cerrarDetalle() {
+  document.getElementById('modal-detalle').hidden = true;
+  productoModal = null;
+  document.removeEventListener('keydown', capturarTecladoModal);
+  if (elementoAnteriorFoco && elementoAnteriorFoco.isConnected) elementoAnteriorFoco.focus();
+}
+
+function capturarTecladoModal(e) {
+  const modal = document.getElementById('modal-detalle');
+  if (modal.hidden) return;
+  if (e.key === 'Escape') { cerrarDetalle(); return; }
+  if (e.key === 'Tab') atraparFoco(e, modal);
+}
+
+function atraparFoco(e, contenedor) {
+  const enfocables = contenedor.querySelectorAll('button, [href], input, textarea, select, [tabindex]:not([tabindex="-1"])');
+  if (!enfocables.length) return;
+  const primero = enfocables[0];
+  const ultimo = enfocables[enfocables.length - 1];
+  if (e.shiftKey && document.activeElement === primero) { e.preventDefault(); ultimo.focus(); }
+  else if (!e.shiftKey && document.activeElement === ultimo) { e.preventDefault(); primero.focus(); }
 }
 
 // ── Carrito ──
@@ -59,24 +211,15 @@ function guardarCarrito() {
   localStorage.setItem('carrito', JSON.stringify(carrito));
   const n = Object.values(carrito).reduce((s, q) => s + q, 0);
   document.getElementById('carrito-count').textContent = n;
-  document.getElementById('btn-carrito').hidden = n === 0;
+  actualizarBarraMovil();
 }
 
-function addCarrito(id) { carrito[id] = (carrito[id] || 0) + 1; guardarCarrito(); renderAccion(id); renderCarrito(); }
+function addCarrito(id) { carrito[id] = (carrito[id] || 0) + 1; guardarCarrito(); refrescarAcciones(id); renderCarrito(); }
 
 function quitarCarrito(id) {
   carrito[id] = (carrito[id] || 0) - 1;
   if (carrito[id] <= 0) delete carrito[id];
-  guardarCarrito(); renderAccion(id); renderCarrito();
-}
-
-function renderAccion(id) {
-  const el = document.getElementById('acc-' + id);
-  if (!el) return;
-  const q = carrito[id] || 0;
-  el.innerHTML = q === 0
-    ? `<button class="add" onclick="addCarrito('${id}')">Añadir</button>`
-    : `<div class="qty"><button onclick="quitarCarrito('${id}')">−</button><strong>${q}</strong><button onclick="addCarrito('${id}')">+</button></div>`;
+  guardarCarrito(); refrescarAcciones(id); renderCarrito();
 }
 
 function itemsCarrito() {
@@ -89,25 +232,83 @@ function totalCarrito() {
   return itemsCarrito().reduce((s, { p, qty }) => s + p.precioCUP * qty, 0);
 }
 
-function renderCarrito() {
-  const items = itemsCarrito();
-  document.getElementById('carrito-items').innerHTML = items.length
-    ? items.map(({ p, qty }) => `<div class="linea"><div>${p.name}<br><span style="color:var(--text3)">x${qty}</span></div><div>${fmt(p.precioCUP * qty)} CUP</div></div>`).join('')
-    : '<div class="vacio">Tu pedido está vacío.</div>';
-  document.getElementById('carrito-total').textContent = items.length ? `Total: ${fmt(totalCarrito())} CUP` : '';
+function lineaCarritoHtml(p, qty) {
+  const foto = fotoCard(p.photo);
+  return `<div class="linea">
+      <img src="${foto.src}" alt="" loading="lazy" onerror="imgFallback(this)">
+      <div class="linea-info">
+        <div class="linea-nom">${escapeHtml(p.name)}</div>
+        <div class="linea-qty">x${qty}</div>
+      </div>
+      <div class="linea-sub">${fmt(p.precioCUP * qty)} CUP</div>
+    </div>`;
 }
 
-function abrirCarrito() { renderCarrito(); document.getElementById('panel').hidden = false; }
-function cerrarCarrito() { document.getElementById('panel').hidden = true; }
-
-function enviarPorWhatsApp() {
+function actualizarBarraMovil() {
   const items = itemsCarrito();
-  if (!items.length) { alert('Tu pedido está vacío.'); return; }
+  const n = items.reduce((s, { qty }) => s + qty, 0);
+  const barra = document.getElementById('barra-movil');
+  if (n === 0) { barra.hidden = true; return; }
+  barra.hidden = false;
+  document.getElementById('barra-movil-info').textContent = `${n} producto${n === 1 ? '' : 's'} · ${fmt(totalCarrito())} CUP`;
+}
+
+function renderCarrito() {
+  const items = itemsCarrito();
+  const hayItems = items.length > 0;
+  document.getElementById('carrito-items').innerHTML = items.map(({ p, qty }) => lineaCarritoHtml(p, qty)).join('');
+  document.getElementById('carrito-vacio').hidden = hayItems;
+  document.getElementById('carrito-total').hidden = !hayItems;
+  document.getElementById('form-pedido').hidden = !hayItems;
+  document.getElementById('carrito-total').textContent = hayItems ? `Total: ${fmt(totalCarrito())} CUP` : '';
+}
+
+function abrirCarrito() {
+  renderCarrito();
+  elementoAnteriorFoco = document.activeElement;
+  const panel = document.getElementById('panel');
+  panel.hidden = false;
+  document.getElementById('btn-cerrar-carrito').focus();
+  document.addEventListener('keydown', capturarTecladoCarrito);
+}
+
+function cerrarCarrito() {
+  document.getElementById('panel').hidden = true;
+  document.removeEventListener('keydown', capturarTecladoCarrito);
+  if (elementoAnteriorFoco && elementoAnteriorFoco.isConnected) elementoAnteriorFoco.focus();
+}
+
+function capturarTecladoCarrito(e) {
+  const panel = document.getElementById('panel');
+  if (panel.hidden) return;
+  if (e.key === 'Escape') { cerrarCarrito(); return; }
+  if (e.key === 'Tab') atraparFoco(e, panel);
+}
+
+// Validación con errores bajo el campo (nada de alert()).
+function marcarError(idCampo, idError, mostrar) {
+  document.getElementById(idCampo).classList.toggle('invalido', mostrar);
+  document.getElementById(idError).hidden = !mostrar;
+}
+
+function enviarPorWhatsApp(ev) {
+  if (ev) ev.preventDefault();
+  const items = itemsCarrito();
+  if (!items.length) return;   // el formulario está oculto sin items; guarda defensiva
+
   const nombre = document.getElementById('c-nombre').value.trim();
   const tel = document.getElementById('c-tel').value.trim();
   const dir = document.getElementById('c-dir').value.trim();
   const nota = document.getElementById('c-nota').value.trim();
-  if (!nombre || !tel || !dir) { alert('Faltan tu nombre, teléfono o dirección.'); return; }
+
+  marcarError('c-nombre', 'err-nombre', !nombre);
+  marcarError('c-tel', 'err-tel', !tel);
+  marcarError('c-dir', 'err-dir', !dir);
+  if (!nombre || !tel || !dir) {
+    const primerInvalido = !nombre ? 'c-nombre' : (!tel ? 'c-tel' : 'c-dir');
+    document.getElementById(primerInvalido).focus();
+    return;
+  }
 
   const v = resolverVendedor();
   const lineas = ['🛒 *Pedido desde la web*'];
@@ -121,18 +322,114 @@ function enviarPorWhatsApp() {
   window.open(`https://wa.me/${CAT.whatsapp}?text=${encodeURIComponent(lineas.join('\n'))}`, '_blank');
 }
 
-async function iniciar() {
-  const r = await fetch('catalogo.json?v=' + Date.now());  // sin caché: el precio tiene que ser el de ahora
-  CAT = await r.json();
+// ── Portada: mosaico de fotos reales + dato de productos ──
+
+function renderHero() {
+  const items = (CAT.items || []).filter((p) => esCloudinary(p.photo));
+  const porCategoria = new Map();
+  items.forEach((p) => { if (!porCategoria.has(p.cat)) porCategoria.set(p.cat, p); });
+  let elegidos = Array.from(porCategoria.values());
+  if (elegidos.length < 12) {
+    for (const p of items) {
+      if (elegidos.length >= 12) break;
+      if (!elegidos.includes(p)) elegidos.push(p);
+    }
+  }
+  elegidos = elegidos.slice(0, 12);
+  document.getElementById('hero-mosaico').innerHTML =
+    elegidos.map((p) => `<img src="${fotoMosaico(p.photo)}" alt="" loading="lazy">`).join('');
+  document.getElementById('hero-dato-productos').textContent = `${(CAT.items || []).length} productos disponibles`;
+}
+
+// ── Cabecera compacta al hacer scroll ──
+
+function actualizarHeaderScroll() {
+  document.getElementById('header').classList.toggle('compacta', window.scrollY > 8);
+}
+
+// ── Carga del catálogo, con estado de error y reintento ──
+
+async function cargarCatalogo() {
+  document.getElementById('error-carga').hidden = true;
+  document.getElementById('vacio').hidden = true;
+  document.getElementById('grid').hidden = true;
+  document.getElementById('skeleton').hidden = false;
+  try {
+    const r = await fetch('catalogo.json?v=' + Date.now());   // sin caché: el precio tiene que ser el de ahora
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    CAT = await r.json();
+  } catch (err) {
+    document.getElementById('skeleton').hidden = true;
+    document.getElementById('error-carga').hidden = false;
+    return;
+  }
+
   const v = resolverVendedor();
   document.getElementById('vendedor').textContent = v ? `Te atiende: ${v.nombre}` : '';
   document.getElementById('actualizado').textContent =
     'Catálogo actualizado el ' + new Date(CAT.generado).toLocaleString('es-MX');
-  document.getElementById('buscador').addEventListener('input', (e) => { busqueda = e.target.value; renderGrid(); });
-  document.getElementById('btn-carrito').addEventListener('click', abrirCarrito);
+
+  renderHero();
   guardarCarrito();
   renderFiltros();
   renderGrid();
+  document.getElementById('skeleton').hidden = true;
+  document.getElementById('grid').hidden = false;
+}
+
+async function iniciar() {
+  // Buscador: accesible (label real ya en el HTML) y con debounce de 150ms.
+  let temporizadorBusqueda = null;
+  document.getElementById('buscador').addEventListener('input', (e) => {
+    clearTimeout(temporizadorBusqueda);
+    const valor = e.target.value;
+    temporizadorBusqueda = setTimeout(() => { busqueda = valor; renderGrid(); }, 150);
+  });
+
+  document.getElementById('btn-carrito').addEventListener('click', abrirCarrito);
+  document.getElementById('btn-ver-pedido').addEventListener('click', abrirCarrito);
+  document.getElementById('btn-cerrar-carrito').addEventListener('click', cerrarCarrito);
+  document.getElementById('btn-cerrar-carrito-2').addEventListener('click', cerrarCarrito);
+  document.getElementById('panel-fondo').addEventListener('click', cerrarCarrito);
+  document.getElementById('form-pedido').addEventListener('submit', enviarPorWhatsApp);
+
+  document.getElementById('modal-cerrar').addEventListener('click', cerrarDetalle);
+  document.getElementById('modal-fondo').addEventListener('click', cerrarDetalle);
+
+  document.getElementById('btn-ver-todo').addEventListener('click', () => {
+    busqueda = ''; filtroCat = ''; filtroOferta = false;
+    document.getElementById('buscador').value = '';
+    renderFiltros(); renderGrid();
+  });
+  document.getElementById('btn-reintentar').addEventListener('click', cargarCatalogo);
+
+  // Delegación: tarjetas abren el detalle; los controles de cantidad no (viven dentro de .card-accion).
+  document.getElementById('grid').addEventListener('click', (e) => {
+    if (e.target.closest('.card-accion')) return;
+    const card = e.target.closest('.card');
+    if (card) abrirDetalle(card.dataset.id);
+  });
+  document.getElementById('grid').addEventListener('keydown', (e) => {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    if (e.target.classList && e.target.classList.contains('card')) {
+      e.preventDefault();
+      abrirDetalle(e.target.dataset.id);
+    }
+  });
+
+  // Delegación global: botones de +/−/Añadir, tanto en la parrilla como en el modal de detalle.
+  document.addEventListener('click', (e) => {
+    const add = e.target.closest('[data-add]');
+    const minus = e.target.closest('[data-minus]');
+    const plus = e.target.closest('[data-plus]');
+    if (add) { e.stopPropagation(); addCarrito(add.dataset.add); }
+    else if (minus) { e.stopPropagation(); quitarCarrito(minus.dataset.minus); }
+    else if (plus) { e.stopPropagation(); addCarrito(plus.dataset.plus); }
+  });
+
+  window.addEventListener('scroll', actualizarHeaderScroll, { passive: true });
+
+  await cargarCatalogo();
 }
 
 iniciar();

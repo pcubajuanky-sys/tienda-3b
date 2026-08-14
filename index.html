@@ -3,43 +3,131 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#7A2E5D">
 <title>3B — Tienda</title>
 <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-<header>
-  <div class="wrap">
-    <h1>🏪 3B</h1>
-    <div id="vendedor" class="vendedor"></div>
+
+<header class="header" id="header">
+  <div class="header-top wrap">
+    <a href="#" class="logo" aria-label="3B — inicio">3B</a>
+    <button id="btn-carrito" class="btn-carrito" aria-label="Ver tu pedido" type="button">
+      <span aria-hidden="true">🛒</span>
+      <span id="carrito-count" class="carrito-count" aria-live="polite">0</span>
+    </button>
+  </div>
+  <div class="header-buscador wrap">
+    <label for="buscador" class="sr-only">Buscar producto</label>
+    <input type="search" id="buscador" placeholder="Buscar producto…" autocomplete="off">
   </div>
 </header>
 
-<div class="wrap">
-  <input type="search" id="buscador" placeholder="Buscar producto…" autocomplete="off">
-  <div id="filtros" class="filtros"></div>
-  <div id="grid" class="grid"></div>
-  <div id="vacio" class="vacio" hidden>No hay productos que coincidan.</div>
-  <p id="actualizado" class="actualizado"></p>
+<section class="hero" id="hero">
+  <div class="hero-mosaico" id="hero-mosaico" aria-hidden="true"></div>
+  <div class="hero-contenido wrap">
+    <h1>Todo para tu casa, tu pelo y tu día a día</h1>
+    <p class="hero-sub">Mira el catálogo, arma tu pedido y nos escribes por WhatsApp.</p>
+    <a href="#catalogo" class="hero-cta">Ver el catálogo</a>
+    <ul class="hero-datos">
+      <li id="hero-dato-productos">— productos disponibles</li>
+      <li>Precios en CUP y USD</li>
+      <li>Coordinamos por WhatsApp</li>
+    </ul>
+  </div>
+</section>
+
+<div class="filtros-wrap" id="filtros-wrap">
+  <div class="filtros wrap" id="filtros" aria-label="Filtrar por categoría"></div>
 </div>
 
-<button id="btn-carrito" class="btn-carrito" hidden>🛒 <span id="carrito-count">0</span></button>
+<main class="wrap" id="catalogo">
+  <div id="skeleton" class="grid" aria-hidden="true">
+    <div class="card card-skel"></div><div class="card card-skel"></div>
+    <div class="card card-skel"></div><div class="card card-skel"></div>
+    <div class="card card-skel"></div><div class="card card-skel"></div>
+    <div class="card card-skel"></div><div class="card card-skel"></div>
+  </div>
+  <div id="grid" class="grid" hidden></div>
+  <div id="vacio" class="estado" hidden>
+    <p>No hay productos que coincidan con tu búsqueda.</p>
+    <button id="btn-ver-todo" class="btn-secundario" type="button">Ver todo el catálogo</button>
+  </div>
+  <div id="error-carga" class="estado" hidden>
+    <p>No pudimos cargar el catálogo. Revisa tu conexión e intenta de nuevo.</p>
+    <button id="btn-reintentar" class="btn-secundario" type="button">Reintentar</button>
+  </div>
+</main>
 
-<div id="panel" class="panel" hidden>
+<footer class="footer">
+  <div class="wrap footer-wrap">
+    <div class="footer-marca">3B</div>
+    <div id="vendedor" class="vendedor"></div>
+    <p id="actualizado" class="actualizado"></p>
+    <p class="aviso-tasa">Los precios pueden variar según la tasa del día.</p>
+  </div>
+</footer>
+
+<div id="barra-movil" class="barra-movil" hidden>
+  <span id="barra-movil-info"></span>
+  <button id="btn-ver-pedido" type="button">Ver pedido</button>
+</div>
+
+<!-- Detalle de producto -->
+<div id="modal-detalle" class="modal" hidden role="dialog" aria-modal="true" aria-labelledby="modal-nombre">
+  <div class="modal-fondo" id="modal-fondo" tabindex="-1"></div>
+  <div class="modal-caja">
+    <button class="modal-cerrar" id="modal-cerrar" aria-label="Cerrar" type="button">✕</button>
+    <div class="modal-foto">
+      <img id="modal-img" src="" alt="">
+    </div>
+    <div class="modal-body">
+      <div class="modal-cat" id="modal-cat"></div>
+      <h2 id="modal-nombre"></h2>
+      <div id="modal-precio" class="modal-precio"></div>
+      <p id="modal-desc" class="modal-desc"></p>
+      <div class="modal-accion" id="modal-accion"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Carrito -->
+<div id="panel" class="panel" hidden role="dialog" aria-modal="true" aria-labelledby="panel-titulo">
+  <div class="panel-fondo" id="panel-fondo" tabindex="-1"></div>
   <div class="panel-caja">
     <div class="panel-head">
-      <strong>Tu pedido</strong>
-      <button onclick="cerrarCarrito()" class="cerrar">✕</button>
+      <strong id="panel-titulo">Tu pedido</strong>
+      <button id="btn-cerrar-carrito" class="cerrar" aria-label="Cerrar" type="button">✕</button>
     </div>
     <div id="carrito-items"></div>
-    <div id="carrito-total" class="total"></div>
-    <div class="campos">
-      <input type="text" id="c-nombre" placeholder="Tu nombre *">
-      <input type="tel" id="c-tel" placeholder="Tu teléfono *">
-      <input type="text" id="c-dir" placeholder="Dirección de entrega *">
-      <textarea id="c-nota" rows="2" placeholder="Nota (opcional)"></textarea>
+    <div id="carrito-vacio" class="estado" hidden>
+      <p>Tu pedido está vacío.</p>
+      <button id="btn-cerrar-carrito-2" class="btn-secundario" type="button">Seguir viendo el catálogo</button>
     </div>
-    <button id="btn-enviar" class="btn-enviar" onclick="enviarPorWhatsApp()">Pedir por WhatsApp</button>
-    <p class="aviso">La mensajería y la disponibilidad final se coordinan por WhatsApp.</p>
+    <div id="carrito-total" class="total"></div>
+    <form id="form-pedido" class="campos" novalidate>
+      <label class="campo">
+        <span>Nombre</span>
+        <input type="text" id="c-nombre" autocomplete="name">
+        <span class="campo-error" id="err-nombre" hidden>Falta tu nombre.</span>
+      </label>
+      <label class="campo">
+        <span>Teléfono</span>
+        <input type="tel" id="c-tel" autocomplete="tel">
+        <span class="campo-error" id="err-tel" hidden>Falta tu teléfono.</span>
+      </label>
+      <label class="campo">
+        <span>Dirección de entrega</span>
+        <input type="text" id="c-dir" autocomplete="street-address">
+        <span class="campo-error" id="err-dir" hidden>Falta la dirección.</span>
+      </label>
+      <label class="campo">
+        <span>Nota (opcional)</span>
+        <textarea id="c-nota" rows="2"></textarea>
+      </label>
+      <button id="btn-enviar" class="btn-enviar" type="submit">Pedir por WhatsApp</button>
+      <p class="aviso">La mensajería y la disponibilidad se confirman por WhatsApp.</p>
+    </form>
   </div>
 </div>
 
