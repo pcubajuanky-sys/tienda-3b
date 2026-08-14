@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>3B — Tienda</title>
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1>🏪 3B</h1>
+    <div id="vendedor" class="vendedor"></div>
+  </div>
+</header>
+
+<div class="wrap">
+  <input type="search" id="buscador" placeholder="Buscar producto…" autocomplete="off">
+  <div id="filtros" class="filtros"></div>
+  <div id="grid" class="grid"></div>
+  <div id="vacio" class="vacio" hidden>No hay productos que coincidan.</div>
+  <p id="actualizado" class="actualizado"></p>
+</div>
+
+<button id="btn-carrito" class="btn-carrito" hidden>🛒 <span id="carrito-count">0</span></button>
+
+<div id="panel" class="panel" hidden>
+  <div class="panel-caja">
+    <div class="panel-head">
+      <strong>Tu pedido</strong>
+      <button onclick="cerrarCarrito()" class="cerrar">✕</button>
+    </div>
+    <div id="carrito-items"></div>
+    <div id="carrito-total" class="total"></div>
+    <div class="campos">
+      <input type="text" id="c-nombre" placeholder="Tu nombre *">
+      <input type="tel" id="c-tel" placeholder="Tu teléfono *">
+      <input type="text" id="c-dir" placeholder="Dirección de entrega *">
+      <textarea id="c-nota" rows="2" placeholder="Nota (opcional)"></textarea>
+    </div>
+    <button id="btn-enviar" class="btn-enviar" onclick="enviarPorWhatsApp()">Pedir por WhatsApp</button>
+    <p class="aviso">La mensajería y la disponibilidad final se coordinan por WhatsApp.</p>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

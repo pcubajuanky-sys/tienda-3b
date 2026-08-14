@@ -1,0 +1,11 @@
+{
+  "generado": "2026-08-14T12:00:00.000Z",
+  "tasa": 400,
+  "whatsapp": "5350000000",
+  "vendedores": [{ "code": "MARIA", "nombre": "María Pérez" }],
+  "categorias": [{ "n": "Belleza", "e": "💄" }, { "n": "Hogar", "e": "🏠" }],
+  "items": [
+    { "id": "p1", "name": "Crema Nivea", "cat": "Belleza", "subcat": "Cremas", "notes": "Hidratante 400ml", "photo": "https://placehold.co/400x400?text=Crema", "precioUSD": 12, "precioCUP": 4800, "enOferta": false },
+    { "id": "p2", "name": "Juego de sábanas", "cat": "Hogar", "subcat": "", "notes": "Matrimonial", "photo": "https://placehold.co/400x400?text=Sabanas", "precioUSD": 24, "precioCUP": 9600, "enOferta": true, "precioNormalUSD": 30, "precioNormalCUP": 12000 }
+  ]
+}
