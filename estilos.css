@@ -219,7 +219,7 @@ a{color:inherit}
 .categorias-3d-wrap{padding:26px 0 4px}
 .categorias-3d-titulo{font-size:clamp(19px,3vw,24px);font-weight:700;margin-bottom:2px}
 .categorias-3d{
-  display:flex;gap:14px;overflow-x:auto;overflow-y:visible;
+  display:flex;gap:14px;overflow-x:auto;overflow-y:visible;align-items:flex-start;
   padding:16px 16px 22px;scroll-snap-type:x proximity;
   scrollbar-width:none;-ms-overflow-style:none;
 }
@@ -230,6 +230,10 @@ a{color:inherit}
   display:flex;flex-direction:column;align-items:center;text-align:center;
   border-radius:var(--radio-control);
 }
+/* Botón "Ver todas": invisible por defecto (móvil, <760px — ahí la tira ya
+   enseña las 21 arrastrable y el botón solo estorbaría). El `hidden` que
+   pone JS cuando total ≤ 12 manda siempre gracias a [hidden]{!important}. */
+.categorias-ver-todas-wrap{display:none;text-align:center;padding:2px 16px 6px}
 @media (min-width:760px){
   .cat3d{width:112px}
   /*
@@ -241,6 +245,16 @@ a{color:inherit}
     patrón esperado, igual que antes).
   */
   .categorias-3d{flex-wrap:wrap;overflow-x:visible;scroll-snap-type:none}
+  /*
+    2026-08-15, tercer retoque: con círculos de 112px las 21 categorías
+    ocupaban 4 filas (698px) y empujaban el primer producto a 1.259px. El
+    dueño eligió mostrar 12 (contando Ofertas) + botón "Ver todas". Se oculta
+    por CSS (nth-child, no JS por tarjeta) para que sea trivial de revertir:
+    JS solo alterna la clase .plegada en #categorias-3d. El 13 debe coincidir
+    con CATS_VISIBLES_PLEGADO=12 de app.js.
+  */
+  #categorias-3d.plegada .cat3d:nth-child(n+13){display:none}
+  .categorias-ver-todas-wrap{display:block}
 }
 .cat3d-inner{
   position:relative;display:block;width:100%;aspect-ratio:1;
@@ -256,8 +270,15 @@ a{color:inherit}
   font-size:28px;font-weight:800;color:var(--text-3);background:var(--surface-2);
 }
 .cat3d-info{display:block;width:100%;padding-top:7px}
+/* 3 líneas, no 2: a 112/92px seguía cortando "Bocinas Celulares y
+   Accesorios" (y en móvil también "Bolsos Carteras Mochilas monederos").
+   min-height se queda en el alto de 2 líneas para que las tarjetas normales
+   (1-2 líneas) no crezcan — solo las que de verdad necesitan la 3ª línea se
+   hacen más altas que sus vecinas en la fila (por eso .categorias-3d lleva
+   align-items:flex-start: sin eso, flex estira TODA la fila a la altura de
+   la tarjeta más alta). */
 .cat3d-nombre{
-  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
+  display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;
   text-overflow:ellipsis;font-size:11px;font-weight:700;line-height:1.3;color:var(--text);
   min-height:29px;
 }

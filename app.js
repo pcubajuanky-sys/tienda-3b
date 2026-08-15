@@ -6,6 +6,8 @@ let filtroOferta = false;
 let busqueda = '';
 let elementoAnteriorFoco = null;   // para devolver el foco al cerrar modal/carrito
 let productoModal = null;
+let catsExpandidas = false;   // estado de "Ver todas" en categorías (solo escritorio); sobrevive a los re-render
+const CATS_VISIBLES_PLEGADO = 12;   // debe coincidir con :nth-child(n+13) en estilos.css
 
 // ── Utilidades ──
 
@@ -165,6 +167,7 @@ function renderCategorias3D() {
   const items = CAT.items || [];
   const cats = (CAT.categorias || []).filter((c) => items.some((p) => p.cat === c.n));
   const nOfertas = items.filter((p) => p.enOferta).length;
+  const totalTarjetas = (nOfertas === 0 ? 0 : 1) + cats.length;
 
   // El nombre va DEBAJO del círculo, fuera de la caja (2026-08-15, pedido
   // del dueño): .cat3d-info ya NO vive dentro de .cat3d-inner, es hermano —
@@ -197,6 +200,24 @@ function renderCategorias3D() {
   }).join('');
 
   cont.innerHTML = tarjetaOferta + tarjetasCat;
+
+  // "Ver todas (N)" — solo escritorio (ver estilos.css: la regla que oculta
+  // las tarjetas 13+ vive dentro de @media min-width:760px, así que en
+  // móvil esta clase no hace nada y las 21 siguen en la tira). El estado
+  // (catsExpandidas) es de módulo: sobrevive a que setCat()/setOferta()
+  // vuelvan a llamar renderCategorias3D() al filtrar.
+  cont.classList.toggle('plegada', !catsExpandidas);
+  const boton = document.getElementById('btn-cats-ver-todas');
+  if (boton) {
+    boton.hidden = totalTarjetas <= CATS_VISIBLES_PLEGADO;
+    boton.setAttribute('aria-expanded', String(catsExpandidas));
+    boton.textContent = catsExpandidas ? 'Ver menos' : `Ver todas (${totalTarjetas})`;
+  }
+}
+
+function toggleCatsExpandidas() {
+  catsExpandidas = !catsExpandidas;
+  renderCategorias3D();
 }
 
 // ── Parrilla ──
@@ -681,6 +702,7 @@ async function iniciar() {
   });
 
   document.getElementById('filtro-pill').addEventListener('click', () => setCat(''));
+  document.getElementById('btn-cats-ver-todas').addEventListener('click', toggleCatsExpandidas);
 
   document.getElementById('btn-ver-todo').addEventListener('click', () => {
     busqueda = ''; filtroCat = ''; filtroOferta = false;

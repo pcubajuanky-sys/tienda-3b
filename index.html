@@ -89,6 +89,12 @@
   <section class="categorias-3d-wrap" aria-label="Categorías">
     <h2 class="categorias-3d-titulo wrap">Categorías</h2>
     <div class="categorias-3d wrap" id="categorias-3d"></div>
+    <!-- Solo escritorio (≥760px, ver estilos.css): en móvil la tira ya
+         muestra las 21 arrastrable, así que este botón ni se ve ni estorba.
+         Texto/aria-expanded los pone renderCategorias3D() en app.js. -->
+    <div class="categorias-ver-todas-wrap wrap">
+      <button id="btn-cats-ver-todas" class="btn-secundario" type="button" aria-expanded="false" hidden>Ver todas</button>
+    </div>
   </section>
 
   <main class="wrap" id="catalogo">
