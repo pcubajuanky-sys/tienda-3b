@@ -117,12 +117,25 @@ a{color:inherit}
   background:linear-gradient(155deg, var(--brand) 0%, var(--brand) 45%, var(--surface-2) 100%);
   color:var(--brand-ink);
 }
+/*
+  Las fotos son textura de fondo, no protagonistas: además de la opacidad baja,
+  el desenfoque es lo que de verdad borra los textos y marcas de agua propias
+  de algunas fotos de producto (una marca de agua nítida al 22% de opacidad
+  sigue siendo texto legible; desenfocada, se vuelve mancha de color). El velo
+  (.hero-velo) repite encima el mismo degradado de marca para que el titular
+  se apoye sobre todo en él, casi sin interferencia de las fotos.
+*/
 .hero-mosaico{
   position:absolute;inset:0;display:grid;
   grid-template-columns:repeat(6,1fr);grid-template-rows:repeat(2,1fr);
-  gap:2px;opacity:.22;
+  gap:2px;opacity:.32;filter:blur(4px) saturate(.8);
 }
 .hero-mosaico img{width:100%;height:100%;object-fit:cover;display:block}
+.hero-velo{
+  position:absolute;inset:0;
+  background:linear-gradient(155deg, var(--brand) 0%, var(--brand) 58%, var(--surface-2) 100%);
+  opacity:.82;
+}
 .hero-contenido{position:relative;padding:44px 16px 32px;text-align:center}
 .hero-logo{display:flex;justify-content:center;margin-bottom:16px}
 .hero-logo .logo-svg{height:clamp(44px,7vw,68px)}
@@ -305,8 +318,7 @@ main{padding-top:20px}
 .footer{margin-top:40px;border-top:1px solid var(--border);background:var(--surface)}
 .footer-wrap{padding:32px 16px 24px;text-align:center;display:flex;flex-direction:column;gap:8px;align-items:center}
 .footer-marca{display:flex;align-items:center;gap:10px}
-.logo-footer{height:30px}
-.footer-nombre-texto{font-size:15px;font-weight:800;color:var(--text)}
+.footer-nombre-texto{font-size:17px;font-weight:800;color:var(--brand)}
 .vendedor,.actualizado,.aviso-tasa{font-size:12px;color:var(--text-3)}
 
 .footer-grid{
@@ -340,9 +352,13 @@ main{padding-top:20px}
 @media (min-width:760px){
   .barra-movil{display:none}
 }
-@media (max-width:759px){
-  body{padding-bottom:76px}
-}
+/*
+  El alto de la barra se mide de verdad en JS (reservarEspacioBarraMovil,
+  app.js) y se guarda en --barra-movil-h, porque el texto "N productos · TOTAL"
+  cambia de largo. body.con-barra-movil solo se pone cuando la barra está
+  realmente visible (en escritorio su alto medido da 0 y no se reserva nada).
+*/
+body.con-barra-movil{padding-bottom:var(--barra-movil-h, 84px)}
 
 /* ── Modal detalle de producto ── */
 .modal{position:fixed;inset:0;z-index:30;display:flex;align-items:flex-end;justify-content:center}

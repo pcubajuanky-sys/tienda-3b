@@ -324,9 +324,29 @@ function actualizarBarraMovil() {
   const items = itemsCarrito();
   const n = items.reduce((s, { qty }) => s + qty, 0);
   const barra = document.getElementById('barra-movil');
-  if (n === 0) { barra.hidden = true; return; }
+  if (n === 0) {
+    barra.hidden = true;
+    reservarEspacioBarraMovil();
+    return;
+  }
   barra.hidden = false;
   document.getElementById('barra-movil-info').textContent = `${n} producto${n === 1 ? '' : 's'} · ${fmt(totalCarrito())} CUP`;
+  reservarEspacioBarraMovil();
+}
+
+// La barra es "position:fixed": tapa lo que tenga debajo si el body no le
+// reserva su alto real. Se mide de verdad (no un número fijo a ciegas) porque
+// el texto "N productos · TOTAL" cambia de largo. En escritorio la barra se
+// oculta por CSS (display:none) y su alto medido da 0: ahí no se reserva nada.
+function reservarEspacioBarraMovil() {
+  const barra = document.getElementById('barra-movil');
+  const h = barra.getBoundingClientRect().height;
+  if (h === 0) {
+    document.body.classList.remove('con-barra-movil');
+    return;
+  }
+  document.documentElement.style.setProperty('--barra-movil-h', (h + 16) + 'px');
+  document.body.classList.add('con-barra-movil');
 }
 
 function renderCarrito() {
@@ -565,6 +585,9 @@ async function iniciar() {
   });
 
   window.addEventListener('scroll', actualizarHeaderScroll, { passive: true });
+  // Si la ventana cruza el punto de corte de escritorio/móvil (o gira el
+  // teléfono) mientras la barra está o no está, se vuelve a medir.
+  window.addEventListener('resize', reservarEspacioBarraMovil, { passive: true });
 
   await cargarCatalogo();
 }
