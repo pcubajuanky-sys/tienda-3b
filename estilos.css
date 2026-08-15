@@ -160,32 +160,66 @@ a{color:inherit}
    `hidden` por defecto en el HTML; renderPromoEnvio() (app.js) solo lo
    destapa si CAT.tienda.envioGratisCUP es > 0. Con el umbral en 0/ausente
    esta banda nunca se ve: la tienda queda idéntica a hoy. */
-.promo{background:var(--brand-soft);color:var(--brand);padding:10px 16px;text-align:center}
+.promo{
+  position:relative;overflow:hidden;
+  background:var(--brand-soft);color:var(--brand);padding:10px 16px;text-align:center;
+}
+/*
+  Ilustración decorativa (mensajera en moto, líneas de velocidad) en
+  `currentColor` para heredar --brand — mismo SVG dibujado a mano en el HTML,
+  sin foto de banco ni CDN (DECISIONES.md). RELEVO FUTURO: si el dueño sube
+  una foto real de su mensajera a Cloudinary, esta MISMA regla sirve tal
+  cual — solo hay que cambiar el <svg class="promo-ilustracion"> del HTML por
+  un <img class="promo-ilustracion" src="...">, sin tocar nada de este CSS.
+*/
+.promo-ilustracion{
+  position:absolute;top:0;right:0;height:100%;width:auto;max-width:220px;
+  opacity:.15;color:var(--brand);pointer-events:none;object-fit:cover;
+}
+@media (max-width:480px){
+  .promo-ilustracion{max-width:130px}
+}
+/* El texto manda: este velo, del mismo color que el fondo del banner, es lo
+   que garantiza el contraste del texto por encima de la ilustración — si
+   algún día no alcanza 4,5:1, se sube la opacidad de aquí, nunca se aclara
+   el texto. */
+.promo-velo{
+  position:absolute;inset:0;background:var(--brand-soft);opacity:.6;pointer-events:none;
+}
+.promo-contenido{position:relative}
 .promo-linea{font-size:14px;font-weight:700;max-width:1180px;margin:0 auto;line-height:1.3}
 .promo-fina{
   font-size:11px;font-weight:500;color:var(--text-2);max-width:1180px;
   margin:4px auto 0;opacity:.9;line-height:1.3;
 }
+@media (prefers-reduced-motion:reduce){
+  .promo-ilustracion{transition:none}
+}
 
 /* ── Categorías 3D ──
-   Únicas: no hay una segunda barra de chips. Tarjetas pequeñas (se ven ~2.6 en
-   375px de ancho) con un mosaico 2×2 de fotos de productos distintos —
-   "esto es un grupo de cosas", no un artículo suelto. */
+   Únicas: no hay una segunda barra de chips. Tarjetas a media escala
+   (2026-08-15, pedido del dueño: "tipo mitad del tamaño de las imágenes")
+   con UNA sola foto por tarjeta — a este tamaño el mosaico 2×2 dejó de
+   leerse (cada foto habría quedado en ~39px). Se gana ver muchas más
+   categorías de un vistazo, que es lo que interesa ahora que ya no hay
+   tira. Reversible: la regla `.cat3d-foto img:only-child` de abajo es lo
+   que permite volver al mosaico sin tocar CSS — basta con que app.js vuelva
+   a pasar 4 fotos en vez de 1. */
 .categorias-3d-wrap{padding:26px 0 4px}
 .categorias-3d-titulo{font-size:clamp(19px,3vw,24px);font-weight:700;margin-bottom:2px}
 .categorias-3d{
-  display:flex;gap:10px;overflow-x:auto;overflow-y:visible;
+  display:flex;gap:8px;overflow-x:auto;overflow-y:visible;
   padding:16px 16px 22px;scroll-snap-type:x proximity;
   scrollbar-width:none;-ms-overflow-style:none;perspective:1200px;
 }
 .categorias-3d::-webkit-scrollbar{display:none}
 .cat3d{
-  flex-shrink:0;scroll-snap-align:start;width:126px;border:none;background:transparent;
+  flex-shrink:0;scroll-snap-align:start;width:66px;border:none;background:transparent;
   padding:0;margin:0;cursor:pointer;transform-style:preserve-3d;font:inherit;color:inherit;
   text-align:left;border-radius:var(--radio-control);
 }
 @media (min-width:760px){
-  .cat3d{width:156px}
+  .cat3d{width:78px}
   /*
     El fallo medido: a 1280px había 21 tarjetas y solo 7 visibles (14 fuera de
     pantalla, 2.328px ocultos) porque la tira ocultaba su propia barra de
@@ -212,19 +246,25 @@ a{color:inherit}
   display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:1px;
 }
 .cat3d-foto img{width:100%;height:100%;object-fit:cover;display:block}
+/* Tarjeta pequeña = una sola foto: sin hermanas, ocupa la caja entera en vez
+   de un cuarto del grid 2×2 (que sigue intacto para el modo mosaico). */
+.cat3d-foto img:only-child{grid-column:1/-1;grid-row:1/-1}
 .cat3d-foto .cat3d-celda-vacia{width:100%;height:100%;background:var(--surface-2)}
 .cat3d-foto .inicial{
   grid-column:1/-1;grid-row:1/-1;
   width:100%;height:100%;display:flex;align-items:center;justify-content:center;
-  font-size:26px;font-weight:800;color:var(--text-3);background:var(--surface-2);
+  font-size:20px;font-weight:800;color:var(--text-3);background:var(--surface-2);
 }
-.cat3d-info{display:block;padding:7px 8px 9px}
+.cat3d-info{display:block;padding:5px 5px 6px}
 .cat3d-nombre{
-  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
-  font-size:12px;font-weight:700;line-height:1.28;color:var(--text);
+  display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden;
+  text-overflow:ellipsis;font-size:10px;font-weight:700;line-height:1.25;color:var(--text);
 }
-.cat3d-emoji{margin-right:3px}
-.cat3d-n{display:block;margin-top:2px;font-size:10.5px;color:var(--text-3);font-weight:600}
+.cat3d-emoji{margin-right:2px}
+.cat3d-n{
+  display:block;margin-top:1px;font-size:9px;color:var(--text-3);font-weight:600;
+  overflow:hidden;white-space:nowrap;text-overflow:ellipsis;
+}
 @media (hover:hover) and (pointer:fine){
   .cat3d:hover .cat3d-inner,.cat3d:focus-visible .cat3d-inner{
     transform:rotateX(0deg) rotateY(0deg) translateZ(22px);

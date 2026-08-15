@@ -110,10 +110,13 @@ function renderFiltroPill() {
 
 // ── Categorías 3D (portada) ──
 // Únicas: sustituyen del todo a la barra de chips (ver renderFiltroPill).
-// Cada tarjeta lleva un mosaico 2×2 de fotos de PRODUCTOS DISTINTOS de esa
-// categoría (así se lee "un grupo de cosas", no un artículo suelto). Si hay
-// menos de 4 con foto, se repiten las que haya — nunca queda un hueco roto.
-
+// Tarjetas a media escala (2026-08-15, pedido del dueño): a 78px/66px de
+// ancho el mosaico 2×2 deja de leerse (cada foto quedaría en ~39px), así que
+// cada tarjeta muestra UNA sola foto — la primera de las que ya calcula
+// mosaicoFotos()/categoriaFotos()/fotosOferta() (mismo origen y mismo orden
+// que el mosaico viejo, sin duplicar esa lógica: solo se toma fotos[0]).
+// Reversible: para volver al mosaico 2×2 basta con quitar el .slice(0,1) de
+// las dos llamadas a cat3dFotoHtml() en renderCategorias3D() — nada más.
 function mosaicoFotos(items) {
   const conFoto = items.filter((p) => esCloudinary(p.photo));
   const fuente = conFoto.length ? conFoto : items.filter((p) => p.photo);
@@ -131,9 +134,20 @@ function fotosOferta() {
   return mosaicoFotos((CAT.items || []).filter((p) => p.enOferta));
 }
 
-// Una foto del mosaico que no carga solo se cae ella (celda vacía);
-// no borra las otras 3 como haría el imgFallback genérico.
+// Una foto que no carga solo se cae ella. En el mosaico (4 fotos, modo
+// reversible) queda una celda vacía porque las otras 3 bastan; en la
+// tarjeta pequeña actual (1 sola foto) no hay otras 3 que salven la tarjeta,
+// así que cae a la inicial/emoji — igual que cat3dFotoHtml() cuando no hay
+// fotos. Se distingue mirando si el <img> es hijo único de .cat3d-foto.
 function cat3dImgFallback(img) {
+  if (img.parentElement && img.parentElement.children.length === 1) {
+    const inicial = document.createElement('span');
+    inicial.className = 'inicial';
+    inicial.setAttribute('aria-hidden', 'true');
+    inicial.textContent = img.dataset.marcador || '?';
+    img.replaceWith(inicial);
+    return;
+  }
   const celda = document.createElement('span');
   celda.className = 'cat3d-celda-vacia';
   celda.setAttribute('aria-hidden', 'true');
@@ -142,7 +156,7 @@ function cat3dImgFallback(img) {
 
 function cat3dFotoHtml(fotos, marcador) {
   if (!fotos.length) return `<span class="inicial" aria-hidden="true">${marcador}</span>`;
-  return fotos.map((f) => `<img src="${f}" alt="" loading="lazy" onerror="cat3dImgFallback(this)">`).join('');
+  return fotos.map((f) => `<img src="${f}" alt="" loading="lazy" data-marcador="${marcador}" onerror="cat3dImgFallback(this)">`).join('');
 }
 
 function renderCategorias3D() {
@@ -156,7 +170,7 @@ function renderCategorias3D() {
     const activo = filtroOferta;
     return `<button class="cat3d ${activo ? 'on' : ''}" type="button" data-oferta="1" aria-pressed="${activo}">` +
       `<span class="cat3d-inner">` +
-      `<span class="cat3d-foto">${cat3dFotoHtml(fotosOferta(), '🏷️')}</span>` +
+      `<span class="cat3d-foto">${cat3dFotoHtml(fotosOferta().slice(0, 1), '🏷️')}</span>` +
       `<span class="cat3d-info">` +
       `<span class="cat3d-nombre"><span class="cat3d-emoji" aria-hidden="true">🏷️</span>Ofertas</span>` +
       `<span class="cat3d-n">${nOfertas} producto${nOfertas === 1 ? '' : 's'}</span>` +
@@ -169,7 +183,7 @@ function renderCategorias3D() {
     const marcador = escapeHtml(c.e || c.n.charAt(0).toUpperCase());
     return `<button class="cat3d ${activo ? 'on' : ''}" type="button" data-cat="${escapeHtml(c.n)}" aria-pressed="${activo}">` +
       `<span class="cat3d-inner">` +
-      `<span class="cat3d-foto">${cat3dFotoHtml(categoriaFotos(c.n), marcador)}</span>` +
+      `<span class="cat3d-foto">${cat3dFotoHtml(categoriaFotos(c.n).slice(0, 1), marcador)}</span>` +
       `<span class="cat3d-info">` +
       `<span class="cat3d-nombre"><span class="cat3d-emoji" aria-hidden="true">${c.e || ''}</span>${escapeHtml(c.n)}</span>` +
       `<span class="cat3d-n">${n} producto${n === 1 ? '' : 's'}</span>` +
