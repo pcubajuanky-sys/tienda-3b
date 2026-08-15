@@ -29,6 +29,11 @@
   </div>
 </header>
 
+<div id="promo-envio" class="promo" hidden>
+  <p class="promo-linea" id="promo-envio-texto"></p>
+  <p class="promo-fina" id="promo-envio-fina" hidden></p>
+</div>
+
 <section class="hero" id="hero">
   <div class="hero-mosaico" id="hero-mosaico" aria-hidden="true"></div>
   <div class="hero-velo" aria-hidden="true"></div>
@@ -71,6 +76,17 @@
     <div class="card card-skel"></div><div class="card card-skel"></div>
   </div>
   <div id="grid" class="grid" hidden></div>
+
+  <!-- Carrito lateral: solo visible en escritorio (≥1024px, ver estilos.css).
+       No lleva formulario propio: su botón abre el panel modal de siempre. -->
+  <aside id="carrito-lateral" class="carrito-lateral" hidden aria-label="Tu pedido">
+    <h2 class="lateral-titulo">Tu pedido</h2>
+    <div id="lateral-items"></div>
+    <p id="lateral-envio" class="lateral-envio" hidden></p>
+    <div id="lateral-total" class="lateral-total" hidden></div>
+    <button id="btn-lateral-pedir" type="button" hidden>Pedir por WhatsApp</button>
+  </aside>
+
   <div id="vacio" class="estado" hidden>
     <p>No hay productos que coincidan con tu búsqueda.</p>
     <button id="btn-ver-todo" class="btn-secundario" type="button">Ver todo el catálogo</button>

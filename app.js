@@ -308,6 +308,53 @@ function totalCarrito() {
   return itemsCarrito().reduce((s, { p, qty }) => s + p.precioCUP * qty, 0);
 }
 
+// El CUP manda (es lo que se cobra y viaja a WhatsApp); el USD es orientativo
+// porque el CUP de cada producto se redondea hacia arriba al publicar el
+// catálogo, así que suma(CUP) no es exactamente suma(USD) × tasa. Por eso el
+// USD del carrito siempre se pinta con "≈" delante.
+function totalCarritoUSD() {
+  const n = itemsCarrito().reduce((s, { p, qty }) => s + Number(p.precioUSD) * qty, 0);
+  return Math.round(n * 100) / 100;
+}
+
+// Mensajería gratis a partir de un umbral en CUP, configurable desde el panel
+// de Stock+ (CAT.tienda.envioGratisCUP / envioGratisTexto). Ausente o 0 ⇒
+// activo=false y nada de esto se pinta en ningún sitio (tienda idéntica a hoy).
+// «desde», no «más de»: un pedido de exactamente el umbral SÍ cuenta.
+function envioGratis() {
+  const t = (CAT && CAT.tienda) || {};
+  const umbral = Math.max(0, Number(t.envioGratisCUP) || 0);
+  const activo = umbral > 0;
+  const total = totalCarrito();
+  const alcanzado = activo && total >= umbral;
+  const falta = activo && !alcanzado ? umbral - total : 0;
+  return { activo, umbral, falta, alcanzado, textoFino: (t.envioGratisTexto || '').trim() };
+}
+
+// Misma frase en aside, panel modal y barra móvil: una sola fuente de verdad.
+function lineaEnvioTexto(eg) {
+  if (!eg.activo) return '';
+  return eg.alcanzado
+    ? '🎉 Tu pedido lleva mensajería gratis'
+    : `Te faltan ${fmt(eg.falta)} CUP para la mensajería gratis`;
+}
+
+// Banda bajo la cabecera, sobre la portada. El texto principal lo compone la
+// tienda a partir del número (nunca un texto libre que pueda contradecirlo);
+// lo único editable desde el panel es la letra pequeña.
+function renderPromoEnvio() {
+  const el = document.getElementById('promo-envio');
+  if (!el) return;
+  const eg = envioGratis();
+  el.hidden = !eg.activo;
+  if (!eg.activo) return;
+  document.getElementById('promo-envio-texto').textContent =
+    `Pedidos desde ${fmt(eg.umbral)} CUP: mensajería gratis 🚚`;
+  const fina = document.getElementById('promo-envio-fina');
+  fina.hidden = !eg.textoFino;
+  fina.textContent = eg.textoFino;
+}
+
 function lineaCarritoHtml(p, qty) {
   const foto = fotoCard(p.photo);
   return `<div class="linea">
@@ -330,7 +377,10 @@ function actualizarBarraMovil() {
     return;
   }
   barra.hidden = false;
-  document.getElementById('barra-movil-info').textContent = `${n} producto${n === 1 ? '' : 's'} · ${fmt(totalCarrito())} CUP`;
+  const eg = envioGratis();
+  const aviso = eg.activo && eg.alcanzado ? ' · 🎉 Mensajería gratis' : '';
+  document.getElementById('barra-movil-info').textContent =
+    `${n} producto${n === 1 ? '' : 's'} · ${fmt(totalCarrito())} CUP${aviso}`;
   reservarEspacioBarraMovil();
 }
 
@@ -349,14 +399,58 @@ function reservarEspacioBarraMovil() {
   document.body.classList.add('con-barra-movil');
 }
 
+// El aside lateral (≥1024px) es "position:sticky; top:var(--header-h)": se
+// mide el alto real de la cabecera (mismo patrón que reservarEspacioBarraMovil,
+// nada de números mágicos a ciegas) al cargar y en cada resize.
+function medirHeader() {
+  const header = document.getElementById('header');
+  if (!header) return;
+  const h = header.getBoundingClientRect().height;
+  document.documentElement.style.setProperty('--header-h', h + 'px');
+}
+
+// Pinta el panel modal (móvil y respaldo en escritorio) Y el aside lateral
+// (solo visible ≥1024px) con las MISMAS líneas (lineaCarritoHtml) y el mismo
+// total CUP — una sola fuente de verdad, nada de lógica duplicada.
 function renderCarrito() {
   const items = itemsCarrito();
   const hayItems = items.length > 0;
-  document.getElementById('carrito-items').innerHTML = items.map(({ p, qty }) => lineaCarritoHtml(p, qty)).join('');
+  const html = items.map(({ p, qty }) => lineaCarritoHtml(p, qty)).join('');
+  const eg = envioGratis();
+  const envioTexto = lineaEnvioTexto(eg);
+
+  // Panel modal (sin cambios de fondo: sigue siendo el que lleva el formulario).
+  document.getElementById('carrito-items').innerHTML = html;
   document.getElementById('carrito-vacio').hidden = hayItems;
   document.getElementById('carrito-total').hidden = !hayItems;
   document.getElementById('form-pedido').hidden = !hayItems;
-  document.getElementById('carrito-total').textContent = hayItems ? `Total: ${fmt(totalCarrito())} CUP` : '';
+  document.getElementById('carrito-total').innerHTML = hayItems
+    ? (envioTexto ? `<span class="envio-linea">${escapeHtml(envioTexto)}</span>` : '') +
+      `<span class="total-linea">Total: ${fmt(totalCarrito())} CUP</span>`
+    : '';
+
+  // Aside lateral — mismas líneas, mismo total CUP, más el ≈ $X USD.
+  // El aside NO lleva formulario: su botón abre el panel modal de siempre.
+  // El `hidden` del HTML es solo para evitar el parpadeo antes de que cargue
+  // el catálogo; a partir de aquí la visibilidad real la decide el @media de
+  // estilos.css (display:none <1024px, display:block ≥1024px) — [hidden]
+  // tiene !important y taparía esa regla si no se quita aquí.
+  const lateral = document.getElementById('carrito-lateral');
+  if (!lateral) return;
+  lateral.hidden = false;
+  document.getElementById('lateral-items').innerHTML = hayItems
+    ? html
+    : '<p class="estado-lateral">Tu pedido está vacío.</p>';
+  const envioEl = document.getElementById('lateral-envio');
+  envioEl.hidden = !hayItems || !envioTexto;
+  envioEl.textContent = envioTexto;
+  const totalEl = document.getElementById('lateral-total');
+  totalEl.hidden = !hayItems;
+  totalEl.innerHTML = hayItems
+    ? `<span class="lateral-total-cup">Total: ${fmt(totalCarrito())} CUP</span>` +
+      `<span class="lateral-total-usd">≈ $${totalCarritoUSD().toFixed(2)} USD</span>`
+    : '';
+  document.getElementById('btn-lateral-pedir').hidden = !hayItems;
 }
 
 function abrirCarrito() {
@@ -407,11 +501,14 @@ function enviarPorWhatsApp(ev) {
   }
 
   const v = resolverVendedor();
+  const eg = envioGratis();
   const lineas = ['🛒 *Pedido desde la web*'];
   if (v) lineas.push(`👤 Vendedor: ${v.code}`);
   lineas.push('');
   items.forEach(({ p, qty }) => lineas.push(`• ${p.name} x${qty} — ${fmt(p.precioCUP * qty)} CUP`));
-  lineas.push('', `*Total: ${fmt(totalCarrito())} CUP*`, '');
+  lineas.push('', `*Total: ${fmt(totalCarrito())} CUP*`);
+  if (eg.activo && eg.alcanzado) lineas.push(`Mensajería: GRATIS (pedido desde ${fmt(eg.umbral)} CUP)`);
+  lineas.push('');
   lineas.push(`Nombre: ${nombre}`, `Tel: ${tel}`, `Dirección: ${dir}`);
   if (nota) lineas.push(`Nota: ${nota}`);
 
@@ -517,10 +614,12 @@ async function cargarCatalogo() {
   renderMarca();
   renderHero();
   guardarCarrito();
+  renderCarrito();   // el aside lateral (≥1024px) no espera a que se abra el panel modal
   renderFiltroPill();
   renderCategorias3D();
   renderGrid();
   renderFooterExtra();
+  renderPromoEnvio();
   document.getElementById('skeleton').hidden = true;
   document.getElementById('grid').hidden = false;
 }
@@ -536,6 +635,9 @@ async function iniciar() {
 
   document.getElementById('btn-carrito').addEventListener('click', abrirCarrito);
   document.getElementById('btn-ver-pedido').addEventListener('click', abrirCarrito);
+  // El aside NO lleva formulario propio: su botón abre el panel modal de
+  // siempre (mismos campos c-nombre/c-tel/c-dir, sin duplicar id).
+  document.getElementById('btn-lateral-pedir').addEventListener('click', abrirCarrito);
   document.getElementById('btn-cerrar-carrito').addEventListener('click', cerrarCarrito);
   document.getElementById('btn-cerrar-carrito-2').addEventListener('click', cerrarCarrito);
   document.getElementById('panel-fondo').addEventListener('click', cerrarCarrito);
@@ -588,7 +690,9 @@ async function iniciar() {
   // Si la ventana cruza el punto de corte de escritorio/móvil (o gira el
   // teléfono) mientras la barra está o no está, se vuelve a medir.
   window.addEventListener('resize', reservarEspacioBarraMovil, { passive: true });
+  window.addEventListener('resize', medirHeader, { passive: true });
 
+  medirHeader();
   await cargarCatalogo();
 }
 
