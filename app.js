@@ -630,7 +630,13 @@ function renderFooterExtra() {
     const tel = c && c.tel ? String(c.tel).trim() : '';
     if (!tel) return;
     const nombre = (c.nombre || '').trim();
-    const etiqueta = nombre ? `Escríbele a ${nombre}` : 'Escríbele por WhatsApp';
+    // "a" + "el" se contrae en "al" (p.ej. "el admin secundario" → "al admin secundario").
+    // Solo cuando "el" es palabra suelta (seguida de espacio), para no comerse
+    // nombres como "Elena"/"Eloy" que solo empiezan con esas letras.
+    const contraccion = /^el\s+(.*)$/i.exec(nombre);
+    const etiqueta = contraccion
+      ? `Escríbele al ${contraccion[1]}`
+      : (nombre ? `Escríbele a ${nombre}` : 'Escríbele por WhatsApp');
     piezas.push(`<a class="footer-link footer-link-wa" href="https://wa.me/${escapeHtml(tel)}" target="_blank" rel="noopener">💬 ${escapeHtml(etiqueta)}</a>`);
   });
   if (t.facebook && t.facebook.trim()) {
