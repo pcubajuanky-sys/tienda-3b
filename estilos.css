@@ -79,14 +79,20 @@ a{color:inherit}
 .logo{display:inline-flex;align-items:center;text-decoration:none}
 .logo-svg{height:32px;width:auto;display:block}
 @media (min-width:760px){.logo-svg{height:44px}}
-.logo-badge{fill:var(--brand)}
+/*
+  Marca a dos tonos, de color FIJO (no usa --brand ni --brand-ink): la placa es
+  siempre la ciruela de marca, las letras "3B" siempre doradas, "STORE" siempre
+  crema. Al no depender de los tokens que cambian con el tema, el contraste
+  letra-sobre-placa es idéntico en claro y oscuro (verificado ≥4.5:1 los dos).
+*/
+.logo-badge{fill:#7A2E5D; stroke:rgba(242,180,65,.4); stroke-width:1}
 .logo-mono{
   font-family:ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size:20px;font-weight:800;fill:var(--brand-ink);
+  font-size:20px;font-weight:800;fill:#F2B441;
 }
 .logo-word{
   font-family:ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size:14px;font-weight:700;letter-spacing:.16em;fill:var(--text);
+  font-size:14px;font-weight:700;letter-spacing:.16em;fill:#FBEFD9;
 }
 .btn-carrito{
   display:flex;align-items:center;gap:6px;min-width:44px;min-height:44px;padding:8px 14px;
@@ -120,9 +126,6 @@ a{color:inherit}
 .hero-contenido{position:relative;padding:44px 16px 32px;text-align:center}
 .hero-logo{display:flex;justify-content:center;margin-bottom:16px}
 .hero-logo .logo-svg{height:clamp(44px,7vw,68px)}
-.logo-hero .logo-badge{fill:var(--brand-ink)}
-.logo-hero .logo-mono{fill:var(--brand)}
-.logo-hero .logo-word{fill:var(--brand-ink)}
 .hero h1{
   font-size:clamp(28px,6vw,48px);font-weight:800;letter-spacing:-0.02em;line-height:1.05;
   max-width:18ch;margin:0 auto 14px;
@@ -140,24 +143,27 @@ a{color:inherit}
 .hero-datos li{position:relative;padding-left:16px}
 .hero-datos li::before{content:"✓";position:absolute;left:0}
 
-/* ── Categorías 3D ── */
+/* ── Categorías 3D ──
+   Únicas: no hay una segunda barra de chips. Tarjetas pequeñas (se ven ~2.6 en
+   375px de ancho) con un mosaico 2×2 de fotos de productos distintos —
+   "esto es un grupo de cosas", no un artículo suelto. */
 .categorias-3d-wrap{padding:26px 0 4px}
 .categorias-3d-titulo{font-size:clamp(19px,3vw,24px);font-weight:700;margin-bottom:2px}
 .categorias-3d{
-  display:flex;gap:18px;overflow-x:auto;overflow-y:visible;
-  padding:20px 16px 26px;scroll-snap-type:x proximity;
+  display:flex;gap:10px;overflow-x:auto;overflow-y:visible;
+  padding:16px 16px 22px;scroll-snap-type:x proximity;
   scrollbar-width:none;-ms-overflow-style:none;perspective:1200px;
 }
 .categorias-3d::-webkit-scrollbar{display:none}
 .cat3d{
-  flex-shrink:0;scroll-snap-align:start;width:150px;border:none;background:transparent;
+  flex-shrink:0;scroll-snap-align:start;width:126px;border:none;background:transparent;
   padding:0;margin:0;cursor:pointer;transform-style:preserve-3d;font:inherit;color:inherit;
-  text-align:left;border-radius:var(--radio-card);
+  text-align:left;border-radius:var(--radio-control);
 }
-@media (min-width:760px){.cat3d{width:190px}}
+@media (min-width:760px){.cat3d{width:156px}}
 .cat3d-inner{
-  position:relative;display:block;border-radius:var(--radio-card);overflow:hidden;
-  background:var(--surface);box-shadow:0 2px 5px rgba(28,26,34,.12),0 14px 26px rgba(28,26,34,.14);
+  position:relative;display:block;border-radius:var(--radio-control);overflow:hidden;
+  background:var(--surface);box-shadow:0 2px 4px rgba(28,26,34,.12),0 10px 18px rgba(28,26,34,.14);
   transform:rotateX(8deg) rotateY(-10deg) translateZ(0);
   transition:transform .28s cubic-bezier(.2,.8,.2,1), box-shadow .28s ease;
 }
@@ -167,29 +173,37 @@ a{color:inherit}
   background:linear-gradient(165deg, rgba(255,255,255,.32) 0%, rgba(255,255,255,0) 42%);
   mix-blend-mode:overlay;
 }
-.cat3d-foto{aspect-ratio:1;background:var(--surface-2);position:relative}
-.cat3d-foto img{width:100%;height:100%;object-fit:cover;display:block}
-.cat3d-foto .inicial{
-  width:100%;height:100%;display:flex;align-items:center;justify-content:center;
-  font-size:30px;font-weight:800;color:var(--text-3);background:var(--surface-2);
+.cat3d-foto{
+  aspect-ratio:1;background:var(--surface-2);position:relative;
+  display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:1px;
 }
-.cat3d-info{display:block;padding:10px 11px 12px}
-.cat3d-nombre{display:block;font-size:13px;font-weight:700;line-height:1.3;color:var(--text)}
+.cat3d-foto img{width:100%;height:100%;object-fit:cover;display:block}
+.cat3d-foto .cat3d-celda-vacia{width:100%;height:100%;background:var(--surface-2)}
+.cat3d-foto .inicial{
+  grid-column:1/-1;grid-row:1/-1;
+  width:100%;height:100%;display:flex;align-items:center;justify-content:center;
+  font-size:26px;font-weight:800;color:var(--text-3);background:var(--surface-2);
+}
+.cat3d-info{display:block;padding:7px 8px 9px}
+.cat3d-nombre{
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
+  font-size:12px;font-weight:700;line-height:1.28;color:var(--text);
+}
 .cat3d-emoji{margin-right:3px}
-.cat3d-n{display:block;margin-top:2px;font-size:11px;color:var(--text-3);font-weight:600}
+.cat3d-n{display:block;margin-top:2px;font-size:10.5px;color:var(--text-3);font-weight:600}
 @media (hover:hover) and (pointer:fine){
   .cat3d:hover .cat3d-inner,.cat3d:focus-visible .cat3d-inner{
-    transform:rotateX(0deg) rotateY(0deg) translateZ(26px);
-    box-shadow:0 10px 12px rgba(28,26,34,.16),0 30px 46px rgba(28,26,34,.22);
+    transform:rotateX(0deg) rotateY(0deg) translateZ(22px);
+    box-shadow:0 8px 10px rgba(28,26,34,.16),0 22px 34px rgba(28,26,34,.22);
   }
 }
 .cat3d:active .cat3d-inner{
-  transform:rotateX(3deg) rotateY(0deg) translateZ(12px);
+  transform:rotateX(3deg) rotateY(0deg) translateZ(10px);
   transition-duration:.1s;
 }
 .cat3d.on .cat3d-inner{
-  transform:rotateX(0deg) rotateY(0deg) translateZ(18px);
-  box-shadow:0 8px 10px rgba(122,46,93,.20),0 24px 36px rgba(122,46,93,.24);
+  transform:rotateX(0deg) rotateY(0deg) translateZ(15px);
+  box-shadow:0 6px 8px rgba(122,46,93,.20),0 18px 28px rgba(122,46,93,.24);
 }
 .cat3d.on .cat3d-nombre{color:var(--brand)}
 @media (prefers-reduced-motion:reduce){
@@ -202,30 +216,22 @@ a{color:inherit}
   }
 }
 
-/* ── Filtros ── */
-.filtros-wrap{
-  position:sticky;top:var(--header-h);z-index:15;background:var(--bg);
-  border-bottom:1px solid var(--border);transition:top var(--dur);
-}
-.header.compacta ~ .filtros-wrap{top:var(--header-h-compacta)}
-.filtros{
-  display:flex;gap:8px;overflow-x:auto;padding:12px 16px;
-  scroll-snap-type:x proximity;
-  scrollbar-width:none;
-}
-.filtros::-webkit-scrollbar{display:none}
-.chip{
-  flex-shrink:0;scroll-snap-align:start;min-height:44px;padding:9px 16px;
-  border:1px solid var(--border);border-radius:20px;background:var(--surface);color:var(--text-2);
-  font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap;transition:background var(--dur), color var(--dur), border-color var(--dur);
-}
-.chip .n{color:var(--text-3);font-weight:500}
-.chip.on{background:var(--brand);color:var(--brand-ink);border-color:var(--brand)}
-.chip.on .n{color:inherit;opacity:.85}
-.chip[aria-hidden] .icono{margin-right:2px}
-
-/* ── Parrilla ── */
+/* ── Encabezado de la parrilla + píldora del filtro activo ──
+   Reemplaza la antigua barra de chips: es solo ESTADO (qué filtro está puesto
+   y una forma de quitarlo), no un segundo menú para elegirlo — eso ya lo
+   hacen las tarjetas de categoría de arriba. */
 main{padding-top:20px}
+.grid-head{display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:14px}
+.grid-titulo{font-size:clamp(19px,3vw,24px);font-weight:700}
+.filtro-pill{
+  display:inline-flex;align-items:center;gap:8px;min-height:36px;padding:6px 8px 6px 14px;
+  border:1px solid var(--brand);border-radius:20px;background:var(--brand-soft);color:var(--brand);
+  font-size:13px;font-weight:700;cursor:pointer;
+}
+.filtro-pill-x{
+  display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;
+  border-radius:50%;background:var(--brand);color:var(--brand-ink);font-size:11px;flex-shrink:0;
+}
 .grid{
   display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px;
 }

@@ -66,13 +66,13 @@ function fotoMosaico(url) {
   return esCloudinary(url) ? fotoUrl(url, 'f_auto,q_auto,w_200,c_limit') : url;
 }
 
-// Recuadro con la inicial cuando la foto no carga.
-// data-fallback (si viene, p.ej. el emoji de categoría) manda sobre el alt.
+// Recuadro con la inicial cuando la foto no carga (tarjetas de producto y modal).
+// Las fotos del mosaico de categorías usan su propio fallback: cat3dImgFallback.
 function imgFallback(img) {
-  const cont = img.closest('.card-foto') || img.closest('.modal-foto') || img.closest('.cat3d-foto');
+  const cont = img.closest('.card-foto') || img.closest('.modal-foto');
   if (!cont) return;
-  const desdeAlt = (img.alt || '').trim().charAt(0).toUpperCase();
-  const inicial = img.dataset.fallback || desdeAlt || '?';
+  const nombre = (img.alt || '').trim();
+  const inicial = nombre.charAt(0).toUpperCase() || '?';
   cont.innerHTML = `<div class="inicial" aria-hidden="true">${inicial}</div>`;
 }
 
@@ -88,33 +88,61 @@ function visibles() {
   });
 }
 
-function setCat(n) { filtroCat = n; filtroOferta = false; renderFiltros(); renderCategorias3D(); renderGrid(); }
-function setOferta() { filtroOferta = true; filtroCat = ''; renderFiltros(); renderCategorias3D(); renderGrid(); }
+function setCat(n) { filtroCat = n; filtroOferta = false; renderFiltroPill(); renderCategorias3D(); renderGrid(); }
+function setOferta() { filtroOferta = true; filtroCat = ''; renderFiltroPill(); renderCategorias3D(); renderGrid(); }
 
-function renderFiltros() {
+// Píldora de estado junto al encabezado de la parrilla: no es un menú, solo
+// dice qué filtro está puesto (si hay alguno) y deja quitarlo con la ✕.
+// Elegir el filtro se hace SOLO desde las tarjetas de categoría de arriba.
+function renderFiltroPill() {
+  const pill = document.getElementById('filtro-pill');
+  if (!pill) return;
   const items = CAT.items || [];
-  const cats = (CAT.categorias || []).filter((c) => items.some((p) => p.cat === c.n));
-  const nOfertas = items.filter((p) => p.enOferta).length;
-  const chipsCat = cats.map((c) => {
-    const n = items.filter((p) => p.cat === c.n).length;
-    const activo = !filtroOferta && filtroCat === c.n;
-    return `<button class="chip ${activo ? 'on' : ''}" aria-pressed="${activo}" onclick="setCat('${c.n}')">` +
-      `<span class="icono" aria-hidden="true">${c.e || ''}</span> ${escapeHtml(c.n)} <span class="n">${n}</span></button>`;
-  }).join('');
-  const activoTodo = !filtroOferta && filtroCat === '';
-  document.getElementById('filtros').innerHTML =
-    `<button class="chip ${activoTodo ? 'on' : ''}" aria-pressed="${activoTodo}" onclick="setCat('')">Todo</button>` +
-    (nOfertas > 0 ? `<button class="chip ${filtroOferta ? 'on' : ''}" aria-pressed="${filtroOferta}" onclick="setOferta()">🏷️ Ofertas <span class="n">${nOfertas}</span></button>` : '') +
-    chipsCat;
+  const activo = filtroOferta || filtroCat !== '';
+  pill.hidden = !activo;
+  if (!activo) return;
+  const texto = filtroOferta
+    ? `🏷️ Ofertas (${items.filter((p) => p.enOferta).length})`
+    : `${filtroCat} (${items.filter((p) => p.cat === filtroCat).length})`;
+  document.getElementById('filtro-pill-texto').textContent = texto;
+  pill.setAttribute('aria-label', `Quitar filtro: ${texto}`);
 }
 
 // ── Categorías 3D (portada) ──
-// Tarjetas grandes con foto real de la categoría; hacen lo mismo que un chip de filtro.
+// Únicas: sustituyen del todo a la barra de chips (ver renderFiltroPill).
+// Cada tarjeta lleva un mosaico 2×2 de fotos de PRODUCTOS DISTINTOS de esa
+// categoría (así se lee "un grupo de cosas", no un artículo suelto). Si hay
+// menos de 4 con foto, se repiten las que haya — nunca queda un hueco roto.
 
-function categoriaFoto(catName) {
-  const items = (CAT.items || []).filter((p) => p.cat === catName);
-  const p = items.find((x) => esCloudinary(x.photo)) || items.find((x) => x.photo);
-  return p ? fotoCard(p.photo).src : '';
+function mosaicoFotos(items) {
+  const conFoto = items.filter((p) => esCloudinary(p.photo));
+  const fuente = conFoto.length ? conFoto : items.filter((p) => p.photo);
+  if (!fuente.length) return [];
+  const salida = [];
+  for (let i = 0; i < 4; i++) salida.push(fotoMosaico(fuente[i % fuente.length].photo));
+  return salida;
+}
+
+function categoriaFotos(catName) {
+  return mosaicoFotos((CAT.items || []).filter((p) => p.cat === catName));
+}
+
+function fotosOferta() {
+  return mosaicoFotos((CAT.items || []).filter((p) => p.enOferta));
+}
+
+// Una foto del mosaico que no carga solo se cae ella (celda vacía);
+// no borra las otras 3 como haría el imgFallback genérico.
+function cat3dImgFallback(img) {
+  const celda = document.createElement('span');
+  celda.className = 'cat3d-celda-vacia';
+  celda.setAttribute('aria-hidden', 'true');
+  img.replaceWith(celda);
+}
+
+function cat3dFotoHtml(fotos, marcador) {
+  if (!fotos.length) return `<span class="inicial" aria-hidden="true">${marcador}</span>`;
+  return fotos.map((f) => `<img src="${f}" alt="" loading="lazy" onerror="cat3dImgFallback(this)">`).join('');
 }
 
 function renderCategorias3D() {
@@ -122,22 +150,33 @@ function renderCategorias3D() {
   if (!cont) return;
   const items = CAT.items || [];
   const cats = (CAT.categorias || []).filter((c) => items.some((p) => p.cat === c.n));
-  cont.innerHTML = cats.map((c) => {
+  const nOfertas = items.filter((p) => p.enOferta).length;
+
+  const tarjetaOferta = nOfertas === 0 ? '' : (() => {
+    const activo = filtroOferta;
+    return `<button class="cat3d ${activo ? 'on' : ''}" type="button" data-oferta="1" aria-pressed="${activo}">` +
+      `<span class="cat3d-inner">` +
+      `<span class="cat3d-foto">${cat3dFotoHtml(fotosOferta(), '🏷️')}</span>` +
+      `<span class="cat3d-info">` +
+      `<span class="cat3d-nombre"><span class="cat3d-emoji" aria-hidden="true">🏷️</span>Ofertas</span>` +
+      `<span class="cat3d-n">${nOfertas} producto${nOfertas === 1 ? '' : 's'}</span>` +
+      `</span></span></button>`;
+  })();
+
+  const tarjetasCat = cats.map((c) => {
     const n = items.filter((p) => p.cat === c.n).length;
     const activo = !filtroOferta && filtroCat === c.n;
-    const foto = categoriaFoto(c.n);
     const marcador = escapeHtml(c.e || c.n.charAt(0).toUpperCase());
-    const fotoHtml = foto
-      ? `<img src="${foto}" alt="" loading="lazy" data-fallback="${marcador}" onerror="imgFallback(this)">`
-      : `<span class="inicial" aria-hidden="true">${marcador}</span>`;
     return `<button class="cat3d ${activo ? 'on' : ''}" type="button" data-cat="${escapeHtml(c.n)}" aria-pressed="${activo}">` +
       `<span class="cat3d-inner">` +
-      `<span class="cat3d-foto">${fotoHtml}</span>` +
+      `<span class="cat3d-foto">${cat3dFotoHtml(categoriaFotos(c.n), marcador)}</span>` +
       `<span class="cat3d-info">` +
       `<span class="cat3d-nombre"><span class="cat3d-emoji" aria-hidden="true">${c.e || ''}</span>${escapeHtml(c.n)}</span>` +
       `<span class="cat3d-n">${n} producto${n === 1 ? '' : 's'}</span>` +
       `</span></span></button>`;
   }).join('');
+
+  cont.innerHTML = tarjetaOferta + tarjetasCat;
 }
 
 // ── Parrilla ──
@@ -458,7 +497,7 @@ async function cargarCatalogo() {
   renderMarca();
   renderHero();
   guardarCarrito();
-  renderFiltros();
+  renderFiltroPill();
   renderCategorias3D();
   renderGrid();
   renderFooterExtra();
@@ -488,14 +527,16 @@ async function iniciar() {
   document.getElementById('categorias-3d').addEventListener('click', (e) => {
     const btn = e.target.closest('.cat3d');
     if (!btn) return;
-    setCat(btn.dataset.cat);
+    if (btn.dataset.oferta) setOferta(); else setCat(btn.dataset.cat);
     document.getElementById('catalogo').scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
+
+  document.getElementById('filtro-pill').addEventListener('click', () => setCat(''));
 
   document.getElementById('btn-ver-todo').addEventListener('click', () => {
     busqueda = ''; filtroCat = ''; filtroOferta = false;
     document.getElementById('buscador').value = '';
-    renderFiltros(); renderCategorias3D(); renderGrid();
+    renderFiltroPill(); renderCategorias3D(); renderGrid();
   });
   document.getElementById('btn-reintentar').addEventListener('click', cargarCatalogo);
 

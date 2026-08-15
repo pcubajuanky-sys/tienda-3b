@@ -33,7 +33,7 @@
   <div class="hero-mosaico" id="hero-mosaico" aria-hidden="true"></div>
   <div class="hero-contenido wrap">
     <div class="hero-logo" aria-hidden="true">
-      <svg class="logo-svg logo-hero" viewBox="0 0 126 44" focusable="false">
+      <svg class="logo-svg" viewBox="0 0 126 44" focusable="false">
         <rect class="logo-badge" x="1" y="1" width="42" height="42" rx="13"></rect>
         <text class="logo-mono" x="22" y="30" text-anchor="middle">3B</text>
         <text class="logo-word" x="52" y="27">STORE</text>
@@ -55,11 +55,14 @@
   <div class="categorias-3d wrap" id="categorias-3d"></div>
 </section>
 
-<div class="filtros-wrap" id="filtros-wrap">
-  <div class="filtros wrap" id="filtros" aria-label="Filtrar por categoría"></div>
-</div>
-
 <main class="wrap" id="catalogo">
+  <div class="grid-head">
+    <h2 class="grid-titulo">Catálogo</h2>
+    <button id="filtro-pill" class="filtro-pill" type="button" hidden>
+      <span id="filtro-pill-texto"></span>
+      <span class="filtro-pill-x" aria-hidden="true">✕</span>
+    </button>
+  </div>
   <div id="skeleton" class="grid" aria-hidden="true">
     <div class="card card-skel"></div><div class="card card-skel"></div>
     <div class="card card-skel"></div><div class="card card-skel"></div>
