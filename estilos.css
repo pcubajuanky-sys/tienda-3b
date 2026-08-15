@@ -402,7 +402,7 @@ main{padding-top:20px}
   min-height:44px;padding:9px 18px;border:none;border-radius:var(--radio-control);
   background:var(--brand-ink);color:var(--brand);font-weight:700;font-size:13px;cursor:pointer;
 }
-@media (min-width:760px){
+@media (min-width:1024px){
   .barra-movil{display:none}
 }
 /*
@@ -464,6 +464,7 @@ body.con-barra-movil{padding-bottom:var(--barra-movil-h, 84px)}
 .total{padding:14px 0;text-align:right}
 .envio-linea{display:block;font-size:12px;font-weight:600;color:var(--brand);margin-bottom:4px}
 .total-linea{display:block;font-size:18px;font-weight:800}
+.total-usd{display:block;font-size:12px;color:var(--text-3);font-weight:600;margin-top:2px}
 .campos{display:flex;flex-direction:column;gap:12px;margin-top:4px}
 .campo{display:flex;flex-direction:column;gap:5px;font-size:12px;font-weight:600;color:var(--text-2)}
 .campo input,.campo textarea{

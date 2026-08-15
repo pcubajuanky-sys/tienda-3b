@@ -317,6 +317,12 @@ function totalCarritoUSD() {
   return Math.round(n * 100) / 100;
 }
 
+// Misma función y mismo formato del USD en panel modal y aside — nunca se
+// duplica el cálculo, solo la clase CSS cambia según dónde se pinte.
+function usdLineaHtml(clase) {
+  return `<span class="${clase}">≈ $${totalCarritoUSD().toFixed(2)} USD</span>`;
+}
+
 // Mensajería gratis a partir de un umbral en CUP, configurable desde el panel
 // de Stock+ (CAT.tienda.envioGratisCUP / envioGratisTexto). Ausente o 0 ⇒
 // activo=false y nada de esto se pinta en ningún sitio (tienda idéntica a hoy).
@@ -426,7 +432,8 @@ function renderCarrito() {
   document.getElementById('form-pedido').hidden = !hayItems;
   document.getElementById('carrito-total').innerHTML = hayItems
     ? (envioTexto ? `<span class="envio-linea">${escapeHtml(envioTexto)}</span>` : '') +
-      `<span class="total-linea">Total: ${fmt(totalCarrito())} CUP</span>`
+      `<span class="total-linea">Total: ${fmt(totalCarrito())} CUP</span>` +
+      usdLineaHtml('total-usd')
     : '';
 
   // Aside lateral — mismas líneas, mismo total CUP, más el ≈ $X USD.
@@ -448,7 +455,7 @@ function renderCarrito() {
   totalEl.hidden = !hayItems;
   totalEl.innerHTML = hayItems
     ? `<span class="lateral-total-cup">Total: ${fmt(totalCarrito())} CUP</span>` +
-      `<span class="lateral-total-usd">≈ $${totalCarritoUSD().toFixed(2)} USD</span>`
+      usdLineaHtml('lateral-total-usd')
     : '';
   document.getElementById('btn-lateral-pedir').hidden = !hayItems;
 }
