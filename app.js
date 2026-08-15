@@ -67,11 +67,12 @@ function fotoMosaico(url) {
 }
 
 // Recuadro con la inicial cuando la foto no carga.
+// data-fallback (si viene, p.ej. el emoji de categoría) manda sobre el alt.
 function imgFallback(img) {
-  const cont = img.closest('.card-foto') || img.closest('.modal-foto');
+  const cont = img.closest('.card-foto') || img.closest('.modal-foto') || img.closest('.cat3d-foto');
   if (!cont) return;
-  const nombre = (img.alt || '').trim();
-  const inicial = nombre.charAt(0).toUpperCase() || '?';
+  const desdeAlt = (img.alt || '').trim().charAt(0).toUpperCase();
+  const inicial = img.dataset.fallback || desdeAlt || '?';
   cont.innerHTML = `<div class="inicial" aria-hidden="true">${inicial}</div>`;
 }
 
@@ -87,8 +88,8 @@ function visibles() {
   });
 }
 
-function setCat(n) { filtroCat = n; filtroOferta = false; renderFiltros(); renderGrid(); }
-function setOferta() { filtroOferta = true; filtroCat = ''; renderFiltros(); renderGrid(); }
+function setCat(n) { filtroCat = n; filtroOferta = false; renderFiltros(); renderCategorias3D(); renderGrid(); }
+function setOferta() { filtroOferta = true; filtroCat = ''; renderFiltros(); renderCategorias3D(); renderGrid(); }
 
 function renderFiltros() {
   const items = CAT.items || [];
@@ -105,6 +106,38 @@ function renderFiltros() {
     `<button class="chip ${activoTodo ? 'on' : ''}" aria-pressed="${activoTodo}" onclick="setCat('')">Todo</button>` +
     (nOfertas > 0 ? `<button class="chip ${filtroOferta ? 'on' : ''}" aria-pressed="${filtroOferta}" onclick="setOferta()">🏷️ Ofertas <span class="n">${nOfertas}</span></button>` : '') +
     chipsCat;
+}
+
+// ── Categorías 3D (portada) ──
+// Tarjetas grandes con foto real de la categoría; hacen lo mismo que un chip de filtro.
+
+function categoriaFoto(catName) {
+  const items = (CAT.items || []).filter((p) => p.cat === catName);
+  const p = items.find((x) => esCloudinary(x.photo)) || items.find((x) => x.photo);
+  return p ? fotoCard(p.photo).src : '';
+}
+
+function renderCategorias3D() {
+  const cont = document.getElementById('categorias-3d');
+  if (!cont) return;
+  const items = CAT.items || [];
+  const cats = (CAT.categorias || []).filter((c) => items.some((p) => p.cat === c.n));
+  cont.innerHTML = cats.map((c) => {
+    const n = items.filter((p) => p.cat === c.n).length;
+    const activo = !filtroOferta && filtroCat === c.n;
+    const foto = categoriaFoto(c.n);
+    const marcador = escapeHtml(c.e || c.n.charAt(0).toUpperCase());
+    const fotoHtml = foto
+      ? `<img src="${foto}" alt="" loading="lazy" data-fallback="${marcador}" onerror="imgFallback(this)">`
+      : `<span class="inicial" aria-hidden="true">${marcador}</span>`;
+    return `<button class="cat3d ${activo ? 'on' : ''}" type="button" data-cat="${escapeHtml(c.n)}" aria-pressed="${activo}">` +
+      `<span class="cat3d-inner">` +
+      `<span class="cat3d-foto">${fotoHtml}</span>` +
+      `<span class="cat3d-info">` +
+      `<span class="cat3d-nombre"><span class="cat3d-emoji" aria-hidden="true">${c.e || ''}</span>${escapeHtml(c.n)}</span>` +
+      `<span class="cat3d-n">${n} producto${n === 1 ? '' : 's'}</span>` +
+      `</span></span></button>`;
+  }).join('');
 }
 
 // ── Parrilla ──
@@ -345,6 +378,55 @@ function renderHero() {
   document.getElementById('hero-dato-productos').textContent = `${(CAT.items || []).length} productos disponibles`;
 }
 
+// ── Marca: nombre de la tienda (CAT.tienda.nombre, con '3B Store' de reserva) ──
+
+function renderMarca() {
+  const t = (CAT && CAT.tienda) || {};
+  const nombre = (t.nombre && t.nombre.trim()) || '3B Store';
+  document.title = nombre + ' — Tienda';
+  document.querySelectorAll('.logo').forEach((el) => el.setAttribute('aria-label', nombre + ' — inicio'));
+  const footerNombre = document.getElementById('footer-nombre');
+  if (footerNombre) footerNombre.textContent = nombre;
+}
+
+// ── Pie: Quiénes somos / Zonas de reparto / Contáctanos ──
+// Todo viene de CAT.tienda (puede no existir todavía, o traer campos vacíos).
+// Programación defensiva: si un campo falta, esa parte del pie simplemente no se pinta.
+// Nunca innerHTML con texto del catálogo sin escapar: quienSomos/zonas van por textContent.
+
+function renderFooterExtra() {
+  const t = (CAT && CAT.tienda) || {};
+
+  const quienesSec = document.getElementById('footer-quienes');
+  const quienesTexto = document.getElementById('footer-quienes-texto');
+  const tieneQuienes = !!(t.quienSomos && t.quienSomos.trim());
+  quienesSec.hidden = !tieneQuienes;
+  quienesTexto.textContent = tieneQuienes ? t.quienSomos : '';
+
+  const zonasSec = document.getElementById('footer-zonas');
+  const zonasTexto = document.getElementById('footer-zonas-texto');
+  const tieneZonas = !!(t.zonas && t.zonas.trim());
+  zonasSec.hidden = !tieneZonas;
+  zonasTexto.textContent = tieneZonas ? t.zonas : '';
+
+  const contactoSec = document.getElementById('footer-contacto');
+  const links = document.getElementById('footer-contacto-links');
+  const piezas = [];
+  if (CAT.whatsapp) {
+    piezas.push(`<a class="footer-link footer-link-wa" href="https://wa.me/${escapeHtml(CAT.whatsapp)}" target="_blank" rel="noopener">💬 WhatsApp</a>`);
+  }
+  if (t.facebook && t.facebook.trim()) {
+    piezas.push(`<a class="footer-link" href="${escapeHtml(t.facebook)}" target="_blank" rel="noopener">📘 Facebook</a>`);
+  }
+  if (t.email && t.email.trim()) {
+    piezas.push(`<a class="footer-link" href="mailto:${escapeHtml(t.email)}">✉️ ${escapeHtml(t.email)}</a>`);
+  }
+  links.innerHTML = piezas.join('');
+  contactoSec.hidden = piezas.length === 0;
+
+  document.getElementById('footer-grid').hidden = !tieneQuienes && !tieneZonas && piezas.length === 0;
+}
+
 // ── Cabecera compacta al hacer scroll ──
 
 function actualizarHeaderScroll() {
@@ -373,10 +455,13 @@ async function cargarCatalogo() {
   document.getElementById('actualizado').textContent =
     'Catálogo actualizado el ' + new Date(CAT.generado).toLocaleString('es-MX');
 
+  renderMarca();
   renderHero();
   guardarCarrito();
   renderFiltros();
+  renderCategorias3D();
   renderGrid();
+  renderFooterExtra();
   document.getElementById('skeleton').hidden = true;
   document.getElementById('grid').hidden = false;
 }
@@ -400,10 +485,17 @@ async function iniciar() {
   document.getElementById('modal-cerrar').addEventListener('click', cerrarDetalle);
   document.getElementById('modal-fondo').addEventListener('click', cerrarDetalle);
 
+  document.getElementById('categorias-3d').addEventListener('click', (e) => {
+    const btn = e.target.closest('.cat3d');
+    if (!btn) return;
+    setCat(btn.dataset.cat);
+    document.getElementById('catalogo').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+
   document.getElementById('btn-ver-todo').addEventListener('click', () => {
     busqueda = ''; filtroCat = ''; filtroOferta = false;
     document.getElementById('buscador').value = '';
-    renderFiltros(); renderGrid();
+    renderFiltros(); renderCategorias3D(); renderGrid();
   });
   document.getElementById('btn-reintentar').addEventListener('click', cargarCatalogo);
 

@@ -11,7 +11,13 @@
 
 <header class="header" id="header">
   <div class="header-top wrap">
-    <a href="#" class="logo" aria-label="3B — inicio">3B</a>
+    <a href="#" class="logo" id="logo-header" aria-label="3B Store — inicio">
+      <svg class="logo-svg" viewBox="0 0 126 44" aria-hidden="true" focusable="false">
+        <rect class="logo-badge" x="1" y="1" width="42" height="42" rx="13"></rect>
+        <text class="logo-mono" x="22" y="30" text-anchor="middle">3B</text>
+        <text class="logo-word" x="52" y="27">STORE</text>
+      </svg>
+    </a>
     <button id="btn-carrito" class="btn-carrito" aria-label="Ver tu pedido" type="button">
       <span aria-hidden="true">🛒</span>
       <span id="carrito-count" class="carrito-count" aria-live="polite">0</span>
@@ -26,6 +32,13 @@
 <section class="hero" id="hero">
   <div class="hero-mosaico" id="hero-mosaico" aria-hidden="true"></div>
   <div class="hero-contenido wrap">
+    <div class="hero-logo" aria-hidden="true">
+      <svg class="logo-svg logo-hero" viewBox="0 0 126 44" focusable="false">
+        <rect class="logo-badge" x="1" y="1" width="42" height="42" rx="13"></rect>
+        <text class="logo-mono" x="22" y="30" text-anchor="middle">3B</text>
+        <text class="logo-word" x="52" y="27">STORE</text>
+      </svg>
+    </div>
     <h1>Todo para tu casa, tu pelo y tu día a día</h1>
     <p class="hero-sub">Mira el catálogo, arma tu pedido y nos escribes por WhatsApp.</p>
     <a href="#catalogo" class="hero-cta">Ver el catálogo</a>
@@ -35,6 +48,11 @@
       <li>Coordinamos por WhatsApp</li>
     </ul>
   </div>
+</section>
+
+<section class="categorias-3d-wrap" aria-label="Categorías">
+  <h2 class="categorias-3d-titulo wrap">Categorías</h2>
+  <div class="categorias-3d wrap" id="categorias-3d"></div>
 </section>
 
 <div class="filtros-wrap" id="filtros-wrap">
@@ -61,8 +79,31 @@
 
 <footer class="footer">
   <div class="wrap footer-wrap">
-    <div class="footer-marca">3B</div>
+    <div class="footer-marca">
+      <svg class="logo-svg logo-footer" viewBox="0 0 126 44" aria-hidden="true" focusable="false">
+        <rect class="logo-badge" x="1" y="1" width="42" height="42" rx="13"></rect>
+        <text class="logo-mono" x="22" y="30" text-anchor="middle">3B</text>
+        <text class="logo-word" x="52" y="27">STORE</text>
+      </svg>
+      <span id="footer-nombre" class="footer-nombre-texto"></span>
+    </div>
     <div id="vendedor" class="vendedor"></div>
+
+    <div class="footer-grid" id="footer-grid" hidden>
+      <div class="footer-col" id="footer-quienes" hidden>
+        <h3>Quiénes somos</h3>
+        <p id="footer-quienes-texto" class="footer-texto"></p>
+      </div>
+      <div class="footer-col" id="footer-zonas" hidden>
+        <h3>Zonas de reparto</h3>
+        <p id="footer-zonas-texto" class="footer-texto"></p>
+      </div>
+      <div class="footer-col" id="footer-contacto" hidden>
+        <h3>Contáctanos</h3>
+        <div id="footer-contacto-links" class="footer-contacto-links"></div>
+      </div>
+    </div>
+
     <p id="actualizado" class="actualizado"></p>
     <p class="aviso-tasa">Los precios pueden variar según la tasa del día.</p>
   </div>
