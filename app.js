@@ -183,6 +183,10 @@ function abrirDetalle(id) {
 function cerrarDetalle() {
   document.getElementById('modal-detalle').hidden = true;
   productoModal = null;
+  const img = document.getElementById('modal-img');
+  // Un src="" hace que el navegador re-pida la página entera como si fuera la imagen.
+  // Sin el atributo, no hay petición: la foto vuelve a ponerse solo al abrir el detalle.
+  if (img) img.removeAttribute('src');
   document.removeEventListener('keydown', capturarTecladoModal);
   if (elementoAnteriorFoco && elementoAnteriorFoco.isConnected) elementoAnteriorFoco.focus();
 }
