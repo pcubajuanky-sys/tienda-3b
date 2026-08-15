@@ -155,6 +155,18 @@ a{color:inherit}
 }
 .hero-datos li{position:relative;padding-left:16px}
 .hero-datos li::before{content:"✓";position:absolute;left:0}
+/* Portada más baja en escritorio (2026-08-15): medía 428px de alto y
+   empujaba el catálogo entero fuera de la primera pantalla. Solo relleno y
+   tamaño del titular — el mosaico de fotos y el velo no se tocan. Móvil
+   intacto (nada de esto entra por debajo de 1024px). */
+@media (min-width:1024px){
+  .hero-contenido{padding:26px 16px 22px}
+  .hero-logo{margin-bottom:8px}
+  .hero-logo .logo-svg{height:36px}
+  .hero h1{font-size:30px;max-width:30ch;margin:0 auto 8px}
+  .hero-sub{margin:0 auto 12px}
+  .hero-datos{margin-top:12px}
+}
 
 /* ── Banner de mensajería gratis (opcional, según config del panel) ──
    `hidden` por defecto en el HTML; renderPromoEnvio() (app.js) solo lo
@@ -196,102 +208,80 @@ a{color:inherit}
   .promo-ilustracion{transition:none}
 }
 
-/* ── Categorías 3D ──
-   Únicas: no hay una segunda barra de chips. Tarjetas a media escala
-   (2026-08-15, pedido del dueño: "tipo mitad del tamaño de las imágenes")
-   con UNA sola foto por tarjeta — a este tamaño el mosaico 2×2 dejó de
-   leerse (cada foto habría quedado en ~39px). Se gana ver muchas más
-   categorías de un vistazo, que es lo que interesa ahora que ya no hay
-   tira. Reversible: la regla `.cat3d-foto img:only-child` de abajo es lo
-   que permite volver al mosaico sin tocar CSS — basta con que app.js vuelva
-   a pasar 4 fotos en vez de 1. */
+/* ── Categorías (círculos) ──
+   Únicas: no hay una segunda barra de chips. UNA sola foto por tarjeta,
+   circular (2026-08-15, segundo retoque: el dueño las quería "más grandes"
+   y "circulares" — la versión pequeña/3D con nombre dentro del recuadro
+   costaba leer hasta "Electrodomésticos"). Sin efecto 3D: se cambió por un
+   realce sobrio (elevar + sombra) y un aro de marca en la categoría activa.
+   El nombre va DEBAJO del círculo, centrado, fuera de la caja (ver app.js:
+   .cat3d-info ya no es hijo de .cat3d-inner, es hermano). */
 .categorias-3d-wrap{padding:26px 0 4px}
 .categorias-3d-titulo{font-size:clamp(19px,3vw,24px);font-weight:700;margin-bottom:2px}
 .categorias-3d{
-  display:flex;gap:8px;overflow-x:auto;overflow-y:visible;
+  display:flex;gap:14px;overflow-x:auto;overflow-y:visible;
   padding:16px 16px 22px;scroll-snap-type:x proximity;
-  scrollbar-width:none;-ms-overflow-style:none;perspective:1200px;
+  scrollbar-width:none;-ms-overflow-style:none;
 }
 .categorias-3d::-webkit-scrollbar{display:none}
 .cat3d{
-  flex-shrink:0;scroll-snap-align:start;width:66px;border:none;background:transparent;
-  padding:0;margin:0;cursor:pointer;transform-style:preserve-3d;font:inherit;color:inherit;
-  text-align:left;border-radius:var(--radio-control);
+  flex-shrink:0;scroll-snap-align:start;width:92px;border:none;background:transparent;
+  padding:0;margin:0;cursor:pointer;font:inherit;color:inherit;
+  display:flex;flex-direction:column;align-items:center;text-align:center;
+  border-radius:var(--radio-control);
 }
 @media (min-width:760px){
-  .cat3d{width:78px}
+  .cat3d{width:112px}
   /*
     El fallo medido: a 1280px había 21 tarjetas y solo 7 visibles (14 fuera de
     pantalla, 2.328px ocultos) porque la tira ocultaba su propia barra de
     scroll y la rueda vertical no la movía. En escritorio deja de ser tira:
     pasa a rejilla que envuelve, sin flechas ni JS nuevo. Debajo de 760px no
-    se toca nada — ahí el arrastre táctil es lo natural.
+    se toca nada — ahí el arrastre táctil es lo natural (con círculos es el
+    patrón esperado, igual que antes).
   */
   .categorias-3d{flex-wrap:wrap;overflow-x:visible;scroll-snap-type:none}
 }
 .cat3d-inner{
-  position:relative;display:block;border-radius:var(--radio-control);overflow:hidden;
-  background:var(--surface);box-shadow:0 2px 4px rgba(28,26,34,.12),0 10px 18px rgba(28,26,34,.14);
-  transform:rotateX(8deg) rotateY(-10deg) translateZ(0);
-  transition:transform .28s cubic-bezier(.2,.8,.2,1), box-shadow .28s ease;
+  position:relative;display:block;width:100%;aspect-ratio:1;
+  border-radius:50%;overflow:hidden;
+  background:var(--surface);box-shadow:0 2px 4px rgba(28,26,34,.12),0 6px 14px rgba(28,26,34,.10);
+  transition:transform var(--dur) ease, box-shadow var(--dur) ease;
 }
-.cat3d:nth-child(even) .cat3d-inner{transform:rotateX(8deg) rotateY(10deg) translateZ(0)}
-.cat3d-inner::before{
-  content:"";position:absolute;inset:0;z-index:2;pointer-events:none;
-  background:linear-gradient(165deg, rgba(255,255,255,.32) 0%, rgba(255,255,255,0) 42%);
-  mix-blend-mode:overlay;
-}
-.cat3d-foto{
-  aspect-ratio:1;background:var(--surface-2);position:relative;
-  display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:1px;
-}
+.cat3d-foto{width:100%;height:100%;background:var(--surface-2);position:relative}
 .cat3d-foto img{width:100%;height:100%;object-fit:cover;display:block}
-/* Tarjeta pequeña = una sola foto: sin hermanas, ocupa la caja entera en vez
-   de un cuarto del grid 2×2 (que sigue intacto para el modo mosaico). */
-.cat3d-foto img:only-child{grid-column:1/-1;grid-row:1/-1}
 .cat3d-foto .cat3d-celda-vacia{width:100%;height:100%;background:var(--surface-2)}
 .cat3d-foto .inicial{
-  grid-column:1/-1;grid-row:1/-1;
   width:100%;height:100%;display:flex;align-items:center;justify-content:center;
-  font-size:20px;font-weight:800;color:var(--text-3);background:var(--surface-2);
+  font-size:28px;font-weight:800;color:var(--text-3);background:var(--surface-2);
 }
-.cat3d-info{display:block;padding:5px 5px 7px}
-/* 2 líneas, no 1: a 66-78px de ancho una sola línea cortaba 9 de 21 nombres
-   ("Electrodomésticos", "Motos / Accesorios"...) incluso los de una sola
-   palabra larga. El ancho de la tarjeta no se toca (el dueño pidió media
-   anchura, no medio texto): se le da más alto/interlineado a la tarjeta. */
+.cat3d-info{display:block;width:100%;padding-top:7px}
 .cat3d-nombre{
   display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
-  text-overflow:ellipsis;font-size:10px;font-weight:700;line-height:1.32;color:var(--text);
-  min-height:26px;
+  text-overflow:ellipsis;font-size:11px;font-weight:700;line-height:1.3;color:var(--text);
+  min-height:29px;
 }
 .cat3d-emoji{margin-right:2px}
 .cat3d-n{
-  display:block;margin-top:1px;font-size:9px;color:var(--text-3);font-weight:600;
+  display:block;margin-top:2px;font-size:10px;color:var(--text-3);font-weight:600;
   overflow:hidden;white-space:nowrap;text-overflow:ellipsis;
 }
 @media (hover:hover) and (pointer:fine){
   .cat3d:hover .cat3d-inner,.cat3d:focus-visible .cat3d-inner{
-    transform:rotateX(0deg) rotateY(0deg) translateZ(22px);
-    box-shadow:0 8px 10px rgba(28,26,34,.16),0 22px 34px rgba(28,26,34,.22);
+    transform:translateY(-2px);
+    box-shadow:0 4px 10px rgba(28,26,34,.16),0 10px 20px rgba(28,26,34,.14);
   }
 }
 .cat3d:active .cat3d-inner{
-  transform:rotateX(3deg) rotateY(0deg) translateZ(10px);
+  transform:translateY(0);
   transition-duration:.1s;
 }
-.cat3d.on .cat3d-inner{
-  transform:rotateX(0deg) rotateY(0deg) translateZ(15px);
-  box-shadow:0 6px 8px rgba(122,46,93,.20),0 18px 28px rgba(122,46,93,.24);
-}
+.cat3d.on .cat3d-inner{box-shadow:0 0 0 3px var(--brand)}
 .cat3d.on .cat3d-nombre{color:var(--brand)}
 @media (prefers-reduced-motion:reduce){
-  .categorias-3d{perspective:none}
-  .cat3d-inner{transform:none!important;transition:none!important}
-  .cat3d:hover .cat3d-inner,.cat3d:focus-visible .cat3d-inner,
-  .cat3d:active .cat3d-inner,.cat3d.on .cat3d-inner{
+  .cat3d-inner{transition:none!important}
+  .cat3d:hover .cat3d-inner,.cat3d:focus-visible .cat3d-inner,.cat3d:active .cat3d-inner{
     transform:none!important;
-    box-shadow:0 1px 2px rgba(28,26,34,.06),0 8px 24px rgba(28,26,34,.06)!important;
   }
 }
 
@@ -315,21 +305,37 @@ main{padding-top:20px}
   display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px;
 }
 
+/* ── .contenido — categorías + catálogo | pedido, en 2 columnas (≥1024px) ──
+   FALLO (2026-08-15, medido a 1280×800): el aside vivía DENTRO de <main>,
+   que arranca después de la portada y las categorías (banner 125, portada
+   181-609, categorías 609-948) → el aside empezaba en y=948, fuera de la
+   pantalla al entrar. Arreglo: .contenido envuelve categorías Y <main>, y el
+   aside es HERMANO directo en la columna 2 desde la primera fila — visible
+   sin scroll. Por debajo de 1024px, .contenido es display:block y nada
+   cambia (el móvil no se toca). */
+.contenido{display:block}
+@media (min-width:1024px){
+  .contenido{
+    display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:24px;align-items:start;
+    max-width:1180px;margin:0 auto;padding:0 16px;
+  }
+  /* Los .wrap de dentro (título de categorías, tira de categorías, <main>)
+     ya traen su propio max-width:1180px + padding:16px — repetirlo aquí
+     duplicaría el margen y descuadraría el ancho de columna. */
+  .contenido .wrap{max-width:none;padding:0}
+  .categorias-3d-wrap{grid-column:1;grid-row:1}
+  #catalogo{grid-column:1;grid-row:2}
+}
+
 /* ── Carrito lateral — solo escritorio (≥1024px) ──
    Misma fuente de verdad que el panel modal (renderCarrito() pinta los dos).
    No lleva formulario propio: su botón abre el panel modal de siempre
    (abrirCarrito()), así los id del formulario (c-nombre, c-tel…) no se
-   duplican. `display:none` por defecto; el @media de abajo lo hace visible
-   y lo integra en la rejilla de 2 columnas de #catalogo. */
+   duplican. `display:none` por defecto; el @media de abajo lo hace visible. */
 .carrito-lateral{display:none}
 @media (min-width:1024px){
-  #catalogo{
-    display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:24px;align-items:start;
-  }
-  .grid-head{grid-column:1/-1}
-  #skeleton,#grid,#vacio,#error-carga{grid-column:1}
   .carrito-lateral{
-    display:block;grid-column:2;grid-row:2/-1;
+    display:block;grid-column:2;grid-row:1/-1;
     position:sticky;top:var(--header-h,120px);
     background:var(--surface);border:1px solid var(--border);border-radius:var(--radio-card);
     padding:16px;box-shadow:var(--sombra);

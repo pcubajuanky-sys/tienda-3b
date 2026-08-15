@@ -79,26 +79,42 @@
   </div>
 </section>
 
-<section class="categorias-3d-wrap" aria-label="Categorías">
-  <h2 class="categorias-3d-titulo wrap">Categorías</h2>
-  <div class="categorias-3d wrap" id="categorias-3d"></div>
-</section>
+<!-- .contenido envuelve categorías + catálogo Y el aside: antes el aside
+     vivía DENTRO de <main>, que arranca después de la portada y las
+     categorías, así que a 1280×800 quedaba fuera de la pantalla al entrar
+     (y=948). Ahora es hermano directo en la columna 2 desde la primera fila
+     (ver estilos.css, @media min-width:1024px) — visible sin hacer scroll.
+     Por debajo de 1024px es display:block y no cambia nada. -->
+<div class="contenido">
+  <section class="categorias-3d-wrap" aria-label="Categorías">
+    <h2 class="categorias-3d-titulo wrap">Categorías</h2>
+    <div class="categorias-3d wrap" id="categorias-3d"></div>
+  </section>
 
-<main class="wrap" id="catalogo">
-  <div class="grid-head">
-    <h2 class="grid-titulo">Catálogo</h2>
-    <button id="filtro-pill" class="filtro-pill" type="button" hidden>
-      <span id="filtro-pill-texto"></span>
-      <span class="filtro-pill-x" aria-hidden="true">✕</span>
-    </button>
-  </div>
-  <div id="skeleton" class="grid" aria-hidden="true">
-    <div class="card card-skel"></div><div class="card card-skel"></div>
-    <div class="card card-skel"></div><div class="card card-skel"></div>
-    <div class="card card-skel"></div><div class="card card-skel"></div>
-    <div class="card card-skel"></div><div class="card card-skel"></div>
-  </div>
-  <div id="grid" class="grid" hidden></div>
+  <main class="wrap" id="catalogo">
+    <div class="grid-head">
+      <h2 class="grid-titulo">Catálogo</h2>
+      <button id="filtro-pill" class="filtro-pill" type="button" hidden>
+        <span id="filtro-pill-texto"></span>
+        <span class="filtro-pill-x" aria-hidden="true">✕</span>
+      </button>
+    </div>
+    <div id="skeleton" class="grid" aria-hidden="true">
+      <div class="card card-skel"></div><div class="card card-skel"></div>
+      <div class="card card-skel"></div><div class="card card-skel"></div>
+      <div class="card card-skel"></div><div class="card card-skel"></div>
+      <div class="card card-skel"></div><div class="card card-skel"></div>
+    </div>
+    <div id="grid" class="grid" hidden></div>
+    <div id="vacio" class="estado" hidden>
+      <p>No hay productos que coincidan con tu búsqueda.</p>
+      <button id="btn-ver-todo" class="btn-secundario" type="button">Ver todo el catálogo</button>
+    </div>
+    <div id="error-carga" class="estado" hidden>
+      <p>No pudimos cargar el catálogo. Revisa tu conexión e intenta de nuevo.</p>
+      <button id="btn-reintentar" class="btn-secundario" type="button">Reintentar</button>
+    </div>
+  </main>
 
   <!-- Carrito lateral: solo visible en escritorio (≥1024px, ver estilos.css).
        No lleva formulario propio: su botón abre el panel modal de siempre. -->
@@ -109,16 +125,7 @@
     <div id="lateral-total" class="lateral-total" hidden></div>
     <button id="btn-lateral-pedir" type="button" hidden>Pedir por WhatsApp</button>
   </aside>
-
-  <div id="vacio" class="estado" hidden>
-    <p>No hay productos que coincidan con tu búsqueda.</p>
-    <button id="btn-ver-todo" class="btn-secundario" type="button">Ver todo el catálogo</button>
-  </div>
-  <div id="error-carga" class="estado" hidden>
-    <p>No pudimos cargar el catálogo. Revisa tu conexión e intenta de nuevo.</p>
-    <button id="btn-reintentar" class="btn-secundario" type="button">Reintentar</button>
-  </div>
-</main>
+</div>
 
 <footer class="footer">
   <div class="wrap footer-wrap">

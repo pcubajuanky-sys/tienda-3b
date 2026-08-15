@@ -166,15 +166,20 @@ function renderCategorias3D() {
   const cats = (CAT.categorias || []).filter((c) => items.some((p) => p.cat === c.n));
   const nOfertas = items.filter((p) => p.enOferta).length;
 
+  // El nombre va DEBAJO del círculo, fuera de la caja (2026-08-15, pedido
+  // del dueño): .cat3d-info ya NO vive dentro de .cat3d-inner, es hermano —
+  // así el círculo (foto) y el texto (nombre + contador) se apilan con el
+  // flex column de .cat3d, sin quedar "dentro de un recuadro".
   const tarjetaOferta = nOfertas === 0 ? '' : (() => {
     const activo = filtroOferta;
     return `<button class="cat3d ${activo ? 'on' : ''}" type="button" data-oferta="1" aria-pressed="${activo}">` +
       `<span class="cat3d-inner">` +
       `<span class="cat3d-foto">${cat3dFotoHtml(fotosOferta().slice(0, 1), '🏷️')}</span>` +
+      `</span>` +
       `<span class="cat3d-info">` +
       `<span class="cat3d-nombre"><span class="cat3d-emoji" aria-hidden="true">🏷️</span>Ofertas</span>` +
       `<span class="cat3d-n">${nOfertas} producto${nOfertas === 1 ? '' : 's'}</span>` +
-      `</span></span></button>`;
+      `</span></button>`;
   })();
 
   const tarjetasCat = cats.map((c) => {
@@ -184,10 +189,11 @@ function renderCategorias3D() {
     return `<button class="cat3d ${activo ? 'on' : ''}" type="button" data-cat="${escapeHtml(c.n)}" aria-pressed="${activo}">` +
       `<span class="cat3d-inner">` +
       `<span class="cat3d-foto">${cat3dFotoHtml(categoriaFotos(c.n).slice(0, 1), marcador)}</span>` +
+      `</span>` +
       `<span class="cat3d-info">` +
       `<span class="cat3d-nombre"><span class="cat3d-emoji" aria-hidden="true">${c.e || ''}</span>${escapeHtml(c.n)}</span>` +
       `<span class="cat3d-n">${n} producto${n === 1 ? '' : 's'}</span>` +
-      `</span></span></button>`;
+      `</span></button>`;
   }).join('');
 
   cont.innerHTML = tarjetaOferta + tarjetasCat;
