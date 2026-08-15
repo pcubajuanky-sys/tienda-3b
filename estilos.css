@@ -118,23 +118,26 @@ a{color:inherit}
   color:var(--brand-ink);
 }
 /*
-  Las fotos son textura de fondo, no protagonistas: además de la opacidad baja,
+  Las fotos son textura de fondo, no protagonistas: además de la opacidad,
   el desenfoque es lo que de verdad borra los textos y marcas de agua propias
   de algunas fotos de producto (una marca de agua nítida al 22% de opacidad
   sigue siendo texto legible; desenfocada, se vuelve mancha de color). El velo
   (.hero-velo) repite encima el mismo degradado de marca para que el titular
-  se apoye sobre todo en él, casi sin interferencia de las fotos.
+  conserve contraste. 2026-08-15 (cuarto retoque): el dueño avisó de que
+  "apenas se ven" las fotos — se subió la opacidad del mosaico (.32→.55) y se
+  bajó la del velo (.82→.64) sin perder el límite duro de contraste del
+  texto (≥4.5:1, medido caso por caso, ver informe).
 */
 .hero-mosaico{
   position:absolute;inset:0;display:grid;
   grid-template-columns:repeat(6,1fr);grid-template-rows:repeat(2,1fr);
-  gap:2px;opacity:.32;filter:blur(4px) saturate(.8);
+  gap:2px;opacity:.55;filter:blur(2px) saturate(.8);
 }
 .hero-mosaico img{width:100%;height:100%;object-fit:cover;display:block}
 .hero-velo{
   position:absolute;inset:0;
   background:linear-gradient(155deg, var(--brand) 0%, var(--brand) 58%, var(--surface-2) 100%);
-  opacity:.82;
+  opacity:.64;
 }
 .hero-contenido{position:relative;padding:44px 16px 32px;text-align:center}
 .hero-logo{display:flex;justify-content:center;margin-bottom:16px}
@@ -160,12 +163,12 @@ a{color:inherit}
    tamaño del titular — el mosaico de fotos y el velo no se tocan. Móvil
    intacto (nada de esto entra por debajo de 1024px). */
 @media (min-width:1024px){
-  .hero-contenido{padding:26px 16px 22px}
-  .hero-logo{margin-bottom:8px}
-  .hero-logo .logo-svg{height:36px}
-  .hero h1{font-size:30px;max-width:30ch;margin:0 auto 8px}
-  .hero-sub{margin:0 auto 12px}
-  .hero-datos{margin-top:12px}
+  .hero-contenido{padding:40px 16px 30px}
+  .hero-logo{margin-bottom:12px}
+  .hero-logo .logo-svg{height:42px}
+  .hero h1{font-size:32px;max-width:30ch;margin:0 auto 12px}
+  .hero-sub{margin:0 auto 16px}
+  .hero-datos{margin-top:18px}
 }
 
 /* ── Banner de mensajería gratis (opcional, según config del panel) ──

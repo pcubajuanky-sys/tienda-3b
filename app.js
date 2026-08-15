@@ -613,12 +613,26 @@ function renderFooterExtra() {
   zonasSec.hidden = !tieneZonas;
   zonasTexto.textContent = tieneZonas ? t.zonas : '';
 
+  // grupoWA/contactos: contrato nuevo de catalogo.json→tienda (2026-08-15,
+  // otro ejecutor los añade en Stock+ en paralelo). Ausentes/vacíos ⇒ esa
+  // pieza no se pinta, igual que facebook/email de abajo. Todo lo que viene
+  // del catálogo (público) se escapa con escapeHtml antes de insertarse.
   const contactoSec = document.getElementById('footer-contacto');
   const links = document.getElementById('footer-contacto-links');
   const piezas = [];
   if (CAT.whatsapp) {
     piezas.push(`<a class="footer-link footer-link-wa" href="https://wa.me/${escapeHtml(CAT.whatsapp)}" target="_blank" rel="noopener">💬 WhatsApp</a>`);
   }
+  if (t.grupoWA && t.grupoWA.trim()) {
+    piezas.push(`<a class="footer-link" href="${escapeHtml(t.grupoWA.trim())}" target="_blank" rel="noopener">👥 Únete a nuestro grupo</a>`);
+  }
+  (Array.isArray(t.contactos) ? t.contactos : []).forEach((c) => {
+    const tel = c && c.tel ? String(c.tel).trim() : '';
+    if (!tel) return;
+    const nombre = (c.nombre || '').trim();
+    const etiqueta = nombre ? `Escríbele a ${nombre}` : 'Escríbele por WhatsApp';
+    piezas.push(`<a class="footer-link footer-link-wa" href="https://wa.me/${escapeHtml(tel)}" target="_blank" rel="noopener">💬 ${escapeHtml(etiqueta)}</a>`);
+  });
   if (t.facebook && t.facebook.trim()) {
     piezas.push(`<a class="footer-link" href="${escapeHtml(t.facebook)}" target="_blank" rel="noopener">📘 Facebook</a>`);
   }
