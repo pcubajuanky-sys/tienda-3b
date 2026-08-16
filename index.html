@@ -136,6 +136,11 @@
     <p id="lateral-politica" class="politica-texto" hidden></p>
     <p id="lateral-terminos" class="terminos-nota" hidden>Al pedir aceptas <a href="terminos.html" target="_blank" rel="noopener">nuestros términos</a>.</p>
     <button id="btn-lateral-pedir" type="button" hidden>Pedir por WhatsApp</button>
+    <!-- Pago por adelantado con QvaPay (2026-08-16, opcional): tienda.pagoUrl.
+         Secundario a propósito, nunca más prominente que "Pedir por
+         WhatsApp" (ver .pago-link en estilos.css). Contenido lo pinta
+         pagoWrapHtml() en app.js; vacío/ausente ⇒ hidden y sin contenido. -->
+    <div id="lateral-pago-wrap" class="pago-wrap" hidden></div>
   </aside>
 </div>
 
@@ -228,6 +233,11 @@
       <p id="panel-politica" class="politica-texto" hidden></p>
       <p id="panel-terminos" class="terminos-nota" hidden>Al pedir aceptas <a href="terminos.html" target="_blank" rel="noopener">nuestros términos</a>.</p>
       <button id="btn-enviar" class="btn-enviar" type="submit">Pedir por WhatsApp</button>
+      <!-- Pago por adelantado con QvaPay (2026-08-16, opcional): tienda.pagoUrl.
+           Secundario a propósito, nunca más prominente que "Pedir por
+           WhatsApp" (ver .pago-link en estilos.css). Contenido lo pinta
+           pagoWrapHtml() en app.js; vacío/ausente ⇒ hidden y sin contenido. -->
+      <div id="panel-pago-wrap" class="pago-wrap" hidden></div>
       <p class="aviso">La mensajería y la disponibilidad se confirman por WhatsApp.</p>
     </form>
   </div>

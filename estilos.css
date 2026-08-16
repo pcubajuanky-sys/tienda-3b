@@ -595,6 +595,20 @@ body.con-barra-movil{padding-bottom:var(--barra-movil-h, 84px)}
 }
 .aviso{font-size:11px;color:var(--text-3);text-align:center;margin-top:10px}
 
+/* Pago por adelantado con QvaPay (2026-08-16) — opcional y discreto a
+   propósito: el camino normal sigue siendo "Pedir por WhatsApp"
+   (.btn-enviar/#btn-lateral-pedir), que es donde se confirma existencia y
+   precio final. El enlace es texto subrayado sin fondo (nada de botón), muy
+   por debajo en tamaño/peso del botón verde. Mismo bloque en panel modal y
+   aside (pagoWrapHtml() en app.js); vacío/ausente ⇒ hidden y sin contenido. */
+.pago-wrap{margin-top:10px;text-align:center}
+.pago-link{
+  display:inline-block;font-size:12px;font-weight:600;color:var(--text-2);
+  text-decoration:underline;text-underline-offset:2px;
+}
+.pago-link:hover{color:var(--brand)}
+.pago-nota{font-size:11px;color:var(--text-3);line-height:1.4;margin-top:3px}
+
 /* Enlace a términos y condiciones, encima del botón de pedir (panel y aside).
    Convive con .politica-texto/.aviso sin amontonarse: usa --text-2 (mismo
    mínimo AA que .politica-texto) y el enlace en --brand para que destaque. */
