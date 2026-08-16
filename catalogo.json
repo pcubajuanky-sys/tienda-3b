@@ -1,7 +1,7 @@
 {
-  "generado": "2026-08-16T22:21:58.663Z",
+  "generado": "2026-08-16T22:24:54.278Z",
   "tasa": 670,
-  "whatsapp": "5354978966",
+  "whatsapp": "",
   "vendedores": [],
   "categorias": [
     {
@@ -94,16 +94,16 @@
     }
   ],
   "tienda": {
-    "nombre": "3B STORE",
+    "nombre": "3B Store",
     "quienSomos": "En 3B Store vendemos productos para la casa, el cuidado personal y el día a día, con atención directa por WhatsApp. Te ayudamos a elegir, coordinamos la entrega contigo y confirmamos disponibilidad y precio antes de cerrar el pedido.",
     "zonas": "Repartimos a domicilio coordinando por WhatsApp. Muchos productos llevan mensajería gratis en San Antonio; en otras zonas el costo depende del destino y del pedido, y te lo confirmamos antes de cerrar.",
     "facebook": "",
     "email": "",
-    "envioGratisCUP": 3000,
+    "envioGratisCUP": 0,
     "envioGratisTexto": "Aplica a nuestras zonas de reparto habituales; fuera de ellas lo confirmamos por WhatsApp.",
     "mensajeriaCUP": 0,
     "politica": "Revisa toda tu mercancía delante de la mensajera. Una vez que se va, no aceptamos devoluciones. Si la mensajería era incluida y al revisar decides no quedarte el producto, la mensajería se paga igual, porque la mensajera ya hizo el viaje.",
-    "grupoWA": "",
+    "grupoWA": "https://chat.whatsapp.com/BragbcwxeYrKrL0DwjrGbQ?s=sw&p=a&ilr=4",
     "contactos": []
   },
   "items": [
