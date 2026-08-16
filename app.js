@@ -551,6 +551,7 @@ function renderCarrito() {
   const panelPolitica = document.getElementById('panel-politica');
   panelPolitica.hidden = !hayItems || !politica;
   panelPolitica.innerHTML = politica ? escapeHtml(politica) : '';
+  document.getElementById('panel-terminos').hidden = !hayItems;
 
   // Aside lateral — mismas líneas, mismo total CUP, más el ≈ $X USD.
   // El aside NO lleva formulario: su botón abre el panel modal de siempre.
@@ -574,6 +575,7 @@ function renderCarrito() {
   const lateralPolitica = document.getElementById('lateral-politica');
   lateralPolitica.hidden = !hayItems || !politica;
   lateralPolitica.innerHTML = politica ? escapeHtml(politica) : '';
+  document.getElementById('lateral-terminos').hidden = !hayItems;
   document.getElementById('btn-lateral-pedir').hidden = !hayItems;
 }
 

@@ -595,6 +595,36 @@ body.con-barra-movil{padding-bottom:var(--barra-movil-h, 84px)}
 }
 .aviso{font-size:11px;color:var(--text-3);text-align:center;margin-top:10px}
 
+/* Enlace a términos y condiciones, encima del botón de pedir (panel y aside).
+   Convive con .politica-texto/.aviso sin amontonarse: usa --text-2 (mismo
+   mínimo AA que .politica-texto) y el enlace en --brand para que destaque. */
+.terminos-nota{font-size:11px;color:var(--text-2);line-height:1.4;margin:8px 0}
+.terminos-nota a{color:var(--brand);font-weight:700;text-decoration:underline}
+
+/* Pie: enlace a términos, junto al aviso de la tasa. */
+.footer-terminos{font-size:12px}
+.footer-terminos a{color:var(--text-2);font-weight:600;text-decoration:underline}
+.footer-terminos a:hover{color:var(--brand)}
+
+/* ── Página de términos y condiciones (terminos.html) ──
+   Autocontenida: reusa .header/.footer, sin buscador ni carrito (esta página
+   es texto, no carga catalogo.json ni app.js). Ancho de lectura acotado a
+   68ch (~700px) en vez del .wrap general de 1180px: 1200px de línea es
+   ilegible, ver criterio del piloto. Cuerpo en var(--text), el mismo color
+   que usa <body> por defecto, para no bajar del contraste ya verificado. */
+.terminos-wrap{padding:24px 16px 8px}
+.terminos-volver{
+  display:inline-flex;align-items:center;gap:4px;font-size:14px;font-weight:700;
+  color:var(--brand);text-decoration:none;
+}
+.terminos-volver:hover{text-decoration:underline}
+.terminos-cuerpo{max-width:68ch;margin:20px auto 0}
+.terminos-cuerpo h1{font-size:clamp(26px,5vw,34px);font-weight:800;letter-spacing:-0.01em;line-height:1.15}
+.terminos-fecha{font-size:14px;color:var(--text-2);margin-top:6px}
+.terminos-cuerpo h2{font-size:19px;font-weight:700;margin:28px 0 8px}
+.terminos-cuerpo p{font-size:16px;line-height:1.6;color:var(--text)}
+.terminos-cuerpo strong{font-weight:800}
+
 /* Transiciones — solo transform/opacity, y respetando reduced-motion */
 @media (prefers-reduced-motion:reduce){
   *{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
