@@ -1,5 +1,5 @@
 {
-  "generado": "2026-08-16T21:27:41.448Z",
+  "generado": "2026-08-16T22:21:58.663Z",
   "tasa": 670,
   "whatsapp": "5354978966",
   "vendedores": [],
@@ -87,6 +87,10 @@
     {
       "n": "Confituras",
       "e": "🍫"
+    },
+    {
+      "n": "Uñas",
+      "e": "💅🏻"
     }
   ],
   "tienda": {
@@ -197,6 +201,18 @@
       "precioUSD": 1.04,
       "precioCUP": 700,
       "moneda": "cup",
+      "enOferta": false
+    },
+    {
+      "id": "p_1786918401932",
+      "name": "Atrapa insectos Eléctrico",
+      "cat": "Electrodomésticos",
+      "subcat": "",
+      "notes": "Gran tamaño,ideal para eliminar mosquitos,moscas, moscas de la fruta y demás insectos molestosos. Incluye su cable de conexión y su cadena de colgar.\nNo es recargable \n*Mensajería gratis*",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786918213/productos/tjklhmiqhwxolqzqirrc.jpg",
+      "precioUSD": 25,
+      "precioCUP": 16750,
+      "moneda": "usd",
       "enOferta": false
     },
     {
@@ -396,6 +412,18 @@
       "enOferta": true,
       "precioNormalUSD": 25,
       "precioNormalCUP": 16750
+    },
+    {
+      "id": "p_1786918098322",
+      "name": "Conjunto de mochila, bolso y más",
+      "cat": "Bolsos Carteras Mochilas monederos",
+      "subcat": "",
+      "notes": "Súper conjunto escolar. Todo lo de la imagen ( mochila, bolsa, carterita, cartuchera, peluche y chapillas decorativas)\nDisponibles todos los colores de la imagen \nOJO: Mochila grande pero talla escolar, no es tamaño XL para negocios, transportar mercancía etc...\n*Mensajería gratis*",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786917825/productos/ksjq2w0lxmbupuxbdbhr.jpg",
+      "precioUSD": 20,
+      "precioCUP": 13400,
+      "moneda": "usd",
+      "enOferta": false
     },
     {
       "id": "p_1780092391799",
@@ -1026,6 +1054,18 @@
       "enOferta": false
     },
     {
+      "id": "p_1786916805434",
+      "name": "Mini Bloques-Lima de uñas",
+      "cat": "Uñas",
+      "subcat": "",
+      "notes": "El paquete contiene 8 bloquesitos de uñas negros. Medidas exactas en la imagen",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786916683/productos/nmkkdiogx2oxwgwc0hcx.jpg",
+      "precioUSD": 1,
+      "precioCUP": 670,
+      "moneda": "usd",
+      "enOferta": false
+    },
+    {
       "id": "p_1785181156983",
       "name": "Mini Bolso de Mickey Mouse",
       "cat": "Bolsos Carteras Mochilas monederos",
@@ -1140,7 +1180,7 @@
       "name": "Mochila con cartuchera",
       "cat": "Bolsos Carteras Mochilas monederos",
       "subcat": "",
-      "notes": "Calidad Premium \nMochila gris con cartuchera negra de alta resistencia. Ideal para adolescentes y jóvenes \n*Mensajería gratis*",
+      "notes": "Calidad Premium \nMochila gris con cartuchera negra de alta resistencia. Ideal para adolescentes y jóvenes \nOJO: Mochila grande pero talla escolar, no es tamaño XL para negocios, transportar mercancía etc...\n*Mensajería gratis*",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785180741/productos/ity5mizfzjit3fs0qvsl.jpg",
       "precioUSD": 13,
       "precioCUP": 8710,
@@ -1165,7 +1205,7 @@
       "cat": "Electrodomésticos",
       "subcat": "",
       "notes": "Nebulizador portátil para adultos y niños - Inhalador de mano con tecnología de ondas de sonido y funcionamiento silencioso, compacto y apto para viajes, sistema de malla fácil de limpiar para uso de emergencia - Apto para fibrosis quística",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786732305/productos/yphreuohzvp4sxwtnnci.jpg",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786918789/productos/luesaf8sfazuwe7jbv4b.jpg",
       "precioUSD": 20,
       "precioCUP": 13400,
       "moneda": "usd",
@@ -1392,6 +1432,18 @@
       "enOferta": false
     },
     {
+      "id": "p_1786917004897",
+      "name": "Pinceles de dibujo de uñas",
+      "cat": "Uñas",
+      "subcat": "",
+      "notes": "Juego de 5 pinceles de uñas\n*Mensajería gratis*",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786916780/productos/morxomy39l4xadi58rwn.jpg",
+      "precioUSD": 4,
+      "precioCUP": 2680,
+      "moneda": "usd",
+      "enOferta": false
+    },
+    {
       "id": "p_1781551834895",
       "name": "Popit para celular",
       "cat": "Electrónica",
@@ -1594,6 +1646,18 @@
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782339753/productos/uq4unqxsipovpavt4qex.jpg",
       "precioUSD": 1.3,
       "precioCUP": 871,
+      "moneda": "usd",
+      "enOferta": false
+    },
+    {
+      "id": "p_1786917303962",
+      "name": "Set de uñas",
+      "cat": "Uñas",
+      "subcat": "",
+      "notes": "Conjunto de 4 productos escenciales para el cuidado de las uñas. El kit contiene *Deshidratador* - *Primer* - *Base* - *Top Coat*\nTodo lo necesario para una perfecta aplicación de manicura en gel, tanto casera como profesional \n*Mensajería gratis*",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786917082/productos/qz13ovqg9b20lilzffk9.jpg",
+      "precioUSD": 12,
+      "precioCUP": 8040,
       "moneda": "usd",
       "enOferta": false
     },
