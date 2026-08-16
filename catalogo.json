@@ -1,5 +1,5 @@
 {
-  "generado": "2026-08-16T22:24:54.278Z",
+  "generado": "2026-08-16T22:31:51.714Z",
   "tasa": 670,
   "whatsapp": "",
   "vendedores": [],
@@ -104,7 +104,16 @@
     "mensajeriaCUP": 0,
     "politica": "Revisa toda tu mercancía delante de la mensajera. Una vez que se va, no aceptamos devoluciones. Si la mensajería era incluida y al revisar decides no quedarte el producto, la mensajería se paga igual, porque la mensajera ya hizo el viaje.",
     "grupoWA": "https://chat.whatsapp.com/BragbcwxeYrKrL0DwjrGbQ?s=sw&p=a&ilr=4",
-    "contactos": []
+    "contactos": [
+      {
+        "nombre": "Ruth",
+        "tel": "5363268423"
+      },
+      {
+        "nombre": "Juan",
+        "tel": "5354978966"
+      }
+    ]
   },
   "items": [
     {
