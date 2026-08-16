@@ -1,7 +1,7 @@
 {
-  "generado": "2026-08-16T22:47:50.238Z",
+  "generado": "2026-08-16T22:55:09.568Z",
   "tasa": 670,
-  "whatsapp": "",
+  "whatsapp": "5363268423",
   "vendedores": [],
   "categorias": [
     {
@@ -99,9 +99,9 @@
     "zonas": "Repartimos a domicilio coordinando por WhatsApp. Muchos productos llevan mensajería gratis en San Antonio; en otras zonas el costo depende del destino y del pedido, y te lo confirmamos antes de cerrar.",
     "facebook": "",
     "email": "",
-    "envioGratisCUP": 0,
+    "envioGratisCUP": 3000,
     "envioGratisTexto": "Aplica a nuestras zonas de reparto habituales; fuera de ellas lo confirmamos por WhatsApp.",
-    "mensajeriaCUP": 0,
+    "mensajeriaCUP": 100,
     "politica": "Revisa toda tu mercancía delante de la mensajera. Una vez que se va, no aceptamos devoluciones. Si la mensajería era incluida y al revisar decides no quedarte el producto, la mensajería se paga igual, porque la mensajera ya hizo el viaje.",
     "grupoWA": "https://chat.whatsapp.com/BragbcwxeYrKrL0DwjrGbQ?s=sw&p=a&ilr=4",
     "pagoUrl": "https://j3b.qvpay.me/",
