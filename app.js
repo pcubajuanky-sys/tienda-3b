@@ -201,11 +201,13 @@ function renderCategorias3D() {
 
   cont.innerHTML = tarjetaOferta + tarjetasCat;
 
-  // "Ver todas (N)" — solo escritorio (ver estilos.css: la regla que oculta
-  // las tarjetas 13+ vive dentro de @media min-width:760px, así que en
-  // móvil esta clase no hace nada y las 21 siguen en la tira). El estado
-  // (catsExpandidas) es de módulo: sobrevive a que setCat()/setOferta()
-  // vuelvan a llamar renderCategorias3D() al filtrar.
+  // "Ver todas (N)" — visible en todos los anchos (2026-08-16). En
+  // escritorio oculta las tarjetas 13+ (regla dentro de @media
+  // min-width:760px); en móvil las 21 ya estaban todas en la tira, así que
+  // aquí solo cambia la presentación (tira ↔ rejilla, ver estilos.css
+  // @media max-width:759px). El estado (catsExpandidas) es de módulo:
+  // sobrevive a que setCat()/setOferta() vuelvan a llamar
+  // renderCategorias3D() al filtrar.
   cont.classList.toggle('plegada', !catsExpandidas);
   const boton = document.getElementById('btn-cats-ver-todas');
   if (boton) {
@@ -360,8 +362,28 @@ function totalCarritoUSD() {
 
 // Misma función y mismo formato del USD en panel modal y aside — nunca se
 // duplica el cálculo, solo la clase CSS cambia según dónde se pinte.
+// Usa totalGeneralUSD() (productos + mensajería si aplica) para que el "≈"
+// siga siendo coherente con el total real que se cobra.
 function usdLineaHtml(clase) {
-  return `<span class="${clase}">≈ $${totalCarritoUSD().toFixed(2)} USD</span>`;
+  return `<span class="${clase}">≈ $${totalGeneralUSD().toFixed(2)} USD</span>`;
+}
+
+// Bloque de total, compartido por panel modal y aside (una sola fuente de
+// verdad, como el resto del carrito). Con mensajería inactiva es la línea
+// única de siempre; activa, pasa a tres líneas (Productos/Mensajería/Total)
+// con una nota de que el costo depende de la zona.
+function totalBloqueHtml(claseTotalCup, claseTotalUsd) {
+  const m = mensajeria();
+  if (!m.activa) {
+    return `<span class="${claseTotalCup}">Total: ${fmt(totalCarrito())} CUP</span>` + usdLineaHtml(claseTotalUsd);
+  }
+  return (
+    `<div class="desglose-linea"><span>Productos</span><span>${fmt(totalCarrito())} CUP</span></div>` +
+    `<div class="desglose-linea"><span>Mensajería</span><span>${m.gratis ? 'GRATIS' : fmt(m.monto) + ' CUP'}</span></div>` +
+    `<p class="desglose-nota">El costo de mensajería depende de la zona; se confirma por WhatsApp.</p>` +
+    `<div class="desglose-linea desglose-total"><span>Total</span><span>${fmt(totalGeneralCUP())} CUP</span></div>` +
+    usdLineaHtml(claseTotalUsd)
+  );
 }
 
 // Mensajería gratis a partir de un umbral en CUP, configurable desde el panel
@@ -384,6 +406,41 @@ function lineaEnvioTexto(eg) {
   return eg.alcanzado
     ? '🎉 Tu pedido lleva mensajería gratis'
     : `Te faltan ${fmt(eg.falta)} CUP para la mensajería gratis`;
+}
+
+// Mensajería contabilizada (2026-08-16). tienda.mensajeriaCUP = costo fijo en
+// CUP; 0/ausente ⇒ inactiva y nada de esto se cobra ni se pinta (la tienda
+// queda igual que antes de esta tarea). Si está activa, se cobra salvo que el
+// pedido alcance el umbral que YA existe (envioGratis) — ahí es gratis.
+function mensajeria() {
+  const t = (CAT && CAT.tienda) || {};
+  const costo = Math.max(0, Number(t.mensajeriaCUP) || 0);
+  const activa = costo > 0;
+  const eg = envioGratis();
+  const gratis = activa && eg.activo && eg.alcanzado;
+  return { activa, costo, gratis, monto: activa && !gratis ? costo : 0 };
+}
+
+// Total real que se cobra: productos + mensajería (0 si es gratis o si la
+// mensajería está inactiva). Es lo que se manda por WhatsApp y lo que debe
+// coincidir con la barra móvil y el carrito.
+function totalGeneralCUP() {
+  return totalCarrito() + mensajeria().monto;
+}
+
+// USD del total general: la mensajería se convierte con CAT.tasa (no tiene
+// precioUSD propio, a diferencia de los productos). Con mensajería inactiva
+// esto es exactamente totalCarritoUSD() — no cambia nada de lo que ya había.
+function totalGeneralUSD() {
+  const m = mensajeria();
+  const envioUSD = m.monto > 0 && CAT.tasa ? m.monto / CAT.tasa : 0;
+  return Math.round((totalCarritoUSD() + envioUSD) * 100) / 100;
+}
+
+// Cláusulas de entrega (tienda.politica). Vacío/ausente ⇒ no se pinta nada.
+function politicaTexto() {
+  const t = (CAT && CAT.tienda) || {};
+  return (t.politica || '').toString().trim();
 }
 
 // Banda bajo la cabecera, sobre la portada. El texto principal lo compone la
@@ -427,7 +484,7 @@ function actualizarBarraMovil() {
   const eg = envioGratis();
   const aviso = eg.activo && eg.alcanzado ? ' · 🎉 Mensajería gratis' : '';
   document.getElementById('barra-movil-info').textContent =
-    `${n} producto${n === 1 ? '' : 's'} · ${fmt(totalCarrito())} CUP${aviso}`;
+    `${n} producto${n === 1 ? '' : 's'} · ${fmt(totalGeneralCUP())} CUP${aviso}`;
   reservarEspacioBarraMovil();
 }
 
@@ -465,17 +522,21 @@ function renderCarrito() {
   const html = items.map(({ p, qty }) => lineaCarritoHtml(p, qty)).join('');
   const eg = envioGratis();
   const envioTexto = lineaEnvioTexto(eg);
+  const politica = politicaTexto();
 
   // Panel modal (sin cambios de fondo: sigue siendo el que lleva el formulario).
   document.getElementById('carrito-items').innerHTML = html;
   document.getElementById('carrito-vacio').hidden = hayItems;
+  document.getElementById('btn-vaciar-panel').hidden = !hayItems;
   document.getElementById('carrito-total').hidden = !hayItems;
   document.getElementById('form-pedido').hidden = !hayItems;
   document.getElementById('carrito-total').innerHTML = hayItems
     ? (envioTexto ? `<span class="envio-linea">${escapeHtml(envioTexto)}</span>` : '') +
-      `<span class="total-linea">Total: ${fmt(totalCarrito())} CUP</span>` +
-      usdLineaHtml('total-usd')
+      totalBloqueHtml('total-linea', 'total-usd')
     : '';
+  const panelPolitica = document.getElementById('panel-politica');
+  panelPolitica.hidden = !hayItems || !politica;
+  panelPolitica.innerHTML = politica ? escapeHtml(politica) : '';
 
   // Aside lateral — mismas líneas, mismo total CUP, más el ≈ $X USD.
   // El aside NO lleva formulario: su botón abre el panel modal de siempre.
@@ -489,16 +550,34 @@ function renderCarrito() {
   document.getElementById('lateral-items').innerHTML = hayItems
     ? html
     : '<p class="estado-lateral">Tu pedido está vacío.</p>';
+  document.getElementById('btn-vaciar-lateral').hidden = !hayItems;
   const envioEl = document.getElementById('lateral-envio');
   envioEl.hidden = !hayItems || !envioTexto;
   envioEl.textContent = envioTexto;
   const totalEl = document.getElementById('lateral-total');
   totalEl.hidden = !hayItems;
-  totalEl.innerHTML = hayItems
-    ? `<span class="lateral-total-cup">Total: ${fmt(totalCarrito())} CUP</span>` +
-      usdLineaHtml('lateral-total-usd')
-    : '';
+  totalEl.innerHTML = hayItems ? totalBloqueHtml('lateral-total-cup', 'lateral-total-usd') : '';
+  const lateralPolitica = document.getElementById('lateral-politica');
+  lateralPolitica.hidden = !hayItems || !politica;
+  lateralPolitica.innerHTML = politica ? escapeHtml(politica) : '';
   document.getElementById('btn-lateral-pedir').hidden = !hayItems;
+}
+
+// Vaciar pedido (2026-08-16): pide confirmación porque no hay deshacer.
+// Limpia el estado (carrito + localStorage) y repinta TODO lo que depende de
+// él — parrilla (para que las tarjetas vuelvan a "Añadir"), carrito (panel +
+// aside) y barra móvil (vía guardarCarrito). Si el modal de detalle está
+// abierto sobre un producto que estaba en el pedido, también se refresca.
+function vaciarPedido() {
+  if (!Object.keys(carrito).length) return;   // guarda defensiva: el botón está oculto si ya está vacío
+  const ok = confirm('¿Vaciar tu pedido? Perderás lo que agregaste y no se puede deshacer.');
+  if (!ok) return;
+  carrito = {};
+  guardarCarrito();
+  localStorage.removeItem('carrito');
+  renderGrid();
+  renderCarrito();
+  if (productoModal) refrescarAcciones(productoModal);
 }
 
 function abrirCarrito() {
@@ -550,15 +629,28 @@ function enviarPorWhatsApp(ev) {
 
   const v = resolverVendedor();
   const eg = envioGratis();
+  const m = mensajeria();
   const lineas = ['🛒 *Pedido desde la web*'];
   if (v) lineas.push(`👤 Vendedor: ${v.code}`);
   lineas.push('');
   items.forEach(({ p, qty }) => lineas.push(`• ${p.name} x${qty} — ${fmt(p.precioCUP * qty)} CUP`));
-  lineas.push('', `*Total: ${fmt(totalCarrito())} CUP*`);
-  if (eg.activo && eg.alcanzado) lineas.push(`Mensajería: GRATIS (pedido desde ${fmt(eg.umbral)} CUP)`);
+  lineas.push('');
+  if (m.activa) {
+    // Mismo desglose que el carrito: Productos / Mensajería / Total.
+    lineas.push(`Productos: ${fmt(totalCarrito())} CUP`);
+    lineas.push(m.gratis
+      ? `Mensajería: GRATIS (pedido desde ${fmt(eg.umbral)} CUP)`
+      : `Mensajería: ${fmt(m.monto)} CUP (se confirma según la zona)`);
+    lineas.push(`*Total: ${fmt(totalGeneralCUP())} CUP*`);
+  } else {
+    lineas.push(`*Total: ${fmt(totalCarrito())} CUP*`);
+    if (eg.activo && eg.alcanzado) lineas.push(`Mensajería: GRATIS (pedido desde ${fmt(eg.umbral)} CUP)`);
+  }
   lineas.push('');
   lineas.push(`Nombre: ${nombre}`, `Tel: ${tel}`, `Dirección: ${dir}`);
   if (nota) lineas.push(`Nota: ${nota}`);
+  const politica = politicaTexto();
+  if (politica) lineas.push('', politica);
 
   window.open(`https://wa.me/${CAT.whatsapp}?text=${encodeURIComponent(lineas.join('\n'))}`, '_blank');
 }
@@ -706,6 +798,8 @@ async function iniciar() {
   // El aside NO lleva formulario propio: su botón abre el panel modal de
   // siempre (mismos campos c-nombre/c-tel/c-dir, sin duplicar id).
   document.getElementById('btn-lateral-pedir').addEventListener('click', abrirCarrito);
+  document.getElementById('btn-vaciar-panel').addEventListener('click', vaciarPedido);
+  document.getElementById('btn-vaciar-lateral').addEventListener('click', vaciarPedido);
   document.getElementById('btn-cerrar-carrito').addEventListener('click', cerrarCarrito);
   document.getElementById('btn-cerrar-carrito-2').addEventListener('click', cerrarCarrito);
   document.getElementById('panel-fondo').addEventListener('click', cerrarCarrito);

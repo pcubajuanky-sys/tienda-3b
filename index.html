@@ -89,9 +89,12 @@
   <section class="categorias-3d-wrap" aria-label="Categorías">
     <h2 class="categorias-3d-titulo wrap">Categorías</h2>
     <div class="categorias-3d wrap" id="categorias-3d"></div>
-    <!-- Solo escritorio (≥760px, ver estilos.css): en móvil la tira ya
-         muestra las 21 arrastrable, así que este botón ni se ve ni estorba.
-         Texto/aria-expanded los pone renderCategorias3D() en app.js. -->
+    <!-- Visible en todos los anchos (2026-08-16, corrección de un error de
+         diseño anterior: en móvil nadie descubre que la tira se arrastra).
+         En móvil plegado la tira ya muestra las 21 arrastrable y el botón
+         se suma; al desplegar, la tira pasa a rejilla (ver estilos.css,
+         @media max-width:759px). Texto/aria-expanded los pone
+         renderCategorias3D() en app.js. -->
     <div class="categorias-ver-todas-wrap wrap">
       <button id="btn-cats-ver-todas" class="btn-secundario" type="button" aria-expanded="false" hidden>Ver todas</button>
     </div>
@@ -127,8 +130,10 @@
   <aside id="carrito-lateral" class="carrito-lateral" hidden aria-label="Tu pedido">
     <h2 class="lateral-titulo">Tu pedido</h2>
     <div id="lateral-items"></div>
+    <div class="vaciar-wrap"><button id="btn-vaciar-lateral" class="btn-vaciar" type="button" hidden>🗑 Vaciar pedido</button></div>
     <p id="lateral-envio" class="lateral-envio" hidden></p>
     <div id="lateral-total" class="lateral-total" hidden></div>
+    <p id="lateral-politica" class="politica-texto" hidden></p>
     <button id="btn-lateral-pedir" type="button" hidden>Pedir por WhatsApp</button>
   </aside>
 </div>
@@ -196,6 +201,7 @@
       <p>Tu pedido está vacío.</p>
       <button id="btn-cerrar-carrito-2" class="btn-secundario" type="button">Seguir viendo el catálogo</button>
     </div>
+    <div class="vaciar-wrap"><button id="btn-vaciar-panel" class="btn-vaciar" type="button" hidden>🗑 Vaciar pedido</button></div>
     <div id="carrito-total" class="total"></div>
     <form id="form-pedido" class="campos" novalidate>
       <label class="campo">
@@ -217,6 +223,7 @@
         <span>Nota (opcional)</span>
         <textarea id="c-nota" rows="2"></textarea>
       </label>
+      <p id="panel-politica" class="politica-texto" hidden></p>
       <button id="btn-enviar" class="btn-enviar" type="submit">Pedir por WhatsApp</button>
       <p class="aviso">La mensajería y la disponibilidad se confirman por WhatsApp.</p>
     </form>

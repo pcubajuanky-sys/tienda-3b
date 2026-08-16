@@ -233,10 +233,21 @@ a{color:inherit}
   display:flex;flex-direction:column;align-items:center;text-align:center;
   border-radius:var(--radio-control);
 }
-/* Botón "Ver todas": invisible por defecto (móvil, <760px — ahí la tira ya
-   enseña las 21 arrastrable y el botón solo estorbaría). El `hidden` que
-   pone JS cuando total ≤ 12 manda siempre gracias a [hidden]{!important}. */
-.categorias-ver-todas-wrap{display:none;text-align:center;padding:2px 16px 6px}
+/* Botón "Ver todas": visible en TODOS los anchos (2026-08-16 — corrección de
+   un error de diseño anterior que lo ocultaba <760px: en el móvil nadie
+   descubre que la tira se arrastra). El `hidden` que pone JS cuando total ≤ 12
+   manda siempre gracias a [hidden]{!important}. */
+.categorias-ver-todas-wrap{display:block;text-align:center;padding:2px 16px 6px}
+/* Móvil desplegado (<760px, botón "Ver todas" pulsado → #categorias-3d pierde
+   la clase .plegada): la tira deja de arrastrarse y pasa a rejilla que
+   envuelve, igual que hace escritorio siempre. Plegada (por defecto) no se
+   toca: sigue siendo la tira arrastrable de hoy con las 21 ya dentro (el
+   nth-child que las recorta a 12 vive solo dentro de min-width:760px). */
+@media (max-width:759px){
+  #categorias-3d:not(.plegada){
+    flex-wrap:wrap;overflow-x:visible;scroll-snap-type:none;
+  }
+}
 @media (min-width:760px){
   .cat3d{width:112px}
   /*
@@ -257,7 +268,6 @@ a{color:inherit}
     con CATS_VISIBLES_PLEGADO=12 de app.js.
   */
   #categorias-3d.plegada .cat3d:nth-child(n+13){display:none}
-  .categorias-ver-todas-wrap{display:block}
 }
 .cat3d-inner{
   position:relative;display:block;width:100%;aspect-ratio:1;
@@ -376,6 +386,34 @@ main{padding-top:20px}
   width:100%;min-height:44px;padding:12px;border:none;border-radius:var(--radio-control);
   background:var(--wa);color:#fff;font-size:14px;font-weight:700;cursor:pointer;margin-top:10px;
 }
+
+/* ── Vaciar pedido (2026-08-16) — discreto a propósito: no compite con
+   "Pedir por WhatsApp". Mismo botón/clase en el panel modal y en el aside;
+   solo visible con el pedido lleno (lo decide renderCarrito() en app.js). ── */
+.vaciar-wrap{text-align:right}
+.btn-vaciar{
+  display:inline-block;min-height:32px;padding:5px 4px;margin:2px 0 6px;
+  border:none;background:transparent;color:var(--text-2);font-size:12px;font-weight:600;
+  cursor:pointer;text-decoration:underline;text-underline-offset:2px;
+}
+.btn-vaciar:hover{color:var(--oferta)}
+
+/* ── Mensajería contabilizada (2026-08-16) — tres líneas (Productos /
+   Mensajería / Total) SOLO cuando tienda.mensajeriaCUP > 0; con 0/ausente,
+   totalBloqueHtml() (app.js) devuelve la línea única de siempre y nada de
+   esto se pinta. Mismas clases en panel modal y aside (misma función). ── */
+.desglose-linea{display:flex;justify-content:space-between;gap:8px;font-size:13px;padding:2px 0;color:var(--text-2)}
+.desglose-linea span:last-child{font-weight:700;color:var(--text)}
+.desglose-nota{font-size:11px;color:var(--text-2);line-height:1.35;margin:2px 0 6px}
+.desglose-total{margin-top:6px;padding-top:8px;border-top:1px solid var(--border)}
+.desglose-total span{font-size:16px;font-weight:800;color:var(--text)}
+
+/* ── Cláusulas de entrega (2026-08-16) — tienda.politica, encima del botón
+   "Pedir por WhatsApp" (ver index.html). Letra pequeña pero ≥4.5:1 de
+   contraste a propósito (--text-2, no --text-3: el terciario no llega al
+   mínimo AA sobre el fondo claro). Vacío ⇒ no se pinta nada (lo decide
+   renderCarrito() con el atributo hidden). ── */
+.politica-texto{font-size:11px;color:var(--text-2);line-height:1.4;margin:8px 0;white-space:pre-line}
 .card{
   background:var(--surface);border:1px solid var(--border);border-radius:var(--radio-card);
   overflow:hidden;display:flex;flex-direction:column;box-shadow:var(--sombra);
