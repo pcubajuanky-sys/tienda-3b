@@ -442,9 +442,12 @@ main{padding-top:20px}
   white-space:normal;
 }
 .precio-linea{display:flex;align-items:baseline;gap:6px;flex-wrap:wrap;margin-top:auto}
-.tachado{font-size:11px;color:var(--text-3);text-decoration:line-through}
+/* --text-2, no --text-3: el secundario ahora puede llevar el precio en la
+   moneda fijada de un producto (2026-08-16, moneda:'usd'), no solo un dato de
+   referencia — necesita el mismo mínimo AA que .politica-texto (línea 416). */
+.tachado{font-size:11px;color:var(--text-2);text-decoration:line-through}
 .precio{font-size:17px;font-weight:800}
-.precio .usd{font-size:12px;color:var(--text-3);font-weight:500;margin-left:4px}
+.precio .usd{font-size:12px;color:var(--text-2);font-weight:500;margin-left:4px}
 .card-accion{margin-top:8px}
 
 .add{

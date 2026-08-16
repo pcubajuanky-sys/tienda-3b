@@ -234,6 +234,25 @@ function accionHtml(id) {
     `</div>`;
 }
 
+// Precio: cada producto manda su moneda (2026-08-16, contrato tienda.ter.1 de
+// catalogo.json: p.moneda = 'usd'|'cup', derivado de fixedCurrency en Stock+).
+// moneda:'usd' ⇒ el USD es la fuente de verdad (precio grande) y el CUP es
+// una conversión que cambia con la tasa (chico, debajo); moneda:'cup' (o
+// ausente, comportamiento de siempre) ⇒ al revés. El tachado de las ofertas
+// sigue la misma moneda que el precio efectivo. Una sola función pinta la
+// tarjeta y el detalle: nunca se duplica esta lógica en dos sitios.
+function precioHtml(p) {
+  const usd = `$${p.precioUSD}`;
+  const cup = `${fmt(p.precioCUP)} CUP`;
+  const esUsd = p.moneda === 'usd';
+  const principal = esUsd ? usd : cup;
+  const secundario = esUsd ? cup : usd;
+  const tachado = p.enOferta
+    ? `<span class="tachado">${esUsd ? `$${p.precioNormalUSD}` : `${fmt(p.precioNormalCUP)} CUP`}</span>`
+    : '';
+  return tachado + `<span class="precio">${principal}<span class="usd">· ${secundario}</span></span>`;
+}
+
 function tarjetaHtml(p) {
   const foto = fotoCard(p.photo);
   return `
@@ -246,10 +265,7 @@ function tarjetaHtml(p) {
       <div class="body">
         <div class="nom">${escapeHtml(p.name)}</div>
         ${p.notes ? `<div class="desc">${escapeHtml(p.notes)}</div>` : ''}
-        <div class="precio-linea">
-          ${p.enOferta ? `<span class="tachado">${fmt(p.precioNormalCUP)} CUP</span>` : ''}
-          <span class="precio">${fmt(p.precioCUP)} CUP<span class="usd">· $${p.precioUSD}</span></span>
-        </div>
+        <div class="precio-linea">${precioHtml(p)}</div>
         <div class="card-accion" id="acc-${p.id}">${accionHtml(p.id)}</div>
       </div>
     </div>`;
@@ -283,9 +299,7 @@ function abrirDetalle(id) {
   document.getElementById('modal-cat').textContent = p.cat || '';
   document.getElementById('modal-nombre').textContent = p.name;
   document.getElementById('modal-desc').textContent = p.notes || '';
-  document.getElementById('modal-precio').innerHTML =
-    (p.enOferta ? `<span class="tachado">${fmt(p.precioNormalCUP)} CUP</span>` : '') +
-    `<span class="precio">${fmt(p.precioCUP)} CUP<span class="usd">· $${p.precioUSD}</span></span>`;
+  document.getElementById('modal-precio').innerHTML = precioHtml(p);
   document.getElementById('modal-accion').innerHTML = accionHtml(id);
 
   elementoAnteriorFoco = document.activeElement;
