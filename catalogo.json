@@ -1,5 +1,5 @@
 {
-  "generado": "2026-08-16T22:31:51.714Z",
+  "generado": "2026-08-16T22:47:50.238Z",
   "tasa": 670,
   "whatsapp": "",
   "vendedores": [],
@@ -104,6 +104,7 @@
     "mensajeriaCUP": 0,
     "politica": "Revisa toda tu mercancía delante de la mensajera. Una vez que se va, no aceptamos devoluciones. Si la mensajería era incluida y al revisar decides no quedarte el producto, la mensajería se paga igual, porque la mensajera ya hizo el viaje.",
     "grupoWA": "https://chat.whatsapp.com/BragbcwxeYrKrL0DwjrGbQ?s=sw&p=a&ilr=4",
+    "pagoUrl": "https://j3b.qvpay.me/",
     "contactos": [
       {
         "nombre": "Ruth",
@@ -1504,6 +1505,18 @@
       "precioUSD": 3,
       "precioCUP": 2010,
       "moneda": "usd",
+      "enOferta": false
+    },
+    {
+      "id": "p_1786919841226",
+      "name": "Pulover de hombre elastizados",
+      "cat": "Ropa",
+      "subcat": "",
+      "notes": "Disponibles todos los colores de la imagen para la talla L\nDisponibles gris,rojo y azul claro para la talla M\n*Mensajería gratis*",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786919512/productos/zoc681vdfrwq7ggzbns1.jpg",
+      "precioUSD": 3.73,
+      "precioCUP": 2500,
+      "moneda": "cup",
       "enOferta": false
     },
     {
