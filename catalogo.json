@@ -1,5 +1,5 @@
 {
-  "generado": "2026-08-17T01:14:33.151Z",
+  "generado": "2026-08-17T06:33:51.708Z",
   "tasa": 670,
   "whatsapp": "5363268423",
   "vendedores": [],
@@ -191,6 +191,18 @@
       "precioUSD": 8,
       "precioCUP": 5360,
       "moneda": "usd",
+      "enOferta": false
+    },
+    {
+      "id": "p_1786943265900",
+      "name": "Aceite especial de gengibre para cabellos",
+      "cat": "Cuidado Personal",
+      "subcat": "",
+      "notes": "¡Despierta el poder natural de tu cabello!\nEl aceite esencial de jengibre no es solo un aroma… es un impulso de vida para tu melena.\nEstimula el cuero cabelludo, fortalece desde la raíz, reduce la caída y deja tu cabello más brillante, denso y con un brillo saludable que se nota.\nUnas gotas al día y tu cabello empieza a hablar por ti.\nJengibre puro. Resultados reales.\nTu cabello merece este despertar.\n*Mensajería gratis*",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786943069/productos/bm4t98qh8ogtry5nnpxt.jpg",
+      "precioUSD": 3.73,
+      "precioCUP": 2500,
+      "moneda": "cup",
       "enOferta": false
     },
     {
@@ -844,7 +856,7 @@
       "name": "Guantillas",
       "cat": "Gym y Suplementos",
       "subcat": "",
-      "notes": "Accesorio para gimnasio y motos\nDisponibles en negro con detalles en gris 🩶 o en rosa 🩷 \nTallas S y M\n*Mensajería gratis*",
+      "notes": "Accesorio para gimnasio y motos\nDisponibles en negro con detalles en gris 🩶 o en rosa 🩷 \nTallas S ,M y L\n*Mensajería gratis*",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785357184/productos/p2wprzs1rrt5ab7ot3wb.jpg",
       "precioUSD": 4.48,
       "precioCUP": 3000,
@@ -1458,6 +1470,18 @@
       "enOferta": false
     },
     {
+      "id": "p_1786930924590",
+      "name": "Pellizcos de perlitas",
+      "cat": "Cabello",
+      "subcat": "",
+      "notes": "*Mensajería gratis a partir de 10*",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786930842/productos/wzpik5gw8tzabbppxhn1.jpg",
+      "precioUSD": 0.27,
+      "precioCUP": 180,
+      "moneda": "cup",
+      "enOferta": false
+    },
+    {
       "id": "p_1780945492775",
       "name": "Pellizcos Mate",
       "cat": "Cabello",
@@ -1617,6 +1641,30 @@
       "precioUSD": 3.73,
       "precioCUP": 2500,
       "moneda": "cup",
+      "enOferta": false
+    },
+    {
+      "id": "p_1786942819710",
+      "name": "Pulover de mujer 2",
+      "cat": "Ropa",
+      "subcat": "",
+      "notes": "Variedad de colores y tallas \n*Mensajería gratis en San Antonio*",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786942717/productos/id8z6hgsmaasnxxmm9ap.jpg",
+      "precioUSD": 3.73,
+      "precioCUP": 2500,
+      "moneda": "cup",
+      "enOferta": false
+    },
+    {
+      "id": "p_1786942882474",
+      "name": "Pulover de mujer 3",
+      "cat": "Ropa",
+      "subcat": "",
+      "notes": "Variedad de colores y tallas \n*Mensajería gratis*",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786942790/productos/nog617emg5z7r8erqhxo.jpg",
+      "precioUSD": 3.73,
+      "precioCUP": 2499,
+      "moneda": "usd",
       "enOferta": false
     },
     {
