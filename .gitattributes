@@ -1,0 +1,7 @@
+# Cloudflare Pages analiza estos archivos linea a linea: un salto de linea
+# CRLF de Windows podria colarse en el valor de una cabecera o romper el
+# analisis. Se fija el salto Unix como red de seguridad para el futuro
+# (por ejemplo si alguien clona el repo con otra configuracion de git),
+# no porque haya un problema activo hoy.
+_headers text eol=lf
+_redirects text eol=lf
