@@ -1,5 +1,5 @@
 {
-  "generado": "2026-08-16T22:55:09.568Z",
+  "generado": "2026-08-17T01:14:33.151Z",
   "tasa": 670,
   "whatsapp": "5363268423",
   "vendedores": [],
@@ -91,6 +91,10 @@
     {
       "n": "Uñas",
       "e": "💅🏻"
+    },
+    {
+      "n": "Mascotas",
+      "e": "😺🐶"
     }
   ],
   "tienda": {
@@ -138,6 +142,30 @@
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1784918880/productos/eoxba4ovbw1m6qgkxdlx.jpg",
       "precioUSD": 20,
       "precioCUP": 13400,
+      "moneda": "usd",
+      "enOferta": false
+    },
+    {
+      "id": "p_1786921885931",
+      "name": "Abrigo de Chihuahua 1",
+      "cat": "Mascotas",
+      "subcat": "",
+      "notes": "Abrigo de perrito pequeño, dígase Chihuahua, ratonero o alguna raza sobre esa talla\nTela gruesa y esponjosa \n*Mensajería gratis*",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786921728/productos/giihqmplkgyweovdisky.jpg",
+      "precioUSD": 6,
+      "precioCUP": 4020,
+      "moneda": "usd",
+      "enOferta": false
+    },
+    {
+      "id": "p_1786921926228",
+      "name": "Abrigo de Chihuahua 2",
+      "cat": "Mascotas",
+      "subcat": "",
+      "notes": "Abrigo de perrito pequeño, dígase Chihuahua, ratonero o alguna raza sobre esa talla\nTela gruesa y esponjosa \n*Mensajería gratis*",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786921857/productos/w7gntcvjf4co0qn3tben.jpg",
+      "precioUSD": 6,
+      "precioCUP": 4020,
       "moneda": "usd",
       "enOferta": false
     },
@@ -214,6 +242,18 @@
       "enOferta": false
     },
     {
+      "id": "p_1786922285289",
+      "name": "Arnés para perros",
+      "cat": "Mascotas",
+      "subcat": "",
+      "notes": "Color gris 🩶 \nIdeal para perros entre 9-14lb(ajustable)\nDetalles reflectantes para evitar accidentes \nNo incluye correa\n*Mensajería gratis*",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786922159/productos/wjwhhkxhhgxu9wzygnp6.jpg",
+      "precioUSD": 8,
+      "precioCUP": 5360,
+      "moneda": "usd",
+      "enOferta": false
+    },
+    {
       "id": "p_1786918401932",
       "name": "Atrapa insectos Eléctrico",
       "cat": "Electrodomésticos",
@@ -272,6 +312,18 @@
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785089336/productos/k1vaswogj1rww7enirsk.jpg",
       "precioUSD": 4.48,
       "precioCUP": 3000,
+      "moneda": "cup",
+      "enOferta": false
+    },
+    {
+      "id": "p_1786923820539",
+      "name": "Bálsamo labial",
+      "cat": "Cuidado Personal",
+      "subcat": "",
+      "notes": "Bálsamos labiales de deliciosos olores\nTodos los de la imagen disponibles \n*Mensajería gratis a partir de 4*",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786923515/productos/bppuqhw3rdvwcyvtbwex.jpg",
+      "precioUSD": 0.6,
+      "precioCUP": 400,
       "moneda": "cup",
       "enOferta": false
     },
@@ -752,6 +804,18 @@
       "enOferta": false
     },
     {
+      "id": "p_1786923457095",
+      "name": "Gloss",
+      "cat": "Cuidado Personal",
+      "subcat": "",
+      "notes": "Gloss de diferentes tonalidades y un olor delicioso \n*Mensajería gratis enas de 1*",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786923360/productos/kc1vesnxydbkvped5xgk.jpg",
+      "precioUSD": 0.9,
+      "precioCUP": 600,
+      "moneda": "cup",
+      "enOferta": false
+    },
+    {
       "id": "p_1785357535101",
       "name": "Glucomanan",
       "cat": "Gym y Suplementos",
@@ -1198,6 +1262,18 @@
       "enOferta": false
     },
     {
+      "id": "p_1786922026243",
+      "name": "Mono enterizo tallas pequeñas",
+      "cat": "Mascotas",
+      "subcat": "",
+      "notes": "Mono enterizo para perritos y gatitos. 3 tallas disponibles,desde Chihuahua hasta pequines o demás razas de esas tallas\nTela elastizada y cómoda \n*Mensajería gratis*",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786921895/productos/u8h2hdgunqdqb7qb2zvc.jpg",
+      "precioUSD": 8,
+      "precioCUP": 5360,
+      "moneda": "usd",
+      "enOferta": false
+    },
+    {
       "id": "p_1784914843855",
       "name": "Nebulizador",
       "cat": "Electrodomésticos",
@@ -1227,7 +1303,7 @@
       "cat": "Confituras",
       "subcat": "",
       "notes": "Delicioso Nesquik de chocolate. Pote gigante de 2.8 libras sabor chocolate con vitaminas añadidas. Importado directamente de USA *Mensajería gratis*",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786707179/productos/n0jcifsf0dhbuxet0dzp.jpg",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786929207/productos/fig57zzkbowjpuo3ws8i.jpg",
       "precioUSD": 30,
       "precioCUP": 20100,
       "moneda": "usd",
@@ -1442,6 +1518,18 @@
       "enOferta": false
     },
     {
+      "id": "p_1786922817374",
+      "name": "Piercing de aro dorado",
+      "cat": "Reloj y Prendas",
+      "subcat": "",
+      "notes": "Color dorado\nMaterial: acero quirúrgico \n*Mensajería gratis a partir de 5*",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786922771/productos/zee1y6oacy7auhrguet3.jpg",
+      "precioUSD": 0.45,
+      "precioCUP": 300,
+      "moneda": "cup",
+      "enOferta": false
+    },
+    {
       "id": "p_1786917004897",
       "name": "Pinceles de dibujo de uñas",
       "cat": "Uñas",
@@ -1451,6 +1539,18 @@
       "precioUSD": 4,
       "precioCUP": 2680,
       "moneda": "usd",
+      "enOferta": false
+    },
+    {
+      "id": "p_1786922877587",
+      "name": "Pirsing de aro plateado",
+      "cat": "Reloj y Prendas",
+      "subcat": "",
+      "notes": "Color Plateado \nMaterial: acero quirúrgico \n*Mensajería gratis a partir de 5*",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786922786/productos/i15won8t85rv2ywx9dhc.jpg",
+      "precioUSD": 0.45,
+      "precioCUP": 300,
+      "moneda": "cup",
       "enOferta": false
     },
     {
