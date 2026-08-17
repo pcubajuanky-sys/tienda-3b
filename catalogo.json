@@ -1,5 +1,5 @@
 {
-  "generado": "2026-08-17T17:22:23.951Z",
+  "generado": "2026-08-17T22:52:25.763Z",
   "tasa": 670,
   "whatsapp": "5363268423",
   "vendedores": [],
@@ -474,15 +474,39 @@
       "enOferta": false
     },
     {
+      "id": "p_1786998526143",
+      "name": "Cintos 1",
+      "cat": "Accesorio de vestir",
+      "subcat": "",
+      "notes": "Cintos finos de mujer. Medidas 👇🏻\nAncho: 1.2cm\nLargo: 105cm\n*Mensajería gratis*",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786998257/productos/gogjyz4xkuai2twsk7l6.jpg",
+      "precioUSD": 2.84,
+      "precioCUP": 1900,
+      "moneda": "cup",
+      "enOferta": false
+    },
+    {
+      "id": "p_1786998892313",
+      "name": "Cintos 2",
+      "cat": "Accesorio de vestir",
+      "subcat": "",
+      "notes": "Cintos finos de mujer. Medidas 👇🏻\nAncho: 1.6cm\nLargo: 105cm\n*Mensajería gratis*",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786998742/productos/q6yotu9lsmrhn7hfinsl.jpg",
+      "precioUSD": 2.84,
+      "precioCUP": 1900,
+      "moneda": "cup",
+      "enOferta": false
+    },
+    {
       "id": "p_1780347243525",
       "name": "Cintos Unisex",
-      "cat": "Ropa",
+      "cat": "Accesorio de vestir",
       "subcat": "",
-      "notes": "Solo los Colores de la imagen",
+      "notes": "Solo los Colores de la imagen\n*Mensajería gratis*",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1780347137/productos/chqkc5z7cubcnsinbnay.jpg",
-      "precioUSD": 2.7,
-      "precioCUP": 1809,
-      "moneda": "usd",
+      "precioUSD": 2.69,
+      "precioCUP": 1800,
+      "moneda": "cup",
       "enOferta": false
     },
     {
@@ -752,18 +776,6 @@
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785959018/productos/myajl2zdcccmbh4wnjqq.jpg",
       "precioUSD": 1.49,
       "precioCUP": 1000,
-      "moneda": "cup",
-      "enOferta": false
-    },
-    {
-      "id": "p_1780429871709",
-      "name": "Gafas Transparentes",
-      "cat": "Ropa",
-      "subcat": "",
-      "notes": "Agotadas las de marco negro",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1780429925/productos/wr5sapyzjptlisilcbvs.jpg",
-      "precioUSD": 1.79,
-      "precioCUP": 1200,
       "moneda": "cup",
       "enOferta": false
     },
@@ -1222,18 +1234,6 @@
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1781005431/productos/iyjmo4dxvnedrjvbitog.jpg",
       "precioUSD": 17,
       "precioCUP": 11390,
-      "moneda": "usd",
-      "enOferta": false
-    },
-    {
-      "id": "p_1780451802473",
-      "name": "Mini Licuadora Recargable",
-      "cat": "Electrodomésticos",
-      "subcat": "",
-      "notes": "Base de Motor con vaso plástica y tapa para la función de jarra\nIncluye también cable de carga \nBatería de 1500mah",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1780451710/productos/cbsipij6fvga8rhldraj.jpg",
-      "precioUSD": 15,
-      "precioCUP": 10050,
       "moneda": "usd",
       "enOferta": false
     },
@@ -1889,6 +1889,18 @@
       "precioUSD": 15,
       "precioCUP": 10050,
       "moneda": "usd",
+      "enOferta": false
+    },
+    {
+      "id": "p_1786991410391",
+      "name": "Teflón",
+      "cat": "Ferretería",
+      "subcat": "",
+      "notes": "",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786991339/productos/c2rea2w2ux9tn9zixgmg.jpg",
+      "precioUSD": 0.45,
+      "precioCUP": 300,
+      "moneda": "cup",
       "enOferta": false
     },
     {
