@@ -1,0 +1,13 @@
+# Equivalente de vercel.json para Cloudflare Pages.
+# Vercel lee sus cabeceras de seguridad desde vercel.json y NO lee este archivo.
+# Cloudflare Pages lee sus cabeceras de seguridad desde este archivo (_headers) y
+# NO lee vercel.json.
+# Si se cambia una cabecera aqui o alla, hay que replicar el cambio en el otro
+# archivo para que ambos proveedores queden en sintonia.
+# Strict-Transport-Security no se define aqui: cada proveedor la aplica por su cuenta.
+/*
+  Content-Security-Policy: default-src 'self'; img-src 'self' https://res.cloudinary.com data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-hashes' 'sha256-IgfvsMxU0cNd1rO/xYd7q/idqoiQwZM9Fab8C6FXfbM=' 'sha256-VCRuweeAncgzJx/l38EeCb2/+3XWgxt5JBezOkk5E+w='; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'none'
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: DENY
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()
