@@ -9,6 +9,19 @@ let productoModal = null;
 let catsExpandidas = false;   // estado de "Ver todas" en categorías (solo escritorio); sobrevive a los re-render
 const CATS_VISIBLES_PLEGADO = 12;   // debe coincidir con :nth-child(n+13) en estilos.css
 
+// Destino de pago fijo en el código, NO en el catálogo (2026-08-16).
+// El panel de Stock+ que genera catalogo.json NO tiene autenticación de
+// servidor — cualquiera en la red local o el tailnet puede llamar a
+// PUT /api/config — así que confiar en tienda.pagoUrl tal cual viene del
+// catálogo no es seguro. Y una lista de dominios permitidos tampoco basta:
+// alguien podría poner un dominio LEGÍTIMO de QvaPay pero de OTRO usuario
+// (ej. https://otrousuario.qvpay.me) y los clientes le pagarían a un
+// tercero. Por eso el destino real vive aquí, fijo: cambiarlo exige tocar
+// el código y queda como un commit visible. Si el dueño cambia de página
+// de cobro, se cambia ESTA constante (ver pagoDestinoAutorizado más abajo).
+const PAGO_URL_FIJA = 'https://j3b.qvpay.me';
+const PAGO_DOMINIO_FIJO = new URL(PAGO_URL_FIJA).hostname;
+
 // ── Utilidades ──
 
 function fmt(n) { return Number(n).toLocaleString('es-MX', { maximumFractionDigits: 0 }); }
@@ -457,6 +470,32 @@ function politicaTexto() {
   return (t.politica || '').toString().trim();
 }
 
+// El catálogo solo decide si el bloque de pago se ENCIENDE o no (tienda.pagoUrl
+// vacío/ausente ⇒ apagado, sin warning: es el estado normal, no un incidente).
+// El destino real SIEMPRE es PAGO_URL_FIJA, nunca lo que traiga el catálogo:
+// comparamos por ORIGEN (protocolo + hostname) con new URL(...), nunca con
+// includes/startsWith sobre la cadena cruda — "https://j3b.qvpay.me.evil.com"
+// empieza igual que el dominio válido y debe rechazarse igual que cualquier
+// dominio ajeno (ej. https://otrousuario.qvpay.me, un dominio LEGÍTIMO de
+// QvaPay pero de otro usuario). Cualquier cosa que no matchee exacto (o una
+// URL malformada) se rechaza y deja un console.warn con rastro.
+function pagoDestinoAutorizado(candidato) {
+  const c = (candidato || '').toString().trim();
+  if (!c) return false;   // apagado a propósito: no es un incidente, sin warning
+  try {
+    const u = new URL(c);
+    const fija = new URL(PAGO_URL_FIJA);
+    if (u.protocol.toLowerCase() === fija.protocol.toLowerCase() &&
+        u.hostname.toLowerCase() === fija.hostname.toLowerCase()) {
+      return true;
+    }
+  } catch (e) {
+    // URL malformada: cae al warning de abajo, mismo trato que un dominio no autorizado.
+  }
+  console.warn('Enlace de pago ignorado: destino no autorizado', c);
+  return false;
+}
+
 // Pago por adelantado con QvaPay (2026-08-16). tienda.pagoUrl vacío/ausente ⇒
 // apagado, comportamiento por defecto (no se pinta nada). Opción SECUNDARIA:
 // el camino normal sigue siendo "Pedir por WhatsApp", que es donde se
@@ -465,17 +504,19 @@ function politicaTexto() {
 // 🔴 El importe SIEMPRE sale de totalGeneralUSD() (dólares), NUNCA del CUP:
 // pasar el total en CUP convertiría un pedido de 34.200 CUP en una petición
 // de pago de $34.200 — es el punto más importante de esta función.
-// La URL viaja en un JSON público, así que se escapa con escapeHtml antes de
-// insertarse como atributo href (mismo patrón que t.facebook/t.grupoWA de
-// renderFooterExtra). Misma plantilla en panel modal y aside — una sola
-// fuente de verdad, como el resto del carrito.
+// El href SIEMPRE se arma sobre PAGO_URL_FIJA (nunca sobre el texto que venga
+// del catálogo, aunque haya pasado la validación) — así ningún query/path
+// extra colado en tienda.pagoUrl llega a afectar el enlace real. El cliente
+// tiene derecho a ver el destino antes de pulsar: el dominio se muestra en
+// letra pequeña junto al texto del enlace. Misma plantilla en panel modal y
+// aside — una sola fuente de verdad, como el resto del carrito.
 function pagoWrapHtml() {
   const t = (CAT && CAT.tienda) || {};
-  const base = (t.pagoUrl || '').toString().trim();
-  if (!base) return '';
-  const sep = base.indexOf('?') !== -1 ? '&' : '?';
-  const href = `${base}${sep}amount=${totalGeneralUSD().toFixed(2)}`;
-  return `<a class="pago-link" href="${escapeHtml(href)}" target="_blank" rel="noopener">Pagar por adelantado (opcional)</a>` +
+  if (!pagoDestinoAutorizado(t.pagoUrl)) return '';
+  const sep = PAGO_URL_FIJA.indexOf('?') !== -1 ? '&' : '?';
+  const href = `${PAGO_URL_FIJA}${sep}amount=${totalGeneralUSD().toFixed(2)}`;
+  return `<a class="pago-link" href="${escapeHtml(href)}" target="_blank" rel="noopener">Pagar por adelantado (opcional) ` +
+    `<span class="pago-dominio">· ${escapeHtml(PAGO_DOMINIO_FIJO)}</span></a>` +
     `<p class="pago-nota">Se cobra en dólares (USD) y no reserva el producto hasta confirmar tu pedido por WhatsApp.</p>`;
 }
 

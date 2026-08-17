@@ -607,6 +607,10 @@ body.con-barra-movil{padding-bottom:var(--barra-movil-h, 84px)}
   text-decoration:underline;text-underline-offset:2px;
 }
 .pago-link:hover{color:var(--brand)}
+/* Dominio de destino junto al texto del enlace (2026-08-16): el cliente tiene
+   derecho a ver a dónde va el pago antes de pulsar. Más chico que el texto
+   principal, sin subrayado propio (hereda el del enlace). */
+.pago-dominio{font-size:10px;font-weight:400;text-decoration:none}
 .pago-nota{font-size:11px;color:var(--text-3);line-height:1.4;margin-top:3px}
 
 /* Enlace a términos y condiciones, encima del botón de pedir (panel y aside).
