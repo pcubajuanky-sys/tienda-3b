@@ -1,5 +1,5 @@
 {
-  "generado": "2026-08-17T12:03:51.762Z",
+  "generado": "2026-08-17T17:22:23.951Z",
   "tasa": 670,
   "whatsapp": "5363268423",
   "vendedores": [],
@@ -448,6 +448,18 @@
       "enOferta": true,
       "precioNormalUSD": 2.24,
       "precioNormalCUP": 1500
+    },
+    {
+      "id": "p_1786969504250",
+      "name": "Chandal de mujer",
+      "cat": "Ropa",
+      "subcat": "",
+      "notes": "Pantalón de mujer de nylon, deportivo,fresco y cómodo \nTalla S\n*Mensajería gratis*",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786969396/productos/aplycgoaa7tcwpmtbx7i.jpg",
+      "precioUSD": 10,
+      "precioCUP": 6700,
+      "moneda": "usd",
+      "enOferta": false
     },
     {
       "id": "p_1781005646366",
@@ -1222,6 +1234,18 @@
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1780451710/productos/cbsipij6fvga8rhldraj.jpg",
       "precioUSD": 15,
       "precioCUP": 10050,
+      "moneda": "usd",
+      "enOferta": false
+    },
+    {
+      "id": "p_1786970505731",
+      "name": "Mini máquina selladora",
+      "cat": "Electrodomésticos",
+      "subcat": "",
+      "notes": "Máquina de sellado de bolsas recargable 2 en 1, con cortador de chips, para mantener los alimentos frescos, con cuchilla, con carga USB, máquina selladora para almacenamiento de alimentos, con imán,  portátil manual, solo en blanco con gris \n*Mensajería gratis*",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786970222/productos/fmeuv9pq9ifxozuqovm4.jpg",
+      "precioUSD": 4,
+      "precioCUP": 2680,
       "moneda": "usd",
       "enOferta": false
     },
