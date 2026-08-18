@@ -1,5 +1,5 @@
 {
-  "generado": "2026-08-18T15:10:59.862Z",
+  "generado": "2026-08-18T15:36:35.867Z",
   "tasa": 670,
   "whatsapp": "5363268423",
   "vendedores": [],
@@ -128,10 +128,12 @@
       "subcat": "",
       "notes": "Organizador portátil con estructura de acero inoxidable y estantes de tela no tejida. Protege del polvo tu ropa, zapatos y accesorios. Diseño moderno, fácil de armar y gran capacidad.\nMedidas: 67 x 17.7 x 50.4 pulgadas\nIdeal para ahorrar espacio y mantener todo ordenado.\nMensajería gratis en San Antonio.",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1784918319/productos/hkb9rslv9nbye3ha9kac.jpg",
-      "precioUSD": 50,
-      "precioCUP": 33500,
+      "precioUSD": 47,
+      "precioCUP": 31490,
       "moneda": "usd",
-      "enOferta": false
+      "enOferta": true,
+      "precioNormalUSD": 50,
+      "precioNormalCUP": 33500
     },
     {
       "id": "p_1784919312828",
@@ -1280,10 +1282,12 @@
       "subcat": "",
       "notes": "Ventilador portátil \n🔋 4000mah\n🌟3 tonos de luces\n🌀 3 Velocidades \n💦Difusor de agua\nSe puede colocar sobre superficie plana, por la pinza o por el gancho \n😲 *Mensajería gratis* 🤩",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1784915508/productos/hm0ki4xq4pece50crwlg.jpg",
-      "precioUSD": 23,
-      "precioCUP": 15410,
+      "precioUSD": 21,
+      "precioCUP": 14070,
       "moneda": "usd",
-      "enOferta": false
+      "enOferta": true,
+      "precioNormalUSD": 23,
+      "precioNormalCUP": 15410
     },
     {
       "id": "p_1785181129029",
@@ -1328,10 +1332,12 @@
       "subcat": "",
       "notes": "Nebulizador portátil para adultos y niños - Inhalador de mano con tecnología de ondas de sonido y funcionamiento silencioso, compacto y apto para viajes, sistema de malla fácil de limpiar para uso de emergencia - Apto para fibrosis quística",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786918789/productos/luesaf8sfazuwe7jbv4b.jpg",
-      "precioUSD": 20,
-      "precioCUP": 13400,
+      "precioUSD": 19,
+      "precioCUP": 12730,
       "moneda": "usd",
-      "enOferta": false
+      "enOferta": true,
+      "precioNormalUSD": 20,
+      "precioNormalCUP": 13400
     },
     {
       "id": "p_1786708481607",
@@ -1972,10 +1978,12 @@
       "subcat": "",
       "notes": "* Giro(90° y 45°)\n* Mando a distancia \n* Función Power Bank \n* Luces\n* Modo nocturno \n* Temporizador \n* *Batería de 20mil mAh*\nhaga su encargo con dirección exacta y se le hace llegar a la comodidad de su hogar Mensajería gratis, (Rebajas para compras mayores a 1 unidad)",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786632028/productos/qm0djp1vcxywnxkshfis.jpg",
-      "precioUSD": 55,
-      "precioCUP": 36850,
+      "precioUSD": 50,
+      "precioCUP": 33500,
       "moneda": "usd",
-      "enOferta": false
+      "enOferta": true,
+      "precioNormalUSD": 55,
+      "precioNormalCUP": 36850
     },
     {
       "id": "p_1785358002090",
