@@ -1,5 +1,5 @@
 {
-  "generado": "2026-08-18T20:50:24.256Z",
+  "generado": "2026-08-19T02:20:24.966Z",
   "tasa": 665,
   "whatsapp": "5363268423",
   "vendedores": [],
@@ -580,6 +580,30 @@
       "subcat": "",
       "notes": "Colores disponibles 💙 🤍 🧡",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785614775/productos/tt139c0khng99d0mkeod.jpg",
+      "precioUSD": 0.75,
+      "precioCUP": 500,
+      "moneda": "cup",
+      "enOferta": false
+    },
+    {
+      "id": "p_1787088450511",
+      "name": "Esponjas de baño",
+      "cat": "Cuidado Personal",
+      "subcat": "",
+      "notes": "Esponjas de baño de variedad de colores 🌈 \n*Mensajería gratis a partir de 3*",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787088336/productos/xhlnjksfcags5akcy4ms.jpg",
+      "precioUSD": 0.75,
+      "precioCUP": 500,
+      "moneda": "cup",
+      "enOferta": false
+    },
+    {
+      "id": "p_1787088460154",
+      "name": "Esponjas de baño",
+      "cat": "Cuidado Personal",
+      "subcat": "",
+      "notes": "Esponjas de baño de variedad de colores 🌈 \n*Mensajería gratis a partir de 3*",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787088336/productos/xhlnjksfcags5akcy4ms.jpg",
       "precioUSD": 0.75,
       "precioCUP": 500,
       "moneda": "cup",
