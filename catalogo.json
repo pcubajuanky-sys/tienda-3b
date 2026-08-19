@@ -1,5 +1,5 @@
 {
-  "generado": "2026-08-19T12:56:54.512Z",
+  "generado": "2026-08-19T18:17:46.344Z",
   "tasa": 665,
   "whatsapp": "5363268423",
   "vendedores": [],
@@ -111,11 +111,11 @@
     "pagoUrl": "https://j3b.qvpay.me/",
     "contactos": [
       {
-        "nombre": "Ruth",
+        "nombre": "Admin principal",
         "tel": "5363268423"
       },
       {
-        "nombre": "Juan",
+        "nombre": "Admin secundario",
         "tel": "5354978966"
       }
     ]
@@ -1144,18 +1144,6 @@
       "enOferta": false
     },
     {
-      "id": "p_1785182846411",
-      "name": "Merenderos térmicos",
-      "cat": "Bolsos Carteras Mochilas monederos",
-      "subcat": "",
-      "notes": "*Merenderos térmicos*",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785182649/productos/qgf9ndqstckpnxgadp02.jpg",
-      "precioUSD": 2.71,
-      "precioCUP": 1800,
-      "moneda": "cup",
-      "enOferta": false
-    },
-    {
       "id": "p_1786916805434",
       "name": "Mini Bloques-Lima de uñas",
       "cat": "Uñas",
@@ -1165,18 +1153,6 @@
       "precioUSD": 1,
       "precioCUP": 665,
       "moneda": "usd",
-      "enOferta": false
-    },
-    {
-      "id": "p_1785181156983",
-      "name": "Mini Bolso de Mickey Mouse",
-      "cat": "Bolsos Carteras Mochilas monederos",
-      "subcat": "",
-      "notes": "Mini Bolso de Mickey Mouse en color blanco con detalles rojos. Incluye correa ajustable estampada. Ideal para uso diario o como accesorio infantil.\n\n*Mensajería incluida*",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785181116/productos/piadvppnku3fy5ekniiq.jpg",
-      "precioUSD": 3.01,
-      "precioCUP": 2000,
-      "moneda": "cup",
       "enOferta": false
     },
     {
