@@ -1,5 +1,5 @@
 {
-  "generado": "2026-08-19T02:20:24.966Z",
+  "generado": "2026-08-19T07:26:54.559Z",
   "tasa": 665,
   "whatsapp": "5363268423",
   "vendedores": [],
@@ -229,6 +229,18 @@
       "precioUSD": 2,
       "precioCUP": 1330,
       "moneda": "usd",
+      "enOferta": false
+    },
+    {
+      "id": "p_1787110390009",
+      "name": "Alarma de puertas y ventanas",
+      "cat": "Hogar",
+      "subcat": "",
+      "notes": "Alarma ideal para la protección de su casa, de habitaciones, closets o incluso gavetas, TODA SEGURIDAD ES POCA EN ESTOS TIEMPOS!!\n*Mensajería gratis*",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787110254/productos/isqaptoba6wgp0ogrwni.jpg",
+      "precioUSD": 2.26,
+      "precioCUP": 1500,
+      "moneda": "cup",
       "enOferta": false
     },
     {
@@ -574,31 +586,7 @@
       "enOferta": false
     },
     {
-      "id": "p_1785614846958",
-      "name": "Esponjas de baño",
-      "cat": "Hogar",
-      "subcat": "",
-      "notes": "Colores disponibles 💙 🤍 🧡",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785614775/productos/tt139c0khng99d0mkeod.jpg",
-      "precioUSD": 0.75,
-      "precioCUP": 500,
-      "moneda": "cup",
-      "enOferta": false
-    },
-    {
       "id": "p_1787088450511",
-      "name": "Esponjas de baño",
-      "cat": "Cuidado Personal",
-      "subcat": "",
-      "notes": "Esponjas de baño de variedad de colores 🌈 \n*Mensajería gratis a partir de 3*",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787088336/productos/xhlnjksfcags5akcy4ms.jpg",
-      "precioUSD": 0.75,
-      "precioCUP": 500,
-      "moneda": "cup",
-      "enOferta": false
-    },
-    {
-      "id": "p_1787088460154",
       "name": "Esponjas de baño",
       "cat": "Cuidado Personal",
       "subcat": "",
@@ -630,18 +618,6 @@
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782340028/productos/cihevmtaeacp4ciyvmas.jpg",
       "precioUSD": 9,
       "precioCUP": 5985,
-      "moneda": "usd",
-      "enOferta": false
-    },
-    {
-      "id": "p_1780944631492",
-      "name": "Estrellitas Fluorescentes",
-      "cat": "Hogar",
-      "subcat": "",
-      "notes": "El paquete trae 250 estrellitas. También se venden sueltas a partir de 50. En caso de comprar el paquete completo la *Mensajería es gratis*",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1780944704/productos/grxmxxoow5cgid0mxdoi.jpg",
-      "precioUSD": 4.48,
-      "precioCUP": 2979,
       "moneda": "usd",
       "enOferta": false
     },
@@ -1364,18 +1340,6 @@
       "enOferta": true,
       "precioNormalUSD": 20,
       "precioNormalCUP": 13300
-    },
-    {
-      "id": "p_1786708481607",
-      "name": "Nesquik de chocolate 🍫",
-      "cat": "Confituras",
-      "subcat": "",
-      "notes": "Delicioso Nesquik de chocolate. Pote gigante de 2.8 libras sabor chocolate con vitaminas añadidas. Importado directamente de USA *Mensajería gratis*",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786929207/productos/fig57zzkbowjpuo3ws8i.jpg",
-      "precioUSD": 30,
-      "precioCUP": 19950,
-      "moneda": "usd",
-      "enOferta": false
     },
     {
       "id": "p_1785091920991",
