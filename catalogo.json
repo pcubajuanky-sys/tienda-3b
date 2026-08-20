@@ -1,5 +1,5 @@
 {
-  "generado": "2026-08-19T23:47:46.701Z",
+  "generado": "2026-08-20T05:04:54.222Z",
   "tasa": 665,
   "whatsapp": "5363268423",
   "vendedores": [],
@@ -121,20 +121,6 @@
     ]
   },
   "items": [
-    {
-      "id": "p_1784918616085",
-      "name": "Clóset Armario Portátil de Acero Inoxidable",
-      "cat": "Muebles",
-      "subcat": "",
-      "notes": "Organizador portátil con estructura de acero inoxidable y estantes de tela no tejida. Protege del polvo tu ropa, zapatos y accesorios. Diseño moderno, fácil de armar y gran capacidad.\nMedidas: 67 x 17.7 x 50.4 pulgadas\nIdeal para ahorrar espacio y mantener todo ordenado.\nMensajería gratis en San Antonio.",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1784918319/productos/hkb9rslv9nbye3ha9kac.jpg",
-      "precioUSD": 47,
-      "precioCUP": 31255,
-      "moneda": "usd",
-      "enOferta": true,
-      "precioNormalUSD": 50,
-      "precioNormalCUP": 33250
-    },
     {
       "id": "p_1784919312828",
       "name": "Organizador de Zapatos y accesorios",
@@ -536,18 +522,6 @@
       "enOferta": true,
       "precioNormalUSD": 25,
       "precioNormalCUP": 16625
-    },
-    {
-      "id": "p_1786918098322",
-      "name": "Conjunto de mochila, bolso y más",
-      "cat": "Bolsos Carteras Mochilas monederos",
-      "subcat": "",
-      "notes": "Súper conjunto escolar. Todo lo de la imagen ( mochila, bolsa, carterita, cartuchera, peluche y chapillas decorativas)\nDisponibles todos los colores de la imagen \nOJO: Mochila grande pero talla escolar, no es tamaño XL para negocios, transportar mercancía etc...\n*Mensajería gratis*",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786917825/productos/ksjq2w0lxmbupuxbdbhr.jpg",
-      "precioUSD": 20,
-      "precioCUP": 13300,
-      "moneda": "usd",
-      "enOferta": false
     },
     {
       "id": "p_1780092391799",
