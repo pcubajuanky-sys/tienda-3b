@@ -1,5 +1,5 @@
 {
-  "generado": "2026-08-21T18:47:27.859Z",
+  "generado": "2026-08-21T23:50:45.382Z",
   "tasa": 665,
   "whatsapp": "5363268423",
   "vendedores": [],
@@ -992,7 +992,7 @@
       "name": "Mangas para el sol",
       "cat": "Motos / Accesorios",
       "subcat": "",
-      "notes": "Tela muy elastizada y ultra transpirable.\n3 colores disponibles 🩶🤍\n*Mensajería gratis* en más de uno",
+      "notes": "Tela muy elastizada y ultra transpirable.\nBlancas\n*Mensajería gratis* en más de uno",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1781882618/productos/qg4vb5xskelnvtoigtlb.jpg",
       "precioUSD": 1.5,
       "precioCUP": 1000,
@@ -1550,20 +1550,6 @@
       "enOferta": false
     },
     {
-      "id": "p_1781551834895",
-      "name": "Popit para celular",
-      "cat": "Electrónica",
-      "subcat": "",
-      "notes": "El mejor soporte para evitar que tú celular caiga de tus manos y para menos ajuste en su uso. A demás de ser un lindo adorno\nDiseños disponibles al pv\n*Mensajería gratis* a partir de 5",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1781551714/productos/zjvcthddirbjjfmwqzb2.jpg",
-      "precioUSD": 0.53,
-      "precioCUP": 350,
-      "moneda": "usd",
-      "enOferta": true,
-      "precioNormalUSD": 0.67,
-      "precioNormalCUP": 446
-    },
-    {
       "id": "p_1785092176064",
       "name": "PopSockets",
       "cat": "Bocinas Celulares y Accesorios",
@@ -1814,18 +1800,6 @@
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785088257/productos/r84nf4js0eezueb8admv.jpg",
       "precioUSD": 5.26,
       "precioCUP": 3500,
-      "moneda": "cup",
-      "enOferta": false
-    },
-    {
-      "id": "p_1785092352204",
-      "name": "Soportes para teléfono en forma de silla",
-      "cat": "Bocinas Celulares y Accesorios",
-      "subcat": "",
-      "notes": "soportes para teléfono en forma de silla mini adorables, soporte de escritorio plegable para teléfono, colores amarillas , adecuado para ver videos, transmisiones en vivo, decoración de escritorio, colores al azar",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785092261/productos/hbmgly5aw4zcolnpjeun.jpg",
-      "precioUSD": 1.2,
-      "precioCUP": 800,
       "moneda": "cup",
       "enOferta": false
     },
