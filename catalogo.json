@@ -1,5 +1,5 @@
 {
-  "generado": "2026-08-21T13:26:37.315Z",
+  "generado": "2026-08-21T18:47:27.859Z",
   "tasa": 665,
   "whatsapp": "5363268423",
   "vendedores": [],
@@ -236,9 +236,9 @@
       "subcat": "",
       "notes": "",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782340086/productos/g8ijdb0wchzfnhjqkm48.jpg",
-      "precioUSD": 0.5,
-      "precioCUP": 333,
-      "moneda": "usd",
+      "precioUSD": 0.53,
+      "precioCUP": 350,
+      "moneda": "cup",
       "enOferta": false
     },
     {
@@ -554,9 +554,9 @@
       "subcat": "",
       "notes": "Delineador de Ojos Negro, Punta Ultra Fina Larga, Maquillaje de Larga Duración a Prueba de Líquido y Manchas, Maquillaje Diario, Ojos Definidos, Delineador Audaz, Deslizamiento Fácil, Resistente a las Manchas, Herramienta de Belleza, Lápiz Cosmético, Maquillaje Profesional",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782259080/productos/mbfakfzkcmwaxytpwuov.jpg",
-      "precioUSD": 0.8,
-      "precioCUP": 532,
-      "moneda": "usd",
+      "precioUSD": 0.9,
+      "precioCUP": 600,
+      "moneda": "cup",
       "enOferta": false
     },
     {
@@ -800,9 +800,9 @@
       "subcat": "",
       "notes": "Set de 6 mini gloss. Hermosos y variados tonos. Mensajería gratis",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782219129/productos/kj3w0n6vt5ymzqluqaap.jpg",
-      "precioUSD": 6,
-      "precioCUP": 3990,
-      "moneda": "usd",
+      "precioUSD": 6.02,
+      "precioCUP": 4000,
+      "moneda": "cup",
       "enOferta": false
     },
     {
@@ -897,8 +897,8 @@
       "notes": "Bastoncillos alargados de aceite de citronela y hierba de limón - Tiempo de combustión de 45 minutos, aroma artificial de madera de verano para el hogar, camping, patio, piscina y actividades al aire libre - Purificación de aire ,relajante.El paquete trae 5 varillas",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782340629/productos/tw5yu7clzxberkh7gflt.jpg",
       "precioUSD": 0.6,
-      "precioCUP": 399,
-      "moneda": "usd",
+      "precioCUP": 400,
+      "moneda": "cup",
       "enOferta": false
     },
     {
@@ -908,9 +908,9 @@
       "subcat": "",
       "notes": "",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782343113/productos/yz4hspngpz00bm2zo20p.jpg",
-      "precioUSD": 0.8,
-      "precioCUP": 532,
-      "moneda": "usd",
+      "precioUSD": 0.75,
+      "precioCUP": 500,
+      "moneda": "cup",
       "enOferta": false
     },
     {
@@ -945,8 +945,8 @@
       "notes": "Lápiz Delineador Negro Impermeable y Resistente al Sudor - Duradero, No Mancha para un Maquillaje de Ojos Audaz, Fórmula Suave",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782259227/productos/wzdbps1jg3clzkhat6tj.jpg",
       "precioUSD": 0.6,
-      "precioCUP": 399,
-      "moneda": "usd",
+      "precioCUP": 400,
+      "moneda": "cup",
       "enOferta": false
     },
     {
@@ -956,10 +956,12 @@
       "subcat": "",
       "notes": "Lima de pies de acero inoxidable con juego de repuesto gratuito, herramienta profesional para eliminar piel muerta, con mango antideslizante y apta para uso en seco y húmedo",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782339455/productos/f44wmt0fyjhno0mjzndp.jpg",
-      "precioUSD": 4,
-      "precioCUP": 2660,
-      "moneda": "usd",
-      "enOferta": false
+      "precioUSD": 3.76,
+      "precioCUP": 2500,
+      "moneda": "cup",
+      "enOferta": true,
+      "precioNormalUSD": 4.06,
+      "precioNormalCUP": 2700
     },
     {
       "id": "p_1785733476445",
@@ -1100,9 +1102,9 @@
       "subcat": "",
       "notes": "Mascarilla facial negra de carbón de bambú,  limpieza profunda de la piel facial para puntos negros y blancos, extractos naturales, ingrediente suave, hidratante y control de grasa, ilumina la piel, apta para todo tipo de piel, la piel luce visiblemente rejuvenecida",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782259607/productos/vyo6dwsbzxnipbsgrtc9.jpg",
-      "precioUSD": 3,
-      "precioCUP": 1995,
-      "moneda": "usd",
+      "precioUSD": 3.16,
+      "precioCUP": 2100,
+      "moneda": "cup",
       "enOferta": false
     },
     {
@@ -1506,9 +1508,9 @@
       "subcat": "",
       "notes": "Pestañas Postizas MAGEFY en Caja Estilo Mixto Naturales Largas Cruzadas Rizadas y Esponjosas, Adecuadas para Uso Diario y Viajes . Con su adhesivo incluído",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782329615/productos/m0im1q6zm39ylege8jxh.jpg",
-      "precioUSD": 0.7,
-      "precioCUP": 465,
-      "moneda": "usd",
+      "precioUSD": 0.75,
+      "precioCUP": 500,
+      "moneda": "cup",
       "enOferta": false
     },
     {
@@ -1668,9 +1670,9 @@
       "subcat": "",
       "notes": "Paquete de 6 repuestos de máquinas de afeitar de 3 hojas",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782340949/productos/icgyi1gsdr1hd3mrng2u.jpg",
-      "precioUSD": 1,
-      "precioCUP": 665,
-      "moneda": "usd",
+      "precioUSD": 0.9,
+      "precioCUP": 600,
+      "moneda": "cup",
       "enOferta": false
     },
     {
@@ -1680,10 +1682,12 @@
       "subcat": "",
       "notes": "Rizador de pestañas, herramienta de belleza, rizador de pestañas manual de acero inoxidable. *Mensajería gratis*",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782340886/productos/y3yicmtgoxayzf4grayn.jpg",
-      "precioUSD": 2,
-      "precioCUP": 1330,
-      "moneda": "usd",
-      "enOferta": false
+      "precioUSD": 1.5,
+      "precioCUP": 1000,
+      "moneda": "cup",
+      "enOferta": true,
+      "precioNormalUSD": 2.08,
+      "precioNormalCUP": 1380
     },
     {
       "id": "p_1785875419963",
@@ -1760,9 +1764,9 @@
       "subcat": "",
       "notes": "Suero Facial 5 en 1 con Ácido Hialurónico, Colágeno, Niacinamida, Vitaminas C y E. Minimiza Poros, Control de Sebo, Hidratante. Adecuado para Todo Tipo de Piel, Hipoaergénico.\n*Mensajería gratis*",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782259706/productos/wewused76wjxguosoz5l.jpg",
-      "precioUSD": 3,
-      "precioCUP": 1995,
-      "moneda": "usd",
+      "precioUSD": 3.16,
+      "precioCUP": 2100,
+      "moneda": "cup",
       "enOferta": false
     },
     {
@@ -1772,9 +1776,9 @@
       "subcat": "",
       "notes": "Cápsulas de Ácido Hialurónico\nHidrataión profunda\nHidratante y Suavizante para la piel\nContiene Escualano Vegetal\nVitaminas E y C\nEl paquete trae 10 cápsulas",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782339669/productos/xbmibztojd4suitasup4.jpg",
-      "precioUSD": 1.3,
-      "precioCUP": 865,
-      "moneda": "usd",
+      "precioUSD": 1.2,
+      "precioCUP": 800,
+      "moneda": "cup",
       "enOferta": false
     },
     {
@@ -1784,9 +1788,9 @@
       "subcat": "",
       "notes": "Cápsulas de Sérum con Vitamina E y C\nGel Encapsulado de Pureza para Rostro\nLigero y No Graso\nPara Todo Tipo de Piel\nEsencia de Cuidado Diario",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782339753/productos/uq4unqxsipovpavt4qex.jpg",
-      "precioUSD": 1.3,
-      "precioCUP": 865,
-      "moneda": "usd",
+      "precioUSD": 1.2,
+      "precioCUP": 800,
+      "moneda": "cup",
       "enOferta": false
     },
     {
