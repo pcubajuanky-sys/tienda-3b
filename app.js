@@ -37,9 +37,20 @@ function escapeHtml(s) {
     .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 }
 
-// El código del vendedor sobrevive a la navegación: se guarda al entrar por su enlace.
+// El código del vendedor puede venir por ?ref=CODIGO (enlaces viejos, siguen valiendo)
+// o por el path (www.3bqba.com/CODIGO, vía el rewrite de vercel.json). Sobrevive a la
+// navegación porque se guarda al entrar.
+function codigoDeLaUrl() {
+  const q = new URLSearchParams(location.search).get('ref');
+  if (q) return q;
+  // Un solo segmento y sin punto: los archivos reales llevan extensión y no llegan aquí.
+  const seg = location.pathname.split('/').filter(Boolean);
+  if (seg.length === 1 && seg[0].indexOf('.') === -1) return seg[0];
+  return '';
+}
+
 function resolverVendedor() {
-  const url = new URLSearchParams(location.search).get('ref');
+  const url = codigoDeLaUrl();
   if (url) localStorage.setItem('ref', url.toUpperCase());
   const code = localStorage.getItem('ref') || '';
   const v = (CAT.vendedores || []).find((x) => x.code === code);
@@ -802,6 +813,11 @@ function renderFooterExtra() {
   const piezas = [];
   if (CAT.whatsapp) {
     piezas.push(`<a class="footer-link footer-link-wa" href="https://wa.me/${escapeHtml(CAT.whatsapp)}" target="_blank" rel="noopener">💬 WhatsApp</a>`);
+  }
+  // Alta de comisionista: abre WhatsApp con el texto que el bot reconoce. Mía no
+  // contesta hasta que Ruth enciende el interruptor de ese contacto en el panel.
+  if (CAT.whatsapp) {
+    piezas.push(`<a class="footer-link" href="https://wa.me/${escapeHtml(CAT.whatsapp)}?text=${encodeURIComponent('QUIERO SER COMISIONISTA')}" target="_blank" rel="noopener">🤝 Quiero ser comisionista</a>`);
   }
   if (t.grupoWA && t.grupoWA.trim()) {
     piezas.push(`<a class="footer-link" href="${escapeHtml(t.grupoWA.trim())}" target="_blank" rel="noopener">👥 Únete a nuestro grupo</a>`);
