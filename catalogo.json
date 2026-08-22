@@ -1,5 +1,5 @@
 {
-  "generado": "2026-08-22T10:40:29.630Z",
+  "generado": "2026-08-22T16:10:33.002Z",
   "tasa": 665,
   "whatsapp": "5363268423",
   "vendedores": [],
@@ -1194,6 +1194,18 @@
       "enOferta": false
     },
     {
+      "id": "p_1787412191026",
+      "name": "Mini pellisquitos cuadrados",
+      "cat": "Cabello",
+      "subcat": "",
+      "notes": "",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787412125/productos/ljq3x7ttyw66rrs2apq7.jpg",
+      "precioUSD": 0.18,
+      "precioCUP": 120,
+      "moneda": "cup",
+      "enOferta": false
+    },
+    {
       "id": "p_1786714572024",
       "name": "Mini pellisquitos variaros",
       "cat": "Cabello",
@@ -1486,18 +1498,6 @@
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785275069/productos/aru1llevcaonns9p9vsq.jpg",
       "precioUSD": 0.6,
       "precioCUP": 400,
-      "moneda": "cup",
-      "enOferta": false
-    },
-    {
-      "id": "p_1780951364283",
-      "name": "Pellizquitos pequeños Antideslizantes",
-      "cat": "Cabello",
-      "subcat": "",
-      "notes": "Variedad de colores y diseños \n*Mensajería Gratis a Partir de 10*",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1780951246/productos/jycbpafeuwhrhnxhu8rg.jpg",
-      "precioUSD": 0.18,
-      "precioCUP": 120,
       "moneda": "cup",
       "enOferta": false
     },
