@@ -1,5 +1,5 @@
 {
-  "generado": "2026-08-22T16:10:33.002Z",
+  "generado": "2026-08-22T21:18:37.922Z",
   "tasa": 665,
   "whatsapp": "5363268423",
   "vendedores": [],
@@ -617,18 +617,6 @@
       "precioUSD": 5.41,
       "precioCUP": 3600,
       "moneda": "cup",
-      "enOferta": false
-    },
-    {
-      "id": "p_1785357151546",
-      "name": "Fajas reforzadas",
-      "cat": "Gym y Suplementos",
-      "subcat": "",
-      "notes": "Faja negra, reforzada ,de alta calidad, ideal para el uso diario y para el gim. Doble cierre y varillas con función de corset, reductora de vientre y cintura \n*Mensajería gratis*",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785357112/productos/dz1cu8j2jdy3tlzcpvjn.jpg",
-      "precioUSD": 7,
-      "precioCUP": 4655,
-      "moneda": "usd",
       "enOferta": false
     },
     {
