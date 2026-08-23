@@ -1,5 +1,5 @@
 {
-  "generado": "2026-08-23T14:53:28.444Z",
+  "generado": "2026-08-23T16:08:06.289Z",
   "tasa": 665,
   "whatsapp": "5363268423",
   "vendedores": [],
@@ -140,18 +140,6 @@
       "precioNormalCUP": 99750
     },
     {
-      "id": "p_1784919312828",
-      "name": "Organizador de Zapatos y accesorios",
-      "cat": "Muebles",
-      "subcat": "",
-      "notes": "Organizador multifuncional con perchero, zapatero y banco. Incluye ganchos para chaquetas, bolsos, sombreros y paraguas, más espacio para zapatos. Ideal para mantener la casa ordenada y ahorrar espacio.\n*Mensajería gratis en San Antonio*",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1784918880/productos/eoxba4ovbw1m6qgkxdlx.jpg",
-      "precioUSD": 20,
-      "precioCUP": 13300,
-      "moneda": "usd",
-      "enOferta": false
-    },
-    {
       "id": "p_1786921885931",
       "name": "Abrigo de Chihuahua 1",
       "cat": "Mascotas",
@@ -248,6 +236,30 @@
       "enOferta": false
     },
     {
+      "id": "p_1787498809174",
+      "name": "Anillos de acero quirúrgico",
+      "cat": "Reloj y Prendas",
+      "subcat": "",
+      "notes": "El precio es por 5 anillos. Puede elegir entre las tallas \n*Mensajería gratis*",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787498630/productos/wuzfqeewkc7rxfvzkhyg.jpg",
+      "precioUSD": 1.35,
+      "precioCUP": 900,
+      "moneda": "cup",
+      "enOferta": false
+    },
+    {
+      "id": "p_1787499027901",
+      "name": "Anillos de acero quirúrgico fluorescentes",
+      "cat": "Reloj y Prendas",
+      "subcat": "",
+      "notes": "El precio es por 5 anillos. Puede elegir entre las tallas\n *Mensajería gratis*",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787498788/productos/g5e0hvzdgvwx8iud9jfu.jpg",
+      "precioUSD": 1.35,
+      "precioCUP": 900,
+      "moneda": "cup",
+      "enOferta": false
+    },
+    {
       "id": "p_1782340130001",
       "name": "Aplicadores",
       "cat": "Cuidado Personal",
@@ -292,6 +304,42 @@
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787495514/productos/lbtgzyyjjpfw4cipo1ih.jpg",
       "precioUSD": 1.28,
       "precioCUP": 850,
+      "moneda": "cup",
+      "enOferta": false
+    },
+    {
+      "id": "p_1787497741914",
+      "name": "Aretes pequeños de acero",
+      "cat": "Reloj y Prendas",
+      "subcat": "",
+      "notes": "El precio es por 2 pares de aretes de acero quirúrgico. Alta duración. Preciosos diseños \n*Mensajería incluida si compra 4 pares*",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787497598/productos/kfsbsdkbg3mfgntdwbat.jpg",
+      "precioUSD": 0.9,
+      "precioCUP": 600,
+      "moneda": "cup",
+      "enOferta": false
+    },
+    {
+      "id": "p_1787498450640",
+      "name": "Aretitos de fantasía",
+      "cat": "Reloj y Prendas",
+      "subcat": "",
+      "notes": "El precio es por el cartoncillo de 5 pares\n*Si lleva todos los de la imagen la mensajería es gratis*",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787498339/productos/qerjq0wjoh09c54jwder.jpg",
+      "precioUSD": 0.9,
+      "precioCUP": 600,
+      "moneda": "cup",
+      "enOferta": false
+    },
+    {
+      "id": "p_1787498656646",
+      "name": "Argollas de fantasía",
+      "cat": "Reloj y Prendas",
+      "subcat": "",
+      "notes": "El precio es por 5 pares aleatorios. Puede elegir si los quiere en dorado o en plateado \n*Mensajería gratis si compra más de 1 conjunto*",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787498445/productos/ntlohuqouh4xad5tbkva.jpg",
+      "precioUSD": 0.9,
+      "precioCUP": 600,
       "moneda": "cup",
       "enOferta": false
     },
@@ -574,6 +622,18 @@
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787453126/productos/wcvd8wra1lnvrgdmmu8a.jpg",
       "precioUSD": 3.01,
       "precioCUP": 2000,
+      "moneda": "cup",
+      "enOferta": false
+    },
+    {
+      "id": "p_1787498299932",
+      "name": "Conjunto de pulseras de cuero",
+      "cat": "Reloj y Prendas",
+      "subcat": "",
+      "notes": "Exacto los diseños de la imagen. El precio es por el conjunto completo. Prendas originales y hermosas.\n*Mensajería gratis*",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787498185/productos/xzhldk5amcaolopit8ep.jpg",
+      "precioUSD": 3.76,
+      "precioCUP": 2500,
       "moneda": "cup",
       "enOferta": false
     },
@@ -1028,6 +1088,18 @@
       "enOferta": true,
       "precioNormalUSD": 4.06,
       "precioNormalCUP": 2700
+    },
+    {
+      "id": "p_1787497927674",
+      "name": "Llaveros metálicos de gato",
+      "cat": "Otro",
+      "subcat": "",
+      "notes": "*mensajería incluida en más de uno*",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787497838/productos/setjhz8tweomovizmlwb.jpg",
+      "precioUSD": 0.9,
+      "precioCUP": 599,
+      "moneda": "usd",
+      "enOferta": false
     },
     {
       "id": "p_1785733476445",
@@ -1724,6 +1796,18 @@
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1781213510/productos/yipf6w3xkmgluh4tk5ad.jpg",
       "precioUSD": 18,
       "precioCUP": 11970,
+      "moneda": "usd",
+      "enOferta": false
+    },
+    {
+      "id": "p_1787457782531",
+      "name": "Reloj plateado de hombre 2",
+      "cat": "Reloj y Prendas",
+      "subcat": "",
+      "notes": "*Mensajería gratis*",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787457711/productos/mxeigkzj2t54963sib1n.jpg",
+      "precioUSD": 6,
+      "precioCUP": 3990,
       "moneda": "usd",
       "enOferta": false
     },
