@@ -357,10 +357,18 @@ main{padding-top:20px}
   }
   /* Los .wrap de dentro (título de categorías, tira de categorías, <main>)
      ya traen su propio max-width:1180px + padding:16px — repetirlo aquí
-     duplicaría el margen y descuadraría el ancho de columna. */
-  .contenido .wrap{max-width:none;padding:0}
+     duplicaría el margen y descuadraría el ancho de columna.
+     El `margin:0 auto` de .wrap también hay que neutralizarlo: un margen auto en
+     horizontal DESACTIVA el estirado de un ítem de rejilla, así que #catalogo se
+     dimensionaba a su contenido y la tira de más vendidos (max-content 1106px) lo
+     desbordaba por encima de su columna de 824, metiéndose bajo el carrito.
+     Ojo al depurar: un margen auto se REPORTA como 0px en los estilos calculados. */
+  .contenido .wrap{max-width:none;padding:0;margin:0}
   .categorias-3d-wrap{grid-column:1;grid-row:1}
-  #catalogo{grid-column:1;grid-row:2}
+  /* min-width:0 — sin esto, el ancho natural de la tira de más vendidos
+     (max-content) estira a #catalogo por encima de su columna de 824px y se
+     mete debajo del carrito lateral. minmax(0,1fr) sujeta la PISTA, no el ÍTEM. */
+  #catalogo{grid-column:1;grid-row:2;min-width:0}
 }
 
 /* ── Carrito lateral — solo escritorio (≥1024px) ──
@@ -707,21 +715,23 @@ button.footer-link{background:none;border:none;font-family:inherit;cursor:pointe
    Misma mecánica que la tira de categorías: scroll horizontal nativo con imán.
    Sin librería y sin rotación automática: cada salto automático obligaría a
    descargar la foto siguiente, y con conexión mala eso son huecos en blanco.
-   El ancho de 42% deja la tercera tarjeta asomando: es la señal de "hay más".
+   El ancho de 40% deja la tercera tarjeta asomando: es la señal de "hay más".
 
-   Los números están MEDIDOS en el sitio real a 375 px (ancho útil 343, gap 14,
-   tarjeta de la rejilla 165 → 2 por fila). En el carrusel siguen siendo 2 a la
-   vez, no se encogen para meter 3: a ese tamaño la foto y el precio dejan de
-   leerse en un móvil. Con 42% la tarjeta mide 144 px y asoman 41 px de la
-   tercera. Con 46% asomaban 13 px, una rendija que no se nota; con 50% no
-   asoma nada y parece una fila normal que nadie intenta arrastrar. */
+   Los números están MEDIDOS en el sitio real a 375 px. El padding de 16px por
+   lado ya no lo pone esta tira: lo pone <main class="wrap">, que la envuelve
+   (ver index.html), así que el ancho útil dentro de la tira es 343px (375 − 32),
+   y el recorte del scroll ocurre justo ahí, en 343 — no en los 375 del
+   viewport. Con 40% la tarjeta mide 137 px y asoman ~41 px de la tercera
+   (343 − (137+14+137+14) = 41), que es el asomo mínimo para que el gesto de
+   arrastrar se adivine. Con 42% (144 px) el asomo bajaba a 27 px, por debajo
+   del mínimo de 30 — medido en real tras mover la tira dentro de <main>. */
 .mv{margin:0 0 18px}
 .mv-titulo{font-size:clamp(17px,2.6vw,21px);font-weight:700;margin:0 0 10px}
 .mv-tira{
   display:flex;gap:14px;overflow-x:auto;overflow-y:visible;
   scroll-snap-type:x proximity;padding-bottom:6px;
 }
-.mv-tira .card{flex:0 0 42%;scroll-snap-align:start;max-width:230px}
+.mv-tira .card{flex:0 0 40%;scroll-snap-align:start;max-width:230px}
 @media (min-width:700px){ .mv-tira .card{flex-basis:210px} }
 .card-mv{
   background:var(--brand);color:var(--brand-ink);
