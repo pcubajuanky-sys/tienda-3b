@@ -285,6 +285,7 @@ function tarjetaHtml(p) {
         <img src="${foto.src}" ${foto.srcset ? `srcset="${foto.srcset}" sizes="(max-width:480px) 45vw, 220px"` : ''}
              alt="${escapeHtml(p.name)}" loading="lazy" decoding="async" onerror="imgFallback(this)">
         ${p.enOferta ? `<span class="card-oferta">OFERTA</span>` : ''}
+        ${p.destacado ? `<span class="card-mv">⭐ MÁS VENDIDO</span>` : ''}
       </div>
       <div class="body">
         <div class="nom">${escapeHtml(p.name)}</div>
@@ -309,16 +310,33 @@ function tarjetaComisionistaHtml() {
   </button>`;
 }
 
+// Los destacados van SOLO aquí en la portada (renderGrid los excluye): si el mismo
+// producto se pintara dos veces, sus dos bloques de acción compartirían el id
+// `acc-<id>` y refrescarAcciones solo encontraría el primero — la cantidad de una
+// de las copias dejaría de actualizarse en silencio.
+function renderMasVendidos() {
+  const buscando = busqueda.trim() !== '' || filtroCat !== '' || filtroOferta;
+  const destacados = (CAT.items || []).filter((p) => p.destacado);
+  const sec = document.getElementById('mas-vendidos');
+  const hueco = document.getElementById('cta-comi-hueco');
+  const mostrar = !buscando && destacados.length > 0;
+  sec.hidden = !mostrar;
+  if (mostrar) document.getElementById('mv-tira').innerHTML = destacados.map(tarjetaHtml).join('');
+  else document.getElementById('mv-tira').innerHTML = '';
+  // La invitación acompaña a la portada: al buscar o filtrar, fuera.
+  hueco.hidden = buscando;
+  hueco.innerHTML = buscando ? '' : tarjetaComisionistaHtml();
+}
+
 function renderGrid() {
   const items = visibles();
   const buscando = busqueda.trim() !== '' || filtroCat !== '' || filtroOferta;
   document.getElementById('vacio').hidden = !(items.length === 0 && buscando);
-  const tarjetas = items.map(tarjetaHtml);
-  // Solo en la portada: si la persona está buscando o filtrando, va a lo suyo y
-  // el reclamo estorba. Y solo con catálogo suficiente, para que no salga pegado
-  // al final de una lista de cuatro productos.
-  if (!buscando && tarjetas.length >= 6) tarjetas.splice(4, 0, tarjetaComisionistaHtml());
-  document.getElementById('grid').innerHTML = tarjetas.join('');
+  // En la portada los destacados viven en el carrusel de arriba; aquí se omiten
+  // para no duplicar ids. Al buscar o filtrar no hay carrusel, así que entran.
+  const lista = buscando ? items : items.filter((p) => !p.destacado);
+  document.getElementById('grid').innerHTML = lista.map(tarjetaHtml).join('');
+  renderMasVendidos();
 }
 
 function refrescarAcciones(id) {
@@ -972,11 +990,6 @@ async function iniciar() {
     document.getElementById('catalogo').scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 
-  // Delegado en la rejilla porque la tarjeta se repinta con cada render.
-  document.getElementById('grid').addEventListener('click', (e) => {
-    if (e.target.closest('#cta-comi')) abrirComisionista();
-  });
-
   // Delegado porque renderFooterExtra() repinta el pie.
   document.getElementById('footer-contacto-links').addEventListener('click', (e) => {
     if (e.target.closest('#pie-comi')) abrirComisionista();
@@ -993,10 +1006,18 @@ async function iniciar() {
   document.getElementById('btn-reintentar').addEventListener('click', cargarCatalogo);
 
   // Delegación: tarjetas abren el detalle; los controles de cantidad no (viven dentro de .card-accion).
-  document.getElementById('grid').addEventListener('click', (e) => {
+  // Extraída a una constante con nombre para atarla también a la tira de más
+  // vendidos: el mismo gesto (tocar la tarjeta abre el detalle, tocar +/−/Añadir
+  // no) tiene que funcionar igual en el carrusel que en la rejilla.
+  const alPulsarEnTarjetas = (e) => {
     if (e.target.closest('.card-accion')) return;
     const card = e.target.closest('.card');
     if (card) abrirDetalle(card.dataset.id);
+  };
+  document.getElementById('grid').addEventListener('click', alPulsarEnTarjetas);
+  document.getElementById('mv-tira').addEventListener('click', alPulsarEnTarjetas);
+  document.getElementById('cta-comi-hueco').addEventListener('click', (e) => {
+    if (e.target.closest('#cta-comi')) abrirComisionista();
   });
   document.getElementById('grid').addEventListener('keydown', (e) => {
     if (e.key !== 'Enter' && e.key !== ' ') return;

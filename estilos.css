@@ -698,3 +698,28 @@ body.con-barra-movil{padding-bottom:var(--barra-movil-h, 84px)}
    lo desalinea de sus vecinos <a>: .footer-link ya fija font-size/font-weight
    propios y esta regla no debe pisarlos, solo quitar el look nativo de <button>). */
 button.footer-link{background:none;border:none;font-family:inherit;cursor:pointer;padding:0}
+
+/* ── Los más vendidos ──
+   Misma mecánica que la tira de categorías: scroll horizontal nativo con imán.
+   Sin librería y sin rotación automática: cada salto automático obligaría a
+   descargar la foto siguiente, y con conexión mala eso son huecos en blanco.
+   El ancho de 42% deja la tercera tarjeta asomando: es la señal de "hay más".
+
+   Los números están MEDIDOS en el sitio real a 375 px (ancho útil 343, gap 14,
+   tarjeta de la rejilla 165 → 2 por fila). En el carrusel siguen siendo 2 a la
+   vez, no se encogen para meter 3: a ese tamaño la foto y el precio dejan de
+   leerse en un móvil. Con 42% la tarjeta mide 144 px y asoman 41 px de la
+   tercera. Con 46% asomaban 13 px, una rendija que no se nota; con 50% no
+   asoma nada y parece una fila normal que nadie intenta arrastrar. */
+.mv{margin:0 0 18px}
+.mv-titulo{font-size:clamp(17px,2.6vw,21px);font-weight:700;margin:0 0 10px}
+.mv-tira{
+  display:flex;gap:14px;overflow-x:auto;overflow-y:visible;
+  scroll-snap-type:x proximity;padding-bottom:6px;
+}
+.mv-tira .card{flex:0 0 42%;scroll-snap-align:start;max-width:230px}
+@media (min-width:700px){ .mv-tira .card{flex-basis:210px} }
+.card-mv{
+  position:absolute;top:8px;right:8px;background:var(--brand);color:var(--brand-ink);
+  font-size:10px;font-weight:800;letter-spacing:.03em;padding:3px 8px;border-radius:6px;
+}
