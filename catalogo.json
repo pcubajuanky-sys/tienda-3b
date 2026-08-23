@@ -1,5 +1,5 @@
 {
-  "generado": "2026-08-22T21:18:37.922Z",
+  "generado": "2026-08-23T02:48:37.943Z",
   "tasa": 665,
   "whatsapp": "5363268423",
   "vendedores": [],
@@ -95,6 +95,10 @@
     {
       "n": "Mascotas",
       "e": "😺🐶"
+    },
+    {
+      "n": "Respaldo energético",
+      "e": "💥"
     }
   ],
   "tienda": {
@@ -121,6 +125,20 @@
     ]
   },
   "items": [
+    {
+      "id": "p_1787438256773",
+      "name": "Cargador de batería",
+      "cat": "Respaldo energético",
+      "subcat": "",
+      "notes": "Convertidor de corriente para RV VEVOR, 65 amperios, 110V AC a 12V DC, cargador de batería convertidor para RV, carga inteligente de múltiples etapas, rango de funcionamiento de 13V a 16.5V, compatible con baterías de litio(lifepo4) y ácido de plomo.\n*Mensajería gratis*",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787438078/productos/kupn88b6jblzymggz1td.jpg",
+      "precioUSD": 140,
+      "precioCUP": 93100,
+      "moneda": "usd",
+      "enOferta": true,
+      "precioNormalUSD": 150,
+      "precioNormalCUP": 99750
+    },
     {
       "id": "p_1784919312828",
       "name": "Organizador de Zapatos y accesorios",
@@ -522,6 +540,30 @@
       "enOferta": true,
       "precioNormalUSD": 25,
       "precioNormalCUP": 16625
+    },
+    {
+      "id": "p_1787453260357",
+      "name": "Conjunto de pirsings de acero",
+      "cat": "Reloj y Prendas",
+      "subcat": "",
+      "notes": "6 pirsings de diferentes tamaños como muestra la imagen \n*Mensajería gratis*",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787453126/productos/wcvd8wra1lnvrgdmmu8a.jpg",
+      "precioUSD": 3.01,
+      "precioCUP": 2000,
+      "moneda": "cup",
+      "enOferta": false
+    },
+    {
+      "id": "p_1787453074243",
+      "name": "Conjunto de tobilleras de acero",
+      "cat": "Reloj y Prendas",
+      "subcat": "",
+      "notes": "Exactamente el diseño de la imagen \n*Mensajería gratis*",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787452945/productos/kcphqfvxglq6sbtux4k8.jpg",
+      "precioUSD": 2.26,
+      "precioCUP": 1500,
+      "moneda": "cup",
+      "enOferta": false
     },
     {
       "id": "p_1780092391799",
