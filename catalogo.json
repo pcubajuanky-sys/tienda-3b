@@ -1,5 +1,5 @@
 {
-  "generado": "2026-08-23T02:48:37.943Z",
+  "generado": "2026-08-23T08:18:38.053Z",
   "tasa": 665,
   "whatsapp": "5363268423",
   "vendedores": [],
@@ -268,6 +268,18 @@
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785087860/productos/rvyuo7iwnevw6yztbsh8.jpg",
       "precioUSD": 1.05,
       "precioCUP": 700,
+      "moneda": "cup",
+      "enOferta": false
+    },
+    {
+      "id": "p_1787457398463",
+      "name": "Aretes antialérgicos",
+      "cat": "Reloj y Prendas",
+      "subcat": "",
+      "notes": "Conjunto de 10 pares de aretes antialérgicos de diseño variado y pequeño. Totalmente de silicona, ideal para pieles sensibles.\nOJO: No es posible la venta por unidad 😔\n*Mensajería gratis* 🤩",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787457165/productos/qfxp9bk6i7kvkx9gshau.jpg",
+      "precioUSD": 1.43,
+      "precioCUP": 950,
       "moneda": "cup",
       "enOferta": false
     },
@@ -562,6 +574,18 @@
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787452945/productos/kcphqfvxglq6sbtux4k8.jpg",
       "precioUSD": 2.26,
       "precioCUP": 1500,
+      "moneda": "cup",
+      "enOferta": false
+    },
+    {
+      "id": "p_1787453447601",
+      "name": "Conjunto de tobilleras plateadas de fantasía",
+      "cat": "Reloj y Prendas",
+      "subcat": "",
+      "notes": "Exactamente el diseño de la imagen \n*Mensajería gratis*",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787453332/productos/hgvzduzoya6btwnccu2f.jpg",
+      "precioUSD": 1.95,
+      "precioCUP": 1300,
       "moneda": "cup",
       "enOferta": false
     },
@@ -1656,6 +1680,18 @@
       "enOferta": false
     },
     {
+      "id": "p_1787457655788",
+      "name": "Reloj de hombre plateado 1",
+      "cat": "Reloj y Prendas",
+      "subcat": "",
+      "notes": "*Mensajería gratis*",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787457564/productos/shwjptxb2v5db42cx9tb.jpg",
+      "precioUSD": 6,
+      "precioCUP": 3990,
+      "moneda": "usd",
+      "enOferta": false
+    },
+    {
       "id": "p_1781213126908",
       "name": "Reloj inteligente",
       "cat": "Reloj y Prendas",
@@ -1677,6 +1713,18 @@
       "precioUSD": 18,
       "precioCUP": 11970,
       "moneda": "usd",
+      "enOferta": false
+    },
+    {
+      "id": "p_1787458002424",
+      "name": "Relojes de mujer",
+      "cat": "Reloj y Prendas",
+      "subcat": "",
+      "notes": "Relojes de mujer de manilla de cuero fina y delicada y muy femenina \n*Mensajería gratis*",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787457826/productos/vwcozfuld4myjot0exjb.jpg",
+      "precioUSD": 3.76,
+      "precioCUP": 2500,
+      "moneda": "cup",
       "enOferta": false
     },
     {
