@@ -12,6 +12,7 @@
   --brand:     #7A2E5D;
   --brand-ink: #FFFFFF;
   --brand-soft:#F7E9F2;
+  --brand-hondo:#4E1D3B;
   --oferta:    #C81E4C;
   --wa:        #128C7E;
 
@@ -36,6 +37,7 @@
     --brand:     #E9A8CE;
     --brand-ink: #2A0E20;
     --brand-soft:#2E1B29;
+    --brand-hondo:#C77FA9;
     --oferta:    #FF8AA6;
     --wa:        #25D366;
   }
@@ -649,4 +651,35 @@ body.con-barra-movil{padding-bottom:var(--barra-movil-h, 84px)}
 }
 @media (prefers-reduced-motion:no-preference){
   html{scroll-behavior:smooth}
+}
+
+/* ── Reclamo de comisionistas dentro del catálogo ──
+   Ocupa la fila entera de la rejilla (grid-column:1/-1) para que se lea como
+   una pieza aparte y no compita en tamaño con las tarjetas de producto.
+   El relieve es un borde inferior sólido, NO una sombra difuminada: se ve
+   igual de bien en móvil y no ensucia el fondo claro. */
+.cta-comi{
+  grid-column:1/-1;
+  background:var(--brand);color:var(--brand-ink);
+  border:none;border-bottom:5px solid var(--brand-hondo);
+  border-radius:var(--radio-card);
+  padding:18px 20px;margin:4px 0;
+  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;
+  text-align:left;width:100%;font:inherit;cursor:pointer;
+  transition:transform var(--dur), border-bottom-width var(--dur);
+}
+.cta-comi:hover{transform:translateY(-1px)}
+.cta-comi:active{transform:translateY(3px);border-bottom-width:2px}
+.cta-comi-txt{flex:1 1 220px;min-width:0}
+.cta-comi-tit{font-size:clamp(17px,2.6vw,21px);font-weight:700;line-height:1.25}
+.cta-comi-sub{font-size:13px;line-height:1.5;margin-top:4px;opacity:.92}
+.cta-comi-btn{
+  flex:none;background:var(--brand-ink);color:var(--brand);
+  border-radius:var(--radio-control);padding:11px 18px;
+  font-size:14px;font-weight:700;min-height:44px;
+  display:inline-flex;align-items:center;gap:8px;
+}
+@media (prefers-reduced-motion:reduce){
+  .cta-comi{transition:none}
+  .cta-comi:hover,.cta-comi:active{transform:none}
 }
