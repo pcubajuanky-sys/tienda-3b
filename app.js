@@ -284,8 +284,10 @@ function tarjetaHtml(p) {
       <div class="card-foto">
         <img src="${foto.src}" ${foto.srcset ? `srcset="${foto.srcset}" sizes="(max-width:480px) 45vw, 220px"` : ''}
              alt="${escapeHtml(p.name)}" loading="lazy" decoding="async" onerror="imgFallback(this)">
-        ${p.enOferta ? `<span class="card-oferta">OFERTA</span>` : ''}
-        ${p.destacado ? `<span class="card-mv">⭐ MÁS VENDIDO</span>` : ''}
+        ${p.enOferta || p.destacado ? `<div class="card-sellos">
+          ${p.enOferta ? `<span class="card-oferta">OFERTA</span>` : ''}
+          ${p.destacado ? `<span class="card-mv">⭐ MÁS VENDIDO</span>` : ''}
+        </div>` : ''}
       </div>
       <div class="body">
         <div class="nom">${escapeHtml(p.name)}</div>
