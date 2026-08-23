@@ -1,5 +1,5 @@
 {
-  "generado": "2026-08-23T16:08:06.289Z",
+  "generado": "2026-08-23T18:21:29.903Z",
   "tasa": 665,
   "whatsapp": "5363268423",
   "vendedores": [],
@@ -136,6 +136,7 @@
       "precioCUP": 93100,
       "moneda": "usd",
       "enOferta": true,
+      "destacado": false,
       "precioNormalUSD": 150,
       "precioNormalCUP": 99750
     },
@@ -149,7 +150,8 @@
       "precioUSD": 6,
       "precioCUP": 3990,
       "moneda": "usd",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1786921926228",
@@ -161,7 +163,8 @@
       "precioUSD": 6,
       "precioCUP": 3990,
       "moneda": "usd",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1781004937627",
@@ -173,7 +176,8 @@
       "precioUSD": 1.03,
       "precioCUP": 685,
       "moneda": "usd",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1786714525104",
@@ -185,7 +189,8 @@
       "precioUSD": 8,
       "precioCUP": 5320,
       "moneda": "usd",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1786943265900",
@@ -197,7 +202,8 @@
       "precioUSD": 3.76,
       "precioCUP": 2500,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1785092425018",
@@ -209,7 +215,8 @@
       "precioUSD": 0.68,
       "precioCUP": 450,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1786714341476",
@@ -221,7 +228,8 @@
       "precioUSD": 2,
       "precioCUP": 1330,
       "moneda": "usd",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1787110390009",
@@ -233,7 +241,8 @@
       "precioUSD": 2.26,
       "precioCUP": 1500,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1787498809174",
@@ -245,7 +254,8 @@
       "precioUSD": 1.35,
       "precioCUP": 900,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1787499027901",
@@ -257,7 +267,8 @@
       "precioUSD": 1.35,
       "precioCUP": 900,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1782340130001",
@@ -269,7 +280,8 @@
       "precioUSD": 0.53,
       "precioCUP": 350,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1781551585230",
@@ -281,7 +293,8 @@
       "precioUSD": 1.05,
       "precioCUP": 700,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1787457398463",
@@ -293,7 +306,8 @@
       "precioUSD": 1.43,
       "precioCUP": 950,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1787495641341",
@@ -305,7 +319,8 @@
       "precioUSD": 1.28,
       "precioCUP": 850,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1787497741914",
@@ -317,7 +332,8 @@
       "precioUSD": 0.9,
       "precioCUP": 600,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1787498450640",
@@ -329,7 +345,8 @@
       "precioUSD": 0.9,
       "precioCUP": 600,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1787498656646",
@@ -341,7 +358,8 @@
       "precioUSD": 0.9,
       "precioCUP": 600,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1786922285289",
@@ -353,7 +371,8 @@
       "precioUSD": 8,
       "precioCUP": 5320,
       "moneda": "usd",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1786918401932",
@@ -365,7 +384,8 @@
       "precioUSD": 25,
       "precioCUP": 16625,
       "moneda": "usd",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": true
     },
     {
       "id": "p_1784919190954",
@@ -377,7 +397,8 @@
       "precioUSD": 6.77,
       "precioCUP": 4500,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1781552195237",
@@ -390,6 +411,7 @@
       "precioCUP": 400,
       "moneda": "cup",
       "enOferta": true,
+      "destacado": false,
       "precioNormalUSD": 0.9,
       "precioNormalCUP": 600
     },
@@ -403,7 +425,8 @@
       "precioUSD": 4.81,
       "precioCUP": 3200,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1780092109867",
@@ -415,7 +438,8 @@
       "precioUSD": 4.51,
       "precioCUP": 3000,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1786923820539",
@@ -427,7 +451,8 @@
       "precioUSD": 0.6,
       "precioCUP": 400,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1785877309060",
@@ -439,7 +464,8 @@
       "precioUSD": 16,
       "precioCUP": 10640,
       "moneda": "usd",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1785877459055",
@@ -451,7 +477,8 @@
       "precioUSD": 12,
       "precioCUP": 7980,
       "moneda": "usd",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1781215775166",
@@ -463,7 +490,8 @@
       "precioUSD": 20,
       "precioCUP": 13300,
       "moneda": "usd",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1785180542778",
@@ -475,7 +503,8 @@
       "precioUSD": 0.75,
       "precioCUP": 500,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1785179891060",
@@ -487,7 +516,8 @@
       "precioUSD": 6,
       "precioCUP": 3990,
       "moneda": "usd",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1785182779881",
@@ -499,7 +529,8 @@
       "precioUSD": 4.66,
       "precioCUP": 3100,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1781215403591",
@@ -511,7 +542,8 @@
       "precioUSD": 2.71,
       "precioCUP": 1800,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1781707937680",
@@ -523,7 +555,8 @@
       "precioUSD": 25,
       "precioCUP": 16625,
       "moneda": "usd",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": true
     },
     {
       "id": "p_1785528271738",
@@ -536,6 +569,7 @@
       "precioCUP": 1200,
       "moneda": "cup",
       "enOferta": true,
+      "destacado": false,
       "precioNormalUSD": 2.26,
       "precioNormalCUP": 1500
     },
@@ -549,7 +583,8 @@
       "precioUSD": 10,
       "precioCUP": 6650,
       "moneda": "usd",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1781005646366",
@@ -561,7 +596,8 @@
       "precioUSD": 1.19,
       "precioCUP": 791,
       "moneda": "usd",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1786998526143",
@@ -573,7 +609,8 @@
       "precioUSD": 2.86,
       "precioCUP": 1900,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1786998892313",
@@ -585,7 +622,8 @@
       "precioUSD": 2.86,
       "precioCUP": 1900,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1780347243525",
@@ -597,7 +635,8 @@
       "precioUSD": 2.71,
       "precioCUP": 1800,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1784914229758",
@@ -610,8 +649,22 @@
       "precioCUP": 11970,
       "moneda": "usd",
       "enOferta": true,
+      "destacado": false,
       "precioNormalUSD": 25,
       "precioNormalCUP": 16625
+    },
+    {
+      "id": "p_1787501959134",
+      "name": "Collar y accesorios dorados de fantasía",
+      "cat": "Reloj y Prendas",
+      "subcat": "",
+      "notes": "El conjunto está compuesto por collar, aretes, anillo, pulsera y pulsera rígida. Elegante y vistoso,para cualquier ocasión \n*Mensajería gratis*",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787501728/productos/eh3psubx3a0fzqndvqk4.jpg",
+      "precioUSD": 2.86,
+      "precioCUP": 1900,
+      "moneda": "cup",
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1787453260357",
@@ -623,7 +676,8 @@
       "precioUSD": 3.01,
       "precioCUP": 2000,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1787498299932",
@@ -635,7 +689,8 @@
       "precioUSD": 3.76,
       "precioCUP": 2500,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1787453074243",
@@ -647,7 +702,8 @@
       "precioUSD": 2.26,
       "precioCUP": 1500,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1787453447601",
@@ -659,7 +715,8 @@
       "precioUSD": 1.95,
       "precioCUP": 1300,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1780092391799",
@@ -671,7 +728,8 @@
       "precioUSD": 10,
       "precioCUP": 6650,
       "moneda": "usd",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1780092681080",
@@ -683,7 +741,8 @@
       "precioUSD": 4,
       "precioCUP": 2660,
       "moneda": "usd",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1782259192464",
@@ -695,7 +754,8 @@
       "precioUSD": 0.9,
       "precioCUP": 600,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1787088450511",
@@ -707,7 +767,8 @@
       "precioUSD": 0.75,
       "precioCUP": 500,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1780092645027",
@@ -719,7 +780,8 @@
       "precioUSD": 0.15,
       "precioCUP": 100,
       "moneda": "usd",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1782340069990",
@@ -731,7 +793,8 @@
       "precioUSD": 9,
       "precioCUP": 5985,
       "moneda": "usd",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1784925486862",
@@ -743,7 +806,8 @@
       "precioUSD": 2.46,
       "precioCUP": 1636,
       "moneda": "usd",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1785733992043",
@@ -755,7 +819,8 @@
       "precioUSD": 5.41,
       "precioCUP": 3600,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1785273242889",
@@ -767,7 +832,8 @@
       "precioUSD": 1.8,
       "precioCUP": 1200,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1780955482040",
@@ -779,7 +845,8 @@
       "precioUSD": 0.23,
       "precioCUP": 150,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1780608497220",
@@ -791,7 +858,8 @@
       "precioUSD": 3.01,
       "precioCUP": 2000,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1780620222381",
@@ -803,7 +871,8 @@
       "precioUSD": 3.01,
       "precioCUP": 2000,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1780276503276",
@@ -816,6 +885,7 @@
       "precioCUP": 11970,
       "moneda": "usd",
       "enOferta": true,
+      "destacado": true,
       "precioNormalUSD": 25,
       "precioNormalCUP": 16625
     },
@@ -830,6 +900,7 @@
       "precioCUP": 16625,
       "moneda": "usd",
       "enOferta": true,
+      "destacado": false,
       "precioNormalUSD": 30,
       "precioNormalCUP": 19950
     },
@@ -844,6 +915,7 @@
       "precioCUP": 19040,
       "moneda": "usd",
       "enOferta": true,
+      "destacado": false,
       "precioNormalUSD": 30,
       "precioNormalCUP": 19950
     },
@@ -857,7 +929,8 @@
       "precioUSD": 1.8,
       "precioCUP": 1200,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1785957866193",
@@ -869,7 +942,8 @@
       "precioUSD": 1.5,
       "precioCUP": 1000,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1785959109839",
@@ -881,7 +955,8 @@
       "precioUSD": 1.5,
       "precioCUP": 1000,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1780092427629",
@@ -893,7 +968,8 @@
       "precioUSD": 1.4,
       "precioCUP": 931,
       "moneda": "usd",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1785006638149",
@@ -905,7 +981,8 @@
       "precioUSD": 20,
       "precioCUP": 13300,
       "moneda": "usd",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1780608108403",
@@ -917,7 +994,8 @@
       "precioUSD": 2.26,
       "precioCUP": 1500,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1780620383239",
@@ -929,7 +1007,8 @@
       "precioUSD": 6.02,
       "precioCUP": 4000,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1786923457095",
@@ -941,7 +1020,8 @@
       "precioUSD": 0.9,
       "precioCUP": 600,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1785357535101",
@@ -953,7 +1033,8 @@
       "precioUSD": 25,
       "precioCUP": 16625,
       "moneda": "usd",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1780430165202",
@@ -965,7 +1046,8 @@
       "precioUSD": 18,
       "precioCUP": 11970,
       "moneda": "usd",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1785357289638",
@@ -977,7 +1059,8 @@
       "precioUSD": 4.51,
       "precioCUP": 3000,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1785008058883",
@@ -989,7 +1072,8 @@
       "precioUSD": 12,
       "precioCUP": 7980,
       "moneda": "usd",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1785008412468",
@@ -1001,7 +1085,8 @@
       "precioUSD": 13,
       "precioCUP": 8645,
       "moneda": "usd",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": true
     },
     {
       "id": "p_1781005179627",
@@ -1013,7 +1098,8 @@
       "precioUSD": 15,
       "precioCUP": 9975,
       "moneda": "usd",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1782340744519",
@@ -1025,7 +1111,8 @@
       "precioUSD": 0.6,
       "precioCUP": 400,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1782329548997",
@@ -1037,7 +1124,8 @@
       "precioUSD": 0.75,
       "precioCUP": 500,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1785769239613",
@@ -1049,7 +1137,8 @@
       "precioUSD": 16,
       "precioCUP": 10640,
       "moneda": "usd",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1785769308192",
@@ -1061,7 +1150,8 @@
       "precioUSD": 20,
       "precioCUP": 13300,
       "moneda": "usd",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1782259309845",
@@ -1073,7 +1163,8 @@
       "precioUSD": 0.6,
       "precioCUP": 400,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1782339511897",
@@ -1086,6 +1177,7 @@
       "precioCUP": 2500,
       "moneda": "cup",
       "enOferta": true,
+      "destacado": false,
       "precioNormalUSD": 4.06,
       "precioNormalCUP": 2700
     },
@@ -1099,7 +1191,8 @@
       "precioUSD": 0.9,
       "precioCUP": 599,
       "moneda": "usd",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1785733476445",
@@ -1111,7 +1204,8 @@
       "precioUSD": 35,
       "precioCUP": 23275,
       "moneda": "usd",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1785768634737",
@@ -1123,7 +1217,8 @@
       "precioUSD": 20,
       "precioCUP": 13300,
       "moneda": "usd",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1781640150594",
@@ -1135,7 +1230,8 @@
       "precioUSD": 1.5,
       "precioCUP": 1000,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1785733637147",
@@ -1147,7 +1243,8 @@
       "precioUSD": 2.26,
       "precioCUP": 1500,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1785733763335",
@@ -1159,7 +1256,8 @@
       "precioUSD": 1.8,
       "precioCUP": 1200,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1780609726389",
@@ -1171,7 +1269,8 @@
       "precioUSD": 3.01,
       "precioCUP": 2000,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1785269406794",
@@ -1183,7 +1282,8 @@
       "precioUSD": 3.01,
       "precioCUP": 2000,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1785271247802",
@@ -1195,7 +1295,8 @@
       "precioUSD": 2.71,
       "precioCUP": 1800,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1780608723108",
@@ -1207,7 +1308,8 @@
       "precioUSD": 1.8,
       "precioCUP": 1200,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1780613171948",
@@ -1219,7 +1321,8 @@
       "precioUSD": 3.01,
       "precioCUP": 2000,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1785268500695",
@@ -1231,7 +1334,8 @@
       "precioUSD": 2.71,
       "precioCUP": 1800,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1782259680772",
@@ -1243,7 +1347,8 @@
       "precioUSD": 3.16,
       "precioCUP": 2100,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1780092595587",
@@ -1255,7 +1360,8 @@
       "precioUSD": 0.5,
       "precioCUP": 333,
       "moneda": "usd",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1786916805434",
@@ -1267,7 +1373,8 @@
       "precioUSD": 1,
       "precioCUP": 665,
       "moneda": "usd",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1785181471906",
@@ -1279,7 +1386,8 @@
       "precioUSD": 2.41,
       "precioCUP": 1600,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1785180901080",
@@ -1291,7 +1399,8 @@
       "precioUSD": 2.93,
       "precioCUP": 1950,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1781005769619",
@@ -1304,6 +1413,7 @@
       "precioCUP": 1100,
       "moneda": "usd",
       "enOferta": true,
+      "destacado": false,
       "precioNormalUSD": 2.24,
       "precioNormalCUP": 1490
     },
@@ -1317,19 +1427,8 @@
       "precioUSD": 17,
       "precioCUP": 11305,
       "moneda": "usd",
-      "enOferta": false
-    },
-    {
-      "id": "p_1786970505731",
-      "name": "Mini máquina selladora",
-      "cat": "Electrodomésticos",
-      "subcat": "",
-      "notes": "Máquina de sellado de bolsas recargable 2 en 1, con cortador de chips, para mantener los alimentos frescos, con cuchilla, con carga USB, máquina selladora para almacenamiento de alimentos, con imán,  portátil manual, solo en blanco con gris \n*Mensajería gratis*",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786970222/productos/fmeuv9pq9ifxozuqovm4.jpg",
-      "precioUSD": 4,
-      "precioCUP": 2660,
-      "moneda": "usd",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1787412191026",
@@ -1341,7 +1440,8 @@
       "precioUSD": 0.18,
       "precioCUP": 120,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1786714572024",
@@ -1353,7 +1453,8 @@
       "precioUSD": 0.23,
       "precioCUP": 150,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1780951622289",
@@ -1365,7 +1466,8 @@
       "precioUSD": 1.28,
       "precioCUP": 850,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1784915819412",
@@ -1378,6 +1480,7 @@
       "precioCUP": 13965,
       "moneda": "usd",
       "enOferta": true,
+      "destacado": false,
       "precioNormalUSD": 23,
       "precioNormalCUP": 15295
     },
@@ -1391,7 +1494,8 @@
       "precioUSD": 13,
       "precioCUP": 8645,
       "moneda": "usd",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1787080747584",
@@ -1403,7 +1507,8 @@
       "precioUSD": 15,
       "precioCUP": 9975,
       "moneda": "usd",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1786922026243",
@@ -1415,7 +1520,8 @@
       "precioUSD": 8,
       "precioCUP": 5320,
       "moneda": "usd",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1784914843855",
@@ -1427,7 +1533,8 @@
       "precioUSD": 33,
       "precioCUP": 21945,
       "moneda": "usd",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1786732384337",
@@ -1440,8 +1547,22 @@
       "precioCUP": 12635,
       "moneda": "usd",
       "enOferta": true,
+      "destacado": false,
       "precioNormalUSD": 20,
       "precioNormalCUP": 13300
+    },
+    {
+      "id": "p_1786708481607",
+      "name": "Nesquik de chocolate 🍫",
+      "cat": "Confituras",
+      "subcat": "",
+      "notes": "Delicioso Nesquik de chocolate. Pote gigante de 2.8 libras sabor chocolate con vitaminas añadidas. Importado directamente de USA *Mensajería gratis*",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786929207/productos/fig57zzkbowjpuo3ws8i.jpg",
+      "precioUSD": 30,
+      "precioCUP": 19950,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": true
     },
     {
       "id": "p_1785091920991",
@@ -1453,7 +1574,8 @@
       "precioUSD": 1.05,
       "precioCUP": 700,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1780092348854",
@@ -1466,6 +1588,7 @@
       "precioCUP": 4080,
       "moneda": "usd",
       "enOferta": true,
+      "destacado": false,
       "precioNormalUSD": 7,
       "precioNormalCUP": 4655
     },
@@ -1479,7 +1602,8 @@
       "precioUSD": 38,
       "precioCUP": 25270,
       "moneda": "usd",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1785183311846",
@@ -1491,7 +1615,8 @@
       "precioUSD": 3.7,
       "precioCUP": 2461,
       "moneda": "usd",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1785006026614",
@@ -1503,7 +1628,8 @@
       "precioUSD": 11,
       "precioCUP": 7315,
       "moneda": "usd",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1785868358275",
@@ -1515,7 +1641,8 @@
       "precioUSD": 25,
       "precioCUP": 16625,
       "moneda": "usd",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1781640704239",
@@ -1527,7 +1654,8 @@
       "precioUSD": 10,
       "precioCUP": 6650,
       "moneda": "usd",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1785012145699",
@@ -1539,7 +1667,8 @@
       "precioUSD": 9,
       "precioCUP": 5985,
       "moneda": "usd",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1780956166935",
@@ -1552,6 +1681,7 @@
       "precioCUP": 200,
       "moneda": "cup",
       "enOferta": true,
+      "destacado": false,
       "precioNormalUSD": 0.75,
       "precioNormalCUP": 500
     },
@@ -1565,7 +1695,8 @@
       "precioUSD": 0.18,
       "precioCUP": 120,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1780951069722",
@@ -1577,7 +1708,8 @@
       "precioUSD": 0.68,
       "precioCUP": 450,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1780950975688",
@@ -1589,7 +1721,8 @@
       "precioUSD": 0.6,
       "precioCUP": 400,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1786930924590",
@@ -1601,7 +1734,8 @@
       "precioUSD": 0.27,
       "precioCUP": 180,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1780945492775",
@@ -1613,7 +1747,8 @@
       "precioUSD": 0.75,
       "precioCUP": 500,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1785275083288",
@@ -1625,7 +1760,8 @@
       "precioUSD": 0.6,
       "precioCUP": 400,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1785275149243",
@@ -1637,7 +1773,8 @@
       "precioUSD": 0.6,
       "precioCUP": 400,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1782329655762",
@@ -1649,7 +1786,8 @@
       "precioUSD": 0.75,
       "precioCUP": 500,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1786922817374",
@@ -1661,7 +1799,8 @@
       "precioUSD": 0.45,
       "precioCUP": 300,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1786917004897",
@@ -1673,7 +1812,8 @@
       "precioUSD": 4,
       "precioCUP": 2660,
       "moneda": "usd",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1786922877587",
@@ -1685,7 +1825,8 @@
       "precioUSD": 0.45,
       "precioCUP": 300,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1785092176064",
@@ -1698,6 +1839,7 @@
       "precioCUP": 350,
       "moneda": "cup",
       "enOferta": true,
+      "destacado": false,
       "precioNormalUSD": 0.75,
       "precioNormalCUP": 500
     },
@@ -1712,6 +1854,7 @@
       "precioCUP": 1000,
       "moneda": "cup",
       "enOferta": true,
+      "destacado": false,
       "precioNormalUSD": 1.95,
       "precioNormalCUP": 1300
     },
@@ -1725,7 +1868,8 @@
       "precioUSD": 3,
       "precioCUP": 1995,
       "moneda": "usd",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1786919841226",
@@ -1737,7 +1881,8 @@
       "precioUSD": 3.76,
       "precioCUP": 2500,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1786942819710",
@@ -1749,7 +1894,8 @@
       "precioUSD": 3.76,
       "precioCUP": 2500,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1786942882474",
@@ -1761,7 +1907,8 @@
       "precioUSD": 3.73,
       "precioCUP": 2480,
       "moneda": "usd",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1787457655788",
@@ -1773,7 +1920,8 @@
       "precioUSD": 6,
       "precioCUP": 3990,
       "moneda": "usd",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1781213126908",
@@ -1785,7 +1933,8 @@
       "precioUSD": 18,
       "precioCUP": 11970,
       "moneda": "usd",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1781213598622",
@@ -1797,7 +1946,8 @@
       "precioUSD": 18,
       "precioCUP": 11970,
       "moneda": "usd",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1787457782531",
@@ -1809,7 +1959,8 @@
       "precioUSD": 6,
       "precioCUP": 3990,
       "moneda": "usd",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1787458002424",
@@ -1821,7 +1972,8 @@
       "precioUSD": 3.76,
       "precioCUP": 2500,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1782341002481",
@@ -1833,7 +1985,8 @@
       "precioUSD": 0.9,
       "precioCUP": 600,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1782340930673",
@@ -1846,6 +1999,7 @@
       "precioCUP": 1000,
       "moneda": "cup",
       "enOferta": true,
+      "destacado": false,
       "precioNormalUSD": 2.08,
       "precioNormalCUP": 1380
     },
@@ -1859,7 +2013,8 @@
       "precioUSD": 5.71,
       "precioCUP": 3800,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1785533520877",
@@ -1872,6 +2027,7 @@
       "precioCUP": 7425,
       "moneda": "usd",
       "enOferta": true,
+      "destacado": false,
       "precioNormalUSD": 12,
       "precioNormalCUP": 7980
     },
@@ -1886,6 +2042,7 @@
       "precioCUP": 7425,
       "moneda": "usd",
       "enOferta": true,
+      "destacado": false,
       "precioNormalUSD": 12,
       "precioNormalCUP": 7980
     },
@@ -1900,6 +2057,7 @@
       "precioCUP": 7425,
       "moneda": "usd",
       "enOferta": true,
+      "destacado": false,
       "precioNormalUSD": 12,
       "precioNormalCUP": 7980
     },
@@ -1914,6 +2072,7 @@
       "precioCUP": 7425,
       "moneda": "usd",
       "enOferta": true,
+      "destacado": false,
       "precioNormalUSD": 12,
       "precioNormalCUP": 7980
     },
@@ -1927,7 +2086,8 @@
       "precioUSD": 3.16,
       "precioCUP": 2100,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1782339751417",
@@ -1939,7 +2099,8 @@
       "precioUSD": 1.2,
       "precioCUP": 800,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1782339821859",
@@ -1951,7 +2112,8 @@
       "precioUSD": 1.2,
       "precioCUP": 800,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1786917303962",
@@ -1963,7 +2125,8 @@
       "precioUSD": 12,
       "precioCUP": 7980,
       "moneda": "usd",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1785088536626",
@@ -1975,7 +2138,8 @@
       "precioUSD": 5.26,
       "precioCUP": 3500,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1785533206456",
@@ -1987,7 +2151,8 @@
       "precioUSD": 15,
       "precioCUP": 9975,
       "moneda": "usd",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1786991410391",
@@ -1999,7 +2164,8 @@
       "precioUSD": 0.45,
       "precioCUP": 300,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1785528150289",
@@ -2011,7 +2177,8 @@
       "precioUSD": 11.28,
       "precioCUP": 7500,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1785527505783",
@@ -2023,7 +2190,8 @@
       "precioUSD": 10,
       "precioCUP": 6650,
       "moneda": "usd",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1780614185839",
@@ -2036,6 +2204,7 @@
       "precioCUP": 600,
       "moneda": "cup",
       "enOferta": true,
+      "destacado": false,
       "precioNormalUSD": 1.02,
       "precioNormalCUP": 680
     },
@@ -2049,7 +2218,8 @@
       "precioUSD": 3.01,
       "precioCUP": 2000,
       "moneda": "cup",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1785640816875",
@@ -2061,7 +2231,8 @@
       "precioUSD": 12,
       "precioCUP": 7980,
       "moneda": "usd",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1780277915922",
@@ -2074,6 +2245,7 @@
       "precioCUP": 33250,
       "moneda": "usd",
       "enOferta": true,
+      "destacado": true,
       "precioNormalUSD": 55,
       "precioNormalCUP": 36575
     },
@@ -2087,7 +2259,8 @@
       "precioUSD": 15,
       "precioCUP": 9975,
       "moneda": "usd",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1785533281949",
@@ -2099,7 +2272,8 @@
       "precioUSD": 6,
       "precioCUP": 3990,
       "moneda": "usd",
-      "enOferta": false
+      "enOferta": false,
+      "destacado": false
     }
   ]
 }
