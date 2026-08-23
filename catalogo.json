@@ -1,5 +1,5 @@
 {
-  "generado": "2026-08-23T13:48:38.098Z",
+  "generado": "2026-08-23T14:53:28.444Z",
   "tasa": 665,
   "whatsapp": "5363268423",
   "vendedores": [],
@@ -280,6 +280,18 @@
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787457165/productos/qfxp9bk6i7kvkx9gshau.jpg",
       "precioUSD": 1.43,
       "precioCUP": 950,
+      "moneda": "cup",
+      "enOferta": false
+    },
+    {
+      "id": "p_1787495641341",
+      "name": "Aretes antialérgicos de piedra brillante",
+      "cat": "Reloj y Prendas",
+      "subcat": "",
+      "notes": "Conjunto de 12 pares de aretes de silicona. Antialérgicos. Colores disponibles 🖤💙💜❤️🩷\nOJO no se venden por separado 😔\n*Mensajería gratis*",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787495514/productos/lbtgzyyjjpfw4cipo1ih.jpg",
+      "precioUSD": 1.28,
+      "precioCUP": 850,
       "moneda": "cup",
       "enOferta": false
     },
