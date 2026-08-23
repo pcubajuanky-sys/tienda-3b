@@ -295,11 +295,30 @@ function tarjetaHtml(p) {
     </div>`;
 }
 
+// Reclamo de comisionistas. Es un <button>, no una .card: la rejilla delega los
+// clics con closest('.card'), así que esto no puede confundirse con un producto.
+// Sin cifra de comisión a propósito (decisión del usuario): lo que se publica en
+// Internet compromete, y los porcentajes se hablan con Ruth caso por caso.
+function tarjetaComisionistaHtml() {
+  return `<button type="button" class="cta-comi" id="cta-comi">
+    <span class="cta-comi-txt">
+      <span class="cta-comi-tit">Gana dinero con 3B</span>
+      <span class="cta-comi-sub">Comparte los productos con tu gente y cobra tu comisión por cada venta que entre por tu enlace.</span>
+    </span>
+    <span class="cta-comi-btn">Quiero mi enlace</span>
+  </button>`;
+}
+
 function renderGrid() {
   const items = visibles();
   const buscando = busqueda.trim() !== '' || filtroCat !== '' || filtroOferta;
   document.getElementById('vacio').hidden = !(items.length === 0 && buscando);
-  document.getElementById('grid').innerHTML = items.map(tarjetaHtml).join('');
+  const tarjetas = items.map(tarjetaHtml);
+  // Solo en la portada: si la persona está buscando o filtrando, va a lo suyo y
+  // el reclamo estorba. Y solo con catálogo suficiente, para que no salga pegado
+  // al final de una lista de cuatro productos.
+  if (!buscando && tarjetas.length >= 6) tarjetas.splice(4, 0, tarjetaComisionistaHtml());
+  document.getElementById('grid').innerHTML = tarjetas.join('');
 }
 
 function refrescarAcciones(id) {
@@ -348,6 +367,37 @@ function capturarTecladoModal(e) {
   const modal = document.getElementById('modal-detalle');
   if (modal.hidden) return;
   if (e.key === 'Escape') { cerrarDetalle(); return; }
+  if (e.key === 'Tab') atraparFoco(e, modal);
+}
+
+// Recuadro del comisionista. Mismo patrón que abrirDetalle/cerrarDetalle:
+// guarda el foco anterior, lo devuelve al cerrar y atrapa el Tab dentro.
+function abrirComisionista() {
+  const wa = document.getElementById('comi-wa');
+  if (CAT.whatsapp) {
+    wa.href = `https://wa.me/${CAT.whatsapp}?text=${encodeURIComponent('QUIERO SER COMISIONISTA')}`;
+    wa.hidden = false;
+  } else {
+    // Sin número configurado el enlace iría a wa.me/ vacío: mejor no enseñarlo.
+    wa.hidden = true;
+  }
+  elementoAnteriorFoco = document.activeElement;
+  const modal = document.getElementById('modal-comi');
+  modal.hidden = false;
+  document.getElementById('comi-cerrar').focus();
+  document.addEventListener('keydown', capturarTecladoComi);
+}
+
+function cerrarComisionista() {
+  document.getElementById('modal-comi').hidden = true;
+  document.removeEventListener('keydown', capturarTecladoComi);
+  if (elementoAnteriorFoco && elementoAnteriorFoco.isConnected) elementoAnteriorFoco.focus();
+}
+
+function capturarTecladoComi(e) {
+  const modal = document.getElementById('modal-comi');
+  if (modal.hidden) return;
+  if (e.key === 'Escape') { cerrarComisionista(); return; }
   if (e.key === 'Tab') atraparFoco(e, modal);
 }
 
@@ -814,10 +864,10 @@ function renderFooterExtra() {
   if (CAT.whatsapp) {
     piezas.push(`<a class="footer-link footer-link-wa" href="https://wa.me/${escapeHtml(CAT.whatsapp)}" target="_blank" rel="noopener">💬 WhatsApp</a>`);
   }
-  // Alta de comisionista: abre WhatsApp con el texto que el bot reconoce. Mía no
-  // contesta hasta que Ruth enciende el interruptor de ese contacto en el panel.
+  // Alta de comisionista: abre el recuadro de los tres pasos (no WhatsApp
+  // directo), para que todo el mundo lea antes de escribir.
   if (CAT.whatsapp) {
-    piezas.push(`<a class="footer-link" href="https://wa.me/${escapeHtml(CAT.whatsapp)}?text=${encodeURIComponent('QUIERO SER COMISIONISTA')}" target="_blank" rel="noopener">🤝 Quiero ser comisionista</a>`);
+    piezas.push(`<button type="button" class="footer-link" id="pie-comi">🤝 Quiero ser comisionista</button>`);
   }
   if (t.grupoWA && t.grupoWA.trim()) {
     piezas.push(`<a class="footer-link" href="${escapeHtml(t.grupoWA.trim())}" target="_blank" rel="noopener">👥 Únete a nuestro grupo</a>`);
@@ -912,11 +962,24 @@ async function iniciar() {
   document.getElementById('modal-cerrar').addEventListener('click', cerrarDetalle);
   document.getElementById('modal-fondo').addEventListener('click', cerrarDetalle);
 
+  document.getElementById('comi-cerrar').addEventListener('click', cerrarComisionista);
+  document.getElementById('comi-fondo').addEventListener('click', cerrarComisionista);
+
   document.getElementById('categorias-3d').addEventListener('click', (e) => {
     const btn = e.target.closest('.cat3d');
     if (!btn) return;
     if (btn.dataset.oferta) setOferta(); else setCat(btn.dataset.cat);
     document.getElementById('catalogo').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+
+  // Delegado en la rejilla porque la tarjeta se repinta con cada render.
+  document.getElementById('grid').addEventListener('click', (e) => {
+    if (e.target.closest('#cta-comi')) abrirComisionista();
+  });
+
+  // Delegado porque renderFooterExtra() repinta el pie.
+  document.getElementById('footer-contacto-links').addEventListener('click', (e) => {
+    if (e.target.closest('#pie-comi')) abrirComisionista();
   });
 
   document.getElementById('filtro-pill').addEventListener('click', () => setCat(''));

@@ -683,3 +683,15 @@ body.con-barra-movil{padding-bottom:var(--barra-movil-h, 84px)}
   .cta-comi{transition:none}
   .cta-comi:hover,.cta-comi:active{transform:none}
 }
+
+.comi-intro{font-size:14px;color:var(--text-2);margin:6px 0 14px}
+.comi-pasos{margin:0 0 18px;padding-left:20px;display:flex;flex-direction:column;gap:10px}
+.comi-pasos li{font-size:14px;line-height:1.55;color:var(--text)}
+.comi-wa{
+  display:flex;align-items:center;justify-content:center;
+  min-height:48px;border-radius:var(--radio-control);
+  background:var(--wa);color:#fff;font-size:15px;font-weight:700;
+  text-decoration:none;border-bottom:4px solid rgba(0,0,0,.22);
+}
+.comi-wa:active{transform:translateY(2px);border-bottom-width:2px}
+button.footer-link{background:none;border:none;font:inherit;cursor:pointer;padding:0}
