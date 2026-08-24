@@ -1,5 +1,5 @@
 {
-  "generado": "2026-08-24T16:18:19.890Z",
+  "generado": "2026-08-24T21:18:27.713Z",
   "tasa": 665,
   "whatsapp": "5363268423",
   "vendedores": [],
@@ -215,19 +215,6 @@
       "precioUSD": 0.68,
       "precioCUP": 450,
       "moneda": "cup",
-      "enOferta": false,
-      "destacado": false
-    },
-    {
-      "id": "p_1786714341476",
-      "name": "Adornos de pelo con diseño de pañuelo",
-      "cat": "Cabello",
-      "subcat": "",
-      "notes": "Solo en color verde \n*Mensajería gratis*",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786714256/productos/s8blnhjs77ekcqi5d7hb.jpg",
-      "precioUSD": 2,
-      "precioCUP": 1330,
-      "moneda": "usd",
       "enOferta": false,
       "destacado": false
     },
@@ -1045,19 +1032,6 @@
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785357457/productos/apa8adnvifjxwai5gubz.jpg",
       "precioUSD": 25,
       "precioCUP": 16625,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false
-    },
-    {
-      "id": "p_1780430165202",
-      "name": "Guaflera",
-      "cat": "Electrodomésticos",
-      "subcat": "",
-      "notes": "Mensajería Gratis",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1784912469/productos/nmguwc9rnndrdkrtbzun.jpg",
-      "precioUSD": 18,
-      "precioCUP": 11970,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false
