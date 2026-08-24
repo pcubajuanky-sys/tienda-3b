@@ -1,5 +1,5 @@
 {
-  "generado": "2026-08-24T10:48:19.775Z",
+  "generado": "2026-08-24T16:18:19.890Z",
   "tasa": 665,
   "whatsapp": "5363268423",
   "vendedores": [],
@@ -1100,19 +1100,6 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": true
-    },
-    {
-      "id": "p_1781005179627",
-      "name": "Humidificador y Difusor de aromas",
-      "cat": "Electrodomésticos",
-      "subcat": "",
-      "notes": "A demás de brindar una luz tenue y agradable para el descanso,esparse un dilce aroma de su elección ( incluye 2 aceites esenciales) y también humidifica la habitación, exelente tratamiento contra la congestión y para la calidad no solo respiratoria, también cutánea, favoreciendo la elasticidad de la piel",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782258740/productos/p8wczmpxpo8942enmhyb.jpg",
-      "precioUSD": 15,
-      "precioCUP": 9975,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false
     },
     {
       "id": "p_1782340744519",
