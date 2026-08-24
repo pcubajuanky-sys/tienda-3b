@@ -1,5 +1,5 @@
 {
-  "generado": "2026-08-23T23:48:19.486Z",
+  "generado": "2026-08-24T05:18:19.491Z",
   "tasa": 665,
   "whatsapp": "5363268423",
   "vendedores": [],
@@ -541,6 +541,19 @@
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1781215282/productos/miw34eskqag5c6tny5ja.jpg",
       "precioUSD": 2.71,
       "precioCUP": 1800,
+      "moneda": "cup",
+      "enOferta": false,
+      "destacado": false
+    },
+    {
+      "id": "p_1787540422288",
+      "name": "Cadena y aretes de acero inoxidable",
+      "cat": "Reloj y Prendas",
+      "subcat": "",
+      "notes": "Variedad de diseños. Escribir al pv para ver los disponibles en ese momento \n*Mensajería gratis*",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787540283/productos/oazkn5v3ldmngx7zvgts.jpg",
+      "precioUSD": 1.5,
+      "precioCUP": 1000,
       "moneda": "cup",
       "enOferta": false,
       "destacado": false
