@@ -1,5 +1,5 @@
 {
-  "generado": "2026-08-24T21:18:27.713Z",
+  "generado": "2026-08-25T02:48:27.837Z",
   "tasa": 665,
   "whatsapp": "5363268423",
   "vendedores": [],
@@ -1242,32 +1242,6 @@
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1780609655/productos/ytzdlavfhtbj1btkrmld.jpg",
       "precioUSD": 3.01,
       "precioCUP": 2000,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false
-    },
-    {
-      "id": "p_1785269406794",
-      "name": "Mariposas Brillantes Blancas",
-      "cat": "Cabello",
-      "subcat": "",
-      "notes": "Cada paquete trae 5 unidades \nMateriales: Mariposas de tela y ganchos metálicos \n*Mensajería gratis*",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785269369/productos/wt5t2cdamnleud7qfplj.jpg",
-      "precioUSD": 3.01,
-      "precioCUP": 2000,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false
-    },
-    {
-      "id": "p_1785271247802",
-      "name": "Mariposas Cola de Sirena",
-      "cat": "Cabello",
-      "subcat": "",
-      "notes": "El paquete contiene 6 unidades \nMateriales: mariposas plásticas ,gancho metálico\n*Mensajería gratis*",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785271099/productos/lb2x71rmjhxkrxu90eww.jpg",
-      "precioUSD": 2.71,
-      "precioCUP": 1800,
       "moneda": "cup",
       "enOferta": false,
       "destacado": false
