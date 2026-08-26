@@ -142,22 +142,44 @@ function renderFiltroPill() {
 // mosaicoFotos()/categoriaFotos()/fotosOferta() (mismo origen y mismo orden
 // que el mosaico viejo, sin duplicar esa lógica: solo se toma fotos[0]).
 // Reversible: para volver al mosaico 2×2 basta con quitar el .slice(0,1) de
-// las dos llamadas a cat3dFotoHtml() en renderCategorias3D() — nada más.
-function mosaicoFotos(items) {
+// las dos llamadas a cat3dFotoHtml() en renderCategorias3D() — nada más: el
+// tercer argumento (los repuestos) se anula solo cuando hay más de una foto.
+
+// Cuántas fotos distintas puede llegar a probar una tarjeta antes de rendirse
+// al emoji (ver cat3dImgFallback). Tope bajo a propósito: si están todas
+// muertas, son 4 peticiones fallidas y para, no una por producto.
+const CAT3D_MAX_INTENTOS = 4;
+
+// Las fotos candidatas de un grupo, en el orden que ya usaba el mosaico:
+// primero las de Cloudinary y, si no hay ninguna, las que tengan foto igual.
+function mosaicoFuente(items) {
   const conFoto = items.filter((p) => esCloudinary(p.photo));
   const fuente = conFoto.length ? conFoto : items.filter((p) => p.photo);
+  return fuente.map((p) => fotoMosaico(p.photo));
+}
+
+function mosaicoFotos(items) {
+  const fuente = mosaicoFuente(items);
   if (!fuente.length) return [];
   const salida = [];
-  for (let i = 0; i < 4; i++) salida.push(fotoMosaico(fuente[i % fuente.length].photo));
+  for (let i = 0; i < 4; i++) salida.push(fuente[i % fuente.length]);
   return salida;
 }
 
+function itemsDeCategoria(catName) {
+  return (CAT.items || []).filter((p) => p.cat === catName);
+}
+
+function itemsEnOferta() {
+  return (CAT.items || []).filter((p) => p.enOferta);
+}
+
 function categoriaFotos(catName) {
-  return mosaicoFotos((CAT.items || []).filter((p) => p.cat === catName));
+  return mosaicoFotos(itemsDeCategoria(catName));
 }
 
 function fotosOferta() {
-  return mosaicoFotos((CAT.items || []).filter((p) => p.enOferta));
+  return mosaicoFotos(itemsEnOferta());
 }
 
 // Una foto que no carga solo se cae ella. En el mosaico (4 fotos, modo
@@ -166,6 +188,15 @@ function fotosOferta() {
 // así que cae a la inicial/emoji — igual que cat3dFotoHtml() cuando no hay
 // fotos. Se distingue mirando si el <img> es hijo único de .cat3d-foto.
 function cat3dImgFallback(img) {
+  // Una foto muerta (borrada en Cloudinary → 404) no debe tumbar la tarjeta
+  // entera cuando la categoría tiene más fotos sanas: se prueba la siguiente
+  // y solo se cae a la inicial/emoji cuando se acaban los repuestos.
+  const repuesto = (img.dataset.repuesto || '').split(' ').filter(Boolean);
+  if (repuesto.length) {
+    img.dataset.repuesto = repuesto.slice(1).join(' ');
+    img.src = repuesto[0];
+    return;
+  }
   if (img.parentElement && img.parentElement.children.length === 1) {
     const inicial = document.createElement('span');
     inicial.className = 'inicial';
@@ -180,9 +211,16 @@ function cat3dImgFallback(img) {
   img.replaceWith(celda);
 }
 
-function cat3dFotoHtml(fotos, marcador) {
+function cat3dFotoHtml(fotos, marcador, alternas) {
   if (!fotos.length) return `<span class="inicial" aria-hidden="true">${marcador}</span>`;
-  return fotos.map((f) => `<img src="${f}" alt="" loading="lazy" data-marcador="${marcador}" onerror="cat3dImgFallback(this)">`).join('');
+  // Los repuestos solo tienen sentido con UNA foto en la tarjeta (modo actual):
+  // en el mosaico de 4 la celda que falla se vacía y las otras 3 sostienen la
+  // tarjeta, así que ahí este atributo no se emite y el comportamiento es el de antes.
+  const repuesto = fotos.length === 1
+    ? [...new Set(alternas || [])].filter((f) => f !== fotos[0]).slice(0, CAT3D_MAX_INTENTOS - 1)
+    : [];
+  const attr = repuesto.length ? ` data-repuesto="${escapeHtml(repuesto.join(' '))}"` : '';
+  return fotos.map((f) => `<img src="${f}" alt="" loading="lazy" data-marcador="${marcador}"${attr} onerror="cat3dImgFallback(this)">`).join('');
 }
 
 function renderCategorias3D() {
@@ -201,7 +239,7 @@ function renderCategorias3D() {
     const activo = filtroOferta;
     return `<button class="cat3d ${activo ? 'on' : ''}" type="button" data-oferta="1" aria-pressed="${activo}">` +
       `<span class="cat3d-inner">` +
-      `<span class="cat3d-foto">${cat3dFotoHtml(fotosOferta().slice(0, 1), '🏷️')}</span>` +
+      `<span class="cat3d-foto">${cat3dFotoHtml(fotosOferta().slice(0, 1), '🏷️', mosaicoFuente(itemsEnOferta()))}</span>` +
       `</span>` +
       `<span class="cat3d-info">` +
       `<span class="cat3d-nombre"><span class="cat3d-emoji" aria-hidden="true">🏷️</span>Ofertas</span>` +
@@ -215,7 +253,7 @@ function renderCategorias3D() {
     const marcador = escapeHtml(c.e || c.n.charAt(0).toUpperCase());
     return `<button class="cat3d ${activo ? 'on' : ''}" type="button" data-cat="${escapeHtml(c.n)}" aria-pressed="${activo}">` +
       `<span class="cat3d-inner">` +
-      `<span class="cat3d-foto">${cat3dFotoHtml(categoriaFotos(c.n).slice(0, 1), marcador)}</span>` +
+      `<span class="cat3d-foto">${cat3dFotoHtml(categoriaFotos(c.n).slice(0, 1), marcador, mosaicoFuente(itemsDeCategoria(c.n)))}</span>` +
       `</span>` +
       `<span class="cat3d-info">` +
       `<span class="cat3d-nombre"><span class="cat3d-emoji" aria-hidden="true">${c.e || ''}</span>${escapeHtml(c.n)}</span>` +
