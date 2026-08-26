@@ -1,5 +1,5 @@
 {
-  "generado": "2026-08-26T16:22:13.092Z",
+  "generado": "2026-08-26T18:08:39.757Z",
   "tasa": 665,
   "whatsapp": "5363268423",
   "vendedores": [],
@@ -2187,6 +2187,32 @@
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785640535/productos/ib45wzcjuqumpepase2u.jpg",
       "precioUSD": 12,
       "precioCUP": 7980,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false
+    },
+    {
+      "id": "p_1787764782825",
+      "name": "Ventilador ColdSky Doble paleta",
+      "cat": "Electrodomésticos",
+      "subcat": "",
+      "notes": "Ventilador de camping alimentado por batería de 20000Mah - Motor dual, 8 velocidades con control remoto y 4 linternas LED, ventilador portátil para exteriores con gancho para tienda de campaña, falla de energía, obra de construcción, para viajes de camping al aire libre",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787764696/productos/k2qwog2kxffnq9yeby9m.jpg",
+      "precioUSD": 60,
+      "precioCUP": 39900,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false
+    },
+    {
+      "id": "p_1787765188160",
+      "name": "Ventilador de techo portátil de 8000mah",
+      "cat": "Electrodomésticos",
+      "subcat": "",
+      "notes": "Ventilador de techo portátil con carga USB, luz LED, batería, control remoto y color blanco, diseño compacto para uso en interiores y exteriores, perfecto para camping de verano y refrigeración familiar. Ventilador con control remoto para equipo de camping de verano capacidad 8000mah",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787765007/productos/zdhz0oqy81cc9l9s09yp.jpg",
+      "precioUSD": 30,
+      "precioCUP": 19950,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false
