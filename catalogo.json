@@ -1,5 +1,5 @@
 {
-  "generado": "2026-08-26T11:09:38.865Z",
+  "generado": "2026-08-26T16:22:13.092Z",
   "tasa": 665,
   "whatsapp": "5363268423",
   "vendedores": [],
@@ -125,21 +125,6 @@
     ]
   },
   "items": [
-    {
-      "id": "p_1787438256773",
-      "name": "Cargador de batería",
-      "cat": "Respaldo energético",
-      "subcat": "",
-      "notes": "Convertidor de corriente para RV VEVOR, 65 amperios, 110V AC a 12V DC, cargador de batería convertidor para RV, carga inteligente de múltiples etapas, rango de funcionamiento de 13V a 16.5V, compatible con baterías de litio(lifepo4) y ácido de plomo.\n*Mensajería gratis*",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787438078/productos/kupn88b6jblzymggz1td.jpg",
-      "precioUSD": 140,
-      "precioCUP": 93100,
-      "moneda": "usd",
-      "enOferta": true,
-      "destacado": false,
-      "precioNormalUSD": 150,
-      "precioNormalCUP": 99750
-    },
     {
       "id": "p_1786921885931",
       "name": "Abrigo de Chihuahua 1",
@@ -468,19 +453,6 @@
       "destacado": false
     },
     {
-      "id": "p_1781215775166",
-      "name": "Bocina Bluetooth",
-      "cat": "Bocinas Celulares y Accesorios",
-      "subcat": "",
-      "notes": "Dispositivo de audio inalámbrico con altavoces duales, estéreo TWS, llamadas manos libres, radio FM y soporte para tarjetas TF y unidades USB. Se conecta a teléfonos móviles y tabletas. Máxima calidad de sonido\n*Mensajería gratis*",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1781215701/productos/yu7wkzi3wojjmssnk4ec.jpg",
-      "precioUSD": 20,
-      "precioCUP": 13300,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false
-    },
-    {
       "id": "p_1785180542778",
       "name": "Bolsas de malla de nailón con cremallera",
       "cat": "Bolsos Carteras Mochilas monederos",
@@ -617,10 +589,23 @@
       "name": "Cintos 2",
       "cat": "Accesorio de vestir",
       "subcat": "",
-      "notes": "Cintos finos de mujer. Medidas 👇🏻\nAncho: 1.6cm\nLargo: 105cm\n*Mensajería gratis*",
+      "notes": "Cintos finos de mujer. Medidas 👇🏻\nAncho: 1.6cm\nLargo: 105cm\nPor el momento,solo disponible en beige claro \n*Mensajería gratis*",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786998742/productos/q6yotu9lsmrhn7hfinsl.jpg",
       "precioUSD": 2.86,
       "precioCUP": 1900,
+      "moneda": "cup",
+      "enOferta": false,
+      "destacado": false
+    },
+    {
+      "id": "p_1787756966125",
+      "name": "Cintos finos variados",
+      "cat": "Accesorio de vestir",
+      "subcat": "",
+      "notes": "",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787756837/productos/sxwqjer7oekvpoxsp8ky.jpg",
+      "precioUSD": 2.71,
+      "precioCUP": 1800,
       "moneda": "cup",
       "enOferta": false,
       "destacado": false
@@ -630,7 +615,7 @@
       "name": "Cintos Unisex",
       "cat": "Accesorio de vestir",
       "subcat": "",
-      "notes": "Solo los Colores de la imagen\n*Mensajería gratis*",
+      "notes": "Cintos finos \nSolo los Colores de la imagen\n*Mensajería gratis*",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1780347137/productos/chqkc5z7cubcnsinbnay.jpg",
       "precioUSD": 2.71,
       "precioCUP": 1800,
@@ -926,9 +911,9 @@
       "subcat": "",
       "notes": "Protección contra luz azul, ideal para personas que usan mucho pantallas como celulares ,laptops y televisión.\nTambién es un muy buen accesorio para personas que manejan moto en horario nocturno, protege los ojos sin afectar la visibilidad en la oscuridad \nColores disponibles 🩶 🤍 \n*Mensajería gratis*",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785956773/productos/gufvuhffd4ibygz29anq.jpg",
-      "precioUSD": 1.8,
-      "precioCUP": 1200,
-      "moneda": "cup",
+      "precioUSD": 3,
+      "precioCUP": 1995,
+      "moneda": "usd",
       "enOferta": false,
       "destacado": false
     },
@@ -939,9 +924,9 @@
       "subcat": "",
       "notes": "Tamaño mediano. Modelo ideal tanto para hombres como para mujeres \nDisponibles todos los diseños de la imagen \n*Mensajería gratis*",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785957431/productos/fn1lmdu4xjjryicw7f7t.jpg",
-      "precioUSD": 1.5,
-      "precioCUP": 1000,
-      "moneda": "cup",
+      "precioUSD": 2,
+      "precioCUP": 1330,
+      "moneda": "usd",
       "enOferta": false,
       "destacado": false
     },
@@ -952,9 +937,9 @@
       "subcat": "",
       "notes": "Exactamente el diseño de la imagen \n*Más de 1 mensajería gratis*",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785959018/productos/myajl2zdcccmbh4wnjqq.jpg",
-      "precioUSD": 1.5,
-      "precioCUP": 1000,
-      "moneda": "cup",
+      "precioUSD": 2,
+      "precioCUP": 1330,
+      "moneda": "usd",
       "enOferta": false,
       "destacado": false
     },
@@ -1831,6 +1816,19 @@
       "destacado": false,
       "precioNormalUSD": 1.95,
       "precioNormalCUP": 1300
+    },
+    {
+      "id": "p_1782343083267",
+      "name": "Protector de oídos",
+      "cat": "Cuidado Personal",
+      "subcat": "",
+      "notes": "Ideal para proteger los oídos de los niños de la entrada de agua,ya sea en el baño,la playa, piscinas, etc... También tiene un perfecto uso para evitar manchas de tintes en esa zona\nEl paquete trae 20 pares\n*Mensajería gratis*",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782343040/productos/rzxjmldhmvwxyoh1u5ld.jpg",
+      "precioUSD": 1.58,
+      "precioCUP": 1051,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1785877916356",
