@@ -1,5 +1,5 @@
 {
-  "generado": "2026-08-26T18:08:39.757Z",
+  "generado": "2026-08-26T18:17:25.357Z",
   "tasa": 665,
   "whatsapp": "5363268423",
   "vendedores": [],
@@ -777,19 +777,6 @@
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782340028/productos/cihevmtaeacp4ciyvmas.jpg",
       "precioUSD": 9,
       "precioCUP": 5985,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false
-    },
-    {
-      "id": "p_1784925486862",
-      "name": "Estrellitas Fluorescentes",
-      "cat": "Niños",
-      "subcat": "",
-      "notes": "Estrellitas Fluorescentes con su adhesivo incluído. Colores varios \n*Mensajería gratis* en los paquetes de 250 unidades",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1784925295/productos/yk3nbqzxca6aehscfkpk.jpg",
-      "precioUSD": 2.46,
-      "precioCUP": 1636,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false
@@ -1956,19 +1943,6 @@
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782340949/productos/icgyi1gsdr1hd3mrng2u.jpg",
       "precioUSD": 0.9,
       "precioCUP": 600,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false
-    },
-    {
-      "id": "p_1785875419963",
-      "name": "Salvavidas",
-      "cat": "Playa",
-      "subcat": "",
-      "notes": "Ideal para niños pequeños porque no es de hueco abierto totalmente, son de 2 huequitos para los 2 pies y proporcionar sostén y seguridad al bebé \n*Mensajería gratis*",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785875253/productos/x856nne0x9jf6ed9j7ve.jpg",
-      "precioUSD": 5.71,
-      "precioCUP": 3800,
       "moneda": "cup",
       "enOferta": false,
       "destacado": false
