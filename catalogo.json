@@ -1,5 +1,5 @@
 {
-  "generado": "2026-08-26T23:23:12.622Z",
+  "generado": "2026-08-26T23:40:13.003Z",
   "tasa": 670,
   "whatsapp": "5363268423",
   "vendedores": [],
@@ -147,19 +147,6 @@
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786921857/productos/w7gntcvjf4co0qn3tben.jpg",
       "precioUSD": 6,
       "precioCUP": 4020,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false
-    },
-    {
-      "id": "p_1781004937627",
-      "name": "Accesorio de baño",
-      "cat": "Hogar",
-      "subcat": "",
-      "notes": "Variedad de usos, ideal para colgar esa maquinita de afeitar que nunca sabemos dónde colocar 🤭",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1781004862/productos/lhvet1oij0ftij9eepf8.jpg",
-      "precioUSD": 1.03,
-      "precioCUP": 690,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false
