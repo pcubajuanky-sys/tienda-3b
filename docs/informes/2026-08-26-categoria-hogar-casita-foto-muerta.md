@@ -74,9 +74,27 @@ La **tarjeta del producto "Accesorio de baño"** sigue sin foto (muestra la inic
 porque su imagen ya no existe. Solución: **volver a subirla desde el panel de Stock+**
 (nunca editando `data.json` a mano) y republicar el catálogo.
 
-## Estado
-- ⚠ **NO PUBLICADO**: el cambio está en el árbol local (`app.js` modificado, sin commit).
-  Para que llegue a 3bqba.com hay que commitear y hacer `git push` (Vercel despliega solo).
-  No se hizo por ser una acción hacia afuera sin autorización explícita.
+## Estado — PUBLICADO Y VERIFICADO EN PRODUCCIÓN
+
+- Commit `9e252e3` sobre `main`, empujado a GitHub (`5d941bd..9e252e3`). Antes del push
+  hubo rebase sobre los 15 commits automáticos de catálogo que Stock+ había publicado
+  desde el 23/8 (solo tocaban `catalogo.json`; sin conflictos).
+- Vercel desplegó solo. El `app.js` servido en https://www.3bqba.com es **idéntico** al
+  local (única diferencia: la normalización CRLF→LF que hace git al versionarlo).
+- **Comprobado en el sitio real**, no solo en local: la tarjeta de Hogar carga foto
+  (`naturalWidth = 200`, la de "Alarma de puertas y ventanas"), sin emoji, con 3
+  repuestos en reserva. Esto además demuestra que **la CSP no bloquea el `onerror`**:
+  si el hash no casara, el intercambio nunca habría ocurrido. El único error en consola
+  es el 404 esperado de la foto muerta.
+- Sin captura de pantalla: el panel del navegador no estaba visible para componer
+  fotogramas. La evidencia es la inspección del DOM en producción, descrita arriba.
+- El catálogo vivo (157 productos) **sigue trayendo la URL muerta**: queda pendiente que
+  Ruth vuelva a subir la foto de "Accesorio de baño" desde el panel de Stock+.
 - Se añadió una entrada `tienda-3b` (servidor estático local, puerto 4173) al
   `launch.json` de la sesión, para poder verificar la tienda en el navegador.
+
+### Nota: `docs/` se publica junto al sitio
+Vercel sirve el repo entero, así que este informe queda accesible en
+`https://www.3bqba.com/docs/informes/...` (igual que ya pasaba con `README.md`).
+No lleva nada sensible — las URLs de Cloudinary y los hashes de la CSP ya son públicos —
+pero si se prefiere que no se publique, basta con un `.vercelignore` que liste `docs/`.
