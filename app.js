@@ -886,7 +886,7 @@ function renderHero() {
 function renderMarca() {
   const t = (CAT && CAT.tienda) || {};
   const nombre = (t.nombre && t.nombre.trim()) || '3B Store';
-  document.title = nombre + ' — Tienda';
+  // El <title> vive en index.html (lleva las palabras con las que la gente busca en Google: nombre de la tienda + San Antonio de los Baños, Cuba). No reasignar el titulo del documento desde aqui.
   document.querySelectorAll('.logo').forEach((el) => el.setAttribute('aria-label', nombre + ' — inicio'));
   const footerNombre = document.getElementById('footer-nombre');
   if (footerNombre) footerNombre.textContent = nombre;
