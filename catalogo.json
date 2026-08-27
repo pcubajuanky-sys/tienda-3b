@@ -1,5 +1,5 @@
 {
-  "generado": "2026-08-27T15:22:11.721Z",
+  "generado": "2026-08-27T20:38:09.009Z",
   "tasa": 670,
   "whatsapp": "5354978966",
   "vendedores": [],
@@ -691,19 +691,6 @@
       "destacado": false
     },
     {
-      "id": "p_1780092391799",
-      "name": "Cortador de verduras",
-      "cat": "Hogar",
-      "subcat": "",
-      "notes": "El precio en Cup se ajusta a la tarifa de cambio del momento\nMensajería gratis",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1780944789/productos/chwu24js7m2wbcg4zswp.jpg",
-      "precioUSD": 10,
-      "precioCUP": 6700,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false
-    },
-    {
       "id": "p_1780092681080",
       "name": "Cortinas de baño",
       "cat": "Hogar",
@@ -747,10 +734,10 @@
       "name": "Esponjas de Fregar",
       "cat": "Hogar",
       "subcat": "",
-      "notes": "",
+      "notes": "El precio es por un paquete de 5 esponjas con Mensajería gratis",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1780944689/productos/ph2pk8zd3hq1iwblgpds.jpg",
-      "precioUSD": 0.15,
-      "precioCUP": 101,
+      "precioUSD": 1.19,
+      "precioCUP": 797,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false
