@@ -1,5 +1,5 @@
 {
-  "generado": "2026-08-27T15:11:40.810Z",
+  "generado": "2026-08-27T15:22:11.721Z",
   "tasa": 670,
   "whatsapp": "5354978966",
   "vendedores": [],
@@ -665,6 +665,19 @@
       "destacado": false
     },
     {
+      "id": "p_1787453147089",
+      "name": "Conjunto de tobilleras de fantasía",
+      "cat": "Reloj y Prendas",
+      "subcat": "",
+      "notes": "Exactamente el diseño de la imagen\nMensajería gratis",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787844052/productos/zfbbgklbmazqnrb8rzfd.jpg",
+      "precioUSD": 2.69,
+      "precioCUP": 1800,
+      "moneda": "cup",
+      "enOferta": false,
+      "destacado": false
+    },
+    {
       "id": "p_1787453447601",
       "name": "Conjunto de tobilleras plateadas de fantasía",
       "cat": "Reloj y Prendas",
@@ -875,6 +888,32 @@
       "precioUSD": 2,
       "precioCUP": 1340,
       "moneda": "usd",
+      "enOferta": false,
+      "destacado": false
+    },
+    {
+      "id": "p_1785961221160",
+      "name": "Gafas metálicas Calidad Premium",
+      "cat": "Accesorio de vestir",
+      "subcat": "",
+      "notes": "Gafas de máxima calidad, armadura metálica de color negro o dorado y cristales oscuros y semi claros\nHermoso diseño para mujeres y hombres\nMensajería gratis",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787844051/productos/umufl6nblfyz8xme2vse.jpg",
+      "precioUSD": 3,
+      "precioCUP": 2010,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false
+    },
+    {
+      "id": "p_1785961108734",
+      "name": "Gafas modelos mixtos",
+      "cat": "Accesorio de vestir",
+      "subcat": "",
+      "notes": "Variedad de diseños tanto para hombres como para mujeres y adolescentes\nMensajería gratis en más de una",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787844050/productos/lucqf8ourwaufnovjbjl.jpg",
+      "precioUSD": 1.34,
+      "precioCUP": 900,
+      "moneda": "cup",
       "enOferta": false,
       "destacado": false
     },
