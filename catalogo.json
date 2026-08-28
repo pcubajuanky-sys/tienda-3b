@@ -1,5 +1,5 @@
 {
-  "generado": "2026-08-28T02:08:09.138Z",
+  "generado": "2026-08-28T18:21:28.609Z",
   "tasa": 670,
   "whatsapp": "5354978966",
   "vendedores": [],
@@ -2136,19 +2136,6 @@
       "precioUSD": 2.99,
       "precioCUP": 2000,
       "moneda": "cup",
-      "enOferta": false,
-      "destacado": false
-    },
-    {
-      "id": "p_1785640816875",
-      "name": "Velas blancas con pétalos artificiales",
-      "cat": "Decoración",
-      "subcat": "",
-      "notes": "Este lindo producto es un ideal regalo tanto en su estético envase como para su uso. El paquete incluye 50 velas como las de la imagen y 100 pétalos.\nMensajería es gratis",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785640535/productos/ib45wzcjuqumpepase2u.jpg",
-      "precioUSD": 12,
-      "precioCUP": 8040,
-      "moneda": "usd",
       "enOferta": false,
       "destacado": false
     },
