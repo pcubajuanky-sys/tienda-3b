@@ -1,5 +1,5 @@
 {
-  "generado": "2026-08-27T20:38:09.009Z",
+  "generado": "2026-08-28T02:08:09.138Z",
   "tasa": 670,
   "whatsapp": "5354978966",
   "vendedores": [],
@@ -147,19 +147,6 @@
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786921857/productos/w7gntcvjf4co0qn3tben.jpg",
       "precioUSD": 6,
       "precioCUP": 4020,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false
-    },
-    {
-      "id": "p_1786714525104",
-      "name": "Accesorios variados",
-      "cat": "Cabello",
-      "subcat": "",
-      "notes": "Kit de variados accesorios para el cabello\nCantidad de cada diseño especificada en la imagen\nMensajería gratis",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786714432/productos/t5hk8itkxmcipbxwpgdr.jpg",
-      "precioUSD": 8,
-      "precioCUP": 5360,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false
@@ -1933,21 +1920,6 @@
       "moneda": "cup",
       "enOferta": false,
       "destacado": false
-    },
-    {
-      "id": "p_1782340930673",
-      "name": "Rizador de pestañas",
-      "cat": "Cuidado Personal",
-      "subcat": "",
-      "notes": "Rizador de pestañas, herramienta de belleza, rizador de pestañas manual de acero inoxidable. Mensajería gratis",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782340886/productos/y3yicmtgoxayzf4grayn.jpg",
-      "precioUSD": 1.49,
-      "precioCUP": 1000,
-      "moneda": "cup",
-      "enOferta": true,
-      "destacado": false,
-      "precioNormalUSD": 2.06,
-      "precioNormalCUP": 1380
     },
     {
       "id": "p_1785875419963",
