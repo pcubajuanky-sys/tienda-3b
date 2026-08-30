@@ -1,5 +1,5 @@
 {
-  "generado": "2026-08-29T23:22:11.632Z",
+  "generado": "2026-08-30T04:52:11.865Z",
   "tasa": 670,
   "whatsapp": "5354978966",
   "vendedores": [],
@@ -542,6 +542,19 @@
       "precioUSD": 10,
       "precioCUP": 6700,
       "moneda": "usd",
+      "enOferta": false,
+      "destacado": false
+    },
+    {
+      "id": "p_1788049609744",
+      "name": "Cierre de seguridad",
+      "cat": "Hogar",
+      "subcat": "",
+      "notes": "Fácil instalación adhesiva sin herramientas con un fuerte agarre para nevera, gabinete, puerta de despensa y electrodomésticos de cocina | Cerraduras seguras para puertas y gabinetes para la seguridad del hogar y la cocina - Seguro para mascotas y familiares",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788049482/productos/axnjnxg6zuntczll5kc9.jpg",
+      "precioUSD": 1.19,
+      "precioCUP": 800,
+      "moneda": "cup",
       "enOferta": false,
       "destacado": false
     },
