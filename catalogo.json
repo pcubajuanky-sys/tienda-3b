@@ -1,5 +1,5 @@
 {
-  "generado": "2026-08-31T02:52:12.115Z",
+  "generado": "2026-08-31T08:22:12.475Z",
   "tasa": 675,
   "whatsapp": "5354978966",
   "vendedores": [],
@@ -652,6 +652,19 @@
       "destacado": false
     },
     {
+      "id": "p_1788150804465",
+      "name": "Conjunto de 2 forros de asientos",
+      "cat": "Motos / Accesorios",
+      "subcat": "",
+      "notes": "El conjunto consta de una malla negra de asiento de moto y un forro color aluminio que repele el agua y el sol\nMensajería gratis",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788150599/productos/fgyzktdzuinxtzxbjmg0.jpg",
+      "precioUSD": 6,
+      "precioCUP": 4050,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false
+    },
+    {
       "id": "p_1787453260357",
       "name": "Conjunto de pirsings de acero",
       "cat": "Reloj y Prendas",
@@ -875,6 +888,19 @@
       "destacado": false,
       "precioNormalUSD": 30,
       "precioNormalCUP": 20250
+    },
+    {
+      "id": "p_1788151206769",
+      "name": "Forro de asiento pequeño",
+      "cat": "Motos / Accesorios",
+      "subcat": "",
+      "notes": "Forro de asiento de motos de 1 plaza o de bicicletas eléctricas\nMensajería gratis",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788151075/productos/dasahngxpqlgxt5dibau.jpg",
+      "precioUSD": 3.7,
+      "precioCUP": 2500,
+      "moneda": "cup",
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1780453229116",
@@ -1758,6 +1784,19 @@
       "destacado": false
     },
     {
+      "id": "p_1788150972260",
+      "name": "Pellizquitos de metal",
+      "cat": "Cabello",
+      "subcat": "",
+      "notes": "Paquete de 5 pellisquitos de metal de colores variados 🌈. Alta calidad y belleza\nMensajería gratis",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788150845/productos/gvk0moampbqyylvdi65d.jpg",
+      "precioUSD": 2.37,
+      "precioCUP": 1600,
+      "moneda": "cup",
+      "enOferta": false,
+      "destacado": false
+    },
+    {
       "id": "p_1782329655762",
       "name": "Pestañas postizas",
       "cat": "Cuidado Personal",
@@ -2031,6 +2070,19 @@
       "precioUSD": 3.7,
       "precioCUP": 2500,
       "moneda": "cup",
+      "enOferta": false,
+      "destacado": false
+    },
+    {
+      "id": "p_1788151078303",
+      "name": "Relojes digitales de niños 1",
+      "cat": "Niños",
+      "subcat": "",
+      "notes": "Hermosos diseños y colores .\nMensajería gratis",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788150940/productos/xvlrmawu9pmwobeknolc.jpg",
+      "precioUSD": 2.22,
+      "precioCUP": 1499,
+      "moneda": "usd",
       "enOferta": false,
       "destacado": false
     },
