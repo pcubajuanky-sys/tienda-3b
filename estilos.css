@@ -80,6 +80,12 @@ a{color:inherit}
 .header.compacta .header-top{padding:8px 16px}
 .logo{display:inline-flex;align-items:center;text-decoration:none}
 .logo-svg{height:32px;width:auto;display:block}
+/* Logo real de la tienda (logo-3b.png): PNG cuadrado con el emblema sobre negro.
+   El borde redondeado recorta el fondo y lo deja como una placa. Sustituye al SVG
+   a dos tonos que habia antes, para que web y catalogo PDF lleven la misma marca. */
+.logo-img{height:32px;width:32px;display:block;border-radius:9px;object-fit:cover}
+@media (min-width:760px){.logo-img{height:44px;width:44px;border-radius:12px}}
+.hero-logo .logo-img{height:clamp(56px,9vw,88px);width:clamp(56px,9vw,88px);border-radius:18px}
 @media (min-width:760px){.logo-svg{height:44px}}
 /*
   Marca a dos tonos, de color FIJO (no usa --brand ni --brand-ink): la placa es
