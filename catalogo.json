@@ -1,5 +1,5 @@
 {
-  "generado": "2026-08-31T19:03:17.098Z",
+  "generado": "2026-08-31T22:53:17.612Z",
   "tasa": 675,
   "whatsapp": "5354978966",
   "vendedores": [],
@@ -730,19 +730,6 @@
       "destacado": false
     },
     {
-      "id": "p_1788039851664",
-      "name": "Cortina de baño transparente",
-      "cat": "Decoración",
-      "subcat": "",
-      "notes": "Anti moho. Incluye sus ganchos\nMensajería gratis",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788039708/productos/bbnvrevhc0gyc0jshxdx.jpg",
-      "precioUSD": 4,
-      "precioCUP": 2700,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false
-    },
-    {
       "id": "p_1780092681080",
       "name": "Cortinas de baño",
       "cat": "Hogar",
@@ -765,6 +752,32 @@
       "precioUSD": 0.89,
       "precioCUP": 600,
       "moneda": "cup",
+      "enOferta": false,
+      "destacado": false
+    },
+    {
+      "id": "p_1788212080090",
+      "name": "Espejo de flor giratorio",
+      "cat": "Hogar",
+      "subcat": "",
+      "notes": "Solo disponible en color blanco\n28cm de alto\nMensajería gratis",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788211960/productos/frgnqs3xs1uy6lzojds7.jpg",
+      "precioUSD": 5,
+      "precioCUP": 3375,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false
+    },
+    {
+      "id": "p_1788212193696",
+      "name": "Espejo de flor rosada giratorio",
+      "cat": "Hogar",
+      "subcat": "",
+      "notes": "Solo disponible en color rosado\n19cm de alto\nMensajería gratis",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788212042/productos/yw0dmsoqnsurdtvaakyd.jpg",
+      "precioUSD": 3,
+      "precioCUP": 2025,
+      "moneda": "usd",
       "enOferta": false,
       "destacado": false
     },
@@ -1375,6 +1388,19 @@
       "destacado": false
     },
     {
+      "id": "p_1788205797035",
+      "name": "Maripositas tornasol",
+      "cat": "Decoración",
+      "subcat": "",
+      "notes": "12 Maripositas tornasoladas de diferentes tamaños con su adhesivo incluído\nEn más de un paquete Mensajería gratis",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788205622/productos/wukixgvlhrcnxyikbuy3.jpg",
+      "precioUSD": 1.48,
+      "precioCUP": 1000,
+      "moneda": "cup",
+      "enOferta": false,
+      "destacado": false
+    },
+    {
       "id": "p_1782259680772",
       "name": "Mascarilla para puntos negros",
       "cat": "Cuidado Personal",
@@ -1453,6 +1479,19 @@
       "destacado": false,
       "precioNormalUSD": 2.24,
       "precioNormalCUP": 1512
+    },
+    {
+      "id": "p_1788206192356",
+      "name": "Mini espejos retrovisores",
+      "cat": "Motos / Accesorios",
+      "subcat": "",
+      "notes": "El precio es por la pareja. Pequeños,para múltiples uso, como doble espejo en las motos o para las bicicletas\nMensajería gratis",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788205791/productos/m7iur6b6u18rt4mnyw8b.jpg",
+      "precioUSD": 5,
+      "precioCUP": 3375,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1781005462535",
@@ -1673,6 +1712,19 @@
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785005561/productos/f38m61h7y1oudaa6np9v.jpg",
       "precioUSD": 11,
       "precioCUP": 7425,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false
+    },
+    {
+      "id": "p_1788203335686",
+      "name": "Palangana electrica de hidromasaje",
+      "cat": "Electrodomésticos",
+      "subcat": "",
+      "notes": "Baño de pies plegable con calor y rodillos de masaje, bañera plegable para remojar los pies con chorros de burbujas y luz LED, masajeador de pies para pedicura con exfoliante para uso doméstico.\nMensajería gratis",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788203234/productos/urf72rqigvjba5wdnii0.jpg",
+      "precioUSD": 50,
+      "precioCUP": 33750,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false
