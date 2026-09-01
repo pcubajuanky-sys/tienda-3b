@@ -1,5 +1,5 @@
 {
-  "generado": "2026-08-31T22:53:17.612Z",
+  "generado": "2026-09-01T04:03:17.771Z",
   "tasa": 675,
   "whatsapp": "5354978966",
   "vendedores": [],
@@ -479,6 +479,19 @@
       "destacado": false
     },
     {
+      "id": "p_1788234402387",
+      "name": "Brochitas de cocina",
+      "cat": "Hogar",
+      "subcat": "",
+      "notes": "El precio es por una pareja de brochitas.  Silicona resistente y duradera\nEn más de una pareja Mensajería gratis",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788234263/productos/nlp5eqskagx2n7xozs98.jpg",
+      "precioUSD": 1,
+      "precioCUP": 675,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false
+    },
+    {
       "id": "p_1781215403591",
       "name": "Cable tipo C",
       "cat": "Bocinas Celulares y Accesorios",
@@ -516,6 +529,19 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": true
+    },
+    {
+      "id": "p_1788234125684",
+      "name": "Cesta de lavado",
+      "cat": "Hogar",
+      "subcat": "",
+      "notes": "Facilita y agiliza el lavado de granos, frutas y verduras. Cómodo y útil\nMensajería gratis",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788234018/productos/dfybp6rebr6hsibygml1.jpg",
+      "precioUSD": 4,
+      "precioCUP": 2700,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1785528271738",
@@ -639,6 +665,19 @@
       "precioNormalCUP": 16875
     },
     {
+      "id": "p_1788234011772",
+      "name": "Coladores 4 en 1",
+      "cat": "Hogar",
+      "subcat": "",
+      "notes": "Conjunto de 4 coladores de tamaños variados, para todo uso. Calidad y comodidad para el hogar\nMensajería gratis",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788233901/productos/e48mdoq7eej4zyewrpfa.jpg",
+      "precioUSD": 5,
+      "precioCUP": 3375,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false
+    },
+    {
       "id": "p_1787947439148",
       "name": "Collares de pareja de gatitos",
       "cat": "Reloj y Prendas",
@@ -725,19 +764,6 @@
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787453332/productos/hgvzduzoya6btwnccu2f.jpg",
       "precioUSD": 1.93,
       "precioCUP": 1300,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false
-    },
-    {
-      "id": "p_1780092681080",
-      "name": "Cortinas de baño",
-      "cat": "Hogar",
-      "subcat": "",
-      "notes": "Cortina ligera de baño. Antonio\nExactamente el diseño de la imagen\nMensajería gratis",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787962706/productos/yg95rdrhlnhaze8lqh1m.jpg",
-      "precioUSD": 3.85,
-      "precioCUP": 2600,
       "moneda": "cup",
       "enOferta": false,
       "destacado": false
@@ -1421,8 +1447,8 @@
       "notes": "Variedad de colores.\nMensajería gratis a partir de 5 pares",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1781664214/productos/frkpoykricnh3mtxabig.jpg",
       "precioUSD": 0.5,
-      "precioCUP": 338,
-      "moneda": "usd",
+      "precioCUP": 340,
+      "moneda": "cup",
       "enOferta": false,
       "destacado": false
     },
@@ -2067,9 +2093,9 @@
       "subcat": "",
       "notes": "Variedad de colores y tallas\nMensajería gratis",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786942790/productos/nog617emg5z7r8erqhxo.jpg",
-      "precioUSD": 3.73,
-      "precioCUP": 2518,
-      "moneda": "usd",
+      "precioUSD": 3.7,
+      "precioCUP": 2500,
+      "moneda": "cup",
       "enOferta": false,
       "destacado": false
     },
@@ -2394,6 +2420,19 @@
       "destacado": false,
       "precioNormalUSD": 1.01,
       "precioNormalCUP": 680
+    },
+    {
+      "id": "p_1788235176773",
+      "name": "Toallitas de floresitas",
+      "cat": "Hogar",
+      "subcat": "",
+      "notes": "Estética, calidad y suavidad. Todo en uno y a un súper precio",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788235088/productos/xymxcbmbcbvvwt3phemd.jpg",
+      "precioUSD": 0.74,
+      "precioCUP": 500,
+      "moneda": "cup",
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1788138688106",
