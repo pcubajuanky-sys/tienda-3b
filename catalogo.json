@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-02T01:35:56.705Z",
+  "generado": "2026-09-02T07:05:56.786Z",
   "tasa": 675,
   "whatsapp": "5354978966",
   "vendedores": [],
@@ -650,21 +650,6 @@
       "destacado": false
     },
     {
-      "id": "p_1784914229758",
-      "name": "Cocina de Queroseno Militar Cuadrada",
-      "cat": "Respaldo energético",
-      "subcat": "",
-      "notes": "Cocina de queroseno militar cuadrada, fabricada con materiales resistentes. Compacta, duradera y eficiente. Ideal para hogares, campamentos y zonas sin electricidad ni gas. Sistema de quemador regulable.\nMensajería gratis en San Antonio.",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1784914184/productos/gdscqigyotgxb2smwlbv.jpg",
-      "precioUSD": 18,
-      "precioCUP": 12150,
-      "moneda": "usd",
-      "enOferta": true,
-      "destacado": false,
-      "precioNormalUSD": 25,
-      "precioNormalCUP": 16875
-    },
-    {
       "id": "p_1788234011772",
       "name": "Coladores 4 en 1",
       "cat": "Hogar",
@@ -1243,6 +1228,32 @@
       "destacado": false,
       "precioNormalUSD": 4,
       "precioNormalCUP": 2700
+    },
+    {
+      "id": "p_1788314603975",
+      "name": "Llave de paso 3/4",
+      "cat": "Ferretería",
+      "subcat": "",
+      "notes": "Válvula de bola de PVC blanca de ¾ de pulgada, con manija azul tipo mariposa y conexiones de rosca. Ideal para controlar el flujo de agua en sistemas de plomería residencial o comercial. Construcción resistente y de fácil instalación.",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788314496/productos/r65thrkwopmgo5meeauu.jpg",
+      "precioUSD": 1.41,
+      "precioCUP": 950,
+      "moneda": "cup",
+      "enOferta": false,
+      "destacado": false
+    },
+    {
+      "id": "p_1788314424331",
+      "name": "Llave de paso de 1/2",
+      "cat": "Ferretería",
+      "subcat": "",
+      "notes": "Válvula de bola de PVC blanca de ½ pulgada, con manija azul tipo mariposa y conexiones de rosca. Ideal para controlar el flujo de agua en sistemas de plomería residencial o comercial. Construcción resistente y de fácil instalación.",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788314293/productos/eevo4jbcarjiswsjmdao.jpg",
+      "precioUSD": 0.96,
+      "precioCUP": 650,
+      "moneda": "cup",
+      "enOferta": false,
+      "destacado": false
     },
     {
       "id": "p_1788036490389",
