@@ -671,7 +671,7 @@ body.con-barra-movil{padding-bottom:var(--barra-movil-h, 84px)}
   html{scroll-behavior:smooth}
 }
 
-/* ── Reclamo de comisionistas dentro del catálogo ──
+/* ── Reclamo de gestores dentro del catálogo ──
    Ocupa la fila entera de la rejilla (grid-column:1/-1) para que se lea como
    una pieza aparte y no compita en tamaño con las tarjetas de producto.
    El relieve es un borde inferior sólido, NO una sombra difuminada: se ve

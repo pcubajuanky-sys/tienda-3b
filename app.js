@@ -336,7 +336,7 @@ function tarjetaHtml(p) {
     </div>`;
 }
 
-// Reclamo de comisionistas. Es un <button>, no una .card: la rejilla delega los
+// Reclamo de gestores. Es un <button>, no una .card: la rejilla delega los
 // clics con closest('.card'), así que esto no puede confundirse con un producto.
 // Sin cifra de comisión a propósito (decisión del usuario): lo que se publica en
 // Internet compromete, y los porcentajes se hablan con Ruth caso por caso.
@@ -428,12 +428,12 @@ function capturarTecladoModal(e) {
   if (e.key === 'Tab') atraparFoco(e, modal);
 }
 
-// Recuadro del comisionista. Mismo patrón que abrirDetalle/cerrarDetalle:
+// Recuadro del gestor. Mismo patrón que abrirDetalle/cerrarDetalle:
 // guarda el foco anterior, lo devuelve al cerrar y atrapa el Tab dentro.
 function abrirComisionista() {
   const wa = document.getElementById('comi-wa');
   if (CAT.whatsapp) {
-    wa.href = `https://wa.me/${CAT.whatsapp}?text=${encodeURIComponent('QUIERO SER COMISIONISTA')}`;
+    wa.href = `https://wa.me/${CAT.whatsapp}?text=${encodeURIComponent('QUIERO SER GESTOR')}`;
     wa.hidden = false;
   } else {
     // Sin número configurado el enlace iría a wa.me/ vacío: mejor no enseñarlo.
@@ -922,10 +922,10 @@ function renderFooterExtra() {
   if (CAT.whatsapp) {
     piezas.push(`<a class="footer-link footer-link-wa" href="https://wa.me/${escapeHtml(CAT.whatsapp)}" target="_blank" rel="noopener">💬 WhatsApp</a>`);
   }
-  // Alta de comisionista: abre el recuadro de los tres pasos (no WhatsApp
+  // Alta de gestor: abre el recuadro de los tres pasos (no WhatsApp
   // directo), para que todo el mundo lea antes de escribir.
   if (CAT.whatsapp) {
-    piezas.push(`<button type="button" class="footer-link" id="pie-comi">🤝 Quiero ser comisionista</button>`);
+    piezas.push(`<button type="button" class="footer-link" id="pie-comi">🤝 Quiero ser gestor</button>`);
   }
   if (t.grupoWA && t.grupoWA.trim()) {
     piezas.push(`<a class="footer-link" href="${escapeHtml(t.grupoWA.trim())}" target="_blank" rel="noopener">👥 Únete a nuestro grupo</a>`);
