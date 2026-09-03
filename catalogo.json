@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-03T16:06:01.100Z",
+  "generado": "2026-09-03T21:08:07.691Z",
   "tasa": 675,
   "whatsapp": "5354978966",
   "vendedores": [],
@@ -938,19 +938,6 @@
       "destacado": false,
       "precioNormalUSD": 30,
       "precioNormalCUP": 20250
-    },
-    {
-      "id": "p_1788151206769",
-      "name": "Forro de asiento pequeño",
-      "cat": "Motos / Accesorios",
-      "subcat": "",
-      "notes": "Forro de asiento de motos de 1 plaza o de bicicletas eléctricas\nMensajería gratis",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788151075/productos/dasahngxpqlgxt5dibau.jpg",
-      "precioUSD": 3.7,
-      "precioCUP": 2500,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false
     },
     {
       "id": "p_1780453229116",
