@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-04T13:56:54.297Z",
+  "generado": "2026-09-04T14:12:49.705Z",
   "tasa": 675,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -18,6 +18,10 @@
     {
       "code": "83FNU",
       "nombre": "Danay Alvarez González"
+    },
+    {
+      "code": "ZBB9S",
+      "nombre": "Ania Milagros Peraza Tarragó"
     }
   ],
   "categorias": [
