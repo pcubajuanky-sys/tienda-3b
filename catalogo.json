@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-04T18:36:42.170Z",
+  "generado": "2026-09-04T19:11:32.127Z",
   "tasa": 680,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -26,6 +26,10 @@
     {
       "code": "8F5AX",
       "nombre": "Débora"
+    },
+    {
+      "code": "D75W3",
+      "nombre": "Lianet Cruz Avila"
     }
   ],
   "categorias": [
@@ -2473,7 +2477,7 @@
       "name": "Tablet de niño",
       "cat": "Electrónica",
       "subcat": "",
-      "notes": "Solo en azul marino con temática de astronauta. Incluye su cable de carga, un juego de audífonos de cable y un protector con sistema de apollo para mesa y mara mejor sostén manual\nCaracterísticas:\nAndroid 14\n7 pulgadas\nWifi 5G\nBatería de gran Capacidad 4500mAh\nDoble camara\n4GB de ram\n32GB de almacenamiento\nPantalla IPS HD de 1280*800 de resolución\nMensajería gratis",
+      "notes": "Solo en azul marino con temática de astronauta. Incluye su cable de carga, un juego de audífonos de cable y un protector con sistema de apollo para mesa y para mejor sostén manual\nCaracterísticas:\nAndroid 14\n7 pulgadas\nWifi 5G\nBatería de gran Capacidad 4500mAh\nDoble camara\n4GB de ram\n32GB de almacenamiento\nPantalla IPS HD de 1280*800 de resolución\nMensajería gratis",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788546279/productos/uzesxbrip8o2exboddhu.jpg",
       "precioUSD": 58,
       "precioCUP": 39440,
