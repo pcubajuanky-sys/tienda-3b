@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-04T12:43:05.036Z",
+  "generado": "2026-09-04T13:56:54.297Z",
   "tasa": 675,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -14,6 +14,10 @@
     {
       "code": "5D9K9",
       "nombre": "Yasnaya"
+    },
+    {
+      "code": "83FNU",
+      "nombre": "Danay Alvarez González"
     }
   ],
   "categorias": [
@@ -1544,6 +1548,19 @@
       "destacado": false
     },
     {
+      "id": "p_1780452122083",
+      "name": "Mini Lavadora",
+      "cat": "Electrodomésticos",
+      "subcat": "",
+      "notes": "Lavadora plegable y portátil\nCompacta, ahorra espacio y se guarda fácilmente. Perfecta para lavar ropa interior, calcetines, pañales y prendas delicadas. Ahorra agua y esfuerzo. 110V -220v\nIncluye su transformador, manguera de desagüe y cesta de secado\nCapacidad 11L\nMensajería gratis en San Antonio",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1784912344/productos/pkjeaowywyiykoigcxok.jpg",
+      "precioUSD": 35,
+      "precioCUP": 23625,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false
+    },
+    {
       "id": "p_1788038065429",
       "name": "Mini llavero patito",
       "cat": "Accesorio de vestir",
@@ -2119,6 +2136,32 @@
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788034096/productos/x41uqbrddleitll256n4.jpg",
       "precioUSD": 6,
       "precioCUP": 4050,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false
+    },
+    {
+      "id": "p_1788528610951",
+      "name": "Ratón inalámbrico",
+      "cat": "Electrónica",
+      "subcat": "",
+      "notes": "Ratón Inalámbrico Silencioso – Ratón Inalámbrico para Computadora, Ratón para Laptop, Ratón USB, Ratón para Chromebook, Ratón Inalámbrico, Ratón Inalámbrico, Ratón para PC, Ratones para Computadora, Ratón Silencioso",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788528508/productos/te3bwxztbrhsvbm7kjgt.jpg",
+      "precioUSD": 15,
+      "precioCUP": 10125,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false
+    },
+    {
+      "id": "p_1788528531092",
+      "name": "Ratón inalámbrico (negro y gris)",
+      "cat": "Electrónica",
+      "subcat": "",
+      "notes": "Ratón Inalámbrico Silencioso – Ratón Inalámbrico para Computadora, Ratón para Laptop, Ratón USB, Ratón para Chromebook, Ratón Inalámbrico, Ratón Inalámbrico, Ratón para PC, Ratones para Computadora, Ratón Silencioso",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788528428/productos/are4fo73meeuwnidtlni.jpg",
+      "precioUSD": 15,
+      "precioCUP": 10125,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false
