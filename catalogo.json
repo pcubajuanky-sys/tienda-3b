@@ -1,11 +1,15 @@
 {
-  "generado": "2026-09-04T03:26:01.613Z",
+  "generado": "2026-09-04T12:33:09.438Z",
   "tasa": 675,
   "whatsapp": "5354978966",
   "vendedores": [
     {
       "code": "N89WN",
       "nombre": "Diego"
+    },
+    {
+      "code": "9H5MM",
+      "nombre": "Elaine Ocampo Pino"
     }
   ],
   "categorias": [
