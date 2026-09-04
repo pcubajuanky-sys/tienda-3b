@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-04T12:33:09.438Z",
+  "generado": "2026-09-04T12:43:05.036Z",
   "tasa": 675,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -10,6 +10,10 @@
     {
       "code": "9H5MM",
       "nombre": "Elaine Ocampo Pino"
+    },
+    {
+      "code": "5D9K9",
+      "nombre": "Yasnaya"
     }
   ],
   "categorias": [
