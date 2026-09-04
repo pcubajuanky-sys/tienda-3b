@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-04T14:12:49.705Z",
+  "generado": "2026-09-04T17:46:56.509Z",
   "tasa": 675,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -606,19 +606,6 @@
       "destacado": false
     },
     {
-      "id": "p_1781005646366",
-      "name": "Cierre de seguridad cuadrado",
-      "cat": "Hogar",
-      "subcat": "",
-      "notes": "",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787956248/productos/tmjn00gx14lhjzoftwbx.jpg",
-      "precioUSD": 1.19,
-      "precioCUP": 800,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false
-    },
-    {
       "id": "p_1786998526143",
       "name": "Cintos 1",
       "cat": "Accesorio de vestir",
@@ -705,6 +692,19 @@
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788150599/productos/fgyzktdzuinxtzxbjmg0.jpg",
       "precioUSD": 6,
       "precioCUP": 4050,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false
+    },
+    {
+      "id": "p_1786918098322",
+      "name": "Conjunto de mochila, bolso y más",
+      "cat": "Bolsos Carteras Mochilas monederos",
+      "subcat": "",
+      "notes": "Súper conjunto escolar. Todo lo de la imagen ( mochila, bolsa, carterita, cartuchera, peluche y chapillas decorativas)\nDisponibles todos los colores de la imagen\nOJO: Mochila grande pero talla escolar, no es tamaño XL para negocios, transportar mercancía etc...\nMensajería gratis",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788537413/productos/slyafhkdssobyp1tgvlu.jpg",
+      "precioUSD": 22,
+      "precioCUP": 14850,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false
@@ -887,6 +887,19 @@
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788199912/productos/zi07dgtj1fxicbqru7oa.jpg",
       "precioUSD": 5.33,
       "precioCUP": 3600,
+      "moneda": "cup",
+      "enOferta": false,
+      "destacado": false
+    },
+    {
+      "id": "p_1788533425716",
+      "name": "Estropajo de aluminio",
+      "cat": "Hogar",
+      "subcat": "",
+      "notes": "Paquete de 5 estropajos de aluminio de alta calidad. Inoxidable y muy duradero\nMensajería gratis",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788533301/productos/txglc57hsr3munkrokuz.jpg",
+      "precioUSD": 2.22,
+      "precioCUP": 1500,
       "moneda": "cup",
       "enOferta": false,
       "destacado": false
@@ -1171,6 +1184,19 @@
       "destacado": false
     },
     {
+      "id": "p_1788539155627",
+      "name": "Kit de Máquinas de pelar Profesional",
+      "cat": "Electrónica",
+      "subcat": "",
+      "notes": "Juego de 2 máquinas de pelar con sus accesorios. Calidad profesional, incluye sus números, su brocha y cable de carga\nMensajería gratis",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788538964/productos/l9ohqlvdz5oaimz5laiu.jpg",
+      "precioUSD": 20,
+      "precioCUP": 13500,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false
+    },
+    {
       "id": "p_1782329548997",
       "name": "Labiales Carmelitas",
       "cat": "Cuidado Personal",
@@ -1298,6 +1324,32 @@
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785733480/productos/wdwakug8ghiv72fdw0wj.jpg",
       "precioUSD": 35,
       "precioCUP": 23625,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false
+    },
+    {
+      "id": "p_1788533709140",
+      "name": "Malla de fregado",
+      "cat": "Hogar",
+      "subcat": "",
+      "notes": "Paquete de 5 mallas para fregar . Diseñado para zonas difíciles, limpieza fuerte y profunda. No ralla ni maltrata, ideal para cuidar el teflón y el esmalte de los artículos de la cocina\nMensajería gratis a partir de 2 paquetes",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788533526/productos/ih6lcxwtznvuhj4viazn.jpg",
+      "precioUSD": 1,
+      "precioCUP": 675,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false
+    },
+    {
+      "id": "p_1788540627385",
+      "name": "Malla de playa",
+      "cat": "Playa",
+      "subcat": "",
+      "notes": "Hermosa malla para la playa. Unitalla. Solo en negra. No incluye bikini\nMensajería gratis",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788540492/productos/wwhowrwzkv7f2q8rny0v.jpg",
+      "precioUSD": 6,
+      "precioCUP": 4050,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false
@@ -1552,6 +1604,19 @@
       "destacado": false
     },
     {
+      "id": "p_1788539890691",
+      "name": "Mini lámpara nocturna",
+      "cat": "Decoración",
+      "subcat": "",
+      "notes": "Linda lámpara de estrellitas y sin ellas, puede ser una luz que abarque todo el cuarto con estrellas o puede ser una pequeña luz colorida. Trae su cable de alimentación . Bajo consumo\nMensajería gratis",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788539742/productos/uhtsctyzbjaw9ttwpwq0.jpg",
+      "precioUSD": 7,
+      "precioCUP": 4725,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false
+    },
+    {
       "id": "p_1780452122083",
       "name": "Mini Lavadora",
       "cat": "Electrodomésticos",
@@ -1708,19 +1773,6 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": true
-    },
-    {
-      "id": "p_1785091920991",
-      "name": "Organizador de cables",
-      "cat": "Bocinas Celulares y Accesorios",
-      "subcat": "",
-      "notes": "Organizador de cables, sistema de gestión de cables de escritorio multiranura, apto para material de oficina, organizador de cables de datos, soporte para cable de ratón (color blanco )",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785091571/productos/cubmpkol8n6ndcbcgul7.jpg",
-      "precioUSD": 1.04,
-      "precioCUP": 700,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false
     },
     {
       "id": "p_1780092348854",
@@ -2480,6 +2532,19 @@
       "precioNormalCUP": 680
     },
     {
+      "id": "p_1788537976001",
+      "name": "Timbre Inalámbrico Impermeable",
+      "cat": "Electrónica",
+      "subcat": "",
+      "notes": "Timbre Inalámbrico Impermeable, Funciona a 100 Metros, 36 Tonos y Volumen Ajustable, 2 Receptores y 1 Transmisor Remoto con Botón de Presión",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788537859/productos/fyws5sgxpr7nc8swb88q.jpg",
+      "precioUSD": 16,
+      "precioCUP": 10800,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false
+    },
+    {
       "id": "p_1788235176773",
       "name": "Toallitas de floresitas",
       "cat": "Hogar",
@@ -2515,6 +2580,32 @@
       "precioUSD": 2.96,
       "precioCUP": 2000,
       "moneda": "cup",
+      "enOferta": false,
+      "destacado": false
+    },
+    {
+      "id": "p_1788541433924",
+      "name": "Trípode manual con mando a distancia",
+      "cat": "Bocinas Celulares y Accesorios",
+      "subcat": "",
+      "notes": "Máxima calidad y utilidad. Alcanza un alto de más de 1 metro\nMensajería gratis",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788542693/productos/umskj5gg4isekmlakjfg.jpg",
+      "precioUSD": 7,
+      "precioCUP": 4725,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false
+    },
+    {
+      "id": "p_1788542394214",
+      "name": "Trípode profesional",
+      "cat": "Bocinas Celulares y Accesorios",
+      "subcat": "",
+      "notes": "Trípode profesional de alta resistencia. Alcanza un alto de hasta 1.75 metros\nMensajería gratis",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788541439/productos/iqykxichtc4bysouhoxv.jpg",
+      "precioUSD": 15,
+      "precioCUP": 10125,
+      "moneda": "usd",
       "enOferta": false,
       "destacado": false
     },
