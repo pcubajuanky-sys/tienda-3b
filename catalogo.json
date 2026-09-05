@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-05T14:35:57.949Z",
+  "generado": "2026-09-05T16:25:18.038Z",
   "tasa": 680,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -727,19 +727,6 @@
       "precioUSD": 22,
       "precioCUP": 14960,
       "moneda": "usd",
-      "enOferta": false,
-      "destacado": false
-    },
-    {
-      "id": "p_1787453260357",
-      "name": "Conjunto de pirsings de acero",
-      "cat": "Reloj y Prendas",
-      "subcat": "",
-      "notes": "6 pirsings de diferentes tamaños como muestra la imagen\nMensajería gratis",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787453126/productos/wcvd8wra1lnvrgdmmu8a.jpg",
-      "precioUSD": 2.94,
-      "precioCUP": 2000,
-      "moneda": "cup",
       "enOferta": false,
       "destacado": false
     },
