@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-05T09:05:57.914Z",
+  "generado": "2026-09-05T14:35:57.949Z",
   "tasa": 680,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -1856,6 +1856,19 @@
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788203234/productos/urf72rqigvjba5wdnii0.jpg",
       "precioUSD": 50,
       "precioCUP": 34000,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false
+    },
+    {
+      "id": "p_1788618415087",
+      "name": "Paquete de 100 pajillas",
+      "cat": "Hogar",
+      "subcat": "",
+      "notes": "Pajillas negras de alta calidad\nMENSAJERÍA GRATIS",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788618088/productos/sfp8rofru3m2g8xdcmvz.jpg",
+      "precioUSD": 3,
+      "precioCUP": 2040,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false
