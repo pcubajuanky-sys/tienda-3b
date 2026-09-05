@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-05T16:25:18.038Z",
+  "generado": "2026-09-05T18:27:08.302Z",
   "tasa": 680,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -552,7 +552,7 @@
       "cat": "Reloj y Prendas",
       "subcat": "",
       "notes": "Variedad de diseños. Escribir al pv para ver los disponibles en ese momento\nMensajería gratis",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787540283/productos/oazkn5v3ldmngx7zvgts.jpg",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788630744/productos/hgygoifuzzmziys2gotz.jpg",
       "precioUSD": 1.47,
       "precioCUP": 1000,
       "moneda": "cup",
@@ -1028,7 +1028,7 @@
       "cat": "Accesorio de vestir",
       "subcat": "",
       "notes": "Gafas de máxima calidad, armadura metálica de color negro o dorado y cristales oscuros y semi claros\nHermoso diseño para mujeres y hombres\nMensajería gratis",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787844051/productos/umufl6nblfyz8xme2vse.jpg",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788626193/productos/sgqc9dmkhiihxjloiavv.jpg",
       "precioUSD": 3,
       "precioCUP": 2040,
       "moneda": "usd",
@@ -2521,32 +2521,6 @@
       "precioUSD": 0.44,
       "precioCUP": 300,
       "moneda": "cup",
-      "enOferta": false,
-      "destacado": false
-    },
-    {
-      "id": "p_1785528150289",
-      "name": "Tenis 🩶",
-      "cat": "Calzado",
-      "subcat": "",
-      "notes": "#39\nMensajería gratis",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785528051/productos/syvsoohjqopbcsvo5iae.jpg",
-      "precioUSD": 11.03,
-      "precioCUP": 7500,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false
-    },
-    {
-      "id": "p_1785527505783",
-      "name": "Tenis🤍",
-      "cat": "Calzado",
-      "subcat": "",
-      "notes": "#39\nMensajería gratis",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785527390/productos/sxeomvghuopphhdq5tgz.jpg",
-      "precioUSD": 10,
-      "precioCUP": 6800,
-      "moneda": "usd",
       "enOferta": false,
       "destacado": false
     },
