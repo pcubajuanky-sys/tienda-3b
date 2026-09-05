@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-04T19:11:32.127Z",
+  "generado": "2026-09-05T00:35:57.012Z",
   "tasa": 680,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -345,6 +345,19 @@
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786922159/productos/wjwhhkxhhgxu9wzygnp6.jpg",
       "precioUSD": 8,
       "precioCUP": 5440,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false
+    },
+    {
+      "id": "p_1788553190201",
+      "name": "Aro de luz",
+      "cat": "Bocinas Celulares y Accesorios",
+      "subcat": "",
+      "notes": "Aro de luz recargable con 3 modos de intensidad. Diseño de pinza para ajuste ideal en teléfonos, tabletas y laptops",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788553013/productos/jszpxp6ll0ymemeilcjd.jpg",
+      "precioUSD": 5,
+      "precioCUP": 3400,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false
@@ -2101,6 +2114,19 @@
       "precioNormalCUP": 1300
     },
     {
+      "id": "p_1788548113007",
+      "name": "Protector de alimentos",
+      "cat": "Hogar",
+      "subcat": "",
+      "notes": "Paquete de 15 unidades de bolsitas de nylon de protector de alimentos , ideal para platos o vasijas que requieran guardar alimentos tanto en exterior o en refrigeración. También para envolver verduras o frutas, protegiéndola así de agentes externos\nMENSAJERÍA GRATIS",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788547921/productos/qh78doz9uwyq7acxdr2k.jpg",
+      "precioUSD": 0.59,
+      "precioCUP": 400,
+      "moneda": "cup",
+      "enOferta": false,
+      "destacado": false
+    },
+    {
       "id": "p_1782343083267",
       "name": "Protector de oídos",
       "cat": "Cuidado Personal",
@@ -2244,6 +2270,19 @@
       "destacado": false
     },
     {
+      "id": "p_1788551044899",
+      "name": "Reloj digital de silicona",
+      "cat": "Reloj y Prendas",
+      "subcat": "",
+      "notes": "Colores de la imagen. Manilla resistente y ajustable de silicona. Para uso de cualquier edad y género\nMensajería gratis",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788552124/productos/gjut3ljtezdjji8bjkx1.jpg",
+      "precioUSD": 2.21,
+      "precioCUP": 1500,
+      "moneda": "cup",
+      "enOferta": false,
+      "destacado": false
+    },
+    {
       "id": "p_1781213126908",
       "name": "Reloj inteligente",
       "cat": "Reloj y Prendas",
@@ -2270,19 +2309,6 @@
       "destacado": false
     },
     {
-      "id": "p_1787457782531",
-      "name": "Reloj plateado de hombre 2",
-      "cat": "Reloj y Prendas",
-      "subcat": "",
-      "notes": "Mensajería gratis",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787457711/productos/mxeigkzj2t54963sib1n.jpg",
-      "precioUSD": 6,
-      "precioCUP": 4080,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false
-    },
-    {
       "id": "p_1787458002424",
       "name": "Relojes de mujer",
       "cat": "Reloj y Prendas",
@@ -2300,7 +2326,7 @@
       "name": "Relojes digitales de niños 1",
       "cat": "Niños",
       "subcat": "",
-      "notes": "Hermosos diseños y colores .\nMensajería gratis",
+      "notes": "Hermosos diseños y colores .\nTodos exepto el negro🐼 y el beige 🐿️\nMensajería gratis",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788150940/productos/xvlrmawu9pmwobeknolc.jpg",
       "precioUSD": 2.21,
       "precioCUP": 1500,
@@ -2313,8 +2339,8 @@
       "name": "Relojes digitales de niños 2",
       "cat": "Niños",
       "subcat": "",
-      "notes": "Hermosos diseños y colores .\nMensajería gratis",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788199526/productos/cogyrzzbu2oqmwy9hhqd.jpg",
+      "notes": "Hermosos diseños y colores .\nTodos disponibles a excepción del negro astronauta\nMensajería gratis",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788550846/productos/ibuvzjacz5mahkpb8qr2.jpg",
       "precioUSD": 2.21,
       "precioCUP": 1500,
       "moneda": "cup",
@@ -2469,19 +2495,6 @@
       "precioUSD": 5.15,
       "precioCUP": 3500,
       "moneda": "cup",
-      "enOferta": false,
-      "destacado": false
-    },
-    {
-      "id": "p_1788546447070",
-      "name": "Tablet de niño",
-      "cat": "Electrónica",
-      "subcat": "",
-      "notes": "Solo en azul marino con temática de astronauta. Incluye su cable de carga, un juego de audífonos de cable y un protector con sistema de apollo para mesa y para mejor sostén manual\nCaracterísticas:\nAndroid 14\n7 pulgadas\nWifi 5G\nBatería de gran Capacidad 4500mAh\nDoble camara\n4GB de ram\n32GB de almacenamiento\nPantalla IPS HD de 1280*800 de resolución\nMensajería gratis",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788546279/productos/uzesxbrip8o2exboddhu.jpg",
-      "precioUSD": 58,
-      "precioCUP": 39440,
-      "moneda": "usd",
       "enOferta": false,
       "destacado": false
     },
