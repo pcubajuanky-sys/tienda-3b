@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-06T08:24:08.488Z",
+  "generado": "2026-09-06T13:54:08.688Z",
   "tasa": 680,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -406,19 +406,6 @@
       "destacado": false,
       "precioNormalUSD": 0.88,
       "precioNormalCUP": 600
-    },
-    {
-      "id": "p_1787957966053",
-      "name": "Audífonos Inalámbricos G9S",
-      "cat": "Bocinas Celulares y Accesorios",
-      "subcat": "",
-      "notes": "Audífonos Inalámbricos HiFi HD con Sonido Estéreo Verdadero, Control Táctil, Resistentes al Sudor, Batería de Larga Duración - Ideales para Deportes, Juegos y Uso Diario, Estuche de Carga Tipo-C Incluido",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787957834/productos/vt5n582bqwmdxs3uqzhl.jpg",
-      "precioUSD": 4.71,
-      "precioCUP": 3200,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false
     },
     {
       "id": "p_1786803816356",
