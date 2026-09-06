@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-05T22:16:32.176Z",
+  "generado": "2026-09-06T03:08:04.210Z",
   "tasa": 680,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -1192,19 +1192,6 @@
       "precioUSD": 0.59,
       "precioCUP": 400,
       "moneda": "cup",
-      "enOferta": false,
-      "destacado": false
-    },
-    {
-      "id": "p_1788539155627",
-      "name": "Kit de Máquinas de pelar Profesional",
-      "cat": "Electrónica",
-      "subcat": "",
-      "notes": "Juego de 2 máquinas de pelar con sus accesorios. Calidad profesional, incluye sus números, su brocha y cable de carga\nMensajería gratis",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788538964/productos/l9ohqlvdz5oaimz5laiu.jpg",
-      "precioUSD": 20,
-      "precioCUP": 13600,
-      "moneda": "usd",
       "enOferta": false,
       "destacado": false
     },
