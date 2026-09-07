@@ -743,3 +743,17 @@ button.footer-link{background:none;border:none;font-family:inherit;cursor:pointe
   background:var(--brand);color:var(--brand-ink);
   font-size:10px;font-weight:800;letter-spacing:.03em;padding:3px 8px;border-radius:6px;
 }
+
+/* Tallas (2026-09-06). El chip elegido se marca con el color de marca; el que no
+   está elegido queda con borde suave. Alto mínimo de 44px para el dedo. */
+.modal-tallas { display: flex; flex-direction: column; gap: 10px; margin: 12px 0; }
+.var-fila { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.var-tit { width: 100%; font-size: 13px; color: var(--text-2); }
+.chip-var {
+  min-width: 48px; min-height: 44px; padding: 6px 14px; cursor: pointer;
+  border: 1px solid var(--border); border-radius: var(--radio-control); background: var(--surface-2);
+  color: var(--text); font-size: 15px; font-weight: 600;
+}
+.chip-var[aria-pressed="true"] { background: var(--brand); border-color: var(--brand); color: var(--brand-ink); }
+.chip-var[disabled] { opacity: .35; cursor: not-allowed; text-decoration: line-through; }
+.linea-talla { color: var(--text-3); font-weight: 500; }

@@ -6,6 +6,7 @@ let filtroOferta = false;
 let busqueda = '';
 let elementoAnteriorFoco = null;   // para devolver el foco al cerrar modal/carrito
 let productoModal = null;
+let seleccionVar = [];   // un valor por eje, del producto abierto en el detalle
 let catsExpandidas = false;   // estado de "Ver todas" en categorías (solo escritorio); sobrevive a los re-render
 const CATS_VISIBLES_PLEGADO = 12;   // debe coincidir con :nth-child(n+13) en estilos.css
 
@@ -286,13 +287,73 @@ function toggleCatsExpandidas() {
 
 // ── Parrilla ──
 
-function accionHtml(id) {
-  const q = carrito[id] || 0;
-  if (q === 0) return `<button class="add" data-add="${id}">Añadir</button>`;
+// ── Variantes (2026-09-07) ──
+// Un producto puede tener uno o dos ejes (Talla, Color…). El catálogo trae
+// `variantes: {ejes:['Talla','Color'], opciones:['M / ROJO','L / ROJO']}` — solo las
+// combinaciones DISPONIBLES, nunca las cantidades.
+// El carrito se indexa por `id` para los productos sin variantes (compatible con lo
+// que ya haya guardado el navegador) y por `id|CLAVE` para los que las llevan.
+const SEP_VAR = ' / ';
+function variantesDe(p) {
+  const v = p && p.variantes;
+  return (v && Array.isArray(v.opciones) && v.opciones.length) ? v : null;
+}
+function productoDe(id) { return (CAT.items || []).find((x) => x.id === id) || null; }
+function claveCarrito(id, clave) { return clave ? id + '|' + clave : id; }
+function idDeClave(k) { return String(k).split('|')[0]; }
+
+// Unidades de ESTE producto en el carrito, sumando todas sus combinaciones. Es lo que
+// se enseña en la tarjeta de la parrilla, donde no hay una combinación que enseñar.
+function qtyEnCarrito(id) {
+  return Object.entries(carrito).reduce((s, [k, q]) => (k === id || k.startsWith(id + '|')) ? s + q : s, 0);
+}
+
+// Todos los valores que existen en el eje i (con existencias, porque el catálogo solo
+// publica lo disponible).
+function valoresDeEje(v, i) {
+  const out = [];
+  for (const clave of v.opciones) {
+    const val = clave.split(SEP_VAR)[i];
+    if (val && !out.includes(val)) out.push(val);
+  }
+  return out;
+}
+
+// ¿Ese valor del eje i sigue siendo posible con lo ya elegido en los OTROS ejes? Es lo
+// que hace que, al elegir la talla M, se apaguen los colores que no vienen en M.
+function valorPosible(v, i, val, seleccion) {
+  return v.opciones.some((clave) => {
+    const partes = clave.split(SEP_VAR);
+    if (partes[i] !== val) return false;
+    return partes.every((p, j) => j === i || !seleccion[j] || seleccion[j] === p);
+  });
+}
+
+// La combinación elegida, solo si están todos los ejes y esa combinación existe.
+function claveElegida(v, seleccion) {
+  if (!v) return null;
+  if (seleccion.length !== v.ejes.length || seleccion.some((x) => !x)) return null;
+  const k = seleccion.join(SEP_VAR);
+  return v.opciones.includes(k) ? k : null;
+}
+
+// Sin la combinación completa, un producto con variantes NO se puede añadir: el botón
+// manda al detalle, que es donde hay sitio para los selectores y la foto grande.
+function accionHtml(id, clave) {
+  const p = productoDe(id);
+  const v = variantesDe(p);
+  if (v && !clave) {
+    const q = qtyEnCarrito(id);
+    const que = v.ejes.join(' y ').toLowerCase();
+    return `<button class="add" data-detalle="${id}">${q ? `Añadir otra (${q})` : `Elegir ${que}`}</button>`;
+  }
+  const k = claveCarrito(id, clave);
+  const q = carrito[k] || 0;
+  if (q === 0) return `<button class="add" data-add="${k}">Añadir</button>`;
   return `<div class="qty">` +
-    `<button data-minus="${id}" aria-label="Quitar una unidad">−</button>` +
+    `<button data-minus="${k}" aria-label="Quitar una unidad">−</button>` +
     `<strong aria-hidden="true">${q}</strong><span class="sr-only">${q} en el pedido</span>` +
-    `<button data-plus="${id}" aria-label="Añadir una unidad">+</button>` +
+    `<button data-plus="${k}" aria-label="Añadir una unidad">+</button>` +
     `</div>`;
 }
 
@@ -383,9 +444,31 @@ function refrescarAcciones(id) {
   const el = document.getElementById('acc-' + id);
   if (el) el.innerHTML = accionHtml(id);
   if (productoModal === id) {
+    const v = variantesDe(productoDe(id));
     const m = document.getElementById('modal-accion');
-    if (m) m.innerHTML = accionHtml(id);
+    if (m) m.innerHTML = accionHtml(id, claveElegida(v, seleccionVar));
+    pintarChipsVariante(id);
   }
+}
+
+// Una fila de chips POR EJE. Los valores que no existen con lo ya elegido en el otro
+// eje salen deshabilitados: así el cliente ve que ese color no viene en esa talla, en
+// vez de poder elegirlo y llevarse un chasco.
+function pintarChipsVariante(id) {
+  const wrap = document.getElementById('modal-tallas');
+  if (!wrap) return;
+  const v = variantesDe(productoDe(id));
+  if (!v) { wrap.hidden = true; wrap.innerHTML = ''; return; }
+  wrap.hidden = false;
+  wrap.innerHTML = v.ejes.map((eje, i) => {
+    const chips = valoresDeEje(v, i).map((val) => {
+      const sel = seleccionVar[i] === val;
+      const posible = valorPosible(v, i, val, seleccionVar);
+      return `<button type="button" class="chip-var" data-eje="${i}" data-val="${escapeHtml(val)}"` +
+        ` aria-pressed="${sel}"${posible ? '' : ' disabled'}>${escapeHtml(val)}</button>`;
+    }).join('');
+    return `<div class="var-fila"><div class="var-tit">${escapeHtml(eje)}:</div>${chips}</div>`;
+  }).join('');
 }
 
 // ── Detalle de producto (modal) ──
@@ -401,7 +484,9 @@ function abrirDetalle(id) {
   document.getElementById('modal-nombre').textContent = p.name;
   document.getElementById('modal-desc').textContent = p.notes || '';
   document.getElementById('modal-precio').innerHTML = precioHtml(p);
-  document.getElementById('modal-accion').innerHTML = accionHtml(id);
+  seleccionVar = [];
+  pintarChipsVariante(id);
+  document.getElementById('modal-accion').innerHTML = accionHtml(id, null);
 
   elementoAnteriorFoco = document.activeElement;
   const modal = document.getElementById('modal-detalle');
@@ -413,6 +498,7 @@ function abrirDetalle(id) {
 function cerrarDetalle() {
   document.getElementById('modal-detalle').hidden = true;
   productoModal = null;
+  seleccionVar = [];
   const img = document.getElementById('modal-img');
   // Un src="" hace que el navegador re-pida la página entera como si fuera la imagen.
   // Sin el atributo, no hay petición: la foto vuelve a ponerse solo al abrir el detalle.
@@ -479,18 +565,29 @@ function guardarCarrito() {
   actualizarBarraMovil();
 }
 
-function addCarrito(id) { carrito[id] = (carrito[id] || 0) + 1; guardarCarrito(); refrescarAcciones(id); renderCarrito(); }
+// Reciben la CLAVE del carrito (`id` o `id|TALLA`), no el id: quien pulsa el botón ya
+// sabe de qué talla habla, y así no hay que adivinarlo aquí.
+function addCarrito(clave) {
+  carrito[clave] = (carrito[clave] || 0) + 1;
+  guardarCarrito(); refrescarAcciones(idDeClave(clave)); renderCarrito();
+}
 
-function quitarCarrito(id) {
-  carrito[id] = (carrito[id] || 0) - 1;
-  if (carrito[id] <= 0) delete carrito[id];
-  guardarCarrito(); refrescarAcciones(id); renderCarrito();
+function quitarCarrito(clave) {
+  carrito[clave] = (carrito[clave] || 0) - 1;
+  if (carrito[clave] <= 0) delete carrito[clave];
+  guardarCarrito(); refrescarAcciones(idDeClave(clave)); renderCarrito();
 }
 
 function itemsCarrito() {
   return Object.entries(carrito)
-    .map(([id, qty]) => ({ p: (CAT.items || []).find((x) => x.id === id), qty }))
-    .filter((x) => x.p);   // un producto agotado desaparece del catálogo: se cae del carrito solo
+    .map(([k, qty]) => {
+      const partes = String(k).split('|');
+      return { p: productoDe(partes[0]), qty, clave: partes[1] || null };
+    })
+    // Un producto agotado desaparece del catálogo y se cae del carrito solo. Y una
+    // línea guardada de antes, sin combinación, de un producto que AHORA se vende por
+    // variantes también se cae: no hay forma de adivinar qué combinación quería el cliente.
+    .filter((x) => x.p && !(variantesDe(x.p) && !x.clave));
 }
 
 function totalCarrito() {
@@ -655,12 +752,12 @@ function renderPromoEnvio() {
   fina.textContent = eg.textoFino;
 }
 
-function lineaCarritoHtml(p, qty) {
+function lineaCarritoHtml(p, qty, clave) {
   const foto = fotoCard(p.photo);
   return `<div class="linea">
       <img src="${foto.src}" alt="" loading="lazy" onerror="imgFallback(this)">
       <div class="linea-info">
-        <div class="linea-nom">${escapeHtml(p.name)}</div>
+        <div class="linea-nom">${escapeHtml(p.name)}${clave ? ` <span class="linea-talla">· ${escapeHtml(clave)}</span>` : ''}</div>
         <div class="linea-qty">x${qty}</div>
       </div>
       <div class="linea-sub">${fmt(p.precioCUP * qty)} CUP</div>
@@ -715,7 +812,7 @@ function medirHeader() {
 function renderCarrito() {
   const items = itemsCarrito();
   const hayItems = items.length > 0;
-  const html = items.map(({ p, qty }) => lineaCarritoHtml(p, qty)).join('');
+  const html = items.map(({ p, qty, clave }) => lineaCarritoHtml(p, qty, clave)).join('');
   const eg = envioGratis();
   const envioTexto = lineaEnvioTexto(eg);
   const politica = politicaTexto();
@@ -840,7 +937,13 @@ function enviarPorWhatsApp(ev) {
   const lineas = ['🛒 *Pedido desde la web*'];
   if (v) lineas.push(`👤 Vendedor: ${v.code}`);
   lineas.push('');
-  items.forEach(({ p, qty }) => lineas.push(`• ${p.name} x${qty} — ${fmt(p.precioCUP * qty)} CUP`));
+  const etiqueta = (p, clave) => {
+    const v = variantesDe(p);
+    if (!v || !clave) return '';
+    const vals = clave.split(SEP_VAR);
+    return ' (' + v.ejes.map((e, i) => `${e} ${vals[i]}`).join(', ') + ')';
+  };
+  items.forEach(({ p, qty, clave }) => lineas.push(`• ${p.name}${etiqueta(p, clave)} x${qty} — ${fmt(p.precioCUP * qty)} CUP`));
   lineas.push('');
   if (m.activa) {
     // Mismo desglose que el carrito: Productos / Mensajería / Total.
@@ -858,6 +961,12 @@ function enviarPorWhatsApp(ev) {
   if (nota) lineas.push(`Nota: ${nota}`);
   const politica = politicaTexto();
   if (politica) lineas.push('', politica);
+
+  // Línea técnica para que Stock+ anote el pedido solo, emparejando POR CÓDIGO
+  // (nunca por nombre). Si el catálogo publicado todavía no trae `codigo` —o si algún
+  // item no lo tiene— no se escribe: el servidor cae al emparejado por nombre y avisa.
+  const refs = items.filter(({ p }) => p.codigo).map(({ p, qty, clave }) => `${p.codigo}${clave ? '/' + clave.split(SEP_VAR).join('+') : ''} x${qty}`);
+  if (refs.length && refs.length === items.length) lineas.push('', `Ref: ${refs.join(', ')}`);
 
   window.open(`https://wa.me/${CAT.whatsapp}?text=${encodeURIComponent(lineas.join('\n'))}`, '_blank');
 }
@@ -1072,7 +1181,21 @@ async function iniciar() {
     const add = e.target.closest('[data-add]');
     const minus = e.target.closest('[data-minus]');
     const plus = e.target.closest('[data-plus]');
-    if (add) { e.stopPropagation(); addCarrito(add.dataset.add); }
+    const chip = e.target.closest('[data-val]');
+    const irDetalle = e.target.closest('[data-detalle]');
+    if (chip) {
+      e.stopPropagation();
+      const i = Number(chip.dataset.eje) || 0;
+      // Volver a pulsar el valor ya elegido lo deselecciona.
+      seleccionVar[i] = (seleccionVar[i] === chip.dataset.val) ? '' : chip.dataset.val;
+      // Si lo elegido en otro eje ya no es compatible, se suelta en vez de dejar una
+      // combinación imposible seleccionada.
+      const v = variantesDe(productoDe(productoModal));
+      if (v) v.ejes.forEach((_, j) => { if (j !== i && seleccionVar[j] && !valorPosible(v, j, seleccionVar[j], seleccionVar)) seleccionVar[j] = ''; });
+      refrescarAcciones(productoModal);
+    }
+    else if (irDetalle) { e.stopPropagation(); abrirDetalle(irDetalle.dataset.detalle); }
+    else if (add) { e.stopPropagation(); addCarrito(add.dataset.add); }
     else if (minus) { e.stopPropagation(); quitarCarrito(minus.dataset.minus); }
     else if (plus) { e.stopPropagation(); addCarrito(plus.dataset.plus); }
   });
