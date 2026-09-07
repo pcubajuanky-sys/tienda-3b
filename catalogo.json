@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-07T16:53:12.875Z",
+  "generado": "2026-09-07T20:59:00.402Z",
   "tasa": 685,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -217,6 +217,43 @@
       "moneda": "cup",
       "enOferta": false,
       "destacado": false
+    },
+    {
+      "id": "p_1788813668772",
+      "codigo": "5H6N",
+      "name": "Agujas de coser a mano",
+      "cat": "Hogar",
+      "subcat": "",
+      "notes": "Paquete de 10 agujas de coser a mano\nMensajería gratis",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788813535/productos/b83asoaayqn2wofqhwf0.jpg",
+      "precioUSD": 1.46,
+      "precioCUP": 1000,
+      "moneda": "cup",
+      "enOferta": false,
+      "destacado": false
+    },
+    {
+      "id": "p_1788814692844",
+      "codigo": "C76G",
+      "name": "Ajusta invisible sin tirantes",
+      "cat": "Accesorio de vestir",
+      "subcat": "",
+      "notes": "Útil e imprescindible prenda, reutilizable y comoda. Brinda un soporte muy estético a pechos sin importar talla,forma o edad.Colores disponibles, beige y negro.El precio es por unidad,pero si lleva la pareja, o sea, uno beige y uno negro, se aplica un a rebaja de $400 a la compra. En ambos casos la Mensajería es gratis",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788814263/productos/xfb4sbqzmvfcc9cdrndb.jpg",
+      "precioUSD": 2.04,
+      "precioCUP": 1397,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Color"
+        ],
+        "opciones": [
+          "BEIGE",
+          "NEGRO"
+        ]
+      }
     },
     {
       "id": "p_1787110390009",
