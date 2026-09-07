@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-07T20:59:00.402Z",
+  "generado": "2026-09-07T21:53:08.597Z",
   "tasa": 685,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -136,6 +136,10 @@
     {
       "n": "Respaldo energético",
       "e": "💥"
+    },
+    {
+      "n": "Ropa Interior",
+      "e": "👙"
     }
   ],
   "tienda": {
@@ -236,12 +240,12 @@
       "id": "p_1788814692844",
       "codigo": "C76G",
       "name": "Ajusta invisible sin tirantes",
-      "cat": "Accesorio de vestir",
+      "cat": "Ropa Interior",
       "subcat": "",
-      "notes": "Útil e imprescindible prenda, reutilizable y comoda. Brinda un soporte muy estético a pechos sin importar talla,forma o edad.Colores disponibles, beige y negro.El precio es por unidad,pero si lleva la pareja, o sea, uno beige y uno negro, se aplica un a rebaja de $400 a la compra. En ambos casos la Mensajería es gratis",
+      "notes": "Útil e imprescindible prenda, reutilizable y comoda. Brinda un soporte muy estético a pechos sin importar talla,forma o edad.Colores disponibles, beige y negro.Mensajería es gratis",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788814263/productos/xfb4sbqzmvfcc9cdrndb.jpg",
-      "precioUSD": 2.04,
-      "precioCUP": 1397,
+      "precioUSD": 2,
+      "precioCUP": 1370,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -536,6 +540,48 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false
+    },
+    {
+      "id": "p_1788816083247",
+      "codigo": "VWUD",
+      "name": "Blumers",
+      "cat": "Ropa Interior",
+      "subcat": "",
+      "notes": "100% algodón,la mejor opción para el cuidado de la zona íntima, el material recomendado por los especialistas para evitar la humedad acumulada y permitir que transpire una de las zonas más delicadas del cuerpo.Variedad de colores y tallas elegibles en la página web de nuestra tienda. A partir de 2 unidadesMensajería gratis",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788815109/productos/whyucj67zscpwltr6jbj.jpg",
+      "precioUSD": 1,
+      "precioCUP": 685,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Talla",
+          "Color"
+        ],
+        "opciones": [
+          "S / NEGRO",
+          "S / BLANCO",
+          "S / GRIS",
+          "S / AZUL",
+          "S / ROJO",
+          "S / ROSA",
+          "S / BEIGE",
+          "M / NEGRO",
+          "M / BLANCO",
+          "M / GRIS",
+          "M / ROJO",
+          "M / ROSA",
+          "M / BEIGE",
+          "L / NEGRO",
+          "L / BLANCO",
+          "L / GRIS",
+          "L / AZUL",
+          "L / ROJO",
+          "L / ROSA",
+          "L / BEIGE"
+        ]
+      }
     },
     {
       "id": "p_1785180542778",
@@ -986,6 +1032,29 @@
       "moneda": "cup",
       "enOferta": false,
       "destacado": false
+    },
+    {
+      "id": "p_1788816392396",
+      "codigo": "5BVR",
+      "name": "Fajas Colombianas",
+      "cat": "Ropa Interior",
+      "subcat": "",
+      "notes": "Fajas colombianas tipo short de cintura alta levantadoras y moldeadora. Control de abdomen, paneles de encaje y compresión para moldear muslos, realzadoras, adecuadas para figura de reloj de arena, entrenamiento y atuendo casual",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788816300/productos/brqlriw0fxdiuf8bfv8s.jpg",
+      "precioUSD": 25,
+      "precioCUP": 17125,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Talla"
+        ],
+        "opciones": [
+          "S",
+          "L"
+        ]
+      }
     },
     {
       "id": "p_1785273242889",
