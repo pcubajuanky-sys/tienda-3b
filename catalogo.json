@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-08T17:50:32.241Z",
+  "generado": "2026-09-08T19:04:01.715Z",
   "tasa": 685,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -557,24 +557,6 @@
       "precioNormalCUP": 600
     },
     {
-      "id": "p_1786803816356",
-      "codigo": "DU4A",
-      "name": "Audífonos inalámbricos X15",
-      "cat": "Bocinas Celulares y Accesorios",
-      "subcat": "",
-      "notes": "Audífonos inalámbricos X15, ligeros y con su estuche de carga.",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786803730/productos/p34guyzzkxjrpwyw39ya.jpg",
-      "precioUSD": 4.67,
-      "precioCUP": 3200,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      }
-    },
-    {
       "id": "p_1787957504529",
       "codigo": "39TD",
       "name": "Auriculares Inalámbricos A6S",
@@ -609,25 +591,6 @@
         "corto": "🛵 Gratis desde 1,500 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
       }
-    },
-    {
-      "id": "p_1788830868023",
-      "codigo": "KS3Q",
-      "name": "Bicicleta Eléctrica de 500W para Adultos",
-      "cat": "Motos / Accesorios",
-      "subcat": "",
-      "notes": "Bicicleta Eléctrica de 500W para Adultos, Batería Extraíble de 48V 15AH, Velocidad de 15-20 mph, Largo Alcance de 10-35 Millas, Plegable de 14 Pulgadas, Pantalla LCD, Frenos de Disco Duales, Súper Suspensión, Regalo para Adolescentes, Bicicleta Eléctrica para Adultos - Motocicleta\n\nNueva está en su caja sellada",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788830814/productos/mbtm7sr4opagfnenqeht.jpg",
-      "precioUSD": 475,
-      "precioCUP": 325375,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": true,
-      "envio": {
-        "corto": "🚚 Transporte aparte",
-        "largo": "🚚 Por su tamaño, el transporte se coordina por WhatsApp según tu zona"
-      },
-      "envioAparte": true
     },
     {
       "id": "p_1785877309060",
@@ -799,6 +762,24 @@
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
+    },
+    {
+      "id": "p_1788892014454",
+      "codigo": "BP9X",
+      "name": "Cafetera 1 taza",
+      "cat": "Hogar",
+      "subcat": "",
+      "notes": "Cafetera italiana para café expreso",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788891782/productos/b8cptn2c5lert8u7rad6.jpg",
+      "precioUSD": 7.3,
+      "precioCUP": 5001,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
       }
     },
     {
@@ -2351,24 +2332,6 @@
       }
     },
     {
-      "id": "p_1780452122083",
-      "codigo": "LX3Z",
-      "name": "Mini Lavadora",
-      "cat": "Electrodomésticos",
-      "subcat": "",
-      "notes": "Lavadora plegable y portátil\nCompacta, ahorra espacio y se guarda fácilmente. Perfecta para lavar ropa interior, calcetines, pañales y prendas delicadas. Ahorra agua y esfuerzo. 110V -220v\nIncluye su transformador, manguera de desagüe y cesta de secado\nCapacidad 11L",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1784912344/productos/pkjeaowywyiykoigcxok.jpg",
-      "precioUSD": 35,
-      "precioCUP": 23975,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      }
-    },
-    {
       "id": "p_1780451802473",
       "codigo": "WM7G",
       "name": "Mini Licuadora Recargable",
@@ -3031,24 +2994,6 @@
       "precioUSD": 2.19,
       "precioCUP": 1500,
       "moneda": "cup",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      }
-    },
-    {
-      "id": "p_1786917004897",
-      "codigo": "EYWB",
-      "name": "Pinceles de dibujo de uñas",
-      "cat": "Uñas",
-      "subcat": "",
-      "notes": "Juego de 5 pinceles de uñas",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786916780/productos/morxomy39l4xadi58rwn.jpg",
-      "precioUSD": 4,
-      "precioCUP": 2740,
-      "moneda": "usd",
       "enOferta": false,
       "destacado": false,
       "envio": {
