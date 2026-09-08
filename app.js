@@ -596,6 +596,18 @@ function totalCarrito() {
   return itemsCarrito().reduce((s, { p, qty }) => s + p.precioCUP * qty, 0);
 }
 
+// Un artículo con transporte aparte no empuja al cliente hacia la mensajería gratis:
+// su precio no cuenta para el umbral, porque su envío nunca va a ser gratis.
+function esAparte(p) { return !!(p && p.envioAparte); }
+
+function totalCarritoElegible() {
+  return itemsCarrito().reduce((s, { p, qty }) => s + (esAparte(p) ? 0 : p.precioCUP * qty), 0);
+}
+
+function itemsAparte() {
+  return itemsCarrito().filter(({ p }) => esAparte(p));
+}
+
 // El CUP manda (es lo que se cobra y viaja a WhatsApp); el USD es orientativo
 // porque el CUP de cada producto se redondea hacia arriba al publicar el
 // catálogo, así que suma(CUP) no es exactamente suma(USD) × tasa. Por eso el
@@ -620,15 +632,27 @@ function usdLineaHtml(clase) {
 function totalBloqueHtml(claseTotalCup, claseTotalUsd) {
   const m = mensajeria();
   if (!m.activa) {
-    return `<span class="${claseTotalCup}">Total: ${fmt(totalCarrito())} CUP</span>` + usdLineaHtml(claseTotalUsd);
+    return notaAparteHtml() + `<span class="${claseTotalCup}">Total: ${fmt(totalCarrito())} CUP</span>` + usdLineaHtml(claseTotalUsd);
   }
   return (
     `<div class="desglose-linea"><span>Productos</span><span>${fmt(totalCarrito())} CUP</span></div>` +
-    `<div class="desglose-linea"><span>Mensajería</span><span>${m.gratis ? 'GRATIS' : fmt(m.monto) + ' CUP'}</span></div>` +
+    `<div class="desglose-linea"><span>Mensajería</span><span>${m.coordinar ? 'a coordinar' : (m.gratis ? 'GRATIS' : fmt(m.monto) + ' CUP')}</span></div>` +
     `<p class="desglose-nota">El costo de mensajería depende de la zona; se confirma por WhatsApp.</p>` +
+    notaAparteHtml() +
     `<div class="desglose-linea desglose-total"><span>Total</span><span>${fmt(totalGeneralCUP())} CUP</span></div>` +
     usdLineaHtml(claseTotalUsd)
   );
+}
+
+// Nombres reales de itemsAparte(), escapados como todo lo que viene del catálogo
+// público. "debajo" de la fila Mensajería, según el plan: avisa cuál producto
+// paga transporte aparte y por qué el monto de arriba es "a coordinar".
+function notaAparteHtml() {
+  const aparte = itemsAparte();
+  if (!aparte.length) return '';
+  const nombres = aparte.map(({ p }) => escapeHtml(p.name)).join(', ');
+  const verbo = aparte.length > 1 ? 'pagan' : 'paga';
+  return `<p class="desglose-nota">⚠️ ${nombres} ${verbo} transporte aparte: se coordina por WhatsApp.</p>`;
 }
 
 // Mensajería gratis a partir de un umbral en CUP, configurable desde el panel
@@ -639,7 +663,7 @@ function envioGratis() {
   const t = (CAT && CAT.tienda) || {};
   const umbral = Math.max(0, Number(t.envioGratisCUP) || 0);
   const activo = umbral > 0;
-  const total = totalCarrito();
+  const total = totalCarritoElegible();
   const alcanzado = activo && total >= umbral;
   const falta = activo && !alcanzado ? umbral - total : 0;
   return { activo, umbral, falta, alcanzado, textoFino: (t.envioGratisTexto || '').trim() };
@@ -648,6 +672,9 @@ function envioGratis() {
 // Misma frase en aside, panel modal y barra móvil: una sola fuente de verdad.
 function lineaEnvioTexto(eg) {
   if (!eg.activo) return '';
+  // Con solo productos "aparte" en el carrito el elegible es 0: por mucho que sume
+  // el pedido, ese producto nunca lleva mensajería gratis. No mentir con "te faltan".
+  if (totalCarritoElegible() === 0) return '';
   return eg.alcanzado
     ? '🎉 Tu pedido lleva mensajería gratis'
     : `Te faltan ${fmt(eg.falta)} CUP para la mensajería gratis`;
@@ -663,7 +690,10 @@ function mensajeria() {
   const activa = costo > 0;
   const eg = envioGratis();
   const gratis = activa && eg.activo && eg.alcanzado;
-  return { activa, costo, gratis, monto: activa && !gratis ? costo : 0 };
+  // Con transporte aparte en el carrito no se cobra el fijo a ciegas: se coordina
+  // por WhatsApp, así que no hay monto fijo que anunciar de antemano.
+  if (itemsAparte().length > 0) return { activa, costo, gratis: false, monto: 0, coordinar: true };
+  return { activa, costo, gratis, monto: activa && !gratis ? costo : 0, coordinar: false };
 }
 
 // Total real que se cobra: productos + mensajería (0 si es gratis o si la
@@ -950,15 +980,22 @@ function enviarPorWhatsApp(ev) {
   if (m.activa) {
     // Mismo desglose que el carrito: Productos / Mensajería / Total.
     lineas.push(`Productos: ${fmt(totalCarrito())} CUP`);
-    lineas.push(m.gratis
-      ? `Mensajería: GRATIS (pedido desde ${fmt(eg.umbral)} CUP)`
-      : `Mensajería: ${fmt(m.monto)} CUP (se confirma según la zona)`);
+    lineas.push(m.coordinar
+      ? 'Mensajería: a coordinar (transporte aparte)'
+      : (m.gratis
+        ? `Mensajería: GRATIS (pedido desde ${fmt(eg.umbral)} CUP)`
+        : `Mensajería: ${fmt(m.monto)} CUP (se confirma según la zona)`));
     lineas.push(`*Total: ${fmt(totalGeneralCUP())} CUP*`);
   } else {
     lineas.push(`*Total: ${fmt(totalCarrito())} CUP*`);
     if (eg.activo && eg.alcanzado) lineas.push(`Mensajería: GRATIS (pedido desde ${fmt(eg.umbral)} CUP)`);
   }
   lineas.push('');
+  const aparteWA = itemsAparte();
+  if (aparteWA.length) {
+    lineas.push(`⚠️ Transporte aparte: ${aparteWA.map(({ p }) => p.name).join(', ')} — se coordina por WhatsApp`);
+    lineas.push('');
+  }
   lineas.push(`Nombre: ${nombre}`, `Tel: ${tel}`, `Dirección: ${dir}`);
   if (nota) lineas.push(`Nota: ${nota}`);
   const politica = politicaTexto();
@@ -1073,6 +1110,16 @@ function actualizarHeaderScroll() {
 }
 
 // ── Carga del catálogo, con estado de error y reintento ──
+
+// ── Conmutador de mundos ──
+// La pastilla del taxi solo aparece si Ruth lo ha encendido en Stock+
+// (catalogo.json -> tienda.taxiActivo). Asi el taxi puede estar publicado y
+// probandose sin que ningun cliente lo descubra antes de tiempo.
+function renderMundos() {
+  const pastilla = document.getElementById('mundo-taxi');
+  if (!pastilla) return;
+  pastilla.hidden = !(CAT && CAT.tienda && CAT.tienda.taxiActivo);
+}
 
 async function cargarCatalogo() {
   document.getElementById('error-carga').hidden = true;
@@ -1210,6 +1257,7 @@ async function iniciar() {
 
   medirHeader();
   await cargarCatalogo();
+  renderMundos();
 }
 
 iniciar();
