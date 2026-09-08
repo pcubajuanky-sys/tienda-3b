@@ -757,3 +757,13 @@ button.footer-link{background:none;border:none;font-family:inherit;cursor:pointe
 .chip-var[aria-pressed="true"] { background: var(--brand); border-color: var(--brand); color: var(--brand-ink); }
 .chip-var[disabled] { opacity: .35; cursor: not-allowed; text-decoration: line-through; }
 .linea-talla { color: var(--text-3); font-weight: 500; }
+
+/* Mensajería por producto (2026-09-07). El texto lo compone Stock+; aquí solo se pinta. */
+.envio-chip {
+  margin-top: 4px; font-size: 12px; font-weight: 600; color: var(--wa);
+  display: inline-block; line-height: 1.3;
+}
+.envio-detalle {
+  margin-top: 8px; font-size: 13px; font-weight: 600; color: var(--wa);
+  line-height: 1.4;
+}

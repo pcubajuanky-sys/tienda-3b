@@ -392,6 +392,7 @@ function tarjetaHtml(p) {
         <div class="nom">${escapeHtml(p.name)}</div>
         ${p.notes ? `<div class="desc">${escapeHtml(p.notes)}</div>` : ''}
         <div class="precio-linea">${precioHtml(p)}</div>
+        ${p.envio ? `<div class="envio-chip">${escapeHtml(p.envio.corto)}</div>` : ''}
         <div class="card-accion" id="acc-${p.id}">${accionHtml(p.id)}</div>
       </div>
     </div>`;
@@ -483,7 +484,8 @@ function abrirDetalle(id) {
   document.getElementById('modal-cat').textContent = p.cat || '';
   document.getElementById('modal-nombre').textContent = p.name;
   document.getElementById('modal-desc').textContent = p.notes || '';
-  document.getElementById('modal-precio').innerHTML = precioHtml(p);
+  document.getElementById('modal-precio').innerHTML = precioHtml(p) +
+    (p.envio ? `<div class="envio-detalle">${escapeHtml(p.envio.largo)}</div>` : '');
   seleccionVar = [];
   pintarChipsVariante(id);
   document.getElementById('modal-accion').innerHTML = accionHtml(id, null);
