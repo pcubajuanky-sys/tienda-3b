@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-08T12:31:15.096Z",
+  "generado": "2026-09-08T12:32:38.344Z",
   "tasa": 685,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -1432,26 +1432,6 @@
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
       }
-    },
-    {
-      "id": "p_1780276503276",
-      "codigo": "JDT4",
-      "name": "Fogón de queroseno",
-      "cat": "Respaldo energético",
-      "subcat": "",
-      "notes": "Cocina de queroseno All Novu de 1 litro, fabricada con materiales resistentes y diseño compacto. Ideal para cocinar de manera eficiente y económica en hogares, campamentos o zonas sin acceso a electricidad y gas. Incluye sistema de quemador regulable y construcción duradera para un uso seguro y prolongado.",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1784911382/productos/goiuvsf9ijdgaqk8csag.jpg",
-      "precioUSD": 18,
-      "precioCUP": 12330,
-      "moneda": "usd",
-      "enOferta": true,
-      "destacado": true,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "precioNormalUSD": 25,
-      "precioNormalCUP": 17125
     },
     {
       "id": "p_1781004811363",
