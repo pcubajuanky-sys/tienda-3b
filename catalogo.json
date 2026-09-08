@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-08T03:23:05.416Z",
+  "generado": "2026-09-08T08:50:32.046Z",
   "tasa": 685,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -163,7 +163,8 @@
         "nombre": "Admin secundario",
         "tel": "5354978966"
       }
-    ]
+    ],
+    "taxiActivo": false
   },
   "items": [
     {
@@ -178,7 +179,11 @@
       "precioCUP": 4110,
       "moneda": "usd",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1786921926228",
@@ -192,7 +197,11 @@
       "precioCUP": 4110,
       "moneda": "usd",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1786943265900",
@@ -206,7 +215,11 @@
       "precioCUP": 2500,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1785092425018",
@@ -220,7 +233,11 @@
       "precioCUP": 450,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
     },
     {
       "id": "p_1788813668772",
@@ -234,7 +251,11 @@
       "precioCUP": 1000,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
     },
     {
       "id": "p_1788814692844",
@@ -257,6 +278,10 @@
           "BEIGE",
           "NEGRO"
         ]
+      },
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
       }
     },
     {
@@ -271,7 +296,11 @@
       "precioCUP": 1500,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1787498809174",
@@ -285,7 +314,11 @@
       "precioCUP": 900,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
     },
     {
       "id": "p_1787499027901",
@@ -299,7 +332,11 @@
       "precioCUP": 900,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
     },
     {
       "id": "p_1782340130001",
@@ -313,7 +350,11 @@
       "precioCUP": 350,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
     },
     {
       "id": "p_1781551585230",
@@ -327,7 +368,11 @@
       "precioCUP": 700,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
     },
     {
       "id": "p_1787457398463",
@@ -341,7 +386,11 @@
       "precioCUP": 950,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
     },
     {
       "id": "p_1787495641341",
@@ -355,7 +404,11 @@
       "precioCUP": 850,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
     },
     {
       "id": "p_1787497741914",
@@ -369,7 +422,11 @@
       "precioCUP": 600,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
     },
     {
       "id": "p_1787498450640",
@@ -383,7 +440,11 @@
       "precioCUP": 600,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
     },
     {
       "id": "p_1787498656646",
@@ -397,7 +458,11 @@
       "precioCUP": 600,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
     },
     {
       "id": "p_1786922285289",
@@ -411,7 +476,11 @@
       "precioCUP": 5480,
       "moneda": "usd",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1788553190201",
@@ -425,7 +494,11 @@
       "precioCUP": 3425,
       "moneda": "usd",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1786918401932",
@@ -439,7 +512,11 @@
       "precioCUP": 17125,
       "moneda": "usd",
       "enOferta": false,
-      "destacado": true
+      "destacado": true,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1784919190954",
@@ -453,7 +530,11 @@
       "precioCUP": 4500,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1781552195237",
@@ -468,6 +549,10 @@
       "moneda": "cup",
       "enOferta": true,
       "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      },
       "precioNormalUSD": 0.88,
       "precioNormalCUP": 600
     },
@@ -483,7 +568,11 @@
       "precioCUP": 3200,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1787957504529",
@@ -497,7 +586,11 @@
       "precioCUP": 3000,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1786923820539",
@@ -511,7 +604,11 @@
       "precioCUP": 400,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
     },
     {
       "id": "p_1788830868023",
@@ -525,7 +622,11 @@
       "precioCUP": 325375,
       "moneda": "usd",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1785877309060",
@@ -539,7 +640,11 @@
       "precioCUP": 10960,
       "moneda": "usd",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1785877459055",
@@ -553,7 +658,11 @@
       "precioCUP": 8220,
       "moneda": "usd",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1788816083247",
@@ -595,6 +704,10 @@
           "L / ROSA",
           "L / BEIGE"
         ]
+      },
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
       }
     },
     {
@@ -609,7 +722,11 @@
       "precioCUP": 500,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
     },
     {
       "id": "p_1785182779881",
@@ -623,7 +740,11 @@
       "precioCUP": 3100,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1788234402387",
@@ -637,7 +758,11 @@
       "precioCUP": 685,
       "moneda": "usd",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
     },
     {
       "id": "p_1781215403591",
@@ -651,7 +776,11 @@
       "precioCUP": 1800,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1787540422288",
@@ -665,7 +794,11 @@
       "precioCUP": 1000,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
     },
     {
       "id": "p_1781707937680",
@@ -679,7 +812,11 @@
       "precioCUP": 17125,
       "moneda": "usd",
       "enOferta": false,
-      "destacado": true
+      "destacado": true,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1788234125684",
@@ -693,7 +830,29 @@
       "precioCUP": 2740,
       "moneda": "usd",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
+      "id": "p_1788842246886",
+      "codigo": "H8HN",
+      "name": "Cesta organizadora",
+      "cat": "Hogar",
+      "subcat": "",
+      "notes": "Cesta organizadora para diversos usos. Color y medidas en la imagen",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788842125/productos/le7zv3buhoescjdcu4em.jpg",
+      "precioUSD": 2,
+      "precioCUP": 1370,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
     },
     {
       "id": "p_1785528271738",
@@ -708,6 +867,10 @@
       "moneda": "cup",
       "enOferta": true,
       "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      },
       "precioNormalUSD": 2.19,
       "precioNormalCUP": 1500
     },
@@ -723,7 +886,11 @@
       "precioCUP": 6850,
       "moneda": "usd",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1788049609744",
@@ -737,7 +904,11 @@
       "precioCUP": 800,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
     },
     {
       "id": "p_1786998526143",
@@ -751,7 +922,11 @@
       "precioCUP": 1900,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1786998892313",
@@ -765,7 +940,11 @@
       "precioCUP": 1900,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1787756966125",
@@ -779,7 +958,11 @@
       "precioCUP": 1800,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1780347243525",
@@ -793,7 +976,11 @@
       "precioCUP": 1800,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1788234011772",
@@ -807,7 +994,11 @@
       "precioCUP": 3425,
       "moneda": "usd",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1787947439148",
@@ -821,7 +1012,11 @@
       "precioCUP": 3425,
       "moneda": "usd",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1788150804465",
@@ -835,7 +1030,11 @@
       "precioCUP": 4110,
       "moneda": "usd",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1786918098322",
@@ -849,7 +1048,11 @@
       "precioCUP": 15070,
       "moneda": "usd",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1787498299932",
@@ -863,7 +1066,11 @@
       "precioCUP": 2500,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1787453074243",
@@ -877,7 +1084,11 @@
       "precioCUP": 1500,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1787453147089",
@@ -891,7 +1102,11 @@
       "precioCUP": 1800,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1787453447601",
@@ -905,7 +1120,11 @@
       "precioCUP": 1300,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
     },
     {
       "id": "p_1782259192464",
@@ -919,7 +1138,11 @@
       "precioCUP": 600,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
     },
     {
       "id": "p_1788212080090",
@@ -933,7 +1156,11 @@
       "precioCUP": 3425,
       "moneda": "usd",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1788212193696",
@@ -947,7 +1174,11 @@
       "precioCUP": 2055,
       "moneda": "usd",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1787088450511",
@@ -961,7 +1192,11 @@
       "precioCUP": 500,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
     },
     {
       "id": "p_1780092645027",
@@ -975,7 +1210,11 @@
       "precioCUP": 800,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
     },
     {
       "id": "p_1782340069990",
@@ -989,7 +1228,11 @@
       "precioCUP": 6165,
       "moneda": "usd",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1785733992043",
@@ -1003,7 +1246,11 @@
       "precioCUP": 3600,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1784925486862",
@@ -1017,7 +1264,11 @@
       "precioCUP": 1700,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1788200037557",
@@ -1031,7 +1282,11 @@
       "precioCUP": 3600,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1788533425716",
@@ -1045,7 +1300,56 @@
       "precioCUP": 1500,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
+      "id": "p_1788840928879",
+      "codigo": "B8ZZ",
+      "name": "Etiquetas infantiles",
+      "cat": "Niños",
+      "subcat": "",
+      "notes": "Etiquetas autoadhesivas para nombrar las libretas y demás pertenencias de los niños. Diseños femeninos y masculinos. Tamaño exacto detallado en la imagen",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788840708/productos/m1w5hcjkk89t1q4qlqxo.jpg",
+      "precioUSD": 1,
+      "precioCUP": 685,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Género"
+        ],
+        "opciones": [
+          "NIÑOS",
+          "NIÑAS"
+        ]
+      },
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
+    },
+    {
+      "id": "p_1788839956775",
+      "codigo": "EJPB",
+      "name": "Exprimidor",
+      "cat": "Hogar",
+      "subcat": "",
+      "notes": "Útil accesorio de uso diario, exprimidor de tubos de pastas tanto dental, como tintes, cremas y demás productos",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788839767/productos/qpnmcilryql7g6ewatrl.jpg",
+      "precioUSD": 0.58,
+      "precioCUP": 400,
+      "moneda": "cup",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
     },
     {
       "id": "p_1788816392396",
@@ -1068,6 +1372,10 @@
           "S",
           "L"
         ]
+      },
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
       }
     },
     {
@@ -1082,7 +1390,11 @@
       "precioCUP": 1200,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
     },
     {
       "id": "p_1780608497220",
@@ -1096,7 +1408,11 @@
       "precioCUP": 2000,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1780620222381",
@@ -1110,7 +1426,11 @@
       "precioCUP": 2000,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1780276503276",
@@ -1125,6 +1445,10 @@
       "moneda": "usd",
       "enOferta": true,
       "destacado": true,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
       "precioNormalUSD": 25,
       "precioNormalCUP": 17125
     },
@@ -1141,6 +1465,10 @@
       "moneda": "usd",
       "enOferta": true,
       "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
       "precioNormalUSD": 30,
       "precioNormalCUP": 20550
     },
@@ -1157,6 +1485,10 @@
       "moneda": "usd",
       "enOferta": true,
       "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
       "precioNormalUSD": 30,
       "precioNormalCUP": 20550
     },
@@ -1172,7 +1504,11 @@
       "precioCUP": 1370,
       "moneda": "usd",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
     },
     {
       "id": "p_1785957866193",
@@ -1186,7 +1522,11 @@
       "precioCUP": 1370,
       "moneda": "usd",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
     },
     {
       "id": "p_1785961221160",
@@ -1200,7 +1540,11 @@
       "precioCUP": 2055,
       "moneda": "usd",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1785961108734",
@@ -1214,7 +1558,11 @@
       "precioCUP": 900,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
     },
     {
       "id": "p_1785959109839",
@@ -1228,7 +1576,38 @@
       "precioCUP": 1370,
       "moneda": "usd",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
+    },
+    {
+      "id": "p_1788841621469",
+      "codigo": "PCVZ",
+      "name": "Gancho de afeitadora",
+      "cat": "Hogar",
+      "subcat": "",
+      "notes": "Alarga la vida útil de las máquinas de afeitar evitando el óxido por acumulación de agua,mantiene el espacio limpio, ordenado y propicia mayor accesibilidad de este instrumento de uso diario.",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788841425/productos/sgxqsuyjleeuyulbuazw.jpg",
+      "precioUSD": 1,
+      "precioCUP": 685,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Color"
+        ],
+        "opciones": [
+          "NEGRO",
+          "PLATEADO"
+        ]
+      },
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
     },
     {
       "id": "p_1780092427629",
@@ -1242,7 +1621,11 @@
       "precioCUP": 950,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
     },
     {
       "id": "p_1785006638149",
@@ -1256,7 +1639,11 @@
       "precioCUP": 13700,
       "moneda": "usd",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1780608108403",
@@ -1270,7 +1657,11 @@
       "precioCUP": 1500,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1780620383239",
@@ -1284,7 +1675,11 @@
       "precioCUP": 4000,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1786923457095",
@@ -1298,7 +1693,11 @@
       "precioCUP": 600,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
     },
     {
       "id": "p_1785357535101",
@@ -1312,7 +1711,11 @@
       "precioCUP": 17125,
       "moneda": "usd",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1785357289638",
@@ -1326,7 +1729,11 @@
       "precioCUP": 3000,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1785008058883",
@@ -1340,7 +1747,11 @@
       "precioCUP": 8220,
       "moneda": "usd",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1785008412468",
@@ -1354,7 +1765,11 @@
       "precioCUP": 8905,
       "moneda": "usd",
       "enOferta": false,
-      "destacado": true
+      "destacado": true,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1781005179627",
@@ -1368,7 +1783,11 @@
       "precioCUP": 10275,
       "moneda": "usd",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1782340744519",
@@ -1382,7 +1801,11 @@
       "precioCUP": 400,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
     },
     {
       "id": "p_1782329548997",
@@ -1396,7 +1819,11 @@
       "precioCUP": 500,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
     },
     {
       "id": "p_1785769239613",
@@ -1410,7 +1837,11 @@
       "precioCUP": 10960,
       "moneda": "usd",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1785769308192",
@@ -1424,7 +1855,11 @@
       "precioCUP": 13700,
       "moneda": "usd",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1782259309845",
@@ -1438,7 +1873,11 @@
       "precioCUP": 400,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
     },
     {
       "id": "p_1782339511897",
@@ -1453,6 +1892,10 @@
       "moneda": "cup",
       "enOferta": true,
       "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
       "precioNormalUSD": 3.94,
       "precioNormalCUP": 2700
     },
@@ -1468,7 +1911,11 @@
       "precioCUP": 950,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
     },
     {
       "id": "p_1788314424331",
@@ -1482,7 +1929,11 @@
       "precioCUP": 650,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
     },
     {
       "id": "p_1788036490389",
@@ -1496,7 +1947,11 @@
       "precioCUP": 600,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
     },
     {
       "id": "p_1787497927674",
@@ -1510,7 +1965,11 @@
       "precioCUP": 600,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
     },
     {
       "id": "p_1788533709140",
@@ -1524,7 +1983,11 @@
       "precioCUP": 685,
       "moneda": "usd",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
     },
     {
       "id": "p_1788540627385",
@@ -1538,7 +2001,11 @@
       "precioCUP": 4110,
       "moneda": "usd",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1785768634737",
@@ -1552,7 +2019,11 @@
       "precioCUP": 13700,
       "moneda": "usd",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1781640150594",
@@ -1566,7 +2037,11 @@
       "precioCUP": 1000,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
     },
     {
       "id": "p_1785733637147",
@@ -1580,7 +2055,11 @@
       "precioCUP": 1500,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1785733763335",
@@ -1594,7 +2073,11 @@
       "precioCUP": 1200,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
     },
     {
       "id": "p_1780609726389",
@@ -1608,7 +2091,11 @@
       "precioCUP": 2000,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1785269406794",
@@ -1622,7 +2109,11 @@
       "precioCUP": 2000,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1785271247802",
@@ -1636,7 +2127,11 @@
       "precioCUP": 1800,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1780608723108",
@@ -1650,7 +2145,11 @@
       "precioCUP": 1200,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
     },
     {
       "id": "p_1780613171948",
@@ -1664,7 +2163,11 @@
       "precioCUP": 2000,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1785268500695",
@@ -1678,7 +2181,11 @@
       "precioCUP": 1800,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1788205797035",
@@ -1692,7 +2199,11 @@
       "precioCUP": 1000,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
     },
     {
       "id": "p_1782259680772",
@@ -1706,7 +2217,11 @@
       "precioCUP": 2100,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1780092595587",
@@ -1720,7 +2235,11 @@
       "precioCUP": 340,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
     },
     {
       "id": "p_1786916805434",
@@ -1734,7 +2253,11 @@
       "precioCUP": 685,
       "moneda": "usd",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
     },
     {
       "id": "p_1785181471906",
@@ -1748,7 +2271,11 @@
       "precioCUP": 1600,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1785180901080",
@@ -1762,7 +2289,11 @@
       "precioCUP": 1950,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1781005769619",
@@ -1777,6 +2308,10 @@
       "moneda": "cup",
       "enOferta": true,
       "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      },
       "precioNormalUSD": 2.19,
       "precioNormalCUP": 1500
     },
@@ -1792,7 +2327,11 @@
       "precioCUP": 3425,
       "moneda": "usd",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1781005462535",
@@ -1806,7 +2345,11 @@
       "precioCUP": 11645,
       "moneda": "usd",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1788539890691",
@@ -1820,7 +2363,11 @@
       "precioCUP": 4795,
       "moneda": "usd",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1780452122083",
@@ -1834,7 +2381,11 @@
       "precioCUP": 23975,
       "moneda": "usd",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1780451802473",
@@ -1848,7 +2399,11 @@
       "precioCUP": 11645,
       "moneda": "usd",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1788038065429",
@@ -1862,7 +2417,11 @@
       "precioCUP": 600,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
     },
     {
       "id": "p_1788037932911",
@@ -1876,7 +2435,11 @@
       "precioCUP": 600,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
     },
     {
       "id": "p_1787412191026",
@@ -1890,7 +2453,11 @@
       "precioCUP": 800,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
     },
     {
       "id": "p_1786714572024",
@@ -1904,7 +2471,11 @@
       "precioCUP": 1000,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
     },
     {
       "id": "p_1780951622289",
@@ -1918,7 +2489,11 @@
       "precioCUP": 850,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
     },
     {
       "id": "p_1785181129029",
@@ -1932,7 +2507,11 @@
       "precioCUP": 8905,
       "moneda": "usd",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1787080747584",
@@ -1946,7 +2525,11 @@
       "precioCUP": 10275,
       "moneda": "usd",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1786922026243",
@@ -1960,7 +2543,11 @@
       "precioCUP": 5480,
       "moneda": "usd",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1784914843855",
@@ -1974,7 +2561,11 @@
       "precioCUP": 22605,
       "moneda": "usd",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1786732384337",
@@ -1989,6 +2580,10 @@
       "moneda": "usd",
       "enOferta": true,
       "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
       "precioNormalUSD": 20,
       "precioNormalCUP": 13700
     },
@@ -2004,7 +2599,11 @@
       "precioCUP": 20550,
       "moneda": "usd",
       "enOferta": false,
-      "destacado": true
+      "destacado": true,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1780092348854",
@@ -2018,7 +2617,11 @@
       "precioCUP": 4000,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1785006327470",
@@ -2032,7 +2635,11 @@
       "precioCUP": 26030,
       "moneda": "usd",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1785183311846",
@@ -2046,7 +2653,11 @@
       "precioCUP": 2535,
       "moneda": "usd",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1785006026614",
@@ -2060,7 +2671,11 @@
       "precioCUP": 7535,
       "moneda": "usd",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1788203335686",
@@ -2074,7 +2689,11 @@
       "precioCUP": 34250,
       "moneda": "usd",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1788730145038",
@@ -2088,7 +2707,11 @@
       "precioCUP": 23975,
       "moneda": "usd",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1788729005365",
@@ -2102,7 +2725,11 @@
       "precioCUP": 23975,
       "moneda": "usd",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1788728922579",
@@ -2116,7 +2743,11 @@
       "precioCUP": 23975,
       "moneda": "usd",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1788728731980",
@@ -2130,7 +2761,11 @@
       "precioCUP": 27400,
       "moneda": "usd",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1788633439812",
@@ -2144,7 +2779,11 @@
       "precioCUP": 23975,
       "moneda": "usd",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1788618415087",
@@ -2158,7 +2797,11 @@
       "precioCUP": 2055,
       "moneda": "usd",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1781640704239",
@@ -2172,7 +2815,11 @@
       "precioCUP": 6850,
       "moneda": "usd",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1785012145699",
@@ -2186,7 +2833,11 @@
       "precioCUP": 6165,
       "moneda": "usd",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1780956166935",
@@ -2201,6 +2852,10 @@
       "moneda": "cup",
       "enOferta": true,
       "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      },
       "precioNormalUSD": 0.73,
       "precioNormalCUP": 500
     },
@@ -2216,7 +2871,11 @@
       "precioCUP": 800,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
     },
     {
       "id": "p_1780951069722",
@@ -2230,7 +2889,11 @@
       "precioCUP": 450,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
     },
     {
       "id": "p_1780950975688",
@@ -2244,7 +2907,11 @@
       "precioCUP": 400,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
     },
     {
       "id": "p_1786930924590",
@@ -2258,7 +2925,11 @@
       "precioCUP": 800,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
     },
     {
       "id": "p_1780945492775",
@@ -2272,7 +2943,11 @@
       "precioCUP": 500,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
     },
     {
       "id": "p_1785275083288",
@@ -2286,7 +2961,11 @@
       "precioCUP": 400,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
     },
     {
       "id": "p_1785275149243",
@@ -2300,7 +2979,11 @@
       "precioCUP": 400,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
     },
     {
       "id": "p_1788150972260",
@@ -2314,7 +2997,11 @@
       "precioCUP": 1600,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1782329655762",
@@ -2328,7 +3015,11 @@
       "precioCUP": 500,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
     },
     {
       "id": "p_1788133110062",
@@ -2342,7 +3033,11 @@
       "precioCUP": 800,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
     },
     {
       "id": "p_1786922817374",
@@ -2356,7 +3051,11 @@
       "precioCUP": 1500,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1786917004897",
@@ -2370,7 +3069,11 @@
       "precioCUP": 2740,
       "moneda": "usd",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1786922877587",
@@ -2384,7 +3087,11 @@
       "precioCUP": 1500,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1788038977633",
@@ -2398,7 +3105,29 @@
       "precioCUP": 600,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
+    },
+    {
+      "id": "p_1788842619496",
+      "codigo": "7WEB",
+      "name": "Piscina",
+      "cat": "Niños",
+      "subcat": "",
+      "notes": "Piscina infantil inflable, la mejor opción para pasar una agradable tarde en familia y para el entretenimiento de los pequeños. Medidas en la imagen. Bombita de aire incluída",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788842305/productos/n7ucg0ccllewtwv4pc7a.jpg",
+      "precioUSD": 65,
+      "precioCUP": 44525,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1785092176064",
@@ -2413,6 +3142,10 @@
       "moneda": "cup",
       "enOferta": true,
       "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      },
       "precioNormalUSD": 0.73,
       "precioNormalCUP": 500
     },
@@ -2429,6 +3162,10 @@
       "moneda": "cup",
       "enOferta": true,
       "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      },
       "precioNormalUSD": 1.9,
       "precioNormalCUP": 1300
     },
@@ -2444,7 +3181,11 @@
       "precioCUP": 400,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
     },
     {
       "id": "p_1782343083267",
@@ -2458,7 +3199,11 @@
       "precioCUP": 1082,
       "moneda": "usd",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
     },
     {
       "id": "p_1785877916356",
@@ -2472,7 +3217,11 @@
       "precioCUP": 2055,
       "moneda": "usd",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1787942224757",
@@ -2486,7 +3235,11 @@
       "precioCUP": 2740,
       "moneda": "usd",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1787942484201",
@@ -2500,7 +3253,11 @@
       "precioCUP": 850,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
     },
     {
       "id": "p_1786919841226",
@@ -2514,7 +3271,11 @@
       "precioCUP": 2500,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1788732975824",
@@ -2528,7 +3289,11 @@
       "precioCUP": 2500,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1788792552863",
@@ -2542,7 +3307,11 @@
       "precioCUP": 2500,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1788732764849",
@@ -2556,7 +3325,11 @@
       "precioCUP": 2500,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1788792642568",
@@ -2570,7 +3343,11 @@
       "precioCUP": 2500,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1788733202430",
@@ -2584,7 +3361,11 @@
       "precioCUP": 2500,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1788792608822",
@@ -2598,7 +3379,11 @@
       "precioCUP": 2500,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1788034256550",
@@ -2612,7 +3397,11 @@
       "precioCUP": 4110,
       "moneda": "usd",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1788528610951",
@@ -2626,7 +3415,11 @@
       "precioCUP": 10275,
       "moneda": "usd",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1788528531092",
@@ -2640,7 +3433,11 @@
       "precioCUP": 10275,
       "moneda": "usd",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1787457655788",
@@ -2654,7 +3451,11 @@
       "precioCUP": 4110,
       "moneda": "usd",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1788551044899",
@@ -2668,7 +3469,11 @@
       "precioCUP": 1500,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1781213126908",
@@ -2682,7 +3487,11 @@
       "precioCUP": 12330,
       "moneda": "usd",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1781213598622",
@@ -2696,7 +3505,11 @@
       "precioCUP": 12330,
       "moneda": "usd",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1787458002424",
@@ -2710,7 +3523,11 @@
       "precioCUP": 2500,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1788151078303",
@@ -2724,7 +3541,11 @@
       "precioCUP": 1500,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1788199586927",
@@ -2738,7 +3559,11 @@
       "precioCUP": 1500,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1785875419963",
@@ -2752,7 +3577,11 @@
       "precioCUP": 3800,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1785533520877",
@@ -2767,6 +3596,10 @@
       "moneda": "usd",
       "enOferta": true,
       "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
       "precioNormalUSD": 12,
       "precioNormalCUP": 8220
     },
@@ -2783,6 +3616,10 @@
       "moneda": "usd",
       "enOferta": true,
       "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
       "precioNormalUSD": 12,
       "precioNormalCUP": 8220
     },
@@ -2799,6 +3636,10 @@
       "moneda": "usd",
       "enOferta": true,
       "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
       "precioNormalUSD": 12,
       "precioNormalCUP": 8220
     },
@@ -2815,6 +3656,10 @@
       "moneda": "usd",
       "enOferta": true,
       "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
       "precioNormalUSD": 12,
       "precioNormalCUP": 8220
     },
@@ -2830,7 +3675,11 @@
       "precioCUP": 2100,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1782339751417",
@@ -2844,7 +3693,11 @@
       "precioCUP": 800,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
     },
     {
       "id": "p_1782339821859",
@@ -2858,7 +3711,11 @@
       "precioCUP": 800,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
     },
     {
       "id": "p_1786917303962",
@@ -2872,7 +3729,11 @@
       "precioCUP": 8220,
       "moneda": "usd",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1785088536626",
@@ -2886,7 +3747,11 @@
       "precioCUP": 3500,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1785533206456",
@@ -2900,7 +3765,11 @@
       "precioCUP": 10275,
       "moneda": "usd",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1786991410391",
@@ -2914,7 +3783,11 @@
       "precioCUP": 300,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
     },
     {
       "id": "p_1780614185839",
@@ -2929,6 +3802,10 @@
       "moneda": "cup",
       "enOferta": true,
       "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      },
       "precioNormalUSD": 0.99,
       "precioNormalCUP": 680
     },
@@ -2944,7 +3821,11 @@
       "precioCUP": 10960,
       "moneda": "usd",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1788235176773",
@@ -2958,7 +3839,11 @@
       "precioCUP": 500,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
     },
     {
       "id": "p_1788138688106",
@@ -2972,7 +3857,11 @@
       "precioCUP": 685,
       "moneda": "usd",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
     },
     {
       "id": "p_1780346613571",
@@ -2986,7 +3875,11 @@
       "precioCUP": 2000,
       "moneda": "cup",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1788541433924",
@@ -3000,7 +3893,11 @@
       "precioCUP": 4795,
       "moneda": "usd",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1788542394214",
@@ -3014,7 +3911,11 @@
       "precioCUP": 10275,
       "moneda": "usd",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1787765188160",
@@ -3028,7 +3929,11 @@
       "precioCUP": 20550,
       "moneda": "usd",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1780277915922",
@@ -3043,6 +3948,10 @@
       "moneda": "usd",
       "enOferta": true,
       "destacado": true,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
       "precioNormalUSD": 55,
       "precioNormalCUP": 37675
     },
@@ -3058,7 +3967,11 @@
       "precioCUP": 10275,
       "moneda": "usd",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1785533281949",
@@ -3072,7 +3985,11 @@
       "precioCUP": 4110,
       "moneda": "usd",
       "enOferta": false,
-      "destacado": false
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     }
   ]
 }
