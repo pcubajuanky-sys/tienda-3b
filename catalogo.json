@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-08T08:50:32.046Z",
+  "generado": "2026-09-08T12:31:15.096Z",
   "tasa": 685,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -512,7 +512,7 @@
       "precioCUP": 17125,
       "moneda": "usd",
       "enOferta": false,
-      "destacado": true,
+      "destacado": false,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -622,11 +622,12 @@
       "precioCUP": 325375,
       "moneda": "usd",
       "enOferta": false,
-      "destacado": false,
+      "destacado": true,
       "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+        "corto": "🚚 Transporte aparte",
+        "largo": "🚚 Por su tamaño, el transporte se coordina por WhatsApp según tu zona"
+      },
+      "envioAparte": true
     },
     {
       "id": "p_1785877309060",
@@ -1783,7 +1784,7 @@
       "precioCUP": 10275,
       "moneda": "usd",
       "enOferta": false,
-      "destacado": false,
+      "destacado": true,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
