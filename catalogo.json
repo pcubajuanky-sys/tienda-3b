@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-09T15:05:44.111Z",
+  "generado": "2026-09-09T21:36:04.161Z",
   "tasa": 685,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -38,6 +38,10 @@
     {
       "code": "R7K9J",
       "nombre": "Saira Ramírez Perez"
+    },
+    {
+      "code": "APB",
+      "nombre": "Angela"
     }
   ],
   "categorias": [
