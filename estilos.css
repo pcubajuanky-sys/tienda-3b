@@ -215,6 +215,13 @@ a{color:inherit}
   font-size:11px;font-weight:500;color:var(--text-2);max-width:1180px;
   margin:4px auto 0;opacity:.9;line-height:1.3;
 }
+/* Banda de campaña (Navidad, aniversario...). Reusa .promo entera y solo cambia
+   el color, para que las dos bandas se lean como el mismo sistema. Sin
+   ilustración a propósito: dos SVG apilados en la portada compiten entre sí. */
+.promo-campana{
+  background:var(--brand);color:#fff;
+}
+.promo-campana .promo-linea{font-size:15px}
 @media (prefers-reduced-motion:reduce){
   .promo-ilustracion{transition:none}
 }
@@ -766,4 +773,24 @@ button.footer-link{background:none;border:none;font-family:inherit;cursor:pointe
 .envio-detalle {
   margin-top: 8px; font-size: 13px; font-weight: 600; color: var(--wa);
   line-height: 1.4;
+}
+
+/* ── Conmutador de mundos (3B Store / Taxi 3B) ──
+   Vive en la cabecera de las DOS paginas. Son enlaces de verdad: si el
+   JavaScript falla, el cliente sigue pudiendo cambiar de mundo. */
+.mundos{display:flex;gap:6px;align-items:center;margin-left:auto;margin-right:10px}
+.mundo{
+  display:inline-flex;align-items:center;gap:6px;
+  padding:7px 12px;border-radius:999px;
+  font-size:13px;font-weight:600;text-decoration:none;
+  color:var(--text-2);background:var(--surface-2);
+  border:1px solid var(--border);white-space:nowrap;
+  transition:background var(--dur),color var(--dur);
+}
+.mundo:hover{color:var(--text)}
+.mundo-on{background:var(--brand);color:var(--brand-ink);border-color:var(--brand)}
+.mundo-on:hover{color:var(--brand-ink)}
+@media (max-width:479px){
+  .mundo{padding:6px 9px;font-size:12px}
+  .mundo span{font-size:14px}
 }

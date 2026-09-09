@@ -784,6 +784,21 @@ function renderPromoEnvio() {
   fina.textContent = eg.textoFino;
 }
 
+// Banda de campaña. El texto llega ya compuesto desde Stock+
+// (CAT.tienda.campana); la tienda no calcula reglas de negocio. Ausente o null ⇒
+// la banda no se pinta y la portada queda idéntica a como estaba.
+function pintarCampana() {
+  const el = document.getElementById('promo-campana');
+  if (!el) return;
+  const c = (CAT && CAT.tienda && CAT.tienda.campana) || null;
+  const texto = c ? String(c.texto || '').trim() : '';
+  el.hidden = !texto;
+  if (!texto) return;
+  const pct = Number(c.pct) || 0;
+  document.getElementById('promo-campana-texto').textContent =
+    pct > 0 ? `${texto} · ${pct}% de descuento 🎉` : `${texto} 🎉`;
+}
+
 function lineaCarritoHtml(p, qty, clave) {
   const foto = fotoCard(p.photo);
   return `<div class="linea">
@@ -1150,6 +1165,7 @@ async function cargarCatalogo() {
   renderGrid();
   renderFooterExtra();
   renderPromoEnvio();
+  pintarCampana();
   document.getElementById('skeleton').hidden = true;
   document.getElementById('grid').hidden = false;
 }
