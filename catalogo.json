@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-08T19:04:01.715Z",
+  "generado": "2026-09-09T00:20:45.407Z",
   "tasa": 685,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -819,24 +819,6 @@
       }
     },
     {
-      "id": "p_1788842246886",
-      "codigo": "H8HN",
-      "name": "Cesta organizadora",
-      "cat": "Hogar",
-      "subcat": "",
-      "notes": "Cesta organizadora para diversos usos. Color y medidas en la imagen",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788842125/productos/le7zv3buhoescjdcu4em.jpg",
-      "precioUSD": 2,
-      "precioCUP": 1370,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
-      }
-    },
-    {
       "id": "p_1785528271738",
       "codigo": "HZN2",
       "name": "Chancletas de playa 🏖️",
@@ -1106,6 +1088,24 @@
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
+    },
+    {
+      "id": "p_1788907857613",
+      "codigo": "DNHA",
+      "name": "Creatina Monohidratada Micronizada",
+      "cat": "Gym y Suplementos",
+      "subcat": "",
+      "notes": "Beneficios de esta creatina:\nAumenta la fuerza y potencia muscular\nMejora el rendimiento en ejercicios de alta intensidad\nFavorece el crecimiento y recuperación muscular\nApoya la función cognitiva\nFórmula micronizada + complejo de Maca y Shilajit para potenciar resultados\nContiene 300 g, lo que equivale a 60 servicios (5 g por porción).",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788907712/productos/on2wggnxyfkkyazwr6g9.jpg",
+      "precioUSD": 15,
+      "precioCUP": 10275,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
       }
     },
     {
@@ -2000,6 +2000,15 @@
       "moneda": "cup",
       "enOferta": false,
       "destacado": false,
+      "variantes": {
+        "ejes": [
+          "color"
+        ],
+        "opciones": [
+          "NEGRAS",
+          "BLANCAS"
+        ]
+      },
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
