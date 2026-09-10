@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-10T02:46:53.887Z",
+  "generado": "2026-09-10T08:16:54.158Z",
   "tasa": 685,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -806,6 +806,33 @@
       }
     },
     {
+      "id": "p_1789009670078",
+      "codigo": "9C9Q",
+      "name": "Cartera billetera",
+      "cat": "Bolsos Carteras Mochilas monederos",
+      "subcat": "",
+      "notes": "Útil,ligera, con varios compartimentos para billetes 💵 , tarjetas 💳 y documentos. Regalo perfecto para pareja, papá o maestros",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789009495/productos/sgovgdklrsvqo2kjornd.jpg",
+      "precioUSD": 3,
+      "precioCUP": 2055,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Color"
+        ],
+        "opciones": [
+          "MARRÓN",
+          "NEGRO"
+        ]
+      },
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
       "id": "p_1788234125684",
       "codigo": "X8RX",
       "name": "Cesta de lavado",
@@ -1015,6 +1042,24 @@
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788537413/productos/slyafhkdssobyp1tgvlu.jpg",
       "precioUSD": 22,
       "precioCUP": 15070,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
+      "id": "p_1789009285327",
+      "codigo": "2HCR",
+      "name": "Conjunto de prendas de hombre",
+      "cat": "Reloj y Prendas",
+      "subcat": "",
+      "notes": "Conjunto de reloj con pulsera cadena y anillo de hombre. Calidad y belleza. El regalo perfecto para papá, maestro o pareja.",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789009051/productos/bmzalrdyrxsxvoxqelqx.jpg",
+      "precioUSD": 12,
+      "precioCUP": 8220,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -2469,6 +2514,34 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
+      "id": "p_1789009525416",
+      "codigo": "3YGM",
+      "name": "Mochila negra",
+      "cat": "Bolsos Carteras Mochilas monederos",
+      "subcat": "",
+      "notes": "Mochilas de color negro con detalles en verde💚,naranja 🧡 o gris🩶. Mochilas escolares. Tamaño exacto en la imagen.",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789009348/productos/lfuym6qdwytctqcg9uds.jpg",
+      "precioUSD": 0,
+      "precioCUP": 0,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Color"
+        ],
+        "opciones": [
+          "NEGRO CON VERDE",
+          "NEGRO CON NARANJA",
+          "NEGRO CON GRIS"
+        ]
+      },
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
       }
     },
     {
