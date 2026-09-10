@@ -1,0 +1,4 @@
+# Gemelo de los "rewrites" de vercel.json, para Cloudflare Pages.
+# Vercel lee vercel.json y NO lee este archivo; Cloudflare lee este y NO lee aquel.
+# Si se cambia una regla aqui o alla, hay que replicarla en el otro archivo.
+/taxi  /taxi.html  200

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#7A2E5D">
+<title>Taxi 3B — Viajes desde San Antonio de los Baños con precio cerrado</title>
+<meta name="description" content="Calcula lo que cuesta tu viaje antes de montarte: La Habana, aeropuerto, playas y más. Viajes privados y asientos compartidos. Coordinamos por WhatsApp.">
+<link rel="canonical" href="https://www.3bqba.com/taxi">
+<link rel="icon" href="/favicon-3b.png" type="image/png">
+<link rel="apple-touch-icon" href="/favicon-3b.png">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Taxi 3B">
+<meta property="og:title" content="Taxi 3B — Viajes con precio cerrado">
+<meta property="og:description" content="Calcula lo que cuesta tu viaje antes de montarte. Viajes privados y asientos compartidos.">
+<meta property="og:url" content="https://www.3bqba.com/taxi">
+<meta property="og:image" content="https://www.3bqba.com/taxi-portada.jpg">
+<meta property="og:image:width" content="1000">
+<meta property="og:image:height" content="450">
+<meta property="og:locale" content="es_CU">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Taxi 3B — Viajes con precio cerrado">
+<meta name="twitter:description" content="Calcula lo que cuesta tu viaje antes de montarte. Viajes privados y asientos compartidos.">
+<meta name="twitter:image" content="https://www.3bqba.com/taxi-portada.jpg">
+
+<link rel="stylesheet" href="estilos.css">
+<link rel="stylesheet" href="taxi.css">
+</head>
+<body>
+
+<header class="header" id="header">
+  <div class="header-top wrap">
+    <a href="/" class="logo" aria-label="3B — inicio">
+      <img class="logo-img" src="/logo-3b.png" width="320" height="320" alt="" aria-hidden="true">
+    </a>
+    <nav class="mundos" aria-label="Nuestros servicios">
+      <a class="mundo" href="/"><span aria-hidden="true">🛍</span> 3B Store</a>
+      <a class="mundo mundo-on" href="/taxi" aria-current="page"><span aria-hidden="true">🚕</span> Taxi 3B</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap tx-main">
+
+  <section class="tx-portada">
+    <img class="tx-portada-img" src="taxi-portada.jpg" width="1000" height="450"
+         alt="Taxi 3B: buen servicio, buen precio y puntualidad. A cualquier destino."
+         fetchpriority="high">
+    <h1 id="tx-titulo">Taxi 3B</h1>
+    <p class="tx-lema" id="tx-lema">Tu destino, mi camino.</p>
+  </section>
+
+  <!-- Quien trajo al cliente. Solo aparece si el codigo del enlace es valido. -->
+  <p class="tx-ref" id="tx-ref" hidden>
+    Vienes de parte de <b id="tx-ref-nombre"></b>.
+    <button type="button" id="tx-ref-quitar" class="tx-ref-quitar">No es así</button>
+  </p>
+
+  <!-- Estado: el taxi todavia no esta encendido -->
+  <section class="tx-aviso" id="tx-apagado" hidden>
+    <p><b>Muy pronto.</b> Estamos afinando los precios. Escríbenos y te decimos el costo de tu viaje al momento.</p>
+    <a class="tx-wa" id="tx-wa-apagado" target="_blank" rel="noopener">💬 Escríbenos por WhatsApp</a>
+  </section>
+
+  <!-- Estado: taxi.json no cargo. El cliente NUNCA se queda sin puerta. -->
+  <section class="tx-aviso" id="tx-error" hidden>
+    <p>No pudimos cargar los precios. Revisa tu conexión o escríbenos y te cotizamos al momento.</p>
+    <button class="tx-secundario" id="tx-reintentar" type="button">Reintentar</button>
+  </section>
+
+  <!-- La calculadora -->
+  <section class="tx-calc" id="tx-calc" hidden aria-labelledby="tx-calc-titulo">
+    <h2 id="tx-calc-titulo">Calcula tu viaje</h2>
+
+    <label class="tx-campo" for="tx-destino">
+      <span>¿A dónde vas?</span>
+      <select id="tx-destino"></select>
+    </label>
+
+    <label class="tx-campo" for="tx-asientos">
+      <span>¿Compartes el viaje?</span>
+      <select id="tx-asientos">
+        <option value="1">Voy solo — viaje privado</option>
+        <option value="2">Entre 2 personas</option>
+        <option value="3">Entre 3 personas</option>
+        <option value="4">Entre 4 personas</option>
+      </select>
+    </label>
+
+    <label class="tx-campo" for="tx-horas" id="tx-horas-wrap">
+      <span>¿Quieres que te esperemos?</span>
+      <select id="tx-horas">
+        <option value="0">No hace falta</option>
+        <option value="1">Espérame 1 hora</option>
+        <option value="2">Espérame 2 horas</option>
+        <option value="3">Espérame 3 horas</option>
+        <option value="4">Espérame 4 horas</option>
+        <option value="6">Espérame 6 horas</option>
+        <option value="8">Espérame 8 horas</option>
+      </select>
+    </label>
+
+    <div class="tx-resultado" id="tx-resultado" aria-live="polite"></div>
+    <p class="tx-nota-viaje">El viaje se cobra completo: el carro va y regresa igual, vuelvas o no con nosotros.</p>
+
+    <div class="tx-acciones">
+      <a class="tx-wa" id="tx-pedir" target="_blank" rel="noopener">💬 Pedir por WhatsApp</a>
+      <button class="tx-secundario" id="tx-compartir" type="button">🔗 Compartir cotización</button>
+    </div>
+  </section>
+
+  <!-- Destino que no esta en la lista -->
+  <section class="tx-otro" id="tx-otro" hidden>
+    <h2>¿Vas a otro lugar?</h2>
+    <p>Escríbenos a dónde necesitas ir y te decimos el precio al momento.</p>
+    <label class="tx-campo" for="tx-otro-destino">
+      <span>¿A dónde?</span>
+      <input type="text" id="tx-otro-destino" placeholder="Ej: Playa Baracoa" autocomplete="off">
+    </label>
+    <a class="tx-wa" id="tx-otro-wa" target="_blank" rel="noopener">💬 Consultar por WhatsApp</a>
+  </section>
+
+  <!-- Pizarra de salidas compartidas -->
+  <section class="tx-pizarra" id="tx-pizarra" hidden aria-labelledby="tx-pizarra-titulo">
+    <h2 id="tx-pizarra-titulo">Viajes compartidos</h2>
+    <p class="tx-sello" id="tx-sello"></p>
+    <div id="tx-salidas"></div>
+  </section>
+
+  <!-- Proponer un viaje -->
+  <section class="tx-propon" id="tx-propon" hidden>
+    <h2>Propón tu viaje</h2>
+    <p>Dinos cuándo y a dónde quieres ir y cuántos asientos compartes. Juntamos gente y te avisamos.</p>
+    <div class="tx-propon-campos">
+      <label class="tx-campo" for="tx-p-fecha"><span>¿Qué día?</span><input type="date" id="tx-p-fecha"></label>
+      <label class="tx-campo" for="tx-p-franja"><span>¿A qué hora?</span>
+        <select id="tx-p-franja">
+          <option value="por la mañana">Por la mañana</option>
+          <option value="al mediodía">Al mediodía</option>
+          <option value="por la tarde">Por la tarde</option>
+          <option value="por la noche">Por la noche</option>
+        </select>
+      </label>
+      <label class="tx-campo" for="tx-p-destino"><span>¿A dónde?</span><input type="text" id="tx-p-destino" autocomplete="off"></label>
+      <label class="tx-campo" for="tx-p-asientos"><span>Asientos que compartes</span>
+        <select id="tx-p-asientos"><option>1</option><option>2</option><option selected>3</option></select>
+      </label>
+    </div>
+    <a class="tx-wa" id="tx-propon-wa" target="_blank" rel="noopener">💬 Enviar mi propuesta</a>
+  </section>
+
+  <!-- Reclamo de referidores. Mismo patron que el de gestores de la tienda:
+       es un <button> que abre un recuadro con los tres pasos, NO WhatsApp
+       directo, para que la gente lea antes de escribir. -->
+  <button type="button" class="cta-comi" id="tx-cta-gana" hidden>
+    <span class="cta-comi-txt">
+      <span class="cta-comi-tit">Gana con Taxi 3B</span>
+      <span class="cta-comi-sub">Comparte tu enlace con tu gente y cobra por cada viaje que entre por él. Sin poner carro ni dinero.</span>
+    </span>
+    <span class="cta-comi-btn">Quiero mi enlace</span>
+  </button>
+
+  <section class="tx-pie" id="tx-pie">
+    <h2>Cómo funciona</h2>
+    <ol>
+      <li>Eliges a dónde vas y ves el precio al momento.</li>
+      <li>Nos escribes por WhatsApp y coordinamos la hora.</li>
+      <li>Te montas sabiendo lo que pagas. Sin sorpresas.</li>
+    </ol>
+    <p class="tx-texto" id="tx-incluye" hidden></p>
+    <p class="tx-texto" id="tx-zonas" hidden></p>
+    <p class="tx-texto" id="tx-politica" hidden></p>
+    <p class="tx-fina" id="tx-litro" hidden></p>
+    <p class="tx-fina">Los precios pueden variar según la gasolina y la tasa del día.</p>
+  </section>
+
+</main>
+
+<div id="tx-modal-gana" class="modal" hidden role="dialog" aria-modal="true" aria-labelledby="tx-gana-titulo">
+  <div class="modal-fondo" id="tx-gana-fondo" tabindex="-1"></div>
+  <div class="modal-caja">
+    <button class="modal-cerrar" id="tx-gana-cerrar" aria-label="Cerrar" type="button">✕</button>
+    <div class="modal-body">
+      <h2 id="tx-gana-titulo">Gana con Taxi 3B</h2>
+      <p class="comi-intro">Sin poner carro, sin poner dinero y sin manejar nada.</p>
+      <p class="tx-gana-cifra" id="tx-gana-cifra" hidden></p>
+      <ol class="comi-pasos">
+        <li><b>Te damos tu enlace.</b> Nos escribes, nos dices tu nombre, y te mandamos tu código.</li>
+        <li><b>Lo compartes.</b> Con tu familia, tus amigos, tu grupo, tu Facebook. Donde quieras.</li>
+        <li><b>Cobras.</b> Cada viaje que entre por tu enlace queda a tu nombre y se te paga.</li>
+      </ol>
+      <a class="comi-wa" id="tx-gana-wa" target="_blank" rel="noopener">Escríbenos por WhatsApp</a>
+    </div>
+  </div>
+</div>
+
+<script src="taxi.js"></script>
+</body>
+</html>

@@ -1,0 +1,170 @@
+/* taxi.css — Taxi 3B. Hereda de estilos.css los radios, la sombra y el modo
+   oscuro. Los colores propios (verde, amarillo, negro) salen del flyer del
+   chofer: es su marca, no una invencion. La tienda NO los usa.
+   Sus dos mundos comparten estructura; el color es lo que los distingue. */
+
+:root{
+  --tx-verde:      #137A3A;   /* el verde del Moskvich; para textos y acentos */
+  --tx-caja:       #137A3A;   /* fondo de la caja del precio; NUNCA se aclara */
+  --tx-amarillo:   #F2C40C;   /* el amarillo del rotulo TAXI */
+  --tx-negro:      #141414;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --tx-verde:    #35C46B;   /* de noche el verde se aclara para poder leerlo */
+    --tx-caja:     #0E5C2C;   /* pero la caja se oscurece, para el amarillo encima */
+    --tx-amarillo: #FFD83A;
+  }
+}
+
+/* El fondo de color. La imagen va DIFUMINADA a proposito: el flyer tiene texto
+   grande y, puesta nitida detras del contenido, lo vuelve ilegible. Difuminada
+   aporta el color y la atmosfera sin competir con nada.
+   🔴 El difuminado NO se hace con `filter: blur()`. `taxi-fondo.jpg` mide
+   32x32 px (1 KB) y el navegador lo estira: el suavizado del reescalado ES el
+   desenfoque, gratis. Un blur de CSS a pantalla completa y fijo obliga a
+   repintar una capa enorme en cada scroll y ahoga a los Android baratos, que
+   son los telefonos de esta clientela. Se probo y se descarto. */
+html{background:var(--bg)}
+body{background:transparent}
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-2;
+  background:url('taxi-fondo.jpg') center/cover no-repeat;
+  opacity:.85;
+}
+/* Velo: garantiza el contraste del texto pase lo que pase con la foto. Se aclara
+   arriba (donde solo hay titulos grandes) y se cierra abajo, que es donde hay
+   texto pequeno directamente sobre el fondo. */
+body::after{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-1;
+  background:linear-gradient(180deg, rgba(250,247,245,.42), rgba(250,247,245,.80));
+}
+@media (prefers-color-scheme: dark){
+  body::before{opacity:.70}
+  body::after{background:linear-gradient(180deg, rgba(20,16,23,.50), rgba(20,16,23,.86))}
+}
+
+.tx-main{padding-top:18px}
+
+.tx-portada{text-align:center;padding:8px 0 6px}
+/* Apaisada (2,17:1) a proposito: cuadrada empujaba la calculadora fuera de la
+   pantalla del movil, que es lo unico que el cliente viene a usar. */
+.tx-portada-img{
+  display:block;width:100%;max-width:560px;height:auto;margin:0 auto 14px;
+  border-radius:var(--radio-hoja);
+  box-shadow:var(--sombra);
+}
+.tx-portada h1{font-size:30px;letter-spacing:-.5px}
+.tx-lema{color:var(--text-2);margin-top:6px;font-size:15px}
+
+.tx-nota-viaje{font-size:12px;color:var(--text-3);text-align:center;margin:-6px 0 12px}
+
+/* "Vienes de parte de X". Discreto: es informacion para el chofer, no una
+   promocion; el cliente no tiene que hacer nada con esto. */
+.tx-ref{
+  max-width:560px;margin:0 auto 8px;padding:8px 12px;
+  background:var(--brand-soft);border-radius:var(--radio-control);
+  font-size:13px;color:var(--text-2);text-align:center;
+}
+.tx-ref b{color:var(--text)}
+.tx-ref-quitar{
+  background:none;border:none;cursor:pointer;padding:0 0 0 6px;
+  font-size:12px;color:var(--text-3);text-decoration:underline;
+}
+
+.tx-calc,.tx-pizarra,.tx-propon,.tx-otro,.tx-pie,.tx-aviso{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:var(--radio-hoja);
+  box-shadow:var(--sombra);
+  padding:18px;
+  margin:16px auto;
+  max-width:560px;
+}
+.tx-calc h2,.tx-pizarra h2,.tx-propon h2,.tx-otro h2,.tx-pie h2{font-size:18px;margin-bottom:12px}
+
+.tx-campo{display:block;margin-bottom:12px}
+.tx-campo>span,.tx-campo>legend{
+  display:block;font-size:13px;font-weight:600;color:var(--text-2);margin-bottom:5px;
+}
+.tx-campo select,.tx-campo input[type="text"],.tx-campo input[type="date"]{
+  width:100%;padding:11px 12px;font-size:15px;
+  color:var(--text);background:var(--bg);
+  border:1px solid var(--border);border-radius:var(--radio-control);
+}
+.tx-opciones{border:0;padding:0}
+.tx-radio{display:inline-flex;align-items:center;gap:6px;margin-right:16px;font-size:15px}
+
+/* El precio va sobre el verde del carro, con el amarillo del rotulo: es la
+   combinacion del flyer y lo que hace que la pagina se lea "taxi" de un vistazo.
+   OJO: la caja se queda en verde OSCURO tambien de noche (no usa --tx-verde, que
+   de noche se aclara para los textos). Amarillo sobre verde claro no se lee. */
+.tx-resultado{
+  background:var(--tx-caja);border-radius:var(--radio-card);
+  padding:16px;margin:14px 0;text-align:center;
+  border:2px solid var(--tx-amarillo);
+}
+.tx-precio{font-size:32px;font-weight:800;letter-spacing:-1px;color:var(--tx-amarillo)}
+/* Sobre el verde, los textos secundarios van en blanco: el gris de la marca
+   (--text-2) desaparece ahi. */
+.tx-precio-usd{font-size:13px;color:rgba(255,255,255,.88);margin-top:2px}
+.tx-vigencia{font-size:12px;color:rgba(255,255,255,.80);margin-top:8px}
+.tx-caducado{color:var(--tx-amarillo);font-weight:700}
+.tx-desglose{font-size:12px;color:rgba(255,255,255,.80);margin-top:6px}
+
+.tx-acciones{display:flex;flex-direction:column;gap:8px}
+.tx-wa{
+  display:block;text-align:center;text-decoration:none;
+  background:var(--wa);color:#fff;font-weight:700;font-size:16px;
+  padding:14px;border-radius:var(--radio-control);
+}
+.tx-secundario{
+  display:block;width:100%;text-align:center;cursor:pointer;
+  background:var(--surface-2);color:var(--text);font-weight:600;font-size:15px;
+  padding:12px;border:1px solid var(--border);border-radius:var(--radio-control);
+}
+
+/* El reclamo de referidores reusa .cta-comi de la tienda, pero vestido de taxi:
+   alli vive dentro de la rejilla de productos (grid-column) y va en morado. */
+.tx-main .cta-comi{
+  grid-column:auto;
+  max-width:560px;margin:16px auto;
+  background:var(--tx-caja);color:#fff;
+  border-bottom-color:rgba(0,0,0,.35);
+}
+.tx-main .cta-comi-btn{background:var(--tx-amarillo);color:var(--tx-negro)}
+
+/* La cifra del referido: es el reclamo, tiene que verse. */
+.tx-gana-cifra{
+  background:var(--tx-caja);color:#fff;
+  border:2px solid var(--tx-amarillo);border-radius:var(--radio-card);
+  padding:12px 14px;margin:0 0 14px;font-size:14px;line-height:1.5;text-align:center;
+}
+.tx-gana-cifra b{color:var(--tx-amarillo);font-size:18px}
+
+.tx-sello{font-size:12px;color:var(--text-3);margin-bottom:10px}
+.tx-salida{
+  border:1px solid var(--border);border-radius:var(--radio-card);
+  padding:12px;margin-bottom:10px;
+}
+.tx-salida-cab{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.tx-salida-cuando{font-weight:700}
+.tx-salida-precio{font-weight:800;color:var(--tx-verde);white-space:nowrap}
+.tx-salida-info{font-size:13px;color:var(--text-2);margin:4px 0 10px}
+.tx-salida-lleno{color:var(--oferta);font-weight:600}
+
+.tx-propon-campos{display:grid;gap:0}
+.tx-texto{font-size:14px;color:var(--text-2);margin-top:10px}
+.tx-fina{font-size:12px;color:var(--text-3);margin-top:10px}
+.tx-pie ol{margin:0 0 4px 18px;font-size:14px;color:var(--text-2)}
+.tx-pie li{margin-bottom:4px}
+
+@media (min-width:640px){
+  .tx-propon-campos{grid-template-columns:1fr 1fr;gap:0 14px}
+}

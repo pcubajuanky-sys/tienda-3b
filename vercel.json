@@ -1,5 +1,6 @@
 {
   "rewrites": [
+    { "source": "/taxi", "destination": "/taxi.html" },
     { "source": "/((?!.*\\.).*)", "destination": "/index.html" }
   ],
   "headers": [

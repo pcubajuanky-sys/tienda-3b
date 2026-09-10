@@ -696,8 +696,10 @@ body.con-barra-movil{padding-bottom:var(--barra-movil-h, 84px)}
 .cta-comi:hover{transform:translateY(-1px)}
 .cta-comi:active{transform:translateY(3px);border-bottom-width:2px}
 .cta-comi-txt{flex:1 1 220px;min-width:0}
-.cta-comi-tit{font-size:clamp(17px,2.6vw,21px);font-weight:700;line-height:1.25}
-.cta-comi-sub{font-size:13px;line-height:1.5;margin-top:4px;opacity:.92}
+/* display:block en los dos (2026-09-09): son <span>, y sin esto el titulo y la
+   explicacion se pegan en la misma linea y el titulo se pierde dentro de la frase. */
+.cta-comi-tit{display:block;font-size:clamp(17px,2.6vw,21px);font-weight:700;line-height:1.25}
+.cta-comi-sub{display:block;font-size:13px;line-height:1.5;margin-top:4px;opacity:.92}
 .cta-comi-btn{
   flex:none;background:var(--brand-ink);color:var(--brand);
   border-radius:var(--radio-control);padding:11px 18px;
