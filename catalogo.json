@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-09T21:36:04.161Z",
+  "generado": "2026-09-10T02:46:53.887Z",
   "tasa": 685,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -168,6 +168,7 @@
         "tel": "5354978966"
       }
     ],
+    "campana": null,
     "taxiActivo": false
   },
   "items": [
