@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-11T12:58:39.479Z",
+  "generado": "2026-09-11T18:26:23.185Z",
   "tasa": 690,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -560,6 +560,24 @@
       },
       "precioNormalUSD": 0.87,
       "precioNormalCUP": 600
+    },
+    {
+      "id": "p_1786803816356",
+      "codigo": "DU4A",
+      "name": "Audífonos inalámbricos X15",
+      "cat": "Bocinas Celulares y Accesorios",
+      "subcat": "",
+      "notes": "Audífonos inalámbricos X15, ligeros y con su estuche de carga.",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786803730/productos/p34guyzzkxjrpwyw39ya.jpg",
+      "precioUSD": 4.64,
+      "precioCUP": 3200,
+      "moneda": "cup",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1787957504529",
@@ -2469,8 +2487,8 @@
       "subcat": "",
       "notes": "Mochilas de color negro con detalles en verde💚,naranja 🧡 o gris🩶. Mochilas escolares. Tamaño exacto en la imagen.",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789009348/productos/lfuym6qdwytctqcg9uds.jpg",
-      "precioUSD": 0,
-      "precioCUP": 0,
+      "precioUSD": 12,
+      "precioCUP": 8280,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -2485,8 +2503,8 @@
         ]
       },
       "envio": {
-        "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
       }
     },
     {
