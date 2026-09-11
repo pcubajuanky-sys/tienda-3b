@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-10T19:26:21.680Z",
+  "generado": "2026-09-11T00:56:22.183Z",
   "tasa": 685,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -823,8 +823,7 @@
           "Color"
         ],
         "opciones": [
-          "MARRÓN",
-          "NEGRO"
+          "MARRÓN"
         ]
       },
       "envio": {
@@ -1078,24 +1077,6 @@
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787498185/productos/xzhldk5amcaolopit8ep.jpg",
       "precioUSD": 3.65,
       "precioCUP": 2500,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      }
-    },
-    {
-      "id": "p_1787453074243",
-      "codigo": "LMJT",
-      "name": "Conjunto de tobilleras de acero",
-      "cat": "Reloj y Prendas",
-      "subcat": "",
-      "notes": "Exactamente el diseño de la imagen",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787452945/productos/kcphqfvxglq6sbtux4k8.jpg",
-      "precioUSD": 2.19,
-      "precioCUP": 1500,
       "moneda": "cup",
       "enOferta": false,
       "destacado": false,
@@ -1408,24 +1389,6 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
-    },
-    {
-      "id": "p_1785273242889",
-      "codigo": "7TQG",
-      "name": "Felpas",
-      "cat": "Cabello",
-      "subcat": "",
-      "notes": "El paquete trae 10 felpas de variedad de tonos entre negro, beige y marrones",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785273079/productos/whewbdjl7d9qstvywsrg.jpg",
-      "precioUSD": 1.75,
-      "precioCUP": 1200,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
       }
     },
     {
@@ -3228,24 +3191,6 @@
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785877702/productos/dae2dqoqxjjctvsgynmo.jpg",
       "precioUSD": 3,
       "precioCUP": 2055,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      }
-    },
-    {
-      "id": "p_1787942224757",
-      "codigo": "WPV9",
-      "name": "Pulceras rígidas doradas",
-      "cat": "Reloj y Prendas",
-      "subcat": "",
-      "notes": "Conjunto de 3 pulseras elegantes, de acero quirúrgico. Alta calidad y duración",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787942111/productos/mqaao6xugcariaxnsr1v.jpg",
-      "precioUSD": 4,
-      "precioCUP": 2740,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
