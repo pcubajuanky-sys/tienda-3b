@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-11T18:26:23.185Z",
+  "generado": "2026-09-11T21:10:47.667Z",
   "tasa": 690,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -169,7 +169,7 @@
       }
     ],
     "campana": null,
-    "taxiActivo": false
+    "taxiActivo": true
   },
   "items": [
     {
@@ -795,9 +795,9 @@
       "subcat": "",
       "notes": "Cafetera italiana para café expreso",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788891782/productos/b8cptn2c5lert8u7rad6.jpg",
-      "precioUSD": 7.3,
-      "precioCUP": 5037,
-      "moneda": "usd",
+      "precioUSD": 7.25,
+      "precioCUP": 5000,
+      "moneda": "cup",
       "enOferta": false,
       "destacado": false,
       "envio": {
