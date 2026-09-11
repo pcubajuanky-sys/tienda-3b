@@ -1,8 +1,8 @@
 {
-  "generado": "2026-09-10T01:53:54.497Z",
+  "generado": "2026-09-11T21:10:31.230Z",
   "vigenciaHoras": 48,
-  "activo": false,
-  "tasa": 685,
+  "activo": true,
+  "tasa": 690,
   "whatsapp": "5358856820",
   "whatsappAltas": "5354978966",
   "marca": {
@@ -16,75 +16,147 @@
   "mostrarDesglose": false,
   "referidores": [],
   "comisionPorKmCUP": 20,
+  "agenda": [
+    {
+      "fecha": "2026-09-11",
+      "manana": false,
+      "tarde": false
+    },
+    {
+      "fecha": "2026-09-12",
+      "manana": false,
+      "tarde": false
+    },
+    {
+      "fecha": "2026-09-13",
+      "manana": false,
+      "tarde": false
+    },
+    {
+      "fecha": "2026-09-14",
+      "manana": false,
+      "tarde": false
+    },
+    {
+      "fecha": "2026-09-15",
+      "manana": false,
+      "tarde": false
+    },
+    {
+      "fecha": "2026-09-16",
+      "manana": false,
+      "tarde": false
+    },
+    {
+      "fecha": "2026-09-17",
+      "manana": false,
+      "tarde": false
+    },
+    {
+      "fecha": "2026-09-18",
+      "manana": false,
+      "tarde": false
+    },
+    {
+      "fecha": "2026-09-19",
+      "manana": false,
+      "tarde": false
+    },
+    {
+      "fecha": "2026-09-20",
+      "manana": false,
+      "tarde": false
+    },
+    {
+      "fecha": "2026-09-21",
+      "manana": false,
+      "tarde": false
+    },
+    {
+      "fecha": "2026-09-22",
+      "manana": false,
+      "tarde": false
+    },
+    {
+      "fecha": "2026-09-23",
+      "manana": false,
+      "tarde": false
+    },
+    {
+      "fecha": "2026-09-24",
+      "manana": false,
+      "tarde": false
+    }
+  ],
   "destinos": [
     {
       "id": "acuario",
       "nombre": "Acuario Nacional",
-      "km": 27,
-      "idaCUP": 18150,
-      "idaUSD": 26.43,
-      "idaVueltaCUP": 18150,
-      "idaVueltaUSD": 26.43,
+      "km": 29,
+      "idaCUP": 19400,
+      "idaUSD": 28.1,
+      "idaVueltaCUP": 19400,
+      "idaVueltaUSD": 28.1,
       "asientoCUP": {
-        "2": 11350,
-        "3": 7550,
-        "4": 5700
+        "2": 12150,
+        "3": 8100,
+        "4": 6100
       }
     },
     {
       "id": "capitolio",
       "nombre": "Capitolio Nacional",
-      "km": 40,
-      "idaCUP": 25550,
-      "idaUSD": 37.28,
-      "idaVueltaCUP": 25550,
-      "idaVueltaUSD": 37.28,
+      "km": 42,
+      "idaCUP": 26900,
+      "idaUSD": 38.95,
+      "idaVueltaCUP": 26900,
+      "idaVueltaUSD": 38.95,
       "asientoCUP": {
-        "2": 16000,
-        "3": 10650,
-        "4": 8000
+        "2": 16800,
+        "3": 11200,
+        "4": 8400
       }
     },
     {
       "id": "guira",
       "nombre": "Güira de Melena",
-      "km": 12,
-      "idaCUP": 9550,
-      "idaUSD": 13.92,
-      "idaVueltaCUP": 9550,
-      "idaVueltaUSD": 13.92,
+      "km": 11,
+      "idaCUP": 9050,
+      "idaUSD": 13.08,
+      "idaVueltaCUP": 9050,
+      "idaVueltaUSD": 13.08,
       "asientoCUP": {
-        "2": 6000,
-        "3": 4000,
-        "4": 3000
+        "2": 5650,
+        "3": 3800,
+        "4": 2850
       }
     },
     {
       "id": "calixto",
       "nombre": "Hospital Calixto García",
-      "km": 32,
-      "idaCUP": 21000,
-      "idaUSD": 30.61,
-      "idaVueltaCUP": 21000,
-      "idaVueltaUSD": 30.61,
+      "km": 34,
+      "idaCUP": 22300,
+      "idaUSD": 32.28,
+      "idaVueltaCUP": 22300,
+      "idaVueltaUSD": 32.28,
       "asientoCUP": {
-        "2": 13150,
-        "3": 8750,
-        "4": 6600
+        "2": 13950,
+        "3": 9300,
+        "4": 7000
       }
     },
     {
       "id": "terminal",
       "nombre": "Terminal de Ómnibus Nacionales",
-      "km": 30,
-      "idaCUP": 19850,
-      "idaUSD": 28.94,
-      "idaVueltaCUP": 19850,
-      "idaVueltaUSD": 28.94,
+      "km": 32,
+      "idaCUP": 21150,
+      "idaUSD": 30.61,
+      "idaVueltaCUP": 21150,
+      "idaVueltaUSD": 30.61,
       "asientoCUP": {
-        "2": 12400,
-        "3": 8300,
-        "4": 6200
+        "2": 13200,
+        "3": 8800,
+        "4": 6600
       }
     }
   ],
