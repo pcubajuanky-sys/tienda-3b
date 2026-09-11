@@ -780,19 +780,45 @@ button.footer-link{background:none;border:none;font-family:inherit;cursor:pointe
 /* ── Conmutador de mundos (3B Store / Taxi 3B) ──
    Vive en la cabecera de las DOS paginas. Son enlaces de verdad: si el
    JavaScript falla, el cliente sigue pudiendo cambiar de mundo. */
-.mundos{display:flex;gap:6px;align-items:center;margin-left:auto;margin-right:10px}
+/* Los dos negocios son los propios logos, no pastillas de texto: el logo ES la
+   marca y se reconoce antes de leerse. Van a la izquierda del todo. */
+.mundos{display:flex;gap:10px;align-items:center;margin-right:auto}
 .mundo{
-  display:inline-flex;align-items:center;gap:6px;
-  padding:7px 12px;border-radius:999px;
-  font-size:13px;font-weight:600;text-decoration:none;
-  color:var(--text-2);background:var(--surface-2);
-  border:1px solid var(--border);white-space:nowrap;
-  transition:background var(--dur),color var(--dur);
+  position:relative;display:block;flex:none;
+  width:52px;height:52px;border-radius:50%;
+  text-decoration:none;
+  transition:transform var(--dur);
 }
-.mundo:hover{color:var(--text)}
-.mundo-on{background:var(--brand);color:var(--brand-ink);border-color:var(--brand)}
-.mundo-on:hover{color:var(--brand-ink)}
-@media (max-width:479px){
-  .mundo{padding:6px 9px;font-size:12px}
-  .mundo span{font-size:14px}
+.mundo-img{
+  width:100%;height:100%;display:block;
+  border-radius:50%;object-fit:cover;
+  background:var(--surface-2);
+}
+.mundo-on .mundo-img{box-shadow:0 0 0 2px var(--brand)}
+.mundo:not(.mundo-on) .mundo-img{opacity:.82}
+.mundo:not(.mundo-on):hover .mundo-img{opacity:1}
+.mundo:hover{transform:translateY(-2px) scale(1.06)}
+.mundo:active{transform:scale(.96)}
+.mundo:focus-visible{outline:3px solid var(--brand);outline-offset:3px;border-radius:50%}
+
+/* Latido en el negocio en el que NO estás: es como se descubre el otro.
+   Solo el aro se mueve; el logo se queda quieto para que se lea. */
+.mundo:not(.mundo-on)::after{
+  content:"";position:absolute;inset:-3px;
+  border:2px solid var(--brand);border-radius:50%;
+  opacity:0;pointer-events:none;
+  animation:latido-mundo 3.2s ease-out infinite;
+}
+@keyframes latido-mundo{
+  0%{opacity:.6;transform:scale(1)}
+  70%{opacity:0;transform:scale(1.28)}
+  100%{opacity:0;transform:scale(1.28)}
+}
+/* Cada negocio late en SU color: el taxi en verde, la tienda en su morado. */
+#mundo-taxi::after{border-color:#12A24E}
+@media (min-width:600px){ .mundo{width:62px;height:62px} }
+@media (prefers-reduced-motion:reduce){
+  .mundo{transition:none}
+  .mundo:hover,.mundo:active{transform:none}
+  .mundo:not(.mundo-on)::after{animation:none;opacity:.45;transform:none}
 }

@@ -32,12 +32,13 @@
 
 <header class="header" id="header">
   <div class="header-top wrap">
-    <a href="/" class="logo" aria-label="3B — inicio">
-      <img class="logo-img" src="/logo-3b.png" width="320" height="320" alt="" aria-hidden="true">
-    </a>
-    <nav class="mundos" aria-label="Nuestros servicios">
-      <a class="mundo" href="/"><span aria-hidden="true">🛍</span> 3B Store</a>
-      <a class="mundo mundo-on" href="/taxi" aria-current="page"><span aria-hidden="true">🚕</span> Taxi 3B</a>
+    <nav class="mundos" aria-label="Nuestros negocios">
+      <a class="mundo" href="/" title="3B Store">
+        <img class="mundo-img" src="/logo-3b.png" width="256" height="256" alt="3B Store — tienda">
+      </a>
+      <a class="mundo mundo-on" href="/taxi" aria-current="page" title="Taxi 3B">
+        <img class="mundo-img" src="/logo-taxi-3b.png" width="256" height="256" alt="Taxi 3B — viajes">
+      </a>
     </nav>
   </div>
 </header>
@@ -120,6 +121,18 @@
       <input type="text" id="tx-otro-destino" placeholder="Ej: Playa Baracoa" autocomplete="off">
     </label>
     <a class="tx-wa" id="tx-otro-wa" target="_blank" rel="noopener">💬 Consultar por WhatsApp</a>
+  </section>
+
+  <!-- Calendario: solo libre u ocupado. Nunca quien va ni a donde. -->
+  <section class="tx-calendario" id="tx-calendario" hidden aria-labelledby="tx-cal-titulo">
+    <h2 id="tx-cal-titulo">Días ocupados</h2>
+    <p class="tx-cal-nota">Somos un solo carro: coordina tu viaje con tiempo. Esto es lo que ya está apartado.</p>
+    <div class="tx-cal-dias" id="tx-cal-dias"></div>
+    <div class="tx-cal-leyenda">
+      <span><i class="tx-cal-muestra tx-libre"></i> Libre</span>
+      <span><i class="tx-cal-muestra tx-ocupado"></i> Ocupado</span>
+      <span class="tx-cal-mitades">Cada día se parte en <b>mañana</b> (arriba) y <b>tarde</b> (abajo).</span>
+    </div>
   </section>
 
   <!-- Pizarra de salidas compartidas -->

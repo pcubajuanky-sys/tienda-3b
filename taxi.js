@@ -187,6 +187,34 @@ async function compartirCotizacion() {
   setTimeout(() => { boton.textContent = '🔗 Compartir cotización'; }, 2500);
 }
 
+// ── Calendario de ocupacion ──
+// El taxi.json solo trae {fecha, manana, tarde}: aqui no hay nada que ocultar
+// porque nunca llega. Si no hay ni un dia ocupado, la seccion no aparece: un
+// calendario todo en blanco no le dice nada a nadie.
+const DIA_LETRA = ['D', 'L', 'M', 'X', 'J', 'V', 'S'];
+
+function renderCalendario() {
+  const dias = (TX.agenda || []);
+  const hayAlgo = dias.some((d) => d.manana || d.tarde);
+  el('tx-calendario').hidden = !hayAlgo;
+  if (!hayAlgo) return;
+
+  const hoy = dias.length ? dias[0].fecha : '';
+  el('tx-cal-dias').innerHTML = dias.map((d) => {
+    const f = new Date(`${d.fecha}T12:00:00`);
+    const clase = (ocupado) => ocupado ? 'tx-ocupado' : 'tx-libre';
+    const titulo = `${f.getDate()}: mañana ${d.manana ? 'ocupada' : 'libre'}, tarde ${d.tarde ? 'ocupada' : 'libre'}`;
+    return `<div class="tx-cal-dia${d.fecha === hoy ? ' tx-cal-hoy' : ''}" title="${escapeHtml(titulo)}">
+      <span>${DIA_LETRA[f.getDay()]}</span>
+      <b>${f.getDate()}</b>
+      <div class="tx-cal-mitad" role="img" aria-label="${escapeHtml(titulo)}">
+        <span class="${clase(d.manana)}"></span>
+        <span class="${clase(d.tarde)}"></span>
+      </div>
+    </div>`;
+  }).join('');
+}
+
 // ── Pizarra de salidas compartidas ──
 
 function renderPizarra() {
@@ -371,6 +399,7 @@ async function cargar() {
     el('tx-calc').hidden = false;
     renderCalculadora();
   }
+  renderCalendario();
   renderPizarra();
   renderOtro();
   renderPropon();
