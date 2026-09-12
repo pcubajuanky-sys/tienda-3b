@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-12T09:08:36.574Z",
+  "generado": "2026-09-12T14:38:36.826Z",
   "tasa": 690,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -2507,18 +2507,56 @@
       }
     },
     {
-      "id": "p_1787080747584",
-      "codigo": "JSMN",
-      "name": "Mono de mujer talla grande",
+      "id": "p_1789218727536",
+      "codigo": "6FTU",
+      "name": "Mono enterizo 1",
       "cat": "Ropa",
       "subcat": "",
-      "notes": "Solo en color negro. Exelente tela, ligero, cómodo y elegante.\nTallas grandes XL y XXL",
+      "notes": "Mono peto con tirantes y pantalones cortos de moda casual para mujer, primavera y verano 2026",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789218590/productos/xckonewfal0kweqhhkih.jpg",
+      "precioUSD": 15,
+      "precioCUP": 10350,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Talla",
+          "Colores"
+        ],
+        "opciones": [
+          "S / NEGRO",
+          "S / VERDE",
+          "M / NEGRO"
+        ]
+      },
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
+      "id": "p_1787080747584",
+      "codigo": "JSMN",
+      "name": "Mono enterizo 2",
+      "cat": "Ropa",
+      "subcat": "",
+      "notes": "Solo en color negro. Exelente tela, ligero, cómodo y elegante.",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787080610/productos/tm0xsuiwvxmdn5kvgeug.jpg",
       "precioUSD": 15,
       "precioCUP": 10350,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Talla"
+        ],
+        "opciones": [
+          "XL",
+          "2XL"
+        ]
+      },
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -3258,7 +3296,7 @@
       "name": "Pulover Unisex Blanco de Pantera",
       "cat": "Ropa",
       "subcat": "",
-      "notes": "Tallas S y M(agrandadas). Tela algodonada elastizada",
+      "notes": "Talla M(agrandadas). Tela algodonada elastizada",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788792467/productos/kmkvblu9vlsqby9h8hhc.jpg",
       "precioUSD": 3.62,
       "precioCUP": 2500,
@@ -3276,7 +3314,7 @@
       "name": "Pulover Unisex Gris",
       "cat": "Ropa",
       "subcat": "",
-      "notes": "Tallas S y M(agrandadas). Tela algodonada elastizada",
+      "notes": "Talla M(agrandadas). Tela algodonada elastizada",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788732575/productos/z2lirmjgfaqfnxsd7vdq.jpg",
       "precioUSD": 3.62,
       "precioCUP": 2500,
@@ -3312,26 +3350,8 @@
       "name": "Pulover Unisex Rojo",
       "cat": "Ropa",
       "subcat": "",
-      "notes": "Tallas S y M(agrandadas). Tela algodonada elastizada",
+      "notes": "Solo talla M agrandada. Tela algodonada elastizada",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788733113/productos/fjgvbcls4qhgl8in0k3c.jpg",
-      "precioUSD": 3.62,
-      "precioCUP": 2500,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      }
-    },
-    {
-      "id": "p_1788792608822",
-      "codigo": "QRJE",
-      "name": "Pulover Unisex Rosado de Pantera",
-      "cat": "Ropa",
-      "subcat": "",
-      "notes": "Tallas S y M(agrandadas). Tela algodonada elastizada",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788792518/productos/ydnwbvtj7xhc5oyxe2ul.jpg",
       "precioUSD": 3.62,
       "precioCUP": 2500,
       "moneda": "cup",
@@ -3911,6 +3931,63 @@
       },
       "precioNormalUSD": 55,
       "precioNormalCUP": 37950
+    },
+    {
+      "id": "p_1789219477837",
+      "codigo": "62JK",
+      "name": "Vestido largo 1",
+      "cat": "Ropa",
+      "subcat": "",
+      "notes": "Vestido largo de moda y elegante con estampado vintage para mujer, cuello en V y manga corta.",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789218865/productos/foqqnbk1jhtpqxjkznau.jpg",
+      "precioUSD": 15,
+      "precioCUP": 10350,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Talla",
+          "Color"
+        ],
+        "opciones": [
+          "S / MORADO",
+          "M / VERDE"
+        ]
+      },
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
+      "id": "p_1789221251954",
+      "codigo": "SGL2",
+      "name": "Vestido largo 2",
+      "cat": "Ropa",
+      "subcat": "",
+      "notes": "Vestido de línea A con estampado floral y cuello en V - Diseño transpirable y suelto de manga corta - Ideal para la ropa de primavera y verano",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789221188/productos/sa3fysvkulzbgcjzvfb0.jpg",
+      "precioUSD": 15,
+      "precioCUP": 10350,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Talla",
+          "Color"
+        ],
+        "opciones": [
+          "S / VERDE",
+          "S / AZUL",
+          "M / AZUL"
+        ]
+      },
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1785358002090",
