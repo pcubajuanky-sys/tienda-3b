@@ -88,8 +88,25 @@ function haceCuanto(ms) {
   return `hace ${Math.floor(h / 24)} días`;
 }
 
+// Valor del selector cuando el cliente pone los km a mano.
+const KM_LIBRE = '__km';
+
+// Un destino "de mentira" armado con la recta publicada, con la MISMA forma que
+// los del tarifario, para que todo lo de abajo no tenga que saber de dónde salió.
+function destinoDeKm(km) {
+  const r = TX && TX.recta;
+  if (!r || !(km > 0)) return null;
+  const techo = (n) => (r.redondeoCUP > 0 ? Math.ceil(n / r.redondeoCUP) * r.redondeoCUP : Math.round(n));
+  const base = km * r.porKmCUP + r.baseCUP;
+  const factor = Number(r.factorCompartido) > 0 ? Number(r.factorCompartido) : 1;
+  const asientoCUP = {};
+  for (let n = 2; n <= 4; n++) asientoCUP[n] = techo(base * factor / n);
+  return { id: KM_LIBRE, nombre: `tu destino (${km} km)`, km, idaCUP: techo(base), asientoCUP, libre: true };
+}
+
 function destinoActual() {
   const id = el('tx-destino').value;
+  if (id === KM_LIBRE) return destinoDeKm(Number(el('tx-km-libre').value) || 0);
   return (TX.destinos || []).find((d) => d.id === id) || null;
 }
 
@@ -121,9 +138,18 @@ function renderResultado() {
   const d = destinoActual();
   const p = precioActual();
   const caja = el('tx-resultado');
-  if (!d || !p) { caja.innerHTML = ''; return; }
+  // Con "yo pongo los km" y el campo vacío todavía no hay nada que decir.
+  if (!d || !p) {
+    caja.innerHTML = el('tx-destino').value === KM_LIBRE
+      ? '<div class="tx-esperando">Escribe los kilómetros y te digo el precio.</div>'
+      : '';
+    return;
+  }
 
   const usd = (TX.tasa > 1) ? (p.cup / TX.tasa).toFixed(2) : null;
+  // Con km puestos por el cliente el cálculo es el mismo, pero la distancia la
+  // puso él: se dice, para que nadie se sienta engañado si luego no cuadra.
+  const suyo = `<div class="tx-vigencia">Calculado con los ${d.km} km que pusiste. Lo confirmamos por WhatsApp.</div>`;
   const vig = vigente()
     ? `<div class="tx-vigencia">Precio válido hasta el ${fechaLarga(caduca())}.</div>`
     : `<div class="tx-vigencia tx-caducado">Precio orientativo — confírmalo por WhatsApp.</div>`;
@@ -133,7 +159,7 @@ function renderResultado() {
 
   caja.innerHTML = `<div class="tx-precio">${fmt(p.cup)} CUP</div>` +
     (usd ? `<div class="tx-precio-usd">≈ $${usd} USD · ${escapeHtml(p.etiqueta)}</div>` : `<div class="tx-precio-usd">${escapeHtml(p.etiqueta)}</div>`) +
-    desglose + vig;
+    desglose + (d.libre ? suyo : vig);
 
   const lineas = [
     '🚕 *Taxi 3B*',
@@ -148,11 +174,22 @@ function renderResultado() {
 
 function renderCalculadora() {
   const sel = el('tx-destino');
-  sel.innerHTML = (TX.destinos || []).map((d) => `<option value="${escapeHtml(d.id)}">${escapeHtml(d.nombre)}</option>`).join('');
+  // La opción de poner los km va DENTRO del selector, no escondida más abajo:
+  // saber el precio de cualquier sitio es de lo que más engancha de esta página.
+  const opcionKm = (TX && TX.recta)
+    ? `<option value="${KM_LIBRE}">✏️ Otro lugar — yo pongo los km</option>`
+    : '';
+  sel.innerHTML = (TX.destinos || []).map((d) => `<option value="${escapeHtml(d.id)}">${escapeHtml(d.nombre)}</option>`).join('') + opcionKm;
 
   // Enlace compartido: /taxi?d=<destino>&a=2&h=1 reabre el viaje ya elegido.
+  // Con km puestos a mano viaja además &k=<km>.
   const d = PARAMS.get('d');
   if (d && (TX.destinos || []).some((x) => x.id === d)) sel.value = d;
+  const k = Number(PARAMS.get('k'));
+  if (d === KM_LIBRE && TX.recta && k > 0) {
+    sel.value = KM_LIBRE;
+    el('tx-km-libre').value = k;
+  }
   const a = PARAMS.get('a');
   if (a && ['1', '2', '3', '4'].includes(a)) el('tx-asientos').value = a;
   const h = PARAMS.get('h');
@@ -166,12 +203,14 @@ function renderCalculadora() {
 // no se queda esperando a un pasajero suelto.
 function sincronizarEspera() {
   el('tx-horas-wrap').hidden = Number(el('tx-asientos').value) > 1;
+  el('tx-km-wrap').hidden = el('tx-destino').value !== KM_LIBRE;
 }
 
 function enlaceCotizacion() {
   const d = destinoActual();
   if (!d) return location.href;
   const p = new URLSearchParams({ d: d.id, a: el('tx-asientos').value, h: el('tx-horas').value });
+  if (d.libre) p.set('k', String(d.km));   // sin los km, un enlace de km libres no abre nada
   return `${location.origin}/taxi?${p.toString()}`;
 }
 
@@ -251,46 +290,13 @@ function renderPizarra() {
 
 // ── "Otro destino" y "propon tu viaje" ──
 
-// El precio de un kilometraje cualquiera, con la MISMA recta que usa Stock+
-// (taxi.json -> recta). No hay una segunda fórmula que se desincronice: un test
-// comprueba km a km que la recta y el cálculo del servidor dan lo mismo.
-function precioPorKm(km) {
-  const r = TX && TX.recta;
-  if (!r || !(km > 0)) return 0;
-  const bruto = km * r.porKmCUP + r.baseCUP;
-  const m = r.redondeoCUP;
-  return m > 0 ? Math.ceil(bruto / m) * m : Math.round(bruto);
-}
-
 function renderOtro() {
   el('tx-otro').hidden = false;
-  // Sin recta publicada (tarifa a medio configurar) no se pregunta por los km:
-  // mejor no preguntar que preguntar y no responder.
-  el('tx-otro-km-wrap').hidden = !(TX && TX.recta);
-
   const actualizar = () => {
     const destino = el('tx-otro-destino').value.trim();
-    const km = Number(el('tx-otro-km').value) || 0;
-    const cup = precioPorKm(km);
-    const caja = el('tx-otro-precio');
-
-    if (cup > 0) {
-      const usd = (TX.tasa > 1) ? ` · ≈ $${(cup / TX.tasa).toFixed(2)} USD` : '';
-      caja.innerHTML = `<b>${fmt(cup)} CUP</b><span>Viaje completo para ${km} km${usd}. `
-        + `Como los kilómetros los pusiste tú, lo confirmamos por WhatsApp.</span>`;
-      caja.hidden = false;
-    } else {
-      caja.hidden = true;
-    }
-
-    const lineas = ['🚕 *Taxi 3B*', `Quiero ir a: ${destino || '(dime a dónde)'}`];
-    if (km > 0) lineas.push(`Serían unos ${km} km`, `Me sale ${fmt(cup)} CUP en la web`);
-    lineas.push('', '¿Me lo confirmas?');
-    el('tx-otro-wa').href = waLink(lineas.join('\n'));
+    el('tx-otro-wa').href = waLink(`🚕 *Taxi 3B*\nQuiero ir a: ${destino || '(dime a dónde)'}\n\n¿Cuántos km son y cuánto me costaría?`);
   };
-
   el('tx-otro-destino').addEventListener('input', actualizar);
-  el('tx-otro-km').addEventListener('input', actualizar);
   actualizar();
 }
 
@@ -440,7 +446,8 @@ async function cargar() {
 }
 
 function iniciar() {
-  el('tx-destino').addEventListener('change', renderResultado);
+  el('tx-destino').addEventListener('change', () => { sincronizarEspera(); renderResultado(); });
+  el('tx-km-libre').addEventListener('input', renderResultado);
   el('tx-horas').addEventListener('change', renderResultado);
   el('tx-asientos').addEventListener('change', () => { sincronizarEspera(); renderResultado(); });
   el('tx-compartir').addEventListener('click', compartirCotizacion);

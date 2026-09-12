@@ -69,22 +69,27 @@ body::after{
 
 .tx-nota-viaje{font-size:12px;color:var(--text-3);text-align:center;margin:-6px 0 12px}
 
-.tx-opcional{
-  font-weight:600;font-size:10px;letter-spacing:.04em;text-transform:uppercase;
-  color:var(--text-3);border:1px solid var(--border);border-radius:99px;
-  padding:1px 6px;margin-left:5px;
+/* El campo de km aparece dentro de la calculadora cuando el cliente elige
+   "yo pongo los km". Va DESTACADO —fondo propio y numero grande— porque saber
+   el precio de cualquier sitio es de lo que mas engancha de esta pagina. */
+.tx-campo-km{
+  background:var(--brand-soft);
+  border:2px solid var(--tx-verde);
+  border-radius:var(--radio-card);
+  padding:12px 14px;margin-bottom:12px;
 }
-/* El precio de un kilometraje libre. Mas sobrio que la caja verde del tarifario:
-   es el mismo calculo, pero los km los puso el cliente a ojo. */
-.tx-otro-precio{
-  background:var(--surface-2);border:1px dashed var(--border);
-  border-radius:var(--radio-card);padding:12px;margin:0 0 12px;text-align:center;
+.tx-campo-km > span{color:var(--text);font-size:14px;margin-bottom:7px}
+.tx-campo-km input{
+  font-size:22px;font-weight:700;text-align:center;
+  padding:12px;background:var(--surface);
+  border-color:var(--tx-verde);
+  font-variant-numeric:tabular-nums;
 }
-.tx-otro-precio b{
-  display:block;font-size:24px;font-weight:800;letter-spacing:-.5px;
-  color:var(--tx-verde);font-variant-numeric:tabular-nums;
+.tx-campo-km em{
+  display:block;font-style:normal;margin-top:7px;
+  font-size:12px;line-height:1.45;color:var(--text-2);
 }
-.tx-otro-precio span{display:block;font-size:12px;color:var(--text-2);margin-top:4px}
+.tx-esperando{font-size:14px;color:var(--text-2);padding:4px 0}
 
 /* "Vienes de parte de X". Discreto: es informacion para el chofer, no una
    promocion; el cliente no tiene que hacer nada con esto. */

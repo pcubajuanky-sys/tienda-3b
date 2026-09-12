@@ -80,6 +80,12 @@
       <select id="tx-destino"></select>
     </label>
 
+    <label class="tx-campo tx-campo-km" for="tx-km-libre" id="tx-km-wrap" hidden>
+      <span>¿Cuántos kilómetros son?</span>
+      <input type="number" id="tx-km-libre" min="1" max="300" step="1" placeholder="Ej: 45" inputmode="numeric">
+      <em>Si no lo sabes con exactitud, pon lo que creas: te damos el precio y lo confirmamos.</em>
+    </label>
+
     <label class="tx-campo" for="tx-asientos">
       <span>¿Compartes el viaje?</span>
       <select id="tx-asientos">
@@ -114,17 +120,12 @@
 
   <!-- Destino que no esta en la lista -->
   <section class="tx-otro" id="tx-otro" hidden>
-    <h2>¿Vas a otro lugar?</h2>
+    <h2>¿No sabes los kilómetros?</h2>
     <p>Escríbenos a dónde necesitas ir y te decimos el precio al momento.</p>
     <label class="tx-campo" for="tx-otro-destino">
       <span>¿A dónde?</span>
       <input type="text" id="tx-otro-destino" placeholder="Ej: Playa Baracoa" autocomplete="off">
     </label>
-    <label class="tx-campo" for="tx-otro-km" id="tx-otro-km-wrap">
-      <span>¿Sabes más o menos cuántos kilómetros son? <b class="tx-opcional">opcional</b></span>
-      <input type="number" id="tx-otro-km" min="1" max="300" step="1" placeholder="Ej: 45" inputmode="numeric">
-    </label>
-    <div class="tx-otro-precio" id="tx-otro-precio" aria-live="polite" hidden></div>
     <a class="tx-wa" id="tx-otro-wa" target="_blank" rel="noopener">💬 Consultar por WhatsApp</a>
   </section>
 
