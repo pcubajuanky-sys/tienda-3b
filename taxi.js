@@ -201,9 +201,10 @@ function renderCalculadora() {
 
 // La espera solo tiene sentido en el viaje privado: en un compartido el carro
 // no se queda esperando a un pasajero suelto.
+// El campo de km NO se oculta nunca (decisión de Ruth): si se esconde detrás de
+// una opción del desplegable, nadie descubre que puede cotizar cualquier sitio.
 function sincronizarEspera() {
   el('tx-horas-wrap').hidden = Number(el('tx-asientos').value) > 1;
-  el('tx-km-wrap').hidden = el('tx-destino').value !== KM_LIBRE;
 }
 
 function enlaceCotizacion() {
@@ -446,8 +447,20 @@ async function cargar() {
 }
 
 function iniciar() {
-  el('tx-destino').addEventListener('change', () => { sincronizarEspera(); renderResultado(); });
-  el('tx-km-libre').addEventListener('input', renderResultado);
+  // Escribir km manda: el desplegable salta solo a "otro lugar". Y elegir un
+  // destino de la lista limpia los km. Así nunca hay dos respuestas a la vez.
+  el('tx-destino').addEventListener('change', () => {
+    if (el('tx-destino').value !== KM_LIBRE) el('tx-km-libre').value = '';
+    sincronizarEspera();
+    renderResultado();
+  });
+  el('tx-km-libre').addEventListener('input', () => {
+    const km = Number(el('tx-km-libre').value) || 0;
+    const sel = el('tx-destino');
+    if (km > 0 && TX.recta) sel.value = KM_LIBRE;
+    else if (sel.value === KM_LIBRE && (TX.destinos || []).length) sel.value = TX.destinos[0].id;
+    renderResultado();
+  });
   el('tx-horas').addEventListener('change', renderResultado);
   el('tx-asientos').addEventListener('change', () => { sincronizarEspera(); renderResultado(); });
   el('tx-compartir').addEventListener('click', compartirCotizacion);
