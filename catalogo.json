@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-12T14:38:36.826Z",
+  "generado": "2026-09-12T19:39:51.960Z",
   "tasa": 690,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -698,6 +698,24 @@
       }
     },
     {
+      "id": "p_1789229417668",
+      "codigo": "GYW4",
+      "name": "Blusa manga larga",
+      "cat": "Ropa",
+      "subcat": "",
+      "notes": "Exelente calidad y comodidad. Tela elastizada y duradera. Frescura y protección contra el Sol en una misma pieza.Solo del color de la imagen y en talla S",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789229232/productos/iint1nqsydkjxzi86gsf.jpg",
+      "precioUSD": 8,
+      "precioCUP": 5520,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
       "id": "p_1785180542778",
       "codigo": "F5H9",
       "name": "Bolsas de malla de nailón con cremallera",
@@ -800,6 +818,34 @@
       "moneda": "cup",
       "enOferta": false,
       "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
+      "id": "p_1789229974668",
+      "codigo": "ULAC",
+      "name": "Camiseta corta",
+      "cat": "Ropa",
+      "subcat": "",
+      "notes": "Tela elastizada y cómoda. Alta calidad",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789229886/productos/cwtxkhbn1axa0pypz24r.jpg",
+      "precioUSD": 4,
+      "precioCUP": 2760,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Talla",
+          "Color"
+        ],
+        "opciones": [
+          "M / NEGRO🖤",
+          "M / GRIS🩶"
+        ]
+      },
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -1872,6 +1918,111 @@
       }
     },
     {
+      "id": "p_1789233150296",
+      "codigo": "NU2L",
+      "name": "Licra corta 1",
+      "cat": "Ropa",
+      "subcat": "",
+      "notes": "Licra levanta glúteos corta. Alta calidad, importadas de USA.Talla reducida, viene siendo una M",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789232992/productos/jilgowubjhhnw3ymicjw.jpg",
+      "precioUSD": 4,
+      "precioCUP": 2760,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Talla",
+          "Color"
+        ],
+        "opciones": [
+          "L(REDUCIDA) / MARRÓN🤎",
+          "L(REDUCIDA) / GRIS🩶"
+        ]
+      },
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
+      "id": "p_1789233318851",
+      "codigo": "KRG9",
+      "name": "Licra corta 2",
+      "cat": "Ropa",
+      "subcat": "",
+      "notes": "Licra corta levanta glúteos.Alta calidad, importadas de USA. Fiel a la talla. Exactamente los tonos de la imagen",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789233113/productos/iobfneseakk7fo5p9d5q.jpg",
+      "precioUSD": 3,
+      "precioCUP": 2070,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Talla",
+          "Color"
+        ],
+        "opciones": [
+          "S / NEGRO",
+          "S / NARANJA",
+          "S / AZUL",
+          "S / VERDE MILITAR"
+        ]
+      },
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
+      "id": "p_1789235076276",
+      "codigo": "44JV",
+      "name": "Licra corta 3",
+      "cat": "Ropa",
+      "subcat": "",
+      "notes": "Licras cortas levanta glúteos. Alta calidad, importadas de USA. Exactamente los tonos de la imagen,talla reducida.",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789234896/productos/pqkfzohmt0pphqz08mdc.jpg",
+      "precioUSD": 3,
+      "precioCUP": 2070,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Talla",
+          "Color"
+        ],
+        "opciones": [
+          "L(REDUCIDA) / GRIS",
+          "L(REDUCIDA) / VERDE",
+          "L(REDUCIDA) / NARANJA"
+        ]
+      },
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
+      "id": "p_1789235611281",
+      "codigo": "K4UQ",
+      "name": "Licra larga",
+      "cat": "Ropa",
+      "subcat": "",
+      "notes": "Licra larga estilizadora. Función reductora de cintura y levantadora de glúteos.Alta calidad, importadas de USA. Color de la imagen. Talla M reducida",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789235438/productos/pp8qmssraxnetipkstgx.jpg",
+      "precioUSD": 6,
+      "precioCUP": 4140,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
       "id": "p_1782339511897",
       "codigo": "K2RE",
       "name": "Lima de pies",
@@ -2563,6 +2714,35 @@
       }
     },
     {
+      "id": "p_1789228482999",
+      "codigo": "ZREY",
+      "name": "Mono enterizo 3",
+      "cat": "Ropa",
+      "subcat": "",
+      "notes": "Monos deportivos tela de licra,largos,para ancha,levanta glúteos y estilizadores . Máxima calidad y confort",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789228125/productos/ea6o1wr9agfjr0lsbseh.jpg",
+      "precioUSD": 18,
+      "precioCUP": 12420,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Talla",
+          "Color"
+        ],
+        "opciones": [
+          "S / NEGRO🖤",
+          "S / MARRÓN🤎",
+          "M / GRIS🩶"
+        ]
+      },
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
       "id": "p_1786922026243",
       "codigo": "6YDU",
       "name": "Mono enterizo tallas pequeñas",
@@ -2626,15 +2806,17 @@
       "subcat": "",
       "notes": "Delicioso Nesquik de chocolate. Pote gigante de 2.8 libras sabor chocolate con vitaminas añadidas. Importado directamente de USA",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786929207/productos/fig57zzkbowjpuo3ws8i.jpg",
-      "precioUSD": 30,
-      "precioCUP": 20700,
+      "precioUSD": 28,
+      "precioCUP": 19320,
       "moneda": "usd",
-      "enOferta": false,
+      "enOferta": true,
       "destacado": true,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "precioNormalUSD": 30,
+      "precioNormalCUP": 20700
     },
     {
       "id": "p_1780092348854",
@@ -3255,6 +3437,103 @@
       }
     },
     {
+      "id": "p_1789237108026",
+      "codigo": "XVFJ",
+      "name": "Pulover de girasol",
+      "cat": "Ropa",
+      "subcat": "",
+      "notes": "Lindo pulover talla L. Tela algodonada elastizada",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789236943/productos/czxnsxgenvatqpkm8wdw.jpg",
+      "precioUSD": 4,
+      "precioCUP": 2760,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
+      "id": "p_1789240666897",
+      "codigo": "WLKK",
+      "name": "Pulover de hombre 1",
+      "cat": "Ropa",
+      "subcat": "",
+      "notes": "Pulover algodonada elastizado. Importado de USA",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789240533/productos/qcwfdts5ddd82zcwp1bv.jpg",
+      "precioUSD": 4,
+      "precioCUP": 2760,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Talla"
+        ],
+        "opciones": [
+          "M"
+        ]
+      },
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
+      "id": "p_1789240757263",
+      "codigo": "DECX",
+      "name": "Pulover de hombre 2",
+      "cat": "Ropa",
+      "subcat": "",
+      "notes": "Pulover algodonada elastizado. Importado de USA",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789240681/productos/arra6wfjbee02aq5k9jd.jpg",
+      "precioUSD": 4,
+      "precioCUP": 2760,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Talla"
+        ],
+        "opciones": [
+          "M"
+        ]
+      },
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
+      "id": "p_1789240844908",
+      "codigo": "N53J",
+      "name": "Pulover de hombre 3",
+      "cat": "Ropa",
+      "subcat": "",
+      "notes": "Pulover de poliéster elastizado. Importado de USA",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789240755/productos/isanspupljjdhuye6xbo.jpg",
+      "precioUSD": 4,
+      "precioCUP": 2760,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Talla"
+        ],
+        "opciones": [
+          "S",
+          "M"
+        ]
+      },
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
       "id": "p_1786919841226",
       "codigo": "A72E",
       "name": "Pulover de hombre elastizados",
@@ -3859,6 +4138,50 @@
       }
     },
     {
+      "id": "p_1789227678484",
+      "codigo": "T2WZ",
+      "name": "Top Naranja 🧡",
+      "cat": "Ropa Interior",
+      "subcat": "",
+      "notes": "Lindo top Naranja sin espinjas. Ideal para muchachas delgadas o adolescentes",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789227577/productos/h17oyhowyaoes0p3fkzq.jpg",
+      "precioUSD": 1.45,
+      "precioCUP": 1000,
+      "moneda": "cup",
+      "enOferta": false,
+      "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Talla"
+        ],
+        "opciones": [
+          "XS"
+        ]
+      },
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
+    },
+    {
+      "id": "p_1789239391483",
+      "codigo": "3LJZ",
+      "name": "Top Rosa 🩷",
+      "cat": "Ropa Interior",
+      "subcat": "",
+      "notes": "Lindo top Rosa con esponjas. Ideal para muchachas delgadas o adolescentes. Tela algodonada elastizada",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789239275/productos/pmfqwel3flhdlmn2gpgy.jpg",
+      "precioUSD": 3,
+      "precioCUP": 2070,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
       "id": "p_1788541433924",
       "codigo": "D95V",
       "name": "Trípode manual con mando a distancia",
@@ -3931,6 +4254,33 @@
       },
       "precioNormalUSD": 55,
       "precioNormalCUP": 37950
+    },
+    {
+      "id": "p_1789226088397",
+      "codigo": "SPYY",
+      "name": "Vestido corto",
+      "cat": "Ropa",
+      "subcat": "",
+      "notes": "Vestido de verano floral sin espalda con tirantes y lazo para vacaciones de verano",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789225996/productos/dmbonwu1kteatwyrkh51.jpg",
+      "precioUSD": 12,
+      "precioCUP": 8280,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Talla"
+        ],
+        "opciones": [
+          "S",
+          "M"
+        ]
+      },
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1789219477837",
