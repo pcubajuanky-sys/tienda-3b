@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-12T01:00:21.316Z",
+  "generado": "2026-09-12T03:41:52.231Z",
   "vigenciaHoras": 48,
   "activo": true,
   "tasa": 690,
@@ -16,7 +16,8 @@
   "recta": {
     "porKmCUP": 575.8740000000001,
     "baseCUP": 2691.0000000000005,
-    "redondeoCUP": 50
+    "redondeoCUP": 50,
+    "factorCompartido": 1.25
   },
   "mostrarDesglose": false,
   "referidores": [],
