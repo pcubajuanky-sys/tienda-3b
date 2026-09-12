@@ -25,10 +25,14 @@ function el(id) { return document.getElementById(id); }
 // Todo mensaje que sale de aqui lleva el codigo del referidor al final: es lo
 // UNICO que le dice al chofer a quien apuntarle el viaje. Si no va en el mensaje,
 // la comision se pierde.
+// 🔴 api.whatsapp.com/send y NO wa.me: el redirector de wa.me DESTROZA los emojis
+// (los convierte en el carácter de reemplazo �). Se reprodujo el 2026-09-12:
+// la página manda %F0%9F%9A%95 y wa.me lo entrega como %EF%BF%BD. En la tienda eso
+// rompía el "👤 Vendedor:" del pedido y Stock+ perdía el código del gestor.
 function waLink(texto) {
   const tel = (TX && TX.whatsapp) ? TX.whatsapp : '';
   const cuerpo = REF ? `${texto}\n\nRef: ${REF.code}` : texto;
-  return `https://wa.me/${tel}?text=${encodeURIComponent(cuerpo)}`;
+  return `https://api.whatsapp.com/send?phone=${tel}&text=${encodeURIComponent(cuerpo)}`;
 }
 
 // El referidor llega por ?ref=CODIGO y se RECUERDA: el cliente puede mirar
@@ -389,7 +393,7 @@ function abrirGana() {
   const tel = (TX && (TX.whatsappAltas || TX.whatsapp)) || '';
   if (tel) {
     const texto = REF ? `QUIERO GANAR CON TAXI 3B\n\nMe lo recomendó: ${REF.code}` : 'QUIERO GANAR CON TAXI 3B';
-    wa.href = `https://wa.me/${tel}?text=${encodeURIComponent(texto)}`;
+    wa.href = `https://api.whatsapp.com/send?phone=${tel}&text=${encodeURIComponent(texto)}`;
     wa.hidden = false;
   } else {
     wa.hidden = true;   // sin numero, el enlace iria a wa.me vacio

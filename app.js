@@ -521,7 +521,7 @@ function capturarTecladoModal(e) {
 function abrirComisionista() {
   const wa = document.getElementById('comi-wa');
   if (CAT.whatsapp) {
-    wa.href = `https://wa.me/${CAT.whatsapp}?text=${encodeURIComponent('QUIERO SER GESTOR')}`;
+    wa.href = `https://api.whatsapp.com/send?phone=${CAT.whatsapp}&text=${encodeURIComponent('QUIERO SER GESTOR')}`;
     wa.hidden = false;
   } else {
     // Sin número configurado el enlace iría a wa.me/ vacío: mejor no enseñarlo.
@@ -1022,7 +1022,7 @@ function enviarPorWhatsApp(ev) {
   const refs = items.filter(({ p }) => p.codigo).map(({ p, qty, clave }) => `${p.codigo}${clave ? '/' + clave.split(SEP_VAR).join('+') : ''} x${qty}`);
   if (refs.length && refs.length === items.length) lineas.push('', `Ref: ${refs.join(', ')}`);
 
-  window.open(`https://wa.me/${CAT.whatsapp}?text=${encodeURIComponent(lineas.join('\n'))}`, '_blank');
+  window.open(`https://api.whatsapp.com/send?phone=${CAT.whatsapp}&text=${encodeURIComponent(lineas.join('\n'))}`, '_blank');
 }
 
 // ── Portada: mosaico de fotos reales + dato de productos ──
