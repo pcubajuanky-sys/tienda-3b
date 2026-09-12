@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-12T00:00:09.457Z",
+  "generado": "2026-09-12T01:00:21.316Z",
   "vigenciaHoras": 48,
   "activo": true,
   "tasa": 690,
@@ -13,6 +13,11 @@
     "politica": "Coordinamos la hora por WhatsApp y el precio queda acordado antes de salir. Si llevas maletas o bultos grandes, dínoslo al coordinar para asegurarnos de que caben. Si tienes que cancelar, avísanos lo antes posible. Los precios dependen de la gasolina y de la tasa del día: la cotización que ves vale 48 horas."
   },
   "esperaHoraCUP": 0,
+  "recta": {
+    "porKmCUP": 575.8740000000001,
+    "baseCUP": 2691.0000000000005,
+    "redondeoCUP": 50
+  },
   "mostrarDesglose": false,
   "referidores": [],
   "comisionPorKmCUP": 20,

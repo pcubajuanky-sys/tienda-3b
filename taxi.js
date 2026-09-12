@@ -251,13 +251,46 @@ function renderPizarra() {
 
 // ── "Otro destino" y "propon tu viaje" ──
 
+// El precio de un kilometraje cualquiera, con la MISMA recta que usa Stock+
+// (taxi.json -> recta). No hay una segunda fórmula que se desincronice: un test
+// comprueba km a km que la recta y el cálculo del servidor dan lo mismo.
+function precioPorKm(km) {
+  const r = TX && TX.recta;
+  if (!r || !(km > 0)) return 0;
+  const bruto = km * r.porKmCUP + r.baseCUP;
+  const m = r.redondeoCUP;
+  return m > 0 ? Math.ceil(bruto / m) * m : Math.round(bruto);
+}
+
 function renderOtro() {
   el('tx-otro').hidden = false;
+  // Sin recta publicada (tarifa a medio configurar) no se pregunta por los km:
+  // mejor no preguntar que preguntar y no responder.
+  el('tx-otro-km-wrap').hidden = !(TX && TX.recta);
+
   const actualizar = () => {
     const destino = el('tx-otro-destino').value.trim();
-    el('tx-otro-wa').href = waLink(`🚕 *Taxi 3B*\nQuiero ir a: ${destino || '(dime a dónde)'}\n\n¿Cuánto me costaría?`);
+    const km = Number(el('tx-otro-km').value) || 0;
+    const cup = precioPorKm(km);
+    const caja = el('tx-otro-precio');
+
+    if (cup > 0) {
+      const usd = (TX.tasa > 1) ? ` · ≈ $${(cup / TX.tasa).toFixed(2)} USD` : '';
+      caja.innerHTML = `<b>${fmt(cup)} CUP</b><span>Viaje completo para ${km} km${usd}. `
+        + `Como los kilómetros los pusiste tú, lo confirmamos por WhatsApp.</span>`;
+      caja.hidden = false;
+    } else {
+      caja.hidden = true;
+    }
+
+    const lineas = ['🚕 *Taxi 3B*', `Quiero ir a: ${destino || '(dime a dónde)'}`];
+    if (km > 0) lineas.push(`Serían unos ${km} km`, `Me sale ${fmt(cup)} CUP en la web`);
+    lineas.push('', '¿Me lo confirmas?');
+    el('tx-otro-wa').href = waLink(lineas.join('\n'));
   };
+
   el('tx-otro-destino').addEventListener('input', actualizar);
+  el('tx-otro-km').addEventListener('input', actualizar);
   actualizar();
 }
 
