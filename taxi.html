@@ -80,11 +80,22 @@
       <select id="tx-destino"></select>
     </label>
 
-    <label class="tx-campo tx-campo-km" for="tx-km-libre" id="tx-km-wrap">
-      <span>¿Vas a otro lugar? Pon los kilómetros</span>
-      <input type="number" id="tx-km-libre" min="1" max="300" step="1" placeholder="Ej: 45" inputmode="numeric">
-      <em>Si no está en la lista, escribe los km y te damos el precio al momento. ¿No los sabes con exactitud? Pon lo que creas y lo confirmamos.</em>
-    </label>
+    <div class="tx-campo tx-campo-km" id="tx-km-wrap">
+      <span class="tx-km-titulo">¿Vas a otro lugar?</span>
+      <label class="tx-km-fila" for="tx-otro-nombre">
+        <small>¿A dónde?</small>
+        <input type="text" id="tx-otro-nombre" placeholder="Ej: Playa Baracoa" autocomplete="off">
+      </label>
+      <label class="tx-km-fila" for="tx-km-libre">
+        <small>¿Cuántos kilómetros son?</small>
+        <input type="number" id="tx-km-libre" min="1" max="300" step="1" placeholder="Ej: 45" inputmode="numeric">
+      </label>
+      <label class="tx-km-check" for="tx-desde-sa">
+        <input type="checkbox" id="tx-desde-sa" checked>
+        <span>Salgo desde San Antonio de los Baños</span>
+      </label>
+      <em id="tx-km-pista">Si no está en la lista, escribe los km y te damos el precio al momento. ¿No los sabes con exactitud? Pon lo que creas y lo confirmamos.</em>
+    </div>
 
     <label class="tx-campo" for="tx-asientos">
       <span>¿Compartes el viaje?</span>
@@ -116,17 +127,6 @@
       <a class="tx-wa" id="tx-pedir" target="_blank" rel="noopener">💬 Pedir por WhatsApp</a>
       <button class="tx-secundario" id="tx-compartir" type="button">🔗 Compartir cotización</button>
     </div>
-  </section>
-
-  <!-- Destino que no esta en la lista -->
-  <section class="tx-otro" id="tx-otro" hidden>
-    <h2>¿No sabes los kilómetros?</h2>
-    <p>Escríbenos a dónde necesitas ir y te decimos el precio al momento.</p>
-    <label class="tx-campo" for="tx-otro-destino">
-      <span>¿A dónde?</span>
-      <input type="text" id="tx-otro-destino" placeholder="Ej: Playa Baracoa" autocomplete="off">
-    </label>
-    <a class="tx-wa" id="tx-otro-wa" target="_blank" rel="noopener">💬 Consultar por WhatsApp</a>
   </section>
 
   <!-- Calendario: solo libre u ocupado. Nunca quien va ni a donde. -->

@@ -64,7 +64,7 @@ function olvidarReferidor() {
   REF = null;
   try { localStorage.removeItem(REF_GUARDADO); } catch (e) { /* nada que hacer */ }
   renderReferidor();
-  if (TX && TX.activo) { renderResultado(); renderPizarra(); renderOtro(); renderPropon(); }
+  if (TX && TX.activo) { renderResultado(); renderPizarra(); renderPropon(); }
 }
 
 // La cotizacion caduca: pasada la vigencia el precio sigue a la vista, pero deja
@@ -93,15 +93,28 @@ const KM_LIBRE = '__km';
 
 // Un destino "de mentira" armado con la recta publicada, con la MISMA forma que
 // los del tarifario, para que todo lo de abajo no tenga que saber de dónde salió.
+// 🔴 La recta solo vale SALIENDO DE SAN ANTONIO: cuenta el regreso del carro a su
+// base. Si el viaje empieza en otro sitio, el kilometraje que el cliente pone no
+// describe el recorrido real del carro, y el precio lo tiene que sacar el chofer.
+function desdeSanAntonio() {
+  const c = el('tx-desde-sa');
+  return !c || c.checked;
+}
+
 function destinoDeKm(km) {
   const r = TX && TX.recta;
-  if (!r || !(km > 0)) return null;
+  if (!r || !(km > 0) || !desdeSanAntonio()) return null;
   const techo = (n) => (r.redondeoCUP > 0 ? Math.ceil(n / r.redondeoCUP) * r.redondeoCUP : Math.round(n));
   const base = km * r.porKmCUP + r.baseCUP;
   const factor = Number(r.factorCompartido) > 0 ? Number(r.factorCompartido) : 1;
   const asientoCUP = {};
   for (let n = 2; n <= 4; n++) asientoCUP[n] = techo(base * factor / n);
-  return { id: KM_LIBRE, nombre: `tu destino (${km} km)`, km, idaCUP: techo(base), asientoCUP, libre: true };
+  const lugar = el('tx-otro-nombre').value.trim();
+  return {
+    id: KM_LIBRE,
+    nombre: lugar || `tu destino (${km} km)`,
+    km, idaCUP: techo(base), asientoCUP, libre: true, lugar,
+  };
 }
 
 function destinoActual() {
@@ -138,13 +151,37 @@ function renderResultado() {
   const d = destinoActual();
   const p = precioActual();
   const caja = el('tx-resultado');
-  // Con "yo pongo los km" y el campo vacío todavía no hay nada que decir.
+  // Sin precio que dar hay dos motivos distintos, y al cliente le importa saber
+  // cuál: o le faltan los km, o el viaje no sale de San Antonio y entonces el
+  // precio no es cosa de la web.
   if (!d || !p) {
-    caja.innerHTML = el('tx-destino').value === KM_LIBRE
-      ? '<div class="tx-esperando">Escribe los kilómetros y te digo el precio.</div>'
-      : '';
+    const lugar = el('tx-otro-nombre').value.trim();
+    const km = Number(el('tx-km-libre').value) || 0;
+    const boton = el('tx-pedir');
+
+    if (!desdeSanAntonio()) {
+      caja.innerHTML = '<div class="tx-aviso-sa"><b>Este viaje lo cotiza el chofer.</b>'
+        + ' El carro está en San Antonio de los Baños, así que si el viaje empieza en otro lugar'
+        + ' el precio se calcula aparte. Escríbenos y te lo decimos al momento.</div>';
+      boton.textContent = '💬 Consultar por WhatsApp';
+      boton.href = waLink([
+        '🚕 *Taxi 3B*',
+        `Quiero ir a: ${lugar || '(dime a dónde)'}`,
+        km > 0 ? `Serían unos ${km} km` : '',
+        'El viaje NO empieza en San Antonio.',
+        '',
+        '¿Cuánto me costaría?',
+      ].filter(Boolean).join('\n'));
+    } else if (el('tx-destino').value === KM_LIBRE || lugar) {
+      caja.innerHTML = '<div class="tx-esperando">Escribe los kilómetros y te digo el precio.</div>';
+      boton.textContent = '💬 Consultar por WhatsApp';
+      boton.href = waLink(`🚕 *Taxi 3B*\nQuiero ir a: ${lugar || '(dime a dónde)'}\n\n¿Cuántos km son y cuánto me costaría?`);
+    } else {
+      caja.innerHTML = '';
+    }
     return;
   }
+  el('tx-pedir').textContent = '💬 Pedir por WhatsApp';
 
   const usd = (TX.tasa > 1) ? (p.cup / TX.tasa).toFixed(2) : null;
   // Con km puestos por el cliente el cálculo es el mismo, pero la distancia la
@@ -164,11 +201,14 @@ function renderResultado() {
   const lineas = [
     '🚕 *Taxi 3B*',
     `Destino: ${d.nombre}`,
+    // Los km solo se citan cuando los puso el cliente: en los destinos del
+    // tarifario ya los sabe el chofer y repetirlos solo alarga el mensaje.
+    d.libre ? `Serían unos ${d.km} km, saliendo desde San Antonio` : '',
     `Viaje: ${p.etiqueta}`,
     `Precio: ${fmt(p.cup)} CUP`,
     '',
     'Quiero coordinar este viaje.',
-  ];
+  ].filter(Boolean);
   el('tx-pedir').href = waLink(lineas.join('\n'));
 }
 
@@ -291,15 +331,9 @@ function renderPizarra() {
 
 // ── "Otro destino" y "propon tu viaje" ──
 
-function renderOtro() {
-  el('tx-otro').hidden = false;
-  const actualizar = () => {
-    const destino = el('tx-otro-destino').value.trim();
-    el('tx-otro-wa').href = waLink(`🚕 *Taxi 3B*\nQuiero ir a: ${destino || '(dime a dónde)'}\n\n¿Cuántos km son y cuánto me costaría?`);
-  };
-  el('tx-otro-destino').addEventListener('input', actualizar);
-  actualizar();
-}
+// La seccion aparte de "¿vas a otro lugar?" desaparecio (2026-09-12): el nombre
+// del lugar vive ahora DENTRO de la calculadora, junto a los km. Dos campos para
+// lo mismo en dos sitios distintos solo confunden.
 
 function renderPropon() {
   el('tx-propon').hidden = false;
@@ -441,7 +475,6 @@ async function cargar() {
   }
   renderCalendario();
   renderPizarra();
-  renderOtro();
   renderPropon();
   el('tx-cta-gana').hidden = false;
 }
@@ -461,6 +494,8 @@ function iniciar() {
     else if (sel.value === KM_LIBRE && (TX.destinos || []).length) sel.value = TX.destinos[0].id;
     renderResultado();
   });
+  el('tx-otro-nombre').addEventListener('input', renderResultado);
+  el('tx-desde-sa').addEventListener('change', renderResultado);
   el('tx-horas').addEventListener('change', renderResultado);
   el('tx-asientos').addEventListener('change', () => { sincronizarEspera(); renderResultado(); });
   el('tx-compartir').addEventListener('click', compartirCotizacion);

@@ -78,18 +78,45 @@ body::after{
   border-radius:var(--radio-card);
   padding:12px 14px;margin-bottom:12px;
 }
-.tx-campo-km > span{color:var(--text);font-size:14px;margin-bottom:7px}
-.tx-campo-km input{
-  font-size:22px;font-weight:700;text-align:center;
-  padding:12px;background:var(--surface);
-  border-color:var(--tx-verde);
+.tx-km-titulo{
+  display:block;color:var(--text);font-size:15px;font-weight:700;margin-bottom:10px;
+}
+.tx-km-fila{display:block;margin-bottom:10px}
+.tx-km-fila small{
+  display:block;font-size:12px;font-weight:600;color:var(--text-2);margin-bottom:4px;
+}
+.tx-campo-km input[type="text"]{
+  width:100%;padding:10px 12px;font-size:15px;
+  color:var(--text);background:var(--surface);
+  border:1px solid var(--tx-verde);border-radius:var(--radio-control);
+}
+.tx-campo-km input[type="number"]{
+  width:100%;font-size:22px;font-weight:700;text-align:center;
+  padding:12px;color:var(--text);background:var(--surface);
+  border:1px solid var(--tx-verde);border-radius:var(--radio-control);
   font-variant-numeric:tabular-nums;
 }
+/* La casilla de "salgo desde San Antonio" no es un adorno: si se desmarca, la
+   web deja de dar precio, porque la formula cuenta el regreso del carro a base. */
+.tx-km-check{
+  display:flex;align-items:flex-start;gap:9px;
+  margin:2px 0 8px;font-size:13.5px;line-height:1.4;color:var(--text);cursor:pointer;
+}
+/* Selector largo a proposito: `.tx-campo input` de mas arriba le pone width:100%
+   y, con la misma especificidad, la casilla salia tan ancha como la fila y el
+   texto caia en una columna de una palabra por linea. */
+.tx-campo-km .tx-km-check input[type="checkbox"]{
+  width:21px;height:21px;min-width:21px;flex:none;
+  margin:1px 0 0;padding:0;accent-color:var(--tx-verde);
+}
+.tx-km-check > span{flex:1;min-width:0}
 .tx-campo-km em{
-  display:block;font-style:normal;margin-top:7px;
+  display:block;font-style:normal;margin-top:4px;
   font-size:12px;line-height:1.45;color:var(--text-2);
 }
 .tx-esperando{font-size:14px;color:var(--text-2);padding:4px 0}
+.tx-aviso-sa{font-size:13.5px;line-height:1.5;color:#fff;text-align:left}
+.tx-aviso-sa b{display:block;color:var(--tx-amarillo);margin-bottom:4px}
 
 /* "Vienes de parte de X". Discreto: es informacion para el chofer, no una
    promocion; el cliente no tiene que hacer nada con esto. */
