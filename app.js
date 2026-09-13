@@ -1134,6 +1134,7 @@ function renderMundos() {
   const pastilla = document.getElementById('mundo-taxi');
   if (!pastilla) return;
   pastilla.hidden = !(CAT && CAT.tienda && CAT.tienda.taxiActivo);
+  if (window.Mundos) window.Mundos.refrescar();   // el aviso depende de si el taxi se ve
 }
 
 async function cargarCatalogo() {

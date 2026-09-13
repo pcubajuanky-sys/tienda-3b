@@ -822,3 +822,29 @@ button.footer-link{background:none;border:none;font-family:inherit;cursor:pointe
   .mundo:hover,.mundo:active{transform:none}
   .mundo:not(.mundo-on)::after{animation:none;opacity:.45;transform:none}
 }
+
+/* El logo de 3B manda: es la marca paraguas y los socios son satélites. Va
+   grande en las DOS páginas, incluso en /taxi. */
+.mundo-3b{width:74px;height:74px}
+@media (min-width:600px){ .mundo-3b{width:88px;height:88px} }
+
+/* Globo pegado a los logos. Es un hijo más del flex .mundos (no va posicionado
+   encima), así nunca tapa el buscador ni el carrito. Como la cabecera es
+   sticky, acompaña al cliente por toda la página. Lo enseña/esconde mundos.js. */
+.mundos-globo{
+  position:relative;flex:0 1 auto;min-width:0;
+  margin-left:6px;padding:6px 10px;border-radius:12px;
+  background:var(--brand);color:var(--brand-ink);
+  font-size:11.5px;font-weight:700;line-height:1.25;text-align:left;
+}
+.mundos-globo::before{
+  content:"";position:absolute;left:-5px;top:50%;transform:translateY(-50%);
+  width:0;height:0;border:5px solid transparent;border-right-color:var(--brand);
+}
+@media (min-width:600px){ .mundos-globo{font-size:13px;padding:8px 12px} }
+
+/* Franja de ancho completo, encima de la cabecera. Reusa .promo entera y solo
+   cambia el color. Usa los tokens de marca (no #fff fijo) para que el contraste
+   siga bien en modo oscuro. */
+.promo-mundos{background:var(--brand);color:var(--brand-ink)}
+.promo-mundos .promo-linea{font-size:13.5px}

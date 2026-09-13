@@ -32,15 +32,25 @@
 </head>
 <body>
 
+<!-- Aviso que descubre a los negocios socios (2026-09-13). `hidden` por
+     defecto: lo destapa mundos.js solo si hay otro negocio visible y el
+     cliente no ha tocado ninguno todavía. -->
+<div id="promo-mundos" class="promo promo-mundos" hidden>
+  <div class="promo-contenido">
+    <p class="promo-linea">3B es más de un negocio 👇 Toca los logos y conoce a nuestros socios</p>
+  </div>
+</div>
+
 <header class="header" id="header">
   <div class="header-top wrap">
     <nav class="mundos" aria-label="Nuestros negocios">
-      <a class="mundo mundo-on" href="#" id="logo-header" aria-current="page" title="3B Store">
+      <a class="mundo mundo-on mundo-3b" href="#" id="logo-header" aria-current="page" title="3B Store">
         <img class="mundo-img" src="/logo-3b.png" width="256" height="256" alt="3B Store — tienda">
       </a>
       <a class="mundo" id="mundo-taxi" href="/taxi" hidden title="Taxi 3B">
         <img class="mundo-img" src="/logo-taxi-3b.png" width="256" height="256" alt="Taxi 3B — viajes">
       </a>
+      <span class="mundos-globo" id="mundos-globo" hidden>👈 Toca nuestros<br>otros negocios</span>
     </nav>
     <button id="btn-carrito" class="btn-carrito" aria-label="Ver tu pedido" type="button">
       <span aria-hidden="true">🛒</span>
@@ -291,6 +301,7 @@
   </div>
 </div>
 
+<script src="mundos.js"></script>
 <script src="app.js"></script>
 </body>
 </html>
