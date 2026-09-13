@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-13T21:32:11.310Z",
+  "generado": "2026-09-13T21:41:34.814Z",
   "tasa": 690,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -1277,24 +1277,6 @@
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
-      }
-    },
-    {
-      "id": "p_1782340069990",
-      "codigo": "8UHU",
-      "name": "Estera para el Gym",
-      "cat": "Gym y Suplementos",
-      "subcat": "",
-      "notes": "Alfombra EVA de 3 mm, resistente y antideslizante, ideal para entrenamientos de fuerza y funcional en el gimnasio o en casa. Ligera, resistente a la humedad y de fácil limpieza, ofrece soporte estable y seguro en cada sesión.",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782340028/productos/cihevmtaeacp4ciyvmas.jpg",
-      "precioUSD": 9,
-      "precioCUP": 6210,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
       }
     },
     {
