@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-12T19:39:51.960Z",
+  "generado": "2026-09-13T01:01:58.370Z",
   "tasa": 690,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -2394,6 +2394,73 @@
       }
     },
     {
+      "id": "p_1789255852331",
+      "codigo": "YL97",
+      "name": "Medias Negras (2 pares)",
+      "cat": "Ropa Interior",
+      "subcat": "",
+      "notes": "",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789255221/productos/iqfttwredoy4ys4gv8m2.jpg",
+      "precioUSD": 1,
+      "precioCUP": 690,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
+    },
+    {
+      "id": "p_1789255854911",
+      "codigo": "7HGV",
+      "name": "Medias Negras (2 pares)",
+      "cat": "Ropa Interior",
+      "subcat": "",
+      "notes": "",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789255221/productos/iqfttwredoy4ys4gv8m2.jpg",
+      "precioUSD": 1,
+      "precioCUP": 690,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
+    },
+    {
+      "id": "p_1789256890851",
+      "codigo": "UFJ3",
+      "name": "Medias variadas",
+      "cat": "Ropa Interior",
+      "subcat": "",
+      "notes": "",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789256579/productos/e49l6h0uldhsq9ldzbjp.jpg",
+      "precioUSD": 0.5,
+      "precioCUP": 345,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Color"
+        ],
+        "opciones": [
+          "NEGRO",
+          "BLANCO",
+          "GRIS",
+          "ROSA",
+          "ROSA OSCURO",
+          "MORADO"
+        ]
+      },
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
+    },
+    {
       "id": "p_1786916805434",
       "codigo": "2ZW2",
       "name": "Mini Bloques-Lima de uñas",
@@ -3600,6 +3667,60 @@
       "moneda": "cup",
       "enOferta": false,
       "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
+      "id": "p_1789241914026",
+      "codigo": "KHXC",
+      "name": "Pulover Unisex Navideño 1",
+      "cat": "Ropa",
+      "subcat": "",
+      "notes": "Pulover algodonada elastizado . Importado de USA",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789241807/productos/nvc54lxofwfrczxstfar.jpg",
+      "precioUSD": 4,
+      "precioCUP": 2760,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Talla"
+        ],
+        "opciones": [
+          "XL"
+        ]
+      },
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
+      "id": "p_1789242333082",
+      "codigo": "4QLL",
+      "name": "Pulover Unisex Navideño 2",
+      "cat": "Ropa",
+      "subcat": "",
+      "notes": "Pulover algodonada elastizado. Importado de USA",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789242098/productos/u6uvk5zmxtesf0aekplu.jpg",
+      "precioUSD": 4,
+      "precioCUP": 2760,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Talla",
+          "Color"
+        ],
+        "opciones": [
+          "M / GRIS🩶",
+          "XL / NEGRO🖤"
+        ]
+      },
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
