@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-13T12:32:07.295Z",
+  "generado": "2026-09-13T16:01:53.106Z",
   "tasa": 690,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -294,24 +294,6 @@
       }
     },
     {
-      "id": "p_1787110390009",
-      "codigo": "KLNL",
-      "name": "Alarma de puertas y ventanas",
-      "cat": "Hogar",
-      "subcat": "",
-      "notes": "Alarma ideal para la protección de su casa, de habitaciones, closets o incluso gavetas, TODA SEGURIDAD ES POCA EN ESTOS TIEMPOS!!",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787110254/productos/isqaptoba6wgp0ogrwni.jpg",
-      "precioUSD": 2.17,
-      "precioCUP": 1500,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      }
-    },
-    {
       "id": "p_1787498809174",
       "codigo": "RWLZ",
       "name": "Anillos de acero quirúrgico",
@@ -492,24 +474,6 @@
       }
     },
     {
-      "id": "p_1788553190201",
-      "codigo": "DQMN",
-      "name": "Aro de luz",
-      "cat": "Bocinas Celulares y Accesorios",
-      "subcat": "",
-      "notes": "Aro de luz recargable con 3 modos de intensidad. Diseño de pinza para ajuste ideal en teléfonos, tabletas y laptops",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788553013/productos/jszpxp6ll0ymemeilcjd.jpg",
-      "precioUSD": 5,
-      "precioCUP": 3450,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      }
-    },
-    {
       "id": "p_1786918401932",
       "codigo": "FWQH",
       "name": "Atrapa insectos Eléctrico",
@@ -566,15 +530,15 @@
       "precioNormalCUP": 600
     },
     {
-      "id": "p_1786803816356",
-      "codigo": "DU4A",
-      "name": "Audífonos inalámbricos X15",
+      "id": "p_1780092109867",
+      "codigo": "QD4E",
+      "name": "Audífonos inalámbricos X55",
       "cat": "Bocinas Celulares y Accesorios",
       "subcat": "",
-      "notes": "Audífonos inalámbricos X15, ligeros y con su estuche de carga.",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786803730/productos/p34guyzzkxjrpwyw39ya.jpg",
-      "precioUSD": 4.64,
-      "precioCUP": 3200,
+      "notes": "Auriculares inalámbricos modelo X55, Presentan un diseño ultraligero y delgado qu garantiza comodidad durante su uso, con reducción de ruido avanzada y forma ergonómica que evita la presión en los oídos, incluso al dormir de lado. Ideales para un descanso profundo y sin interrupciones.",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785089336/productos/k1vaswogj1rww7enirsk.jpg",
+      "precioUSD": 4.35,
+      "precioCUP": 3000,
       "moneda": "cup",
       "enOferta": false,
       "destacado": false,
@@ -711,6 +675,24 @@
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789229232/productos/iint1nqsydkjxzi86gsf.jpg",
       "precioUSD": 8,
       "precioCUP": 5520,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
+      "id": "p_1781215775166",
+      "codigo": "9ZY3",
+      "name": "Bocina Bluetooth",
+      "cat": "Bocinas Celulares y Accesorios",
+      "subcat": "",
+      "notes": "Dispositivo de audio inalámbrico con altavoces duales, estéreo TWS, llamadas manos libres, radio FM y soporte para tarjetas TF y unidades USB. Se conecta a teléfonos móviles y tabletas. Máxima calidad de sonido",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1781215701/productos/yu7wkzi3wojjmssnk4ec.jpg",
+      "precioUSD": 20,
+      "precioCUP": 13800,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -1533,24 +1515,6 @@
       },
       "precioNormalUSD": 30,
       "precioNormalCUP": 20700
-    },
-    {
-      "id": "p_1785957052228",
-      "codigo": "8X9D",
-      "name": "Gafas Cristal transparente",
-      "cat": "Accesorio de vestir",
-      "subcat": "",
-      "notes": "Protección contra luz azul, ideal para personas que usan mucho pantallas como celulares ,laptops y televisión.\nTambién es un muy buen accesorio para personas que manejan moto en horario nocturno, protege los ojos sin afectar la visibilidad en la oscuridad\nColores disponibles 🩶 🤍",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785956773/productos/gufvuhffd4ibygz29anq.jpg",
-      "precioUSD": 2,
-      "precioCUP": 1380,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
-      }
     },
     {
       "id": "p_1785957866193",
