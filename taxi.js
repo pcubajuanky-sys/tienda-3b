@@ -54,6 +54,12 @@ function resolverReferidor() {
   try {
     const guardado = localStorage.getItem(REF_GUARDADO);
     if (guardado) REF = buscar(guardado);
+    // Un gestor de la tienda usa el MISMO código en el taxi (2026-09-14): si el cliente
+    // entró por www.3bqba.com/CODIGO, la tienda lo dejó en 'ref' y aquí también cuenta.
+    if (!REF) {
+      const deTienda = localStorage.getItem('ref');
+      if (deTienda) REF = buscar(deTienda);
+    }
   } catch (e) { /* sin localStorage se sigue sin recordar; no es grave */ }
 }
 
