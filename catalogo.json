@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-14T13:51:06.626Z",
+  "generado": "2026-09-14T13:56:10.659Z",
   "tasa": 695,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -46,6 +46,10 @@
     {
       "code": "EY7R6",
       "nombre": "Elizabeth Gallardo Alarcón"
+    },
+    {
+      "code": "46R3V",
+      "nombre": "Boris Luís Rodríguez"
     }
   ],
   "categorias": [
