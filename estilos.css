@@ -835,16 +835,33 @@ button.footer-link{background:none;border:none;font-family:inherit;cursor:pointe
   position:relative;flex:0 1 auto;min-width:0;
   margin-left:6px;padding:6px 10px;border-radius:12px;
   background:var(--brand);color:var(--brand-ink);
-  font-size:11.5px;font-weight:700;line-height:1.25;text-align:left;
+  font-size:13px;font-weight:700;line-height:1.25;text-align:left;
+  animation:latido-globo 2.4s ease-in-out infinite;
 }
 .mundos-globo::before{
   content:"";position:absolute;left:-5px;top:50%;transform:translateY(-50%);
   width:0;height:0;border:5px solid transparent;border-right-color:var(--brand);
 }
-@media (min-width:600px){ .mundos-globo{font-size:13px;padding:8px 12px} }
+@media (min-width:600px){ .mundos-globo{font-size:15px;padding:9px 13px} }
 
 /* Franja de ancho completo, encima de la cabecera. Reusa .promo entera y solo
    cambia el color. Usa los tokens de marca (no #fff fijo) para que el contraste
    siga bien en modo oscuro. */
 .promo-mundos{background:var(--brand);color:var(--brand-ink)}
-.promo-mundos .promo-linea{font-size:13.5px}
+.promo-mundos .promo-linea{font-size:15px}
+@media (min-width:600px){ .promo-mundos .promo-linea{font-size:16px} }
+
+/* El globo late despacio para pedir el toque. Solo el globo se mueve: los logos
+   se quedan quietos para que se lean. */
+@keyframes latido-globo{
+  0%,100%{transform:scale(1)}
+  50%{transform:scale(1.06)}
+}
+@media (prefers-reduced-motion:reduce){
+  .mundos-globo{animation:none}
+}
+
+/* Franja + cabecera, pegadas arriba de la pantalla como una sola pieza. El
+   .header de dentro conserva su propio sticky (inofensivo: el envoltorio ya
+   está clavado) para no tocar nada de lo que ya funcionaba. */
+.barra-fija{position:sticky;top:0;z-index:21;background:var(--surface)}

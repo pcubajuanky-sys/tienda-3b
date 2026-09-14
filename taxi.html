@@ -33,25 +33,30 @@
 <!-- Aviso que descubre a los negocios socios (2026-09-13). `hidden` por
      defecto: lo destapa mundos.js solo si hay otro negocio visible y el
      cliente no ha tocado ninguno todavía. -->
-<div id="promo-mundos" class="promo promo-mundos" hidden>
-  <div class="promo-contenido">
-    <p class="promo-linea">3B es más de un negocio 👇 Toca los logos y conoce a nuestros socios</p>
+<!-- Franja + cabecera viajan juntas y pegadas arriba: así la franja no se va
+     nunca con el scroll (decisión del dueño, 2026-09-13) y no hay que calcular
+     a mano cuánto mide para separar una de otra. -->
+<div class="barra-fija">
+  <div id="promo-mundos" class="promo promo-mundos" hidden>
+    <div class="promo-contenido">
+      <p class="promo-linea">3B es más de un negocio 👇 Toca los logos y conoce a nuestros socios</p>
+    </div>
   </div>
-</div>
 
-<header class="header" id="header">
-  <div class="header-top wrap">
-    <nav class="mundos" aria-label="Nuestros negocios">
-      <a class="mundo mundo-3b" href="/" title="3B Store">
-        <img class="mundo-img" src="/logo-3b.png" width="256" height="256" alt="3B Store — tienda">
-      </a>
-      <a class="mundo mundo-on" href="/taxi" aria-current="page" title="Taxi 3B">
-        <img class="mundo-img" src="/logo-taxi-3b.png" width="256" height="256" alt="Taxi 3B — viajes">
-      </a>
-      <span class="mundos-globo" id="mundos-globo" hidden>👈 Toca nuestros<br>otros negocios</span>
-    </nav>
-  </div>
-</header>
+  <header class="header" id="header">
+    <div class="header-top wrap">
+      <nav class="mundos" aria-label="Nuestros negocios">
+        <a class="mundo mundo-3b" href="/" title="3B Store">
+          <img class="mundo-img" src="/logo-3b.png" width="256" height="256" alt="3B Store — tienda">
+        </a>
+        <a class="mundo mundo-on" href="/taxi" aria-current="page" title="Taxi 3B">
+          <img class="mundo-img" src="/logo-taxi-3b.png" width="256" height="256" alt="Taxi 3B — viajes">
+        </a>
+        <span class="mundos-globo" id="mundos-globo" hidden>👈 Toca nuestros<br>otros negocios</span>
+      </nav>
+    </div>
+  </header>
+</div>
 
 <main class="wrap tx-main">
 

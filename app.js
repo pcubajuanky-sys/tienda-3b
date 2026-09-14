@@ -847,9 +847,11 @@ function reservarEspacioBarraMovil() {
 // mide el alto real de la cabecera (mismo patrón que reservarEspacioBarraMovil,
 // nada de números mágicos a ciegas) al cargar y en cada resize.
 function medirHeader() {
-  const header = document.getElementById('header');
-  if (!header) return;
-  const h = header.getBoundingClientRect().height;
+  // La franja del aviso viaja pegada a la cabecera dentro de .barra-fija: lo que
+  // hay que medir es la pieza entera, no solo el <header>.
+  const barra = document.querySelector('.barra-fija') || document.getElementById('header');
+  if (!barra) return;
+  const h = barra.getBoundingClientRect().height;
   document.documentElement.style.setProperty('--header-h', h + 'px');
 }
 
@@ -1135,6 +1137,7 @@ function renderMundos() {
   if (!pastilla) return;
   pastilla.hidden = !(CAT && CAT.tienda && CAT.tienda.taxiActivo);
   if (window.Mundos) window.Mundos.refrescar();   // el aviso depende de si el taxi se ve
+  medirHeader();                                   // la franja cambia el alto de la barra fija
 }
 
 async function cargarCatalogo() {

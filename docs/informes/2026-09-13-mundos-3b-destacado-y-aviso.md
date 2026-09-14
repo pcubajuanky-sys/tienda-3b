@@ -187,3 +187,109 @@ deliberado — no se invita a tocar un icono que no existe — pero significa qu
 unos milisegundos después de pintar, empujando el contenido hacia abajo mientras aún se ve el
 esqueleto de carga. No se tocó: cambiarlo obligaría a enseñar el aviso antes de saber si hay algo
 que descubrir.
+
+---
+
+## v2 — el aviso se queda fijo y resalta más (2026-09-13, mismo día)
+
+Plan ejecutado: `docs/superpowers/plans/2026-09-13-mundos-aviso-fijo-y-mas-visible.md`. Continúa lo
+de arriba (ya en producción, commit `812304c`), tras la decisión del dueño de que el aviso: (a) no
+se apague nunca, (b) la franja+cabecera queden pegadas arriba (no se vayan con el scroll), y (c)
+resalte más (letra mayor + globo latiendo, mismo morado de marca).
+
+### Qué se hizo
+
+Las 4 Tasks de código, literales, sin desviaciones:
+
+1. **`mundos.js`** — reemplazado por completo. Fuera `localStorage['3b_mundos_visto']`, `yaLoVio`,
+   `marcarVisto`, el listener de `click` y el de `scroll`. `refrescar()` ahora solo mira
+   `hayOtrosNegocios()` y muestra/oculta franja+globo con eso; ya no depende de `scrollY`.
+2. **`index.html` y `taxi.html`** — `#promo-mundos` y `<header id="header">` envueltos en
+   `<div class="barra-fija">…</div>`, indentados sin tocar su contenido interior.
+3. **`estilos.css`** — al final del bloque «Conmutador de mundos»: `.mundos-globo` pasa de
+   `font-size:11.5px` a `13px` y gana `animation:latido-globo 2.4s ease-in-out infinite`; su media
+   query ≥600px pasa de `font-size:13px;padding:8px 12px` a `font-size:15px;padding:9px 13px`;
+   `.promo-mundos .promo-linea` pasa de `font-size:13.5px` a `15px` (+ media query ≥600px a
+   `16px`); nuevo `@keyframes latido-globo` y su `@media (prefers-reduced-motion:reduce)`; y al
+   final del archivo, `.barra-fija{position:sticky;top:0;z-index:21;background:var(--surface)}`.
+4. **`app.js`** — `medirHeader()` mide `.barra-fija` (con fallback a `#header`) en vez de solo
+   `#header`; `renderMundos()` llama `medirHeader()` al final, tras `Mundos.refrescar()`, para
+   remedir cuando la franja cambia el alto de la barra. `taxi.js` no se tocó.
+
+Antes de cada edición se leyó el archivo real; el contenido alrededor coincidía exactamente con lo
+que el plan describía, así que no hizo falta parar a preguntar nada.
+
+### Archivos modificados
+
+- `C:\inventario\tienda-3b\mundos.js`
+- `C:\inventario\tienda-3b\index.html`
+- `C:\inventario\tienda-3b\taxi.html`
+- `C:\inventario\tienda-3b\estilos.css`
+- `C:\inventario\tienda-3b\app.js`
+- Este informe (ampliado, no se creó uno nuevo)
+
+No se hizo commit ni push (instrucción explícita del plan).
+
+### Verificación (Task 5) — con los ojos, observado en el Browser pane
+
+Servidor: `python -m http.server 8779 --bind 127.0.0.1` en la raíz del proyecto (verificado con
+`curl` → HTTP 200 antes de abrir el navegador). `node --check mundos.js` y `node --check app.js` →
+sin errores.
+
+Viewports probados: 430×820 (móvil) y 1280×800 (escritorio), en `/` y en `/taxi.html`.
+
+1. **La franja se ve arriba y sigue ahí tras bajar mucho** — ✅ VERIFICADO. En `/` a 430×820,
+   captura antes de scroll y después de dos scrolls grandes (hasta la sección de categorías/
+   productos): la franja «3B es más de un negocio 👇…» permanece en la misma posición superior en
+   ambas capturas (no se desplazó con el contenido).
+2. **El globo se ve desde el principio, más grande, y late** — ✅ VERIFICADO visualmente (visible
+   ya en la primera captura, sin scroll, en `/` y en `/taxi.html`) y confirmado por CSS: la regla
+   `.mundos-globo` aplicada trae `animation:latido-globo 2.4s ease-in-out infinite` y
+   `font-size:13px` (15px ≥600px) — el keyframe `latido-globo` existe en `estilos.css` y escala de
+   `1` a `1.06`. El movimiento en sí (una animación CSS continua) no se puede "fotografiar" en una
+   captura estática; se verificó por inspección de la regla computada, no por impresión visual de
+   movimiento.
+3. **Nada de la cabecera tapa el contenido: el primer producto se ve entero al bajar** — ✅
+   VERIFICADO. A 430×820 en `/`, tras el scroll, el primer producto del catálogo («Aretes pequeños
+   de acero», con su imagen, precio y botón «Añadir») se ve completo, sin ningún recorte por la
+   barra fija.
+4. **A 1280×800: el carrito lateral no queda tapado por la barra fija (números reales)** — ✅
+   VERIFICADO con `getBoundingClientRect()` vía `javascript_tool` en `/`:
+   - `.barra-fija` → `top: 0`, `bottom: 209.796875`, `height: 209.796875`
+   - `#carrito-lateral` → `top: 654.46875`, `bottom: 776.46875`, `height: 122`
+   - `--header-h` (computado) → `209.796875px` (coincide con el alto medido de `.barra-fija`,
+     confirmando que `medirHeader()` está midiendo la barra entera y no solo `#header`).
+   El borde superior del carrito (`top: 654.5`) queda muy por debajo del borde inferior de la
+   barra fija (`bottom: 209.8`) — sin solape, con más de 440px de margen.
+5. **El aviso sale siempre, se toque lo que se toque** — ✅ VERIFICADO. Se disparó un clic real
+   (`element.click()`) sobre el logo de 3B desde `/taxi.html`, lo que navegó a `/` (enlace real,
+   sin JS de por medio); tras la navegación, `#promo-mundos` y `#mundos-globo` seguían con
+   `hidden === false`. Además, tres navegaciones consecutivas `/` → `/taxi.html` → `/` (recargas
+   completas de página, sin clics) se comprobaron con `javascript_tool`: en las tres,
+   `promo-mundos.hidden` y `mundos-globo.hidden` dieron `false`. No hay ningún camino (tocar un
+   logo o solo recargar) que lo apague.
+6. **`localStorage` ya no guarda `3b_mundos_visto`** — ✅ VERIFICADO. Tras el clic real del punto 5
+   (el mismo que antes marcaba `3b_mundos_visto`), `Object.keys(localStorage)` devolvió
+   `["carrito"]` y `localStorage.getItem('3b_mundos_visto')` devolvió `null`.
+
+Al terminar: se restauró el viewport del Browser pane a `desktop`, se cerró la pestaña de prueba,
+se detuvo el proceso `python.exe` del puerto 8779 (`taskkill /F /PID`) y se confirmó con `netstat`
+que no quedó ningún proceso en estado `LISTENING` sobre el puerto 8779 (solo conexiones `TIME_WAIT`
+normales de cierre, no un servidor activo).
+
+### Desviaciones del plan y su motivo
+
+Ninguna. Los 4 pasos de código se ejecutaron literalmente (snippets copiados tal cual, con sus
+comentarios en español); los 6 puntos de verificación se comprobaron todos con los ojos y con
+números reales donde el plan los pedía (punto 4). No se tocó nada fuera de lo que el plan cubre
+(`taxi.js` no se tocó, como indicaba explícitamente la Task 4; no se hizo commit ni push).
+
+### Definition of done (v2)
+
+- [x] Los 4 pasos de código ejecutados literalmente, sin features/archivos/mejoras fuera del plan.
+- [x] `node --check mundos.js` y `node --check app.js` corridos y observados sin errores.
+- [x] Los 6 puntos de verificación de la Task 5 corridos y OBSERVADOS con el Browser pane (números
+      reales de `getBoundingClientRect()` en el punto 4, no impresiones).
+- [x] Servidor de pruebas (puerto 8779) detenido al terminar; puerto confirmado libre.
+- [x] Sin commit ni push (por instrucción explícita).
+- [x] Esta sección, autocontenida, sin resultados fabricados.
