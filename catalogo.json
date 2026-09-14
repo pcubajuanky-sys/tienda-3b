@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-14T13:56:10.659Z",
+  "generado": "2026-09-14T19:09:22.271Z",
   "tasa": 695,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -152,6 +152,10 @@
     {
       "n": "Ropa Interior",
       "e": "👙"
+    },
+    {
+      "n": "Porcelana",
+      "e": "☕🍽️"
     }
   ],
   "tienda": {
@@ -4077,6 +4081,32 @@
       "moneda": "cup",
       "enOferta": false,
       "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Color"
+        ],
+        "opciones": [
+          "ROSA🩷"
+        ]
+      },
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
+      "id": "p_1789411169180",
+      "codigo": "DAMG",
+      "name": "Tacitas 12 piezas",
+      "cat": "Porcelana",
+      "subcat": "",
+      "notes": "Conjunto de 12 piezas de tazas de café.\n6 tazas con 6 platicos.",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789411058/productos/xhdokldz5nbz707deyqs.jpg",
+      "precioUSD": 5,
+      "precioCUP": 3475,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -4092,6 +4122,24 @@
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785533118/productos/n6kufln4qr2nektpeatg.jpg",
       "precioUSD": 15,
       "precioCUP": 10425,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
+      "id": "p_1789411311758",
+      "codigo": "5TLQ",
+      "name": "Tazas 5 piezas",
+      "cat": "Porcelana",
+      "subcat": "",
+      "notes": "Hermoso conjunto de 4 tazas de 8oz y su base metálica.",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789411149/productos/piydqwkezskbp3pf0se3.jpg",
+      "precioUSD": 7,
+      "precioCUP": 4865,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
