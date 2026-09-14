@@ -1,8 +1,8 @@
 {
-  "generado": "2026-09-12T03:41:52.231Z",
+  "generado": "2026-09-14T18:14:48.557Z",
   "vigenciaHoras": 48,
   "activo": true,
-  "tasa": 690,
+  "tasa": 695,
   "whatsapp": "5358856820",
   "whatsappAltas": "5354978966",
   "marca": {
@@ -14,30 +14,64 @@
   },
   "esperaHoraCUP": 0,
   "recta": {
-    "porKmCUP": 575.8740000000001,
-    "baseCUP": 2691.0000000000005,
+    "porKmCUP": 580.0470000000001,
+    "baseCUP": 2710.5000000000005,
     "redondeoCUP": 50,
     "factorCompartido": 1.25
   },
   "mostrarDesglose": false,
-  "referidores": [],
+  "referidores": [
+    {
+      "code": "N89WN",
+      "nombre": "Diego"
+    },
+    {
+      "code": "9H5MM",
+      "nombre": "Elaine Ocampo Pino"
+    },
+    {
+      "code": "5D9K9",
+      "nombre": "Yasnaya"
+    },
+    {
+      "code": "83FNU",
+      "nombre": "Danay Alvarez González"
+    },
+    {
+      "code": "ZBB9S",
+      "nombre": "Ania Milagros Peraza Tarragó"
+    },
+    {
+      "code": "8F5AX",
+      "nombre": "Débora"
+    },
+    {
+      "code": "D75W3",
+      "nombre": "Lianet Cruz Avila"
+    },
+    {
+      "code": "9SFEV",
+      "nombre": "Nilvi"
+    },
+    {
+      "code": "R7K9J",
+      "nombre": "Saira Ramírez Perez"
+    },
+    {
+      "code": "APB",
+      "nombre": "Angela"
+    },
+    {
+      "code": "EY7R6",
+      "nombre": "Elizabeth Gallardo Alarcón"
+    },
+    {
+      "code": "46R3V",
+      "nombre": "Boris Luís Rodríguez"
+    }
+  ],
   "comisionPorKmCUP": 20,
   "agenda": [
-    {
-      "fecha": "2026-09-11",
-      "manana": false,
-      "tarde": false
-    },
-    {
-      "fecha": "2026-09-12",
-      "manana": false,
-      "tarde": false
-    },
-    {
-      "fecha": "2026-09-13",
-      "manana": false,
-      "tarde": false
-    },
     {
       "fecha": "2026-09-14",
       "manana": false,
@@ -92,6 +126,21 @@
       "fecha": "2026-09-24",
       "manana": false,
       "tarde": false
+    },
+    {
+      "fecha": "2026-09-25",
+      "manana": false,
+      "tarde": false
+    },
+    {
+      "fecha": "2026-09-26",
+      "manana": false,
+      "tarde": false
+    },
+    {
+      "fecha": "2026-09-27",
+      "manana": false,
+      "tarde": false
     }
   ],
   "destinos": [
@@ -99,40 +148,40 @@
       "id": "acuario",
       "nombre": "Acuario Nacional",
       "km": 29,
-      "idaCUP": 19400,
+      "idaCUP": 19550,
       "idaUSD": 28.1,
-      "idaVueltaCUP": 19400,
+      "idaVueltaCUP": 19550,
       "idaVueltaUSD": 28.1,
       "asientoCUP": {
-        "2": 12150,
-        "3": 8100,
-        "4": 6100
+        "2": 12250,
+        "3": 8150,
+        "4": 6150
       }
     },
     {
       "id": "capitolio",
       "nombre": "Capitolio Nacional",
       "km": 42,
-      "idaCUP": 26900,
+      "idaCUP": 27100,
       "idaUSD": 38.95,
-      "idaVueltaCUP": 26900,
+      "idaVueltaCUP": 27100,
       "idaVueltaUSD": 38.95,
       "asientoCUP": {
-        "2": 16800,
-        "3": 11200,
-        "4": 8400
+        "2": 16950,
+        "3": 11300,
+        "4": 8500
       }
     },
     {
       "id": "guira",
       "nombre": "Güira de Melena",
       "km": 11,
-      "idaCUP": 9050,
+      "idaCUP": 9100,
       "idaUSD": 13.08,
-      "idaVueltaCUP": 9050,
+      "idaVueltaCUP": 9100,
       "idaVueltaUSD": 13.08,
       "asientoCUP": {
-        "2": 5650,
+        "2": 5700,
         "3": 3800,
         "4": 2850
       }
@@ -141,28 +190,28 @@
       "id": "calixto",
       "nombre": "Hospital Calixto García",
       "km": 34,
-      "idaCUP": 22300,
+      "idaCUP": 22450,
       "idaUSD": 32.28,
-      "idaVueltaCUP": 22300,
+      "idaVueltaCUP": 22450,
       "idaVueltaUSD": 32.28,
       "asientoCUP": {
-        "2": 13950,
-        "3": 9300,
-        "4": 7000
+        "2": 14050,
+        "3": 9350,
+        "4": 7050
       }
     },
     {
       "id": "terminal",
       "nombre": "Terminal de Ómnibus Nacionales",
       "km": 32,
-      "idaCUP": 21150,
+      "idaCUP": 21300,
       "idaUSD": 30.61,
-      "idaVueltaCUP": 21150,
+      "idaVueltaCUP": 21300,
       "idaVueltaUSD": 30.61,
       "asientoCUP": {
-        "2": 13200,
-        "3": 8800,
-        "4": 6600
+        "2": 13300,
+        "3": 8900,
+        "4": 6650
       }
     }
   ],
