@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-14T19:09:22.271Z",
+  "generado": "2026-09-14T22:55:53.976Z",
   "tasa": 695,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -834,8 +834,7 @@
           "Color"
         ],
         "opciones": [
-          "M / NEGRO🖤",
-          "M / GRIS🩶"
+          "M / NEGRO🖤"
         ]
       },
       "envio": {
@@ -4202,6 +4201,24 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
+      "id": "p_1789425875477",
+      "codigo": "4A9Y",
+      "name": "Tirantes de silicona",
+      "cat": "Ropa Interior",
+      "subcat": "",
+      "notes": "Mensajería gratis",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789425437/productos/a0z2ewuy3ptqagfopxbq.jpg",
+      "precioUSD": 1,
+      "precioCUP": 695,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
       }
     },
     {
