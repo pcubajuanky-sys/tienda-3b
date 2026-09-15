@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-14T22:55:53.976Z",
+  "generado": "2026-09-15T15:10:14.106Z",
   "tasa": 695,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -592,6 +592,24 @@
       }
     },
     {
+      "id": "p_1789482363354",
+      "codigo": "XTB3",
+      "name": "Barra de sonido",
+      "cat": "Electrodomésticos",
+      "subcat": "",
+      "notes": "Altavoz Inalámbrico con Sonido HD. Portátil hasta 10H de Reproducción .Entrada AUX y Tarjeta TF y USB . Altavoces Inalámbricos 5.3 para Hogar/Fiesta/Exteriores. Solo e color negro como en la imagen",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789482181/productos/vmca1tktzdqp6ceyyrek.jpg",
+      "precioUSD": 25,
+      "precioCUP": 17375,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
       "id": "p_1785877309060",
       "codigo": "JBG5",
       "name": "Bikini 3 en 1 Manga larga",
@@ -810,33 +828,6 @@
       "moneda": "cup",
       "enOferta": false,
       "destacado": false,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      }
-    },
-    {
-      "id": "p_1789229974668",
-      "codigo": "ULAC",
-      "name": "Camiseta corta",
-      "cat": "Ropa",
-      "subcat": "",
-      "notes": "Tela elastizada y cómoda. Alta calidad",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789229886/productos/cwtxkhbn1axa0pypz24r.jpg",
-      "precioUSD": 4,
-      "precioCUP": 2780,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "variantes": {
-        "ejes": [
-          "Talla",
-          "Color"
-        ],
-        "opciones": [
-          "M / NEGRO🖤"
-        ]
-      },
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -2839,24 +2830,6 @@
       },
       "precioNormalUSD": 30,
       "precioNormalCUP": 20850
-    },
-    {
-      "id": "p_1780092348854",
-      "codigo": "YQN3",
-      "name": "Organizador de fregadero",
-      "cat": "Hogar",
-      "subcat": "",
-      "notes": "Organizador para el fregadero: mantiene la esponja, el jabón y el estropajo escurridos y a mano.",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787956605/productos/p1a4znh4eauvckzv0jni.jpg",
-      "precioUSD": 5.76,
-      "precioCUP": 4000,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      }
     },
     {
       "id": "p_1785006327470",
