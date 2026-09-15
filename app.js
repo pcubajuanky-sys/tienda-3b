@@ -1170,6 +1170,7 @@ async function cargarCatalogo() {
   renderFooterExtra();
   renderPromoEnvio();
   pintarCampana();
+  if (window.Encargos) window.Encargos.iniciar(CAT);   // encargos.js (Fase C): tarjeta + #encargos
   document.getElementById('skeleton').hidden = true;
   document.getElementById('grid').hidden = false;
 }

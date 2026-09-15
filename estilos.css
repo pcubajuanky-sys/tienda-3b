@@ -865,3 +865,46 @@ button.footer-link{background:none;border:none;font-family:inherit;cursor:pointe
    .header de dentro conserva su propio sticky (inofensivo: el envoltorio ya
    está clavado) para no tocar nada de lo que ya funcionaba. */
 .barra-fija{position:sticky;top:0;z-index:21;background:var(--surface)}
+
+/* ── Encargos Shein/Temu (Fase C) ──
+   Todo lo de la sección vive aquí. La tarjeta reutiliza .cta-comi (misma forma que
+   "Gana dinero con 3B") con otro color para que no se confundan. */
+.cta-encargos{background:var(--wa);border-bottom-color:#0b5e55;color:#fff}
+.cta-encargos .cta-comi-btn{background:#fff;color:var(--wa)}
+.enc-caja{max-width:620px}
+.enc-intro{font-size:14px;color:var(--text-2);line-height:1.5;margin-bottom:12px}
+.enc-pasos{margin:0 0 16px 20px;font-size:14px;line-height:1.55;display:flex;flex-direction:column;gap:6px}
+.enc-bloque{border:1px solid var(--border);border-radius:var(--radio-control);padding:12px;margin-bottom:14px;background:var(--surface)}
+.enc-bloque-tit{font-size:14px;font-weight:700;margin-bottom:8px}
+.enc-tabla{width:100%;border-collapse:collapse;font-size:13px}
+.enc-tabla th,.enc-tabla td{padding:6px 4px;border-bottom:1px solid var(--border);text-align:left}
+.enc-tabla .num{text-align:right;white-space:nowrap}
+.enc-nota{font-size:12px;color:var(--text-3);line-height:1.45;margin-top:6px}
+.enc-articulo{border:1px dashed var(--border);border-radius:var(--radio-control);padding:12px;display:flex;flex-direction:column;gap:10px}
+.enc-articulo-head{display:flex;justify-content:space-between;align-items:center;font-size:14px;font-weight:700}
+.enc-quitar{border:none;background:none;color:var(--oferta);font-weight:600;font-size:13px;cursor:pointer;min-height:36px}
+.enc-fila{display:flex;gap:10px;flex-wrap:wrap}
+.enc-fila .campo{flex:1 1 120px;min-width:0}
+.campo select{
+  width:100%;min-height:44px;padding:10px;border:1px solid var(--border);border-radius:var(--radio-control);
+  font-size:15px;font-family:inherit;background:var(--surface);color:var(--text);
+}
+.campo select.invalido{border-color:var(--oferta)}
+.enc-dominio{font-size:12px;font-weight:600;color:var(--wa)}
+.enc-modos{display:flex;gap:10px;flex-wrap:wrap}
+.enc-modo{
+  flex:1 1 140px;display:flex;align-items:center;gap:10px;border:2px solid var(--border);
+  border-radius:var(--radio-control);padding:12px;font-size:15px;font-weight:700;cursor:pointer;background:var(--surface);
+}
+.enc-modo input{width:20px;height:20px;flex:none}
+.enc-modo:has(input:checked){border-color:var(--brand)}
+.enc-modo small{display:block;font-size:12px;font-weight:500;color:var(--text-3)}
+.enc-estimado{border-radius:var(--radio-control);background:var(--surface-2);padding:12px;font-size:14px;line-height:1.5}
+.enc-estimado b{font-size:18px}
+.enc-condiciones{font-size:13px;line-height:1.5;color:var(--text-2)}
+.enc-condiciones ul{margin:6px 0 8px 18px}
+.enc-check{display:flex;gap:10px;align-items:flex-start;font-size:14px;font-weight:600;color:var(--text)}
+.enc-check input{width:22px;height:22px;flex:none;margin-top:1px}
+.enc-puente{display:flex;flex-direction:column;gap:14px}
+.enc-puente-grande{font-size:22px;font-weight:800;line-height:1.3;text-align:center}
+.enc-puente ol{margin-left:22px;font-size:15px;line-height:1.6}

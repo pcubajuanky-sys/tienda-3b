@@ -146,6 +146,7 @@
       <div class="mv-tira" id="mv-tira"></div>
     </section>
     <div id="cta-comi-hueco" hidden></div>
+    <div id="cta-encargos-hueco" hidden></div>
     <div class="grid-head">
       <h2 class="grid-titulo">Catálogo</h2>
       <button id="filtro-pill" class="filtro-pill" type="button" hidden>
@@ -258,6 +259,15 @@
   </div>
 </div>
 
+<!-- Encargos Shein/Temu (Fase C). El contenido lo pinta encargos.js; se abre con #encargos. -->
+<div id="modal-encargos" class="modal" hidden role="dialog" aria-modal="true" aria-labelledby="enc-titulo">
+  <div class="modal-fondo" id="enc-fondo" tabindex="-1"></div>
+  <div class="modal-caja enc-caja">
+    <button class="modal-cerrar" id="enc-cerrar" aria-label="Cerrar" type="button">✕</button>
+    <div class="modal-body" id="enc-cuerpo"></div>
+  </div>
+</div>
+
 <!-- Carrito -->
 <div id="panel" class="panel" hidden role="dialog" aria-modal="true" aria-labelledby="panel-titulo">
   <div class="panel-fondo" id="panel-fondo" tabindex="-1"></div>
@@ -308,5 +318,6 @@
 
 <script src="mundos.js"></script>
 <script src="app.js"></script>
+<script src="encargos.js"></script>
 </body>
 </html>
