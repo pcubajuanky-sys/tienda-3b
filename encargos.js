@@ -31,7 +31,7 @@
   const usd = (n) => '$' + (Number(n) || 0).toFixed(2);
   const r2 = (n) => Math.round(((Number(n) || 0) + Number.EPSILON) * 100) / 100;
   const r3 = (n) => Math.round(((Number(n) || 0) + Number.EPSILON) * 1000) / 1000;
-  const nuevoArticulo = () => ({ link: '', tienda: 'shein', tipo: '', talla: '', color: '', cantidad: '1', precio: '' });
+  const nuevoArticulo = () => ({ link: '', tienda: 'shein', tipo: '', talla: '', color: '', cantidad: '1', precio: '', pesoLb: '' });
   const tipoDe = (id) => (estado.bloque.tipos || []).find((t) => t.id === id) || null;
   const modoTexto = (m) => (m === 'avion' ? '✈️ Avión' : '🚢 Barco');
 
@@ -54,9 +54,13 @@
       const t = (b.tipos || []).find((x) => x.id === a.tipo);
       const c = Number(a.cantidad);
       const p = Number(a.precioUSD);
-      if (!t || t.lb === null || !Number.isInteger(c) || c < 1 || !(p > 0)) return null;
+      // Peso de cada uno que pone el cliente (opcional). Si está, manda sobre la tabla
+      // y permite estimar incluso con «Otro / no sé». Los casos de control no lo traen.
+      const propio = Number(a.pesoLb);
+      const lbUnidad = a.pesoLb !== undefined && a.pesoLb !== '' && propio > 0 ? propio : (t ? t.lb : null);
+      if (!t || lbUnidad === null || !Number.isInteger(c) || c < 1 || !(p > 0)) return null;
       art += p * c;
-      lb += t.lb * c;
+      lb += lbUnidad * c;
     }
     const cobrado = Math.max(r3(lb), b.pesoMinimoLb);
     const tarifa = tarifaLb(b.tarifas[modo], cobrado);
@@ -68,6 +72,7 @@
     return {
       articulosUSD: r2(art), servicioUSD: r2(servicio), envioUSD: r2(envio),
       totalUSD: r2(total), anticipoUSD: r2(baseAnticipo * b.anticipoPct / 100),
+      pesoLb: r3(lb), pesoCobradoLb: cobrado,
     };
   }
 
@@ -83,7 +88,7 @@
     });
   }
 
-  const paraCalculo = () => estado.articulos.map((a) => ({ tipo: a.tipo, cantidad: Number(a.cantidad), precioUSD: Number(a.precio) }));
+  const paraCalculo = () => estado.articulos.map((a) => ({ tipo: a.tipo, cantidad: Number(a.cantidad), precioUSD: Number(a.precio), pesoLb: a.pesoLb }));
 
   // ── Borrador: el cliente sale a Shein a copiar el link y el móvil recarga la página ──
   function guardarBorrador() {
@@ -100,7 +105,7 @@
     if (d && Array.isArray(d.articulos) && d.articulos.length) {
       estado.articulos = d.articulos.slice(0, 20).map((a) => ({
         link: texto(a.link), tienda: a.tienda === 'temu' ? 'temu' : 'shein', tipo: texto(a.tipo),
-        talla: texto(a.talla), color: texto(a.color), cantidad: texto(a.cantidad) || '1', precio: texto(a.precio),
+        talla: texto(a.talla), color: texto(a.color), cantidad: texto(a.cantidad) || '1', precio: texto(a.precio), pesoLb: texto(a.pesoLb),
       }));
       estado.modo = d.modo === 'avion' ? 'avion' : 'barco';
       estado.nombre = texto(d.nombre); estado.tel = texto(d.tel); estado.dir = texto(d.dir); estado.nota = texto(d.nota);
@@ -117,10 +122,14 @@
     if (!hueco) return;
     hueco.hidden = !activos();
     hueco.innerHTML = activos()
-      ? '<button type="button" class="cta-comi cta-encargos" id="cta-encargos">'
-        + '<span class="cta-comi-txt"><span class="cta-comi-tit">¿No lo encuentras? Te lo traemos 🛍️</span>'
-        + '<span class="cta-comi-sub">Pídenos lo que quieras de Shein o Temu. Te decimos el precio antes de comprar.</span></span>'
-        + '<span class="cta-comi-btn">Hacer un encargo</span></button>'
+      ? '<button type="button" class="enc-cta" id="cta-encargos">'
+        + '<span class="enc-cta-icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8h12l-1 12H7z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg></span>'
+        + '<span class="enc-cta-txt">'
+        + '<span class="enc-cta-tit">¿No lo encuentras? Te lo traemos</span>'
+        + '<span class="enc-cta-sub">Pídelo de Shein o Temu y te decimos el precio antes de comprar.</span>'
+        + '<span class="enc-cta-chips"><span>Shein</span><span>Temu</span><span>Avión o barco</span></span>'
+        + '</span>'
+        + '<span class="enc-cta-accion">Hacer un encargo <span aria-hidden="true">→</span></span></button>'
       : '';
   }
 
@@ -132,7 +141,8 @@
     return '<div class="enc-bloque"><div class="enc-bloque-tit">¿Cuánto cuesta más o menos?</div>'
       + '<table class="enc-tabla"><thead><tr><th>Producto</th><th class="num">En la tienda</th><th class="num">🚢 Barco</th><th class="num">✈️ Avión</th></tr></thead>'
       + `<tbody>${filas}</tbody></table>`
-      + '<p class="enc-nota">Precio total aproximado, con envío y servicio incluidos. El final depende del peso real.</p></div>';
+      + '<p class="enc-nota">Precio total aproximado, con envío y servicio incluidos. El final depende del peso real.</p>'
+      + `<p class="enc-nota">⚖️ Se cobra un <b>mínimo de ${estado.bloque.pesoMinimoLb} lb por encargo</b>: si lo tuyo pesa menos, se cobra ${estado.bloque.pesoMinimoLb} lb. Varias cosas en el mismo encargo pagan un solo mínimo.</p></div>`;
   }
 
   function htmlTiempos() {
@@ -159,6 +169,8 @@
       + '</div><div class="enc-fila">'
       + `<label class="campo"><span>Cantidad</span><input type="number" inputmode="numeric" min="1" step="1" data-f="cantidad" value="${escapeHtml(a.cantidad)}"><span class="campo-error" data-err="cantidad" hidden>De 1 en adelante.</span></label>`
       + `<label class="campo"><span>Precio en la tienda (USD)</span><input type="number" inputmode="decimal" min="0" step="0.01" data-f="precio" value="${escapeHtml(a.precio)}" placeholder="Ej: 12.99"><span class="campo-error" data-err="precio" hidden>Pon el precio que ves.</span></label>`
+      + '</div><div class="enc-fila">'
+      + `<label class="campo"><span>Peso de cada uno en libras (opcional)</span><input type="number" inputmode="decimal" min="0" step="0.01" data-f="pesoLb" value="${escapeHtml(a.pesoLb)}" placeholder="Si lo sabes. Ej: 0.8"><span class="campo-error" data-err="pesoLb" hidden>Pon un peso entre 0 y 200 lb, o déjalo vacío.</span><span class="enc-nota">Si ya lo trajiste antes o lo ves en la tienda. Si no lo sabes, déjalo vacío: lo calculamos nosotros.</span></label>`
       + '</div></div>';
   }
 
@@ -168,8 +180,8 @@
 
   function htmlEstimado() {
     if (!estado.fiable) return 'Te damos el precio al ver la captura de tu producto.';
-    if (estado.articulos.some((a) => { const t = tipoDe(a.tipo); return t && t.lb === null; })) {
-      return 'Con «Otro / no sé» no podemos calcularlo: te damos el precio al ver la captura.';
+    if (estado.articulos.some((a) => { const t = tipoDe(a.tipo); return t && t.lb === null && !(Number(a.pesoLb) > 0); })) {
+      return 'Con «Otro / no sé» pon el peso de cada uno si lo sabes; si no, te damos el precio al ver la captura.';
     }
     const q = calcular(estado.bloque, paraCalculo(), estado.modo);
     if (!q) return 'Rellena qué es, la cantidad y el precio de cada producto para ver un precio estimado.';
@@ -178,6 +190,11 @@
     return `Precio estimado: <b>${usd(q.totalUSD)}</b>${cup}`
       + `<br>Productos ${usd(q.articulosUSD)} · Servicio 3B ${usd(q.servicioUSD)} · Envío ${modoTexto(estado.modo)} ${usd(q.envioUSD)}`
       + `<br>Anticipo para comprarlo: <b>${usd(q.anticipoUSD)}</b>`
+      + `<br>Peso estimado: ${q.pesoLb} lb`
+      + (q.pesoLb < estado.bloque.pesoMinimoLb
+        ? `<div class="enc-nota">⚖️ Pesa menos de ${estado.bloque.pesoMinimoLb} lb: se cobra el mínimo de ${estado.bloque.pesoMinimoLb} lb (envío ${usd(q.envioUSD)}). ¿Quieres algo más? Añádelo a este mismo encargo y el mínimo se paga una sola vez.</div>`
+        : '')
+      + (estado.articulos.some((a) => Number(a.pesoLb) > 0) ? '<div class="enc-nota">El peso que pusiste es orientativo: el precio final va por el peso real.</div>' : '')
       + '<div class="enc-nota">Es aproximado: el envío final depende del peso real. Si la tienda cobra un recargo por una compra pequeña de almacén local, te lo decimos al ver la captura.</div>';
   }
 
@@ -207,6 +224,7 @@
       + '<div class="enc-condiciones"><b>Antes de pedir, lee esto:</b><ul>'
       + `<li>Para comprarlo pagas un <b>anticipo del ${b.anticipoPct} %</b>. Si después no quieres el producto, <b>el anticipo no se devuelve</b>.</li>`
       + '<li>Revisa bien la talla: <b>no hay devoluciones</b> una vez entregado.</li>'
+      + `<li>Se cobra un <b>peso mínimo de ${b.pesoMinimoLb} lb</b> por encargo, aunque pese menos.</li>`
       + '<li>Los tiempos son estimados: la aduana puede retrasarlos.</li>'
       + '<li>Si el fallo es nuestro (se agotó o se perdió), te devolvemos el anticipo.</li></ul></div>'
       + '<label class="enc-check"><input type="checkbox" id="enc-acepta"> Lo entiendo y lo acepto</label>'
@@ -245,6 +263,7 @@
       L.push(`Talla: ${a.talla.trim() || '—'}`);
       L.push(`Color: ${a.color.trim() || '—'}`);
       L.push(`Cantidad: ${Number(a.cantidad)}`);
+      L.push(`Peso de cada uno: ${Number(a.pesoLb) > 0 ? Number(a.pesoLb) + ' lb' : 'no lo sé'}`);
       L.push(`Precio que veo: ${usd(Number(a.precio))}`);
       L.push(`Link: ${a.link.trim()}`);
     });
@@ -274,6 +293,8 @@
       marcar(fila.querySelector('[data-f="tipo"]'), fila.querySelector('[data-err="tipo"]'), !a.tipo);
       marcar(fila.querySelector('[data-f="cantidad"]'), fila.querySelector('[data-err="cantidad"]'), !(Number.isInteger(c) && c >= 1));
       marcar(fila.querySelector('[data-f="precio"]'), fila.querySelector('[data-err="precio"]'), !(Number(a.precio) > 0));
+      const pesoTxt = String(a.pesoLb || '').trim();
+      marcar(fila.querySelector('[data-f="pesoLb"]'), fila.querySelector('[data-err="pesoLb"]'), pesoTxt !== '' && !(Number(pesoTxt) > 0 && Number(pesoTxt) <= 200));
     });
     const campo = (id, mal) => marcar(document.getElementById(id), document.getElementById(id + '-err'), mal);
     campo('enc-nombre', !estado.nombre.trim());

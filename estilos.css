@@ -869,8 +869,38 @@ button.footer-link{background:none;border:none;font-family:inherit;cursor:pointe
 /* ── Encargos Shein/Temu (Fase C) ──
    Todo lo de la sección vive aquí. La tarjeta reutiliza .cta-comi (misma forma que
    "Gana dinero con 3B") con otro color para que no se confundan. */
-.cta-encargos{background:var(--wa);border-bottom-color:#0b5e55;color:#fff}
-.cta-encargos .cta-comi-btn{background:#fff;color:var(--wa)}
+/* Tarjeta de entrada (Fase C.1): "de borde" para no competir con la tarjeta rosa sólida
+   de gestores, y sin el verde (reservado al botón de WhatsApp). Botón en --brand/--brand-ink:
+   contraste ≥ 9:1 en claro y en oscuro. */
+.enc-cta{
+  grid-column:1/-1;width:100%;margin:12px 0 4px;padding:16px;
+  display:grid;grid-template-columns:auto 1fr;gap:12px 14px;align-items:center;
+  background:var(--surface);color:var(--text);
+  border:1px solid var(--border);border-left:4px solid var(--brand);border-radius:var(--radio-card);
+  box-shadow:var(--sombra);font:inherit;text-align:left;cursor:pointer;
+  transition:border-color var(--dur), transform var(--dur);
+}
+.enc-cta:hover{border-color:var(--brand);transform:translateY(-1px)}
+.enc-cta:focus-visible{outline:3px solid var(--brand);outline-offset:2px}
+.enc-cta-icono{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--brand-soft);color:var(--brand)}
+.enc-cta-txt{min-width:0;display:flex;flex-direction:column;gap:4px}
+.enc-cta-tit{font-size:17px;font-weight:700;line-height:1.3}
+.enc-cta-sub{font-size:14px;line-height:1.45;color:var(--text-2)}
+.enc-cta-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+.enc-cta-chips span{font-size:12px;font-weight:600;padding:3px 10px;border-radius:999px;background:var(--surface-2);color:var(--text-2)}
+.enc-cta-accion{
+  grid-column:1/-1;display:flex;align-items:center;justify-content:center;gap:6px;
+  min-height:44px;padding:10px 16px;border-radius:var(--radio-control);
+  background:var(--brand);color:var(--brand-ink);font-size:15px;font-weight:700;
+}
+@media (min-width:640px){
+  .enc-cta{grid-template-columns:auto 1fr auto;padding:18px 20px}
+  .enc-cta-accion{grid-column:auto}
+}
+@media (prefers-reduced-motion:reduce){
+  .enc-cta{transition:none}
+  .enc-cta:hover{transform:none}
+}
 .enc-caja{max-width:620px}
 .enc-intro{font-size:14px;color:var(--text-2);line-height:1.5;margin-bottom:12px}
 .enc-pasos{margin:0 0 16px 20px;font-size:14px;line-height:1.55;display:flex;flex-direction:column;gap:6px}
