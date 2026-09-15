@@ -116,20 +116,24 @@
 
   // ── La tarjeta del catálogo ──
   const activos = () => !!(estado.cat && estado.cat.tienda && estado.cat.tienda.encargosActivo && estado.bloque);
+  // Fase C.2: en pausa se ve todo, pero sin formulario (cartel del panel).
+  const pausado = () => !!(estado.bloque && estado.bloque.modo === 'pausado');
 
   function pintarTarjeta() {
     const hueco = document.getElementById('cta-encargos-hueco');
     if (!hueco) return;
     hueco.hidden = !activos();
+    const hero = document.getElementById('hero-encargos');   // botón junto a «Ver el catálogo»
+    if (hero) hero.hidden = !activos();
     hueco.innerHTML = activos()
       ? '<button type="button" class="enc-cta" id="cta-encargos">'
         + '<span class="enc-cta-icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8h12l-1 12H7z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg></span>'
         + '<span class="enc-cta-txt">'
         + '<span class="enc-cta-tit">¿No lo encuentras? Te lo traemos</span>'
         + '<span class="enc-cta-sub">Pídelo de Shein o Temu y te decimos el precio antes de comprar.</span>'
-        + '<span class="enc-cta-chips"><span>Shein</span><span>Temu</span><span>Avión o barco</span></span>'
+        + '<span class="enc-cta-chips">' + (pausado() ? `<span>${escapeHtml((estado.bloque.cartel || {}).titulo || '')}</span>` : '<span>Shein</span><span>Temu</span><span>Avión o barco</span>') + '</span>'
         + '</span>'
-        + '<span class="enc-cta-accion">Hacer un encargo <span aria-hidden="true">→</span></span></button>'
+        + `<span class="enc-cta-accion">${pausado() ? 'Ver cómo funciona' : 'Hacer un encargo'} <span aria-hidden="true">→</span></span></button>`
       : '';
   }
 
@@ -235,6 +239,23 @@
       + '</form>';
   }
 
+  // Fase C.2: con los encargos en pausa se enseñan los pasos, los ejemplos y los tiempos,
+  // pero en vez del formulario va el cartel que Ruth eligió en el panel. Sin botón de
+  // WhatsApp (decisión del dueño).
+  function htmlPausado() {
+    const c = estado.bloque.cartel || {};
+    return '<h2 id="enc-titulo">Encargos de Shein y Temu</h2>'
+      + `<div class="enc-pausado" role="status"><div class="enc-pausado-titulo">${escapeHtml(c.titulo || '')}</div><p class="enc-pausado-texto">${escapeHtml(c.texto || '')}</p></div>`
+      + '<p class="enc-intro">Así va a funcionar:</p>'
+      + '<ol class="enc-pasos">'
+      + '<li><b>Pegas el link</b> del producto y nos dices la talla y el color.</li>'
+      + '<li><b>Nos mandas una captura</b> por WhatsApp y te decimos el precio final.</li>'
+      + `<li><b>Pagas un anticipo</b> del ${estado.bloque.anticipoPct} % y lo compramos.</li>`
+      + '<li><b>Lo pesamos</b> cuando nos llega y te avisamos el precio exacto del envío.</li>'
+      + '<li><b>Te lo llevamos</b> y pagas lo que falta.</li></ol>'
+      + htmlEjemplos() + htmlTiempos();
+  }
+
   function htmlPuente() {
     return '<div class="enc-puente">'
       + '<h2 id="enc-titulo" class="enc-puente-grande">📸 ¡Falta un paso muy importante!</h2>'
@@ -312,7 +333,7 @@
 
   // ── La ventana ──
   function pintar() {
-    document.getElementById('enc-cuerpo').innerHTML = estado.texto ? htmlPuente() : htmlFormulario();
+    document.getElementById('enc-cuerpo').innerHTML = pausado() ? htmlPausado() : (estado.texto ? htmlPuente() : htmlFormulario());
   }
 
   function abrir() {
