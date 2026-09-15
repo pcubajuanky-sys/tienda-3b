@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-15T15:10:14.106Z",
+  "generado": "2026-09-15T20:23:09.299Z",
   "tasa": 695,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -181,8 +181,10 @@
       }
     ],
     "campana": null,
-    "taxiActivo": true
+    "taxiActivo": true,
+    "encargosActivo": false
   },
+  "encargos": null,
   "items": [
     {
       "id": "p_1786921885931",
@@ -249,6 +251,24 @@
       "precioUSD": 0.65,
       "precioCUP": 450,
       "moneda": "cup",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
+    },
+    {
+      "id": "p_1789489796373",
+      "codigo": "MHFV",
+      "name": "Adaptador USB-TipoC",
+      "cat": "Bocinas Celulares y Accesorios",
+      "subcat": "",
+      "notes": "",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789489714/productos/fg4fdehztii5v9yybzgh.jpg",
+      "precioUSD": 1,
+      "precioCUP": 695,
+      "moneda": "usd",
       "enOferta": false,
       "destacado": false,
       "envio": {
@@ -595,7 +615,7 @@
       "id": "p_1789482363354",
       "codigo": "XTB3",
       "name": "Barra de sonido",
-      "cat": "Electrodomésticos",
+      "cat": "Bocinas Celulares y Accesorios",
       "subcat": "",
       "notes": "Altavoz Inalámbrico con Sonido HD. Portátil hasta 10H de Reproducción .Entrada AUX y Tarjeta TF y USB . Altavoces Inalámbricos 5.3 para Hogar/Fiesta/Exteriores. Solo e color negro como en la imagen",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789482181/productos/vmca1tktzdqp6ceyyrek.jpg",
@@ -1087,24 +1107,6 @@
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788537413/productos/slyafhkdssobyp1tgvlu.jpg",
       "precioUSD": 22,
       "precioCUP": 15290,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      }
-    },
-    {
-      "id": "p_1789009285327",
-      "codigo": "2HCR",
-      "name": "Conjunto de prendas de hombre",
-      "cat": "Reloj y Prendas",
-      "subcat": "",
-      "notes": "Conjunto de reloj con pulsera cadena y anillo de hombre. Calidad y belleza. El regalo perfecto para papá, maestro o pareja.",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789009051/productos/bmzalrdyrxsxvoxqelqx.jpg",
-      "precioUSD": 12,
-      "precioCUP": 8340,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -2115,24 +2117,6 @@
       }
     },
     {
-      "id": "p_1785768634737",
-      "codigo": "74GQ",
-      "name": "Malla para patios y terrazas",
-      "cat": "Decoración",
-      "subcat": "",
-      "notes": "Color y diseño exactamente como en la imagen, con sus ojales de fabrica,es solo llegar y colocar\nMedidas :2mx2m\nMaterial: Malla de nylon",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785768595/productos/hkkmrijuemjfntdqb1be.jpg",
-      "precioUSD": 20,
-      "precioCUP": 13900,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      }
-    },
-    {
       "id": "p_1781640150594",
       "codigo": "LZJ5",
       "name": "Mangas para el sol",
@@ -2774,6 +2758,42 @@
       }
     },
     {
+      "id": "p_1788897850953",
+      "codigo": "8ARJ",
+      "name": "Mueble de puertas 3 pisos",
+      "cat": "Muebles",
+      "subcat": "",
+      "notes": "Mueble con rueditas, y puertas con imanes para mejor cierre. Ideal organizador para cualquier lugar de la casa, tanto habitaciones,cocina, baño,oficina,etc...",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788897774/productos/unvimltpxn8k3vfrvqoh.jpg",
+      "precioUSD": 40,
+      "precioCUP": 27800,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
+      "id": "p_1788897814510",
+      "codigo": "GTZK",
+      "name": "Mueble de puertas 5 pisos",
+      "cat": "Muebles",
+      "subcat": "",
+      "notes": "Mueble con rueditas, y puertas con imanes para mejor cierre. Ideal organizador para cualquier lugar de la casa, tanto habitaciones,cocina, baño,oficina,etc...",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788897736/productos/tiyjgnltdqhxewtva8zb.jpg",
+      "precioUSD": 50,
+      "precioCUP": 34750,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
       "id": "p_1784914843855",
       "codigo": "E8WV",
       "name": "Nebulizador",
@@ -2870,13 +2890,31 @@
     {
       "id": "p_1785006026614",
       "codigo": "PYWJ",
-      "name": "Organizador Rodante",
+      "name": "Organizador Rodante 2 pisos",
       "cat": "Muebles",
       "subcat": "",
-      "notes": "Organizador rodante (solo quedan blancos)  de varios niveles. Estante de almacenamiento multiusos con ruedas, ideal como organizador de oficina,cocina,vestidores etc . Diseño flexible y práctico para optimizar el espacio.",
+      "notes": "Organizador rodante (solo quedan negro)  de 2 niveles. Estante de almacenamiento multiusos con ruedas, ideal como organizador de oficina,cocina,vestidores etc . Diseño flexible y práctico para optimizar el espacio.",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785005561/productos/f38m61h7y1oudaa6np9v.jpg",
-      "precioUSD": 11,
-      "precioCUP": 7645,
+      "precioUSD": 8,
+      "precioCUP": 5560,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
+      "id": "p_1789490156287",
+      "codigo": "KPM5",
+      "name": "Organizador rodante 4pisos",
+      "cat": "Muebles",
+      "subcat": "",
+      "notes": "Organizador rodante (solo quedan blanco)  de 4 niveles. Estante de almacenamiento multiusos con ruedas, ideal como organizador de oficina,cocina,vestidores etc . Diseño flexible y práctico para optimizar el espacio.",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789489998/productos/ynrvqpaqztcihggoqe6q.jpg",
+      "precioUSD": 15,
+      "precioCUP": 10425,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -3320,6 +3358,24 @@
       }
     },
     {
+      "id": "p_1789488822597",
+      "codigo": "MNJC",
+      "name": "Plancha de barquillos",
+      "cat": "Electrodomésticos",
+      "subcat": "",
+      "notes": "Plancha antiadherente para hacer barquillos,tabaquitos, cesticas y demás.",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789488621/productos/ruwvkfvlywf73grlk01m.jpg",
+      "precioUSD": 25,
+      "precioCUP": 17375,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
       "id": "p_1785092176064",
       "codigo": "PUJL",
       "name": "PopSockets",
@@ -3358,24 +3414,6 @@
       },
       "precioNormalUSD": 1.87,
       "precioNormalCUP": 1300
-    },
-    {
-      "id": "p_1788548113007",
-      "codigo": "YSQD",
-      "name": "Protector de alimentos",
-      "cat": "Hogar",
-      "subcat": "",
-      "notes": "Paquete de 15 unidades de bolsitas de nylon de protector de alimentos, ideal para platos o vasijas que requieran guardar alimentos tanto en exterior o en refrigeración. También para envolver verduras o frutas, protegiéndola así de agentes externos",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788547921/productos/qh78doz9uwyq7acxdr2k.jpg",
-      "precioUSD": 0.58,
-      "precioCUP": 400,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
-      }
     },
     {
       "id": "p_1782343083267",
@@ -3429,24 +3467,6 @@
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
-      }
-    },
-    {
-      "id": "p_1789237108026",
-      "codigo": "XVFJ",
-      "name": "Pulover de girasol",
-      "cat": "Ropa",
-      "subcat": "",
-      "notes": "Lindo pulover talla L. Tela algodonada elastizada",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789236943/productos/czxnsxgenvatqpkm8wdw.jpg",
-      "precioUSD": 4,
-      "precioCUP": 2780,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
       }
     },
     {
@@ -3529,67 +3549,13 @@
       }
     },
     {
-      "id": "p_1786919841226",
-      "codigo": "A72E",
-      "name": "Pulover de hombre elastizados",
-      "cat": "Ropa",
-      "subcat": "",
-      "notes": "Disponibles gris,rojo y azul claro para la talla M",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786919512/productos/zoc681vdfrwq7ggzbns1.jpg",
-      "precioUSD": 3.6,
-      "precioCUP": 2500,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      }
-    },
-    {
       "id": "p_1788732975824",
       "codigo": "JKD5",
       "name": "Pulover Unisex Blanco",
       "cat": "Ropa",
       "subcat": "",
-      "notes": "Tallas S y M(agrandadas). Tela algodonada elastizada",
+      "notes": "Tallas S (agrandadas). Tela algodonada elastizada",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788733014/productos/z5d3cppcmkwtoaxgrrfv.jpg",
-      "precioUSD": 3.6,
-      "precioCUP": 2500,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      }
-    },
-    {
-      "id": "p_1788792552863",
-      "codigo": "TC9K",
-      "name": "Pulover Unisex Blanco de Pantera",
-      "cat": "Ropa",
-      "subcat": "",
-      "notes": "Talla M(agrandadas). Tela algodonada elastizada",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788792467/productos/kmkvblu9vlsqby9h8hhc.jpg",
-      "precioUSD": 3.6,
-      "precioCUP": 2500,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      }
-    },
-    {
-      "id": "p_1788732764849",
-      "codigo": "9R4U",
-      "name": "Pulover Unisex Gris",
-      "cat": "Ropa",
-      "subcat": "",
-      "notes": "Talla M(agrandadas). Tela algodonada elastizada",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788732575/productos/z2lirmjgfaqfnxsd7vdq.jpg",
       "precioUSD": 3.6,
       "precioCUP": 2500,
       "moneda": "cup",
@@ -3814,6 +3780,63 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
+      "id": "p_1789489238446",
+      "codigo": "MPP5",
+      "name": "Reloj y prendas de hombre",
+      "cat": "Reloj y Prendas",
+      "subcat": "",
+      "notes": "Conjunto de reloj ,con Cadena, Manilla y anillo. Todo tal como en la foto .",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789489062/productos/bxwgrqn13j8iyn5lmkgh.jpg",
+      "precioUSD": 12,
+      "precioCUP": 8340,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
+      "id": "p_1789500476471",
+      "codigo": "HYDB",
+      "name": "Relojes de colores",
+      "cat": "Reloj y Prendas",
+      "subcat": "",
+      "notes": "Hermosos diseños. Todos los colores de la imagen disponibles 🤩",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789500243/productos/qrccwlgkrgjj8z7tzybe.jpg",
+      "precioUSD": 0,
+      "precioCUP": 0,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Color"
+        ],
+        "opciones": [
+          "NEGRO",
+          "BLANCO",
+          "BEIGE",
+          "MARRÓN",
+          "ROJO",
+          "ROSA",
+          "ROSA CLARO",
+          "AZUL",
+          "CELESTE",
+          "VERDE",
+          "VERDE CLARO",
+          "AMARILLO",
+          "NARANJA",
+          "MORADO"
+        ]
+      },
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
       }
     },
     {
