@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-15T20:23:09.299Z",
+  "generado": "2026-09-15T21:36:18.674Z",
   "tasa": 695,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -2388,6 +2388,24 @@
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
+    },
+    {
+      "id": "p_1789506414289",
+      "codigo": "YP64",
+      "name": "Merenguera mezcladora",
+      "cat": "Electrodomésticos",
+      "subcat": "",
+      "notes": "Incluye 4 piezas de batir, la base plástica la vasija de acero inoxidable y por supuesto, la merenguera. Puede usarse en su base o de forma manual",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789506301/productos/sa7kwkxe59m4lmbtwb8f.jpg",
+      "precioUSD": 30,
+      "precioCUP": 20850,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
       }
     },
     {
