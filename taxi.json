@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-14T18:14:48.557Z",
+  "generado": "2026-09-16T13:55:01.171Z",
   "vigenciaHoras": 48,
   "activo": true,
   "tasa": 695,
@@ -68,20 +68,18 @@
     {
       "code": "46R3V",
       "nombre": "Boris Luís Rodríguez"
+    },
+    {
+      "code": "DZ3AH",
+      "nombre": "Yessy"
+    },
+    {
+      "code": "2PT46",
+      "nombre": "Damaisi"
     }
   ],
   "comisionPorKmCUP": 20,
   "agenda": [
-    {
-      "fecha": "2026-09-14",
-      "manana": false,
-      "tarde": false
-    },
-    {
-      "fecha": "2026-09-15",
-      "manana": false,
-      "tarde": false
-    },
     {
       "fecha": "2026-09-16",
       "manana": false,
@@ -139,6 +137,16 @@
     },
     {
       "fecha": "2026-09-27",
+      "manana": false,
+      "tarde": false
+    },
+    {
+      "fecha": "2026-09-28",
+      "manana": false,
+      "tarde": false
+    },
+    {
+      "fecha": "2026-09-29",
       "manana": false,
       "tarde": false
     }
