@@ -769,9 +769,9 @@ body.con-barra-movil{padding-bottom:var(--barra-movil-h, 84px)}
 .cta-comi{
   grid-column:1/-1;
   background:var(--brand);color:var(--brand-ink);
-  border:none;border-bottom:5px solid var(--brand-hondo);
+  border:none;border-bottom:4px solid var(--brand-hondo);
   border-radius:var(--radio-card);
-  padding:18px 20px;margin:4px 0;
+  padding:var(--e4);margin:var(--e4) 0 var(--e1);
   display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;
   text-align:left;width:100%;font:inherit;cursor:pointer;
   transition:transform var(--dur), border-bottom-width var(--dur);
