@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-16T13:32:15.530Z",
+  "generado": "2026-09-16T19:20:38.141Z",
   "tasa": 695,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -54,6 +54,10 @@
     {
       "code": "DZ3AH",
       "nombre": "Yessy"
+    },
+    {
+      "code": "2PT46",
+      "nombre": "Damaisi"
     }
   ],
   "categorias": [
@@ -2960,6 +2964,33 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
+      "id": "p_1789580276460",
+      "codigo": "G3EP",
+      "name": "Papel adhesivo 3",
+      "cat": "Decoración",
+      "subcat": "",
+      "notes": "El diseño de la imagen. Viene en formato de rollo .  Es autoadhesivo e impermeable. Para múltiples superficies",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789580141/productos/i3i7p387wp5vmj4unowe.jpg",
+      "precioUSD": 0,
+      "precioCUP": 0,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Medias"
+        ],
+        "opciones": [
+          "40CM X 3METROS",
+          "40CM X 5 METROS"
+        ]
+      },
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
       }
     },
     {
