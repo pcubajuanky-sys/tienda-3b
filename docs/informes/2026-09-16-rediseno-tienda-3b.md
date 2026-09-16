@@ -31,6 +31,27 @@ Verificado en el navegador (375 px y 1280 px, claro y oscuro): la calculadora si
 
 Ver detalle de cada comprobación más abajo. Informe y commit final: este archivo.
 
+### Tarea 4c: el botón principal de la portada se apagaba en modo oscuro (corrección posterior, esta sesión)
+
+Encontrada **por la revisión visual del piloto, no por las mediciones**: el contraste de `.btn-contraste` pasaba de sobra en los dos temas (8,84:1 claro / **9,06:1 oscuro**, ver tabla de Contraste más abajo), pero la jerarquía visual estaba rota — un fallo que ningún número de contraste detecta por sí solo. `.btn-contraste` colgaba de `--surface`/`--brand`, que sí se invierten con el tema; en oscuro eso daba `background: rgb(30,24,34)` (casi negro) sobre la portada, que es ciruela profunda fija (tokens `--hero-*`, que NO se invierten a propósito). Resultado: «Ver el catálogo» se volvía una caja oscura casi invisible sobre fondo oscuro, y el botón secundario «Hacer un encargo» (con borde claro) pasaba a verse más importante que el principal — justo al revés de la intención. Es el mismo problema que los tokens `--hero-*` vinieron a evitar en la Tarea 4, solo que no se había extendido al botón.
+
+**Fix:** dos tokens nuevos fijos (no redefinidos en `@media (prefers-color-scheme: dark)`), `--hero-btn-bg:#FFFFFF` / `--hero-btn-ink:#7A2E5D`, añadidos en `estilos.css` justo debajo de `--hero-ink`. `.btn-contraste` pasó de `background:var(--surface);color:var(--brand)` a `background:var(--hero-btn-bg);color:var(--hero-btn-ink)`. Blanco sobre ciruela: 8,9:1, cumple igual en los dos temas porque ya no depende de ellos.
+
+**Verificado en el navegador integrado, 375 px:**
+
+| | Antes (claro y oscuro daban distinto) | Después (idéntico en los dos temas) |
+|---|---|---|
+| `background-color` de `.btn-contraste` | claro: color de `--surface` claro · oscuro: `rgb(30,24,34)` (casi negro) | `rgb(255, 255, 255)` |
+| `color` de `.btn-contraste` | claro: color de `--brand` claro · oscuro: `rgb(233,168,206)` (rosa) | `rgb(122, 46, 93)` |
+
+Comprobado con el bloque `getComputedStyle` del plan en claro y en oscuro tras esta corrección: mismo resultado exacto en ambos, `{bg:"rgb(255, 255, 255)", color:"rgb(122, 46, 93)"}`. Captura visual en oscuro tras el fix: «Ver el catálogo» se ve blanco sólido, claramente por delante de «Hacer un encargo» (contorno, sin relleno).
+
+Las cinco medidas de layout (Task 0 Step 4) se volvieron a correr a 375 px tras el fix, para confirmar que no se movió nada: `barraFija:151` (≤160 ✅), `hero:349` (≤360 ✅), `cats:264` (≤270 ✅), `primerMV:864` (≤870 ✅), `primerGrid:1526` (≤1530 ✅) — iguales a los de la Tarea 12 (con 1 px de diferencia en `primerGrid`, 1525→1526, ruido de render, no de este cambio).
+
+⚠ **La fila «Botón de portada sólido» de la tabla de Contraste más abajo (línea `--brand` sobre `--surface`, 8,84:1/9,06:1) quedó desactualizada por este cambio**: ahora es `--hero-btn-ink` sobre `--hero-btn-bg` (blanco/ciruela oscuro), 8,9:1, idéntico en los dos temas. No se recalculó el número exacto con el método WCAG completo del resto de la tabla (luminancia relativa en JS); el valor viene del comentario del plan, no de una medición propia en esta sesión.
+
+Commit: `e7dd258` (`estilos.css`).
+
 ---
 
 ## Las cinco medidas (Task 0 Step 4, servidor de revisión, 375 px)
