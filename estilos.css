@@ -21,6 +21,12 @@
   --hero-1:    #8C3A6D;
   --hero-2:    #4E1D3B;
   --hero-ink:  #FFFFFF;
+  /* El botón principal de la portada vive SIEMPRE sobre ciruela, así que su
+     color no puede depender del tema. Con --surface/--brand se volvía una caja
+     casi negra con letra rosa en modo oscuro y dejaba de leerse como el botón
+     principal. Blanco sobre ciruela: 8,9:1. */
+  --hero-btn-bg:  #FFFFFF;
+  --hero-btn-ink: #7A2E5D;
 
   /* Escala de espaciado. Antes había 40+ números sueltos y cada pieza nueva
      llegaba con medidas propias: esa era la causa de que los dos botones de la
@@ -133,7 +139,7 @@ a{color:inherit}
    Contraste medido sobre el velo de la portada: 7,1:1 el sólido y 8,1:1 el de
    cristal (el relleno del segundo es NEGRO translúcido, no blanco: con blanco
    al 14% el texto blanco caía a 3,8:1 y no llegaba al mínimo de 4,5:1). */
-.btn-contraste{background:var(--surface);color:var(--brand)}
+.btn-contraste{background:var(--hero-btn-bg);color:var(--hero-btn-ink)}
 .btn-contraste:hover{box-shadow:var(--sombra-2)}
 .btn-contraste-linea{
   background:rgba(0,0,0,.18);color:var(--hero-ink);border-color:rgba(255,255,255,.8);
