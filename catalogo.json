@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-16T09:20:37.746Z",
+  "generado": "2026-09-16T13:32:15.530Z",
   "tasa": 695,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -50,6 +50,10 @@
     {
       "code": "46R3V",
       "nombre": "Boris Luís Rodríguez"
+    },
+    {
+      "code": "DZ3AH",
+      "nombre": "Yessy"
     }
   ],
   "categorias": [
@@ -251,6 +255,24 @@
       "precioUSD": 0.65,
       "precioCUP": 450,
       "moneda": "cup",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
+    },
+    {
+      "id": "p_1789489796373",
+      "codigo": "MHFV",
+      "name": "Adaptador USB-TipoC",
+      "cat": "Bocinas Celulares y Accesorios",
+      "subcat": "",
+      "notes": "",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789489714/productos/fg4fdehztii5v9yybzgh.jpg",
+      "precioUSD": 1,
+      "precioCUP": 695,
+      "moneda": "usd",
       "enOferta": false,
       "destacado": false,
       "envio": {
