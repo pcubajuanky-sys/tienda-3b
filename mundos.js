@@ -3,9 +3,11 @@
 // de la calculadora del taxi: solo mira qué logos hay visibles en la cabecera.
 // Script externo a propósito: la CSP (vercel.json / _headers) bloquea los inline.
 //
-// El aviso NO se recuerda ni se apaga (decisión del dueño, 2026-09-13): sale en
-// todas las visitas, tocado o no. Lo único que lo esconde es que no haya ningún
-// otro negocio que enseñar.
+// El aviso NO se recuerda ni se apaga: sale en todas las visitas. Lo único que
+// lo esconde es que no haya ningún otro negocio que enseñar.
+// 2026-09-16: el globo «👈 Toca nuestros otros negocios» se retiró. Anunciaba lo
+// mismo que la franja y que el aro que late sobre el logo del socio, y se comía
+// 82 px de la cabecera pegada en un celular de 375 px. Quedan los otros dos.
 (function () {
   // Hay algo que descubrir solo si se ve al menos un negocio que NO es este.
   // En index.html el taxi está hidden hasta que catalogo.json lo enciende.
@@ -17,11 +19,8 @@
 
   function refrescar() {
     var franja = document.getElementById('promo-mundos');
-    var globo  = document.getElementById('mundos-globo');
-    if (!franja || !globo) return;
-    var hay = hayOtrosNegocios();
-    franja.hidden = !hay;
-    globo.hidden = !hay;
+    if (!franja) return;
+    franja.hidden = !hayOtrosNegocios();
   }
 
   document.addEventListener('DOMContentLoaded', refrescar);

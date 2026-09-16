@@ -164,8 +164,8 @@ a{color:inherit}
   transition:border-color var(--dur), box-shadow var(--dur), padding var(--dur);
 }
 .header.compacta{border-bottom-color:var(--border);box-shadow:0 2px 8px rgba(28,26,34,.05)}
-.header-top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 16px}
-.header.compacta .header-top{padding:8px 16px}
+.header-top{display:flex;align-items:center;justify-content:space-between;gap:var(--e2);padding:var(--e1) var(--e3)}
+.header.compacta .header-top{padding:var(--e0) var(--e3)}
 .logo{display:inline-flex;align-items:center;text-decoration:none}
 .logo-svg{height:32px;width:auto;display:block}
 /* Logo real de la tienda (logo-3b.png): PNG cuadrado con el emblema sobre negro.
@@ -200,7 +200,7 @@ a{color:inherit}
   padding:0 5px;border-radius:10px;background:var(--brand);color:var(--brand-ink);
   font-size:12px;font-weight:700;
 }
-.header-buscador{padding:0 16px 12px}
+.header-buscador{padding:0 var(--e3) var(--e1)}
 #buscador{
   width:100%;min-height:44px;padding:11px 14px;border:1px solid var(--border);
   border-radius:var(--radio-control);font-size:15px;background:var(--surface-2);color:var(--text);
@@ -270,7 +270,7 @@ a{color:inherit}
    esta banda nunca se ve: la tienda queda idéntica a hoy. */
 .promo{
   position:relative;overflow:hidden;
-  background:var(--brand-soft);color:var(--brand);padding:10px 16px;text-align:center;
+  background:var(--brand-soft);color:var(--brand);padding:var(--e1) var(--e3);text-align:center;
 }
 /*
   Ilustración decorativa (mensajera en moto, líneas de velocidad) en
@@ -295,10 +295,10 @@ a{color:inherit}
   position:absolute;inset:0;background:var(--brand-soft);opacity:.6;pointer-events:none;
 }
 .promo-contenido{position:relative}
-.promo-linea{font-size:14px;font-weight:700;max-width:1180px;margin:0 auto;line-height:1.3}
+.promo-linea{font-size:var(--t-sm);font-weight:700;max-width:1180px;margin:0 auto;line-height:1.35}
 .promo-fina{
-  font-size:11px;font-weight:500;color:var(--text-2);max-width:1180px;
-  margin:4px auto 0;opacity:.9;line-height:1.3;
+  font-size:var(--t-xs);font-weight:500;color:var(--text-2);max-width:1180px;
+  margin:var(--e0) auto 0;opacity:.9;line-height:1.3;
 }
 /* Banda de campaña (Navidad, aniversario...). Reusa .promo entera y solo cambia
    el color, para que las dos bandas se lean como el mismo sistema. Sin
@@ -840,7 +840,7 @@ button.footer-link{background:none;border:none;font-family:inherit;cursor:pointe
 .mundos{display:flex;gap:10px;align-items:center;margin-right:auto}
 .mundo{
   position:relative;display:block;flex:none;
-  width:52px;height:52px;border-radius:50%;
+  width:44px;height:44px;border-radius:50%;
   text-decoration:none;
   transition:transform var(--dur);
 }
@@ -871,49 +871,29 @@ button.footer-link{background:none;border:none;font-family:inherit;cursor:pointe
 }
 /* Cada negocio late en SU color: el taxi en verde, la tienda en su morado. */
 #mundo-taxi::after{border-color:#12A24E}
-@media (min-width:600px){ .mundo{width:62px;height:62px} }
+@media (min-width:600px){ .mundo{width:52px;height:52px} }
 @media (prefers-reduced-motion:reduce){
   .mundo{transition:none}
   .mundo:hover,.mundo:active{transform:none}
   .mundo:not(.mundo-on)::after{animation:none;opacity:.45;transform:none}
 }
 
-/* El logo de 3B manda: es la marca paraguas y los socios son satélites. Va
-   grande en las DOS páginas, incluso en /taxi. */
-.mundo-3b{width:74px;height:74px}
-@media (min-width:600px){ .mundo-3b{width:88px;height:88px} }
-
-/* Globo pegado a los logos. Es un hijo más del flex .mundos (no va posicionado
-   encima), así nunca tapa el buscador ni el carrito. Como la cabecera es
-   sticky, acompaña al cliente por toda la página. Lo enseña/esconde mundos.js. */
-.mundos-globo{
-  position:relative;flex:0 1 auto;min-width:0;
-  margin-left:6px;padding:6px 10px;border-radius:12px;
-  background:var(--brand);color:var(--brand-ink);
-  font-size:13px;font-weight:700;line-height:1.25;text-align:left;
-  animation:latido-globo 2.4s ease-in-out infinite;
-}
-.mundos-globo::before{
-  content:"";position:absolute;left:-5px;top:50%;transform:translateY(-50%);
-  width:0;height:0;border:5px solid transparent;border-right-color:var(--brand);
-}
-@media (min-width:600px){ .mundos-globo{font-size:15px;padding:9px 13px} }
+/* Sigue siendo el más grande (es la marca paraguas), pero 74px en una cabecera
+   pegada son 74px que el cliente pierde en TODA la página. */
+.mundo-3b{width:56px;height:56px}
+@media (min-width:600px){ .mundo-3b{width:68px;height:68px} }
 
 /* Franja de ancho completo, encima de la cabecera. Reusa .promo entera y solo
    cambia el color. Usa los tokens de marca (no #fff fijo) para que el contraste
    siga bien en modo oscuro. */
-.promo-mundos{background:var(--brand);color:var(--brand-ink)}
-.promo-mundos .promo-linea{font-size:15px}
-@media (min-width:600px){ .promo-mundos .promo-linea{font-size:16px} }
-
-/* El globo late despacio para pedir el toque. Solo el globo se mueve: los logos
-   se quedan quietos para que se lean. */
-@keyframes latido-globo{
-  0%,100%{transform:scale(1)}
-  50%{transform:scale(1.06)}
-}
-@media (prefers-reduced-motion:reduce){
-  .mundos-globo{animation:none}
+/* Una sola línea y en tono suave, no morado sólido: es un recordatorio, no un
+   anuncio. Antes medía 59px de alto en 2 líneas y, con el globo, la barra
+   pegada llegaba a 217px — el 27% de la pantalla de un celular, siempre.
+   Contraste --brand sobre --brand-soft: 7,5:1 en claro y 8,4:1 en oscuro. */
+.promo-mundos{background:var(--brand-soft);color:var(--brand);padding:var(--e0) var(--e3)}
+.promo-mundos .promo-linea{
+  font-size:var(--t-sm);font-weight:600;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
 }
 
 /* Franja + cabecera, pegadas arriba de la pantalla como una sola pieza. El
