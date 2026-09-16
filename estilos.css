@@ -327,11 +327,11 @@ a{color:inherit}
    realce sobrio (elevar + sombra) y un aro de marca en la categoría activa.
    El nombre va DEBAJO del círculo, centrado, fuera de la caja (ver app.js:
    .cat3d-info ya no es hijo de .cat3d-inner, es hermano). */
-.categorias-3d-wrap{padding:26px 0 4px}
-.categorias-3d-titulo{font-size:clamp(19px,3vw,24px);font-weight:700;margin-bottom:2px}
+.categorias-3d-wrap{padding:var(--e4) 0 var(--e0)}
+.categorias-3d-titulo{font-size:var(--t-xl);font-weight:800;letter-spacing:-.01em;margin-bottom:0}
 .categorias-3d{
-  display:flex;gap:14px;overflow-x:auto;overflow-y:visible;align-items:flex-start;
-  padding:16px 16px 22px;scroll-snap-type:x proximity;
+  display:flex;gap:var(--e2);overflow-x:auto;overflow-y:visible;align-items:flex-start;
+  padding:var(--e2) var(--e3) var(--e3);scroll-snap-type:x proximity;
   scrollbar-width:none;-ms-overflow-style:none;
 }
 .categorias-3d::-webkit-scrollbar{display:none}
@@ -372,15 +372,16 @@ a{color:inherit}
     ocupaban 4 filas (698px) y empujaban el primer producto a 1.259px. El
     dueño eligió mostrar 12 (contando Ofertas) + botón "Ver todas". Se oculta
     por CSS (nth-child, no JS por tarjeta) para que sea trivial de revertir:
-    JS solo alterna la clase .plegada en #categorias-3d. El 13 debe coincidir
-    con CATS_VISIBLES_PLEGADO=12 de app.js.
+    JS solo alterna la clase .plegada en #categorias-3d. 2026-09-16 (rediseño):
+    bajado a 8 visibles. El 9 debe coincidir con CATS_VISIBLES_PLEGADO=8 de
+    app.js.
   */
-  #categorias-3d.plegada .cat3d:nth-child(n+13){display:none}
+  #categorias-3d.plegada .cat3d:nth-child(n+9){display:none}
 }
 .cat3d-inner{
   position:relative;display:block;width:100%;aspect-ratio:1;
   border-radius:50%;overflow:hidden;
-  background:var(--surface);box-shadow:0 2px 4px rgba(28,26,34,.12),0 6px 14px rgba(28,26,34,.10);
+  background:var(--surface);box-shadow:var(--sombra-1);border:1px solid var(--border);
   transition:transform var(--dur) ease, box-shadow var(--dur) ease;
 }
 .cat3d-foto{width:100%;height:100%;background:var(--surface-2);position:relative}
@@ -411,14 +412,14 @@ a{color:inherit}
 @media (hover:hover) and (pointer:fine){
   .cat3d:hover .cat3d-inner,.cat3d:focus-visible .cat3d-inner{
     transform:translateY(-2px);
-    box-shadow:0 4px 10px rgba(28,26,34,.16),0 10px 20px rgba(28,26,34,.14);
+    box-shadow:var(--sombra-2);
   }
 }
 .cat3d:active .cat3d-inner{
   transform:translateY(0);
   transition-duration:.1s;
 }
-.cat3d.on .cat3d-inner{box-shadow:0 0 0 3px var(--brand)}
+.cat3d.on .cat3d-inner{box-shadow:0 0 0 2px var(--brand), var(--sombra-2);border-color:var(--brand)}
 .cat3d.on .cat3d-nombre{color:var(--brand)}
 @media (prefers-reduced-motion:reduce){
   .cat3d-inner{transition:none!important}

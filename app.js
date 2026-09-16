@@ -8,7 +8,7 @@ let elementoAnteriorFoco = null;   // para devolver el foco al cerrar modal/carr
 let productoModal = null;
 let seleccionVar = [];   // un valor por eje, del producto abierto en el detalle
 let catsExpandidas = false;   // estado de "Ver todas" en categorías (solo escritorio); sobrevive a los re-render
-const CATS_VISIBLES_PLEGADO = 12;   // debe coincidir con :nth-child(n+13) en estilos.css
+const CATS_VISIBLES_PLEGADO = 8;   // debe coincidir con :nth-child(n+9) en estilos.css
 
 // Destino de pago fijo en el código, NO en el catálogo (2026-08-16).
 // El panel de Stock+ que genera catalogo.json NO tiene autenticación de
