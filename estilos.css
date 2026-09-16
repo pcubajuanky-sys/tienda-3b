@@ -600,21 +600,21 @@ main{padding-top:20px}
 .btn-secundario{min-height:44px;padding:0 var(--e4)}
 
 /* ── Pie ── */
-.footer{margin-top:40px;border-top:1px solid var(--border);background:var(--surface)}
-.footer-wrap{padding:32px 16px 24px;text-align:center;display:flex;flex-direction:column;gap:8px;align-items:center}
+.footer{margin-top:var(--e6);border-top:1px solid var(--border);background:var(--surface)}
+.footer-wrap{padding:var(--e5) var(--e3) var(--e4);text-align:center;display:flex;flex-direction:column;gap:var(--e1);align-items:center}
 .footer-marca{display:flex;align-items:center;gap:10px}
-.footer-nombre-texto{font-size:17px;font-weight:800;color:var(--brand)}
+.footer-nombre-texto{font-size:var(--t-lg);font-weight:800;color:var(--brand);letter-spacing:-.01em}
 .vendedor,.actualizado,.aviso-tasa{font-size:12px;color:var(--text-3)}
 
 .footer-grid{
-  width:100%;max-width:760px;margin:18px 0 6px;padding-top:20px;border-top:1px solid var(--border);
-  display:grid;grid-template-columns:1fr;gap:22px;text-align:left;
+  width:100%;max-width:760px;margin:var(--e4) 0 var(--e0);padding-top:var(--e4);border-top:1px solid var(--border);
+  display:grid;grid-template-columns:1fr;gap:var(--e4);text-align:left;
 }
 @media (min-width:640px){
   .footer-grid{grid-template-columns:repeat(3,1fr);gap:26px;text-align:left}
 }
-.footer-col h3{font-size:13px;font-weight:700;color:var(--text);margin-bottom:8px}
-.footer-texto{font-size:13px;color:var(--text-2);line-height:1.55;white-space:pre-line}
+.footer-col h3{font-size:var(--t-xs);text-transform:uppercase;letter-spacing:.06em;color:var(--text-3);margin-bottom:var(--e1)}
+.footer-texto{font-size:var(--t-sm);color:var(--text-2);line-height:1.55;white-space:pre-line}
 .footer-contacto-links{display:flex;flex-direction:column;gap:8px;align-items:flex-start}
 .footer-link{
   display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--text-2);
@@ -626,10 +626,11 @@ main{padding-top:20px}
 /* ── Barra inferior en móvil ── */
 .barra-movil{
   position:fixed;left:0;right:0;bottom:0;z-index:12;display:flex;align-items:center;justify-content:space-between;
-  gap:10px;padding:12px 16px;background:var(--brand);color:var(--brand-ink);
-  box-shadow:0 -4px 16px rgba(28,26,34,.18);
+  gap:10px;padding:var(--e2) var(--e3);background:var(--brand);color:var(--brand-ink);
+  box-shadow:var(--sombra-3);
+  padding-bottom:max(var(--e2), env(safe-area-inset-bottom));
 }
-.barra-movil span{font-size:13px;font-weight:600}
+.barra-movil span{font-size:var(--t-sm);font-weight:700}
 .barra-movil button{min-height:44px;background:var(--brand-ink);color:var(--brand);font-size:var(--t-sm)}
 @media (min-width:1024px){
   .barra-movil{display:none}
