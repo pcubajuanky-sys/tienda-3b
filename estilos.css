@@ -31,7 +31,7 @@
   --t-xs:12px; --t-sm:13px; --t-md:15px; --t-lg:17px;
   --t-xl: clamp(19px,2.6vw,22px);
   --t-2xl:clamp(22px,3.4vw,28px);
-  --t-3xl:clamp(30px,6vw,46px);
+  --t-3xl:clamp(28px,6vw,46px);
 
   --radio-control: 12px;
   --radio-card: 16px;
@@ -173,7 +173,7 @@ a{color:inherit}
    a dos tonos que habia antes, para que web y catalogo PDF lleven la misma marca. */
 .logo-img{height:32px;width:32px;display:block;border-radius:9px;object-fit:cover}
 @media (min-width:760px){.logo-img{height:44px;width:44px;border-radius:12px}}
-.hero-logo .logo-img{height:clamp(56px,9vw,88px);width:clamp(56px,9vw,88px);border-radius:18px}
+.hero-logo .logo-img{height:clamp(48px,9vw,72px);width:clamp(48px,9vw,72px);border-radius:16px}
 @media (min-width:760px){.logo-svg{height:44px}}
 /*
   Marca a dos tonos, de color FIJO (no usa --brand ni --brand-ink): la placa es
@@ -215,22 +215,12 @@ a{color:inherit}
   background:linear-gradient(160deg, var(--hero-1) 0%, var(--hero-2) 100%);
   color:var(--hero-ink);
 }
-/*
-  Las fotos son textura de fondo, no protagonistas: además de la opacidad,
-  el desenfoque es lo que de verdad borra los textos y marcas de agua propias
-  de algunas fotos de producto (una marca de agua nítida al 22% de opacidad
-  sigue siendo texto legible; desenfocada, se vuelve mancha de color). El velo
-  (.hero-velo) repite encima el mismo degradado de marca para que el titular
-  conserve contraste. 2026-08-15 (cuarto retoque): el dueño avisó de que
-  "apenas se ven" las fotos — se subió la opacidad del mosaico (.32→.55) y se
-  bajó la del velo (.82→.64) sin perder el límite duro de contraste del
-  texto (≥4.5:1, medido caso por caso, ver informe).
-*/
 /* brightness(.75) es la pieza clave: le pone TECHO a lo claro que puede llegar
    a ser un trozo de foto. Antes el contraste del titular dependía de qué fotos
    tocaran ese día (una foto sobre fondo blanco lo bajaba a ~3,2:1); ahora el
    peor caso está calculado y da 8,2:1. El blur se queda: borra las marcas de
-   agua de algunas fotos de producto (informe 2026-08-15). */
+   agua de algunas fotos de producto (informe 2026-08-15). El mosaico se ve al
+   .42 y el velo ya no repite el degradado del fondo: es vertical y propio. */
 .hero-mosaico{
   position:absolute;inset:0;display:grid;
   grid-template-columns:repeat(6,1fr);grid-template-rows:repeat(2,1fr);
@@ -248,22 +238,25 @@ a{color:inherit}
     rgba(42,15,33,.80) 72%,
     rgba(42,15,33,.94) 100%);
 }
-.hero-contenido{position:relative;padding:var(--e5) var(--e3) var(--e4);text-align:center}
-.hero-logo{display:flex;justify-content:center;margin-bottom:var(--e2)}
+.hero-contenido{position:relative;padding:var(--e4) var(--e3) var(--e4);text-align:center}
+.hero-logo{display:flex;justify-content:center;margin-bottom:var(--e1)}
 .hero-logo .logo-svg{height:clamp(44px,7vw,68px)}
 .hero h1{
   font-size:var(--t-3xl);font-weight:800;letter-spacing:-.03em;line-height:1.02;
   max-width:18ch;margin:0 auto var(--e2);text-wrap:balance;
 }
-.hero-sub{font-size:var(--t-lg);max-width:42ch;margin:0 auto var(--e4);opacity:.92;line-height:1.45}
+/* 15px en el celular y 17px a partir de tablet: a 17px el subtítulo envolvía
+   a dos líneas largas y la portada crecía más de lo que se ahorraba arriba. */
+.hero-sub{font-size:var(--t-md);max-width:42ch;margin:0 auto var(--e3);opacity:.92;line-height:1.45}
+@media (min-width:760px){ .hero-sub{font-size:var(--t-lg)} }
 .hero-acciones{display:flex;flex-wrap:wrap;justify-content:center;gap:var(--e2)}
 /* Chips translúcidos en vez de ✓ sueltos: se leen como datos, no como una lista. */
 .hero-datos{
   list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:var(--e1);
-  margin-top:var(--e4);font-size:var(--t-xs);font-weight:600;
+  margin-top:var(--e3);font-size:var(--t-xs);font-weight:600;
 }
 .hero-datos li{
-  padding:var(--e0) var(--e2);border-radius:var(--radio-pill);
+  padding:2px var(--e2);border-radius:var(--radio-pill);
   background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);
 }
 /* Portada más baja en escritorio (2026-08-15): medía 428px de alto y
