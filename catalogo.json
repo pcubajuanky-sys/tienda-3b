@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-16T19:20:38.141Z",
+  "generado": "2026-09-16T23:42:29.401Z",
   "tasa": 695,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -259,24 +259,6 @@
       "precioUSD": 0.65,
       "precioCUP": 450,
       "moneda": "cup",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
-      }
-    },
-    {
-      "id": "p_1789489796373",
-      "codigo": "MHFV",
-      "name": "Adaptador USB-TipoC",
-      "cat": "Bocinas Celulares y Accesorios",
-      "subcat": "",
-      "notes": "",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789489714/productos/fg4fdehztii5v9yybzgh.jpg",
-      "precioUSD": 1,
-      "precioCUP": 695,
-      "moneda": "usd",
       "enOferta": false,
       "destacado": false,
       "envio": {
@@ -3591,8 +3573,7 @@
           "Talla"
         ],
         "opciones": [
-          "S",
-          "M"
+          "S"
         ]
       },
       "envio": {
@@ -3860,8 +3841,8 @@
       "subcat": "",
       "notes": "Hermosos diseños. Todos los colores de la imagen disponibles 🤩",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789500243/productos/qrccwlgkrgjj8z7tzybe.jpg",
-      "precioUSD": 0,
-      "precioCUP": 0,
+      "precioUSD": 3,
+      "precioCUP": 2085,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -3870,16 +3851,13 @@
           "Color"
         ],
         "opciones": [
-          "NEGRO",
           "BLANCO",
-          "BEIGE",
           "MARRÓN",
           "ROJO",
           "ROSA",
           "ROSA CLARO",
           "AZUL",
           "CELESTE",
-          "VERDE",
           "VERDE CLARO",
           "AMARILLO",
           "NARANJA",
@@ -3887,8 +3865,8 @@
         ]
       },
       "envio": {
-        "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
       }
     },
     {
