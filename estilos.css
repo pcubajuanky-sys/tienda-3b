@@ -490,11 +490,11 @@ main{padding-top:20px}
     display:block;grid-column:2;grid-row:1/-1;
     position:sticky;top:var(--header-h,120px);
     background:var(--surface);border:1px solid var(--border);border-radius:var(--radio-card);
-    padding:16px;box-shadow:var(--sombra);
+    padding:var(--e3);box-shadow:var(--sombra-1);
     max-height:calc(100vh - var(--header-h,120px) - 24px);overflow-y:auto;
   }
 }
-.lateral-titulo{font-size:16px;font-weight:700;margin-bottom:10px}
+.lateral-titulo{font-size:var(--t-lg);font-weight:800;margin-bottom:var(--e2)}
 .estado-lateral{font-size:13px;color:var(--text-2);text-align:center;padding:20px 0}
 .lateral-envio{font-size:12px;font-weight:600;color:var(--brand);margin:10px 0 0}
 .lateral-total{padding:12px 0;border-top:1px solid var(--border);margin-top:8px;text-align:right}
@@ -644,10 +644,10 @@ body.con-barra-movil{padding-bottom:var(--barra-movil-h, 84px)}
 
 /* ── Modal detalle de producto ── */
 .modal{position:fixed;inset:0;z-index:30;display:flex;align-items:flex-end;justify-content:center}
-.modal-fondo{position:absolute;inset:0;background:rgba(20,16,23,.55)}
+.modal-fondo{position:absolute;inset:0;background:rgba(20,16,23,.6);-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px)}
 .modal-caja{
   position:relative;background:var(--surface);width:100%;max-width:560px;max-height:92vh;
-  overflow-y:auto;border-radius:var(--radio-hoja) var(--radio-hoja) 0 0;box-shadow:var(--sombra);
+  overflow-y:auto;border-radius:var(--radio-hoja) var(--radio-hoja) 0 0;box-shadow:var(--sombra-3);
 }
 @media (min-width:640px){
   .modal{align-items:center}
@@ -655,25 +655,25 @@ body.con-barra-movil{padding-bottom:var(--barra-movil-h, 84px)}
 }
 .modal-cerrar{
   position:absolute;top:12px;right:12px;z-index:2;width:40px;height:40px;border:none;border-radius:50%;
-  background:var(--surface);color:var(--text);font-size:18px;cursor:pointer;box-shadow:var(--sombra);
+  background:var(--surface);color:var(--text);font-size:18px;cursor:pointer;box-shadow:var(--sombra-2);
 }
 .modal-foto{aspect-ratio:1;max-height:340px;background:var(--surface-2)}
 .modal-foto img{width:100%;height:100%;object-fit:cover;display:block}
-.modal-body{padding:20px}
+.modal-body{padding:var(--e4)}
 .modal-cat{font-size:12px;font-weight:700;color:var(--brand);text-transform:uppercase;letter-spacing:.03em;margin-bottom:6px}
-.modal-body h2{font-size:20px;font-weight:700;line-height:1.3;margin-bottom:10px}
+.modal-body h2{font-size:var(--t-2xl);font-weight:800;letter-spacing:-.01em;line-height:1.3;margin-bottom:10px}
 .modal-precio{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin-bottom:14px}
-.modal-precio .precio{font-size:22px}
+.modal-precio .precio{font-size:var(--t-2xl)}
 .modal-desc{font-size:14px;color:var(--text-2);line-height:1.55;white-space:pre-line;margin-bottom:18px}
 .modal-accion{display:flex}
 .modal-accion .add,.modal-accion .qty{width:100%}
 
 /* ── Carrito (hoja) ── */
 .panel{position:fixed;inset:0;z-index:30;display:flex;align-items:flex-end;justify-content:center}
-.panel-fondo{position:absolute;inset:0;background:rgba(20,16,23,.55)}
+.panel-fondo{position:absolute;inset:0;background:rgba(20,16,23,.6);-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px)}
 .panel-caja{
   position:relative;background:var(--surface);width:100%;max-width:520px;max-height:92vh;
-  overflow-y:auto;border-radius:var(--radio-hoja) var(--radio-hoja) 0 0;padding:18px;box-shadow:var(--sombra);
+  overflow-y:auto;border-radius:var(--radio-hoja) var(--radio-hoja) 0 0;padding:var(--e4);box-shadow:var(--sombra-3);
 }
 @media (min-width:640px){
   .panel{align-items:center}
@@ -684,8 +684,8 @@ body.con-barra-movil{padding-bottom:var(--barra-movil-h, 84px)}
 .cerrar{
   width:40px;height:40px;background:var(--surface-2);border:none;border-radius:50%;font-size:16px;cursor:pointer;
 }
-.linea{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--border);font-size:13px}
-.linea img{width:44px;height:44px;border-radius:8px;object-fit:cover;background:var(--surface-2);flex-shrink:0}
+.linea{display:flex;align-items:center;gap:10px;padding:var(--e2) 0;border-bottom:1px solid var(--border);font-size:var(--t-sm)}
+.linea img{width:52px;height:52px;border-radius:var(--e2);object-fit:cover;background:var(--surface-2);flex-shrink:0}
 .linea .linea-info{flex:1;min-width:0}
 .linea .linea-nom{font-weight:600;line-height:1.3}
 .linea .linea-qty{color:var(--text-3);font-size:12px}
@@ -697,8 +697,13 @@ body.con-barra-movil{padding-bottom:var(--barra-movil-h, 84px)}
 .campos{display:flex;flex-direction:column;gap:12px;margin-top:4px}
 .campo{display:flex;flex-direction:column;gap:5px;font-size:12px;font-weight:600;color:var(--text-2)}
 .campo input,.campo textarea{
-  width:100%;min-height:44px;padding:11px;border:1px solid var(--border);border-radius:var(--radio-control);
-  font-size:15px;font-family:inherit;background:var(--surface);color:var(--text);
+  width:100%;min-height:48px;padding:var(--e2) var(--e3);
+  border:1px solid var(--border);border-radius:var(--radio-control);
+  font-size:var(--t-md);font-family:inherit;background:var(--surface);color:var(--text);
+  transition:border-color var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
+}
+.campo input:focus,.campo textarea:focus,.campo select:focus{
+  outline:none;border-color:var(--brand);box-shadow:0 0 0 3px var(--brand-soft);
 }
 .campo input.invalido,.campo textarea.invalido{border-color:var(--oferta)}
 .campo-error{color:var(--oferta);font-size:12px;font-weight:600}
@@ -964,8 +969,9 @@ button.footer-link{background:none;border:none;font-family:inherit;cursor:pointe
 .enc-fila{display:flex;gap:10px;flex-wrap:wrap}
 .enc-fila .campo{flex:1 1 120px;min-width:0}
 .campo select{
-  width:100%;min-height:44px;padding:10px;border:1px solid var(--border);border-radius:var(--radio-control);
-  font-size:15px;font-family:inherit;background:var(--surface);color:var(--text);
+  width:100%;min-height:48px;padding:var(--e2) var(--e3);
+  border:1px solid var(--border);border-radius:var(--radio-control);
+  font-size:var(--t-md);font-family:inherit;background:var(--surface);color:var(--text);
 }
 .campo select.invalido{border-color:var(--oferta)}
 .enc-dominio{font-size:12px;font-weight:600;color:var(--wa)}
