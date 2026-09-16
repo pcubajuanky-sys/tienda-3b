@@ -16,13 +16,42 @@
   --oferta:    #C81E4C;
   --wa:        #128C7E;
 
-  --radio-control: 10px;
+  /* Portada: tonos PROPIOS que NO se invierten en oscuro. Sin esto, --brand
+     pasa a rosa claro en modo oscuro y la portada entera se vuelve rosa chicle. */
+  --hero-1:    #8C3A6D;
+  --hero-2:    #4E1D3B;
+  --hero-ink:  #FFFFFF;
+
+  /* Escala de espaciado. Antes había 40+ números sueltos y cada pieza nueva
+     llegaba con medidas propias: esa era la causa de que los dos botones de la
+     portada no se parecieran. */
+  --e0:4px; --e1:8px; --e2:12px; --e3:16px; --e4:24px; --e5:32px; --e6:48px; --e7:64px;
+
+  /* Escala tipográfica */
+  --t-xs:12px; --t-sm:13px; --t-md:15px; --t-lg:17px;
+  --t-xl: clamp(19px,2.6vw,22px);
+  --t-2xl:clamp(22px,3.4vw,28px);
+  --t-3xl:clamp(30px,6vw,46px);
+
+  --radio-control: 12px;
   --radio-card: 16px;
   --radio-hoja: 22px;
-  --sombra: 0 1px 2px rgba(28,26,34,.06), 0 8px 24px rgba(28,26,34,.06);
+  --radio-pill: 999px;
+
+  /* Tres niveles, no uno. La sombra única de antes (blur 24px) se aplicaba
+     igual a una tarjeta de producto que a una hoja modal, y en una parrilla de
+     224 tarjetas eso ensucia el fondo. */
+  --sombra-1: 0 1px 2px rgba(28,26,34,.05);
+  --sombra-2: 0 2px 6px rgba(28,26,34,.08), 0 10px 24px rgba(28,26,34,.10);
+  --sombra-3: 0 -2px 8px rgba(28,26,34,.06), 0 18px 48px rgba(28,26,34,.20);
+  /* Alias: las reglas que aún no se han migrado siguen funcionando. */
+  --sombra: var(--sombra-1);
+
   --header-h: 60px;
   --header-h-compacta: 52px;
   --dur: .2s;
+  --dur-lento: .32s;
+  --ease: cubic-bezier(.2,.7,.3,1);
 }
 
 @media (prefers-color-scheme: dark){
@@ -39,6 +68,11 @@
     --brand-soft:#2E1B29;
     --brand-hondo:#C77FA9;
     --oferta:    #FF8AA6;
+    /* Sobre fondo oscuro una sombra gris no se ve: solo funciona el negro. Los
+       tokens --hero-* NO se redefinen aquí a propósito (ver :root claro). */
+    --sombra-1: 0 1px 2px rgba(0,0,0,.40);
+    --sombra-2: 0 2px 6px rgba(0,0,0,.45), 0 10px 24px rgba(0,0,0,.50);
+    --sombra-3: 0 -2px 8px rgba(0,0,0,.40), 0 18px 48px rgba(0,0,0,.60);
     --wa:        #25D366;
   }
 }
