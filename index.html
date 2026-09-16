@@ -111,8 +111,8 @@
     <h1>Todo para tu hogar, tu cabello y tu día a día</h1>
     <p class="hero-sub">Mira el catálogo, arma tu pedido y nos escribes por WhatsApp.</p>
     <div class="hero-acciones">
-      <a href="#catalogo" class="hero-cta">Ver el catálogo</a>
-      <a href="#encargos" class="hero-cta hero-cta-encargos" id="hero-encargos" hidden>Hacer un encargo</a>
+      <a href="#catalogo" class="btn btn-contraste hero-cta">Ver el catálogo</a>
+      <a href="#encargos" class="btn btn-contraste-linea hero-cta" id="hero-encargos" hidden>Hacer un encargo</a>
     </div>
     <ul class="hero-datos">
       <li id="hero-dato-productos">— productos disponibles</li>
@@ -139,7 +139,7 @@
          @media max-width:759px). Texto/aria-expanded los pone
          renderCategorias3D() en app.js. -->
     <div class="categorias-ver-todas-wrap wrap">
-      <button id="btn-cats-ver-todas" class="btn-secundario" type="button" aria-expanded="false" hidden>Ver todas</button>
+      <button id="btn-cats-ver-todas" class="btn btn-suave btn-secundario" type="button" aria-expanded="false" hidden>Ver todas</button>
     </div>
   </section>
 
@@ -166,11 +166,11 @@
     <div id="grid" class="grid" hidden></div>
     <div id="vacio" class="estado" hidden>
       <p>No hay productos que coincidan con tu búsqueda.</p>
-      <button id="btn-ver-todo" class="btn-secundario" type="button">Ver todo el catálogo</button>
+      <button id="btn-ver-todo" class="btn btn-suave btn-secundario" type="button">Ver todo el catálogo</button>
     </div>
     <div id="error-carga" class="estado" hidden>
       <p>No pudimos cargar el catálogo. Revisa tu conexión e intenta de nuevo.</p>
-      <button id="btn-reintentar" class="btn-secundario" type="button">Reintentar</button>
+      <button id="btn-reintentar" class="btn btn-suave btn-secundario" type="button">Reintentar</button>
     </div>
   </main>
 
@@ -179,12 +179,12 @@
   <aside id="carrito-lateral" class="carrito-lateral" hidden aria-label="Tu pedido">
     <h2 class="lateral-titulo">Tu pedido</h2>
     <div id="lateral-items"></div>
-    <div class="vaciar-wrap"><button id="btn-vaciar-lateral" class="btn-vaciar" type="button" hidden>🗑 Vaciar pedido</button></div>
+    <div class="vaciar-wrap"><button id="btn-vaciar-lateral" class="btn btn-texto btn-vaciar" type="button" hidden>🗑 Vaciar pedido</button></div>
     <p id="lateral-envio" class="lateral-envio" hidden></p>
     <div id="lateral-total" class="lateral-total" hidden></div>
     <p id="lateral-politica" class="politica-texto" hidden></p>
     <p id="lateral-terminos" class="terminos-nota" hidden>Al pedir aceptas <a href="terminos.html" target="_blank" rel="noopener">nuestros términos</a>.</p>
-    <button id="btn-lateral-pedir" type="button" hidden>Pedir por WhatsApp</button>
+    <button id="btn-lateral-pedir" class="btn btn-wa" type="button" hidden>Pedir por WhatsApp</button>
     <!-- Pago por adelantado con QvaPay (2026-08-16, opcional): tienda.pagoUrl.
          Secundario a propósito, nunca más prominente que "Pedir por
          WhatsApp" (ver .pago-link en estilos.css). Contenido lo pinta
@@ -223,7 +223,7 @@
 
 <div id="barra-movil" class="barra-movil" hidden>
   <span id="barra-movil-info"></span>
-  <button id="btn-ver-pedido" type="button">Ver pedido</button>
+  <button id="btn-ver-pedido" class="btn" type="button">Ver pedido</button>
 </div>
 
 <!-- Detalle de producto -->
@@ -257,7 +257,7 @@
         <li><b>Lo compartes.</b> Con tu familia, tus amigos, tu grupo, tu Facebook. Donde quieras.</li>
         <li><b>Cobras.</b> Cada venta que entre por tu enlace queda a tu nombre.</li>
       </ol>
-      <a class="comi-wa" id="comi-wa" target="_blank" rel="noopener">Escríbenos por WhatsApp</a>
+      <a class="btn btn-wa comi-wa" id="comi-wa" target="_blank" rel="noopener">Escríbenos por WhatsApp</a>
     </div>
   </div>
 </div>
@@ -282,9 +282,9 @@
     <div id="carrito-items"></div>
     <div id="carrito-vacio" class="estado" hidden>
       <p>Tu pedido está vacío.</p>
-      <button id="btn-cerrar-carrito-2" class="btn-secundario" type="button">Seguir viendo el catálogo</button>
+      <button id="btn-cerrar-carrito-2" class="btn btn-suave btn-secundario" type="button">Seguir viendo el catálogo</button>
     </div>
-    <div class="vaciar-wrap"><button id="btn-vaciar-panel" class="btn-vaciar" type="button" hidden>🗑 Vaciar pedido</button></div>
+    <div class="vaciar-wrap"><button id="btn-vaciar-panel" class="btn btn-texto btn-vaciar" type="button" hidden>🗑 Vaciar pedido</button></div>
     <div id="carrito-total" class="total"></div>
     <form id="form-pedido" class="campos" novalidate>
       <label class="campo">
@@ -308,7 +308,7 @@
       </label>
       <p id="panel-politica" class="politica-texto" hidden></p>
       <p id="panel-terminos" class="terminos-nota" hidden>Al pedir aceptas <a href="terminos.html" target="_blank" rel="noopener">nuestros términos</a>.</p>
-      <button id="btn-enviar" class="btn-enviar" type="submit">Pedir por WhatsApp</button>
+      <button id="btn-enviar" class="btn btn-wa btn-enviar" type="submit">Pedir por WhatsApp</button>
       <!-- Pago por adelantado con QvaPay (2026-08-16, opcional): tienda.pagoUrl.
            Secundario a propósito, nunca más prominente que "Pedir por
            WhatsApp" (ver .pago-link en estilos.css). Contenido lo pinta

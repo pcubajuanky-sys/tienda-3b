@@ -345,11 +345,11 @@ function accionHtml(id, clave) {
   if (v && !clave) {
     const q = qtyEnCarrito(id);
     const que = v.ejes.join(' y ').toLowerCase();
-    return `<button class="add" data-detalle="${id}">${q ? `Añadir otra (${q})` : `Elegir ${que}`}</button>`;
+    return `<button class="btn btn-primario add" data-detalle="${id}">${q ? `Añadir otra (${q})` : `Elegir ${que}`}</button>`;
   }
   const k = claveCarrito(id, clave);
   const q = carrito[k] || 0;
-  if (q === 0) return `<button class="add" data-add="${k}">Añadir</button>`;
+  if (q === 0) return `<button class="btn btn-primario add" data-add="${k}">Añadir</button>`;
   return `<div class="qty">` +
     `<button data-minus="${k}" aria-label="Quitar una unidad">−</button>` +
     `<strong aria-hidden="true">${q}</strong><span class="sr-only">${q} en el pedido</span>` +
@@ -408,7 +408,7 @@ function tarjetaComisionistaHtml() {
       <span class="cta-comi-tit">Gana dinero con 3B</span>
       <span class="cta-comi-sub">Comparte los productos con tu gente y cobra tu comisión por cada venta que entre por tu enlace.</span>
     </span>
-    <span class="cta-comi-btn">Quiero mi enlace</span>
+    <span class="btn cta-comi-btn">Quiero mi enlace</span>
   </button>`;
 }
 

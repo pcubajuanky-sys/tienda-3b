@@ -133,7 +133,7 @@
         + '<span class="enc-cta-sub">Pídelo de Shein o Temu y te decimos el precio antes de comprar.</span>'
         + '<span class="enc-cta-chips">' + (pausado() ? `<span>${escapeHtml((estado.bloque.cartel || {}).titulo || '')}</span>` : '<span>Shein</span><span>Temu</span><span>Avión o barco</span>') + '</span>'
         + '</span>'
-        + `<span class="enc-cta-accion">${pausado() ? 'Ver cómo funciona' : 'Hacer un encargo'} <span aria-hidden="true">→</span></span></button>`
+        + `<span class="btn btn-primario enc-cta-accion">${pausado() ? 'Ver cómo funciona' : 'Hacer un encargo'} <span aria-hidden="true">→</span></span></button>`
       : '';
   }
 
@@ -217,7 +217,7 @@
       + htmlEjemplos() + htmlTiempos()
       + '<form id="enc-form" class="campos" novalidate>'
       + `<div id="enc-articulos" class="campos">${estado.articulos.map(htmlArticulo).join('')}</div>`
-      + '<button type="button" class="btn-secundario" id="enc-add">+ Añadir otro producto</button>'
+      + '<button type="button" class="btn btn-suave btn-secundario" id="enc-add">+ Añadir otro producto</button>'
       + '<div class="enc-bloque"><div class="enc-bloque-tit">¿Cómo lo traemos?</div><div class="enc-modos">'
       + modo('barco', '🚢 Barco', b.tiempos.barco.hastaDias) + modo('avion', '✈️ Avión', b.tiempos.avion.hastaDias) + '</div></div>'
       + `<div id="enc-estimado" class="enc-estimado" aria-live="polite">${htmlEstimado()}</div>`
@@ -234,7 +234,7 @@
       + '<label class="enc-check"><input type="checkbox" id="enc-acepta"> Lo entiendo y lo acepto</label>'
       + '<span class="campo-error" id="enc-acepta-err" hidden>Tienes que aceptar las condiciones.</span>'
       + '<p class="campo-error" id="enc-general-err" hidden></p>'
-      + '<button type="submit" class="btn-enviar">Pedir encargo por WhatsApp</button>'
+      + '<button type="submit" class="btn btn-wa">Pedir encargo por WhatsApp</button>'
       + '<p class="aviso">El precio final y la disponibilidad se confirman por WhatsApp.</p>'
       + '</form>';
   }
@@ -265,9 +265,9 @@
       + '<li>Haz una <b>captura de pantalla</b> (una foto de la pantalla) donde se vea el producto, la talla, el color y el precio. En casi todos los teléfonos: aprieta a la vez <b>bajar volumen</b> y <b>apagar</b>.</li>'
       + '<li>Mándanos esa captura <b>en el mismo chat</b>. Si pediste varias cosas, una captura de cada una.</li></ol>'
       + '<p class="enc-nota">Sin la captura no podemos darte el precio final.</p>'
-      + '<button type="button" class="btn-enviar" id="enc-abrir-wa">Abrir WhatsApp</button>'
-      + `<button type="button" class="btn-secundario" id="enc-listo"${estado.listo ? '' : ' hidden'}>Ya lo mandé ✅</button>`
-      + '<button type="button" class="btn-secundario" id="enc-volver">← Corregir mi encargo</button>'
+      + '<button type="button" class="btn btn-wa" id="enc-abrir-wa">Abrir WhatsApp</button>'
+      + `<button type="button" class="btn btn-suave btn-secundario" id="enc-listo"${estado.listo ? '' : ' hidden'}>Ya lo mandé ✅</button>`
+      + '<button type="button" class="btn btn-suave btn-secundario" id="enc-volver">← Corregir mi encargo</button>'
       + '</div>';
   }
 
