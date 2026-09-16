@@ -327,11 +327,11 @@ a{color:inherit}
    realce sobrio (elevar + sombra) y un aro de marca en la categoría activa.
    El nombre va DEBAJO del círculo, centrado, fuera de la caja (ver app.js:
    .cat3d-info ya no es hijo de .cat3d-inner, es hermano). */
-.categorias-3d-wrap{padding:var(--e4) 0 var(--e0)}
+.categorias-3d-wrap{padding:var(--e3) 0 0}
 .categorias-3d-titulo{font-size:var(--t-xl);font-weight:800;letter-spacing:-.01em;margin-bottom:0}
 .categorias-3d{
   display:flex;gap:var(--e2);overflow-x:auto;overflow-y:visible;align-items:flex-start;
-  padding:var(--e2) var(--e3) var(--e3);scroll-snap-type:x proximity;
+  padding:var(--e2) var(--e3) var(--e1);scroll-snap-type:x proximity;
   scrollbar-width:none;-ms-overflow-style:none;
 }
 .categorias-3d::-webkit-scrollbar{display:none}
@@ -345,7 +345,7 @@ a{color:inherit}
    un error de diseño anterior que lo ocultaba <760px: en el móvil nadie
    descubre que la tira se arrastra). El `hidden` que pone JS cuando total ≤ 12
    manda siempre gracias a [hidden]{!important}. */
-.categorias-ver-todas-wrap{display:block;text-align:center;padding:2px 16px 6px}
+.categorias-ver-todas-wrap{display:block;text-align:center;padding:0 var(--e3)}
 /* Móvil desplegado (<760px, botón "Ver todas" pulsado → #categorias-3d pierde
    la clase .plegada): la tira deja de arrastrarse y pasa a rejilla que
    envuelve, igual que hace escritorio siempre. Plegada (por defecto) no se
