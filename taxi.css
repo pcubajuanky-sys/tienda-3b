@@ -56,18 +56,18 @@ body::after{
 
 .tx-main{padding-top:18px}
 
-.tx-portada{text-align:center;padding:8px 0 6px}
+.tx-portada{text-align:center;padding:var(--e1) 0 6px}
 /* Apaisada (2,17:1) a proposito: cuadrada empujaba la calculadora fuera de la
    pantalla del movil, que es lo unico que el cliente viene a usar. */
 .tx-portada-img{
   display:block;width:100%;max-width:560px;height:auto;margin:0 auto 14px;
   border-radius:var(--radio-hoja);
-  box-shadow:var(--sombra);
+  box-shadow:var(--sombra-1);
 }
 .tx-portada h1{font-size:30px;letter-spacing:-.5px}
-.tx-lema{color:var(--text-2);margin-top:6px;font-size:15px}
+.tx-lema{color:var(--text-2);margin-top:6px;font-size:var(--t-md)}
 
-.tx-nota-viaje{font-size:12px;color:var(--text-3);text-align:center;margin:-6px 0 12px}
+.tx-nota-viaje{font-size:var(--t-xs);color:var(--text-3);text-align:center;margin:-6px 0 var(--e2)}
 
 /* El campo de km aparece dentro de la calculadora cuando el cliente elige
    "yo pongo los km". Va DESTACADO —fondo propio y numero grande— porque saber
@@ -76,23 +76,23 @@ body::after{
   background:var(--brand-soft);
   border:2px solid var(--tx-verde);
   border-radius:var(--radio-card);
-  padding:12px 14px;margin-bottom:12px;
+  padding:var(--e2) 14px;margin-bottom:var(--e2);
 }
 .tx-km-titulo{
-  display:block;color:var(--text);font-size:15px;font-weight:700;margin-bottom:10px;
+  display:block;color:var(--text);font-size:var(--t-md);font-weight:700;margin-bottom:10px;
 }
 .tx-km-fila{display:block;margin-bottom:10px}
 .tx-km-fila small{
-  display:block;font-size:12px;font-weight:600;color:var(--text-2);margin-bottom:4px;
+  display:block;font-size:var(--t-xs);font-weight:600;color:var(--text-2);margin-bottom:var(--e0);
 }
 .tx-campo-km input[type="text"]{
-  width:100%;padding:10px 12px;font-size:15px;
+  width:100%;padding:10px var(--e2);font-size:var(--t-md);
   color:var(--text);background:var(--surface);
   border:1px solid var(--tx-verde);border-radius:var(--radio-control);
 }
 .tx-campo-km input[type="number"]{
   width:100%;font-size:22px;font-weight:700;text-align:center;
-  padding:12px;color:var(--text);background:var(--surface);
+  padding:var(--e2);color:var(--text);background:var(--surface);
   border:1px solid var(--tx-verde);border-radius:var(--radio-control);
   font-variant-numeric:tabular-nums;
 }
@@ -100,7 +100,7 @@ body::after{
    web deja de dar precio, porque la formula cuenta el regreso del carro a base. */
 .tx-km-check{
   display:flex;align-items:flex-start;gap:9px;
-  margin:2px 0 8px;font-size:13.5px;line-height:1.4;color:var(--text);cursor:pointer;
+  margin:2px 0 var(--e1);font-size:13.5px;line-height:1.4;color:var(--text);cursor:pointer;
 }
 /* Selector largo a proposito: `.tx-campo input` de mas arriba le pone width:100%
    y, con la misma especificidad, la casilla salia tan ancha como la fila y el
@@ -111,51 +111,51 @@ body::after{
 }
 .tx-km-check > span{flex:1;min-width:0}
 .tx-campo-km em{
-  display:block;font-style:normal;margin-top:4px;
-  font-size:12px;line-height:1.45;color:var(--text-2);
+  display:block;font-style:normal;margin-top:var(--e0);
+  font-size:var(--t-xs);line-height:1.45;color:var(--text-2);
 }
-.tx-esperando{font-size:14px;color:var(--text-2);padding:4px 0}
+.tx-esperando{font-size:14px;color:var(--text-2);padding:var(--e0) 0}
 .tx-aviso-sa{font-size:13.5px;line-height:1.5;color:#fff;text-align:left}
-.tx-aviso-sa b{display:block;color:var(--tx-amarillo);margin-bottom:4px}
+.tx-aviso-sa b{display:block;color:var(--tx-amarillo);margin-bottom:var(--e0)}
 
 /* "Vienes de parte de X". Discreto: es informacion para el chofer, no una
    promocion; el cliente no tiene que hacer nada con esto. */
 .tx-ref{
-  max-width:560px;margin:0 auto 8px;padding:8px 12px;
+  max-width:560px;margin:0 auto var(--e1);padding:var(--e1) var(--e2);
   background:var(--brand-soft);border-radius:var(--radio-control);
-  font-size:13px;color:var(--text-2);text-align:center;
+  font-size:var(--t-sm);color:var(--text-2);text-align:center;
 }
 .tx-ref b{color:var(--text)}
 .tx-ref-quitar{
   background:none;border:none;cursor:pointer;padding:0 0 0 6px;
-  font-size:12px;color:var(--text-3);text-decoration:underline;
+  font-size:var(--t-xs);color:var(--text-3);text-decoration:underline;
 }
 
 .tx-calc,.tx-pizarra,.tx-propon,.tx-otro,.tx-pie,.tx-aviso{
   background:var(--surface);
   border:1px solid var(--border);
   border-radius:var(--radio-hoja);
-  box-shadow:var(--sombra);
+  box-shadow:var(--sombra-1);
   padding:18px;
-  margin:16px auto;
+  margin:var(--e3) auto;
   max-width:560px;
 }
-.tx-calc h2,.tx-pizarra h2,.tx-propon h2,.tx-otro h2,.tx-pie h2{font-size:18px;margin-bottom:12px}
+.tx-calc h2,.tx-pizarra h2,.tx-propon h2,.tx-otro h2,.tx-pie h2{font-size:18px;margin-bottom:var(--e2)}
 
-.tx-campo{display:block;margin-bottom:12px}
+.tx-campo{display:block;margin-bottom:var(--e2)}
 .tx-campo>span,.tx-campo>legend{
-  display:block;font-size:13px;font-weight:600;color:var(--text-2);margin-bottom:5px;
+  display:block;font-size:var(--t-sm);font-weight:600;color:var(--text-2);margin-bottom:5px;
 }
 /* `input` a secas, no una lista de tipos: el campo de km es `number` y se quedo
    fuera de la lista, con el negro por defecto del navegador sobre fondo oscuro
    (invisible en modo oscuro). Cualquier tipo nuevo hereda ya el color del tema. */
 .tx-campo select,.tx-campo input{
-  width:100%;padding:11px 12px;font-size:15px;
+  width:100%;padding:11px var(--e2);font-size:var(--t-md);
   color:var(--text);background:var(--bg);
   border:1px solid var(--border);border-radius:var(--radio-control);
 }
 .tx-opciones{border:0;padding:0}
-.tx-radio{display:inline-flex;align-items:center;gap:6px;margin-right:16px;font-size:15px}
+.tx-radio{display:inline-flex;align-items:center;gap:6px;margin-right:var(--e3);font-size:var(--t-md)}
 
 /* El precio va sobre el verde del carro, con el amarillo del rotulo: es la
    combinacion del flyer y lo que hace que la pagina se lea "taxi" de un vistazo.
@@ -163,34 +163,30 @@ body::after{
    de noche se aclara para los textos). Amarillo sobre verde claro no se lee. */
 .tx-resultado{
   background:var(--tx-caja);border-radius:var(--radio-card);
-  padding:16px;margin:14px 0;text-align:center;
+  padding:var(--e3);margin:14px 0;text-align:center;
   border:2px solid var(--tx-amarillo);
 }
 .tx-precio{font-size:32px;font-weight:800;letter-spacing:-1px;color:var(--tx-amarillo)}
 /* Sobre el verde, los textos secundarios van en blanco: el gris de la marca
    (--text-2) desaparece ahi. */
-.tx-precio-usd{font-size:13px;color:rgba(255,255,255,.88);margin-top:2px}
-.tx-vigencia{font-size:12px;color:rgba(255,255,255,.80);margin-top:8px}
+.tx-precio-usd{font-size:var(--t-sm);color:rgba(255,255,255,.88);margin-top:2px}
+.tx-vigencia{font-size:var(--t-xs);color:rgba(255,255,255,.80);margin-top:var(--e1)}
 .tx-caducado{color:var(--tx-amarillo);font-weight:700}
-.tx-desglose{font-size:12px;color:rgba(255,255,255,.80);margin-top:6px}
+.tx-desglose{font-size:var(--t-xs);color:rgba(255,255,255,.80);margin-top:6px}
 
-.tx-acciones{display:flex;flex-direction:column;gap:8px}
-.tx-wa{
-  display:block;text-align:center;text-decoration:none;
-  background:var(--wa);color:#fff;font-weight:700;font-size:16px;
-  padding:14px;border-radius:var(--radio-control);
-}
-.tx-secundario{
-  display:block;width:100%;text-align:center;cursor:pointer;
-  background:var(--surface-2);color:var(--text);font-weight:600;font-size:15px;
-  padding:12px;border:1px solid var(--border);border-radius:var(--radio-control);
-}
+.tx-acciones{display:flex;flex-direction:column;gap:var(--e1)}
+/* .tx-wa hereda alto, radio, relleno, tamano y peso de .btn + .btn-wa; aqui solo
+   queda lo propio: que ocupe todo el ancho de su contenedor. */
+.tx-wa{width:100%}
+/* .tx-secundario hereda las medidas de .btn; el fondo propio (surface-2, mas
+   marcado que el surface de .btn-suave) es una eleccion de taxi, no un olvido. */
+.tx-secundario{width:100%;background:var(--surface-2);color:var(--text);border:1px solid var(--border)}
 
 /* El reclamo de referidores reusa .cta-comi de la tienda, pero vestido de taxi:
    alli vive dentro de la rejilla de productos (grid-column) y va en morado. */
 .tx-main .cta-comi{
   grid-column:auto;
-  max-width:560px;margin:16px auto;
+  max-width:560px;margin:var(--e3) auto;
   background:var(--tx-caja);color:#fff;
   border-bottom-color:rgba(0,0,0,.35);
 }
@@ -200,7 +196,7 @@ body::after{
 .tx-gana-cifra{
   background:var(--tx-caja);color:#fff;
   border:2px solid var(--tx-amarillo);border-radius:var(--radio-card);
-  padding:12px 14px;margin:0 0 14px;font-size:14px;line-height:1.5;text-align:center;
+  padding:var(--e2) 14px;margin:0 0 14px;font-size:14px;line-height:1.5;text-align:center;
 }
 .tx-gana-cifra b{color:var(--tx-amarillo);font-size:18px}
 
@@ -208,16 +204,16 @@ body::after{
    arriba la mañana, abajo la tarde. Se lee de un vistazo y no dice de quien es. */
 .tx-calendario{
   background:var(--surface);border:1px solid var(--border);
-  border-radius:var(--radio-hoja);box-shadow:var(--sombra);
-  padding:18px;margin:16px auto;max-width:560px;
+  border-radius:var(--radio-hoja);box-shadow:var(--sombra-1);
+  padding:18px;margin:var(--e3) auto;max-width:560px;
 }
 .tx-calendario h2{font-size:18px;margin-bottom:6px}
-.tx-cal-nota{font-size:13px;color:var(--text-2);margin-bottom:14px}
+.tx-cal-nota{font-size:var(--t-sm);color:var(--text-2);margin-bottom:14px}
 .tx-cal-dias{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px}
 .tx-cal-dia{text-align:center;font-size:11px;color:var(--text-3)}
 .tx-cal-dia b{display:block;font-size:14px;color:var(--text);font-weight:700;line-height:1.3}
 .tx-cal-mitad{
-  margin-top:4px;border:1px solid var(--border);border-radius:7px;overflow:hidden;
+  margin-top:var(--e0);border:1px solid var(--border);border-radius:7px;overflow:hidden;
 }
 .tx-cal-mitad span{display:block;height:11px}
 .tx-cal-mitad span + span{border-top:1px solid var(--border)}
@@ -225,8 +221,8 @@ body::after{
 .tx-ocupado{background:var(--oferta)}
 .tx-cal-hoy b{color:var(--tx-verde)}
 .tx-cal-leyenda{
-  display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center;
-  margin-top:14px;font-size:12px;color:var(--text-2);
+  display:flex;flex-wrap:wrap;gap:6px var(--e3);align-items:center;
+  margin-top:14px;font-size:var(--t-xs);color:var(--text-2);
 }
 .tx-cal-muestra{
   display:inline-block;width:11px;height:11px;border-radius:3px;
@@ -234,22 +230,22 @@ body::after{
 }
 .tx-cal-mitades{flex-basis:100%;color:var(--text-3)}
 
-.tx-sello{font-size:12px;color:var(--text-3);margin-bottom:10px}
+.tx-sello{font-size:var(--t-xs);color:var(--text-3);margin-bottom:10px}
 .tx-salida{
   border:1px solid var(--border);border-radius:var(--radio-card);
-  padding:12px;margin-bottom:10px;
+  padding:var(--e2);margin-bottom:10px;
 }
 .tx-salida-cab{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
 .tx-salida-cuando{font-weight:700}
 .tx-salida-precio{font-weight:800;color:var(--tx-verde);white-space:nowrap}
-.tx-salida-info{font-size:13px;color:var(--text-2);margin:4px 0 10px}
+.tx-salida-info{font-size:var(--t-sm);color:var(--text-2);margin:var(--e0) 0 10px}
 .tx-salida-lleno{color:var(--oferta);font-weight:600}
 
 .tx-propon-campos{display:grid;gap:0}
 .tx-texto{font-size:14px;color:var(--text-2);margin-top:10px}
-.tx-fina{font-size:12px;color:var(--text-3);margin-top:10px}
-.tx-pie ol{margin:0 0 4px 18px;font-size:14px;color:var(--text-2)}
-.tx-pie li{margin-bottom:4px}
+.tx-fina{font-size:var(--t-xs);color:var(--text-3);margin-top:10px}
+.tx-pie ol{margin:0 0 var(--e0) 18px;font-size:14px;color:var(--text-2)}
+.tx-pie li{margin-bottom:var(--e0)}
 
 @media (min-width:640px){
   .tx-propon-campos{grid-template-columns:1fr 1fr;gap:0 14px}
