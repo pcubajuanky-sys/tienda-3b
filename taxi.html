@@ -39,7 +39,7 @@
 <div class="barra-fija">
   <div id="promo-mundos" class="promo promo-mundos" hidden>
     <div class="promo-contenido">
-      <p class="promo-linea">3B es más de un negocio 👇 Toca los logos y conoce a nuestros socios</p>
+      <p class="promo-linea">3B es más de un negocio — toca los logos 👆</p>
     </div>
   </div>
 
@@ -52,7 +52,6 @@
         <a class="mundo mundo-on" href="/taxi" aria-current="page" title="Taxi 3B">
           <img class="mundo-img" src="/logo-taxi-3b.png" width="256" height="256" alt="Taxi 3B — viajes">
         </a>
-        <span class="mundos-globo" id="mundos-globo" hidden>👈 Toca nuestros<br>otros negocios</span>
       </nav>
     </div>
   </header>
@@ -77,13 +76,13 @@
   <!-- Estado: el taxi todavia no esta encendido -->
   <section class="tx-aviso" id="tx-apagado" hidden>
     <p><b>Muy pronto.</b> Estamos afinando los precios. Escríbenos y te decimos el costo de tu viaje al momento.</p>
-    <a class="tx-wa" id="tx-wa-apagado" target="_blank" rel="noopener">💬 Escríbenos por WhatsApp</a>
+    <a class="btn btn-wa tx-wa" id="tx-wa-apagado" target="_blank" rel="noopener">💬 Escríbenos por WhatsApp</a>
   </section>
 
   <!-- Estado: taxi.json no cargo. El cliente NUNCA se queda sin puerta. -->
   <section class="tx-aviso" id="tx-error" hidden>
     <p>No pudimos cargar los precios. Revisa tu conexión o escríbenos y te cotizamos al momento.</p>
-    <button class="tx-secundario" id="tx-reintentar" type="button">Reintentar</button>
+    <button class="btn btn-suave tx-secundario" id="tx-reintentar" type="button">Reintentar</button>
   </section>
 
   <!-- La calculadora -->
@@ -139,8 +138,8 @@
     <p class="tx-nota-viaje">El viaje se cobra completo: el carro va y regresa igual, vuelvas o no con nosotros.</p>
 
     <div class="tx-acciones">
-      <a class="tx-wa" id="tx-pedir" target="_blank" rel="noopener">💬 Pedir por WhatsApp</a>
-      <button class="tx-secundario" id="tx-compartir" type="button">🔗 Compartir cotización</button>
+      <a class="btn btn-wa tx-wa" id="tx-pedir" target="_blank" rel="noopener">💬 Pedir por WhatsApp</a>
+      <button class="btn btn-suave tx-secundario" id="tx-compartir" type="button">🔗 Compartir cotización</button>
     </div>
   </section>
 
@@ -182,7 +181,7 @@
         <select id="tx-p-asientos"><option>1</option><option>2</option><option selected>3</option></select>
       </label>
     </div>
-    <a class="tx-wa" id="tx-propon-wa" target="_blank" rel="noopener">💬 Enviar mi propuesta</a>
+    <a class="btn btn-wa tx-wa" id="tx-propon-wa" target="_blank" rel="noopener">💬 Enviar mi propuesta</a>
   </section>
 
   <!-- Reclamo de referidores. Mismo patron que el de gestores de la tienda:
@@ -193,7 +192,7 @@
       <span class="cta-comi-tit">Gana con Taxi 3B</span>
       <span class="cta-comi-sub">Comparte tu enlace con tu gente y cobra por cada viaje que entre por él. Sin poner carro ni dinero.</span>
     </span>
-    <span class="cta-comi-btn">Quiero mi enlace</span>
+    <span class="btn cta-comi-btn">Quiero mi enlace</span>
   </button>
 
   <section class="tx-pie" id="tx-pie">
@@ -225,7 +224,7 @@
         <li><b>Lo compartes.</b> Con tu familia, tus amigos, tu grupo, tu Facebook. Donde quieras.</li>
         <li><b>Cobras.</b> Cada viaje que entre por tu enlace queda a tu nombre y se te paga.</li>
       </ol>
-      <a class="comi-wa" id="tx-gana-wa" target="_blank" rel="noopener">Escríbenos por WhatsApp</a>
+      <a class="btn btn-wa comi-wa" id="tx-gana-wa" target="_blank" rel="noopener">Escríbenos por WhatsApp</a>
     </div>
   </div>
 </div>

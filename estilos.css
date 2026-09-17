@@ -16,13 +16,48 @@
   --oferta:    #C81E4C;
   --wa:        #128C7E;
 
-  --radio-control: 10px;
+  /* Portada: tonos PROPIOS que NO se invierten en oscuro. Sin esto, --brand
+     pasa a rosa claro en modo oscuro y la portada entera se vuelve rosa chicle. */
+  --hero-1:    #8C3A6D;
+  --hero-2:    #4E1D3B;
+  --hero-ink:  #FFFFFF;
+  /* El botón principal de la portada vive SIEMPRE sobre ciruela, así que su
+     color no puede depender del tema. Con --surface/--brand se volvía una caja
+     casi negra con letra rosa en modo oscuro y dejaba de leerse como el botón
+     principal. Blanco sobre ciruela: 8,9:1. */
+  --hero-btn-bg:  #FFFFFF;
+  --hero-btn-ink: #7A2E5D;
+
+  /* Escala de espaciado. Antes había 40+ números sueltos y cada pieza nueva
+     llegaba con medidas propias: esa era la causa de que los dos botones de la
+     portada no se parecieran. */
+  --e0:4px; --e1:8px; --e2:12px; --e3:16px; --e4:24px; --e5:32px; --e6:48px; --e7:64px;
+
+  /* Escala tipográfica */
+  --t-xs:12px; --t-sm:13px; --t-md:15px; --t-lg:17px;
+  --t-xl: clamp(19px,2.6vw,22px);
+  --t-2xl:clamp(22px,3.4vw,28px);
+  --t-3xl:clamp(28px,6vw,46px);
+
+  --radio-control: 12px;
   --radio-card: 16px;
   --radio-hoja: 22px;
-  --sombra: 0 1px 2px rgba(28,26,34,.06), 0 8px 24px rgba(28,26,34,.06);
+  --radio-pill: 999px;
+
+  /* Tres niveles, no uno. La sombra única de antes (blur 24px) se aplicaba
+     igual a una tarjeta de producto que a una hoja modal, y en una parrilla de
+     224 tarjetas eso ensucia el fondo. */
+  --sombra-1: 0 1px 2px rgba(28,26,34,.05);
+  --sombra-2: 0 2px 6px rgba(28,26,34,.08), 0 10px 24px rgba(28,26,34,.10);
+  --sombra-3: 0 -2px 8px rgba(28,26,34,.06), 0 18px 48px rgba(28,26,34,.20);
+  /* Alias: las reglas que aún no se han migrado siguen funcionando. */
+  --sombra: var(--sombra-1);
+
   --header-h: 60px;
   --header-h-compacta: 52px;
   --dur: .2s;
+  --dur-lento: .32s;
+  --ease: cubic-bezier(.2,.7,.3,1);
 }
 
 @media (prefers-color-scheme: dark){
@@ -39,6 +74,11 @@
     --brand-soft:#2E1B29;
     --brand-hondo:#C77FA9;
     --oferta:    #FF8AA6;
+    /* Sobre fondo oscuro una sombra gris no se ve: solo funciona el negro. Los
+       tokens --hero-* NO se redefinen aquí a propósito (ver :root claro). */
+    --sombra-1: 0 1px 2px rgba(0,0,0,.40);
+    --sombra-2: 0 2px 6px rgba(0,0,0,.45), 0 10px 24px rgba(0,0,0,.50);
+    --sombra-3: 0 -2px 8px rgba(0,0,0,.40), 0 18px 48px rgba(0,0,0,.60);
     --wa:        #25D366;
   }
 }
@@ -68,6 +108,60 @@ a{color:inherit}
 /* Foco visible en todo lo enfocable — nunca se quita */
 :focus-visible{outline:2px solid var(--brand);outline-offset:2px;border-radius:4px}
 
+/* ── Botones: UN solo sistema ──────────────────────────────────────────────
+   .btn fija altura, radio, relleno, letra y transición. Los modificadores solo
+   cambian el RELLENO y el COLOR. Así «Ver el catálogo» y «Hacer un encargo»
+   son el mismo botón con distinto peso — que es lo que los distingue, no un
+   tamaño distinto. Antes .hero-cta y .hero-cta-encargos vivían a 800 líneas de
+   distancia con paddings distintos (12px 26px vs 10px 24px) y se leían como
+   dos componentes de dos sistemas diferentes. */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:var(--e1);
+  min-height:48px;padding:0 var(--e4);
+  border:1px solid transparent;border-radius:var(--radio-control);
+  font-family:inherit;font-size:var(--t-md);font-weight:700;line-height:1.1;
+  text-decoration:none;cursor:pointer;
+  transition:background-color var(--dur) var(--ease), border-color var(--dur) var(--ease),
+             box-shadow var(--dur) var(--ease), transform var(--dur) var(--ease);
+}
+.btn:active{transform:translateY(1px)}
+.btn:focus-visible{outline:3px solid currentColor;outline-offset:3px}
+.btn[disabled]{opacity:.5;cursor:not-allowed}
+.btn-bloque{width:100%}
+
+.btn-primario{background:var(--brand);color:var(--brand-ink)}
+.btn-primario:hover{box-shadow:var(--sombra-2)}
+
+.btn-wa{background:var(--wa);color:#fff}
+.btn-wa:hover{box-shadow:var(--sombra-2)}
+
+/* Los dos de la portada. Mismo alto, mismo radio, mismo relleno, misma letra.
+   Contraste medido sobre el velo de la portada: 7,1:1 el sólido y 8,1:1 el de
+   cristal (el relleno del segundo es NEGRO translúcido, no blanco: con blanco
+   al 14% el texto blanco caía a 3,8:1 y no llegaba al mínimo de 4,5:1). */
+.btn-contraste{background:var(--hero-btn-bg);color:var(--hero-btn-ink)}
+.btn-contraste:hover{box-shadow:var(--sombra-2)}
+.btn-contraste-linea{
+  background:rgba(0,0,0,.18);color:var(--hero-ink);border-color:rgba(255,255,255,.8);
+  -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);
+}
+.btn-contraste-linea:hover{background:rgba(0,0,0,.30);border-color:#fff}
+
+.btn-suave{background:var(--surface);color:var(--text);border-color:var(--border)}
+.btn-suave:hover{border-color:var(--brand);color:var(--brand)}
+
+.btn-texto{
+  min-height:36px;padding:0 var(--e1);background:none;border-color:transparent;
+  color:var(--text-2);font-size:var(--t-xs);font-weight:600;
+  text-decoration:underline;text-underline-offset:2px;
+}
+.btn-texto:hover{color:var(--oferta)}
+
+@media (prefers-reduced-motion:reduce){
+  .btn{transition:none}
+  .btn:active{transform:none}
+}
+
 /* ── Cabecera ── */
 .header{
   position:sticky;top:0;z-index:20;
@@ -76,8 +170,8 @@ a{color:inherit}
   transition:border-color var(--dur), box-shadow var(--dur), padding var(--dur);
 }
 .header.compacta{border-bottom-color:var(--border);box-shadow:0 2px 8px rgba(28,26,34,.05)}
-.header-top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 16px}
-.header.compacta .header-top{padding:8px 16px}
+.header-top{display:flex;align-items:center;justify-content:space-between;gap:var(--e2);padding:var(--e1) var(--e3)}
+.header.compacta .header-top{padding:var(--e0) var(--e3)}
 .logo{display:inline-flex;align-items:center;text-decoration:none}
 .logo-svg{height:32px;width:auto;display:block}
 /* Logo real de la tienda (logo-3b.png): PNG cuadrado con el emblema sobre negro.
@@ -85,7 +179,7 @@ a{color:inherit}
    a dos tonos que habia antes, para que web y catalogo PDF lleven la misma marca. */
 .logo-img{height:32px;width:32px;display:block;border-radius:9px;object-fit:cover}
 @media (min-width:760px){.logo-img{height:44px;width:44px;border-radius:12px}}
-.hero-logo .logo-img{height:clamp(56px,9vw,88px);width:clamp(56px,9vw,88px);border-radius:18px}
+.hero-logo .logo-img{height:clamp(48px,9vw,72px);width:clamp(48px,9vw,72px);border-radius:16px}
 @media (min-width:760px){.logo-svg{height:44px}}
 /*
   Marca a dos tonos, de color FIJO (no usa --brand ni --brand-ink): la placa es
@@ -112,7 +206,7 @@ a{color:inherit}
   padding:0 5px;border-radius:10px;background:var(--brand);color:var(--brand-ink);
   font-size:12px;font-weight:700;
 }
-.header-buscador{padding:0 16px 12px}
+.header-buscador{padding:0 var(--e3) var(--e1)}
 #buscador{
   width:100%;min-height:44px;padding:11px 14px;border:1px solid var(--border);
   border-radius:var(--radio-control);font-size:15px;background:var(--surface-2);color:var(--text);
@@ -120,63 +214,68 @@ a{color:inherit}
 #buscador::placeholder{color:var(--text-3)}
 
 /* ── Portada ── */
+/* Dos tonos de marca, no un degradado que muere en gris rosado. Los tokens
+   --hero-* no se invierten en modo oscuro: la portada se ve igual en los dos. */
 .hero{
   position:relative;overflow:hidden;
-  background:linear-gradient(155deg, var(--brand) 0%, var(--brand) 45%, var(--surface-2) 100%);
-  color:var(--brand-ink);
+  background:linear-gradient(160deg, var(--hero-1) 0%, var(--hero-2) 100%);
+  color:var(--hero-ink);
 }
-/*
-  Las fotos son textura de fondo, no protagonistas: además de la opacidad,
-  el desenfoque es lo que de verdad borra los textos y marcas de agua propias
-  de algunas fotos de producto (una marca de agua nítida al 22% de opacidad
-  sigue siendo texto legible; desenfocada, se vuelve mancha de color). El velo
-  (.hero-velo) repite encima el mismo degradado de marca para que el titular
-  conserve contraste. 2026-08-15 (cuarto retoque): el dueño avisó de que
-  "apenas se ven" las fotos — se subió la opacidad del mosaico (.32→.55) y se
-  bajó la del velo (.82→.64) sin perder el límite duro de contraste del
-  texto (≥4.5:1, medido caso por caso, ver informe).
-*/
+/* brightness(.75) es la pieza clave: le pone TECHO a lo claro que puede llegar
+   a ser un trozo de foto. Antes el contraste del titular dependía de qué fotos
+   tocaran ese día (una foto sobre fondo blanco lo bajaba a ~3,2:1); ahora el
+   peor caso está calculado y da 8,2:1. El blur se queda: borra las marcas de
+   agua de algunas fotos de producto (informe 2026-08-15). El mosaico se ve al
+   .42 y el velo ya no repite el degradado del fondo: es vertical y propio. */
 .hero-mosaico{
   position:absolute;inset:0;display:grid;
   grid-template-columns:repeat(6,1fr);grid-template-rows:repeat(2,1fr);
-  gap:2px;opacity:.55;filter:blur(2px) saturate(.8);
+  gap:2px;opacity:.42;filter:blur(2px) saturate(.85) brightness(.75);
 }
 .hero-mosaico img{width:100%;height:100%;object-fit:cover;display:block}
+/* Velo VERTICAL en vez de un velo plano que repetía el fondo: denso donde va el
+   texto, más fino en el centro, para que la foto se intuya sin pelearse con el
+   titular. Peor caso medido: 8,2:1. */
 .hero-velo{
   position:absolute;inset:0;
-  background:linear-gradient(155deg, var(--brand) 0%, var(--brand) 58%, var(--surface-2) 100%);
-  opacity:.64;
+  background:linear-gradient(180deg,
+    rgba(42,15,33,.86) 0%,
+    rgba(42,15,33,.72) 40%,
+    rgba(42,15,33,.80) 72%,
+    rgba(42,15,33,.94) 100%);
 }
-.hero-contenido{position:relative;padding:44px 16px 32px;text-align:center}
-.hero-logo{display:flex;justify-content:center;margin-bottom:16px}
+.hero-contenido{position:relative;padding:var(--e4) var(--e3) var(--e4);text-align:center}
+.hero-logo{display:flex;justify-content:center;margin-bottom:var(--e1)}
 .hero-logo .logo-svg{height:clamp(44px,7vw,68px)}
 .hero h1{
-  font-size:clamp(28px,6vw,48px);font-weight:800;letter-spacing:-0.02em;line-height:1.05;
-  max-width:18ch;margin:0 auto 14px;
+  font-size:var(--t-3xl);font-weight:800;letter-spacing:-.03em;line-height:1.02;
+  max-width:18ch;margin:0 auto var(--e2);text-wrap:balance;
 }
-.hero-sub{font-size:clamp(14px,2.4vw,17px);max-width:44ch;margin:0 auto 22px;opacity:.92}
-.hero-cta{
-  display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:12px 26px;
-  border-radius:var(--radio-control);background:var(--surface);color:var(--brand);
-  font-weight:700;font-size:15px;text-decoration:none;
-}
+/* 15px en el celular y 17px a partir de tablet: a 17px el subtítulo envolvía
+   a dos líneas largas y la portada crecía más de lo que se ahorraba arriba. */
+.hero-sub{font-size:var(--t-md);max-width:42ch;margin:0 auto var(--e3);opacity:.92;line-height:1.45}
+@media (min-width:760px){ .hero-sub{font-size:var(--t-lg)} }
+.hero-acciones{display:flex;flex-wrap:wrap;justify-content:center;gap:var(--e2)}
+/* Chips translúcidos en vez de ✓ sueltos: se leen como datos, no como una lista. */
 .hero-datos{
-  list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:10px 18px;
-  margin-top:26px;font-size:13px;font-weight:600;opacity:.95;
+  list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:var(--e1);
+  margin-top:var(--e3);font-size:var(--t-xs);font-weight:600;
 }
-.hero-datos li{position:relative;padding-left:16px}
-.hero-datos li::before{content:"✓";position:absolute;left:0}
+.hero-datos li{
+  padding:2px var(--e2);border-radius:var(--radio-pill);
+  background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);
+}
 /* Portada más baja en escritorio (2026-08-15): medía 428px de alto y
    empujaba el catálogo entero fuera de la primera pantalla. Solo relleno y
    tamaño del titular — el mosaico de fotos y el velo no se tocan. Móvil
    intacto (nada de esto entra por debajo de 1024px). */
 @media (min-width:1024px){
-  .hero-contenido{padding:40px 16px 30px}
-  .hero-logo{margin-bottom:12px}
+  .hero-contenido{padding:var(--e4) var(--e3) var(--e4)}
+  .hero-logo{margin-bottom:var(--e1)}
   .hero-logo .logo-svg{height:42px}
-  .hero h1{font-size:32px;max-width:30ch;margin:0 auto 12px}
-  .hero-sub{margin:0 auto 16px}
-  .hero-datos{margin-top:18px}
+  .hero h1{font-size:34px;max-width:28ch;margin:0 auto var(--e2)}
+  .hero-sub{margin:0 auto var(--e3)}
+  .hero-datos{margin-top:var(--e3)}
 }
 
 /* ── Banner de mensajería gratis (opcional, según config del panel) ──
@@ -185,7 +284,7 @@ a{color:inherit}
    esta banda nunca se ve: la tienda queda idéntica a hoy. */
 .promo{
   position:relative;overflow:hidden;
-  background:var(--brand-soft);color:var(--brand);padding:10px 16px;text-align:center;
+  background:var(--brand-soft);color:var(--brand);padding:var(--e1) var(--e3);text-align:center;
 }
 /*
   Ilustración decorativa (mensajera en moto, líneas de velocidad) en
@@ -210,10 +309,10 @@ a{color:inherit}
   position:absolute;inset:0;background:var(--brand-soft);opacity:.6;pointer-events:none;
 }
 .promo-contenido{position:relative}
-.promo-linea{font-size:14px;font-weight:700;max-width:1180px;margin:0 auto;line-height:1.3}
+.promo-linea{font-size:var(--t-sm);font-weight:700;max-width:1180px;margin:0 auto;line-height:1.35}
 .promo-fina{
-  font-size:11px;font-weight:500;color:var(--text-2);max-width:1180px;
-  margin:4px auto 0;opacity:.9;line-height:1.3;
+  font-size:var(--t-xs);font-weight:500;color:var(--text-2);max-width:1180px;
+  margin:var(--e0) auto 0;opacity:.9;line-height:1.3;
 }
 /* Banda de campaña (Navidad, aniversario...). Reusa .promo entera y solo cambia
    el color, para que las dos bandas se lean como el mismo sistema. Sin
@@ -234,11 +333,11 @@ a{color:inherit}
    realce sobrio (elevar + sombra) y un aro de marca en la categoría activa.
    El nombre va DEBAJO del círculo, centrado, fuera de la caja (ver app.js:
    .cat3d-info ya no es hijo de .cat3d-inner, es hermano). */
-.categorias-3d-wrap{padding:26px 0 4px}
-.categorias-3d-titulo{font-size:clamp(19px,3vw,24px);font-weight:700;margin-bottom:2px}
+.categorias-3d-wrap{padding:var(--e3) 0 0}
+.categorias-3d-titulo{font-size:var(--t-xl);font-weight:800;letter-spacing:-.01em;margin-bottom:0}
 .categorias-3d{
-  display:flex;gap:14px;overflow-x:auto;overflow-y:visible;align-items:flex-start;
-  padding:16px 16px 22px;scroll-snap-type:x proximity;
+  display:flex;gap:var(--e2);overflow-x:auto;overflow-y:visible;align-items:flex-start;
+  padding:var(--e2) var(--e3) var(--e1);scroll-snap-type:x proximity;
   scrollbar-width:none;-ms-overflow-style:none;
 }
 .categorias-3d::-webkit-scrollbar{display:none}
@@ -252,7 +351,7 @@ a{color:inherit}
    un error de diseño anterior que lo ocultaba <760px: en el móvil nadie
    descubre que la tira se arrastra). El `hidden` que pone JS cuando total ≤ 12
    manda siempre gracias a [hidden]{!important}. */
-.categorias-ver-todas-wrap{display:block;text-align:center;padding:2px 16px 6px}
+.categorias-ver-todas-wrap{display:block;text-align:center;padding:0 var(--e3)}
 /* Móvil desplegado (<760px, botón "Ver todas" pulsado → #categorias-3d pierde
    la clase .plegada): la tira deja de arrastrarse y pasa a rejilla que
    envuelve, igual que hace escritorio siempre. Plegada (por defecto) no se
@@ -279,15 +378,16 @@ a{color:inherit}
     ocupaban 4 filas (698px) y empujaban el primer producto a 1.259px. El
     dueño eligió mostrar 12 (contando Ofertas) + botón "Ver todas". Se oculta
     por CSS (nth-child, no JS por tarjeta) para que sea trivial de revertir:
-    JS solo alterna la clase .plegada en #categorias-3d. El 13 debe coincidir
-    con CATS_VISIBLES_PLEGADO=12 de app.js.
+    JS solo alterna la clase .plegada en #categorias-3d. 2026-09-16 (rediseño):
+    bajado a 8 visibles. El 9 debe coincidir con CATS_VISIBLES_PLEGADO=8 de
+    app.js.
   */
-  #categorias-3d.plegada .cat3d:nth-child(n+13){display:none}
+  #categorias-3d.plegada .cat3d:nth-child(n+9){display:none}
 }
 .cat3d-inner{
   position:relative;display:block;width:100%;aspect-ratio:1;
   border-radius:50%;overflow:hidden;
-  background:var(--surface);box-shadow:0 2px 4px rgba(28,26,34,.12),0 6px 14px rgba(28,26,34,.10);
+  background:var(--surface);box-shadow:var(--sombra-1);border:1px solid var(--border);
   transition:transform var(--dur) ease, box-shadow var(--dur) ease;
 }
 .cat3d-foto{width:100%;height:100%;background:var(--surface-2);position:relative}
@@ -318,14 +418,14 @@ a{color:inherit}
 @media (hover:hover) and (pointer:fine){
   .cat3d:hover .cat3d-inner,.cat3d:focus-visible .cat3d-inner{
     transform:translateY(-2px);
-    box-shadow:0 4px 10px rgba(28,26,34,.16),0 10px 20px rgba(28,26,34,.14);
+    box-shadow:var(--sombra-2);
   }
 }
 .cat3d:active .cat3d-inner{
   transform:translateY(0);
   transition-duration:.1s;
 }
-.cat3d.on .cat3d-inner{box-shadow:0 0 0 3px var(--brand)}
+.cat3d.on .cat3d-inner{box-shadow:0 0 0 2px var(--brand), var(--sombra-2);border-color:var(--brand)}
 .cat3d.on .cat3d-nombre{color:var(--brand)}
 @media (prefers-reduced-motion:reduce){
   .cat3d-inner{transition:none!important}
@@ -340,7 +440,7 @@ a{color:inherit}
    hacen las tarjetas de categoría de arriba. */
 main{padding-top:20px}
 .grid-head{display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:14px}
-.grid-titulo{font-size:clamp(19px,3vw,24px);font-weight:700}
+.grid-titulo{font-size:var(--t-xl);font-weight:800;letter-spacing:-.01em}
 .filtro-pill{
   display:inline-flex;align-items:center;gap:8px;min-height:36px;padding:6px 8px 6px 14px;
   border:1px solid var(--brand);border-radius:20px;background:var(--brand-soft);color:var(--brand);
@@ -351,8 +451,9 @@ main{padding-top:20px}
   border-radius:50%;background:var(--brand);color:var(--brand-ink);font-size:11px;flex-shrink:0;
 }
 .grid{
-  display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px;
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(156px,1fr));gap:var(--e2);
 }
+@media (min-width:760px){ .grid{gap:var(--e3)} }
 
 /* ── .contenido — categorías + catálogo | pedido, en 2 columnas (≥1024px) ──
    FALLO (2026-08-15, medido a 1280×800): el aside vivía DENTRO de <main>,
@@ -395,30 +496,23 @@ main{padding-top:20px}
     display:block;grid-column:2;grid-row:1/-1;
     position:sticky;top:var(--header-h,120px);
     background:var(--surface);border:1px solid var(--border);border-radius:var(--radio-card);
-    padding:16px;box-shadow:var(--sombra);
+    padding:var(--e3);box-shadow:var(--sombra-1);
     max-height:calc(100vh - var(--header-h,120px) - 24px);overflow-y:auto;
   }
 }
-.lateral-titulo{font-size:16px;font-weight:700;margin-bottom:10px}
+.lateral-titulo{font-size:var(--t-lg);font-weight:800;margin-bottom:var(--e2)}
 .estado-lateral{font-size:13px;color:var(--text-2);text-align:center;padding:20px 0}
 .lateral-envio{font-size:12px;font-weight:600;color:var(--brand);margin:10px 0 0}
 .lateral-total{padding:12px 0;border-top:1px solid var(--border);margin-top:8px;text-align:right}
 .lateral-total-cup{display:block;font-size:17px;font-weight:800}
 .lateral-total-usd{display:block;font-size:12px;color:var(--text-3);font-weight:600;margin-top:2px}
-#btn-lateral-pedir{
-  width:100%;min-height:44px;padding:12px;border:none;border-radius:var(--radio-control);
-  background:var(--wa);color:#fff;font-size:14px;font-weight:700;cursor:pointer;margin-top:10px;
-}
+#btn-lateral-pedir{width:100%;min-height:44px;font-size:var(--t-sm);margin-top:var(--e1)}
 
 /* ── Vaciar pedido (2026-08-16) — discreto a propósito: no compite con
    "Pedir por WhatsApp". Mismo botón/clase en el panel modal y en el aside;
    solo visible con el pedido lleno (lo decide renderCarrito() en app.js). ── */
 .vaciar-wrap{text-align:right}
-.btn-vaciar{
-  display:inline-block;min-height:32px;padding:5px 4px;margin:2px 0 6px;
-  border:none;background:transparent;color:var(--text-2);font-size:12px;font-weight:600;
-  cursor:pointer;text-decoration:underline;text-underline-offset:2px;
-}
+.btn-vaciar{margin:2px 0 6px}
 .btn-vaciar:hover{color:var(--oferta)}
 
 /* ── Mensajería contabilizada (2026-08-16) — tres líneas (Productos /
@@ -437,13 +531,20 @@ main{padding-top:20px}
    mínimo AA sobre el fondo claro). Vacío ⇒ no se pinta nada (lo decide
    renderCarrito() con el atributo hidden). ── */
 .politica-texto{font-size:11px;color:var(--text-2);line-height:1.4;margin:8px 0;white-space:pre-line}
+/* Sin sombra en reposo: con 224 tarjetas, una sombra de 24px de blur en cada
+   una ensucia el fondo y se lee como algo de 2015. Borde fino en reposo,
+   elevación solo al pasar por encima. */
 .card{
   background:var(--surface);border:1px solid var(--border);border-radius:var(--radio-card);
-  overflow:hidden;display:flex;flex-direction:column;box-shadow:var(--sombra);
+  overflow:hidden;display:flex;flex-direction:column;box-shadow:var(--sombra-1);
   text-align:left;cursor:pointer;position:relative;
-  transition:transform var(--dur), box-shadow var(--dur);
+  transition:transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease), border-color var(--dur) var(--ease);
 }
-.card:hover{transform:translateY(-2px)}
+.card:hover{transform:translateY(-2px);box-shadow:var(--sombra-2);border-color:var(--brand-soft)}
+@media (prefers-reduced-motion:reduce){
+  .card{transition:none}
+  .card:hover{transform:none}
+}
 .card-foto{position:relative;aspect-ratio:1;background:var(--surface-2)}
 .card-foto img{width:100%;height:100%;object-fit:cover;display:block}
 .card-foto .inicial{
@@ -456,15 +557,15 @@ main{padding-top:20px}
 }
 .card-oferta{
   background:var(--oferta);color:#fff;
-  font-size:10px;font-weight:800;letter-spacing:.03em;padding:3px 8px;border-radius:6px;
+  font-size:10px;font-weight:800;letter-spacing:.03em;padding:var(--e0) var(--e1);border-radius:var(--radio-pill);
 }
-.card .body{padding:11px;display:flex;flex-direction:column;gap:5px;flex:1}
+.card .body{padding:var(--e2);display:flex;flex-direction:column;gap:var(--e0);flex:1}
 .card .nom{
-  font-size:14px;font-weight:600;line-height:1.35;
+  font-size:var(--t-sm);font-weight:700;line-height:1.35;
   display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
 }
 .card .desc{
-  font-size:12px;color:var(--text-2);line-height:1.4;
+  font-size:var(--t-xs);color:var(--text-2);line-height:1.4;
   display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
   white-space:normal;
 }
@@ -472,15 +573,12 @@ main{padding-top:20px}
 /* --text-2, no --text-3: el secundario ahora puede llevar el precio en la
    moneda fijada de un producto (2026-08-16, moneda:'usd'), no solo un dato de
    referencia — necesita el mismo mínimo AA que .politica-texto (línea 416). */
-.tachado{font-size:11px;color:var(--text-2);text-decoration:line-through}
-.precio{font-size:17px;font-weight:800}
+.tachado{font-size:var(--t-xs);color:var(--text-2);text-decoration:line-through;font-variant-numeric:tabular-nums}
+.precio{font-size:var(--t-lg);font-weight:800;font-variant-numeric:tabular-nums;letter-spacing:-.01em}
 .precio .usd{font-size:12px;color:var(--text-2);font-weight:500;margin-left:4px}
-.card-accion{margin-top:8px}
+.card-accion{margin-top:var(--e1)}
 
-.add{
-  width:100%;min-height:44px;padding:8px;border:none;border-radius:var(--radio-control);
-  background:var(--brand);color:var(--brand-ink);font-weight:700;font-size:13px;cursor:pointer;
-}
+.add{width:100%;min-height:44px;padding:0 var(--e1);font-size:var(--t-sm)}
 .qty{display:flex;align-items:center;justify-content:space-between;gap:8px}
 .qty button{
   width:44px;height:44px;flex-shrink:0;border:1px solid var(--border);border-radius:var(--radio-control);
@@ -505,27 +603,24 @@ main{padding-top:20px}
 
 /* Estados */
 .estado{text-align:center;color:var(--text-2);font-size:14px;padding:48px 16px;display:flex;flex-direction:column;align-items:center;gap:14px}
-.btn-secundario{
-  min-height:44px;padding:10px 20px;border:1px solid var(--border);border-radius:var(--radio-control);
-  background:var(--surface);color:var(--text);font-weight:600;font-size:14px;cursor:pointer;
-}
+.btn-secundario{min-height:44px;padding:0 var(--e4)}
 
 /* ── Pie ── */
-.footer{margin-top:40px;border-top:1px solid var(--border);background:var(--surface)}
-.footer-wrap{padding:32px 16px 24px;text-align:center;display:flex;flex-direction:column;gap:8px;align-items:center}
+.footer{margin-top:var(--e6);border-top:1px solid var(--border);background:var(--surface)}
+.footer-wrap{padding:var(--e5) var(--e3) var(--e4);text-align:center;display:flex;flex-direction:column;gap:var(--e1);align-items:center}
 .footer-marca{display:flex;align-items:center;gap:10px}
-.footer-nombre-texto{font-size:17px;font-weight:800;color:var(--brand)}
+.footer-nombre-texto{font-size:var(--t-lg);font-weight:800;color:var(--brand);letter-spacing:-.01em}
 .vendedor,.actualizado,.aviso-tasa{font-size:12px;color:var(--text-3)}
 
 .footer-grid{
-  width:100%;max-width:760px;margin:18px 0 6px;padding-top:20px;border-top:1px solid var(--border);
-  display:grid;grid-template-columns:1fr;gap:22px;text-align:left;
+  width:100%;max-width:760px;margin:var(--e4) 0 var(--e0);padding-top:var(--e4);border-top:1px solid var(--border);
+  display:grid;grid-template-columns:1fr;gap:var(--e4);text-align:left;
 }
 @media (min-width:640px){
   .footer-grid{grid-template-columns:repeat(3,1fr);gap:26px;text-align:left}
 }
-.footer-col h3{font-size:13px;font-weight:700;color:var(--text);margin-bottom:8px}
-.footer-texto{font-size:13px;color:var(--text-2);line-height:1.55;white-space:pre-line}
+.footer-col h3{font-size:var(--t-xs);text-transform:uppercase;letter-spacing:.06em;color:var(--text-3);margin-bottom:var(--e1)}
+.footer-texto{font-size:var(--t-sm);color:var(--text-2);line-height:1.55;white-space:pre-line}
 .footer-contacto-links{display:flex;flex-direction:column;gap:8px;align-items:flex-start}
 .footer-link{
   display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--text-2);
@@ -537,14 +632,12 @@ main{padding-top:20px}
 /* ── Barra inferior en móvil ── */
 .barra-movil{
   position:fixed;left:0;right:0;bottom:0;z-index:12;display:flex;align-items:center;justify-content:space-between;
-  gap:10px;padding:12px 16px;background:var(--brand);color:var(--brand-ink);
-  box-shadow:0 -4px 16px rgba(28,26,34,.18);
+  gap:10px;padding:var(--e2) var(--e3);background:var(--brand);color:var(--brand-ink);
+  box-shadow:var(--sombra-3);
+  padding-bottom:max(var(--e2), env(safe-area-inset-bottom));
 }
-.barra-movil span{font-size:13px;font-weight:600}
-.barra-movil button{
-  min-height:44px;padding:9px 18px;border:none;border-radius:var(--radio-control);
-  background:var(--brand-ink);color:var(--brand);font-weight:700;font-size:13px;cursor:pointer;
-}
+.barra-movil span{font-size:var(--t-sm);font-weight:700}
+.barra-movil button{min-height:44px;background:var(--brand-ink);color:var(--brand);font-size:var(--t-sm)}
 @media (min-width:1024px){
   .barra-movil{display:none}
 }
@@ -558,10 +651,10 @@ body.con-barra-movil{padding-bottom:var(--barra-movil-h, 84px)}
 
 /* ── Modal detalle de producto ── */
 .modal{position:fixed;inset:0;z-index:30;display:flex;align-items:flex-end;justify-content:center}
-.modal-fondo{position:absolute;inset:0;background:rgba(20,16,23,.55)}
+.modal-fondo{position:absolute;inset:0;background:rgba(20,16,23,.6);-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px)}
 .modal-caja{
   position:relative;background:var(--surface);width:100%;max-width:560px;max-height:92vh;
-  overflow-y:auto;border-radius:var(--radio-hoja) var(--radio-hoja) 0 0;box-shadow:var(--sombra);
+  overflow-y:auto;border-radius:var(--radio-hoja) var(--radio-hoja) 0 0;box-shadow:var(--sombra-3);
 }
 @media (min-width:640px){
   .modal{align-items:center}
@@ -569,25 +662,25 @@ body.con-barra-movil{padding-bottom:var(--barra-movil-h, 84px)}
 }
 .modal-cerrar{
   position:absolute;top:12px;right:12px;z-index:2;width:40px;height:40px;border:none;border-radius:50%;
-  background:var(--surface);color:var(--text);font-size:18px;cursor:pointer;box-shadow:var(--sombra);
+  background:var(--surface);color:var(--text);font-size:18px;cursor:pointer;box-shadow:var(--sombra-2);
 }
 .modal-foto{aspect-ratio:1;max-height:340px;background:var(--surface-2)}
 .modal-foto img{width:100%;height:100%;object-fit:cover;display:block}
-.modal-body{padding:20px}
+.modal-body{padding:var(--e4)}
 .modal-cat{font-size:12px;font-weight:700;color:var(--brand);text-transform:uppercase;letter-spacing:.03em;margin-bottom:6px}
-.modal-body h2{font-size:20px;font-weight:700;line-height:1.3;margin-bottom:10px}
+.modal-body h2{font-size:var(--t-2xl);font-weight:800;letter-spacing:-.01em;line-height:1.3;margin-bottom:10px}
 .modal-precio{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin-bottom:14px}
-.modal-precio .precio{font-size:22px}
+.modal-precio .precio{font-size:var(--t-2xl)}
 .modal-desc{font-size:14px;color:var(--text-2);line-height:1.55;white-space:pre-line;margin-bottom:18px}
 .modal-accion{display:flex}
 .modal-accion .add,.modal-accion .qty{width:100%}
 
 /* ── Carrito (hoja) ── */
 .panel{position:fixed;inset:0;z-index:30;display:flex;align-items:flex-end;justify-content:center}
-.panel-fondo{position:absolute;inset:0;background:rgba(20,16,23,.55)}
+.panel-fondo{position:absolute;inset:0;background:rgba(20,16,23,.6);-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px)}
 .panel-caja{
   position:relative;background:var(--surface);width:100%;max-width:520px;max-height:92vh;
-  overflow-y:auto;border-radius:var(--radio-hoja) var(--radio-hoja) 0 0;padding:18px;box-shadow:var(--sombra);
+  overflow-y:auto;border-radius:var(--radio-hoja) var(--radio-hoja) 0 0;padding:var(--e4);box-shadow:var(--sombra-3);
 }
 @media (min-width:640px){
   .panel{align-items:center}
@@ -598,8 +691,8 @@ body.con-barra-movil{padding-bottom:var(--barra-movil-h, 84px)}
 .cerrar{
   width:40px;height:40px;background:var(--surface-2);border:none;border-radius:50%;font-size:16px;cursor:pointer;
 }
-.linea{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--border);font-size:13px}
-.linea img{width:44px;height:44px;border-radius:8px;object-fit:cover;background:var(--surface-2);flex-shrink:0}
+.linea{display:flex;align-items:center;gap:10px;padding:var(--e2) 0;border-bottom:1px solid var(--border);font-size:var(--t-sm)}
+.linea img{width:52px;height:52px;border-radius:var(--e2);object-fit:cover;background:var(--surface-2);flex-shrink:0}
 .linea .linea-info{flex:1;min-width:0}
 .linea .linea-nom{font-weight:600;line-height:1.3}
 .linea .linea-qty{color:var(--text-3);font-size:12px}
@@ -611,15 +704,17 @@ body.con-barra-movil{padding-bottom:var(--barra-movil-h, 84px)}
 .campos{display:flex;flex-direction:column;gap:12px;margin-top:4px}
 .campo{display:flex;flex-direction:column;gap:5px;font-size:12px;font-weight:600;color:var(--text-2)}
 .campo input,.campo textarea{
-  width:100%;min-height:44px;padding:11px;border:1px solid var(--border);border-radius:var(--radio-control);
-  font-size:15px;font-family:inherit;background:var(--surface);color:var(--text);
+  width:100%;min-height:48px;padding:var(--e2) var(--e3);
+  border:1px solid var(--border);border-radius:var(--radio-control);
+  font-size:var(--t-md);font-family:inherit;background:var(--surface);color:var(--text);
+  transition:border-color var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
+}
+.campo input:focus,.campo textarea:focus,.campo select:focus{
+  outline:none;border-color:var(--brand);box-shadow:0 0 0 3px var(--brand-soft);
 }
 .campo input.invalido,.campo textarea.invalido{border-color:var(--oferta)}
 .campo-error{color:var(--oferta);font-size:12px;font-weight:600}
-.btn-enviar{
-  width:100%;min-height:48px;padding:14px;border:none;border-radius:var(--radio-control);
-  background:var(--wa);color:#fff;font-size:16px;font-weight:700;cursor:pointer;margin-top:4px;
-}
+.btn-enviar{width:100%;font-size:var(--t-lg);margin-top:var(--e0)}
 .aviso{font-size:11px;color:var(--text-3);text-align:center;margin-top:10px}
 
 /* Pago por adelantado con QvaPay (2026-08-16) — opcional y discreto a
@@ -686,9 +781,9 @@ body.con-barra-movil{padding-bottom:var(--barra-movil-h, 84px)}
 .cta-comi{
   grid-column:1/-1;
   background:var(--brand);color:var(--brand-ink);
-  border:none;border-bottom:5px solid var(--brand-hondo);
+  border:none;border-bottom:4px solid var(--brand-hondo);
   border-radius:var(--radio-card);
-  padding:18px 20px;margin:4px 0;
+  padding:var(--e4);margin:var(--e4) 0 var(--e1);
   display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;
   text-align:left;width:100%;font:inherit;cursor:pointer;
   transition:transform var(--dur), border-bottom-width var(--dur);
@@ -700,12 +795,7 @@ body.con-barra-movil{padding-bottom:var(--barra-movil-h, 84px)}
    explicacion se pegan en la misma linea y el titulo se pierde dentro de la frase. */
 .cta-comi-tit{display:block;font-size:clamp(17px,2.6vw,21px);font-weight:700;line-height:1.25}
 .cta-comi-sub{display:block;font-size:13px;line-height:1.5;margin-top:4px;opacity:.92}
-.cta-comi-btn{
-  flex:none;background:var(--brand-ink);color:var(--brand);
-  border-radius:var(--radio-control);padding:11px 18px;
-  font-size:14px;font-weight:700;min-height:44px;
-  display:inline-flex;align-items:center;gap:8px;
-}
+.cta-comi-btn{flex:none;background:var(--brand-ink);color:var(--brand)}
 @media (prefers-reduced-motion:reduce){
   .cta-comi{transition:none}
   .cta-comi:hover,.cta-comi:active{transform:none}
@@ -714,13 +804,7 @@ body.con-barra-movil{padding-bottom:var(--barra-movil-h, 84px)}
 .comi-intro{font-size:14px;color:var(--text-2);margin:6px 0 14px}
 .comi-pasos{margin:0 0 18px;padding-left:20px;display:flex;flex-direction:column;gap:10px}
 .comi-pasos li{font-size:14px;line-height:1.55;color:var(--text)}
-.comi-wa{
-  display:flex;align-items:center;justify-content:center;
-  min-height:48px;border-radius:var(--radio-control);
-  background:var(--wa);color:#fff;font-size:15px;font-weight:700;
-  text-decoration:none;border-bottom:4px solid rgba(0,0,0,.22);
-}
-.comi-wa:active{transform:translateY(2px);border-bottom-width:2px}
+.comi-wa{width:100%;border-bottom:4px solid rgba(0,0,0,.22)}
 /* font-family:inherit (no `font:inherit`, que también resetea tamaño/peso y
    lo desalinea de sus vecinos <a>: .footer-link ya fija font-size/font-weight
    propios y esta regla no debe pisarlos, solo quitar el look nativo de <button>). */
@@ -750,7 +834,7 @@ button.footer-link{background:none;border:none;font-family:inherit;cursor:pointe
 @media (min-width:700px){ .mv-tira .card{flex-basis:210px} }
 .card-mv{
   background:var(--brand);color:var(--brand-ink);
-  font-size:10px;font-weight:800;letter-spacing:.03em;padding:3px 8px;border-radius:6px;
+  font-size:10px;font-weight:800;letter-spacing:.03em;padding:var(--e0) var(--e1);border-radius:var(--radio-pill);
 }
 
 /* Tallas (2026-09-06). El chip elegido se marca con el color de marca; el que no
@@ -785,7 +869,7 @@ button.footer-link{background:none;border:none;font-family:inherit;cursor:pointe
 .mundos{display:flex;gap:10px;align-items:center;margin-right:auto}
 .mundo{
   position:relative;display:block;flex:none;
-  width:52px;height:52px;border-radius:50%;
+  width:44px;height:44px;border-radius:50%;
   text-decoration:none;
   transition:transform var(--dur);
 }
@@ -816,49 +900,29 @@ button.footer-link{background:none;border:none;font-family:inherit;cursor:pointe
 }
 /* Cada negocio late en SU color: el taxi en verde, la tienda en su morado. */
 #mundo-taxi::after{border-color:#12A24E}
-@media (min-width:600px){ .mundo{width:62px;height:62px} }
+@media (min-width:600px){ .mundo{width:52px;height:52px} }
 @media (prefers-reduced-motion:reduce){
   .mundo{transition:none}
   .mundo:hover,.mundo:active{transform:none}
   .mundo:not(.mundo-on)::after{animation:none;opacity:.45;transform:none}
 }
 
-/* El logo de 3B manda: es la marca paraguas y los socios son satélites. Va
-   grande en las DOS páginas, incluso en /taxi. */
-.mundo-3b{width:74px;height:74px}
-@media (min-width:600px){ .mundo-3b{width:88px;height:88px} }
-
-/* Globo pegado a los logos. Es un hijo más del flex .mundos (no va posicionado
-   encima), así nunca tapa el buscador ni el carrito. Como la cabecera es
-   sticky, acompaña al cliente por toda la página. Lo enseña/esconde mundos.js. */
-.mundos-globo{
-  position:relative;flex:0 1 auto;min-width:0;
-  margin-left:6px;padding:6px 10px;border-radius:12px;
-  background:var(--brand);color:var(--brand-ink);
-  font-size:13px;font-weight:700;line-height:1.25;text-align:left;
-  animation:latido-globo 2.4s ease-in-out infinite;
-}
-.mundos-globo::before{
-  content:"";position:absolute;left:-5px;top:50%;transform:translateY(-50%);
-  width:0;height:0;border:5px solid transparent;border-right-color:var(--brand);
-}
-@media (min-width:600px){ .mundos-globo{font-size:15px;padding:9px 13px} }
+/* Sigue siendo el más grande (es la marca paraguas), pero 74px en una cabecera
+   pegada son 74px que el cliente pierde en TODA la página. */
+.mundo-3b{width:56px;height:56px}
+@media (min-width:600px){ .mundo-3b{width:68px;height:68px} }
 
 /* Franja de ancho completo, encima de la cabecera. Reusa .promo entera y solo
    cambia el color. Usa los tokens de marca (no #fff fijo) para que el contraste
    siga bien en modo oscuro. */
-.promo-mundos{background:var(--brand);color:var(--brand-ink)}
-.promo-mundos .promo-linea{font-size:15px}
-@media (min-width:600px){ .promo-mundos .promo-linea{font-size:16px} }
-
-/* El globo late despacio para pedir el toque. Solo el globo se mueve: los logos
-   se quedan quietos para que se lean. */
-@keyframes latido-globo{
-  0%,100%{transform:scale(1)}
-  50%{transform:scale(1.06)}
-}
-@media (prefers-reduced-motion:reduce){
-  .mundos-globo{animation:none}
+/* Una sola línea y en tono suave, no morado sólido: es un recordatorio, no un
+   anuncio. Antes medía 59px de alto en 2 líneas y, con el globo, la barra
+   pegada llegaba a 217px — el 27% de la pantalla de un celular, siempre.
+   Contraste --brand sobre --brand-soft: 7,5:1 en claro y 8,4:1 en oscuro. */
+.promo-mundos{background:var(--brand-soft);color:var(--brand);padding:var(--e0) var(--e3)}
+.promo-mundos .promo-linea{
+  font-size:var(--t-sm);font-weight:600;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
 }
 
 /* Franja + cabecera, pegadas arriba de la pantalla como una sola pieza. El
@@ -873,26 +937,22 @@ button.footer-link{background:none;border:none;font-family:inherit;cursor:pointe
    de gestores, y sin el verde (reservado al botón de WhatsApp). Botón en --brand/--brand-ink:
    contraste ≥ 9:1 en claro y en oscuro. */
 .enc-cta{
-  grid-column:1/-1;width:100%;margin:12px 0 4px;padding:16px;
-  display:grid;grid-template-columns:auto 1fr;gap:12px 14px;align-items:center;
+  grid-column:1/-1;width:100%;margin:var(--e3) 0 var(--e1);padding:var(--e3);
+  display:grid;grid-template-columns:auto 1fr;gap:var(--e2) var(--e3);align-items:center;
   background:var(--surface);color:var(--text);
   border:1px solid var(--border);border-left:4px solid var(--brand);border-radius:var(--radio-card);
-  box-shadow:var(--sombra);font:inherit;text-align:left;cursor:pointer;
+  box-shadow:var(--sombra-1);font:inherit;text-align:left;cursor:pointer;
   transition:border-color var(--dur), transform var(--dur);
 }
-.enc-cta:hover{border-color:var(--brand);transform:translateY(-1px)}
+.enc-cta:hover{border-color:var(--brand);transform:translateY(-1px);box-shadow:var(--sombra-2)}
 .enc-cta:focus-visible{outline:3px solid var(--brand);outline-offset:2px}
 .enc-cta-icono{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--brand-soft);color:var(--brand)}
 .enc-cta-txt{min-width:0;display:flex;flex-direction:column;gap:4px}
-.enc-cta-tit{font-size:17px;font-weight:700;line-height:1.3}
-.enc-cta-sub{font-size:14px;line-height:1.45;color:var(--text-2)}
+.enc-cta-tit{font-size:var(--t-lg);font-weight:800;line-height:1.3}
+.enc-cta-sub{font-size:var(--t-sm);line-height:1.45;color:var(--text-2)}
 .enc-cta-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
-.enc-cta-chips span{font-size:12px;font-weight:600;padding:3px 10px;border-radius:999px;background:var(--surface-2);color:var(--text-2)}
-.enc-cta-accion{
-  grid-column:1/-1;display:flex;align-items:center;justify-content:center;gap:6px;
-  min-height:44px;padding:10px 16px;border-radius:var(--radio-control);
-  background:var(--brand);color:var(--brand-ink);font-size:15px;font-weight:700;
-}
+.enc-cta-chips span{font-size:var(--t-xs);font-weight:600;border-radius:var(--radio-pill);padding:var(--e0) var(--e2);background:var(--surface-2);color:var(--text-2)}
+.enc-cta-accion{grid-column:1/-1}
 @media (min-width:640px){
   .enc-cta{grid-template-columns:auto 1fr auto;padding:18px 20px}
   .enc-cta-accion{grid-column:auto}
@@ -916,8 +976,9 @@ button.footer-link{background:none;border:none;font-family:inherit;cursor:pointe
 .enc-fila{display:flex;gap:10px;flex-wrap:wrap}
 .enc-fila .campo{flex:1 1 120px;min-width:0}
 .campo select{
-  width:100%;min-height:44px;padding:10px;border:1px solid var(--border);border-radius:var(--radio-control);
-  font-size:15px;font-family:inherit;background:var(--surface);color:var(--text);
+  width:100%;min-height:48px;padding:var(--e2) var(--e3);
+  border:1px solid var(--border);border-radius:var(--radio-control);
+  font-size:var(--t-md);font-family:inherit;background:var(--surface);color:var(--text);
 }
 .campo select.invalido{border-color:var(--oferta)}
 .enc-dominio{font-size:12px;font-weight:600;color:var(--wa)}
@@ -939,15 +1000,17 @@ button.footer-link{background:none;border:none;font-family:inherit;cursor:pointe
 .enc-puente-grande{font-size:22px;font-weight:800;line-height:1.3;text-align:center}
 .enc-puente ol{margin-left:22px;font-size:15px;line-height:1.6}
 
-/* ── Encargos: botón de portada y cartel de pausa (Fase C.2) ──
-   "Hacer un encargo" es secundario a propósito: borde y texto del color de la portada,
-   sin fondo, para que "Ver el catálogo" siga siendo la acción principal. */
-.hero-acciones{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
-.hero-cta-encargos{background:transparent;color:inherit;border:2px solid currentColor;padding:10px 24px}
-.hero-cta:focus-visible{outline:3px solid currentColor;outline-offset:3px}
+/* ── Encargos: cartel de pausa (Fase C.2) ──
+   «Muy pronto» tiene que leerse como una promesa, no como un error: por eso va
+   en el tono de marca y con el mismo aire que una tarjeta, no como un aviso
+   apretado. Debajo sigue viéndose todo (pasos, ejemplos, tiempos) — lo único
+   que falta en pausa es el formulario. */
 .enc-pausado{
-  border-radius:var(--radio-card);background:var(--brand-soft);color:var(--text);
-  padding:20px;margin:0 0 16px;text-align:center;display:flex;flex-direction:column;gap:8px;
+  border-radius:var(--radio-card);
+  background:linear-gradient(160deg, var(--brand-soft) 0%, var(--surface-2) 100%);
+  border:1px solid var(--border);color:var(--text);
+  padding:var(--e5) var(--e4);margin:0 0 var(--e4);
+  text-align:center;display:flex;flex-direction:column;gap:var(--e2);
 }
-.enc-pausado-titulo{font-size:22px;font-weight:800;line-height:1.25}
-.enc-pausado-texto{font-size:15px;line-height:1.5;color:var(--text-2)}
+.enc-pausado-titulo{font-size:var(--t-2xl);font-weight:800;line-height:1.2;letter-spacing:-.01em;color:var(--brand)}
+.enc-pausado-texto{font-size:var(--t-md);line-height:1.55;color:var(--text-2);max-width:44ch;margin:0 auto}
