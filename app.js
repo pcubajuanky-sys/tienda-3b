@@ -9,6 +9,7 @@ let productoModal = null;
 let seleccionVar = [];   // un valor por eje, del producto abierto en el detalle
 let catsExpandidas = false;   // estado de "Ver todas" en categorías (solo escritorio); sobrevive a los re-render
 const CATS_VISIBLES_PLEGADO = 8;   // debe coincidir con :nth-child(n+9) en estilos.css
+const CTA_COMI_TRAS_N = 6;   // «Gana dinero con 3B» entra en la parrilla tras estos productos
 
 // Destino de pago fijo en el código, NO en el catálogo (2026-08-16).
 // El panel de Stock+ que genera catalogo.json NO tiene autenticación de
@@ -420,14 +421,10 @@ function renderMasVendidos() {
   const buscando = busqueda.trim() !== '' || filtroCat !== '' || filtroOferta;
   const destacados = (CAT.items || []).filter((p) => p.destacado);
   const sec = document.getElementById('mas-vendidos');
-  const hueco = document.getElementById('cta-comi-hueco');
   const mostrar = !buscando && destacados.length > 0;
   sec.hidden = !mostrar;
   if (mostrar) document.getElementById('mv-tira').innerHTML = destacados.map(tarjetaHtml).join('');
   else document.getElementById('mv-tira').innerHTML = '';
-  // La invitación acompaña a la portada: al buscar o filtrar, fuera.
-  hueco.hidden = buscando;
-  hueco.innerHTML = buscando ? '' : tarjetaComisionistaHtml();
 }
 
 function renderGrid() {
@@ -437,7 +434,15 @@ function renderGrid() {
   // En la portada los destacados viven en el carrusel de arriba; aquí se omiten
   // para no duplicar ids. Al buscar o filtrar no hay carrusel, así que entran.
   const lista = buscando ? items : items.filter((p) => !p.destacado);
-  document.getElementById('grid').innerHTML = lista.map(tarjetaHtml).join('');
+  const tarjetas = lista.map(tarjetaHtml);
+  // El reclamo de gestores va DENTRO de la parrilla, ocupando una fila entera
+  // (.cta-comi trae grid-column:1/-1). Antes vivía en un hueco aparte: pegado
+  // encima del catálogo competía con la tarjeta de encargos, y debajo quedaba
+  // detrás de 224 productos y no lo veía nadie. Al buscar o filtrar no sale.
+  if (!buscando && tarjetas.length > CTA_COMI_TRAS_N) {
+    tarjetas.splice(CTA_COMI_TRAS_N, 0, tarjetaComisionistaHtml());
+  }
+  document.getElementById('grid').innerHTML = tarjetas.join('');
   renderMasVendidos();
 }
 
@@ -1235,7 +1240,7 @@ async function iniciar() {
   };
   document.getElementById('grid').addEventListener('click', alPulsarEnTarjetas);
   document.getElementById('mv-tira').addEventListener('click', alPulsarEnTarjetas);
-  document.getElementById('cta-comi-hueco').addEventListener('click', (e) => {
+  document.getElementById('grid').addEventListener('click', (e) => {
     if (e.target.closest('#cta-comi')) abrirComisionista();
   });
   document.getElementById('grid').addEventListener('keydown', (e) => {
