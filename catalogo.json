@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-17T14:55:11.214Z",
+  "generado": "2026-09-17T15:19:37.118Z",
   "tasa": 700,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -193,7 +193,7 @@
     "encargosActivo": true
   },
   "encargos": {
-    "modo": "abierto",
+    "modo": "pausado",
     "cartel": {
       "tipo": "pronto",
       "titulo": "🚀 Muy pronto",
