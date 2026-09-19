@@ -1232,6 +1232,27 @@ async function cargarCatalogo() {
   document.getElementById('grid').hidden = false;
 }
 
+// Pestañas abiertas desde antes de que Ruth cerrara (o abriera) la tienda: al volver la
+// pestaña al frente se comprueba el estado. NO se comprueba en el clic de «Pedir por
+// WhatsApp»: un await justo antes del window.open lo convierte en emergente bloqueada.
+// Si el estado cambió se recarga el catálogo ENTERO (cargarCatalogo), en vez de adoptar
+// el JSON nuevo a medias: así no queda una parrilla vieja con datos nuevos detrás.
+let ultimaRevalidacion = 0;
+async function revalidarCierre() {
+  if (!CAT) return;                                        // todavía no cargó por primera vez
+  if (Date.now() - ultimaRevalidacion < 60000) return;     // freno: una vez por minuto como mucho
+  ultimaRevalidacion = Date.now();
+  let fresco;
+  try {
+    const r = await fetch('catalogo.json?v=' + Date.now());
+    if (!r.ok) return;
+    fresco = await r.json();
+  } catch (err) { return; }                                // sin red: se queda como estaba
+  const ahora = !!(fresco && fresco.tienda && fresco.tienda.cierre && fresco.tienda.cierre.activo);
+  if (ahora === cerrada()) return;
+  await cargarCatalogo();
+}
+
 async function iniciar() {
   // Buscador: accesible (label real ya en el HTML) y con debounce de 150ms.
   let temporizadorBusqueda = null;
@@ -1332,6 +1353,10 @@ async function iniciar() {
   // teléfono) mientras la barra está o no está, se vuelve a medir.
   window.addEventListener('resize', reservarEspacioBarraMovil, { passive: true });
   window.addEventListener('resize', medirHeader, { passive: true });
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'visible') revalidarCierre();
+  });
+  window.addEventListener('focus', revalidarCierre);
 
   medirHeader();
   await cargarCatalogo();
