@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-19T11:19:13.669Z",
+  "generado": "2026-09-19T12:40:15.493Z",
   "tasa": 700,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -190,7 +190,12 @@
     ],
     "campana": null,
     "taxiActivo": true,
-    "encargosActivo": true
+    "encargosActivo": true,
+    "cierre": {
+      "activo": true,
+      "titulo": "📦 Estamos haciendo inventario",
+      "texto": "Estamos contando toda la mercancía para que las cantidades y los precios queden exactos. Mira el catálogo con calma: en cuanto terminemos, vuelves a pedir."
+    }
   },
   "encargos": {
     "modo": "pausado",
