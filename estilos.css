@@ -925,6 +925,48 @@ button.footer-link{background:none;border:none;font-family:inherit;cursor:pointe
   white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
 }
 
+/* ── Tienda cerrada (2026-09-19) ──
+   Franja de ESTADO DEL NEGOCIO, no un anuncio: por eso NO reusa .promo (las bandas .promo
+   van en tono suave de marca y esta tiene que leerse como "hoy no se puede pedir").
+   Cinta diagonal con repeating-linear-gradient: sin imágenes nuevas, que la CSP de
+   vercel.json no admite recursos de terceros (ver DECISIONES.md).
+   Colores fijos a propósito (no tokens): en modo oscuro un aviso tiene que seguir siendo
+   ámbar. Contraste #7C2D12 sobre #FEF3C7 ≈ 8:1. */
+.aviso-cierre{
+  position:relative;
+  background:
+    repeating-linear-gradient(135deg, rgba(180,83,9,.10) 0 10px, rgba(180,83,9,0) 10px 20px),
+    #FEF3C7;
+  color:#7C2D12;
+  border-top:3px solid #B45309;
+  border-bottom:3px solid #B45309;
+  padding:var(--e2) var(--e3);
+  text-align:center;
+}
+.aviso-cierre-caja{max-width:1180px;margin:0 auto}
+.aviso-cierre-titulo{font-size:var(--t-lg);font-weight:800;line-height:1.25;margin:0}
+.aviso-cierre-texto{font-size:var(--t-sm);font-weight:600;line-height:1.35;margin:var(--e0) 0 0}
+/* En un celular de 375px la barra pegada no puede comerse la pantalla: el texto se corta
+   a 3 líneas y el catálogo tiene que empezar a verse. */
+@media (max-width:480px){
+  .aviso-cierre{padding:var(--e1) var(--e2)}
+  .aviso-cierre-titulo{font-size:var(--t-md)}
+  .aviso-cierre-texto{
+    font-size:var(--t-xs);
+    display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;
+  }
+}
+/* El mismo mensaje en la portada, donde estaban los botones. Va sobre la ciruela del hero,
+   así que lleva fondo claro propio para no depender del tema. */
+.hero-cierre{
+  background:rgba(255,255,255,.94);color:#7C2D12;
+  border:2px solid #B45309;border-radius:var(--radio-card);
+  padding:var(--e3);max-width:620px;margin:0 auto;text-align:center;
+}
+.hero-cierre-titulo{font-size:var(--t-xl);font-weight:800;line-height:1.2;margin:0}
+.hero-cierre-texto{font-size:var(--t-sm);font-weight:600;line-height:1.4;margin:var(--e1) 0 0}
+.hero-cierre .btn{margin-top:var(--e3)}
+
 /* Franja + cabecera, pegadas arriba de la pantalla como una sola pieza. El
    .header de dentro conserva su propio sticky (inofensivo: el envoltorio ya
    está clavado) para no tocar nada de lo que ya funcionaba. */

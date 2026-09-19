@@ -39,6 +39,17 @@
      nunca con el scroll (decisión del dueño, 2026-09-13) y no hay que calcular
      a mano cuánto mide para separar una de otra. -->
 <div class="barra-fija">
+  <!-- Tienda cerrada (2026-09-19): lo pinta pintarCierre() cuando catalogo.json trae
+       tienda.cierre.activo. Vive DENTRO de .barra-fija para que viaje pegado arriba y
+       para que medirHeader() lo cuente en --header-h. NO lleva ✕: es el estado del
+       negocio, no un anuncio, así que no se puede descartar. -->
+  <div id="aviso-cierre" class="aviso-cierre" role="status" hidden>
+    <div class="aviso-cierre-caja">
+      <p class="aviso-cierre-titulo" id="aviso-cierre-titulo"></p>
+      <p class="aviso-cierre-texto" id="aviso-cierre-texto"></p>
+    </div>
+  </div>
+
   <div id="promo-mundos" class="promo promo-mundos" hidden>
     <div class="promo-contenido">
       <p class="promo-linea">3B es más de un negocio — toca los logos 👇</p>
@@ -109,6 +120,14 @@
     </div>
     <h1>Todo para tu hogar, tu cabello y tu día a día</h1>
     <p class="hero-sub">Mira el catálogo, arma tu pedido y nos escribes por WhatsApp.</p>
+    <!-- Con la tienda cerrada este cartel sustituye a los botones: el cliente lo
+         entiende al entrar, sin bajar. El título y el texto son los mismos de la
+         franja (una sola fuente: CAT.tienda.cierre). -->
+    <div class="hero-cierre" id="hero-cierre" hidden>
+      <p class="hero-cierre-titulo" id="hero-cierre-titulo"></p>
+      <p class="hero-cierre-texto" id="hero-cierre-texto"></p>
+      <a href="#catalogo" class="btn btn-contraste hero-cta">Mirar el catálogo</a>
+    </div>
     <div class="hero-acciones">
       <a href="#catalogo" class="btn btn-contraste hero-cta">Ver el catálogo</a>
       <a href="#encargos" class="btn btn-contraste-linea hero-cta" id="hero-encargos" hidden>Hacer un encargo</a>
