@@ -341,6 +341,7 @@ function claveElegida(v, seleccion) {
 // Sin la combinación completa, un producto con variantes NO se puede añadir: el botón
 // manda al detalle, que es donde hay sitio para los selectores y la foto grande.
 function accionHtml(id, clave) {
+  if (cerrada()) return '';          // tienda cerrada: la tarjeta informa, no vende
   const p = productoDe(id);
   const v = variantesDe(p);
   if (v && !clave) {
@@ -575,6 +576,7 @@ function guardarCarrito() {
 // Reciben la CLAVE del carrito (`id` o `id|TALLA`), no el id: quien pulsa el botón ya
 // sabe de qué talla habla, y así no hay que adivinarlo aquí.
 function addCarrito(clave) {
+  if (cerrada()) return;             // guarda defensiva: cubre parrilla, modal y teclado
   carrito[clave] = (carrito[clave] || 0) + 1;
   guardarCarrito(); refrescarAcciones(idDeClave(clave)); renderCarrito();
 }
@@ -804,6 +806,46 @@ function pintarCampana() {
     pct > 0 ? `${texto} · ${pct}% de descuento 🎉` : `${texto} 🎉`;
 }
 
+// ── Tienda cerrada (2026-09-19) ──
+// El estado lo decide Stock+ (CAT.tienda.cierre); la tienda solo pinta, como con la
+// campaña. Cerrada: el catálogo se SIGUE viendo (escaparate) y desaparece todo lo que
+// sirve para pedir. El carrito guardado no se toca: cuando abran, el cliente lo
+// encuentra igual. Esto NO afecta a los encargos ni al taxi.
+function cerrada() {
+  return !!(CAT && CAT.tienda && CAT.tienda.cierre && CAT.tienda.cierre.activo);
+}
+
+function pintarCierre() {
+  const c = (CAT && CAT.tienda && CAT.tienda.cierre) || {};
+  const off = !!c.activo;
+  const titulo = String(c.titulo || '').trim();
+  const texto = String(c.texto || '').trim();
+
+  const franja = document.getElementById('aviso-cierre');
+  if (franja) {
+    document.getElementById('aviso-cierre-titulo').textContent = titulo;
+    document.getElementById('aviso-cierre-texto').textContent = texto;
+    franja.hidden = !off;
+  }
+  const cartel = document.getElementById('hero-cierre');
+  if (cartel) {
+    document.getElementById('hero-cierre-titulo').textContent = titulo;
+    document.getElementById('hero-cierre-texto').textContent = texto;
+    cartel.hidden = !off;
+  }
+  const acciones = document.querySelector('.hero-acciones');
+  if (acciones) acciones.hidden = off;
+
+  document.getElementById('btn-carrito').hidden = off;
+  if (off) {
+    document.getElementById('barra-movil').hidden = true;
+    const lateral = document.getElementById('carrito-lateral');
+    if (lateral) lateral.hidden = true;
+    cerrarCarrito();          // por si el cliente lo tenía abierto al llegar el cierre
+  }
+  medirHeader();              // la franja cambia el alto de la barra pegada
+}
+
 function lineaCarritoHtml(p, qty, clave) {
   const foto = fotoCard(p.photo);
   return `<div class="linea">
@@ -820,7 +862,7 @@ function actualizarBarraMovil() {
   const items = itemsCarrito();
   const n = items.reduce((s, { qty }) => s + qty, 0);
   const barra = document.getElementById('barra-movil');
-  if (n === 0) {
+  if (n === 0 || cerrada()) {        // cerrada: la barra solo sirve para ir a pedir
     barra.hidden = true;
     reservarEspacioBarraMovil();
     return;
@@ -872,14 +914,14 @@ function renderCarrito() {
   const politica = politicaTexto();
   // Con carrito vacío no tiene sentido construir el href (total sería 0):
   // se calcula solo cuando hay items, igual que el resto de bloques del total.
-  const pagoHtml = hayItems ? pagoWrapHtml() : '';
+  const pagoHtml = hayItems && !cerrada() ? pagoWrapHtml() : '';
 
   // Panel modal (sin cambios de fondo: sigue siendo el que lleva el formulario).
   document.getElementById('carrito-items').innerHTML = html;
   document.getElementById('carrito-vacio').hidden = hayItems;
   document.getElementById('btn-vaciar-panel').hidden = !hayItems;
   document.getElementById('carrito-total').hidden = !hayItems;
-  document.getElementById('form-pedido').hidden = !hayItems;
+  document.getElementById('form-pedido').hidden = !hayItems || cerrada();
   document.getElementById('carrito-total').innerHTML = hayItems
     ? (envioTexto ? `<span class="envio-linea">${escapeHtml(envioTexto)}</span>` : '') +
       totalBloqueHtml('total-linea', 'total-usd')
@@ -900,7 +942,8 @@ function renderCarrito() {
   // tiene !important y taparía esa regla si no se quita aquí.
   const lateral = document.getElementById('carrito-lateral');
   if (!lateral) return;
-  lateral.hidden = false;
+  lateral.hidden = cerrada();
+  if (cerrada()) return;             // cerrada: nada del pedido lateral se pinta
   document.getElementById('lateral-items').innerHTML = hayItems
     ? html
     : '<p class="estado-lateral">Tu pedido está vacío.</p>';
@@ -968,6 +1011,14 @@ function marcarError(idCampo, idError, mostrar) {
 
 function enviarPorWhatsApp(ev) {
   if (ev) ev.preventDefault();
+  // Pestaña abierta desde antes de que Ruth cerrara: aquí se corta. La comprobación es
+  // SINCRÓNICA a propósito — un await antes del window.open de abajo hace que el
+  // bloqueador de ventanas emergentes se coma el enlace de WhatsApp (iOS sobre todo).
+  if (cerrada()) {
+    cerrarCarrito();
+    window.scrollTo({ top: 0, behavior: 'smooth' });   // que vea la franja
+    return;
+  }
   const items = itemsCarrito();
   if (!items.length) return;   // el formulario está oculto sin items; guarda defensiva
 
@@ -1175,6 +1226,7 @@ async function cargarCatalogo() {
   renderFooterExtra();
   renderPromoEnvio();
   pintarCampana();
+  pintarCierre();
   if (window.Encargos) window.Encargos.iniciar(CAT);   // encargos.js (Fase C): tarjeta + #encargos
   document.getElementById('skeleton').hidden = true;
   document.getElementById('grid').hidden = false;
