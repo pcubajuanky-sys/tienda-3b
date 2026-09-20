@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-20T10:36:48.308Z",
+  "generado": "2026-09-20T16:06:48.479Z",
   "tasa": 700,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -3307,24 +3307,6 @@
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785005561/productos/f38m61h7y1oudaa6np9v.jpg",
       "precioUSD": 8,
       "precioCUP": 5600,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      }
-    },
-    {
-      "id": "p_1789490156287",
-      "codigo": "KPM5",
-      "name": "Organizador rodante 4pisos",
-      "cat": "Muebles",
-      "subcat": "",
-      "notes": "Organizador rodante (solo quedan blanco)  de 4 niveles. Estante de almacenamiento multiusos con ruedas, ideal como organizador de oficina,cocina,vestidores etc . Diseño flexible y práctico para optimizar el espacio.",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789489998/productos/ynrvqpaqztcihggoqe6q.jpg",
-      "precioUSD": 15,
-      "precioCUP": 10500,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
