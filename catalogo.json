@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-27T20:30:01.811Z",
+  "generado": "2026-09-28T01:29:08.325Z",
   "tasa": 740,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -670,6 +670,24 @@
       }
     },
     {
+      "id": "p_1789489796373",
+      "codigo": "MHFV",
+      "name": "Adaptador USB-TipoC",
+      "cat": "Bocinas Celulares y Accesorios",
+      "subcat": "",
+      "notes": "",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789489714/productos/fg4fdehztii5v9yybzgh.jpg",
+      "precioUSD": 1,
+      "precioCUP": 740,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
+    },
+    {
       "id": "p_1788813668772",
       "codigo": "5H6N",
       "name": "Agujas de coser a mano",
@@ -1021,6 +1039,25 @@
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
       }
+    },
+    {
+      "id": "p_1788830868023",
+      "codigo": "KS3Q",
+      "name": "Bicicleta Eléctrica de 500W para Adultos",
+      "cat": "Motos / Accesorios",
+      "subcat": "",
+      "notes": "Bicicleta Eléctrica de 500W para Adultos, Batería Extraíble de 48V 15AH, Velocidad de 15-20 mph, Largo Alcance de 10-35 Millas, Plegable de 14 Pulgadas, Pantalla LCD, Frenos de Disco Duales, Súper Suspensión, Regalo para Adolescentes, Bicicleta Eléctrica para Adultos - Motocicleta\n\nNueva está en su caja sellada",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788830814/productos/mbtm7sr4opagfnenqeht.jpg",
+      "precioUSD": 475,
+      "precioCUP": 351500,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": true,
+      "envio": {
+        "corto": "🚚 Transporte aparte",
+        "largo": "🚚 Por su tamaño, el transporte se coordina por WhatsApp según tu zona"
+      },
+      "envioAparte": true
     },
     {
       "id": "p_1785877309060",
@@ -3505,6 +3542,24 @@
       }
     },
     {
+      "id": "p_1780092503212",
+      "codigo": "ETBN",
+      "name": "Pasamontañas",
+      "cat": "Motos / Accesorios",
+      "subcat": "",
+      "notes": "Solo en negro. Máxima calidad, unitalla, tela súper elastizada y transpirable\nPara más de uno",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1781638470/productos/e2aiy18ffaqquznhmmv2.jpg",
+      "precioUSD": 1.35,
+      "precioCUP": 1000,
+      "moneda": "cup",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
+    },
+    {
       "id": "p_1780956166935",
       "codigo": "WL4Q",
       "name": "Peine de barbería",
@@ -3967,24 +4022,6 @@
       }
     },
     {
-      "id": "p_1788732975824",
-      "codigo": "JKD5",
-      "name": "Pulover Unisex Blanco",
-      "cat": "Ropa",
-      "subcat": "",
-      "notes": "Tallas S (agrandadas). Tela algodonada elastizada",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788733014/productos/z5d3cppcmkwtoaxgrrfv.jpg",
-      "precioUSD": 3.38,
-      "precioCUP": 2500,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      }
-    },
-    {
       "id": "p_1789241914026",
       "codigo": "KHXC",
       "name": "Pulover Unisex Navideño 1",
@@ -4325,26 +4362,6 @@
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
       }
-    },
-    {
-      "id": "p_1785533520877",
-      "codigo": "5Q2P",
-      "name": "Sandalias de 🌸 blancas",
-      "cat": "Calzado",
-      "subcat": "",
-      "notes": "#36",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785533351/productos/sjwbdzkclyaukn9islkx.jpg",
-      "precioUSD": 10.03,
-      "precioCUP": 7425,
-      "moneda": "usd",
-      "enOferta": true,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "precioNormalUSD": 12,
-      "precioNormalCUP": 8880
     },
     {
       "id": "p_1785541577339",
@@ -4758,6 +4775,24 @@
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788541439/productos/iqykxichtc4bysouhoxv.jpg",
       "precioUSD": 15,
       "precioCUP": 11100,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
+      "id": "p_1787764782825",
+      "codigo": "TPUJ",
+      "name": "Ventilador ColdSky Doble paleta",
+      "cat": "Electrodomésticos",
+      "subcat": "",
+      "notes": "Ventilador de camping alimentado por batería de 20000Mah - Motor dual, 8 velocidades con control remoto y 4 linternas LED, ventilador portátil para exteriores con gancho para tienda de campaña, falla de energía, obra de construcción, para viajes de camping al aire libre",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787764696/productos/k2qwog2kxffnq9yeby9m.jpg",
+      "precioUSD": 60,
+      "precioCUP": 44400,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
