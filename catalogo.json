@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-28T17:51:17.980Z",
+  "generado": "2026-09-28T18:26:56.009Z",
   "tasa": 740,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -80,10 +80,6 @@
     {
       "n": "Motos / Accesorios",
       "e": "🏍"
-    },
-    {
-      "n": "Electrónica",
-      "e": "📱"
     },
     {
       "n": "Otro",
@@ -625,6 +621,24 @@
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786921857/productos/w7gntcvjf4co0qn3tben.jpg",
       "precioUSD": 6,
       "precioCUP": 4440,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
+      "id": "p_1790619584689",
+      "codigo": "4TKD",
+      "name": "Accesorio para llave de agua",
+      "cat": "Ferretería",
+      "subcat": "",
+      "notes": "Adaptador multifuncional para grifo o llave de agua. Tiene 3 funciones,fácil colocación",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790619459/productos/geguaz3cr1lsfh3ekwvu.jpg",
+      "precioUSD": 10,
+      "precioCUP": 7400,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -3102,6 +3116,24 @@
       }
     },
     {
+      "id": "p_1790619248550",
+      "codigo": "WDWV",
+      "name": "Moledor de sazones recargable",
+      "cat": "Electrodomésticos",
+      "subcat": "",
+      "notes": "Ideal para facilitar el trabajo diario sin importar las condiciones electro energéticas. No necesita alimentación de corriente. Incluye su cable de carga, cuchillas afiladas dobles y un accesorio para batir huevos.",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790618922/productos/mkjx83kdqdxa2ejprnt0.jpg",
+      "precioUSD": 12,
+      "precioCUP": 8880,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
       "id": "p_1789218727536",
       "codigo": "6FTU",
       "name": "Mono enterizo 1",
@@ -4133,7 +4165,7 @@
       "id": "p_1788528610951",
       "codigo": "L53P",
       "name": "Ratón inalámbrico",
-      "cat": "Electrónica",
+      "cat": "Electrodomésticos",
       "subcat": "",
       "notes": "Ratón Inalámbrico Silencioso – Ratón Inalámbrico para Computadora, Ratón para Laptop, Ratón USB, Ratón para Chromebook, Ratón Inalámbrico, Ratón Inalámbrico, Ratón para PC, Ratones para Computadora, Ratón Silencioso",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788528508/productos/te3bwxztbrhsvbm7kjgt.jpg",
@@ -4151,7 +4183,7 @@
       "id": "p_1788528531092",
       "codigo": "YVVR",
       "name": "Ratón inalámbrico (negro y gris)",
-      "cat": "Electrónica",
+      "cat": "Electrodomésticos",
       "subcat": "",
       "notes": "Ratón Inalámbrico Silencioso – Ratón Inalámbrico para Computadora, Ratón para Laptop, Ratón USB, Ratón para Chromebook, Ratón Inalámbrico, Ratón Inalámbrico, Ratón para PC, Ratones para Computadora, Ratón Silencioso",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788528428/productos/are4fo73meeuwnidtlni.jpg",
@@ -4635,7 +4667,7 @@
       "id": "p_1788537976001",
       "codigo": "6ESE",
       "name": "Timbre Inalámbrico Impermeable",
-      "cat": "Electrónica",
+      "cat": "Electrodomésticos",
       "subcat": "",
       "notes": "Timbre Inalámbrico Impermeable, Funciona a 100 Metros, 36 Tonos y Volumen Ajustable, 2 Receptores y 1 Transmisor Remoto con Botón de Presión",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788537859/productos/fyws5sgxpr7nc8swb88q.jpg",
