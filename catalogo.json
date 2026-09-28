@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-28T12:21:17.904Z",
+  "generado": "2026-09-28T17:51:17.980Z",
   "tasa": 740,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -4516,6 +4516,24 @@
           "ROSA🩷"
         ]
       },
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
+      "id": "p_1788546447070",
+      "codigo": "G2DK",
+      "name": "Tablet de niño",
+      "cat": "Bocinas Celulares y Accesorios",
+      "subcat": "",
+      "notes": "Solo en Rosado con temática de astronauta. Incluye su cable de carga, un juego de audífonos de cable y un protector con sistema de apollo para mesa y para mejor sostén manual\nCaracterísticas:\nAndroid 14\n7 pulgadas\nWifi 5G\nBatería de gran Capacidad 4500mAh\nDoble camara\n4GB de ram\n128GB de almacenamiento\nPantalla IPS HD de 1280*800 de resolución",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788546279/productos/uzesxbrip8o2exboddhu.jpg",
+      "precioUSD": 58,
+      "precioCUP": 42920,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
