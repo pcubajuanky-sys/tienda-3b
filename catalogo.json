@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-29T16:10:59.069Z",
+  "generado": "2026-09-29T21:12:50.350Z",
   "tasa": 740,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -1053,25 +1053,6 @@
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
       }
-    },
-    {
-      "id": "p_1788830868023",
-      "codigo": "KS3Q",
-      "name": "Bicicleta Eléctrica de 500W para Adultos",
-      "cat": "Motos / Accesorios",
-      "subcat": "",
-      "notes": "Bicicleta Eléctrica de 500W para Adultos, Batería Extraíble de 48V 15AH, Velocidad de 15-20 mph, Largo Alcance de 10-35 Millas, Plegable de 14 Pulgadas, Pantalla LCD, Frenos de Disco Duales, Súper Suspensión, Regalo para Adolescentes, Bicicleta Eléctrica para Adultos - Motocicleta\n\nNueva está en su caja sellada",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788830814/productos/mbtm7sr4opagfnenqeht.jpg",
-      "precioUSD": 475,
-      "precioCUP": 351500,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": true,
-      "envio": {
-        "corto": "🚚 Transporte aparte",
-        "largo": "🚚 Por su tamaño, el transporte se coordina por WhatsApp según tu zona"
-      },
-      "envioAparte": true
     },
     {
       "id": "p_1785877309060",
@@ -2310,6 +2291,38 @@
       }
     },
     {
+      "id": "p_1790714894835",
+      "codigo": "PBNJ",
+      "name": "Lazos con brillantes",
+      "cat": "Cabello",
+      "subcat": "",
+      "notes": "Lazos aterciopelados de evilla metálica y adornados con brillantes. Ideal para niñas , adolecentes y jóvenes. Hermosos y elegantes diseños. Variedad de colores disponibles.",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790714260/productos/oxvautqjuev0sdkbkliz.jpg",
+      "precioUSD": 2.03,
+      "precioCUP": 1500,
+      "moneda": "cup",
+      "enOferta": false,
+      "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Color"
+        ],
+        "opciones": [
+          "ROJO",
+          "BLANCO",
+          "NEGRO",
+          "GRIS",
+          "AZUL",
+          "ROSA",
+          "MARRÓN"
+        ]
+      },
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
       "id": "p_1789233150296",
       "codigo": "NU2L",
       "name": "Licra corta 1",
@@ -3358,24 +3371,6 @@
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785005561/productos/f38m61h7y1oudaa6np9v.jpg",
       "precioUSD": 8,
       "precioCUP": 5920,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      }
-    },
-    {
-      "id": "p_1788203335686",
-      "codigo": "GQSS",
-      "name": "Palangana electrica de hidromasaje",
-      "cat": "Electrodomésticos",
-      "subcat": "",
-      "notes": "Baño de pies plegable con calor y rodillos de masaje, bañera plegable para remojar los pies con chorros de burbujas y luz LED, masajeador de pies para pedicura con exfoliante para uso doméstico.",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788203234/productos/urf72rqigvjba5wdnii0.jpg",
-      "precioUSD": 50,
-      "precioCUP": 37000,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
