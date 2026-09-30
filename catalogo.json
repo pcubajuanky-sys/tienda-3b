@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-29T21:12:50.350Z",
+  "generado": "2026-09-30T02:31:54.974Z",
   "tasa": 740,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -699,6 +699,24 @@
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+      }
+    },
+    {
+      "id": "p_1790716849558",
+      "codigo": "5QEY",
+      "name": "Afeitadora electrica 2 en 1",
+      "cat": "Electrodomésticos",
+      "subcat": "",
+      "notes": "Con doble función,esta exelente afeitadora electrica recorta los vellos en diferentes tamaños según elección personal, también tiene la función afeitadora con tecnología totalmente compatible para pieles sensibles. Incluye doble cabezal, cable de carga, brochita y accesorio con 2 números diferentes de corte de vello",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790716439/productos/lcy5aa3kwmg3tbhbjuc8.jpg",
+      "precioUSD": 15,
+      "precioCUP": 11100,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
       }
     },
     {
@@ -4757,24 +4775,6 @@
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788541439/productos/iqykxichtc4bysouhoxv.jpg",
       "precioUSD": 15,
       "precioCUP": 11100,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      }
-    },
-    {
-      "id": "p_1787764782825",
-      "codigo": "TPUJ",
-      "name": "Ventilador ColdSky Doble paleta",
-      "cat": "Electrodomésticos",
-      "subcat": "",
-      "notes": "Ventilador de camping alimentado por batería de 20000Mah - Motor dual, 8 velocidades con control remoto y 4 linternas LED, ventilador portátil para exteriores con gancho para tienda de campaña, falla de energía, obra de construcción, para viajes de camping al aire libre",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787764696/productos/k2qwog2kxffnq9yeby9m.jpg",
-      "precioUSD": 60,
-      "precioCUP": 44400,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
