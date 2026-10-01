@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-30T19:50:22.200Z",
+  "generado": "2026-10-01T00:57:24.798Z",
   "tasa": 755,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -1316,6 +1316,24 @@
       "precioUSD": 6.62,
       "precioCUP": 5000,
       "moneda": "cup",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
+      "id": "p_1790801699259",
+      "codigo": "96J6",
+      "name": "Candado con alarma 2",
+      "cat": "Motos / Accesorios",
+      "subcat": "",
+      "notes": "Candado de disco con alarma para motocicleta, candado antirrobo de seguridad para rueda de disco de motocicleta, sonido de alarma de 110 dB, para motocicletas ligeras, bicicletas, motocicletas y scooters.",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790801561/productos/vnj2xw8zekwu9noskula.jpg",
+      "precioUSD": 18,
+      "precioCUP": 13590,
+      "moneda": "usd",
       "enOferta": false,
       "destacado": false,
       "envio": {
@@ -3581,6 +3599,33 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
+      "id": "p_1790798324777",
+      "codigo": "UB9F",
+      "name": "Paquetes de Felpas",
+      "cat": "Cabello",
+      "subcat": "",
+      "notes": "Puede elegir entre un paquete de todas las felpas negras o uno de colores aleatorios. El paquete contiene 25unidades",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790798571/productos/rofajbm7akwyx4mhtl4c.jpg",
+      "precioUSD": 2,
+      "precioCUP": 1510,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Colores"
+        ],
+        "opciones": [
+          "VARIADOS🌈",
+          "NEGRAS🖤"
+        ]
+      },
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
