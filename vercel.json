@@ -1,6 +1,8 @@
 {
   "rewrites": [
     { "source": "/taxi", "destination": "/taxi.html" },
+    { "source": "/remesas", "destination": "/conectados.html" },
+    { "source": "/conectados", "destination": "/conectados.html" },
     { "source": "/((?!.*\\.).*)", "destination": "/index.html" }
   ],
   "headers": [
