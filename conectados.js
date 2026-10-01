@@ -258,14 +258,15 @@ function mensaje() {
     '',
     'DESTINATARIO',
     `Nombre: ${v('cn-a-nombre')}`,
-    v('cn-a-ci') ? `CI: ${v('cn-a-ci')}` : '',
+    v('cn-a-ci') ? `CI: ${v('cn-a-ci')}` : null,
     `Teléfono: ${v('cn-a-tel')}`,
     `Dirección: ${v('cn-a-dir')}`,
     `Municipio/Provincia: ${v('cn-a-mun')}`,
-    v('cn-nota') ? `Nota: ${v('cn-nota')}` : '',
+    v('cn-nota') ? `Nota: ${v('cn-nota')}` : null,
     '',
     '(Adjunto aquí la captura de mi pago 📎)',
-  ].filter((l) => l !== '');
+  // null = campo opcional vacio (se quita). '' = separador de parrafo a proposito (se queda).
+  ].filter((l) => l !== null);
   if (REF) lineas.push('', `Ref: ${REF.code}`);
   return lineas.join('\n');
 }
