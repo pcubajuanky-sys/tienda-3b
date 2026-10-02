@@ -230,7 +230,7 @@ function calcular() {
 
 const OBLIGATORIOS = [
   ['cn-de-nombre', 'tu nombre'],
-  ['cn-a-nombre', 'el nombre de quien recibe'],
+  ['cn-a-nombre', 'el nombre y los apellidos de quien recibe'],
   ['cn-a-tel', 'su teléfono'],
   ['cn-a-dir', 'la dirección'],
   ['cn-a-mun', 'el municipio y la provincia'],
@@ -250,7 +250,7 @@ function mensaje() {
   const lineas = [
     `${(CN.marca || {}).nombre || 'CONECTADOS'} — Envío ${el('cn-codigo').textContent}`,
     '',
-    `Quien manda: ${v('cn-de-nombre')}${v('cn-de-tel') ? ` (${v('cn-de-tel')})` : ''}`,
+    `Quien manda: ${v('cn-de-nombre')}`,
     `Paga por: ${pago ? pago.nombre : '(por decidir)'}`,
     `Paga: $${fmtUSD(c.pagaUSD)} USD`,
     `Recibe: $${fmtUSD(c.recibeUSD)} USD${cup ? ` → ${fmtCUP(cup)} CUP` : ''}`,
@@ -319,7 +319,7 @@ function enganchar() {
   el('cn-entrega').addEventListener('change', calcular);
   el('cn-pago').addEventListener('change', actualizarBoton);
   for (const [id] of OBLIGATORIOS) el(id).addEventListener('input', actualizarBoton);
-  for (const id of ['cn-a-ci', 'cn-nota', 'cn-de-tel']) el(id).addEventListener('input', actualizarBoton);
+  for (const id of ['cn-a-ci', 'cn-nota']) el(id).addEventListener('input', actualizarBoton);
 
   el('cn-reintentar').addEventListener('click', cargar);
 
