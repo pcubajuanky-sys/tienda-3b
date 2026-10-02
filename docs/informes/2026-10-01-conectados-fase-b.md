@@ -97,3 +97,30 @@ con una config inventada (tramos 10/8/6, tres entregas, Zelle y USDT, 128 envío
 **Fase C** — el icono al lado del taxi y la salida a producción:
 `inventario-stockmas/docs/superpowers/plans/2026-09-30-conectados-fase-c-icono-y-publicar.md`.
 **Necesita `logo-conectados.png` (256×256), que lo da Ruth.** Sin él, la Fase C no empieza.
+
+---
+
+## Ajustes al formulario (2026-10-02, pedidos por Ruth)
+
+Commit `37c1bc1` — tres cambios, verificados por el piloto **abriendo la página de verdad** en
+`http://localhost:3000/preview/conectados`:
+
+1. **Fuera el teléfono/país de quien envía.** Se quitó el campo `cn-de-tel` del HTML y sus dos
+   referencias en el JS (el listener y el paréntesis del mensaje). Comprobado que **no queda ni una
+   mención** a ese id en ninguno de los dos archivos: una sola suelta habría dejado `el('cn-de-tel')`
+   en `null` y la página reventaría al cargar. El mensaje ahora dice `Quien manda: Maria Perez`, a secas.
+2. **El carné de identidad, marcado como opcional.** Ojo: **ya era opcional en la lógica** desde el
+   principio (nunca estuvo en `OBLIGATORIOS`); lo que engañaba era la etiqueta. Ahora pone
+   «Carné de identidad (opcional)». Verificado que el botón de WhatsApp **se enciende con el CI
+   vacío** y que entonces la línea `CI:` no aparece en el mensaje.
+3. **De quien recibe se piden nombre Y apellidos.** La etiqueta pasa a «Nombre y apellidos de quien
+   recibe», y el aviso de campos que faltan dice lo mismo.
+
+**Recolocación de la rejilla:** al quitar un campo, «Tu nombre» habría quedado emparejado en la
+misma fila con «Nombre y apellidos de quien recibe» —quien manda al lado de quien recibe, que
+confunde—. Los dos pasaron a ocupar fila entera (`cn-ancho`); «Carné (opcional)» y «Su teléfono en
+Cuba» quedan emparejados. Verificado campo por campo en la página.
+
+Consola: siguen siendo **solo los 2 × 404 de los logos** de `/preview`. Cero errores de CSP y de JS.
+El diseño y el plan de la Fase B se actualizaron en el mismo movimiento, para que nadie reintroduzca
+el campo del remitente leyendo un documento viejo.
