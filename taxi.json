@@ -1,8 +1,8 @@
 {
-  "generado": "2026-09-16T13:55:01.171Z",
+  "generado": "2026-10-03T00:30:14.981Z",
   "vigenciaHoras": 48,
   "activo": true,
-  "tasa": 695,
+  "tasa": 775,
   "whatsapp": "5358856820",
   "whatsappAltas": "5354978966",
   "marca": {
@@ -14,12 +14,13 @@
   },
   "esperaHoraCUP": 0,
   "recta": {
-    "porKmCUP": 580.0470000000001,
-    "baseCUP": 2710.5000000000005,
+    "porKmCUP": 646.8150000000002,
+    "baseCUP": 3022.5000000000005,
     "redondeoCUP": 50,
     "factorCompartido": 1.25
   },
   "mostrarDesglose": false,
+  "conectadosActivo": false,
   "referidores": [
     {
       "code": "N89WN",
@@ -76,77 +77,81 @@
     {
       "code": "2PT46",
       "nombre": "Damaisi"
+    },
+    {
+      "code": "RMUTS",
+      "nombre": "Sandra"
     }
   ],
   "comisionPorKmCUP": 20,
   "agenda": [
     {
-      "fecha": "2026-09-16",
+      "fecha": "2026-10-02",
       "manana": false,
       "tarde": false
     },
     {
-      "fecha": "2026-09-17",
+      "fecha": "2026-10-03",
       "manana": false,
       "tarde": false
     },
     {
-      "fecha": "2026-09-18",
+      "fecha": "2026-10-04",
       "manana": false,
       "tarde": false
     },
     {
-      "fecha": "2026-09-19",
+      "fecha": "2026-10-05",
       "manana": false,
       "tarde": false
     },
     {
-      "fecha": "2026-09-20",
+      "fecha": "2026-10-06",
       "manana": false,
       "tarde": false
     },
     {
-      "fecha": "2026-09-21",
+      "fecha": "2026-10-07",
       "manana": false,
       "tarde": false
     },
     {
-      "fecha": "2026-09-22",
+      "fecha": "2026-10-08",
       "manana": false,
       "tarde": false
     },
     {
-      "fecha": "2026-09-23",
+      "fecha": "2026-10-09",
       "manana": false,
       "tarde": false
     },
     {
-      "fecha": "2026-09-24",
+      "fecha": "2026-10-10",
       "manana": false,
       "tarde": false
     },
     {
-      "fecha": "2026-09-25",
+      "fecha": "2026-10-11",
       "manana": false,
       "tarde": false
     },
     {
-      "fecha": "2026-09-26",
+      "fecha": "2026-10-12",
       "manana": false,
       "tarde": false
     },
     {
-      "fecha": "2026-09-27",
+      "fecha": "2026-10-13",
       "manana": false,
       "tarde": false
     },
     {
-      "fecha": "2026-09-28",
+      "fecha": "2026-10-14",
       "manana": false,
       "tarde": false
     },
     {
-      "fecha": "2026-09-29",
+      "fecha": "2026-10-15",
       "manana": false,
       "tarde": false
     }
@@ -156,70 +161,70 @@
       "id": "acuario",
       "nombre": "Acuario Nacional",
       "km": 29,
-      "idaCUP": 19550,
+      "idaCUP": 21800,
       "idaUSD": 28.1,
-      "idaVueltaCUP": 19550,
+      "idaVueltaCUP": 21800,
       "idaVueltaUSD": 28.1,
       "asientoCUP": {
-        "2": 12250,
-        "3": 8150,
-        "4": 6150
+        "2": 13650,
+        "3": 9100,
+        "4": 6850
       }
     },
     {
       "id": "capitolio",
       "nombre": "Capitolio Nacional",
       "km": 42,
-      "idaCUP": 27100,
+      "idaCUP": 30200,
       "idaUSD": 38.95,
-      "idaVueltaCUP": 27100,
+      "idaVueltaCUP": 30200,
       "idaVueltaUSD": 38.95,
       "asientoCUP": {
-        "2": 16950,
-        "3": 11300,
-        "4": 8500
+        "2": 18900,
+        "3": 12600,
+        "4": 9450
       }
     },
     {
       "id": "guira",
       "nombre": "Güira de Melena",
       "km": 11,
-      "idaCUP": 9100,
+      "idaCUP": 10150,
       "idaUSD": 13.08,
-      "idaVueltaCUP": 9100,
+      "idaVueltaCUP": 10150,
       "idaVueltaUSD": 13.08,
       "asientoCUP": {
-        "2": 5700,
-        "3": 3800,
-        "4": 2850
+        "2": 6350,
+        "3": 4250,
+        "4": 3200
       }
     },
     {
       "id": "calixto",
       "nombre": "Hospital Calixto García",
       "km": 34,
-      "idaCUP": 22450,
+      "idaCUP": 25050,
       "idaUSD": 32.28,
-      "idaVueltaCUP": 22450,
+      "idaVueltaCUP": 25050,
       "idaVueltaUSD": 32.28,
       "asientoCUP": {
-        "2": 14050,
-        "3": 9350,
-        "4": 7050
+        "2": 15650,
+        "3": 10450,
+        "4": 7850
       }
     },
     {
       "id": "terminal",
       "nombre": "Terminal de Ómnibus Nacionales",
       "km": 32,
-      "idaCUP": 21300,
+      "idaCUP": 23750,
       "idaUSD": 30.61,
-      "idaVueltaCUP": 21300,
+      "idaVueltaCUP": 23750,
       "idaVueltaUSD": 30.61,
       "asientoCUP": {
-        "2": 13300,
-        "3": 8900,
-        "4": 6650
+        "2": 14850,
+        "3": 9900,
+        "4": 7450
       }
     }
   ],
