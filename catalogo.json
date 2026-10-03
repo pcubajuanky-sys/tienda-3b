@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-03T21:52:52.019Z",
+  "generado": "2026-10-03T21:55:22.614Z",
   "tasa": 780,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -5032,6 +5032,24 @@
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790954256/productos/irq5mozfnze5v4cjmh8m.jpg",
       "precioUSD": 12,
       "precioCUP": 9360,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
+      "id": "p_1787764782825",
+      "codigo": "TPUJ",
+      "name": "Ventilador ColdSky Doble paleta",
+      "cat": "Electrodomésticos",
+      "subcat": "",
+      "notes": "Ventilador de camping alimentado por batería de 20000Mah - Motor dual, 8 velocidades con control remoto y 4 linternas LED, ventilador portátil para exteriores con gancho para tienda de campaña, falla de energía, obra de construcción, para viajes de camping al aire libre",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787764696/productos/k2qwog2kxffnq9yeby9m.jpg",
+      "precioUSD": 60,
+      "precioCUP": 46800,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
