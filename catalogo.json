@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-03T03:42:57.019Z",
+  "generado": "2026-10-03T08:56:55.303Z",
   "tasa": 775,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -825,6 +825,33 @@
         "opciones": [
           "NEGRO",
           "GRIS"
+        ]
+      },
+      "envio": {
+        "corto": "🛵 Gratis desde 2,000 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+      }
+    },
+    {
+      "id": "p_1790793838226",
+      "codigo": "MKET",
+      "name": "Apollos de celular",
+      "cat": "Bocinas Celulares y Accesorios",
+      "subcat": "",
+      "notes": "Apollos plásticos para celulares o tablets. Colores disponibles: 🩷 y 💙",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790793416/productos/rpc68jeplxinlu5sylnt.jpg",
+      "precioUSD": 1,
+      "precioCUP": 775,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Colores"
+        ],
+        "opciones": [
+          "ROSA🩷",
+          "AZUL💙"
         ]
       },
       "envio": {
@@ -1944,42 +1971,6 @@
       }
     },
     {
-      "id": "p_1780608497220",
-      "codigo": "2XN8",
-      "name": "Florecitas tipo Piojitos",
-      "cat": "Cabello",
-      "subcat": "",
-      "notes": "El paquete trae 50Unidades",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1780608383/productos/huixhwzn5cnjfnf3tc3s.jpg",
-      "precioUSD": 2.58,
-      "precioCUP": 2000,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      }
-    },
-    {
-      "id": "p_1780620222381",
-      "codigo": "L4P6",
-      "name": "Flores hawaianas",
-      "cat": "Cabello",
-      "subcat": "",
-      "notes": "10flores por paquete\nMateriales:Flor de goma y gancho metálico",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788131956/productos/pfnnrk7tq9teetv2mucs.jpg",
-      "precioUSD": 2.58,
-      "precioCUP": 2000,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      }
-    },
-    {
       "id": "p_1781004811363",
       "codigo": "36CF",
       "name": "Fogón eléctrico doble",
@@ -2170,24 +2161,6 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
-    },
-    {
-      "id": "p_1780608108403",
-      "codigo": "4KVY",
-      "name": "Girasoles y margaritas",
-      "cat": "Cabello",
-      "subcat": "",
-      "notes": "10 Unidades cada paquete\nMateriales:flor de tela y gancho de metal",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788131870/productos/wrto4ojobtjsxqnptdii.jpg",
-      "precioUSD": 1.94,
-      "precioCUP": 1500,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
       }
     },
     {
@@ -2776,114 +2749,6 @@
       }
     },
     {
-      "id": "p_1780609726389",
-      "codigo": "NB4J",
-      "name": "Mariposas Brillantes A",
-      "cat": "Cabello",
-      "subcat": "",
-      "notes": "Set 6 unidades de mariposas brillantes para el cabello. Diseños en tonos rosa, celeste, lila, plateado y blanco con acabado glitter. Cierre metálico dorado seguro y resistente. Ideales para peinados infantiles, fiestas o uso diario.",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788097881/productos/agel6mi5958o93edwstf.jpg",
-      "precioUSD": 2.58,
-      "precioCUP": 2000,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      }
-    },
-    {
-      "id": "p_1785269406794",
-      "codigo": "UBNJ",
-      "name": "Mariposas Brillantes Blancas",
-      "cat": "Cabello",
-      "subcat": "",
-      "notes": "Cada paquete trae 5 unidades\nMateriales: Mariposas de tela y ganchos metálicos",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788131774/productos/uzzzxzk5rbvv2wztosn8.jpg",
-      "precioUSD": 2.58,
-      "precioCUP": 2000,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      }
-    },
-    {
-      "id": "p_1785271247802",
-      "codigo": "SDLS",
-      "name": "Mariposas Cola de Sirena",
-      "cat": "Cabello",
-      "subcat": "",
-      "notes": "El paquete contiene 6 unidades\nMateriales: mariposas plásticas ,gancho metálico",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788131707/productos/fnawyhmwlm29vqrhlzg7.jpg",
-      "precioUSD": 2.32,
-      "precioCUP": 1800,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
-      }
-    },
-    {
-      "id": "p_1780608723108",
-      "codigo": "3KD5",
-      "name": "Mariposas Metálicas",
-      "cat": "Cabello",
-      "subcat": "",
-      "notes": "Paquete de 10 mini mariposas metálicas para el cabello. Diseño delicado y elegante en acero plateado, con cierre de presión seguro. Ideales para peinados finos, recogidos o como accesorio decorativo. Ligeras, resistentes y de tamaño compacto, perfectas para uso diario o ocasiones especiales.",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788035311/productos/boandlf6ammxiganqiix.jpg",
-      "precioUSD": 1.55,
-      "precioCUP": 1200,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
-      }
-    },
-    {
-      "id": "p_1780613171948",
-      "codigo": "G6RW",
-      "name": "Mariposas Multialas",
-      "cat": "Cabello",
-      "subcat": "",
-      "notes": "Paquete de 6Unidades\nMateriales: Mariposas de tela y ganchos metálicos",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1780613034/productos/ewezjlonywv5nm4mgcbi.jpg",
-      "precioUSD": 2.58,
-      "precioCUP": 2000,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      }
-    },
-    {
-      "id": "p_1785268500695",
-      "codigo": "8N7W",
-      "name": "Maripositas",
-      "cat": "Cabello",
-      "subcat": "",
-      "notes": "6 Maripositas por paquete\nMateriales: Mariposas de tela y ganchos metálicos",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788098080/productos/sx2ollfms75pocmyzfgn.jpg",
-      "precioUSD": 2.32,
-      "precioCUP": 1800,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
-      }
-    },
-    {
       "id": "p_1788205797035",
       "codigo": "EKUQ",
       "name": "Maripositas tornasol",
@@ -3160,60 +3025,6 @@
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788037785/productos/jpvqqkzip4dpgcbo3skz.jpg",
       "precioUSD": 0.77,
       "precioCUP": 600,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
-      }
-    },
-    {
-      "id": "p_1787412191026",
-      "codigo": "7VDV",
-      "name": "Mini pellisquitos cuadrados",
-      "cat": "Cabello",
-      "subcat": "",
-      "notes": "El precio es por 6 pellisquitos",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787412125/productos/ljq3x7ttyw66rrs2apq7.jpg",
-      "precioUSD": 1.03,
-      "precioCUP": 800,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
-      }
-    },
-    {
-      "id": "p_1786714572024",
-      "codigo": "2CBG",
-      "name": "Mini pellisquitos variaros",
-      "cat": "Cabello",
-      "subcat": "",
-      "notes": "Paquetes de 6 unidades",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786714500/productos/owftuoin0hygs5ydmefm.jpg",
-      "precioUSD": 1.29,
-      "precioCUP": 1000,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
-      }
-    },
-    {
-      "id": "p_1780951622289",
-      "codigo": "NY5G",
-      "name": "Mini Tic-Tac",
-      "cat": "Cabello",
-      "subcat": "",
-      "notes": "Cada paquete trae 20\nMaterial: Metálicos",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788098164/productos/pd3fjwiylpa6xhd6arqr.jpg",
-      "precioUSD": 1.1,
-      "precioCUP": 850,
       "moneda": "cup",
       "enOferta": false,
       "destacado": false,
@@ -3609,6 +3420,60 @@
       }
     },
     {
+      "id": "p_1780620222381",
+      "codigo": "L4P6",
+      "name": "Paquete de 10 flores hawaianas",
+      "cat": "Cabello",
+      "subcat": "",
+      "notes": "10flores por paquete\nMateriales:Flor de goma y gancho metálico",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788131956/productos/pfnnrk7tq9teetv2mucs.jpg",
+      "precioUSD": 2.58,
+      "precioCUP": 2000,
+      "moneda": "cup",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
+      "id": "p_1780608108403",
+      "codigo": "4KVY",
+      "name": "Paquete de 10 flores, Girasoles y Margaritas",
+      "cat": "Cabello",
+      "subcat": "",
+      "notes": "10 Unidades cada paquete\nMateriales:flor de tela y gancho de metal",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788131870/productos/wrto4ojobtjsxqnptdii.jpg",
+      "precioUSD": 1.94,
+      "precioCUP": 1500,
+      "moneda": "cup",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 2,000 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+      }
+    },
+    {
+      "id": "p_1780608723108",
+      "codigo": "3KD5",
+      "name": "Paquete de 10 mariposas Metálicas",
+      "cat": "Cabello",
+      "subcat": "",
+      "notes": "Paquete de 10 mini mariposas metálicas para el cabello. Diseño delicado y elegante en acero plateado, con cierre de presión seguro. Ideales para peinados finos, recogidos o como accesorio decorativo. Ligeras, resistentes y de tamaño compacto, perfectas para uso diario o ocasiones especiales.",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788035311/productos/boandlf6ammxiganqiix.jpg",
+      "precioUSD": 1.55,
+      "precioCUP": 1200,
+      "moneda": "cup",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 2,000 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+      }
+    },
+    {
       "id": "p_1788618415087",
       "codigo": "4BJ2",
       "name": "Paquete de 100 pajillas",
@@ -3627,9 +3492,245 @@
       }
     },
     {
+      "id": "p_1780951622289",
+      "codigo": "NY5G",
+      "name": "Paquete de 20 mini Tic-Tac",
+      "cat": "Cabello",
+      "subcat": "",
+      "notes": "Cada paquete trae 20\nMaterial: Metálicos",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788098164/productos/pd3fjwiylpa6xhd6arqr.jpg",
+      "precioUSD": 1.1,
+      "precioCUP": 850,
+      "moneda": "cup",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 2,000 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+      }
+    },
+    {
+      "id": "p_1780608497220",
+      "codigo": "2XN8",
+      "name": "Paquete de 25 florecitas tipo Piojitos",
+      "cat": "Cabello",
+      "subcat": "",
+      "notes": "El paquete trae 25Unidades",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1780608383/productos/huixhwzn5cnjfnf3tc3s.jpg",
+      "precioUSD": 1.29,
+      "precioCUP": 1000,
+      "moneda": "cup",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 2,000 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+      }
+    },
+    {
+      "id": "p_1786930924590",
+      "codigo": "8DEM",
+      "name": "Paquete de 4 pellizcos de perlitas",
+      "cat": "Cabello",
+      "subcat": "",
+      "notes": "Paquetes de 4unidades,",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786930842/productos/wzpik5gw8tzabbppxhn1.jpg",
+      "precioUSD": 1.03,
+      "precioCUP": 800,
+      "moneda": "cup",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 2,000 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+      }
+    },
+    {
+      "id": "p_1780614185839",
+      "codigo": "FD8Z",
+      "name": "Paquete de 4 Tic-Tacs Estilo variado",
+      "cat": "Cabello",
+      "subcat": "",
+      "notes": "4 piezas por paquete de cartoncitos con pinzas y clips para el cabello en tonos pasteles. Diseños variados que incluyen estrellas, lazos, mariposas y formas geométricas. Fabricados en material resistente y suaves al tacto, ideales para peinados infantiles o de uso diario. Presentación atractiva y práctica para regalo o uso personal.",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788035154/productos/h9dy2yxfjfrzz5onmiox.jpg",
+      "precioUSD": 0.77,
+      "precioCUP": 600,
+      "moneda": "cup",
+      "enOferta": true,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 2,000 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+      },
+      "precioNormalUSD": 0.88,
+      "precioNormalCUP": 680
+    },
+    {
+      "id": "p_1785269406794",
+      "codigo": "UBNJ",
+      "name": "Paquete de 5 mariposas Brillantes Blancas",
+      "cat": "Cabello",
+      "subcat": "",
+      "notes": "Cada paquete trae 5 unidades\nMateriales: Mariposas de tela y ganchos metálicos",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788131774/productos/uzzzxzk5rbvv2wztosn8.jpg",
+      "precioUSD": 2.58,
+      "precioCUP": 2000,
+      "moneda": "cup",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
+      "id": "p_1788150972260",
+      "codigo": "5W6S",
+      "name": "Paquete de 5 pellizquitos de metal",
+      "cat": "Cabello",
+      "subcat": "",
+      "notes": "Paquete de 5 pellisquitos de metal de colores variados 🌈. Alta calidad y belleza",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788150845/productos/gvk0moampbqyylvdi65d.jpg",
+      "precioUSD": 2.06,
+      "precioCUP": 1600,
+      "moneda": "cup",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 2,000 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+      }
+    },
+    {
+      "id": "p_1780609726389",
+      "codigo": "NB4J",
+      "name": "Paquete de 6 ariposas Brillantes A",
+      "cat": "Cabello",
+      "subcat": "",
+      "notes": "Set 6 unidades de mariposas brillantes para el cabello. Diseños en tonos rosa, celeste, lila, plateado y blanco con acabado glitter. Cierre metálico dorado seguro y resistente. Ideales para peinados infantiles, fiestas o uso diario.",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788097881/productos/agel6mi5958o93edwstf.jpg",
+      "precioUSD": 2.58,
+      "precioCUP": 2000,
+      "moneda": "cup",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
+      "id": "p_1785271247802",
+      "codigo": "SDLS",
+      "name": "Paquete de 6 mariposas Cola de Sirena",
+      "cat": "Cabello",
+      "subcat": "",
+      "notes": "El paquete contiene 6 unidades\nMateriales: mariposas plásticas ,gancho metálico",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788131707/productos/fnawyhmwlm29vqrhlzg7.jpg",
+      "precioUSD": 2.32,
+      "precioCUP": 1800,
+      "moneda": "cup",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 2,000 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+      }
+    },
+    {
+      "id": "p_1780613171948",
+      "codigo": "G6RW",
+      "name": "Paquete de 6 mariposas Multialas",
+      "cat": "Cabello",
+      "subcat": "",
+      "notes": "Paquete de 6Unidades\nMateriales: Mariposas de tela y ganchos metálicos",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1780613034/productos/ewezjlonywv5nm4mgcbi.jpg",
+      "precioUSD": 2.58,
+      "precioCUP": 2000,
+      "moneda": "cup",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
+      "id": "p_1787412191026",
+      "codigo": "7VDV",
+      "name": "Paquete de 6 mini pellisquitos cuadrados",
+      "cat": "Cabello",
+      "subcat": "",
+      "notes": "El precio es por 6 pellisquitos",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787412125/productos/ljq3x7ttyw66rrs2apq7.jpg",
+      "precioUSD": 1.03,
+      "precioCUP": 800,
+      "moneda": "cup",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 2,000 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+      }
+    },
+    {
+      "id": "p_1786714572024",
+      "codigo": "2CBG",
+      "name": "Paquete de 6 mini pellisquitos variaros",
+      "cat": "Cabello",
+      "subcat": "",
+      "notes": "Paquetes de 6 unidades",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786714500/productos/owftuoin0hygs5ydmefm.jpg",
+      "precioUSD": 1.29,
+      "precioCUP": 1000,
+      "moneda": "cup",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 2,000 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+      }
+    },
+    {
+      "id": "p_1785275574502",
+      "codigo": "NSWC",
+      "name": "Paquete de 6 pellisquitos coloridos",
+      "cat": "Cabello",
+      "subcat": "",
+      "notes": "Paquetes de 6 unidades",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785275511/productos/bf9mpc5kyrz2osodjuj8.jpg",
+      "precioUSD": 1.03,
+      "precioCUP": 800,
+      "moneda": "cup",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 2,000 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+      }
+    },
+    {
+      "id": "p_1785268500695",
+      "codigo": "8N7W",
+      "name": "Paquete de6 maripositas",
+      "cat": "Cabello",
+      "subcat": "",
+      "notes": "6 Maripositas por paquete\nMateriales: Mariposas de tela y ganchos metálicos",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788098080/productos/sx2ollfms75pocmyzfgn.jpg",
+      "precioUSD": 2.32,
+      "precioCUP": 1800,
+      "moneda": "cup",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 2,000 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+      }
+    },
+    {
       "id": "p_1790798324777",
       "codigo": "UB9F",
-      "name": "Paquetes de Felpas",
+      "name": "Paquetes de 25 Felpas",
       "cat": "Cabello",
       "subcat": "",
       "notes": "Puede elegir entre un paquete de todas las felpas negras o uno de colores aleatorios. El paquete contiene 25unidades",
@@ -3646,33 +3747,6 @@
         "opciones": [
           "VARIADOS🌈",
           "NEGRAS🖤"
-        ]
-      },
-      "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
-      }
-    },
-    {
-      "id": "p_1790793838226",
-      "codigo": "MKET",
-      "name": "Pareja de apollos de celular",
-      "cat": "Bocinas Celulares y Accesorios",
-      "subcat": "",
-      "notes": "Apollos plásticos para celulares o tablets. Colores disponibles: 🩷 y 💙",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790793416/productos/rpc68jeplxinlu5sylnt.jpg",
-      "precioUSD": 1,
-      "precioCUP": 775,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "variantes": {
-        "ejes": [
-          "Colores"
-        ],
-        "opciones": [
-          "ROSA🩷",
-          "AZUL💙"
         ]
       },
       "envio": {
@@ -3791,24 +3865,6 @@
       "precioNormalCUP": 500
     },
     {
-      "id": "p_1785275574502",
-      "codigo": "NSWC",
-      "name": "Pellisquitos coloridos",
-      "cat": "Cabello",
-      "subcat": "",
-      "notes": "Paquetes de 6 unidades",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785275511/productos/bf9mpc5kyrz2osodjuj8.jpg",
-      "precioUSD": 1.03,
-      "precioCUP": 800,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
-      }
-    },
-    {
       "id": "p_1780951069722",
       "codigo": "67DD",
       "name": "Pellizco de mariposa verde militar",
@@ -3836,24 +3892,6 @@
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788098276/productos/fipt4psx7ppfrgi3mnkr.jpg",
       "precioUSD": 0.52,
       "precioCUP": 400,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
-      }
-    },
-    {
-      "id": "p_1786930924590",
-      "codigo": "8DEM",
-      "name": "Pellizcos de perlitas",
-      "cat": "Cabello",
-      "subcat": "",
-      "notes": "Paquetes de 4unidades,",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786930842/productos/wzpik5gw8tzabbppxhn1.jpg",
-      "precioUSD": 1.03,
-      "precioCUP": 800,
       "moneda": "cup",
       "enOferta": false,
       "destacado": false,
@@ -3908,24 +3946,6 @@
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785275069/productos/aru1llevcaonns9p9vsq.jpg",
       "precioUSD": 0.52,
       "precioCUP": 400,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
-      }
-    },
-    {
-      "id": "p_1788150972260",
-      "codigo": "5W6S",
-      "name": "Pellizquitos de metal",
-      "cat": "Cabello",
-      "subcat": "",
-      "notes": "Paquete de 5 pellisquitos de metal de colores variados 🌈. Alta calidad y belleza",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788150845/productos/gvk0moampbqyylvdi65d.jpg",
-      "precioUSD": 2.06,
-      "precioCUP": 1600,
       "moneda": "cup",
       "enOferta": false,
       "destacado": false,
@@ -4895,26 +4915,6 @@
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
       }
-    },
-    {
-      "id": "p_1780614185839",
-      "codigo": "FD8Z",
-      "name": "Tic-Tacs Estilo variado",
-      "cat": "Cabello",
-      "subcat": "",
-      "notes": "4 piezas por paquete de cartoncitos con pinzas y clips para el cabello en tonos pasteles. Diseños variados que incluyen estrellas, lazos, mariposas y formas geométricas. Fabricados en material resistente y suaves al tacto, ideales para peinados infantiles o de uso diario. Presentación atractiva y práctica para regalo o uso personal.",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788035154/productos/h9dy2yxfjfrzz5onmiox.jpg",
-      "precioUSD": 0.77,
-      "precioCUP": 600,
-      "moneda": "cup",
-      "enOferta": true,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
-      },
-      "precioNormalUSD": 0.88,
-      "precioNormalCUP": 680
     },
     {
       "id": "p_1788537976001",
