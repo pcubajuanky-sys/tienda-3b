@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-03T00:13:26.038Z",
+  "generado": "2026-10-03T00:30:06.632Z",
   "tasa": 775,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -58,6 +58,10 @@
     {
       "code": "2PT46",
       "nombre": "Damaisi"
+    },
+    {
+      "code": "RMUTS",
+      "nombre": "Sandra"
     }
   ],
   "categorias": [
