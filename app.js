@@ -1188,11 +1188,13 @@ function actualizarHeaderScroll() {
 // La pastilla del taxi solo aparece si Ruth lo ha encendido en Stock+
 // (catalogo.json -> tienda.taxiActivo). Asi el taxi puede estar publicado y
 // probandose sin que ningun cliente lo descubra antes de tiempo.
+// Lo mismo vale para Conectados (remesas) desde 2026-09-30.
 function renderMundos() {
   const pastilla = document.getElementById('mundo-taxi');
-  if (!pastilla) return;
-  pastilla.hidden = !(CAT && CAT.tienda && CAT.tienda.taxiActivo);
-  if (window.Mundos) window.Mundos.refrescar();   // el aviso depende de si el taxi se ve
+  if (pastilla) pastilla.hidden = !(CAT && CAT.tienda && CAT.tienda.taxiActivo);
+  const remesas = document.getElementById('mundo-conectados');
+  if (remesas) remesas.hidden = !(CAT && CAT.tienda && CAT.tienda.conectadosActivo);
+  if (window.Mundos) window.Mundos.refrescar();   // el aviso depende de cuantos negocios se ven
   medirHeader();                                   // la franja cambia el alto de la barra fija
 }
 
