@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-03T03:42:09.957Z",
+  "generado": "2026-10-03T03:42:57.019Z",
   "tasa": 775,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -1002,9 +1002,9 @@
       "subcat": "",
       "notes": "Audífonos inalámbricos tipo casco, con almohadillas acolchadas para uso prolongado",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1784919017/productos/ymppx6ylkp13y8c2vhx6.jpg",
-      "precioUSD": 5.81,
-      "precioCUP": 4500,
-      "moneda": "cup",
+      "precioUSD": 6,
+      "precioCUP": 4650,
+      "moneda": "usd",
       "enOferta": false,
       "destacado": false,
       "envio": {
