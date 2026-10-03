@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-03T08:56:55.303Z",
+  "generado": "2026-10-03T14:26:55.355Z",
   "tasa": 775,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -2906,24 +2906,6 @@
       }
     },
     {
-      "id": "p_1785180901080",
-      "codigo": "XP28",
-      "name": "Mini bolsos peluche",
-      "cat": "Bolsos Carteras Mochilas monederos",
-      "subcat": "",
-      "notes": "Mini bolsos de peluche pastel con unicornio alado y lentejuelas. Ideales para niñas.",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785180705/productos/wetzjsztw8v09lrfrvxm.jpg",
-      "precioUSD": 2.52,
-      "precioCUP": 1950,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
-      }
-    },
-    {
       "id": "p_1781005769619",
       "codigo": "87SU",
       "name": "Mini Embudos plegables",
@@ -4514,6 +4496,7 @@
           "Color"
         ],
         "opciones": [
+          "MARRÓN",
           "ROJO",
           "CELESTE",
           "VERDE CLARO",
