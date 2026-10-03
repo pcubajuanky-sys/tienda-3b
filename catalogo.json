@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-03T14:26:55.355Z",
+  "generado": "2026-10-03T14:37:51.427Z",
   "tasa": 775,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -205,7 +205,7 @@
       "titulo": "🚀 Muy pronto",
       "texto": "Muy pronto podrás pedirnos lo que quieras de Shein y Temu. ¡Mantente visitándonos!"
     },
-    "comisionServicioPct": 20,
+    "comisionServicioPct": 15,
     "anticipoPct": 10,
     "anticipoBase": "total",
     "pesoMinimoLb": 1,
@@ -366,26 +366,26 @@
       {
         "nombre": "Pinza de pelo",
         "precioUSD": 2,
-        "barcoUSD": 5.9,
-        "avionUSD": 8.9
+        "barcoUSD": 5.8,
+        "avionUSD": 8.8
       },
       {
         "nombre": "Pulóver o blusa",
         "precioUSD": 8,
-        "barcoUSD": 13.1,
-        "avionUSD": 16.1
+        "barcoUSD": 12.7,
+        "avionUSD": 15.7
       },
       {
         "nombre": "Jean",
         "precioUSD": 15,
-        "barcoUSD": 22.55,
-        "avionUSD": 26.45
+        "barcoUSD": 21.8,
+        "avionUSD": 25.7
       },
       {
         "nombre": "Tenis",
         "precioUSD": 25,
-        "barcoUSD": 40.5,
-        "avionUSD": 49.5
+        "barcoUSD": 39.25,
+        "avionUSD": 48.25
       }
     ],
     "control": [
@@ -399,9 +399,9 @@
         ],
         "modo": "barco",
         "envioUSD": 3.5,
-        "servicioUSD": 0.4,
-        "totalUSD": 5.9,
-        "anticipoUSD": 0.59
+        "servicioUSD": 0.3,
+        "totalUSD": 5.8,
+        "anticipoUSD": 0.58
       },
       {
         "articulos": [
@@ -413,9 +413,9 @@
         ],
         "modo": "avion",
         "envioUSD": 6.5,
-        "servicioUSD": 0.4,
-        "totalUSD": 8.9,
-        "anticipoUSD": 0.89
+        "servicioUSD": 0.3,
+        "totalUSD": 8.8,
+        "anticipoUSD": 0.88
       },
       {
         "articulos": [
@@ -427,9 +427,9 @@
         ],
         "modo": "barco",
         "envioUSD": 3.5,
-        "servicioUSD": 1.6,
-        "totalUSD": 13.1,
-        "anticipoUSD": 1.31
+        "servicioUSD": 1.2,
+        "totalUSD": 12.7,
+        "anticipoUSD": 1.27
       },
       {
         "articulos": [
@@ -441,9 +441,9 @@
         ],
         "modo": "avion",
         "envioUSD": 6.5,
-        "servicioUSD": 1.6,
-        "totalUSD": 16.1,
-        "anticipoUSD": 1.61
+        "servicioUSD": 1.2,
+        "totalUSD": 15.7,
+        "anticipoUSD": 1.57
       },
       {
         "articulos": [
@@ -455,9 +455,9 @@
         ],
         "modo": "barco",
         "envioUSD": 4.55,
-        "servicioUSD": 3,
-        "totalUSD": 22.55,
-        "anticipoUSD": 2.26
+        "servicioUSD": 2.25,
+        "totalUSD": 21.8,
+        "anticipoUSD": 2.18
       },
       {
         "articulos": [
@@ -469,9 +469,9 @@
         ],
         "modo": "avion",
         "envioUSD": 8.45,
-        "servicioUSD": 3,
-        "totalUSD": 26.45,
-        "anticipoUSD": 2.65
+        "servicioUSD": 2.25,
+        "totalUSD": 25.7,
+        "anticipoUSD": 2.57
       },
       {
         "articulos": [
@@ -483,9 +483,9 @@
         ],
         "modo": "barco",
         "envioUSD": 10.5,
-        "servicioUSD": 5,
-        "totalUSD": 40.5,
-        "anticipoUSD": 4.05
+        "servicioUSD": 3.75,
+        "totalUSD": 39.25,
+        "anticipoUSD": 3.93
       },
       {
         "articulos": [
@@ -497,9 +497,9 @@
         ],
         "modo": "avion",
         "envioUSD": 19.5,
-        "servicioUSD": 5,
-        "totalUSD": 49.5,
-        "anticipoUSD": 4.95
+        "servicioUSD": 3.75,
+        "totalUSD": 48.25,
+        "anticipoUSD": 4.83
       },
       {
         "articulos": [
@@ -511,9 +511,9 @@
         ],
         "modo": "barco",
         "envioUSD": 45.5,
-        "servicioUSD": 30,
-        "totalUSD": 225.5,
-        "anticipoUSD": 22.55
+        "servicioUSD": 22.5,
+        "totalUSD": 218,
+        "anticipoUSD": 21.8
       },
       {
         "articulos": [
@@ -525,9 +525,9 @@
         ],
         "modo": "avion",
         "envioUSD": 78,
-        "servicioUSD": 30,
-        "totalUSD": 258,
-        "anticipoUSD": 25.8
+        "servicioUSD": 22.5,
+        "totalUSD": 250.5,
+        "anticipoUSD": 25.05
       },
       {
         "articulos": [
@@ -539,9 +539,9 @@
         ],
         "modo": "barco",
         "envioUSD": 81,
-        "servicioUSD": 45,
-        "totalUSD": 351,
-        "anticipoUSD": 35.1
+        "servicioUSD": 33.75,
+        "totalUSD": 339.75,
+        "anticipoUSD": 33.98
       },
       {
         "articulos": [
@@ -553,9 +553,9 @@
         ],
         "modo": "avion",
         "envioUSD": 148.5,
-        "servicioUSD": 45,
-        "totalUSD": 418.5,
-        "anticipoUSD": 41.85
+        "servicioUSD": 33.75,
+        "totalUSD": 407.25,
+        "anticipoUSD": 40.73
       },
       {
         "articulos": [
@@ -572,9 +572,9 @@
         ],
         "modo": "barco",
         "envioUSD": 7,
-        "servicioUSD": 6.2,
-        "totalUSD": 44.2,
-        "anticipoUSD": 4.42
+        "servicioUSD": 4.65,
+        "totalUSD": 42.65,
+        "anticipoUSD": 4.26
       },
       {
         "articulos": [
@@ -591,9 +591,9 @@
         ],
         "modo": "avion",
         "envioUSD": 13,
-        "servicioUSD": 6.2,
-        "totalUSD": 50.2,
-        "anticipoUSD": 5.02
+        "servicioUSD": 4.65,
+        "totalUSD": 48.65,
+        "anticipoUSD": 4.87
       }
     ]
   },
