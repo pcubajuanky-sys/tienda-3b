@@ -5,6 +5,7 @@
 .cn-main { padding-bottom: 40px; }
 
 .cn-portada { text-align: center; padding: 18px 0 6px; }
+.cn-emblema { width: 140px; height: 140px; display: block; margin: 0 auto 10px; }
 .cn-portada h1 { margin: 0; font-size: 30px; letter-spacing: .5px; }
 .cn-lema { margin: 6px 0 0; color: var(--text-2); font-size: 15px; }
 .cn-entregados {

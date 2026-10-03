@@ -118,6 +118,14 @@ function pintar() {
 
   renderRef();
 
+  // La pastilla del taxi: solo si el otro negocio esta encendido. Gemelo de
+  // renderMundos() de app.js. El interruptor viaja en conectados.json.
+  const taxi = el('mundo-taxi');
+  if (taxi) {
+    taxi.hidden = !CN.taxiActivo;
+    if (window.Mundos) window.Mundos.refrescar();
+  }
+
   // Apagado: el cliente no se queda sin puerta, se le manda a WhatsApp.
   if (!CN.activo) {
     el('cn-cuerpo').hidden = true;

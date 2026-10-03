@@ -16,6 +16,9 @@
 <meta property="og:description" content="Calcula lo que cuesta mandar antes de pagar. Precio cerrado, entrega en CUP o USD.">
 <meta property="og:url" content="https://www.3bqba.com/remesas">
 <meta property="og:locale" content="es_CU">
+<meta property="og:image" content="https://www.3bqba.com/conectados-emblema.png">
+<meta property="og:image:width" content="320">
+<meta property="og:image:height" content="320">
 
 <link rel="stylesheet" href="estilos.css">
 <link rel="stylesheet" href="conectados.css">
@@ -36,10 +39,12 @@
         <a class="mundo mundo-3b" href="/" title="3B Store">
           <img class="mundo-img" src="/logo-3b.png" width="256" height="256" alt="3B Store — tienda">
         </a>
-        <a class="mundo" href="/taxi" title="Taxi 3B">
+        <a class="mundo" id="mundo-taxi" href="/taxi" hidden title="Taxi 3B">
           <img class="mundo-img" src="/logo-taxi-3b.png" width="256" height="256" alt="Taxi 3B — viajes">
         </a>
-        <!-- El icono de Conectados entra en la Fase C, cuando exista logo-conectados.png -->
+        <a class="mundo mundo-on" href="/remesas" aria-current="page" title="Conectados — Remesas">
+          <img class="mundo-img" src="/logo-conectados.png" width="256" height="256" alt="Conectados — remesas a Cuba">
+        </a>
       </nav>
     </div>
   </header>
@@ -48,6 +53,8 @@
 <main class="wrap cn-main">
 
   <section class="cn-portada">
+    <img class="cn-emblema" src="conectados-emblema.png" width="320" height="320"
+         alt="Conectados — remesas del mundo a Cuba" fetchpriority="high">
     <h1 id="cn-titulo">Conectados</h1>
     <p class="cn-lema" id="cn-lema">Mandas desde donde estés. Llega donde ellos están.</p>
     <p class="cn-entregados" id="cn-entregados" hidden></p>
