@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-02T19:12:35.868Z",
+  "generado": "2026-10-03T00:13:26.038Z",
   "tasa": 775,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -186,6 +186,7 @@
     ],
     "campana": null,
     "taxiActivo": true,
+    "conectadosActivo": false,
     "encargosActivo": true,
     "cierre": {
       "activo": false,
@@ -1047,6 +1048,18 @@
       "moneda": "cup",
       "enOferta": true,
       "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Color"
+        ],
+        "opciones": [
+          "NEGRO",
+          "ROSA",
+          "AZUL",
+          "BLANCO",
+          "AMARILLO"
+        ]
+      },
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
@@ -1325,6 +1338,42 @@
       "precioUSD": 6.45,
       "precioCUP": 5000,
       "moneda": "cup",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
+      "id": "p_1790983047647",
+      "codigo": "NM9F",
+      "name": "Calcomanía para tanque de moto 1",
+      "cat": "Motos / Accesorios",
+      "subcat": "",
+      "notes": "Juego de almohadillas para tanque de motocicleta y protector de tapa de combustible, calcomanías de PVC para protección contra arañazos del tanque.",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790982904/productos/d6fs9nwi1euehielcb1n.jpg",
+      "precioUSD": 5,
+      "precioCUP": 3875,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
+      "id": "p_1790983107410",
+      "codigo": "QXG8",
+      "name": "Calcomanía para tanque de moto 2",
+      "cat": "Motos / Accesorios",
+      "subcat": "",
+      "notes": "Juego de almohadillas para tanque de motocicleta y protector de tapa de combustible, calcomanías de PVC para protección contra arañazos del tanque.",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790983010/productos/lrorlkseo574nqnp1ba6.jpg",
+      "precioUSD": 6,
+      "precioCUP": 4650,
+      "moneda": "usd",
       "enOferta": false,
       "destacado": false,
       "envio": {
@@ -4069,12 +4118,40 @@
       "id": "p_1785877916356",
       "codigo": "C75K",
       "name": "Protector de teléfono para agua",
-      "cat": "Playa",
+      "cat": "Bocinas Celulares y Accesorios",
       "subcat": "",
       "notes": "Protector hermético para celular, permite tomar fotos y utilizar la pantalla bajo el agua sin arriesgar la integridad del teléfono. También muy útil para días de lluvias y personas que su trabajo constante es con las manos mojadas\nColores disponibles 🖤💜🩷",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785877702/productos/dae2dqoqxjjctvsgynmo.jpg",
       "precioUSD": 3,
       "precioCUP": 2325,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Color"
+        ],
+        "opciones": [
+          "NEGRO",
+          "BLANCO",
+          "ROSA"
+        ]
+      },
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
+      "id": "p_1790978748079",
+      "codigo": "TQQ6",
+      "name": "Protector de Xiaomi Note14 pro",
+      "cat": "Bocinas Celulares y Accesorios",
+      "subcat": "",
+      "notes": "Exactamente el diseño de la imagen",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790978626/productos/k3xrqptl8sy6ympxbqbu.jpg",
+      "precioUSD": 5,
+      "precioCUP": 3875,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -4675,11 +4752,11 @@
     {
       "id": "p_1785088536626",
       "codigo": "GTDT",
-      "name": "Soporte de celular y tablets (flexible)",
+      "name": "Soporte de celular y tablets flexible1",
       "cat": "Bocinas Celulares y Accesorios",
       "subcat": "",
-      "notes": "Soporte para teléfono/tablet | Ideal para cocinar, hacer ejercicio, transmisiones en vivo y maratones de películas, colgar tu móvil para ver videos antes de dormir| Estable y firme. Opción de regalo perfecta (Colores blancos- rosados y blancos-azules)",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785088257/productos/r84nf4js0eezueb8admv.jpg",
+      "notes": "Soporte para teléfono/tablet | Ideal para cocinar, hacer ejercicio, transmisiones en vivo y maratones de películas, colgar tu móvil para ver videos antes de dormir| Estable y firme. Opción de regalo perfecta (Color y diseño tal cual la imagen)",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790975519/productos/hmhohaql32jgjrdvqplh.jpg",
       "precioUSD": 4.52,
       "precioCUP": 3500,
       "moneda": "cup",
@@ -4699,13 +4776,40 @@
       }
     },
     {
+      "id": "p_1790975712067",
+      "codigo": "DQCT",
+      "name": "Soporte de sel con brazo flexible 2",
+      "cat": "Bocinas Celulares y Accesorios",
+      "subcat": "",
+      "notes": "",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790975570/productos/u6r6whchv81o5vhwlxgi.jpg",
+      "precioUSD": 6,
+      "precioCUP": 4650,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Color"
+        ],
+        "opciones": [
+          "NEGRO",
+          "CELESTE"
+        ]
+      },
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
       "id": "p_1788546447070",
       "codigo": "G2DK",
-      "name": "Tablet de niño",
+      "name": "Tablet de niñ@",
       "cat": "Bocinas Celulares y Accesorios",
       "subcat": "",
       "notes": "Solo en Rosado con temática de astronauta. Incluye su cable de carga, un juego de audífonos de cable y un protector con sistema de apollo para mesa y para mejor sostén manual\nCaracterísticas:\nAndroid 14\n7 pulgadas\nWifi 5G\nBatería de gran Capacidad 4500mAh\nDoble camara\n4GB de ram\n128GB de almacenamiento\nPantalla IPS HD de 1280*800 de resolución",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788546279/productos/uzesxbrip8o2exboddhu.jpg",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790970235/productos/g1lizzkonvjifukldpqj.jpg",
       "precioUSD": 58,
       "precioCUP": 44950,
       "moneda": "usd",
@@ -4837,24 +4941,6 @@
       "precioUSD": 1,
       "precioCUP": 775,
       "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
-      }
-    },
-    {
-      "id": "p_1788235176773",
-      "codigo": "DW5D",
-      "name": "Toallitas de floresitas",
-      "cat": "Hogar",
-      "subcat": "",
-      "notes": "Estética, calidad y suavidad. Todo en uno y a un súper precio",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788235088/productos/xymxcbmbcbvvwt3phemd.jpg",
-      "precioUSD": 0.65,
-      "precioCUP": 500,
-      "moneda": "cup",
       "enOferta": false,
       "destacado": false,
       "envio": {
