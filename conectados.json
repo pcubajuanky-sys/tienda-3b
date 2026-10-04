@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-04T02:19:50.828Z",
+  "generado": "2026-10-04T02:22:39.392Z",
   "vigenciaHoras": 6,
   "activo": true,
   "tasa": 780,
@@ -43,7 +43,29 @@
     "maximoUSD": 2000,
     "feeFijoUSD": 0
   },
-  "entregas": [],
+  "entregas": [
+    {
+      "id": "e17910805253910",
+      "nombre": "Efectivo Cup",
+      "moneda": "CUP",
+      "recargoPct": 0,
+      "nota": ""
+    },
+    {
+      "id": "e17910805253911",
+      "nombre": "Efectivo USD",
+      "moneda": "CUP",
+      "recargoPct": 0,
+      "nota": ""
+    },
+    {
+      "id": "e17910805253912",
+      "nombre": "Transferencia Cup",
+      "moneda": "CUP",
+      "recargoPct": 0,
+      "nota": ""
+    }
+  ],
   "pagos": [
     {
       "id": "p17910798046120",
