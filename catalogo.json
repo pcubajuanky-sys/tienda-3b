@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-04T02:05:28.771Z",
+  "generado": "2026-10-04T02:14:49.816Z",
   "tasa": 780,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -177,15 +177,15 @@
     "mensajeriaCUP": 150,
     "zonasMensajeria": [
       {
-        "id": "zm_semilla",
+        "id": "zm_1791080073880",
         "nombre": "San Antonio",
         "tarifaCUP": 150,
         "pordefecto": true,
         "umbralGratisCUP": 1500
       }
     ],
-    "absorbePct": 0,
-    "redondeoCUP": 0,
+    "absorbePct": 10,
+    "redondeoCUP": 50,
     "politica": "Revisa toda tu mercancía delante de la mensajera. Una vez que se va, no aceptamos devoluciones. Si la mensajería era incluida y al revisar decides no quedarte el producto, la mensajería se paga igual, porque la mensajera ya hizo el viaje.",
     "grupoWA": "https://chat.whatsapp.com/BragbcwxeYrKrL0DwjrGbQ?s=sw&p=a&ilr=4",
     "pagoUrl": "https://j3b.qvpay.me/",
@@ -201,7 +201,7 @@
     ],
     "campana": null,
     "taxiActivo": true,
-    "conectadosActivo": false,
+    "conectadosActivo": true,
     "encargosActivo": true,
     "cierre": {
       "activo": false,
