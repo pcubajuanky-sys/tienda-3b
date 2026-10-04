@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-04T19:17:51.507Z",
+  "generado": "2026-10-04T21:55:59.363Z",
   "tasa": 785,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -770,7 +770,7 @@
       "id": "p_1787110390009",
       "codigo": "KLNL",
       "name": "Alarma de puertas y ventanas",
-      "cat": "Hogar",
+      "cat": "Electrodomésticos",
       "subcat": "",
       "notes": "Alarma ideal para la protección de su casa, de habitaciones, closets o incluso gavetas, TODA SEGURIDAD ES POCA EN ESTOS TIEMPOS!!",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787110254/productos/isqaptoba6wgp0ogrwni.jpg",
@@ -1028,24 +1028,6 @@
       "subcat": "",
       "notes": "Audífonos inalámbricos tipo casco, con almohadillas acolchadas para uso prolongado",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790965764/productos/hfwadlmy4ytfprylj2y1.jpg",
-      "precioUSD": 6,
-      "precioCUP": 4710,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      }
-    },
-    {
-      "id": "p_1784919190954",
-      "codigo": "FPUF",
-      "name": "Audífonos de Bluetooth tipo Casco 1",
-      "cat": "Bocinas Celulares y Accesorios",
-      "subcat": "",
-      "notes": "Audífonos inalámbricos tipo casco, con almohadillas acolchadas para uso prolongado",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1784919017/productos/ymppx6ylkp13y8c2vhx6.jpg",
       "precioUSD": 6,
       "precioCUP": 4710,
       "moneda": "usd",
@@ -1451,32 +1433,6 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      }
-    },
-    {
-      "id": "p_1789009670078",
-      "codigo": "9C9Q",
-      "name": "Cartera billetera",
-      "cat": "Bolsos Carteras Mochilas monederos",
-      "subcat": "",
-      "notes": "Útil,ligera, con varios compartimentos para billetes 💵 , tarjetas 💳 y documentos. Regalo perfecto para pareja, papá o maestros",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789009495/productos/sgovgdklrsvqo2kjornd.jpg",
-      "precioUSD": 3,
-      "precioCUP": 2355,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "variantes": {
-        "ejes": [
-          "Color"
-        ],
-        "opciones": [
-          "MARRÓN"
-        ]
-      },
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -1992,6 +1948,15 @@
       "moneda": "cup",
       "enOferta": false,
       "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Color"
+        ],
+        "opciones": [
+          "AMARILLO",
+          "ROSA OSCURO"
+        ]
+      },
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
@@ -2319,6 +2284,24 @@
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
+      }
+    },
+    {
+      "id": "p_1791143406938",
+      "codigo": "58XL",
+      "name": "Juego de 5 Calderos de acero inoxidable",
+      "cat": "Electrodomésticos",
+      "subcat": "",
+      "notes": "El conjunto cuenta con 10 piezas. 5 Calderos de acero inoxidable con sus 5 tapas de cristal. Alta calidad y resistencia, todo es metálico,incluso las asas y la copita de las tapas, nada plástico. Ideal para todo tipo de fogones: inducción, infrarrojo,gas, etc... Lo mejor para la cocina, no se pegan los alimentos,no se ralla con el uso ni se desgasta,no pierde color ni propiedades el material, puede limpiarse con paños de aluminio sin que le afecte. Lo mejor para la cocina cubana.",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791143110/productos/pn03og4qehjxbqxyxqpn.jpg",
+      "precioUSD": 42,
+      "precioCUP": 32970,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
       }
     },
     {
@@ -4495,24 +4478,6 @@
       }
     },
     {
-      "id": "p_1788528610951",
-      "codigo": "L53P",
-      "name": "Ratón inalámbrico",
-      "cat": "Electrodomésticos",
-      "subcat": "",
-      "notes": "Ratón Inalámbrico Silencioso – Ratón Inalámbrico para Computadora, Ratón para Laptop, Ratón USB, Ratón para Chromebook, Ratón Inalámbrico, Ratón Inalámbrico, Ratón para PC, Ratones para Computadora, Ratón Silencioso",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788528508/productos/te3bwxztbrhsvbm7kjgt.jpg",
-      "precioUSD": 15,
-      "precioCUP": 11775,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      }
-    },
-    {
       "id": "p_1788528531092",
       "codigo": "YVVR",
       "name": "Ratón inalámbrico (negro y gris)",
@@ -4651,7 +4616,6 @@
         ],
         "opciones": [
           "A",
-          "B",
           "C",
           "D",
           "E",
@@ -4682,8 +4646,6 @@
           "Diseño"
         ],
         "opciones": [
-          "A",
-          "B",
           "C"
         ]
       },
@@ -4949,8 +4911,7 @@
           "Color"
         ],
         "opciones": [
-          "ROSA",
-          "AZUL"
+          "ROSA"
         ]
       },
       "envio": {
