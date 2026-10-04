@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-04T02:22:39.392Z",
+  "generado": "2026-10-04T02:24:28.484Z",
   "vigenciaHoras": 6,
   "activo": true,
   "tasa": 780,
@@ -27,7 +27,7 @@
         "pct": 7
       },
       {
-        "hastaUSD": 500,
+        "hastaUSD": 600,
         "pct": 6
       },
       {
