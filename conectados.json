@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-04T02:17:15.070Z",
+  "generado": "2026-10-04T02:19:50.828Z",
   "vigenciaHoras": 6,
   "activo": true,
   "tasa": 780,
@@ -47,8 +47,13 @@
   "pagos": [
     {
       "id": "p17910798046120",
-      "nombre": "Usdr",
-      "paises": "Todos"
+      "nombre": "Zelle",
+      "paises": "EU"
+    },
+    {
+      "id": "p17910803866501",
+      "nombre": "Usdt",
+      "paises": "Cualquier país"
     }
   ],
   "comisionGestorPct": 0,
