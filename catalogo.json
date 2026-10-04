@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-03T21:55:22.614Z",
+  "generado": "2026-10-04T02:05:28.771Z",
   "tasa": 780,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -172,9 +172,20 @@
     "zonas": "Repartimos a domicilio coordinando por WhatsApp. Muchos productos llevan mensajería gratis en San Antonio; en otras zonas el costo depende del destino y del pedido, y te lo confirmamos antes de cerrar.",
     "facebook": "",
     "email": "",
-    "envioGratisCUP": 2000,
+    "envioGratisCUP": 1500,
     "envioGratisTexto": "Aplica a nuestras zonas de reparto habituales; fuera de ellas lo confirmamos por WhatsApp.",
     "mensajeriaCUP": 150,
+    "zonasMensajeria": [
+      {
+        "id": "zm_semilla",
+        "nombre": "San Antonio",
+        "tarifaCUP": 150,
+        "pordefecto": true,
+        "umbralGratisCUP": 1500
+      }
+    ],
+    "absorbePct": 0,
+    "redondeoCUP": 0,
     "politica": "Revisa toda tu mercancía delante de la mensajera. Una vez que se va, no aceptamos devoluciones. Si la mensajería era incluida y al revisar decides no quedarte el producto, la mensajería se paga igual, porque la mensajera ya hizo el viaje.",
     "grupoWA": "https://chat.whatsapp.com/BragbcwxeYrKrL0DwjrGbQ?s=sw&p=a&ilr=4",
     "pagoUrl": "https://j3b.qvpay.me/",
@@ -684,8 +695,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -702,8 +713,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -720,8 +731,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -747,8 +758,8 @@
         ]
       },
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
       }
     },
     {
@@ -765,8 +776,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
       }
     },
     {
@@ -783,8 +794,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -801,8 +812,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -819,8 +830,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -846,8 +857,8 @@
         ]
       },
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -873,8 +884,8 @@
         ]
       },
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -891,8 +902,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -909,8 +920,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -927,8 +938,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -945,8 +956,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -963,8 +974,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -1065,8 +1076,8 @@
         ]
       },
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       },
       "precioNormalUSD": 0.77,
       "precioNormalCUP": 600
@@ -1157,8 +1168,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -1255,8 +1266,8 @@
         ]
       },
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -1327,8 +1338,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
       }
     },
     {
@@ -1345,8 +1356,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -1497,8 +1508,8 @@
       "enOferta": true,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       },
       "precioNormalUSD": 1.92,
       "precioNormalCUP": 1500
@@ -1535,8 +1546,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -1553,8 +1564,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
       }
     },
     {
@@ -1571,8 +1582,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
       }
     },
     {
@@ -1589,8 +1600,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
       }
     },
     {
@@ -1607,8 +1618,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
       }
     },
     {
@@ -1715,8 +1726,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
       }
     },
     {
@@ -1733,8 +1744,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -1769,8 +1780,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -1823,8 +1834,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -1841,8 +1852,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -1877,8 +1888,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
       }
     },
     {
@@ -1913,8 +1924,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
       }
     },
     {
@@ -1940,8 +1951,8 @@
         ]
       },
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -1958,8 +1969,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -2042,8 +2053,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
       }
     },
     {
@@ -2078,8 +2089,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -2096,8 +2107,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
       }
     },
     {
@@ -2122,8 +2133,8 @@
         ]
       },
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -2140,8 +2151,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -2194,8 +2205,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -2302,8 +2313,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -2320,8 +2331,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
       }
     },
     {
@@ -2338,8 +2349,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -2392,8 +2403,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -2424,8 +2435,8 @@
         ]
       },
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
       }
     },
     {
@@ -2585,8 +2596,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -2603,8 +2614,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -2621,8 +2632,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -2639,8 +2650,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -2657,8 +2668,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -2707,8 +2718,8 @@
         ]
       },
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -2725,8 +2736,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
       }
     },
     {
@@ -2743,8 +2754,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -2761,8 +2772,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -2797,8 +2808,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -2815,8 +2826,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -2846,8 +2857,8 @@
         ]
       },
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -2900,8 +2911,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -2918,8 +2929,8 @@
       "enOferta": true,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       },
       "precioNormalUSD": 1.92,
       "precioNormalCUP": 1500
@@ -2992,8 +3003,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -3010,8 +3021,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -3414,8 +3425,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
       }
     },
     {
@@ -3432,8 +3443,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -3468,8 +3479,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -3486,8 +3497,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -3504,8 +3515,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -3522,8 +3533,8 @@
       "enOferta": true,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       },
       "precioNormalUSD": 0.87,
       "precioNormalCUP": 680
@@ -3560,8 +3571,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
       }
     },
     {
@@ -3596,8 +3607,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
       }
     },
     {
@@ -3632,8 +3643,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -3650,8 +3661,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -3668,8 +3679,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -3686,8 +3697,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
       }
     },
     {
@@ -3713,8 +3724,8 @@
         ]
       },
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
       }
     },
     {
@@ -3731,8 +3742,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -3803,8 +3814,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -3821,8 +3832,8 @@
       "enOferta": true,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       },
       "precioNormalUSD": 0.64,
       "precioNormalCUP": 500
@@ -3841,8 +3852,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -3859,8 +3870,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -3877,8 +3888,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -3895,8 +3906,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -3913,8 +3924,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -3931,8 +3942,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -3949,8 +3960,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -3967,8 +3978,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -3985,8 +3996,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
       }
     },
     {
@@ -4003,8 +4014,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
       }
     },
     {
@@ -4021,8 +4032,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -4057,8 +4068,8 @@
       "enOferta": true,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       },
       "precioNormalUSD": 0.64,
       "precioNormalCUP": 500
@@ -4077,8 +4088,8 @@
       "enOferta": true,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       },
       "precioNormalUSD": 1.67,
       "precioNormalCUP": 1300
@@ -4097,8 +4108,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -4161,8 +4172,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -4401,8 +4412,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
       }
     },
     {
@@ -4564,8 +4575,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
       }
     },
     {
@@ -4582,8 +4593,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
       }
     },
     {
@@ -4696,8 +4707,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -4714,8 +4725,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -4884,8 +4895,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -4895,16 +4906,18 @@
       "cat": "Electrodomésticos",
       "subcat": "",
       "notes": "Timbre Inalámbrico Impermeable, Funciona a 100 Metros, 36 Tonos y Volumen Ajustable, 2 Receptores y 1 Transmisor Remoto con Botón de Presión",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788537859/productos/fyws5sgxpr7nc8swb88q.jpg",
-      "precioUSD": 16,
-      "precioCUP": 12480,
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791068190/productos/jzlmckf3rt0moel6n6nk.jpg",
+      "precioUSD": 15,
+      "precioCUP": 11700,
       "moneda": "usd",
-      "enOferta": false,
+      "enOferta": true,
       "destacado": false,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "precioNormalUSD": 16,
+      "precioNormalCUP": 12480
     },
     {
       "id": "p_1789425875477",
@@ -4920,8 +4933,8 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -4938,8 +4951,26 @@
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
+      }
+    },
+    {
+      "id": "p_1780346613571",
+      "codigo": "YRGG",
+      "name": "Tomacorrientes",
+      "cat": "Ferretería",
+      "subcat": "",
+      "notes": "Tomacorrientes de 20A Maxima Calidad Ideal para súper consumo,no se derriten",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791079338/productos/cfkfobz84waxqznqhbq2.jpg",
+      "precioUSD": 3,
+      "precioCUP": 2340,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
       }
     },
     {
@@ -4964,8 +4995,8 @@
         ]
       },
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 2,000 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
