@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-04T07:28:11.259Z",
+  "generado": "2026-10-04T18:28:11.564Z",
   "tasa": 780,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -617,15 +617,17 @@
       "subcat": "",
       "notes": "Abrigo de perrito pequeño, dígase Chihuahua, ratonero o alguna raza sobre esa talla\nTela gruesa y esponjosa",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786921728/productos/giihqmplkgyweovdisky.jpg",
-      "precioUSD": 6,
-      "precioCUP": 4680,
+      "precioUSD": 5,
+      "precioCUP": 3900,
       "moneda": "usd",
-      "enOferta": false,
+      "enOferta": true,
       "destacado": false,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "precioNormalUSD": 6,
+      "precioNormalCUP": 4680
     },
     {
       "id": "p_1786921926228",
@@ -635,15 +637,17 @@
       "subcat": "",
       "notes": "Abrigo de perrito pequeño, dígase Chihuahua, ratonero o alguna raza sobre esa talla\nTela gruesa y esponjosa",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786921857/productos/w7gntcvjf4co0qn3tben.jpg",
-      "precioUSD": 6,
-      "precioCUP": 4680,
+      "precioUSD": 5,
+      "precioCUP": 3900,
       "moneda": "usd",
-      "enOferta": false,
+      "enOferta": true,
       "destacado": false,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "precioNormalUSD": 6,
+      "precioNormalCUP": 4680
     },
     {
       "id": "p_1790619584689",
@@ -986,15 +990,17 @@
       "subcat": "",
       "notes": "Color gris 🩶\nIdeal para perros entre 9-14lb(ajustable)\nDetalles reflectantes para evitar accidentes\nNo incluye correa",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786922159/productos/wjwhhkxhhgxu9wzygnp6.jpg",
-      "precioUSD": 8,
-      "precioCUP": 6240,
+      "precioUSD": 7,
+      "precioCUP": 5460,
       "moneda": "usd",
-      "enOferta": false,
+      "enOferta": true,
       "destacado": false,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "precioNormalUSD": 8,
+      "precioNormalCUP": 6240
     },
     {
       "id": "p_1790965760166",
@@ -1749,6 +1755,24 @@
       }
     },
     {
+      "id": "p_1791132152189",
+      "codigo": "7J6N",
+      "name": "Correa retractil",
+      "cat": "Mascotas",
+      "subcat": "",
+      "notes": "Correa retráctil para mascotas, diseño colorido de huellas de patas, correa portátil y duradera de 3 m para gatos y perros, ideal para paseos al aire libre y tiempo de juego",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791131922/productos/l6ihxpmy86k5kksbe8zv.jpg",
+      "precioUSD": 12,
+      "precioCUP": 9360,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
       "id": "p_1788907857613",
       "codigo": "DNHA",
       "name": "Creatina Monohidratada Micronizada",
@@ -2318,6 +2342,24 @@
       }
     },
     {
+      "id": "p_1791138282149",
+      "codigo": "BGXQ",
+      "name": "Kit de Máquinas de Pelar y Afeitar",
+      "cat": "Electrodomésticos",
+      "subcat": "",
+      "notes": "Kit de afeitado y corte de pelo para hombre de 3 piezas. Set de caja de regalo para el Día de San Valentín. Recargable por USB. Regalo para novio, regalo del Día del Padre, regalo de cumpleaños, regalo de festividades",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791138172/productos/q6cquakboa0pgukho4am.jpg",
+      "precioUSD": 30,
+      "precioCUP": 23400,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
       "id": "p_1782259495565",
       "codigo": "2Q88",
       "name": "Kit de pinzas de cejas",
@@ -2720,6 +2762,24 @@
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
+      }
+    },
+    {
+      "id": "p_1791138353006",
+      "codigo": "4KZR",
+      "name": "Máquina de Pelar Profesional",
+      "cat": "Electrodomésticos",
+      "subcat": "",
+      "notes": "Juego de cortapelos y recortadora de barba para hombre. Cortapelos para corte de pelo, recargable por USB, apto para uso doméstico, incluye 8 peines guía, peine para el pelo, cepillo de limpieza - Regalo para hombre para el Día del Padre, cumpleaños, Navidad",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791138266/productos/vqp2pbiphokf1gaqrklt.jpg",
+      "precioUSD": 15,
+      "precioCUP": 11700,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
       }
     },
     {
@@ -3181,15 +3241,17 @@
       "subcat": "",
       "notes": "Mono enterizo para perritos y gatitos. 3 tallas disponibles,desde Chihuahua hasta pequines o demás razas de esas tallas\nTela elastizada y cómoda",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786921895/productos/u8h2hdgunqdqb7qb2zvc.jpg",
-      "precioUSD": 8,
-      "precioCUP": 6240,
+      "precioUSD": 7,
+      "precioCUP": 5460,
       "moneda": "usd",
-      "enOferta": false,
+      "enOferta": true,
       "destacado": false,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "precioNormalUSD": 8,
+      "precioNormalCUP": 6240
     },
     {
       "id": "p_1788897850953",
