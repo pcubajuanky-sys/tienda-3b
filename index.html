@@ -164,6 +164,32 @@
     </div>
   </section>
 
+  <!-- Servicios de 3B (taxi y remesas), entre las categorias y la parrilla: al final de la pagina quedaba a 45.400px y nadie la veia. NO es una categoria: una categoria sin productos no se pinta
+       (app.js, renderCategorias3D), asi que esto es una seccion propia. Oculta por defecto;
+       renderServicios() (app.js) la destapa con tienda.taxiActivo / tienda.conectadosActivo.
+       Sin onclick: es un enlace de verdad (la CSP bloquea los manejadores en linea). -->
+  <section id="servicios" class="servicios wrap" hidden aria-labelledby="servicios-titulo">
+    <h2 id="servicios-titulo" class="servicios-titulo">Servicios</h2>
+    <div class="servicios-lista">
+      <article class="serv" id="serv-taxi" hidden>
+        <div class="serv-banner"><img src="taxi-portada.jpg" width="1000" height="450" loading="lazy" alt="Taxi 3B"></div>
+        <div class="serv-cuerpo">
+          <h3 class="serv-nombre">Taxi 3B</h3>
+          <p class="serv-texto">Viajas más, pagas menos.</p>
+          <a class="btn btn-primario serv-btn" href="/taxi">Ver el taxi <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+      <article class="serv" id="serv-remesas" hidden>
+        <div class="serv-banner serv-banner-emblema"><img src="conectados-emblema.png" width="320" height="320" loading="lazy" alt="Conectados — remesas a Cuba"></div>
+        <div class="serv-cuerpo">
+          <h3 class="serv-nombre">Remesas a Cuba</h3>
+          <p class="serv-texto">Calcula antes de pagar.</p>
+          <a class="btn btn-primario serv-btn" href="/remesas">Calcular mi remesa <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+    </div>
+  </section>
+
   <main class="wrap" id="catalogo">
     <section id="mas-vendidos" class="mv" hidden aria-labelledby="mv-titulo">
       <h2 id="mv-titulo" class="mv-titulo">Los más vendidos</h2>
@@ -192,31 +218,6 @@
       <p>No pudimos cargar el catálogo. Revisa tu conexión e intenta de nuevo.</p>
       <button id="btn-reintentar" class="btn btn-suave btn-secundario" type="button">Reintentar</button>
     </div>
-    <!-- Otros servicios de 3B. NO es una categoria: una categoria sin productos no se pinta
-         (app.js, renderCategorias3D), asi que esto es una seccion propia. Oculta por defecto;
-         renderServicios() (app.js) la destapa con tienda.taxiActivo / tienda.conectadosActivo.
-         Sin onclick: es un enlace de verdad (la CSP bloquea los manejadores en linea). -->
-    <section id="servicios" class="servicios" hidden aria-labelledby="servicios-titulo">
-      <h2 id="servicios-titulo" class="servicios-titulo">Otros servicios de 3B</h2>
-      <div class="servicios-lista">
-        <article class="serv" id="serv-taxi" hidden>
-          <div class="serv-banner"><img src="taxi-portada.jpg" width="1000" height="450" loading="lazy" alt="Taxi 3B"></div>
-          <div class="serv-cuerpo">
-            <h3 class="serv-nombre">Taxi 3B</h3>
-            <p class="serv-texto">Viajas más, pagas menos. El precio queda acordado antes de salir.</p>
-            <a class="btn btn-primario serv-btn" href="/taxi">Ver el taxi <span aria-hidden="true">→</span></a>
-          </div>
-        </article>
-        <article class="serv" id="serv-remesas" hidden>
-          <div class="serv-banner serv-banner-emblema"><img src="conectados-emblema.png" width="320" height="320" loading="lazy" alt="Conectados — remesas a Cuba"></div>
-          <div class="serv-cuerpo">
-            <h3 class="serv-nombre">Remesas a Cuba</h3>
-            <p class="serv-texto">Desde cualquier parte del mundo. Calcula lo que cuesta antes de pagar.</p>
-            <a class="btn btn-primario serv-btn" href="/remesas">Calcular mi remesa <span aria-hidden="true">→</span></a>
-          </div>
-        </article>
-      </div>
-    </section>
   </main>
 
   <!-- Carrito lateral: solo visible en escritorio (≥1024px, ver estilos.css).

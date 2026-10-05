@@ -482,7 +482,7 @@ main{padding-top:20px}
   /* min-width:0 — sin esto, el ancho natural de la tira de más vendidos
      (max-content) estira a #catalogo por encima de su columna de 824px y se
      mete debajo del carrito lateral. minmax(0,1fr) sujeta la PISTA, no el ÍTEM. */
-  #catalogo{grid-column:1;grid-row:2;min-width:0}
+  #catalogo{grid-column:1;min-width:0}   /* sin grid-row fijo: #servicios (opcional) va entre las categorias y el */
 }
 
 /* ── Carrito lateral — solo escritorio (≥1024px) ──
@@ -1057,27 +1057,41 @@ button.footer-link{background:none;border:none;font-family:inherit;cursor:pointe
 .enc-pausado-titulo{font-size:var(--t-2xl);font-weight:800;line-height:1.2;letter-spacing:-.01em;color:var(--brand)}
 .enc-pausado-texto{font-size:var(--t-md);line-height:1.55;color:var(--text-2);max-width:44ch;margin:0 auto}
 
-/* ── Otros servicios de 3B (taxi, remesas) ──
-   Seccion propia, DEBAJO de la parrilla: quien entra a comprar, compra. Solo tokens
-   existentes (--surface, --border, --text*, --radio-card…) para que el modo oscuro la invierta. */
-.servicios{margin:var(--e5) 0 var(--e3)}
-.servicios-titulo{font-size:var(--t-xl);font-weight:800;line-height:1.25;margin:0 0 var(--e3)}
-.servicios-lista{display:grid;grid-template-columns:1fr;gap:var(--e3)}
+/* ── Servicios de 3B (taxi, remesas) ──
+   Entre las categorias y la parrilla (antes iba al final y quedaba a 45.400px: nadie la veia).
+   Por eso es COMPACTA: dos tarjetas lado a lado tambien a 375px, banner de una tira y una linea
+   de texto. Solo tokens existentes (--surface, --border, --text*, --brand...) para que el modo
+   oscuro la invierta. El enlace cubre toda la tarjeta (::after) y se ve como texto, no como boton. */
+.contenido .servicios{margin-top:var(--e3);margin-bottom:var(--e3)}
+.servicios-titulo{font-size:var(--t-xl);font-weight:800;letter-spacing:-.01em;line-height:1.25;margin:0 0 var(--e1)}
+.servicios-lista{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--e1)}
 .serv{
-  display:flex;flex-direction:column;min-width:0;overflow:hidden;
+  position:relative;display:flex;flex-direction:column;min-width:0;overflow:hidden;
   background:var(--surface);color:var(--text);
   border:1px solid var(--border);border-radius:var(--radio-card);box-shadow:var(--sombra-1);
 }
 .serv[hidden]{display:none}
-/* Caja con la proporcion de la portada del taxi (1000x450): se ve ENTERA, sin recortar el texto. */
-.serv-banner{position:relative;aspect-ratio:20/9;background:var(--surface-2);overflow:hidden}
-.serv-banner img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.serv-banner{position:relative;height:48px;background:var(--surface-2);overflow:hidden}
+.serv-banner img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 55%;display:block}
 /* El emblema de remesas es un circulo con fondo transparente: se enseña entero, sin recortar. */
-.serv-banner-emblema img{object-fit:contain;padding:var(--e1);box-sizing:border-box}
-.serv-cuerpo{display:flex;flex-direction:column;gap:var(--e1);padding:var(--e3);flex:1}
-.serv-nombre{font-size:var(--t-lg);font-weight:800;line-height:1.3;margin:0}
-.serv-texto{font-size:var(--t-sm);line-height:1.45;color:var(--text-2);margin:0;flex:1}
-.serv-btn{margin-top:var(--e1);width:100%}
-@media (min-width:640px){
-  .servicios-lista{grid-template-columns:repeat(2,minmax(0,1fr))}
+.serv-banner-emblema img{object-fit:contain;object-position:center;padding:2px;box-sizing:border-box}
+.serv-cuerpo{display:flex;flex-direction:column;gap:2px;padding:var(--e1) var(--e2);flex:1}
+.serv-nombre{font-size:var(--t-md);font-weight:800;line-height:1.3;margin:0}
+.serv-texto{font-size:var(--t-xs);line-height:1.35;color:var(--text-2);margin:0;flex:1}
+.serv .serv-btn{
+  background:transparent;color:var(--brand);box-shadow:none;border:0;border-radius:0;
+  min-height:0;padding:0;margin-top:2px;width:auto;justify-content:flex-start;
+  font-size:var(--t-xs);font-weight:700;
+}
+.serv .serv-btn::after{content:"";position:absolute;inset:0}
+.serv .serv-btn:focus-visible{outline:0}
+.serv:has(.serv-btn:focus-visible){outline:3px solid var(--brand);outline-offset:2px}
+@media (min-width:760px){
+  .serv-banner{height:64px}
+  .serv-cuerpo{padding:var(--e2) var(--e3)}
+  .serv-texto{font-size:var(--t-sm)}
+  .serv .serv-btn{font-size:var(--t-sm)}
+}
+@media (min-width:1024px){
+  .servicios{grid-column:1}
 }
