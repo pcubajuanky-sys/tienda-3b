@@ -1198,6 +1198,21 @@ function renderMundos() {
   medirHeader();                                   // la franja cambia el alto de la barra fija
 }
 
+// ── Otros servicios de 3B (taxi y remesas) ──
+// Misma regla que renderMundos: una tarjeta solo se ve si Ruth encendio ESE servicio
+// (catalogo.json -> tienda.taxiActivo / tienda.conectadosActivo). La seccion entera se
+// esconde si no hay ninguno. El texto, el banner y el enlace viven en index.html: del
+// catalogo publico solo viajan los dos interruptores que ya existian.
+function renderServicios() {
+  const t = (CAT && CAT.tienda) || {};
+  const taxi = document.getElementById('serv-taxi');
+  const remesas = document.getElementById('serv-remesas');
+  if (taxi) taxi.hidden = !t.taxiActivo;
+  if (remesas) remesas.hidden = !t.conectadosActivo;
+  const seccion = document.getElementById('servicios');
+  if (seccion) seccion.hidden = !(t.taxiActivo || t.conectadosActivo);
+}
+
 async function cargarCatalogo() {
   document.getElementById('error-carga').hidden = true;
   document.getElementById('vacio').hidden = true;
@@ -1226,6 +1241,7 @@ async function cargarCatalogo() {
   renderCategorias3D();
   renderGrid();
   renderFooterExtra();
+  renderServicios();
   renderPromoEnvio();
   pintarCampana();
   pintarCierre();
