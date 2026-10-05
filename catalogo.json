@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-05T14:48:27.286Z",
+  "generado": "2026-10-05T15:40:12.585Z",
   "tasa": 785,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -2640,24 +2640,6 @@
       }
     },
     {
-      "id": "p_1790796774202",
-      "codigo": "54ND",
-      "name": "Lija de pies recargable",
-      "cat": "Electrodomésticos",
-      "subcat": "",
-      "notes": "Exfoliador eléctrico de pies, herramienta de pedicura 2 en 1 . 3 velocidades ajustables, lima de pies y amoladora de uñas con disco de lijado, herramienta profesional de pulido para manicura para eliminar piel muerta de los pies, callosidades y zonas duras ,regalo de autocuidado para mujeres, mamás, parejas .",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790796551/productos/kwe7fu2g8pws8phgffcr.jpg",
-      "precioUSD": 15,
-      "precioCUP": 11775,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      }
-    },
-    {
       "id": "p_1782339511897",
       "codigo": "K2RE",
       "name": "Lima de pies",
@@ -3058,24 +3040,6 @@
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1781005431/productos/iyjmo4dxvnedrjvbitog.jpg",
       "precioUSD": 17,
       "precioCUP": 13345,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      }
-    },
-    {
-      "id": "p_1788539890691",
-      "codigo": "A9ZJ",
-      "name": "Mini lámpara nocturna",
-      "cat": "Decoración",
-      "subcat": "",
-      "notes": "Linda lámpara de estrellitas y sin ellas, puede ser una luz que abarque todo el cuarto con estrellas o puede ser una pequeña luz colorida. Trae su cable de alimentación. Bajo consumo",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788539742/productos/uhtsctyzbjaw9ttwpwq0.jpg",
-      "precioUSD": 7,
-      "precioCUP": 5495,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
