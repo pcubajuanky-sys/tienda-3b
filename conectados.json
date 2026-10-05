@@ -1,9 +1,9 @@
 {
-  "generado": "2026-10-04T02:28:10.904Z",
+  "generado": "2026-10-05T21:36:18.558Z",
   "vigenciaHoras": 6,
   "activo": true,
   "tasa": 780,
-  "whatsapp": "54978966",
+  "whatsapp": "5354978966",
   "whatsappAltas": "5354978966",
   "marca": {
     "nombre": "Conectados",
@@ -27,12 +27,8 @@
         "pct": 7
       },
       {
-        "hastaUSD": 600,
-        "pct": 6
-      },
-      {
         "hastaUSD": 1000,
-        "pct": 5
+        "pct": 6
       },
       {
         "hastaUSD": 0,
@@ -54,7 +50,7 @@
     {
       "id": "e17910805253911",
       "nombre": "Efectivo USD",
-      "moneda": "CUP",
+      "moneda": "USD",
       "recargoPct": 0,
       "nota": ""
     }
