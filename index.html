@@ -349,6 +349,19 @@
         <span class="campo-error" id="err-dir" hidden>Falta la dirección.</span>
       </label>
       <label class="campo">
+        <span>¿En qué horario puedes recibirlo?</span>
+        <select id="c-horario">
+          <option value="">Elige…</option>
+          <option value="en la mañana">En la mañana</option>
+          <option value="en la tarde">En la tarde</option>
+          <option value="todo el día en casa">Todo el día en casa</option>
+          <option value="a cualquier hora">A cualquier hora</option>
+          <option value="__libre">Otro horario…</option>
+        </select>
+        <input type="text" id="c-horario-libre" placeholder="Escribe tu horario" hidden>
+        <span class="campo-error" id="err-horario" hidden>Dinos cuándo puedes recibirlo.</span>
+      </label>
+      <label class="campo">
         <span>Nota (opcional)</span>
         <textarea id="c-nota" rows="2"></textarea>
       </label>

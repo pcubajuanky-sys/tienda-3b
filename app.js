@@ -1009,6 +1009,26 @@ function marcarError(idCampo, idError, mostrar) {
   document.getElementById(idError).hidden = !mostrar;
 }
 
+// Horario en que el cliente puede recibir (2026-10-06). El vocabulario es el MISMO que
+// el del panel de Stock+ (carrito-horario), para que Envíos y la mensajera lean siempre
+// las mismas cuatro frases. "Otro horario…" abre un campo libre.
+function horarioElegido() {
+  const sel = document.getElementById('c-horario');
+  if (!sel) return '';
+  if (sel.value === '__libre') return document.getElementById('c-horario-libre').value.trim().slice(0, 80);
+  return sel.value;
+}
+
+function engancharHorario() {
+  const sel = document.getElementById('c-horario');
+  const libre = document.getElementById('c-horario-libre');
+  if (!sel || !libre) return;
+  sel.addEventListener('change', () => {
+    libre.hidden = sel.value !== '__libre';
+    if (!libre.hidden) libre.focus();
+  });
+}
+
 function enviarPorWhatsApp(ev) {
   if (ev) ev.preventDefault();
   // Pestaña abierta desde antes de que Ruth cerrara: aquí se corta. La comprobación es
@@ -1026,12 +1046,14 @@ function enviarPorWhatsApp(ev) {
   const tel = document.getElementById('c-tel').value.trim();
   const dir = document.getElementById('c-dir').value.trim();
   const nota = document.getElementById('c-nota').value.trim();
+  const horario = horarioElegido();
 
   marcarError('c-nombre', 'err-nombre', !nombre);
   marcarError('c-tel', 'err-tel', !tel);
   marcarError('c-dir', 'err-dir', !dir);
-  if (!nombre || !tel || !dir) {
-    const primerInvalido = !nombre ? 'c-nombre' : (!tel ? 'c-tel' : 'c-dir');
+  marcarError('c-horario', 'err-horario', !horario);
+  if (!nombre || !tel || !dir || !horario) {
+    const primerInvalido = !nombre ? 'c-nombre' : (!tel ? 'c-tel' : (!dir ? 'c-dir' : 'c-horario'));
     document.getElementById(primerInvalido).focus();
     return;
   }
@@ -1069,7 +1091,7 @@ function enviarPorWhatsApp(ev) {
     lineas.push(`⚠️ Transporte aparte: ${aparteWA.map(({ p }) => p.name).join(', ')} — se coordina por WhatsApp`);
     lineas.push('');
   }
-  lineas.push(`Nombre: ${nombre}`, `Tel: ${tel}`, `Dirección: ${dir}`);
+  lineas.push(`Nombre: ${nombre}`, `Tel: ${tel}`, `Dirección: ${dir}`, `Horario: ${horario}`);
   if (nota) lineas.push(`Nota: ${nota}`);
   const politica = politicaTexto();
   if (politica) lineas.push('', politica);
@@ -1291,6 +1313,7 @@ async function iniciar() {
   document.getElementById('btn-cerrar-carrito-2').addEventListener('click', cerrarCarrito);
   document.getElementById('panel-fondo').addEventListener('click', cerrarCarrito);
   document.getElementById('form-pedido').addEventListener('submit', enviarPorWhatsApp);
+  engancharHorario();
 
   document.getElementById('modal-cerrar').addEventListener('click', cerrarDetalle);
   document.getElementById('modal-fondo').addEventListener('click', cerrarDetalle);
