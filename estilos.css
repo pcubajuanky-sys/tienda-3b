@@ -1072,9 +1072,9 @@ button.footer-link{background:none;border:none;font-family:inherit;cursor:pointe
 .enc-pausado-titulo{font-size:var(--t-2xl);font-weight:800;line-height:1.2;letter-spacing:-.01em;color:var(--brand)}
 .enc-pausado-texto{font-size:var(--t-md);line-height:1.55;color:var(--text-2);max-width:44ch;margin:0 auto}
 
-/* ── Servicios de 3B (taxi, remesas) ──
+/* ── Servicios de 3B (hoy solo el taxi) ──
    Entre las categorias y la parrilla (antes iba al final y quedaba a 45.400px: nadie la veia).
-   Por eso es COMPACTA: dos tarjetas lado a lado tambien a 375px, banner de una tira y una linea
+   Por eso es COMPACTA: hasta dos tarjetas lado a lado tambien a 375px, banner de una tira y una linea
    de texto. Solo tokens existentes (--surface, --border, --text*, --brand...) para que el modo
    oscuro la invierta. El enlace cubre toda la tarjeta (::after) y se ve como texto, no como boton. */
 .contenido .servicios{margin-top:var(--e3);margin-bottom:var(--e3)}
@@ -1088,8 +1088,6 @@ button.footer-link{background:none;border:none;font-family:inherit;cursor:pointe
 .serv[hidden]{display:none}
 .serv-banner{position:relative;height:48px;background:var(--surface-2);overflow:hidden}
 .serv-banner img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 55%;display:block}
-/* El emblema de remesas es un circulo con fondo transparente: se enseña entero, sin recortar. */
-.serv-banner-emblema img{object-fit:contain;object-position:center;padding:2px;box-sizing:border-box}
 .serv-cuerpo{display:flex;flex-direction:column;gap:2px;padding:var(--e1) var(--e2);flex:1}
 .serv-nombre{font-size:var(--t-md);font-weight:800;line-height:1.3;margin:0}
 .serv-texto{font-size:var(--t-xs);line-height:1.35;color:var(--text-2);margin:0;flex:1}
