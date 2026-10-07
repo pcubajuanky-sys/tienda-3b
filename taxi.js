@@ -472,14 +472,6 @@ async function cargar() {
   resolverReferidor();
   renderReferidor();
 
-  // La pastilla de Conectados: la ve quien ya esta en el taxi, si el otro negocio
-  // esta encendido. Gemelo de renderMundos() de app.js.
-  const remesas = document.getElementById('mundo-conectados');
-  if (remesas) {
-    remesas.hidden = !(TX && TX.conectadosActivo);
-    if (window.Mundos) window.Mundos.refrescar();
-  }
-
   // Interruptor: hasta que Ruth lo encienda, el taxi no cotiza.
   if (!TX.activo) {
     el('tx-apagado').hidden = false;
