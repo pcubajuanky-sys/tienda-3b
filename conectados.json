@@ -1,7 +1,7 @@
 {
-  "generado": "2026-10-07T00:36:03.154Z",
+  "generado": "2026-10-07T14:39:16.824Z",
   "vigenciaHoras": 6,
-  "activo": true,
+  "activo": false,
   "tasa": 775,
   "whatsapp": "13055403608",
   "whatsappAltas": "5354978966",
@@ -130,6 +130,10 @@
     {
       "code": "RMUTS",
       "nombre": "Sandra"
+    },
+    {
+      "code": "H9N6E",
+      "nombre": "Raquel"
     }
   ]
 }
