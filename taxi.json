@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-03T00:30:14.981Z",
+  "generado": "2026-10-07T12:11:48.416Z",
   "vigenciaHoras": 48,
   "activo": true,
   "tasa": 775,
@@ -20,7 +20,7 @@
     "factorCompartido": 1.25
   },
   "mostrarDesglose": false,
-  "conectadosActivo": false,
+  "conectadosActivo": true,
   "referidores": [
     {
       "code": "N89WN",
@@ -81,35 +81,14 @@
     {
       "code": "RMUTS",
       "nombre": "Sandra"
+    },
+    {
+      "code": "H9N6E",
+      "nombre": "Raquel"
     }
   ],
   "comisionPorKmCUP": 20,
   "agenda": [
-    {
-      "fecha": "2026-10-02",
-      "manana": false,
-      "tarde": false
-    },
-    {
-      "fecha": "2026-10-03",
-      "manana": false,
-      "tarde": false
-    },
-    {
-      "fecha": "2026-10-04",
-      "manana": false,
-      "tarde": false
-    },
-    {
-      "fecha": "2026-10-05",
-      "manana": false,
-      "tarde": false
-    },
-    {
-      "fecha": "2026-10-06",
-      "manana": false,
-      "tarde": false
-    },
     {
       "fecha": "2026-10-07",
       "manana": false,
@@ -152,6 +131,31 @@
     },
     {
       "fecha": "2026-10-15",
+      "manana": false,
+      "tarde": false
+    },
+    {
+      "fecha": "2026-10-16",
+      "manana": false,
+      "tarde": false
+    },
+    {
+      "fecha": "2026-10-17",
+      "manana": false,
+      "tarde": false
+    },
+    {
+      "fecha": "2026-10-18",
+      "manana": false,
+      "tarde": false
+    },
+    {
+      "fecha": "2026-10-19",
+      "manana": false,
+      "tarde": false
+    },
+    {
+      "fecha": "2026-10-20",
       "manana": false,
       "tarde": false
     }
