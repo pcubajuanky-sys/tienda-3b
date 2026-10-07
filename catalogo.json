@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-07T08:23:48.223Z",
+  "generado": "2026-10-07T12:11:41.755Z",
   "tasa": 775,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -62,6 +62,10 @@
     {
       "code": "RMUTS",
       "nombre": "Sandra"
+    },
+    {
+      "code": "H9N6E",
+      "nombre": "Raquel"
     }
   ],
   "categorias": [
