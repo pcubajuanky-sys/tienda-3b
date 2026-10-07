@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-07T16:43:36.040Z",
+  "generado": "2026-10-07T22:11:58.919Z",
   "tasa": 775,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -821,14 +821,14 @@
       "name": "Anillos de acero quirúrgico",
       "cat": "Reloj y Prendas",
       "subcat": "",
-      "notes": "El precio es por 5 anillos. Puede elegir entre las tallas",
+      "notes": "El precio es por 5 anillos. El paquete trae variedad de tallas y colores tal como en la imagen",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787498630/productos/wuzfqeewkc7rxfvzkhyg.jpg",
       "precioUSD": 1.16,
       "precioCUP": 900,
       "moneda": "cup",
       "enOferta": false,
       "destacado": false,
-      "max": 8,
+      "max": 5,
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
@@ -840,7 +840,7 @@
       "name": "Anillos de acero quirúrgico fluorescentes",
       "cat": "Reloj y Prendas",
       "subcat": "",
-      "notes": "El precio es por 5 anillos. Puede elegir entre las tallas",
+      "notes": "El precio es por 5 anillos. El paquete trae variedad en tallas y colores tal como en la imagen",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787498788/productos/g5e0hvzdgvwx8iud9jfu.jpg",
       "precioUSD": 1.16,
       "precioCUP": 900,
@@ -5455,7 +5455,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 4,
+      "max": 3,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
