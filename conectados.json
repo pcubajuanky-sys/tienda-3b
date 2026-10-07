@@ -1,77 +1,139 @@
 {
- "generado": "2026-10-01T15:04:36.935Z",
- "vigenciaHoras": 6,
- "activo": false,
- "tasa": 755,
- "whatsapp": "5358856820",
- "whatsappAltas": "5354978966",
- "marca": {
-  "nombre": "Conectados",
-  "lema": "Mandas desde donde estés. Llega donde ellos están.",
-  "comoFunciona": "Trabajamos todos los días. Entregas en 24-48 h en Artemisa y La Habana.",
-  "politica": "El dinero se entrega en mano contra firma. Revisa el monto delante de la mensajera.",
-  "aviso": "Las tasas pueden variar durante el día."
- },
- "comision": {
-  "tramos": [
-   {
-    "hastaUSD": 200,
-    "pct": 10
-   },
-   {
-    "hastaUSD": 500,
-    "pct": 8
-   },
-   {
-    "hastaUSD": 0,
-    "pct": 6
-   }
+  "generado": "2026-10-07T14:39:16.824Z",
+  "vigenciaHoras": 6,
+  "activo": false,
+  "tasa": 775,
+  "whatsapp": "13055403608",
+  "whatsappAltas": "5354978966",
+  "marca": {
+    "nombre": "Conectados",
+    "lema": "Mandas desde donde estés. Llega donde ellos están.",
+    "comoFunciona": "",
+    "politica": "",
+    "aviso": ""
+  },
+  "comision": {
+    "tramos": [
+      {
+        "hastaUSD": 40,
+        "pct": 10
+      },
+      {
+        "hastaUSD": 100,
+        "pct": 8
+      },
+      {
+        "hastaUSD": 200,
+        "pct": 7
+      },
+      {
+        "hastaUSD": 1000,
+        "pct": 6
+      },
+      {
+        "hastaUSD": 0,
+        "pct": 5
+      }
+    ],
+    "minimoUSD": 20,
+    "maximoUSD": 2000,
+    "feeFijoUSD": 0
+  },
+  "entregas": [
+    {
+      "id": "e17910805253910",
+      "nombre": "Efectivo Cup",
+      "moneda": "CUP",
+      "recargoPct": 0,
+      "nota": ""
+    },
+    {
+      "id": "e17910805253911",
+      "nombre": "Efectivo USD",
+      "moneda": "USD",
+      "recargoPct": 0,
+      "nota": ""
+    }
   ],
-  "minimoUSD": 20,
-  "maximoUSD": 2000,
-  "feeFijoUSD": 0
- },
- "entregas": [
-  {
-   "id": "cup-domicilio",
-   "nombre": "Efectivo en CUP a domicilio",
-   "moneda": "CUP",
-   "recargoPct": 0,
-   "nota": ""
-  },
-  {
-   "id": "usd-domicilio",
-   "nombre": "Efectivo en USD a domicilio",
-   "moneda": "USD",
-   "recargoPct": 2,
-   "nota": "Solo Artemisa y La Habana."
-  },
-  {
-   "id": "tarjeta-cup",
-   "nombre": "Transferencia a tarjeta CUP",
-   "moneda": "CUP",
-   "recargoPct": 0,
-   "nota": ""
-  }
- ],
- "pagos": [
-  {
-   "id": "zelle",
-   "nombre": "Zelle",
-   "paises": "EE.UU."
-  },
-  {
-   "id": "usdt",
-   "nombre": "USDT (TRC-20)",
-   "paises": "cualquier país"
-  }
- ],
- "comisionGestorPct": 3,
- "entregados": 128,
- "referidores": [
-  {
-   "code": "9H5MM",
-   "nombre": "Elaine Ocampo Pino"
-  }
- ]
+  "pagos": [
+    {
+      "id": "p17910798046120",
+      "nombre": "Zelle",
+      "paises": "EU"
+    },
+    {
+      "id": "p17910803866501",
+      "nombre": "Usdt",
+      "paises": "Cualquier país"
+    }
+  ],
+  "comisionGestorPct": 0,
+  "entregados": 0,
+  "taxiActivo": true,
+  "referidores": [
+    {
+      "code": "N89WN",
+      "nombre": "Diego"
+    },
+    {
+      "code": "9H5MM",
+      "nombre": "Elaine Ocampo Pino"
+    },
+    {
+      "code": "5D9K9",
+      "nombre": "Yasnaya"
+    },
+    {
+      "code": "83FNU",
+      "nombre": "Danay Alvarez González"
+    },
+    {
+      "code": "ZBB9S",
+      "nombre": "Ania Milagros Peraza Tarragó"
+    },
+    {
+      "code": "8F5AX",
+      "nombre": "Débora"
+    },
+    {
+      "code": "D75W3",
+      "nombre": "Lianet Cruz Avila"
+    },
+    {
+      "code": "9SFEV",
+      "nombre": "Nilvi"
+    },
+    {
+      "code": "R7K9J",
+      "nombre": "Saira Ramírez Perez"
+    },
+    {
+      "code": "APB",
+      "nombre": "Angela"
+    },
+    {
+      "code": "EY7R6",
+      "nombre": "Elizabeth Gallardo Alarcón"
+    },
+    {
+      "code": "46R3V",
+      "nombre": "Boris Luís Rodríguez"
+    },
+    {
+      "code": "DZ3AH",
+      "nombre": "Yessy"
+    },
+    {
+      "code": "2PT46",
+      "nombre": "Damaisi"
+    },
+    {
+      "code": "RMUTS",
+      "nombre": "Sandra"
+    },
+    {
+      "code": "H9N6E",
+      "nombre": "Raquel"
+    }
+  ]
 }

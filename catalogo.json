@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-03T00:30:06.632Z",
+  "generado": "2026-10-07T12:11:41.755Z",
   "tasa": 775,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -62,6 +62,10 @@
     {
       "code": "RMUTS",
       "nombre": "Sandra"
+    },
+    {
+      "code": "H9N6E",
+      "nombre": "Raquel"
     }
   ],
   "categorias": [
@@ -174,7 +178,18 @@
     "email": "",
     "envioGratisCUP": 1500,
     "envioGratisTexto": "Aplica a nuestras zonas de reparto habituales; fuera de ellas lo confirmamos por WhatsApp.",
-    "mensajeriaCUP": 100,
+    "mensajeriaCUP": 150,
+    "zonasMensajeria": [
+      {
+        "id": "zm_1791080073880",
+        "nombre": "San Antonio",
+        "tarifaCUP": 150,
+        "pordefecto": true,
+        "umbralGratisCUP": 1500
+      }
+    ],
+    "absorbePct": 10,
+    "redondeoCUP": 50,
     "politica": "Revisa toda tu mercancía delante de la mensajera. Una vez que se va, no aceptamos devoluciones. Si la mensajería era incluida y al revisar decides no quedarte el producto, la mensajería se paga igual, porque la mensajera ya hizo el viaje.",
     "grupoWA": "https://chat.whatsapp.com/BragbcwxeYrKrL0DwjrGbQ?s=sw&p=a&ilr=4",
     "pagoUrl": "https://j3b.qvpay.me/",
@@ -190,7 +205,7 @@
     ],
     "campana": null,
     "taxiActivo": true,
-    "conectadosActivo": false,
+    "conectadosActivo": true,
     "encargosActivo": true,
     "cierre": {
       "activo": false,
@@ -239,11 +254,13 @@
       "shein": {
         "nombre": "Shein",
         "umbralUSD": 30,
+        "impuestoPct": 0,
         "diasHastaNosotros": 7
       },
       "temu": {
         "nombre": "Temu",
         "umbralUSD": 30,
+        "impuestoPct": 0,
         "diasHastaNosotros": 7
       }
     },
@@ -394,7 +411,8 @@
           {
             "tipo": "accesorio",
             "precioUSD": 2,
-            "cantidad": 1
+            "cantidad": 1,
+            "tienda": "shein"
           }
         ],
         "modo": "barco",
@@ -408,7 +426,8 @@
           {
             "tipo": "accesorio",
             "precioUSD": 2,
-            "cantidad": 1
+            "cantidad": 1,
+            "tienda": "shein"
           }
         ],
         "modo": "avion",
@@ -422,7 +441,8 @@
           {
             "tipo": "blusa",
             "precioUSD": 8,
-            "cantidad": 1
+            "cantidad": 1,
+            "tienda": "shein"
           }
         ],
         "modo": "barco",
@@ -436,7 +456,8 @@
           {
             "tipo": "blusa",
             "precioUSD": 8,
-            "cantidad": 1
+            "cantidad": 1,
+            "tienda": "shein"
           }
         ],
         "modo": "avion",
@@ -450,7 +471,8 @@
           {
             "tipo": "jean",
             "precioUSD": 15,
-            "cantidad": 1
+            "cantidad": 1,
+            "tienda": "shein"
           }
         ],
         "modo": "barco",
@@ -464,7 +486,8 @@
           {
             "tipo": "jean",
             "precioUSD": 15,
-            "cantidad": 1
+            "cantidad": 1,
+            "tienda": "shein"
           }
         ],
         "modo": "avion",
@@ -478,7 +501,8 @@
           {
             "tipo": "tenis",
             "precioUSD": 25,
-            "cantidad": 1
+            "cantidad": 1,
+            "tienda": "shein"
           }
         ],
         "modo": "barco",
@@ -492,7 +516,8 @@
           {
             "tipo": "tenis",
             "precioUSD": 25,
-            "cantidad": 1
+            "cantidad": 1,
+            "tienda": "shein"
           }
         ],
         "modo": "avion",
@@ -506,7 +531,8 @@
           {
             "tipo": "jean",
             "precioUSD": 15,
-            "cantidad": 10
+            "cantidad": 10,
+            "tienda": "shein"
           }
         ],
         "modo": "barco",
@@ -520,7 +546,8 @@
           {
             "tipo": "jean",
             "precioUSD": 15,
-            "cantidad": 10
+            "cantidad": 10,
+            "tienda": "shein"
           }
         ],
         "modo": "avion",
@@ -534,7 +561,8 @@
           {
             "tipo": "tenis",
             "precioUSD": 25,
-            "cantidad": 9
+            "cantidad": 9,
+            "tienda": "temu"
           }
         ],
         "modo": "barco",
@@ -548,7 +576,8 @@
           {
             "tipo": "tenis",
             "precioUSD": 25,
-            "cantidad": 9
+            "cantidad": 9,
+            "tienda": "temu"
           }
         ],
         "modo": "avion",
@@ -562,12 +591,14 @@
           {
             "tipo": "blusa",
             "precioUSD": 8,
-            "cantidad": 2
+            "cantidad": 2,
+            "tienda": "shein"
           },
           {
             "tipo": "jean",
             "precioUSD": 15,
-            "cantidad": 1
+            "cantidad": 1,
+            "tienda": "temu"
           }
         ],
         "modo": "barco",
@@ -581,12 +612,14 @@
           {
             "tipo": "blusa",
             "precioUSD": 8,
-            "cantidad": 2
+            "cantidad": 2,
+            "tienda": "shein"
           },
           {
             "tipo": "jean",
             "precioUSD": 15,
-            "cantidad": 1
+            "cantidad": 1,
+            "tienda": "temu"
           }
         ],
         "modo": "avion",
@@ -606,15 +639,17 @@
       "subcat": "",
       "notes": "Abrigo de perrito pequeño, dígase Chihuahua, ratonero o alguna raza sobre esa talla\nTela gruesa y esponjosa",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786921728/productos/giihqmplkgyweovdisky.jpg",
-      "precioUSD": 6,
-      "precioCUP": 4650,
+      "precioUSD": 5,
+      "precioCUP": 3875,
       "moneda": "usd",
-      "enOferta": false,
+      "enOferta": true,
       "destacado": false,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "precioNormalUSD": 6,
+      "precioNormalCUP": 4650
     },
     {
       "id": "p_1786921926228",
@@ -624,15 +659,17 @@
       "subcat": "",
       "notes": "Abrigo de perrito pequeño, dígase Chihuahua, ratonero o alguna raza sobre esa talla\nTela gruesa y esponjosa",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786921857/productos/w7gntcvjf4co0qn3tben.jpg",
-      "precioUSD": 6,
-      "precioCUP": 4650,
+      "precioUSD": 5,
+      "precioCUP": 3875,
       "moneda": "usd",
-      "enOferta": false,
+      "enOferta": true,
       "destacado": false,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "precioNormalUSD": 6,
+      "precioNormalCUP": 4650
     },
     {
       "id": "p_1790619584689",
@@ -685,7 +722,7 @@
       "destacado": false,
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -703,7 +740,7 @@
       "destacado": false,
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -721,7 +758,7 @@
       "destacado": false,
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -742,10 +779,27 @@
           "Color"
         ],
         "opciones": [
-          "BEIGE",
           "NEGRO"
         ]
       },
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
+      "id": "p_1787110390009",
+      "codigo": "KLNL",
+      "name": "Alarma de puertas y ventanas",
+      "cat": "Electrodomésticos",
+      "subcat": "",
+      "notes": "Alarma ideal para la protección de su casa, de habitaciones, closets o incluso gavetas, TODA SEGURIDAD ES POCA EN ESTOS TIEMPOS!!",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787110254/productos/isqaptoba6wgp0ogrwni.jpg",
+      "precioUSD": 2.4,
+      "precioCUP": 1860,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -766,7 +820,7 @@
       "destacado": false,
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -784,7 +838,7 @@
       "destacado": false,
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -802,34 +856,7 @@
       "destacado": false,
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
-      }
-    },
-    {
-      "id": "p_1790793838226",
-      "codigo": "MKET",
-      "name": "Apollo de celular",
-      "cat": "Bocinas Celulares y Accesorios",
-      "subcat": "",
-      "notes": "Apollos plásticos para celulares o tablets. Colores disponibles: 🩷 y 💙",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790793416/productos/rpc68jeplxinlu5sylnt.jpg",
-      "precioUSD": 0.52,
-      "precioCUP": 400,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false,
-      "variantes": {
-        "ejes": [
-          "Colores"
-        ],
-        "opciones": [
-          "ROSA🩷",
-          "AZUL💙"
-        ]
-      },
-      "envio": {
-        "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -856,7 +883,34 @@
       },
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
+      }
+    },
+    {
+      "id": "p_1790793838226",
+      "codigo": "MKET",
+      "name": "Apollos de celular",
+      "cat": "Bocinas Celulares y Accesorios",
+      "subcat": "",
+      "notes": "Apollos plásticos para celulares o tablets. Colores disponibles: 🩷 y 💙",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790793416/productos/rpc68jeplxinlu5sylnt.jpg",
+      "precioUSD": 1,
+      "precioCUP": 775,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Colores"
+        ],
+        "opciones": [
+          "ROSA🩷",
+          "AZUL💙"
+        ]
+      },
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -874,7 +928,7 @@
       "destacado": false,
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -892,7 +946,7 @@
       "destacado": false,
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -910,25 +964,7 @@
       "destacado": false,
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
-      }
-    },
-    {
-      "id": "p_1787498450640",
-      "codigo": "S55V",
-      "name": "Aretitos de fantasía",
-      "cat": "Reloj y Prendas",
-      "subcat": "",
-      "notes": "El precio es por el cartoncillo de 5 pares",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787498339/productos/qerjq0wjoh09c54jwder.jpg",
-      "precioUSD": 0.77,
-      "precioCUP": 600,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -946,7 +982,7 @@
       "destacado": false,
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -957,33 +993,17 @@
       "subcat": "",
       "notes": "Color gris 🩶\nIdeal para perros entre 9-14lb(ajustable)\nDetalles reflectantes para evitar accidentes\nNo incluye correa",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786922159/productos/wjwhhkxhhgxu9wzygnp6.jpg",
-      "precioUSD": 8,
-      "precioCUP": 6200,
+      "precioUSD": 7,
+      "precioCUP": 5425,
       "moneda": "usd",
-      "enOferta": false,
+      "enOferta": true,
       "destacado": false,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
-    },
-    {
-      "id": "p_1786918401932",
-      "codigo": "FWQH",
-      "name": "Atrapa insectos Eléctrico",
-      "cat": "Electrodomésticos",
-      "subcat": "",
-      "notes": "Gran tamaño,ideal para eliminar mosquitos,moscas, moscas de la fruta y demás insectos molestosos. Incluye su cable de conexión y su cadena de colgar.\nNo es recargable",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786918213/productos/tjklhmiqhwxolqzqirrc.jpg",
-      "precioUSD": 25,
-      "precioCUP": 19375,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "precioNormalUSD": 8,
+      "precioNormalCUP": 6200
     },
     {
       "id": "p_1790965760166",
@@ -993,45 +1013,9 @@
       "subcat": "",
       "notes": "Audífonos inalámbricos tipo casco, con almohadillas acolchadas para uso prolongado",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790965642/productos/jss9vmgdeoy0g5alq399.jpg",
-      "precioUSD": 5.92,
-      "precioCUP": 4588,
+      "precioUSD": 6,
+      "precioCUP": 4650,
       "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      }
-    },
-    {
-      "id": "p_1790965878176",
-      "codigo": "MVJ4",
-      "name": "Audífonos Bluetooth tipo Cascos 2",
-      "cat": "Bocinas Celulares y Accesorios",
-      "subcat": "",
-      "notes": "Audífonos inalámbricos tipo casco, con almohadillas acolchadas para uso prolongado",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790965764/productos/hfwadlmy4ytfprylj2y1.jpg",
-      "precioUSD": 5.92,
-      "precioCUP": 4588,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      }
-    },
-    {
-      "id": "p_1784919190954",
-      "codigo": "FPUF",
-      "name": "Audífonos de Bluetooth tipo Casco 1",
-      "cat": "Bocinas Celulares y Accesorios",
-      "subcat": "",
-      "notes": "Audífonos inalámbricos tipo casco, con almohadillas acolchadas para uso prolongado",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1784919017/productos/ymppx6ylkp13y8c2vhx6.jpg",
-      "precioUSD": 5.81,
-      "precioCUP": 4500,
-      "moneda": "cup",
       "enOferta": false,
       "destacado": false,
       "envio": {
@@ -1066,7 +1050,7 @@
       },
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       },
       "precioNormalUSD": 0.77,
       "precioNormalCUP": 600
@@ -1078,7 +1062,7 @@
       "cat": "Bocinas Celulares y Accesorios",
       "subcat": "",
       "notes": "Auriculares Inalámbricos A6S, Audífonos Inalámbricos, Auriculares Internos, Control de Botones, Soporte para Reducción de Ruido en Llamadas, Luz Indicadora de Energía, Calidad de Sonido de Alta Definición, Puerto de Carga Tipo-C [Cable de Carga USB No Incluido]",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787957263/productos/mtfi90mbduejnljjxt53.jpg",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791226956/productos/kedky7empch1tl5jw8m9.jpg",
       "precioUSD": 3.87,
       "precioCUP": 3000,
       "moneda": "cup",
@@ -1090,15 +1074,15 @@
       }
     },
     {
-      "id": "p_1790782043818",
-      "codigo": "FWZY",
-      "name": "Audífonos Inalámbricos E7S TWS",
+      "id": "p_1786803816356",
+      "codigo": "DU4A",
+      "name": "Audífonos inalámbricos X15",
       "cat": "Bocinas Celulares y Accesorios",
       "subcat": "",
-      "notes": "Auriculares Inalámbricos E7S TWS con Estuche de Carga y Pantalla Digital LED, Control Táctil, Sonido 9D, Cancelación de Ruido en Llamadas de Voz, Batería Recargable de Polímero de Litio de 150Mah USB, Compatibilidad Universal",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790781910/productos/zzgc9cymptovjyjnbgmi.jpg",
-      "precioUSD": 4.19,
-      "precioCUP": 3250,
+      "notes": "Audífonos inalámbricos X15, ligeros y con su estuche de carga.",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786803730/productos/p34guyzzkxjrpwyw39ya.jpg",
+      "precioUSD": 4.13,
+      "precioCUP": 3200,
       "moneda": "cup",
       "enOferta": false,
       "destacado": false,
@@ -1140,7 +1124,7 @@
       "destacado": false,
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -1150,7 +1134,7 @@
       "cat": "Bocinas Celulares y Accesorios",
       "subcat": "",
       "notes": "Altavoz Inalámbrico con Sonido HD. Portátil hasta 10H de Reproducción .Entrada AUX y Tarjeta TF y USB . Altavoces Inalámbricos 5.3 para Hogar/Fiesta/Exteriores. Solo e color negro como en la imagen",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789482181/productos/vmca1tktzdqp6ceyyrek.jpg",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791038875/productos/rxotqclqvwihghohipqw.jpg",
       "precioUSD": 25,
       "precioCUP": 19375,
       "moneda": "usd",
@@ -1238,7 +1222,7 @@
       },
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -1302,7 +1286,7 @@
       "cat": "Bocinas Celulares y Accesorios",
       "subcat": "",
       "notes": "Cable de Carga Rápida USB C Cable de Carga USB A a Tipo C Trenzado de Nylon. Calidad Premium. Largo alcance (3metros)",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1781215282/productos/miw34eskqag5c6tny5ja.jpg",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791165695/productos/ccwcaxqppjt5e9gs083u.jpg",
       "precioUSD": 2.32,
       "precioCUP": 1800,
       "moneda": "cup",
@@ -1328,7 +1312,7 @@
       "destacado": false,
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -1422,32 +1406,6 @@
       }
     },
     {
-      "id": "p_1789009670078",
-      "codigo": "9C9Q",
-      "name": "Cartera billetera",
-      "cat": "Bolsos Carteras Mochilas monederos",
-      "subcat": "",
-      "notes": "Útil,ligera, con varios compartimentos para billetes 💵 , tarjetas 💳 y documentos. Regalo perfecto para pareja, papá o maestros",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789009495/productos/sgovgdklrsvqo2kjornd.jpg",
-      "precioUSD": 3,
-      "precioCUP": 2325,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "variantes": {
-        "ejes": [
-          "Color"
-        ],
-        "opciones": [
-          "MARRÓN"
-        ]
-      },
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      }
-    },
-    {
       "id": "p_1788234125684",
       "codigo": "X8RX",
       "name": "Cesta de lavado",
@@ -1480,7 +1438,7 @@
       "destacado": false,
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       },
       "precioNormalUSD": 1.94,
       "precioNormalCUP": 1500
@@ -1518,7 +1476,7 @@
       "destacado": false,
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -1648,6 +1606,24 @@
       }
     },
     {
+      "id": "p_1782340847017",
+      "codigo": "EL4S",
+      "name": "Conjunto de 5 Perfiladores",
+      "cat": "Cuidado Personal",
+      "subcat": "",
+      "notes": "Perfiladores de cejas, bigote y demás. Exelente calidad y comodidad de uso. El precio es por 5 unidades con Mensajería Gratis",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782340778/productos/p9vpyhp3we5xjff90cb0.jpg",
+      "precioUSD": 1,
+      "precioCUP": 775,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
+      }
+    },
+    {
       "id": "p_1786918098322",
       "codigo": "7NQQ",
       "name": "Conjunto de mochila, bolso y más",
@@ -1716,7 +1692,61 @@
       "destacado": false,
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
+      }
+    },
+    {
+      "id": "p_1791132152189",
+      "codigo": "7J6N",
+      "name": "Correa retractil",
+      "cat": "Mascotas",
+      "subcat": "",
+      "notes": "Correa retráctil para mascotas, diseño colorido de huellas de patas, correa portátil y duradera de 3 m para gatos y perros, ideal para paseos al aire libre y tiempo de juego",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791131922/productos/l6ihxpmy86k5kksbe8zv.jpg",
+      "precioUSD": 12,
+      "precioCUP": 9300,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
+      "id": "p_1791230020363",
+      "codigo": "6AGD",
+      "name": "Cortina de luces \"Cuento de hadas\"",
+      "cat": "Decoración",
+      "subcat": "",
+      "notes": "Medidas 3x2metros\nDiseño exacto a la imagen\nAlimentación:pilas AA(no incluídas)",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791229887/productos/wcgjp0rqkewy5yqyy1jx.jpg",
+      "precioUSD": 12,
+      "precioCUP": 9300,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
+      "id": "p_1791230218372",
+      "codigo": "TCUU",
+      "name": "Cortina de luces \"Doradas\"",
+      "cat": "Decoración",
+      "subcat": "",
+      "notes": "Medidas 3x2metros\nDiseño exacto a la imagen\nAlimentación:pilas AA(no incluídas)",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791230118/productos/uexnmjiy6ia14oguvst1.jpg",
+      "precioUSD": 12,
+      "precioCUP": 9300,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
       }
     },
     {
@@ -1752,7 +1782,7 @@
       "destacado": false,
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -1806,7 +1836,7 @@
       "destacado": false,
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -1824,17 +1854,35 @@
       "destacado": false,
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
+      }
+    },
+    {
+      "id": "p_1791314349706",
+      "codigo": "C825",
+      "name": "Estrellas fosforescentes (100 unidades)",
+      "cat": "Decoración",
+      "subcat": "",
+      "notes": "✨100 unidades de  Estrellas fosforescentes que brillan en la oscuridad\nLleva el cielo a tu habitación. Pack de estrellas adhesivas en colores vivos (verde, azul, amarillo y rosa). Ideales para decorar paredes, techos o habitaciones infantiles.\nBrillan varias horas tras absorber luz. Fáciles de colocar y retirar.",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791314215/productos/t8qiszgv8ae7obbtte82.jpg",
+      "precioUSD": 2.19,
+      "precioCUP": 1700,
+      "moneda": "cup",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
       }
     },
     {
       "id": "p_1785733992043",
       "codigo": "5GL5",
-      "name": "Estrellitas Fluorescentes",
+      "name": "Estrellitas Fluorescentes (250 unidades)",
       "cat": "Decoración",
       "subcat": "",
-      "notes": "Paquete de 250 estrellitas con su adhesivo. Puede comprar también el paquete de 100 estrellas por $1700",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785733823/productos/pt9wwvglxcxkdenfe9g7.jpg",
+      "notes": "Paquete de 250 estrellitas con su adhesivo.\nEstrellas fosforescentes que brillan en la oscuridad\nLleva el cielo a tu habitación. Pack de estrellas adhesivas en colores vivos (verde, azul, amarillo y rosa). Ideales para decorar paredes, techos o habitaciones infantiles.\nBrillan varias horas tras absorber luz. Fáciles de colocar y retirar.",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791294581/productos/j5daxkdp8nlct720u1ht.jpg",
       "precioUSD": 4.65,
       "precioCUP": 3600,
       "moneda": "cup",
@@ -1923,7 +1971,7 @@
       },
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -1939,9 +1987,18 @@
       "moneda": "cup",
       "enOferta": false,
       "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Color"
+        ],
+        "opciones": [
+          "AMARILLO",
+          "ROSA OSCURO"
+        ]
+      },
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -1965,100 +2022,6 @@
           "L"
         ]
       },
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      }
-    },
-    {
-      "id": "p_1780608497220",
-      "codigo": "2XN8",
-      "name": "Florecitas tipo Piojitos",
-      "cat": "Cabello",
-      "subcat": "",
-      "notes": "El paquete trae 50Unidades",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1780608383/productos/huixhwzn5cnjfnf3tc3s.jpg",
-      "precioUSD": 2.58,
-      "precioCUP": 2000,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      }
-    },
-    {
-      "id": "p_1780620222381",
-      "codigo": "L4P6",
-      "name": "Flores hawaianas",
-      "cat": "Cabello",
-      "subcat": "",
-      "notes": "10flores por paquete\nMateriales:Flor de goma y gancho metálico",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788131956/productos/pfnnrk7tq9teetv2mucs.jpg",
-      "precioUSD": 2.58,
-      "precioCUP": 2000,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      }
-    },
-    {
-      "id": "p_1781004811363",
-      "codigo": "36CF",
-      "name": "Fogón eléctrico doble",
-      "cat": "Electrodomésticos",
-      "subcat": "",
-      "notes": "Fogón Eléctrico Doble Hornilla – Resistencia Plana Irrompible\nCompatible con todo tipo de calderos. Ideal para uso diario por su durabilidad y eficiencia.\n⚠️ ATENCIÓN: REBAJA POR PEQUEÑO DETALLE\nPequeño golpe en el mueble, debido al transporte.\nNo afecta su funcionamiento, es reparable y muy ligero, pero obviamente deprecia su valor.\n💰 ¡APROVECHA EL PRECIO REBAJADO!",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1784911111/productos/ghxlyikbzu93frj3ojg2.jpg",
-      "precioUSD": 25,
-      "precioCUP": 19375,
-      "moneda": "usd",
-      "enOferta": true,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "precioNormalUSD": 30,
-      "precioNormalCUP": 23250
-    },
-    {
-      "id": "p_1780453229116",
-      "codigo": "NMFB",
-      "name": "Fregona",
-      "cat": "Hogar",
-      "subcat": "",
-      "notes": "Calidad Premium incluye 3 repuestos y dispensador de detergente\nFriegue el piso sin doblar su espalda,sin dañar sus uñas y sin ensuciar sus manos. Son todas ventajas",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1780952475/productos/ci0k4nxjpmk9mfufwb0p.jpg",
-      "precioUSD": 24.57,
-      "precioCUP": 19040,
-      "moneda": "usd",
-      "enOferta": true,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "precioNormalUSD": 30,
-      "precioNormalCUP": 23250
-    },
-    {
-      "id": "p_1785957052228",
-      "codigo": "8X9D",
-      "name": "Gafas Cristal transparente",
-      "cat": "Accesorio de vestir",
-      "subcat": "",
-      "notes": "Protección contra luz azul, ideal para personas que usan mucho pantallas como celulares ,laptops y televisión.\nTambién es un muy buen accesorio para personas que manejan moto en horario nocturno, protege los ojos sin afectar la visibilidad en la oscuridad\nColores disponibles 🩶 🤍",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785956773/productos/gufvuhffd4ibygz29anq.jpg",
-      "precioUSD": 2,
-      "precioCUP": 1550,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -2115,7 +2078,7 @@
       "destacado": false,
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -2154,13 +2117,12 @@
           "Color"
         ],
         "opciones": [
-          "NEGRO",
-          "PLATEADO"
+          "NEGRO"
         ]
       },
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -2178,7 +2140,7 @@
       "destacado": false,
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -2192,24 +2154,6 @@
       "precioUSD": 20,
       "precioCUP": 15500,
       "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      }
-    },
-    {
-      "id": "p_1780608108403",
-      "codigo": "4KVY",
-      "name": "Girasoles y margaritas",
-      "cat": "Cabello",
-      "subcat": "",
-      "notes": "10 Unidades cada paquete\nMateriales:flor de tela y gancho de metal",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788131870/productos/wrto4ojobtjsxqnptdii.jpg",
-      "precioUSD": 1.94,
-      "precioCUP": 1500,
-      "moneda": "cup",
       "enOferta": false,
       "destacado": false,
       "envio": {
@@ -2250,7 +2194,7 @@
       "destacado": false,
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -2358,7 +2302,115 @@
       "destacado": false,
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
+      }
+    },
+    {
+      "id": "p_1791143406938",
+      "codigo": "58XL",
+      "name": "Juego de 5 Calderos de acero inoxidable",
+      "cat": "Hogar",
+      "subcat": "",
+      "notes": "El conjunto cuenta con 10 piezas. 5 Calderos de acero inoxidable con sus 5 tapas de cristal. Alta calidad y resistencia, todo es metálico,incluso las asas y la copita de las tapas, nada plástico. Ideal para todo tipo de fogones: inducción, infrarrojo,gas, etc... Lo mejor para la cocina, no se pegan los alimentos,no se ralla con el uso ni se desgasta,no pierde color ni propiedades el material, puede limpiarse con paños de aluminio sin que le afecte. Lo mejor para la cocina cubana.",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791143110/productos/pn03og4qehjxbqxyxqpn.jpg",
+      "precioUSD": 42,
+      "precioCUP": 32550,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
+      "id": "p_1791140393037",
+      "codigo": "NU4W",
+      "name": "Kit de 30 Globos 💙 💛",
+      "cat": "Decoración",
+      "subcat": "",
+      "notes": "El paquete contiene 30 globos entre dorado,color y con brillos tal como la imagen muestra. Las cantidades de cada diseño están también plasmadas en la imagen.",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791140331/productos/k4egjgvuqqkxvqpdw2mg.jpg",
+      "precioUSD": 7,
+      "precioCUP": 5425,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
+      "id": "p_1791140430195",
+      "codigo": "X6FK",
+      "name": "Kit de 30 Globos 💙🩶",
+      "cat": "Decoración",
+      "subcat": "",
+      "notes": "El paquete contiene 30 globos entre dorado,color y con brillos tal como la imagen muestra. Las cantidades de cada diseño están también plasmadas en la imagen.",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791140370/productos/m5yxwmqt164n0bzipqjv.jpg",
+      "precioUSD": 7,
+      "precioCUP": 5425,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
+      "id": "p_1791140226984",
+      "codigo": "5QM6",
+      "name": "Kit de 30 Globos 🖤",
+      "cat": "Decoración",
+      "subcat": "",
+      "notes": "El paquete contiene 30 globos entre dorado,color y con brillos tal como la imagen muestra. Las cantidades de cada diseño están también plasmadas en la imagen.",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791139941/productos/k4mhq9sttgckfwyg9uua.jpg",
+      "precioUSD": 7,
+      "precioCUP": 5425,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
+      "id": "p_1791140286324",
+      "codigo": "5GKQ",
+      "name": "Kit de 30 Globos 🤍",
+      "cat": "Decoración",
+      "subcat": "",
+      "notes": "El paquete contiene 30 globos entre dorado,color y con brillos tal como la imagen muestra. Las cantidades de cada diseño están también plasmadas en la imagen.",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791140202/productos/mf9u4foircufryhoh8io.jpg",
+      "precioUSD": 7,
+      "precioCUP": 5425,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
+      "id": "p_1791140326794",
+      "codigo": "KK34",
+      "name": "Kit de 30 Globos 🩷",
+      "cat": "Decoración",
+      "subcat": "",
+      "notes": "El paquete contiene 30 globos entre dorado,color y con brillos tal como la imagen muestra. Las cantidades de cada diseño están también plasmadas en la imagen.",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791140236/productos/vvllebrndvrrlcce8ibt.jpg",
+      "precioUSD": 7,
+      "precioCUP": 5425,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
       }
     },
     {
@@ -2394,7 +2446,7 @@
       "destacado": false,
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -2448,7 +2500,7 @@
       "destacado": false,
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -2589,24 +2641,6 @@
       }
     },
     {
-      "id": "p_1790796774202",
-      "codigo": "54ND",
-      "name": "Lija de pies recargable",
-      "cat": "Electrodomésticos",
-      "subcat": "",
-      "notes": "Exfoliador eléctrico de pies, herramienta de pedicura 2 en 1 . 3 velocidades ajustables, lima de pies y amoladora de uñas con disco de lijado, herramienta profesional de pulido para manicura para eliminar piel muerta de los pies, callosidades y zonas duras ,regalo de autocuidado para mujeres, mamás, parejas .",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790796551/productos/kwe7fu2g8pws8phgffcr.jpg",
-      "precioUSD": 15,
-      "precioCUP": 11625,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      }
-    },
-    {
       "id": "p_1782339511897",
       "codigo": "K2RE",
       "name": "Lima de pies",
@@ -2641,7 +2675,7 @@
       "destacado": false,
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -2659,7 +2693,7 @@
       "destacado": false,
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -2677,7 +2711,7 @@
       "destacado": false,
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -2695,7 +2729,7 @@
       "destacado": false,
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -2713,7 +2747,7 @@
       "destacado": false,
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -2763,7 +2797,25 @@
       },
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
+      }
+    },
+    {
+      "id": "p_1791138353006",
+      "codigo": "4KZR",
+      "name": "Máquina de Pelar Profesional",
+      "cat": "Electrodomésticos",
+      "subcat": "",
+      "notes": "Juego de cortapelos y recortadora de barba para hombre. Cortapelos para corte de pelo, recargable por USB, apto para uso doméstico, incluye 8 peines guía, peine para el pelo, cepillo de limpieza - Regalo para hombre para el Día del Padre, cumpleaños, Navidad",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791138266/productos/vqp2pbiphokf1gaqrklt.jpg",
+      "precioUSD": 15,
+      "precioCUP": 11625,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
       }
     },
     {
@@ -2799,115 +2851,7 @@
       "destacado": false,
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
-      }
-    },
-    {
-      "id": "p_1780609726389",
-      "codigo": "NB4J",
-      "name": "Mariposas Brillantes A",
-      "cat": "Cabello",
-      "subcat": "",
-      "notes": "Set 6 unidades de mariposas brillantes para el cabello. Diseños en tonos rosa, celeste, lila, plateado y blanco con acabado glitter. Cierre metálico dorado seguro y resistente. Ideales para peinados infantiles, fiestas o uso diario.",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788097881/productos/agel6mi5958o93edwstf.jpg",
-      "precioUSD": 2.58,
-      "precioCUP": 2000,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      }
-    },
-    {
-      "id": "p_1785269406794",
-      "codigo": "UBNJ",
-      "name": "Mariposas Brillantes Blancas",
-      "cat": "Cabello",
-      "subcat": "",
-      "notes": "Cada paquete trae 5 unidades\nMateriales: Mariposas de tela y ganchos metálicos",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788131774/productos/uzzzxzk5rbvv2wztosn8.jpg",
-      "precioUSD": 2.58,
-      "precioCUP": 2000,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      }
-    },
-    {
-      "id": "p_1785271247802",
-      "codigo": "SDLS",
-      "name": "Mariposas Cola de Sirena",
-      "cat": "Cabello",
-      "subcat": "",
-      "notes": "El paquete contiene 6 unidades\nMateriales: mariposas plásticas ,gancho metálico",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788131707/productos/fnawyhmwlm29vqrhlzg7.jpg",
-      "precioUSD": 2.32,
-      "precioCUP": 1800,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      }
-    },
-    {
-      "id": "p_1780608723108",
-      "codigo": "3KD5",
-      "name": "Mariposas Metálicas",
-      "cat": "Cabello",
-      "subcat": "",
-      "notes": "Paquete de 10 mini mariposas metálicas para el cabello. Diseño delicado y elegante en acero plateado, con cierre de presión seguro. Ideales para peinados finos, recogidos o como accesorio decorativo. Ligeras, resistentes y de tamaño compacto, perfectas para uso diario o ocasiones especiales.",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788035311/productos/boandlf6ammxiganqiix.jpg",
-      "precioUSD": 1.55,
-      "precioCUP": 1200,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
-      }
-    },
-    {
-      "id": "p_1780613171948",
-      "codigo": "G6RW",
-      "name": "Mariposas Multialas",
-      "cat": "Cabello",
-      "subcat": "",
-      "notes": "Paquete de 6Unidades\nMateriales: Mariposas de tela y ganchos metálicos",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1780613034/productos/ewezjlonywv5nm4mgcbi.jpg",
-      "precioUSD": 2.58,
-      "precioCUP": 2000,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      }
-    },
-    {
-      "id": "p_1785268500695",
-      "codigo": "8N7W",
-      "name": "Maripositas",
-      "cat": "Cabello",
-      "subcat": "",
-      "notes": "6 Maripositas por paquete\nMateriales: Mariposas de tela y ganchos metálicos",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788098080/productos/sx2ollfms75pocmyzfgn.jpg",
-      "precioUSD": 2.32,
-      "precioCUP": 1800,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -2925,7 +2869,7 @@
       "destacado": false,
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -2961,7 +2905,7 @@
       "destacado": false,
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -2979,7 +2923,7 @@
       "destacado": false,
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -3010,7 +2954,7 @@
       },
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -3064,25 +3008,7 @@
       "destacado": false,
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
-      }
-    },
-    {
-      "id": "p_1785180901080",
-      "codigo": "XP28",
-      "name": "Mini bolsos peluche",
-      "cat": "Bolsos Carteras Mochilas monederos",
-      "subcat": "",
-      "notes": "Mini bolsos de peluche pastel con unicornio alado y lentejuelas. Ideales para niñas.",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785180705/productos/wetzjsztw8v09lrfrvxm.jpg",
-      "precioUSD": 2.52,
-      "precioCUP": 1950,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -3100,7 +3026,7 @@
       "destacado": false,
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       },
       "precioNormalUSD": 1.94,
       "precioNormalCUP": 1500
@@ -3115,24 +3041,6 @@
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1781005431/productos/iyjmo4dxvnedrjvbitog.jpg",
       "precioUSD": 17,
       "precioCUP": 13175,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      }
-    },
-    {
-      "id": "p_1788539890691",
-      "codigo": "A9ZJ",
-      "name": "Mini lámpara nocturna",
-      "cat": "Decoración",
-      "subcat": "",
-      "notes": "Linda lámpara de estrellitas y sin ellas, puede ser una luz que abarque todo el cuarto con estrellas o puede ser una pequeña luz colorida. Trae su cable de alimentación. Bajo consumo",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788539742/productos/uhtsctyzbjaw9ttwpwq0.jpg",
-      "precioUSD": 7,
-      "precioCUP": 5425,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -3174,7 +3082,7 @@
       "destacado": false,
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -3192,61 +3100,7 @@
       "destacado": false,
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
-      }
-    },
-    {
-      "id": "p_1787412191026",
-      "codigo": "7VDV",
-      "name": "Mini pellisquitos cuadrados",
-      "cat": "Cabello",
-      "subcat": "",
-      "notes": "El precio es por 6 pellisquitos",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787412125/productos/ljq3x7ttyw66rrs2apq7.jpg",
-      "precioUSD": 1.03,
-      "precioCUP": 800,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
-      }
-    },
-    {
-      "id": "p_1786714572024",
-      "codigo": "2CBG",
-      "name": "Mini pellisquitos variaros",
-      "cat": "Cabello",
-      "subcat": "",
-      "notes": "Paquetes de 6 unidades",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786714500/productos/owftuoin0hygs5ydmefm.jpg",
-      "precioUSD": 1.29,
-      "precioCUP": 1000,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
-      }
-    },
-    {
-      "id": "p_1780951622289",
-      "codigo": "NY5G",
-      "name": "Mini Tic-Tac",
-      "cat": "Cabello",
-      "subcat": "",
-      "notes": "Cada paquete trae 20\nMaterial: Metálicos",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788098164/productos/pd3fjwiylpa6xhd6arqr.jpg",
-      "precioUSD": 1.1,
-      "precioCUP": 850,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -3405,15 +3259,17 @@
       "subcat": "",
       "notes": "Mono enterizo para perritos y gatitos. 3 tallas disponibles,desde Chihuahua hasta pequines o demás razas de esas tallas\nTela elastizada y cómoda",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786921895/productos/u8h2hdgunqdqb7qb2zvc.jpg",
-      "precioUSD": 8,
-      "precioCUP": 6200,
+      "precioUSD": 7,
+      "precioCUP": 5425,
       "moneda": "usd",
-      "enOferta": false,
+      "enOferta": true,
       "destacado": false,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "precioNormalUSD": 8,
+      "precioNormalCUP": 6200
     },
     {
       "id": "p_1788897850953",
@@ -3425,24 +3281,6 @@
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788897774/productos/unvimltpxn8k3vfrvqoh.jpg",
       "precioUSD": 40,
       "precioCUP": 31000,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      }
-    },
-    {
-      "id": "p_1788897814510",
-      "codigo": "GTZK",
-      "name": "Mueble de puertas 5 pisos",
-      "cat": "Muebles",
-      "subcat": "",
-      "notes": "Mueble con rueditas, y puertas con imanes para mejor cierre. Ideal organizador para cualquier lugar de la casa, tanto habitaciones,cocina, baño,oficina,etc...",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788897736/productos/tiyjgnltdqhxewtva8zb.jpg",
-      "precioUSD": 50,
-      "precioCUP": 38750,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -3636,6 +3474,60 @@
       }
     },
     {
+      "id": "p_1780620222381",
+      "codigo": "L4P6",
+      "name": "Paquete de 10 flores hawaianas",
+      "cat": "Cabello",
+      "subcat": "",
+      "notes": "10flores por paquete\nMateriales:Flor de goma y gancho metálico",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788131956/productos/pfnnrk7tq9teetv2mucs.jpg",
+      "precioUSD": 2.58,
+      "precioCUP": 2000,
+      "moneda": "cup",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
+      "id": "p_1780608108403",
+      "codigo": "4KVY",
+      "name": "Paquete de 10 flores, Girasoles y Margaritas",
+      "cat": "Cabello",
+      "subcat": "",
+      "notes": "10 Unidades cada paquete\nMateriales:flor de tela y gancho de metal",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788131870/productos/wrto4ojobtjsxqnptdii.jpg",
+      "precioUSD": 1.94,
+      "precioCUP": 1500,
+      "moneda": "cup",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
+      "id": "p_1780608723108",
+      "codigo": "3KD5",
+      "name": "Paquete de 10 mariposas Metálicas",
+      "cat": "Cabello",
+      "subcat": "",
+      "notes": "Paquete de 10 mini mariposas metálicas para el cabello. Diseño delicado y elegante en acero plateado, con cierre de presión seguro. Ideales para peinados finos, recogidos o como accesorio decorativo. Ligeras, resistentes y de tamaño compacto, perfectas para uso diario o ocasiones especiales.",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788035311/productos/boandlf6ammxiganqiix.jpg",
+      "precioUSD": 1.55,
+      "precioCUP": 1200,
+      "moneda": "cup",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
+      }
+    },
+    {
       "id": "p_1788618415087",
       "codigo": "4BJ2",
       "name": "Paquete de 100 pajillas",
@@ -3654,9 +3546,245 @@
       }
     },
     {
+      "id": "p_1780951622289",
+      "codigo": "NY5G",
+      "name": "Paquete de 20 mini Tic-Tac",
+      "cat": "Cabello",
+      "subcat": "",
+      "notes": "Cada paquete trae 20\nMaterial: Metálicos",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788098164/productos/pd3fjwiylpa6xhd6arqr.jpg",
+      "precioUSD": 1.1,
+      "precioCUP": 850,
+      "moneda": "cup",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
+      }
+    },
+    {
+      "id": "p_1780608497220",
+      "codigo": "2XN8",
+      "name": "Paquete de 25 florecitas tipo Piojitos",
+      "cat": "Cabello",
+      "subcat": "",
+      "notes": "El paquete trae 25Unidades",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1780608383/productos/huixhwzn5cnjfnf3tc3s.jpg",
+      "precioUSD": 1.29,
+      "precioCUP": 1000,
+      "moneda": "cup",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
+      }
+    },
+    {
+      "id": "p_1786930924590",
+      "codigo": "8DEM",
+      "name": "Paquete de 4 pellizcos de perlitas",
+      "cat": "Cabello",
+      "subcat": "",
+      "notes": "Paquetes de 4unidades,",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786930842/productos/wzpik5gw8tzabbppxhn1.jpg",
+      "precioUSD": 1.03,
+      "precioCUP": 800,
+      "moneda": "cup",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
+      }
+    },
+    {
+      "id": "p_1780614185839",
+      "codigo": "FD8Z",
+      "name": "Paquete de 4 Tic-Tacs Estilo variado",
+      "cat": "Cabello",
+      "subcat": "",
+      "notes": "4 piezas por paquete de cartoncitos con pinzas y clips para el cabello en tonos pasteles. Diseños variados que incluyen estrellas, lazos, mariposas y formas geométricas. Fabricados en material resistente y suaves al tacto, ideales para peinados infantiles o de uso diario. Presentación atractiva y práctica para regalo o uso personal.",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788035154/productos/h9dy2yxfjfrzz5onmiox.jpg",
+      "precioUSD": 0.77,
+      "precioCUP": 600,
+      "moneda": "cup",
+      "enOferta": true,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
+      },
+      "precioNormalUSD": 0.88,
+      "precioNormalCUP": 680
+    },
+    {
+      "id": "p_1785269406794",
+      "codigo": "UBNJ",
+      "name": "Paquete de 5 mariposas Brillantes Blancas",
+      "cat": "Cabello",
+      "subcat": "",
+      "notes": "Cada paquete trae 5 unidades\nMateriales: Mariposas de tela y ganchos metálicos",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788131774/productos/uzzzxzk5rbvv2wztosn8.jpg",
+      "precioUSD": 2.58,
+      "precioCUP": 2000,
+      "moneda": "cup",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
+      "id": "p_1788150972260",
+      "codigo": "5W6S",
+      "name": "Paquete de 5 pellizquitos de metal",
+      "cat": "Cabello",
+      "subcat": "",
+      "notes": "Paquete de 5 pellisquitos de metal de colores variados 🌈. Alta calidad y belleza",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788150845/productos/gvk0moampbqyylvdi65d.jpg",
+      "precioUSD": 2.06,
+      "precioCUP": 1600,
+      "moneda": "cup",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
+      "id": "p_1780609726389",
+      "codigo": "NB4J",
+      "name": "Paquete de 6 ariposas Brillantes A",
+      "cat": "Cabello",
+      "subcat": "",
+      "notes": "Set 6 unidades de mariposas brillantes para el cabello. Diseños en tonos rosa, celeste, lila, plateado y blanco con acabado glitter. Cierre metálico dorado seguro y resistente. Ideales para peinados infantiles, fiestas o uso diario.",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788097881/productos/agel6mi5958o93edwstf.jpg",
+      "precioUSD": 2.58,
+      "precioCUP": 2000,
+      "moneda": "cup",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
+      "id": "p_1785271247802",
+      "codigo": "SDLS",
+      "name": "Paquete de 6 mariposas Cola de Sirena",
+      "cat": "Cabello",
+      "subcat": "",
+      "notes": "El paquete contiene 6 unidades\nMateriales: mariposas plásticas ,gancho metálico",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788131707/productos/fnawyhmwlm29vqrhlzg7.jpg",
+      "precioUSD": 2.32,
+      "precioCUP": 1800,
+      "moneda": "cup",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
+      "id": "p_1780613171948",
+      "codigo": "G6RW",
+      "name": "Paquete de 6 mariposas Multialas",
+      "cat": "Cabello",
+      "subcat": "",
+      "notes": "Paquete de 6Unidades\nMateriales: Mariposas de tela y ganchos metálicos",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1780613034/productos/ewezjlonywv5nm4mgcbi.jpg",
+      "precioUSD": 2.58,
+      "precioCUP": 2000,
+      "moneda": "cup",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
+      "id": "p_1787412191026",
+      "codigo": "7VDV",
+      "name": "Paquete de 6 mini pellisquitos cuadrados",
+      "cat": "Cabello",
+      "subcat": "",
+      "notes": "El precio es por 6 pellisquitos",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787412125/productos/ljq3x7ttyw66rrs2apq7.jpg",
+      "precioUSD": 1.03,
+      "precioCUP": 800,
+      "moneda": "cup",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
+      }
+    },
+    {
+      "id": "p_1786714572024",
+      "codigo": "2CBG",
+      "name": "Paquete de 6 mini pellisquitos variaros",
+      "cat": "Cabello",
+      "subcat": "",
+      "notes": "Paquetes de 6 unidades",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786714500/productos/owftuoin0hygs5ydmefm.jpg",
+      "precioUSD": 1.29,
+      "precioCUP": 1000,
+      "moneda": "cup",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
+      }
+    },
+    {
+      "id": "p_1785275574502",
+      "codigo": "NSWC",
+      "name": "Paquete de 6 pellisquitos coloridos",
+      "cat": "Cabello",
+      "subcat": "",
+      "notes": "Paquetes de 6 unidades",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785275511/productos/bf9mpc5kyrz2osodjuj8.jpg",
+      "precioUSD": 1.03,
+      "precioCUP": 800,
+      "moneda": "cup",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
+      }
+    },
+    {
+      "id": "p_1785268500695",
+      "codigo": "8N7W",
+      "name": "Paquete de6 maripositas",
+      "cat": "Cabello",
+      "subcat": "",
+      "notes": "6 Maripositas por paquete\nMateriales: Mariposas de tela y ganchos metálicos",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788098080/productos/sx2ollfms75pocmyzfgn.jpg",
+      "precioUSD": 2.32,
+      "precioCUP": 1800,
+      "moneda": "cup",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
       "id": "p_1790798324777",
       "codigo": "UB9F",
-      "name": "Paquetes de Felpas",
+      "name": "Paquetes de 25 Felpas",
       "cat": "Cabello",
       "subcat": "",
       "notes": "Puede elegir entre un paquete de todas las felpas negras o uno de colores aleatorios. El paquete contiene 25unidades",
@@ -3695,7 +3823,7 @@
       "destacado": false,
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -3767,7 +3895,7 @@
       "destacado": false,
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -3785,28 +3913,10 @@
       "destacado": false,
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       },
       "precioNormalUSD": 0.65,
       "precioNormalCUP": 500
-    },
-    {
-      "id": "p_1785275574502",
-      "codigo": "NSWC",
-      "name": "Pellisquitos coloridos",
-      "cat": "Cabello",
-      "subcat": "",
-      "notes": "Paquetes de 6 unidades",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785275511/productos/bf9mpc5kyrz2osodjuj8.jpg",
-      "precioUSD": 1.03,
-      "precioCUP": 800,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
-      }
     },
     {
       "id": "p_1780951069722",
@@ -3823,7 +3933,7 @@
       "destacado": false,
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -3841,25 +3951,7 @@
       "destacado": false,
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
-      }
-    },
-    {
-      "id": "p_1786930924590",
-      "codigo": "8DEM",
-      "name": "Pellizcos de perlitas",
-      "cat": "Cabello",
-      "subcat": "",
-      "notes": "Paquetes de 4unidades,",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786930842/productos/wzpik5gw8tzabbppxhn1.jpg",
-      "precioUSD": 1.03,
-      "precioCUP": 800,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -3877,7 +3969,7 @@
       "destacado": false,
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -3895,7 +3987,7 @@
       "destacado": false,
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -3913,43 +4005,7 @@
       "destacado": false,
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
-      }
-    },
-    {
-      "id": "p_1788150972260",
-      "codigo": "5W6S",
-      "name": "Pellizquitos de metal",
-      "cat": "Cabello",
-      "subcat": "",
-      "notes": "Paquete de 5 pellisquitos de metal de colores variados 🌈. Alta calidad y belleza",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788150845/productos/gvk0moampbqyylvdi65d.jpg",
-      "precioUSD": 2.06,
-      "precioCUP": 1600,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      }
-    },
-    {
-      "id": "p_1782340847017",
-      "codigo": "EL4S",
-      "name": "Perfiladores",
-      "cat": "Cuidado Personal",
-      "subcat": "",
-      "notes": "Perfiladores de cejas, bigote y demás. Exelente calidad y comodidad de uso. El precio es por 5 unidades con Mensajería Gratis",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782340778/productos/p9vpyhp3we5xjff90cb0.jpg",
-      "precioUSD": 1.06,
-      "precioCUP": 822,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -3967,7 +4023,7 @@
       "destacado": false,
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -3985,7 +4041,7 @@
       "destacado": false,
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -4039,7 +4095,7 @@
       "destacado": false,
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -4075,7 +4131,7 @@
       "destacado": false,
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       },
       "precioNormalUSD": 0.65,
       "precioNormalCUP": 500
@@ -4095,7 +4151,7 @@
       "destacado": false,
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       },
       "precioNormalUSD": 1.68,
       "precioNormalCUP": 1300
@@ -4108,14 +4164,14 @@
       "subcat": "",
       "notes": "Ideal para proteger los oídos de los niños de la entrada de agua,ya sea en el baño,la playa, piscinas, etc... También tiene un perfecto uso para evitar manchas de tintes en esa zona\nEl paquete trae 20 pares",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782343040/productos/rzxjmldhmvwxyoh1u5ld.jpg",
-      "precioUSD": 1.58,
-      "precioCUP": 1225,
+      "precioUSD": 1.5,
+      "precioCUP": 1163,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -4179,7 +4235,7 @@
       "destacado": false,
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -4333,24 +4389,6 @@
       }
     },
     {
-      "id": "p_1788733202430",
-      "codigo": "7MVS",
-      "name": "Pulover Unisex Rojo",
-      "cat": "Ropa",
-      "subcat": "",
-      "notes": "Solo talla M agrandada. Tela algodonada elastizada",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788733113/productos/fjgvbcls4qhgl8in0k3c.jpg",
-      "precioUSD": 3.23,
-      "precioCUP": 2500,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      }
-    },
-    {
       "id": "p_1788034256550",
       "codigo": "ZST8",
       "name": "Rallador cortador multiusos",
@@ -4360,24 +4398,6 @@
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788034096/productos/x41uqbrddleitll256n4.jpg",
       "precioUSD": 6,
       "precioCUP": 4650,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      }
-    },
-    {
-      "id": "p_1788528610951",
-      "codigo": "L53P",
-      "name": "Ratón inalámbrico",
-      "cat": "Electrodomésticos",
-      "subcat": "",
-      "notes": "Ratón Inalámbrico Silencioso – Ratón Inalámbrico para Computadora, Ratón para Laptop, Ratón USB, Ratón para Chromebook, Ratón Inalámbrico, Ratón Inalámbrico, Ratón para PC, Ratones para Computadora, Ratón Silencioso",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788528508/productos/te3bwxztbrhsvbm7kjgt.jpg",
-      "precioUSD": 15,
-      "precioCUP": 11625,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -4525,12 +4545,9 @@
         ],
         "opciones": [
           "A",
-          "B",
           "C",
           "D",
           "E",
-          "F",
-          "G",
           "H"
         ]
       },
@@ -4557,9 +4574,8 @@
           "Diseño"
         ],
         "opciones": [
-          "A",
-          "B",
-          "C"
+          "C",
+          "B"
         ]
       },
       "envio": {
@@ -4596,6 +4612,96 @@
       "precioUSD": 1.94,
       "precioCUP": 1500,
       "moneda": "cup",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
+      "id": "p_1791228478752",
+      "codigo": "PUET",
+      "name": "Rollo de papel tapiz autoadhesivo 1",
+      "cat": "Decoración",
+      "subcat": "",
+      "notes": "Diseño exacto de la imagen\nMedidas 40x300cm",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791228516/productos/wpbbxh0fkifxcm7yik1e.jpg",
+      "precioUSD": 12,
+      "precioCUP": 9300,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
+      "id": "p_1791228633743",
+      "codigo": "NC68",
+      "name": "Rollo de papel tapiz autoadhesivo 2",
+      "cat": "Decoración",
+      "subcat": "",
+      "notes": "Diseño exacto de la imagen\nMedias 40x500cm",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791228550/productos/ue2pjtni9oahlhjhatzn.jpg",
+      "precioUSD": 20,
+      "precioCUP": 15500,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
+      "id": "p_1791228719057",
+      "codigo": "UP4H",
+      "name": "Rollo de papel tapiz autoadhesivo 3",
+      "cat": "Decoración",
+      "subcat": "",
+      "notes": "Diseño exacto de la imagen\nMedias 40x100cm",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791228705/productos/qrz6e5vgms1rpg4bwxrv.jpg",
+      "precioUSD": 4,
+      "precioCUP": 3100,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
+      "id": "p_1791228936507",
+      "codigo": "32B8",
+      "name": "Rollo de papel tapiz autoadhesivo 4",
+      "cat": "Decoración",
+      "subcat": "",
+      "notes": "Diseño exacto de la imagen\nMedias 40x1000cm",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791228873/productos/fj7to0y16532rq21z6uw.jpg",
+      "precioUSD": 40,
+      "precioCUP": 31000,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
+      "id": "p_1791229767371",
+      "codigo": "SRDL",
+      "name": "Rollo de papel tapiz autoadhesivo 5",
+      "cat": "Decoración",
+      "subcat": "",
+      "notes": "Diseño exacto de la imagen\nMedias 80x250cm",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791229652/productos/hhxeyvyrb0hcng01zuid.jpg",
+      "precioUSD": 12,
+      "precioCUP": 9300,
+      "moneda": "usd",
       "enOferta": false,
       "destacado": false,
       "envio": {
@@ -4714,7 +4820,7 @@
       "destacado": false,
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -4732,7 +4838,7 @@
       "destacado": false,
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -4748,32 +4854,6 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      }
-    },
-    {
-      "id": "p_1785088536626",
-      "codigo": "GTDT",
-      "name": "Soporte de celular y tablets flexible1",
-      "cat": "Bocinas Celulares y Accesorios",
-      "subcat": "",
-      "notes": "Soporte para teléfono/tablet | Ideal para cocinar, hacer ejercicio, transmisiones en vivo y maratones de películas, colgar tu móvil para ver videos antes de dormir| Estable y firme. Opción de regalo perfecta (Color y diseño tal cual la imagen)",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790975519/productos/hmhohaql32jgjrdvqplh.jpg",
-      "precioUSD": 4.52,
-      "precioCUP": 3500,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false,
-      "variantes": {
-        "ejes": [
-          "Color"
-        ],
-        "opciones": [
-          "ROSA🩷"
-        ]
-      },
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -4819,6 +4899,15 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Color"
+        ],
+        "opciones": [
+          "ROSA",
+          "AZUL"
+        ]
+      },
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -4893,28 +4982,8 @@
       "destacado": false,
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
-    },
-    {
-      "id": "p_1780614185839",
-      "codigo": "FD8Z",
-      "name": "Tic-Tacs Estilo variado",
-      "cat": "Cabello",
-      "subcat": "",
-      "notes": "4 piezas por paquete de cartoncitos con pinzas y clips para el cabello en tonos pasteles. Diseños variados que incluyen estrellas, lazos, mariposas y formas geométricas. Fabricados en material resistente y suaves al tacto, ideales para peinados infantiles o de uso diario. Presentación atractiva y práctica para regalo o uso personal.",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788035154/productos/h9dy2yxfjfrzz5onmiox.jpg",
-      "precioUSD": 0.77,
-      "precioCUP": 600,
-      "moneda": "cup",
-      "enOferta": true,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
-      },
-      "precioNormalUSD": 0.88,
-      "precioNormalCUP": 680
     },
     {
       "id": "p_1788537976001",
@@ -4923,16 +4992,18 @@
       "cat": "Electrodomésticos",
       "subcat": "",
       "notes": "Timbre Inalámbrico Impermeable, Funciona a 100 Metros, 36 Tonos y Volumen Ajustable, 2 Receptores y 1 Transmisor Remoto con Botón de Presión",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788537859/productos/fyws5sgxpr7nc8swb88q.jpg",
-      "precioUSD": 16,
-      "precioCUP": 12400,
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791157524/productos/qyfve7zqeh8vcla4gye9.jpg",
+      "precioUSD": 15,
+      "precioCUP": 11625,
       "moneda": "usd",
-      "enOferta": false,
+      "enOferta": true,
       "destacado": false,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "precioNormalUSD": 16,
+      "precioNormalCUP": 12400
     },
     {
       "id": "p_1789425875477",
@@ -4949,7 +5020,7 @@
       "destacado": false,
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -4967,33 +5038,25 @@
       "destacado": false,
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
-      "id": "p_1789227678484",
-      "codigo": "T2WZ",
-      "name": "Top Naranja 🧡",
-      "cat": "Ropa Interior",
+      "id": "p_1780346613571",
+      "codigo": "YRGG",
+      "name": "Tomacorrientes",
+      "cat": "Ferretería",
       "subcat": "",
-      "notes": "Lindo top Naranja sin espinjas. Ideal para muchachas delgadas o adolescentes",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789227577/productos/h17oyhowyaoes0p3fkzq.jpg",
-      "precioUSD": 1.29,
-      "precioCUP": 1000,
-      "moneda": "cup",
+      "notes": "Tomacorrientes de 20A Maxima Calidad Ideal para súper consumo,no se derriten",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791079338/productos/cfkfobz84waxqznqhbq2.jpg",
+      "precioUSD": 3,
+      "precioCUP": 2325,
+      "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "variantes": {
-        "ejes": [
-          "Talla"
-        ],
-        "opciones": [
-          "XS"
-        ]
-      },
       "envio": {
-        "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras de más de 1,500 CUP · puedes completar con otros artículos"
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
       }
     },
     {
@@ -5060,6 +5123,24 @@
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790954256/productos/irq5mozfnze5v4cjmh8m.jpg",
       "precioUSD": 12,
       "precioCUP": 9300,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
+      "id": "p_1787764782825",
+      "codigo": "TPUJ",
+      "name": "Ventilador ColdSky Doble paleta",
+      "cat": "Electrodomésticos",
+      "subcat": "",
+      "notes": "Ventilador de camping alimentado por batería de 20000Mah - Motor dual, 8 velocidades con control remoto y 4 linternas LED, ventilador portátil para exteriores con gancho para tienda de campaña, falla de energía, obra de construcción, para viajes de camping al aire libre",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787764696/productos/k2qwog2kxffnq9yeby9m.jpg",
+      "precioUSD": 60,
+      "precioCUP": 46500,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
