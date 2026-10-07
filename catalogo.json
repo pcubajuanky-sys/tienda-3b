@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-07T16:43:24.727Z",
+  "generado": "2026-10-07T16:43:36.040Z",
   "tasa": 775,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -192,7 +192,7 @@
     "redondeoCUP": 50,
     "politica": "Revisa toda tu mercancía delante de la mensajera. Una vez que se va, no aceptamos devoluciones. Si la mensajería era incluida y al revisar decides no quedarte el producto, la mensajería se paga igual, porque la mensajera ya hizo el viaje.",
     "grupoWA": "https://chat.whatsapp.com/BragbcwxeYrKrL0DwjrGbQ?s=sw&p=a&ilr=4",
-    "pagoUrl": "https://j3b.qvpay.me/",
+    "pagoUrl": "",
     "contactos": [
       {
         "nombre": "Admin principal",
