@@ -1253,29 +1253,24 @@ function actualizarHeaderScroll() {
 // La pastilla del taxi solo aparece si Ruth lo ha encendido en Stock+
 // (catalogo.json -> tienda.taxiActivo). Asi el taxi puede estar publicado y
 // probandose sin que ningun cliente lo descubra antes de tiempo.
-// Lo mismo vale para Conectados (remesas) desde 2026-09-30.
 function renderMundos() {
   const pastilla = document.getElementById('mundo-taxi');
   if (pastilla) pastilla.hidden = !(CAT && CAT.tienda && CAT.tienda.taxiActivo);
-  const remesas = document.getElementById('mundo-conectados');
-  if (remesas) remesas.hidden = !(CAT && CAT.tienda && CAT.tienda.conectadosActivo);
   if (window.Mundos) window.Mundos.refrescar();   // el aviso depende de cuantos negocios se ven
   medirHeader();                                   // la franja cambia el alto de la barra fija
 }
 
-// ── Otros servicios de 3B (taxi y remesas) ──
+// ── Otros servicios de 3B (hoy solo el taxi) ──
 // Misma regla que renderMundos: una tarjeta solo se ve si Ruth encendio ESE servicio
-// (catalogo.json -> tienda.taxiActivo / tienda.conectadosActivo). La seccion entera se
-// esconde si no hay ninguno. El texto, el banner y el enlace viven en index.html: del
-// catalogo publico solo viajan los dos interruptores que ya existian.
+// (catalogo.json -> tienda.taxiActivo). La seccion entera se esconde si no hay ninguno.
+// El texto, el banner y el enlace viven en index.html: del catalogo publico solo viaja
+// el interruptor.
 function renderServicios() {
   const t = (CAT && CAT.tienda) || {};
   const taxi = document.getElementById('serv-taxi');
-  const remesas = document.getElementById('serv-remesas');
   if (taxi) taxi.hidden = !t.taxiActivo;
-  if (remesas) remesas.hidden = !t.conectadosActivo;
   const seccion = document.getElementById('servicios');
-  if (seccion) seccion.hidden = !(t.taxiActivo || t.conectadosActivo);
+  if (seccion) seccion.hidden = !t.taxiActivo;
 }
 
 async function cargarCatalogo() {

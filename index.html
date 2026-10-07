@@ -74,9 +74,6 @@
         <a class="mundo" id="mundo-taxi" href="/taxi" hidden title="Taxi 3B">
           <img class="mundo-img" src="/logo-taxi-3b.png" width="256" height="256" alt="Taxi 3B — viajes">
         </a>
-        <a class="mundo" id="mundo-conectados" href="/remesas" hidden title="Conectados — Remesas">
-          <img class="mundo-img" src="/logo-conectados.png" width="256" height="256" alt="Conectados — remesas a Cuba">
-        </a>
       </nav>
       <button id="btn-carrito" class="btn-carrito" aria-label="Ver tu pedido" type="button">
         <span aria-hidden="true">🛒</span>
@@ -173,9 +170,9 @@
     </div>
   </section>
 
-  <!-- Servicios de 3B (taxi y remesas), entre las categorias y la parrilla: al final de la pagina quedaba a 45.400px y nadie la veia. NO es una categoria: una categoria sin productos no se pinta
+  <!-- Servicios de 3B (hoy solo el taxi), entre las categorias y la parrilla: al final de la pagina quedaba a 45.400px y nadie la veia. NO es una categoria: una categoria sin productos no se pinta
        (app.js, renderCategorias3D), asi que esto es una seccion propia. Oculta por defecto;
-       renderServicios() (app.js) la destapa con tienda.taxiActivo / tienda.conectadosActivo.
+       renderServicios() (app.js) la destapa con tienda.taxiActivo.
        Sin onclick: es un enlace de verdad (la CSP bloquea los manejadores en linea). -->
   <section id="servicios" class="servicios wrap" hidden aria-labelledby="servicios-titulo">
     <h2 id="servicios-titulo" class="servicios-titulo">Servicios</h2>
@@ -186,14 +183,6 @@
           <h3 class="serv-nombre">Taxi 3B</h3>
           <p class="serv-texto">Viajas más, pagas menos.</p>
           <a class="btn btn-primario serv-btn" href="/taxi">Ver el taxi <span aria-hidden="true">→</span></a>
-        </div>
-      </article>
-      <article class="serv" id="serv-remesas" hidden>
-        <div class="serv-banner serv-banner-emblema"><img src="conectados-emblema.png" width="320" height="320" loading="lazy" alt="Conectados — remesas a Cuba"></div>
-        <div class="serv-cuerpo">
-          <h3 class="serv-nombre">Remesas a Cuba</h3>
-          <p class="serv-texto">Calcula antes de pagar.</p>
-          <a class="btn btn-primario serv-btn" href="/remesas">Calcular mi remesa <span aria-hidden="true">→</span></a>
         </div>
       </article>
     </div>
