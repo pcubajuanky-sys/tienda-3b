@@ -309,6 +309,17 @@ function qtyEnCarrito(id) {
   return Object.entries(carrito).reduce((s, [k, q]) => (k === id || k.startsWith(id + '|')) ? s + q : s, 0);
 }
 
+// Tope de existencias (2026-10-07). El catálogo solo publica lo que queda BAJO: un producto
+// sin `max` está bien surtido y no tiene límite aquí. Con variantes el tope va por
+// combinación en `maxOpciones` (misma clave que `variantes.opciones`), NO en `variantes`.
+// Devuelve null = sin límite. El servidor sigue siendo quien manda al recibir el pedido.
+function topeDe(id, clave) {
+  const p = productoDe(id);
+  if (!p) return null;
+  const t = variantesDe(p) ? (clave && p.maxOpciones ? p.maxOpciones[clave] : undefined) : p.max;
+  return (typeof t === 'number' && isFinite(t) && t > 0) ? Math.floor(t) : null;
+}
+
 // Todos los valores que existen en el eje i (con existencias, porque el catálogo solo
 // publica lo disponible).
 function valoresDeEje(v, i) {
@@ -352,11 +363,14 @@ function accionHtml(id, clave) {
   const k = claveCarrito(id, clave);
   const q = carrito[k] || 0;
   if (q === 0) return `<button class="btn btn-primario add" data-add="${k}">Añadir</button>`;
+  const tope = topeDe(id, clave);
+  const alTope = tope !== null && q >= tope;
   return `<div class="qty">` +
     `<button data-minus="${k}" aria-label="Quitar una unidad">−</button>` +
     `<strong aria-hidden="true">${q}</strong><span class="sr-only">${q} en el pedido</span>` +
-    `<button data-plus="${k}" aria-label="Añadir una unidad">+</button>` +
-    `</div>`;
+    `<button data-plus="${k}" aria-label="Añadir una unidad"${alTope ? ' disabled' : ''}>+</button>` +
+    `</div>` +
+    (alTope ? `<p class="tope-aviso" role="status">Es todo lo que queda</p>` : '');
 }
 
 // Precio: cada producto manda su moneda (2026-08-16, contrato tienda.ter.1 de
@@ -577,6 +591,9 @@ function guardarCarrito() {
 // sabe de qué talla habla, y así no hay que adivinarlo aquí.
 function addCarrito(clave) {
   if (cerrada()) return;             // guarda defensiva: cubre parrilla, modal y teclado
+  const id = idDeClave(clave);
+  const tope = topeDe(id, String(clave).split('|')[1] || null);
+  if (tope !== null && (carrito[clave] || 0) >= tope) { refrescarAcciones(id); return; }   // el + ya sale apagado: esto es la red
   carrito[clave] = (carrito[clave] || 0) + 1;
   guardarCarrito(); refrescarAcciones(idDeClave(clave)); renderCarrito();
 }
@@ -585,6 +602,32 @@ function quitarCarrito(clave) {
   carrito[clave] = (carrito[clave] || 0) - 1;
   if (carrito[clave] <= 0) delete carrito[clave];
   guardarCarrito(); refrescarAcciones(idDeClave(clave)); renderCarrito();
+}
+
+// El carrito guardado en localStorage puede traer cantidades de antes (5 en el carrito y
+// ahora quedan 2). Al cargar el catálogo se recorta cada línea a su tope SIN vaciar el
+// carrito, y se avisa una vez: el carrito recortado ya queda guardado, así que al
+// recargar no hay nada más que avisar.
+function ajustarCarritoATopes() {
+  const recortes = [];
+  for (const k of Object.keys(carrito)) {
+    const comb = String(k).split('|')[1] || null;
+    const p = productoDe(idDeClave(k));
+    const tope = topeDe(idDeClave(k), comb);
+    if (!p || tope === null || !(carrito[k] > tope)) continue;
+    carrito[k] = tope;
+    recortes.push({ nombre: p.name, comb, tope });
+  }
+  if (recortes.length) mostrarAvisoAjuste(recortes);
+}
+
+function mostrarAvisoAjuste(recortes) {
+  const caja = document.getElementById('aviso-ajuste');
+  if (!caja) return;
+  const partes = recortes.map((r) => `«${r.nombre}${r.comb ? ' · ' + r.comb : ''}» (${r.tope === 1 ? 'queda 1' : 'quedan ' + r.tope})`);
+  document.getElementById('aviso-ajuste-texto').textContent = 'Ajustamos tu pedido a lo que queda: ' + partes.join(', ') + '.';
+  caja.hidden = false;
+  medirHeader();   // vive dentro de .barra-fija: el alto de la cabecera cambia
 }
 
 function itemsCarrito() {
@@ -1257,6 +1300,7 @@ async function cargarCatalogo() {
 
   renderMarca();
   renderHero();
+  ajustarCarritoATopes();
   guardarCarrito();
   renderCarrito();   // el aside lateral (≥1024px) no espera a que se abra el panel modal
   renderFiltroPill();
@@ -1387,6 +1431,11 @@ async function iniciar() {
     else if (add) { e.stopPropagation(); addCarrito(add.dataset.add); }
     else if (minus) { e.stopPropagation(); quitarCarrito(minus.dataset.minus); }
     else if (plus) { e.stopPropagation(); addCarrito(plus.dataset.plus); }
+  });
+
+  document.getElementById('aviso-ajuste-cerrar').addEventListener('click', () => {
+    document.getElementById('aviso-ajuste').hidden = true;
+    medirHeader();
   });
 
   window.addEventListener('scroll', actualizarHeaderScroll, { passive: true });

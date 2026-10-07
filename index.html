@@ -50,6 +50,15 @@
     </div>
   </div>
 
+  <!-- Carrito recortado a lo que queda (2026-10-07): lo pinta ajustarCarritoATopes() al
+       cargar el catálogo cuando el carrito guardado traía más de lo que hay. SÍ se puede
+       cerrar (es un aviso puntual, no el estado del negocio). Sin manejadores en línea:
+       la CSP de producción los bloquea; el clic lo engancha app.js. -->
+  <div id="aviso-ajuste" class="aviso-ajuste" role="status" hidden>
+    <p id="aviso-ajuste-texto" class="aviso-ajuste-texto"></p>
+    <button id="aviso-ajuste-cerrar" class="aviso-ajuste-x" type="button" aria-label="Cerrar aviso">✕</button>
+  </div>
+
   <div id="promo-mundos" class="promo promo-mundos" hidden>
     <div class="promo-contenido">
       <p class="promo-linea">3B es más de un negocio — toca los logos 👇</p>
