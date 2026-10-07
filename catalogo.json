@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-06T21:24:12.234Z",
+  "generado": "2026-10-07T02:53:48.089Z",
   "tasa": 775,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -250,11 +250,13 @@
       "shein": {
         "nombre": "Shein",
         "umbralUSD": 30,
+        "impuestoPct": 0,
         "diasHastaNosotros": 7
       },
       "temu": {
         "nombre": "Temu",
         "umbralUSD": 30,
+        "impuestoPct": 0,
         "diasHastaNosotros": 7
       }
     },
@@ -405,7 +407,8 @@
           {
             "tipo": "accesorio",
             "precioUSD": 2,
-            "cantidad": 1
+            "cantidad": 1,
+            "tienda": "shein"
           }
         ],
         "modo": "barco",
@@ -419,7 +422,8 @@
           {
             "tipo": "accesorio",
             "precioUSD": 2,
-            "cantidad": 1
+            "cantidad": 1,
+            "tienda": "shein"
           }
         ],
         "modo": "avion",
@@ -433,7 +437,8 @@
           {
             "tipo": "blusa",
             "precioUSD": 8,
-            "cantidad": 1
+            "cantidad": 1,
+            "tienda": "shein"
           }
         ],
         "modo": "barco",
@@ -447,7 +452,8 @@
           {
             "tipo": "blusa",
             "precioUSD": 8,
-            "cantidad": 1
+            "cantidad": 1,
+            "tienda": "shein"
           }
         ],
         "modo": "avion",
@@ -461,7 +467,8 @@
           {
             "tipo": "jean",
             "precioUSD": 15,
-            "cantidad": 1
+            "cantidad": 1,
+            "tienda": "shein"
           }
         ],
         "modo": "barco",
@@ -475,7 +482,8 @@
           {
             "tipo": "jean",
             "precioUSD": 15,
-            "cantidad": 1
+            "cantidad": 1,
+            "tienda": "shein"
           }
         ],
         "modo": "avion",
@@ -489,7 +497,8 @@
           {
             "tipo": "tenis",
             "precioUSD": 25,
-            "cantidad": 1
+            "cantidad": 1,
+            "tienda": "shein"
           }
         ],
         "modo": "barco",
@@ -503,7 +512,8 @@
           {
             "tipo": "tenis",
             "precioUSD": 25,
-            "cantidad": 1
+            "cantidad": 1,
+            "tienda": "shein"
           }
         ],
         "modo": "avion",
@@ -517,7 +527,8 @@
           {
             "tipo": "jean",
             "precioUSD": 15,
-            "cantidad": 10
+            "cantidad": 10,
+            "tienda": "shein"
           }
         ],
         "modo": "barco",
@@ -531,7 +542,8 @@
           {
             "tipo": "jean",
             "precioUSD": 15,
-            "cantidad": 10
+            "cantidad": 10,
+            "tienda": "shein"
           }
         ],
         "modo": "avion",
@@ -545,7 +557,8 @@
           {
             "tipo": "tenis",
             "precioUSD": 25,
-            "cantidad": 9
+            "cantidad": 9,
+            "tienda": "temu"
           }
         ],
         "modo": "barco",
@@ -559,7 +572,8 @@
           {
             "tipo": "tenis",
             "precioUSD": 25,
-            "cantidad": 9
+            "cantidad": 9,
+            "tienda": "temu"
           }
         ],
         "modo": "avion",
@@ -573,12 +587,14 @@
           {
             "tipo": "blusa",
             "precioUSD": 8,
-            "cantidad": 2
+            "cantidad": 2,
+            "tienda": "shein"
           },
           {
             "tipo": "jean",
             "precioUSD": 15,
-            "cantidad": 1
+            "cantidad": 1,
+            "tienda": "temu"
           }
         ],
         "modo": "barco",
@@ -592,12 +608,14 @@
           {
             "tipo": "blusa",
             "precioUSD": 8,
-            "cantidad": 2
+            "cantidad": 2,
+            "tienda": "shein"
           },
           {
             "tipo": "jean",
             "precioUSD": 15,
-            "cantidad": 1
+            "cantidad": 1,
+            "tienda": "temu"
           }
         ],
         "modo": "avion",
