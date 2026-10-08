@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-07T22:11:58.919Z",
+  "generado": "2026-10-08T03:41:59.746Z",
   "tasa": 775,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -944,6 +944,20 @@
       "moneda": "cup",
       "enOferta": false,
       "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Color"
+        ],
+        "opciones": [
+          "PLATEADO",
+          "DORADO",
+          "MIXTOS"
+        ]
+      },
+      "maxOpciones": {
+        "PLATEADO": 7,
+        "MIXTOS": 2
+      },
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
