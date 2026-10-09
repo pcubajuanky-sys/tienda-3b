@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-09T13:48:23.716Z",
+  "generado": "2026-10-09T14:25:59.838Z",
   "tasa": 775,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -1300,6 +1300,25 @@
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789229232/productos/iint1nqsydkjxzi86gsf.jpg",
       "precioUSD": 8,
       "precioCUP": 6200,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "max": 1,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
+      "id": "p_1781215775166",
+      "codigo": "9ZY3",
+      "name": "Bocina Bluetooth",
+      "cat": "Bocinas Celulares y Accesorios",
+      "subcat": "",
+      "notes": "Dispositivo de audio inalámbrico con altavoces duales, estéreo TWS, llamadas manos libres, radio FM y soporte para tarjetas TF y unidades USB. Se conecta a teléfonos móviles y tabletas. Máxima calidad de sonido",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1781215701/productos/yu7wkzi3wojjmssnk4ec.jpg",
+      "precioUSD": 20,
+      "precioCUP": 15500,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
