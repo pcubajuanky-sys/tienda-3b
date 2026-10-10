@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-10T11:48:36.948Z",
+  "generado": "2026-10-10T15:48:06.888Z",
   "tasa": 770,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -723,7 +723,6 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 9,
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
@@ -827,7 +826,7 @@
       "moneda": "cup",
       "enOferta": false,
       "destacado": false,
-      "max": 5,
+      "max": 6,
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
@@ -923,7 +922,7 @@
         ]
       },
       "maxOpciones": {
-        "ROSA🩷": 8
+        "ROSA🩷": 6
       },
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
@@ -1053,7 +1052,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 1,
+      "max": 2,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -1107,25 +1106,6 @@
       "moneda": "cup",
       "enOferta": false,
       "destacado": false,
-      "max": 2,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      }
-    },
-    {
-      "id": "p_1786803816356",
-      "codigo": "DU4A",
-      "name": "Audífonos inalámbricos X15",
-      "cat": "Bocinas Celulares y Accesorios",
-      "subcat": "",
-      "notes": "Audífonos inalámbricos X15, ligeros y con su estuche de carga.",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786803730/productos/p34guyzzkxjrpwyw39ya.jpg",
-      "precioUSD": 4.16,
-      "precioCUP": 3200,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false,
       "max": 3,
       "envio": {
         "corto": "🛵 Mensajería gratis",
@@ -1145,7 +1125,7 @@
       "moneda": "cup",
       "enOferta": false,
       "destacado": false,
-      "max": 3,
+      "max": 2,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -1442,7 +1422,7 @@
       "cat": "Motos / Accesorios",
       "subcat": "",
       "notes": "Juego de almohadillas para tanque de motocicleta y protector de tapa de combustible, calcomanías de PVC para protección contra arañazos del tanque.",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790982904/productos/d6fs9nwi1euehielcb1n.jpg",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791646495/productos/cobqtkiyxarw1gwdfkua.jpg",
       "precioUSD": 5,
       "precioCUP": 3850,
       "moneda": "usd",
@@ -1789,7 +1769,7 @@
       "moneda": "cup",
       "enOferta": false,
       "destacado": false,
-      "max": 2,
+      "max": 1,
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
@@ -1915,7 +1895,7 @@
       "cat": "Cuidado Personal",
       "subcat": "",
       "notes": "Esponjas de baño de variedad de colores 🌈",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787088336/productos/xhlnjksfcags5akcy4ms.jpg",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791646509/productos/hpgyka4hnhygbxsumvre.jpg",
       "precioUSD": 0.65,
       "precioCUP": 500,
       "moneda": "cup",
@@ -2332,7 +2312,7 @@
       "cat": "Gym y Suplementos",
       "subcat": "",
       "notes": "Glucomanano: tu aliado natural para adelgazar y sentirte mejor!\nFibra soluble de konjac que absorbe agua y forma un gel en el estómago.\nBeneficios clave:\nSaciedad inmediata → comes menos sin pasar hambre\nAyuda a perder peso de forma natural\nReduce el colesterol y controla el azúcar\nMejora el tránsito intestinal y combate el estreñimiento\nCómo tomarlo: 1 g antes de cada comida + abundante agua.\nResultados reales + fórmula 100 % natural.\n¡Empieza hoy y siente la diferencia!",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785357457/productos/apa8adnvifjxwai5gubz.jpg",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791646511/productos/zs3d43e6wptfjygw2pqt.jpg",
       "precioUSD": 25,
       "precioCUP": 19250,
       "moneda": "usd",
@@ -3098,7 +3078,7 @@
       "cat": "Ropa Interior",
       "subcat": "",
       "notes": "",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789255221/productos/iqfttwredoy4ys4gv8m2.jpg",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791646513/productos/sgwtgfloj0blvw1asheh.jpg",
       "precioUSD": 1,
       "precioCUP": 770,
       "moneda": "usd",
@@ -3354,7 +3334,7 @@
       "cat": "Electrodomésticos",
       "subcat": "",
       "notes": "Ideal para facilitar el trabajo diario sin importar las condiciones electro energéticas. No necesita alimentación de corriente. Incluye su cable de carga, cuchillas afiladas dobles y un accesorio para batir huevos.",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790618922/productos/mkjx83kdqdxa2ejprnt0.jpg",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791646515/productos/pamjevfzqm37iytafdzl.jpg",
       "precioUSD": 12,
       "precioCUP": 9240,
       "moneda": "usd",
@@ -3438,7 +3418,7 @@
       "cat": "Ropa",
       "subcat": "",
       "notes": "Monos deportivos tela de licra,largos,para ancha,levanta glúteos y estilizadores . Máxima calidad y confort",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789228125/productos/ea6o1wr9agfjr0lsbseh.jpg",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791646518/productos/i6sf0yhnphkhq3yhiyef.jpg",
       "precioUSD": 18,
       "precioCUP": 13860,
       "moneda": "usd",
@@ -4050,6 +4030,39 @@
       }
     },
     {
+      "id": "p_1791638013723",
+      "codigo": "VR7X",
+      "name": "Pareja de anillos de acero",
+      "cat": "Reloj y Prendas",
+      "subcat": "",
+      "notes": "El kit cuenta con una pareja de anillos de acero inoxidable al azar. Lo que si puede elegir es el color, entre negro, plateado o dorado",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791634281/productos/ulqpdkm0of5ggizdtx3r.jpg",
+      "precioUSD": 1,
+      "precioCUP": 770,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Color"
+        ],
+        "opciones": [
+          "NEGRO",
+          "PLATEADO",
+          "DORADO"
+        ]
+      },
+      "maxOpciones": {
+        "NEGRO": 6,
+        "PLATEADO": 7,
+        "DORADO": 5
+      },
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
+      }
+    },
+    {
       "id": "p_1788234402387",
       "codigo": "JHP9",
       "name": "Pareja de Brochitas de cocina",
@@ -4062,6 +4075,65 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
+      }
+    },
+    {
+      "id": "p_1791633427118",
+      "codigo": "HR8P",
+      "name": "Pareja de Mantillas",
+      "cat": "Reloj y Prendas",
+      "subcat": "",
+      "notes": "El precio es por 2 pulceras tipo Manillas, seleccionadas a su elección. Acero inoxidable alta duración y calidad. Ideal para mujeres hombres o niños. También puede ser usada como tobilleras en tobillos finos",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791633181/productos/velotls5vf76bz3acx3n.jpg",
+      "precioUSD": 1,
+      "precioCUP": 770,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Diseño"
+        ],
+        "opciones": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H",
+          "I",
+          "J",
+          "K",
+          "L",
+          "M",
+          "N",
+          "O",
+          "P"
+        ]
+      },
+      "maxOpciones": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "D": 1,
+        "E": 1,
+        "F": 1,
+        "G": 1,
+        "H": 1,
+        "I": 1,
+        "J": 1,
+        "K": 1,
+        "L": 1,
+        "M": 1,
+        "N": 1,
+        "O": 1,
+        "P": 1
+      },
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
@@ -4588,6 +4660,35 @@
       }
     },
     {
+      "id": "p_1789242483636",
+      "codigo": "AY6T",
+      "name": "Pulover de hombre 4",
+      "cat": "Ropa",
+      "subcat": "",
+      "notes": "Pulover algodonada elastizado. Importado de USA",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791647061/productos/tuc6kyfzvdr6bu69guul.jpg",
+      "precioUSD": 4,
+      "precioCUP": 3080,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Talla"
+        ],
+        "opciones": [
+          "S"
+        ]
+      },
+      "maxOpciones": {
+        "S": 1
+      },
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
       "id": "p_1789241914026",
       "codigo": "KHXC",
       "name": "Pulover Unisex Navideño 1",
@@ -4649,13 +4750,42 @@
       }
     },
     {
+      "id": "p_1789242386934",
+      "codigo": "D5K2",
+      "name": "Pulover Unisex Navideño 3",
+      "cat": "Ropa",
+      "subcat": "",
+      "notes": "Pulover algodonada elastizado. Importado de USA",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791647059/productos/tivxwdhtdakn1ru5sjij.jpg",
+      "precioUSD": 4,
+      "precioCUP": 3080,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Talla"
+        ],
+        "opciones": [
+          "S"
+        ]
+      },
+      "maxOpciones": {
+        "S": 1
+      },
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
       "id": "p_1788792642568",
       "codigo": "S23D",
       "name": "Pulover Unisex Negro de Pantera",
       "cat": "Ropa",
       "subcat": "",
       "notes": "Tallas S y M(agrandadas). Tela algodonada elastizada",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788792578/productos/ohato5acvhkmmvnrlxwf.jpg",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791646520/productos/pefp9pwkm8acwifvz7au.jpg",
       "precioUSD": 3.25,
       "precioCUP": 2500,
       "moneda": "cup",
@@ -4898,7 +5028,27 @@
       "moneda": "cup",
       "enOferta": false,
       "destacado": false,
-      "max": 2,
+      "variantes": {
+        "ejes": [
+          "Diseño"
+        ],
+        "opciones": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F"
+        ]
+      },
+      "maxOpciones": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "D": 1,
+        "E": 1,
+        "F": 1
+      },
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -4911,12 +5061,31 @@
       "cat": "Niños",
       "subcat": "",
       "notes": "Hermosos diseños y colores.\nTodos disponibles a excepción del negro astronauta",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788550846/productos/ibuvzjacz5mahkpb8qr2.jpg",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791641462/productos/ywhlxrewc4vm3cx1rt4f.jpg",
       "precioUSD": 1.95,
       "precioCUP": 1500,
       "moneda": "cup",
       "enOferta": false,
       "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Diseño"
+        ],
+        "opciones": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ]
+      },
+      "maxOpciones": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "D": 1,
+        "E": 1
+      },
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -5043,7 +5212,7 @@
       "cat": "Calzado",
       "subcat": "",
       "notes": "#36",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785541454/productos/bqbuswgkslozrnyhxrnq.jpg",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791646522/productos/pays4the5k2mk26143ay.jpg",
       "precioUSD": 9.64,
       "precioCUP": 7425,
       "moneda": "usd",
@@ -5197,35 +5366,6 @@
       },
       "maxOpciones": {
         "CELESTE": 4
-      },
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      }
-    },
-    {
-      "id": "p_1788546447070",
-      "codigo": "G2DK",
-      "name": "Tablet de niñ@",
-      "cat": "Bocinas Celulares y Accesorios",
-      "subcat": "",
-      "notes": "Solo en Rosado con temática de astronauta. Incluye su cable de carga, un juego de audífonos de cable y un protector con sistema de apollo para mesa y para mejor sostén manual\nCaracterísticas:\nAndroid 14\n7 pulgadas\nWifi 5G\nBatería de gran Capacidad 4500mAh\nDoble camara\n4GB de ram\n128GB de almacenamiento\nPantalla IPS HD de 1280*800 de resolución",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790970235/productos/g1lizzkonvjifukldpqj.jpg",
-      "precioUSD": 58,
-      "precioCUP": 44660,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "variantes": {
-        "ejes": [
-          "Color"
-        ],
-        "opciones": [
-          "AZUL"
-        ]
-      },
-      "maxOpciones": {
-        "AZUL": 1
       },
       "envio": {
         "corto": "🛵 Mensajería gratis",
@@ -5490,7 +5630,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 3,
+      "max": 2,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
