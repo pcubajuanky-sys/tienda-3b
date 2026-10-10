@@ -11,7 +11,7 @@ const vm = require('node:vm');
 const sandbox = { window: {} };
 vm.createContext(sandbox);
 vm.runInContext(fs.readFileSync(path.join(__dirname, '..', 'tarjeta.js'), 'utf8'), sandbox);
-const { precioTarjeta, lineasNombre, nombreArchivo } = sandbox.window.Tarjeta._puro;
+const { precioTarjeta, lineasNombre, nombreArchivo, enlacePie } = sandbox.window.Tarjeta._puro;
 
 const BASE = {
   codigo: 'u8dn',
@@ -85,4 +85,22 @@ test('lineasNombre: un nombre que entra justo en 2 lineas NO lleva … (el defec
 test('nombreArchivo: 3b-CODIGO.jpg en mayusculas, y 3b-producto.jpg sin codigo', () => {
   assert.strictEqual(nombreArchivo({ codigo: 'u8dn' }), '3b-U8DN.jpg');
   assert.strictEqual(nombreArchivo({}), '3b-producto.jpg');
+});
+
+test('enlacePie con codigo: minusculas pasan a mayusculas, con barra y sin www.', () => {
+  assert.strictEqual(enlacePie('n89wn'), '3bqba.com/N89WN');
+  assert.strictEqual(enlacePie('  MARIA '), '3bqba.com/MARIA');
+});
+
+test('enlacePie sin codigo: cae al dominio de siempre, www.3bqba.com', () => {
+  assert.strictEqual(enlacePie(''), 'www.3bqba.com');
+  assert.strictEqual(enlacePie('   '), 'www.3bqba.com');
+  assert.strictEqual(enlacePie(null), 'www.3bqba.com');
+});
+
+test('enlacePie con undefined u otra cosa que no sea texto: no lanza y da el dominio', () => {
+  assert.doesNotThrow(() => enlacePie(undefined));
+  assert.strictEqual(enlacePie(undefined), 'www.3bqba.com');
+  assert.strictEqual(enlacePie({}), 'www.3bqba.com');
+  assert.strictEqual(enlacePie(42), 'www.3bqba.com');
 });

@@ -650,7 +650,10 @@ async function compartirFoto() {
   if (boton) boton.disabled = true;
   avisoCompartir('Preparando la foto…');
   try {
-    const tarjeta = await Tarjeta.dibujar(p);
+    // El enlace del pie lleva el codigo del gestor: en el estado y en las historias no se
+    // pincha, asi que lo que se lee en la foto es lo que le apunta la venta.
+    const v = resolverVendedor();
+    const tarjeta = await Tarjeta.dibujar(p, { codigoGestor: v ? v.code : '' });
     const archivo = new File([tarjeta.blob], tarjeta.nombreArchivo, { type: 'image/jpeg' });
     if (navigator.canShare && navigator.canShare({ files: [archivo] })) {
       try {

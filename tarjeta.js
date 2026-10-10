@@ -3,7 +3,7 @@
 // IIFE con un global (window.Tarjeta), igual que mundos.js y encargos.js.
 // Script externo a proposito: la CSP (vercel.json / _headers) bloquea los inline.
 //
-// Las tres funciones de _puro no tocan el canvas y se prueban en Node
+// Las funciones de _puro no tocan el canvas y se prueban en Node
 // (test/tarjeta.test.js). El dibujo en si se verifica a ojo en el navegador.
 (function () {
   var ANCHO = 1080;
@@ -105,7 +105,16 @@
     return t;
   }
 
-  function dibujar(p) {
+  // Texto del pie. En el estado de WhatsApp y en las historias el enlace NO se pincha: lo
+  // que se lee en la foto es el UNICO camino del cliente a la tienda, asi que con gestor
+  // lleva su enlace corto (3bqba.com/CODIGO, sin www. para que sea mas facil de teclear)
+  // y la venta le cuenta. Esta funcion no sabe de vendedores: recibe el codigo ya resuelto.
+  function enlacePie(codigo) {
+    var c = typeof codigo === 'string' ? codigo.trim() : '';
+    return c ? '3bqba.com/' + c.toUpperCase() : 'www.3bqba.com';
+  }
+
+  function dibujar(p, opciones) {
     var urlFoto = String(p.photo || '');
     var transform = 'f_jpg,q_auto,w_1080,c_limit';
     var src = typeof fotoUrl === 'function' ? fotoUrl(urlFoto, transform) : urlFoto;
@@ -175,7 +184,7 @@
       var altoLogo = 96;
       var anchoLogo = altoLogo * (logo.naturalWidth / logo.naturalHeight);
       var hueco = 28;
-      var dominio = 'www.3bqba.com';
+      var dominio = enlacePie(opciones && opciones.codigoGestor);
       // Si no cupiera junto al logo se baja el cuerpo de la letra; el dominio no se recorta.
       // El dominio es lo unico que se puede LEER para llegar a la tienda (en el estado y en las
       // historias el enlace no se pincha): va en negrita y es lo segundo en jerarquia tras el precio.
@@ -200,6 +209,6 @@
 
   window.Tarjeta = {
     dibujar: dibujar,
-    _puro: { precioTarjeta: precioTarjeta, lineasNombre: lineasNombre, nombreArchivo: nombreArchivo }
+    _puro: { precioTarjeta: precioTarjeta, lineasNombre: lineasNombre, nombreArchivo: nombreArchivo, enlacePie: enlacePie }
   };
 })();
