@@ -706,6 +706,11 @@ body.con-barra-movil{padding-bottom:var(--barra-movil-h, 84px)}
   transition:background-color var(--dur) var(--ease), border-color var(--dur) var(--ease);
 }
 .compartir-btn:hover{border-color:var(--brand);background:var(--brand-soft)}
+/* El principal de la fila: fondo de marca. En oscuro --brand es rosa claro y
+   --brand-ink oscuro, asi que el contraste se invierte solo con los tokens. */
+.compartir-btn-foto{background:var(--brand);border-color:var(--brand);color:var(--brand-ink)}
+.compartir-btn-foto:hover{background:var(--brand-hondo);border-color:var(--brand-hondo);color:var(--brand-ink)}
+.compartir-btn-foto:disabled{opacity:.6;cursor:progress}
 .compartir-aviso{min-height:20px;margin:var(--e2) 0 0;font-size:var(--t-sm);color:var(--text-2)}
 
 /* ── Carrito (hoja) ── */

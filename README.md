@@ -64,6 +64,29 @@ el texto. Las fotos se arreglan subiéndolas otra vez desde Stock+, no desde aqu
 
 Pruebas: `node --test` desde la raíz del repo (no `node --test test/`: con Node 24 eso falla).
 
+## Foto para compartir (`tarjeta.js`)
+
+`tarjeta.js` arma la imagen vertical **1080×1920** de un producto (foto arriba, nombre, precio y el
+logo de 3B abajo) y la entrega como JPEG. Expone `window.Tarjeta`: `dibujar(p)` devuelve
+`{ blob, dataUrl, nombreArchivo }` y `_puro` agrupa las funciones sin canvas (`precioTarjeta`,
+`lineasNombre`, `nombreArchivo`). Lo usa el botón **📸 Compartir foto** de la ficha del producto
+(`compartirFoto()` en `app.js`): abre la hoja de compartir del teléfono con la imagen, o la descarga
+si el navegador no sabe compartir archivos. Instagram no acepta nada desde una web, por eso el camino
+es imagen + hoja de compartir y no hay botón «publicar en Instagram».
+
+Dos cosas que no son obvias y se pagan caro si se rompen:
+
+- La foto se carga con `img.crossOrigin = 'anonymous'` **puesto antes de `src`**. Sin eso el canvas
+  queda contaminado (tainted) y `toBlob`/`toDataURL` fallan. Cloudinary ya responde con
+  `Access-Control-Allow-Origin: *`.
+- **No se puede traer la foto con `fetch`**: la CSP lleva `connect-src 'self'` (en `vercel.json` y
+  `_headers`, duplicados a propósito). Por el mismo motivo la descarga usa el `dataUrl` y no un
+  `blob:`, que no está en `img-src`. Si algún día hace falta `blob:`, se añade en los dos archivos.
+
+`test/tarjeta.test.js` prueba **solo las funciones puras**, cargando `tarjeta.js` en un sandbox de
+`node:vm` con un `window` falso: en Node no hay canvas, así que el dibujo en sí se revisa a ojo en el
+navegador.
+
 ## Avisos
 
 - `catalogo.json` es **público**: cualquiera puede leerlo entero. Solo lleva lo que se ve en la web

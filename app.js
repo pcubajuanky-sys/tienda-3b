@@ -637,6 +637,50 @@ function compartirEnlace() {
     .then((ok) => avisoCompartir(ok ? 'Enlace copiado' : 'No se pudo copiar el enlace'));
 }
 
+// Foto para el estado de WhatsApp o una historia de Instagram. Instagram no deja
+// publicar desde una web: lo que si hay es la hoja de compartir del sistema con la
+// imagen dentro. El orden importa (mismo motivo que compartirFacebook): la copia del
+// texto se lanza ANTES de cualquier await, o el portapapeles falla por falta de foco.
+async function compartirFoto() {
+  const p = productoDe(productoModal);
+  if (!p) return;
+  const boton = document.getElementById('compartir-foto');
+  // Solo se LANZA aqui; su resultado (true/false) se espera al final para no mentir en el aviso.
+  const copia = copiarAlPortapapeles(textoCompartir(p, urlProducto(p)));
+  if (boton) boton.disabled = true;
+  avisoCompartir('Preparando la foto…');
+  try {
+    const tarjeta = await Tarjeta.dibujar(p);
+    const archivo = new File([tarjeta.blob], tarjeta.nombreArchivo, { type: 'image/jpeg' });
+    if (navigator.canShare && navigator.canShare({ files: [archivo] })) {
+      try {
+        await navigator.share({ files: [archivo] });
+        avisoCompartir(await copia
+          ? 'Foto lista — el texto ya está copiado, pégalo en el pie'
+          : 'Foto lista — no se pudo copiar el texto; escríbelo tú');
+      } catch (e) {
+        // AbortError = el gestor cerro la hoja de compartir: no es un fallo.
+        if (!e || e.name !== 'AbortError') throw e;
+      }
+    } else {
+      // Escritorio y navegadores viejos: se descarga. data: esta en la CSP; blob: no.
+      const a = document.createElement('a');
+      a.href = tarjeta.dataUrl || URL.createObjectURL(tarjeta.blob);
+      a.download = tarjeta.nombreArchivo;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      avisoCompartir(await copia
+        ? 'Foto guardada — súbela a tu estado y pega el texto'
+        : 'Foto guardada — súbela a tu estado; no se pudo copiar el texto');
+    }
+  } catch (e) {
+    avisoCompartir('No se pudo preparar la foto; comparte el enlace');
+  } finally {
+    if (boton) boton.disabled = false;
+  }
+}
+
 function capturarTecladoModal(e) {
   const modal = document.getElementById('modal-detalle');
   if (modal.hidden) return;
@@ -1470,6 +1514,7 @@ async function iniciar() {
 
   document.getElementById('modal-cerrar').addEventListener('click', cerrarDetalle);
   document.getElementById('modal-fondo').addEventListener('click', cerrarDetalle);
+  document.getElementById('compartir-foto').addEventListener('click', compartirFoto);
   document.getElementById('compartir-wa').addEventListener('click', compartirWhatsApp);
   document.getElementById('compartir-fb').addEventListener('click', compartirFacebook);
   document.getElementById('compartir-link').addEventListener('click', compartirEnlace);
