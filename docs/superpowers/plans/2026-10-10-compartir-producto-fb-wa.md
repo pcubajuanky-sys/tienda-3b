@@ -58,7 +58,7 @@ empezar.
 - Crear: `api/_og.js`
 - Crear: `test/og.test.js`
 
-- [ ] **Paso 1: escribe la prueba que falla**
+- [x] **Paso 1: escribe la prueba que falla**
 
 Crea `test/og.test.js`:
 
@@ -168,7 +168,7 @@ test('sin transformacion de Cloudinary no se declaran las medidas', () => {
 });
 ```
 
-- [ ] **Paso 2: corre las pruebas y comprueba que fallan**
+- [x] **Paso 2: corre las pruebas y comprueba que fallan**
 
 ```bash
 node --test test/
@@ -176,7 +176,7 @@ node --test test/
 
 Esperado: FALLA con `Cannot find module '../api/_og'`.
 
-- [ ] **Paso 3: escribe la implementación mínima**
+- [x] **Paso 3: escribe la implementación mínima**
 
 Crea `api/_og.js`:
 
@@ -285,7 +285,7 @@ function bloqueOg(d) {
 module.exports = { ogDeProducto, bloqueOg, precioTexto, descripcionOg, imagenOg, escapar };
 ```
 
-- [ ] **Paso 4: corre las pruebas y comprueba que pasan**
+- [x] **Paso 4: corre las pruebas y comprueba que pasan**
 
 ```bash
 node --test test/
@@ -294,7 +294,7 @@ node --test test/
 Esperado: `# pass 15`, `# fail 0`. **Pega la salida real en el informe.** Si alguna falla, arregla el
 módulo, nunca la prueba — salvo que la prueba esté mal escrita, y entonces dilo explícitamente.
 
-- [ ] **Paso 5: commit**
+- [x] **Paso 5: commit**
 
 ```bash
 git add api/_og.js test/og.test.js
