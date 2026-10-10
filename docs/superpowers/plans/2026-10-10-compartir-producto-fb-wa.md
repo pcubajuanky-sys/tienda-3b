@@ -1024,7 +1024,7 @@ git commit -m "web: base href raiz, sin ella /p/<codigo> sale sin estilos ni JS"
 **Esta tarea la ejecuta el piloto con Ruth delante.** Cada push despliega en producción: no se hace
 sin avisar.
 
-- [ ] **Paso 1: la batería completa, antes de nada**
+- [x] **Paso 1: la batería completa, antes de nada**
 
 ```bash
 node --test test/
@@ -1032,7 +1032,7 @@ node --test test/
 
 Esperado: `# pass 25`, `# fail 0`. **Si algo falla, no se despliega.**
 
-- [ ] **Paso 2: push**
+- [x] **Paso 2: push**
 
 ```bash
 git push origin main
@@ -1040,7 +1040,7 @@ git push origin main
 
 Vercel despliega solo. Espera a que termine (1-2 minutos).
 
-- [ ] **Paso 3: las etiquetas, que es lo que lee el robot**
+- [x] **Paso 3: las etiquetas, que es lo que lee el robot**
 
 ```bash
 curl -s https://www.3bqba.com/p/U8DN | findstr "og:title og:description og:image og:url"
@@ -1051,7 +1051,7 @@ Si salieran los de la tienda, la causa más probable es que `includeFiles` no ll
 función: aplica el **plan B** de la spec §6 (leerlos por HTTP con `process.env.VERCEL_URL`) y deja
 escrito en el informe que se usó el plan B.
 
-- [ ] **Paso 4: el ref sobrevive a la reescritura**
+- [x] **Paso 4: el ref sobrevive a la reescritura**
 
 ```bash
 curl -s "https://www.3bqba.com/p/U8DN?ref=5D9K9" | findstr og:url
@@ -1061,7 +1061,7 @@ Esperado: `<meta property="og:url" content="https://www.3bqba.com/p/U8DN?ref=5D9
 Si el `ref` no aparece, **no es un fallo bloqueante**: anótalo en el informe (la atribución del gestor
 sigue funcionando porque `codigoDeLaUrl()` lo lee en el navegador).
 
-- [ ] **Paso 5: las cabeceras de seguridad siguen puestas**
+- [x] **Paso 5: las cabeceras de seguridad siguen puestas**
 
 ```bash
 curl -I https://www.3bqba.com/p/U8DN
@@ -1072,7 +1072,7 @@ Esperado: `HTTP/1.1 200`, y entre las cabeceras `Content-Security-Policy`, `X-Co
 los cuatro valores del bloque `headers` de `vercel.json` a `res.setHeader(...)` en `api/producto.js`,
 con su comentario explicando por qué.
 
-- [ ] **Paso 6: no se rompió nada**
+- [x] **Paso 6: no se rompió nada**
 
 ```bash
 curl -s -o nul -w "%{http_code} " https://www.3bqba.com/ ; curl -s -o nul -w "%{http_code} " https://www.3bqba.com/taxi ; curl -s -o nul -w "%{http_code} " https://www.3bqba.com/5D9K9 ; curl -s -o nul -w "%{http_code}\n" https://www.3bqba.com/catalogo.json
@@ -1102,7 +1102,7 @@ Facebook**: basta con llegar al diálogo.
 - Modificar: `README.md`
 - Crear: `docs/informes/2026-10-10-compartir-producto-fb-wa.md`
 
-- [ ] **Paso 1: documenta la ruta en el README**
+- [x] **Paso 1: documenta la ruta en el README**
 
 Añade al `README.md`, justo antes de la sección `## Avisos`:
 
@@ -1126,14 +1126,14 @@ viejo en Facebook hasta que su caché se refresque. Se fuerza en
 Pruebas: `node --test test/` desde la raíz del repo.
 ```
 
-- [ ] **Paso 2: escribe el informe de relevo**
+- [x] **Paso 2: escribe el informe de relevo**
 
 Crea `docs/informes/2026-10-10-compartir-producto-fb-wa.md` siguiendo el skill
 `writing-handoff-reports`. Autocontenido, y con la **evidencia observada**: la salida real de
 `node --test`, la salida real de los `curl`, y las capturas del depurador de Facebook y de WhatsApp.
 Lo que no se haya ejecutado se marca literalmente **«⚠ NO VERIFICADO»**. Nada de resultados supuestos.
 
-- [ ] **Paso 3: commit**
+- [x] **Paso 3: commit**
 
 ```bash
 git add README.md docs/informes/2026-10-10-compartir-producto-fb-wa.md
