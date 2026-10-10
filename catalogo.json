@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-10T06:18:37.142Z",
+  "generado": "2026-10-10T11:48:36.948Z",
   "tasa": 770,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -2125,6 +2125,25 @@
       "maxOpciones": {
         "L": 2
       },
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
+      "id": "p_1791632060761",
+      "codigo": "Y2AH",
+      "name": "Faro frontal",
+      "cat": "Electrodomésticos",
+      "subcat": "",
+      "notes": "Luz led frontal ,para uso en la cabeza, incluye su cinta ajustable elastizada au cómoda. Útil y ligero, ideal para trabajos que requieran iluminación directa, excursiones al aire libre o cualquier tipo de iluminación sin ocupar las manos. Doble modo de luz",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791631877/productos/w7ddcadgayefzohyohwv.jpg",
+      "precioUSD": 6,
+      "precioCUP": 4620,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "max": 2,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
