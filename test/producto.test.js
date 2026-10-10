@@ -81,3 +81,10 @@ test('el codigo en minusculas tambien encuentra el producto', () => {
   const r = pedir({ c: UNO.codigo.toLowerCase() });
   assert.ok(r.cuerpo.includes('<title>' + UNO.name + ' — 3B Store</title>'));
 });
+
+test('la pagina de producto fija la base en la raiz', () => {
+  // Sin <base href="/"> el navegador pide estilos.css y app.js a /p/… y el comodin
+  // de vercel.json le devuelve HTML: la tienda sale sin estilos y sin JavaScript.
+  const r = pedir({ c: UNO.codigo });
+  assert.ok(r.cuerpo.includes('<base href="/">'), 'falta la etiqueta base');
+});

@@ -3,6 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<!-- Fija la raiz como base de TODAS las URL relativas del documento. Sin esto, una
+     visita a /p/<codigo> (dos segmentos) pide estilos.css y app.js a /p/… y el
+     comodin de vercel.json le devuelve HTML: la tienda sale sin estilos y sin JS.
+     Con los enlaces de gestor (/MARIA, un solo segmento) no pasaba, porque un
+     segmento ya resuelve contra la raiz. NO LA QUITES. -->
+<base href="/">
 <meta name="theme-color" content="#7A2E5D">
 <link rel="icon" href="/favicon-3b.png" type="image/png">
 <link rel="apple-touch-icon" href="/favicon-3b.png">

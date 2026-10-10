@@ -933,6 +933,92 @@ git commit -m "web: botones de compartir por WhatsApp y Facebook en el detalle"
 
 ---
 
+### Task 6b: `<base href="/">` — sin esto la página de producto sale rota
+
+**Añadida el 2026-10-10 durante la ejecución.** Fallo del plan original, encontrado por el ejecutor
+de las Tareas 5-6 y confirmado por el piloto: `index.html` referencia `estilos.css`, `mundos.js`,
+`app.js`, `encargos.js`, `taxi-portada.jpg` y `terminos.html` **en relativo**, y `app.js` hace
+`fetch('catalogo.json?v=…')` dos veces, también relativo. Servidos en `/p/U8DN`, el navegador los
+resuelve contra el directorio `/p/`, los pide a `/p/estilos.css`, `/p/app.js`, `/p/catalogo.json`…,
+y el comodín de `vercel.json` les devuelve HTML. La tienda sale sin estilos y sin JavaScript.
+
+Hoy no se nota con los enlaces de gestor (`/5D9K9`) porque un camino de **un solo segmento**
+resuelve contra la raíz; **dos segmentos** son los que rompen. El robot de Facebook no se entera
+—él solo lee las etiquetas `og:`, que están bien—, pero la persona que pincha el enlace sí.
+
+Se arregla con **una línea**: una etiqueta `<base>` que fija la raíz como base de todas las URL
+relativas del documento. Resuelve los ocho recursos y los dos `fetch` de golpe, y protege a
+cualquier URL relativa que se añada en el futuro. La CSP lo permite (`base-uri 'self'`).
+
+**Archivos:**
+- Modificar: `index.html` (primera línea del `<head>`)
+- Modificar: `test/producto.test.js` (una prueba que impida que se borre)
+
+- [x] **Paso 1: escribe la prueba que falla**
+
+Añade al final de `test/producto.test.js`:
+
+```js
+test('la pagina de producto fija la base en la raiz', () => {
+  // Sin <base href="/"> el navegador pide estilos.css y app.js a /p/… y el comodin
+  // de vercel.json le devuelve HTML: la tienda sale sin estilos y sin JavaScript.
+  const r = pedir({ c: UNO.codigo });
+  assert.ok(r.cuerpo.includes('<base href="/">'), 'falta la etiqueta base');
+});
+```
+
+- [x] **Paso 2: corre las pruebas y comprueba que falla**
+
+```bash
+node --test
+```
+
+Esperado: FALLA con `falta la etiqueta base`.
+
+- [x] **Paso 3: añade la etiqueta**
+
+En `index.html`, **justo después** de `<meta name="viewport" ...>` y antes de
+`<meta name="theme-color" ...>`:
+
+```html
+<!-- Fija la raiz como base de TODAS las URL relativas del documento. Sin esto, una
+     visita a /p/<codigo> (dos segmentos) pide estilos.css y app.js a /p/… y el
+     comodin de vercel.json le devuelve HTML: la tienda sale sin estilos y sin JS.
+     Con los enlaces de gestor (/MARIA, un solo segmento) no pasaba, porque un
+     segmento ya resuelve contra la raiz. NO LA QUITES. -->
+<base href="/">
+```
+
+- [x] **Paso 4: corre las pruebas y comprueba que pasan**
+
+```bash
+node --test
+```
+
+Esperado: `# pass 26`, `# fail 0`.
+
+- [x] **Paso 5: compruébalo con los ojos**
+
+Levanta un simulador de las reescrituras de Vercel (fuera del repo, en el directorio temporal) y
+abre `http://localhost:8124/p/5HP4`:
+
+- **Antes** del arreglo la página sale sin estilos. **Después** tiene que verse la tienda completa,
+  con su CSS, sus productos y el modal de «Abrigo de Chihuahua 1» abierto.
+- La consola **no** puede traer 404 de `/p/estilos.css`, `/p/app.js` ni `/p/catalogo.json`.
+- Comprueba también que `http://localhost:8124/` (la portada) y `http://localhost:8124/5HP4`
+  siguen viéndose bien: la etiqueta `base` afecta a todas las páginas, no solo a la de producto.
+
+**Guarda la captura de `/p/5HP4` ya arreglada** en `docs/informes/2026-10-10-pagina-producto.jpg`.
+
+- [x] **Paso 6: commit**
+
+```bash
+git add index.html test/producto.test.js docs/informes/2026-10-10-pagina-producto.jpg
+git commit -m "web: base href raiz, sin ella /p/<codigo> sale sin estilos ni JS"
+```
+
+---
+
 ### Task 7: despliegue y verificación en producción
 
 **Esta tarea la ejecuta el piloto con Ruth delante.** Cada push despliega en producción: no se hace
