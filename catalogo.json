@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-09T19:48:23.845Z",
+  "generado": "2026-10-10T00:48:36.855Z",
   "tasa": 770,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -1834,25 +1834,6 @@
       }
     },
     {
-      "id": "p_1791230218372",
-      "codigo": "TCUU",
-      "name": "Cortina de luces \"Doradas\"",
-      "cat": "Decoración",
-      "subcat": "",
-      "notes": "Medidas 3x2metros\nDiseño exacto a la imagen\nAlimentación:pilas AA(no incluídas)",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791230118/productos/uexnmjiy6ia14oguvst1.jpg",
-      "precioUSD": 12,
-      "precioCUP": 9240,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "max": 1,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      }
-    },
-    {
       "id": "p_1788907857613",
       "codigo": "DNHA",
       "name": "Creatina Monohidratada Micronizada",
@@ -2199,7 +2180,7 @@
       "moneda": "cup",
       "enOferta": false,
       "destacado": false,
-      "max": 9,
+      "max": 8,
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
@@ -5196,7 +5177,7 @@
         ]
       },
       "maxOpciones": {
-        "CELESTE": 5
+        "CELESTE": 4
       },
       "envio": {
         "corto": "🛵 Mensajería gratis",
