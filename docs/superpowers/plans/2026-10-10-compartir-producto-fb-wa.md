@@ -312,7 +312,7 @@ sin favicon.
 **Archivos:**
 - Modificar: `index.html:1-31` (la cabecera)
 
-- [ ] **Paso 1: reemplaza la cabecera**
+- [x] **Paso 1: reemplaza la cabecera**
 
 Sustituye todo lo que hay desde `<meta name="theme-color"...>` hasta la línea
 `<link rel="stylesheet" href="estilos.css">` (ambas incluidas) por esto:
@@ -353,7 +353,7 @@ Sustituye todo lo que hay desde `<meta name="theme-color"...>` hasta la línea
 <link rel="stylesheet" href="estilos.css">
 ```
 
-- [ ] **Paso 2: comprueba que no perdiste nada**
+- [x] **Paso 2: comprueba que no perdiste nada**
 
 ```bash
 node -e "const h=require('fs').readFileSync('index.html','utf8'); const n=s=>h.split(s).length-1; console.log('og:inicio',n('<!-- og:inicio -->'),'og:fin',n('<!-- og:fin -->'),'title',n('<title>'),'favicon',n('favicon-3b.png'),'canonical',n('rel=\"canonical\"'),'estilos',n('estilos.css'));"
@@ -361,7 +361,7 @@ node -e "const h=require('fs').readFileSync('index.html','utf8'); const n=s=>h.s
 
 Esperado exactamente: `og:inicio 1 og:fin 1 title 1 favicon 2 canonical 1 estilos 1`.
 
-- [ ] **Paso 3: comprueba que la tienda sigue cargando**
+- [x] **Paso 3: comprueba que la tienda sigue cargando**
 
 Abre `index.html` en el navegador con un servidor estático desde la raíz del repo:
 
@@ -372,7 +372,7 @@ node -e "const h=require('http'),f=require('fs'),p=require('path');h.createServe
 Esperado: la tienda carga con sus productos, se ve el icono en la pestaña y la consola del navegador
 no muestra errores de CSP. Déjalo corriendo: lo reusan las tareas 5 y 6. Para pararlo, Ctrl+C.
 
-- [ ] **Paso 4: commit**
+- [x] **Paso 4: commit**
 
 ```bash
 git add index.html

@@ -4,15 +4,22 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#7A2E5D">
-<title>3B Store — Tienda online en San Antonio de los Baños, Cuba</title>
-<meta name="description" content="+150 productos: Cabello, Cuidado Personal, Reloj y Prendas, Hogar, Electrodomésticos. Mensajería gratis en San Antonio en muchos productos. Pide por WhatsApp.">
-<link rel="canonical" href="https://www.3bqba.com/">
 <link rel="icon" href="/favicon-3b.png" type="image/png">
 <link rel="apple-touch-icon" href="/favicon-3b.png">
 
-<!-- og:image: el logo de la tienda sobre negro, servido desde este mismo dominio
-     (antes era la foto de un producto transformada por Cloudinary). Es lo que se
-     ve al compartir el enlace por WhatsApp o Facebook. -->
+<!-- Todo lo que va entre og:inicio y og:fin lo SUSTITUYE api/producto.js cuando la
+     visita entra por /p/<codigo>, para que Facebook y WhatsApp —que no ejecutan
+     JavaScript— enseñen la foto y la descripcion de ESE producto. Si mueves o
+     renombras los marcadores, la funcion deja de reconocerlos y devuelve esta
+     pagina tal cual (fallo seguro, pero sin tarjeta de producto).
+     Los enlaces del icono viven ARRIBA, fuera del bloque, para que una pagina de
+     producto no se quede sin favicon.
+     og:image por defecto: el logo de la tienda sobre negro, servido desde este
+     mismo dominio. Es lo que se ve al compartir la portada. -->
+<!-- og:inicio -->
+<title>3B Store — Tienda online en San Antonio de los Baños, Cuba</title>
+<meta name="description" content="+150 productos: Cabello, Cuidado Personal, Reloj y Prendas, Hogar, Electrodomésticos. Mensajería gratis en San Antonio en muchos productos. Pide por WhatsApp.">
+<link rel="canonical" href="https://www.3bqba.com/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="3B Store">
 <meta property="og:title" content="3B Store — Tienda online en San Antonio de los Baños, Cuba">
@@ -22,11 +29,11 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:locale" content="es_CU">
-
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="3B Store — Tienda online en San Antonio de los Baños, Cuba">
 <meta name="twitter:description" content="+150 productos: Cabello, Cuidado Personal, Reloj y Prendas, Hogar, Electrodomésticos. Mensajería gratis en San Antonio en muchos productos. Pide por WhatsApp.">
 <meta name="twitter:image" content="https://www.3bqba.com/og-3b.jpg">
+<!-- og:fin -->
 
 <link rel="stylesheet" href="estilos.css">
 </head>
