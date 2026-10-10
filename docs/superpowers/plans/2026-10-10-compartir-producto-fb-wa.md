@@ -603,7 +603,7 @@ git commit -m "web: funcion que sirve /p/<codigo> con las etiquetas del producto
 - Modificar: `vercel.json`
 - Modificar: `_redirects`
 
-- [ ] **Paso 1: añade la regla y la inclusión de archivos**
+- [x] **Paso 1: añade la regla y la inclusión de archivos**
 
 En `vercel.json`, el bloque `rewrites` queda así (la regla nueva va **primera**: el comodín de abajo
 se tragaría `/p/...` si fuera antes), y se añade `functions` al mismo nivel que `rewrites`:
@@ -622,7 +622,7 @@ se tragaría `/p/...` si fuera antes), y se añade `functions` al mismo nivel qu
 
 El resto del archivo (el bloque `headers` entero) **no se toca**.
 
-- [ ] **Paso 2: comprueba que el JSON sigue siendo válido y el orden es el correcto**
+- [x] **Paso 2: comprueba que el JSON sigue siendo válido y el orden es el correcto**
 
 ```bash
 node -e "const v=require('./vercel.json'); console.log(v.rewrites.map(r=>r.source)); console.log('includeFiles:', v.functions['api/producto.js'].includeFiles);"
@@ -634,7 +634,7 @@ Esperado:
 includeFiles: {index.html,catalogo.json}
 ```
 
-- [ ] **Paso 3: deja el aviso en `_redirects`**
+- [x] **Paso 3: deja el aviso en `_redirects`**
 
 Añade al final de `_redirects`:
 
@@ -644,7 +644,7 @@ Añade al final de `_redirects`:
 # necesitaria rehacerla como Pages Function en functions/p/[codigo].js.
 ```
 
-- [ ] **Paso 4: commit**
+- [x] **Paso 4: commit**
 
 ```bash
 git add vercel.json _redirects

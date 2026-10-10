@@ -1,8 +1,12 @@
 {
   "rewrites": [
+    { "source": "/p/:codigo", "destination": "/api/producto?c=:codigo" },
     { "source": "/taxi", "destination": "/taxi.html" },
     { "source": "/((?!.*\\.).*)", "destination": "/index.html" }
   ],
+  "functions": {
+    "api/producto.js": { "includeFiles": "{index.html,catalogo.json}" }
+  },
   "headers": [
     {
       "source": "/(.*)",
