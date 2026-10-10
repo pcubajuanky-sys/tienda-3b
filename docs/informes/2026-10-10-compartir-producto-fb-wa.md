@@ -188,3 +188,52 @@ fbcbc45 web: marcadores og:inicio/og:fin en la cabecera
 
 Archivos nuevos: `api/_og.js`, `api/producto.js`, `test/og.test.js`, `test/producto.test.js`.
 Modificados: `index.html`, `estilos.css`, `app.js`, `vercel.json`, `_redirects`, `README.md`.
+
+---
+
+## 9. Segunda tanda del mismo día: lo que pidió Ruth al probarlo
+
+Ruth usó los botones en cuanto se desplegaron y pidió cuatro ajustes. Todos hechos y en producción
+(commits `745c4c7`, `fa78688`, `1c65f92`).
+
+| Lo que dijo | Qué se hizo |
+|---|---|
+| «en el portapapeles no se copia la explicación del producto» | El texto compartido lleva ahora la descripción completa (`notes`), entre el precio y el enlace |
+| «me gustaría que esté el link del grupo cada vez que comparten» | Se añade `👥 Únete a nuestro grupo de ofertas:` con `CAT.tienda.grupoWA`, **después** del enlace del producto |
+| «el texto diga comparte los productos para que ganes comisiones» | El rótulo del bloque pasó a «Comparte los productos para que ganes comisiones» |
+| «los botones son muy pequeños» | De 40 px y letra de 13 a **48 px y letra de 15** (el mismo alto que «Añadir»), repartidos con `flex:1 1 140px` |
+
+**Dos decisiones que se tomaron aquí, con su motivo:**
+
+1. **El enlace del producto va ANTES que el del grupo, siempre.** WhatsApp dibuja la vista previa del
+   **primer** enlace del mensaje: si el grupo fuera primero, la tarjeta sería la del grupo y no la
+   del producto, que es justo lo que costó construir. Si alguien reordena ese texto, lo rompe.
+2. **«Copiar enlace» sigue copiando solo la URL**, sin el texto ni el grupo: es lo que dice su
+   nombre, y sirve para pegar la dirección en un estado o un perfil. Se le dijo a Ruth.
+
+**Sobre el rótulo:** se le advirtió que un cliente sin enlace de gestor no cobra comisión y que ese
+texto se lo promete igual. Decidió el mismo texto para todos. Queda escrito porque es una decisión
+suya, no un descuido.
+
+**Verificado en producción** (`https://www.3bqba.com/p/U8DN?ref=5D9K9`, a 375 px): el rótulo se lee
+entero, WhatsApp y Facebook caen arriba y Copiar enlace abajo, sin desbordamiento. Tienda: 26/26
+pruebas.
+
+**Aviso para quien despliegue:** al comprobar el despliegue con `curl` sobre `/` y `/app.js`, las
+cinco primeras lecturas devolvieron el contenido **viejo** aunque la versión nueva ya estaba
+publicada —caché del borde de Vercel, que un `?v=<timestamp>` no siempre esquiva—. No es un
+despliegue fallido. Antes de volver a desplegar «porque no se ve», compruébalo contra
+`raw.githubusercontent.com` y con otra ruta (`/index.html` en vez de `/`).
+
+## 10. Lo que se arregló en los datos ese mismo día
+
+Las **8 fotos rotas** del §7 están recuperadas, y con ellas otras **2** que tenían la foto en
+`/uploads/` en vez de en Cloudinary (`Pulover Unisex Navideño 3` y `Pulover de hombre 4`). Se
+recuperaron de la copia local que Stock+ guarda en `fotos/<categoria>/<id>.jpg`, se volvieron a
+subir con `POST /api/upload` y cada producto se apuntó a la URL nueva con
+`PUT /api/products/<id>` — nunca tocando `data.json` a mano. Catálogo publicado: **240 productos,
+cero fotos rotas** comprobado contra `https://www.3bqba.com/catalogo.json`.
+
+La capacitación «📲 Compartir productos de la 3B» vive en el otro repo:
+`C:\inventario\inventario-stockmas\docs\informes\2026-10-10-capacitacion-compartir-productos.md`.
+⚠ Requiere que Ruth **reinicie Stock+** para verla en el panel.
