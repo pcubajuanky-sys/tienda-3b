@@ -689,6 +689,20 @@ body.con-barra-movil{padding-bottom:var(--barra-movil-h, 84px)}
 .modal-desc{font-size:14px;color:var(--text-2);line-height:1.55;white-space:pre-line;margin-bottom:18px}
 .modal-accion{display:flex}
 .modal-accion .add,.modal-accion .qty{width:100%}
+/* ── Compartir (dentro del modal de detalle) ── */
+.compartir{margin-top:var(--e4);padding-top:var(--e3);border-top:1px solid var(--border)}
+.compartir-tit{display:block;font-size:var(--t-xs);color:var(--text-3);margin-bottom:var(--e1)}
+.compartir-botones{display:flex;gap:var(--e1);flex-wrap:wrap}
+.compartir-btn{
+  display:inline-flex;align-items:center;gap:var(--e0);
+  min-height:40px;padding:0 var(--e2);
+  border:1px solid var(--border);border-radius:var(--radio-pill);
+  background:var(--surface);color:var(--text);
+  font-family:inherit;font-size:var(--t-sm);font-weight:600;line-height:1;cursor:pointer;
+  transition:border-color var(--dur) var(--ease), background-color var(--dur) var(--ease);
+}
+.compartir-btn:hover{border-color:var(--brand);background:var(--brand-soft)}
+.compartir-aviso{min-height:18px;margin:var(--e1) 0 0;font-size:var(--t-xs);color:var(--text-2)}
 
 /* ── Carrito (hoja) ── */
 .panel{position:fixed;inset:0;z-index:30;display:flex;align-items:flex-end;justify-content:center}

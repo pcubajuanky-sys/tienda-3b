@@ -761,7 +761,7 @@ git commit -m "web: /p/<codigo> abre el detalle de ese producto"
 - Modificar: `estilos.css` (después de la regla `.modal-accion`, ~línea 691)
 - Modificar: `app.js`
 
-- [ ] **Paso 1: el marcado**
+- [x] **Paso 1: el marcado**
 
 En `index.html`, justo **después** de `<div class="modal-accion" id="modal-accion"></div>`, añade:
 
@@ -777,7 +777,7 @@ En `index.html`, justo **después** de `<div class="modal-accion" id="modal-acci
       </div>
 ```
 
-- [ ] **Paso 2: los estilos**
+- [x] **Paso 2: los estilos**
 
 En `estilos.css`, justo después de la línea `.modal-accion .add,.modal-accion .qty{width:100%}`, añade:
 
@@ -798,7 +798,7 @@ En `estilos.css`, justo después de la línea `.modal-accion .add,.modal-accion 
 .compartir-aviso{min-height:18px;margin:var(--e1) 0 0;font-size:var(--t-xs);color:var(--text-2)}
 ```
 
-- [ ] **Paso 3: la lógica**
+- [x] **Paso 3: la lógica**
 
 En `app.js`, justo después de la función `abrirProductoDeLaUrl` que añadiste en la Tarea 5, añade:
 
@@ -884,7 +884,7 @@ function compartirEnlace() {
 }
 ```
 
-- [ ] **Paso 4: engancha los clics**
+- [x] **Paso 4: engancha los clics**
 
 En `iniciar()`, justo después de la línea
 `document.getElementById('modal-fondo').addEventListener('click', cerrarDetalle);`, añade:
@@ -895,7 +895,7 @@ En `iniciar()`, justo después de la línea
   document.getElementById('compartir-link').addEventListener('click', compartirEnlace);
 ```
 
-- [ ] **Paso 5: limpia el aviso al abrir otro producto**
+- [x] **Paso 5: limpia el aviso al abrir otro producto**
 
 En `abrirDetalle`, justo después de la línea
 `document.getElementById('modal-accion').innerHTML = accionHtml(id, null);`, añade:
@@ -905,7 +905,7 @@ En `abrirDetalle`, justo después de la línea
   if (avisoComp) avisoComp.textContent = '';   // no arrastrar el «copiado» del producto anterior
 ```
 
-- [ ] **Paso 6: pruébalo en el navegador**
+- [x] **Paso 6: pruébalo en el navegador**
 
 Con `http://localhost:8123` abierto:
 1. Abre un producto en oferta. Debajo del botón de añadir tienen que verse los tres botones.
@@ -924,7 +924,7 @@ Con `http://localhost:8123` abierto:
 
 **Haz una captura del modal con los tres botones** y guárdala en `docs/informes/`.
 
-- [ ] **Paso 7: commit**
+- [x] **Paso 7: commit**
 
 ```bash
 git add index.html estilos.css app.js

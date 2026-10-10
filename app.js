@@ -509,6 +509,8 @@ function abrirDetalle(id) {
   seleccionVar = [];
   pintarChipsVariante(id);
   document.getElementById('modal-accion').innerHTML = accionHtml(id, null);
+  const avisoComp = document.getElementById('compartir-aviso');
+  if (avisoComp) avisoComp.textContent = '';   // no arrastrar el «copiado» del producto anterior
 
   elementoAnteriorFoco = document.activeElement;
   const modal = document.getElementById('modal-detalle');
@@ -547,6 +549,86 @@ function abrirProductoDeLaUrl() {
   const p = (CAT.items || []).find((x) => String(x.codigo).toUpperCase() === cod);
   if (p) { abrirDetalle(p.id); return; }
   mostrarAvisoTexto('Ese producto ya no está disponible. Mira el resto del catálogo.');
+}
+
+// ── Compartir un producto ──
+// OJO, duplicacion consciente: api/_og.js tiene su propio precioTexto() para la
+// tarjeta de Facebook. Son dos entornos (navegador aqui, Node alli) y no hay forma
+// de compartir codigo sin montar un empaquetador. Si cambias el formato aqui,
+// cambialo alli tambien.
+function precioTexto(p) {
+  const usd = '$' + p.precioUSD + ' USD';
+  const cup = fmt(p.precioCUP) + ' CUP';
+  const esUsd = p.moneda === 'usd';
+  const base = (esUsd ? usd : cup) + ' · ' + (esUsd ? cup : usd);
+  if (!p.enOferta) return base;
+  const antes = esUsd ? '$' + p.precioNormalUSD : fmt(p.precioNormalCUP) + ' CUP';
+  return 'Oferta ' + base + ' (antes ' + antes + ')';
+}
+
+// location.origin y no el dominio fijo: asi funciona igual en los despliegues de
+// prueba de Vercel. El ?ref= viaja solo si el gestor es uno de verdad del catalogo.
+function urlProducto(p) {
+  const v = resolverVendedor();
+  return location.origin + '/p/' + String(p.codigo).toUpperCase() +
+         (v ? '?ref=' + encodeURIComponent(v.code) : '');
+}
+
+function textoCompartir(p, url) {
+  const lineas = ['*' + p.name + '*', precioTexto(p)];
+  if (p.envio && p.envio.corto) lineas.push(p.envio.corto);
+  lineas.push('', url);
+  return lineas.join('\n');
+}
+
+let temporizadorAvisoCompartir = null;
+function avisoCompartir(texto) {
+  const el = document.getElementById('compartir-aviso');
+  if (!el) return;
+  el.textContent = texto;
+  clearTimeout(temporizadorAvisoCompartir);
+  temporizadorAvisoCompartir = setTimeout(() => { el.textContent = ''; }, 3000);
+}
+
+function copiarAlPortapapeles(texto) {
+  try {
+    if (!navigator.clipboard) return Promise.resolve(false);
+    return navigator.clipboard.writeText(texto).then(() => true, () => false);
+  } catch (e) { return Promise.resolve(false); }
+}
+
+function compartirWhatsApp() {
+  const p = productoDe(productoModal);
+  if (!p) return;
+  const url = urlProducto(p);
+  // wa.me SIN numero: WhatsApp pregunta a quien, y el gestor elige chat, grupo o estado.
+  window.open('https://wa.me/?text=' + encodeURIComponent(textoCompartir(p, url)), '_blank', 'noopener');
+}
+
+function compartirFacebook() {
+  const p = productoDe(productoModal);
+  if (!p) return;
+  const url = urlProducto(p);
+  // El orden importa y no es casual:
+  // 1) la copia se LANZA ya, mientras el documento sigue enfocado (si se hiciera
+  //    despues de abrir la ventana, el portapapeles falla por falta de foco);
+  // 2) la ventana se abre SIN await delante — un await aqui la convierte en
+  //    emergente bloqueada (mismo motivo que el comentario de revalidarCierre);
+  // 3) el aviso se pinta cuando la promesa termine.
+  // Facebook no deja rellenar el texto de la publicacion desde fuera (quito el
+  // parametro quote), por eso se copia para que el gestor solo pegue.
+  const copia = copiarAlPortapapeles(textoCompartir(p, url));
+  window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url), '_blank', 'noopener');
+  copia.then((ok) => avisoCompartir(ok
+    ? 'Texto copiado — pégalo en tu publicación'
+    : 'No se pudo copiar: escribe tu texto en Facebook'));
+}
+
+function compartirEnlace() {
+  const p = productoDe(productoModal);
+  if (!p) return;
+  copiarAlPortapapeles(urlProducto(p))
+    .then((ok) => avisoCompartir(ok ? 'Enlace copiado' : 'No se pudo copiar el enlace'));
 }
 
 function capturarTecladoModal(e) {
@@ -1382,6 +1464,9 @@ async function iniciar() {
 
   document.getElementById('modal-cerrar').addEventListener('click', cerrarDetalle);
   document.getElementById('modal-fondo').addEventListener('click', cerrarDetalle);
+  document.getElementById('compartir-wa').addEventListener('click', compartirWhatsApp);
+  document.getElementById('compartir-fb').addEventListener('click', compartirFacebook);
+  document.getElementById('compartir-link').addEventListener('click', compartirEnlace);
 
   document.getElementById('comi-cerrar').addEventListener('click', cerrarComisionista);
   document.getElementById('comi-fondo').addEventListener('click', cerrarComisionista);
