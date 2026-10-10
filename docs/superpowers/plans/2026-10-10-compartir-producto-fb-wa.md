@@ -659,7 +659,7 @@ git commit -m "web: ruta /p/<codigo> hacia la funcion del producto"
 - Modificar: `app.js` — `mostrarAvisoAjuste` (~línea 624), `cerrarDetalle` (~línea 520),
   final de `iniciar()` (~línea 1350)
 
-- [ ] **Paso 1: saca el aviso a una función reutilizable**
+- [x] **Paso 1: saca el aviso a una función reutilizable**
 
 Sustituye la función `mostrarAvisoAjuste` entera por estas dos:
 
@@ -680,7 +680,7 @@ function mostrarAvisoAjuste(recortes) {
 }
 ```
 
-- [ ] **Paso 2: añade la función que abre el producto de la URL**
+- [x] **Paso 2: añade la función que abre el producto de la URL**
 
 Justo debajo de `cerrarDetalle` (después de su llave de cierre), añade:
 
@@ -700,7 +700,7 @@ function abrirProductoDeLaUrl() {
 }
 ```
 
-- [ ] **Paso 3: al cerrar el detalle, devuelve la URL a la raíz**
+- [x] **Paso 3: al cerrar el detalle, devuelve la URL a la raíz**
 
 Dentro de `cerrarDetalle`, justo antes de la línea
 `if (elementoAnteriorFoco && elementoAnteriorFoco.isConnected) elementoAnteriorFoco.focus();`, añade:
@@ -714,7 +714,7 @@ Dentro de `cerrarDetalle`, justo antes de la línea
   }
 ```
 
-- [ ] **Paso 4: llámala al terminar de cargar**
+- [x] **Paso 4: llámala al terminar de cargar**
 
 Al final de `iniciar()`, la secuencia queda:
 
@@ -726,7 +726,7 @@ Al final de `iniciar()`, la secuencia queda:
 }
 ```
 
-- [ ] **Paso 5: compruébalo en el navegador**
+- [x] **Paso 5: compruébalo en el navegador**
 
 Con el servidor del Paso 3 de la Tarea 2 corriendo, abre `http://localhost:8123/`. Ese servidor de
 pruebas **no** tiene la reescritura de Vercel (pedir `/p/U8DN` ahí daría un 404), así que el enlace
@@ -745,7 +745,7 @@ history.replaceState(null, '', '/p/ZZZZ'); abrirProductoDeLaUrl();
 Esperado: aparece arriba la franja «Ese producto ya no está disponible…». Cierra el modal y comprueba
 que la URL vuelve a `/`. **Apunta en el informe lo que viste.**
 
-- [ ] **Paso 6: commit**
+- [x] **Paso 6: commit**
 
 ```bash
 git add app.js

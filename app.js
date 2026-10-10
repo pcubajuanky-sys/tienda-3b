@@ -526,7 +526,27 @@ function cerrarDetalle() {
   // Sin el atributo, no hay petición: la foto vuelve a ponerse solo al abrir el detalle.
   if (img) img.removeAttribute('src');
   document.removeEventListener('keydown', capturarTecladoModal);
+  // Se vino por un enlace de producto: la URL vuelve a la raiz para que el visitante
+  // siga navegando normal. Se conserva la query porque ahi puede ir el ?ref= del
+  // gestor, y el enlace de la barra del navegador tiene que seguir sirviendo.
+  if (location.pathname.indexOf('/p/') === 0) {
+    history.replaceState(null, '', '/' + location.search);
+  }
   if (elementoAnteriorFoco && elementoAnteriorFoco.isConnected) elementoAnteriorFoco.focus();
+}
+
+// Entrada por un enlace compartido: /p/<codigo> abre ese producto.
+// El codigo es el corto del catalogo (4 letras), no el id largo: es el que se
+// comparte y el que entiende api/producto.js.
+// Dos segmentos a proposito: codigoDeLaUrl() toma un solo segmento como codigo de
+// gestor (/MARIA), asi que /p/XXXX no puede confundirse con un vendedor.
+function abrirProductoDeLaUrl() {
+  const m = location.pathname.match(/^\/p\/([A-Za-z0-9]{1,8})\/?$/);
+  if (!m) return;
+  const cod = m[1].toUpperCase();
+  const p = (CAT.items || []).find((x) => String(x.codigo).toUpperCase() === cod);
+  if (p) { abrirDetalle(p.id); return; }
+  mostrarAvisoTexto('Ese producto ya no está disponible. Mira el resto del catálogo.');
 }
 
 function capturarTecladoModal(e) {
@@ -621,13 +641,19 @@ function ajustarCarritoATopes() {
   if (recortes.length) mostrarAvisoAjuste(recortes);
 }
 
-function mostrarAvisoAjuste(recortes) {
+// La franja descartable de arriba. La usan dos cosas: el carrito recortado y un
+// enlace a un producto que ya no esta.
+function mostrarAvisoTexto(texto) {
   const caja = document.getElementById('aviso-ajuste');
   if (!caja) return;
-  const partes = recortes.map((r) => `«${r.nombre}${r.comb ? ' · ' + r.comb : ''}» (${r.tope === 1 ? 'queda 1' : 'quedan ' + r.tope})`);
-  document.getElementById('aviso-ajuste-texto').textContent = 'Ajustamos tu pedido a lo que queda: ' + partes.join(', ') + '.';
+  document.getElementById('aviso-ajuste-texto').textContent = texto;
   caja.hidden = false;
   medirHeader();   // vive dentro de .barra-fija: el alto de la cabecera cambia
+}
+
+function mostrarAvisoAjuste(recortes) {
+  const partes = recortes.map((r) => `«${r.nombre}${r.comb ? ' · ' + r.comb : ''}» (${r.tope === 1 ? 'queda 1' : 'quedan ' + r.tope})`);
+  mostrarAvisoTexto('Ajustamos tu pedido a lo que queda: ' + partes.join(', ') + '.');
 }
 
 function itemsCarrito() {
@@ -1446,6 +1472,7 @@ async function iniciar() {
   medirHeader();
   await cargarCatalogo();
   renderMundos();
+  abrirProductoDeLaUrl();   // despues de cargarCatalogo: necesita CAT.items
 }
 
 iniciar();
