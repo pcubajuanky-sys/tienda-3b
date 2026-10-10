@@ -387,7 +387,7 @@ git commit -m "web: marcadores og:inicio/og:fin en la cabecera"
 - Crear: `api/producto.js`
 - Crear: `test/producto.test.js`
 
-- [ ] **Paso 1: escribe la prueba que falla**
+- [x] **Paso 1: escribe la prueba que falla**
 
 Crea `test/producto.test.js`:
 
@@ -477,7 +477,7 @@ test('el codigo en minusculas tambien encuentra el producto', () => {
 });
 ```
 
-- [ ] **Paso 2: corre las pruebas y comprueba que fallan**
+- [x] **Paso 2: corre las pruebas y comprueba que fallan**
 
 ```bash
 node --test test/
@@ -485,7 +485,7 @@ node --test test/
 
 Esperado: FALLA con `Cannot find module '../api/producto'`.
 
-- [ ] **Paso 3: escribe la implementación mínima**
+- [x] **Paso 3: escribe la implementación mínima**
 
 Crea `api/producto.js`:
 
@@ -580,7 +580,7 @@ module.exports = function handler(req, res) {
 };
 ```
 
-- [ ] **Paso 4: corre las pruebas y comprueba que pasan**
+- [x] **Paso 4: corre las pruebas y comprueba que pasan**
 
 ```bash
 node --test test/
@@ -588,7 +588,7 @@ node --test test/
 
 Esperado: `# pass 25`, `# fail 0` (15 de la Tarea 1 + 10 de esta). **Pega la salida real.**
 
-- [ ] **Paso 5: commit**
+- [x] **Paso 5: commit**
 
 ```bash
 git add api/producto.js test/producto.test.js
