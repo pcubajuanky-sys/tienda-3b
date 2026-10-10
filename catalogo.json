@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-10T19:24:45.107Z",
+  "generado": "2026-10-10T20:37:50.267Z",
   "tasa": 780,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -1012,7 +1012,7 @@
       "moneda": "cup",
       "enOferta": false,
       "destacado": false,
-      "max": 6,
+      "max": 5,
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
@@ -1781,25 +1781,6 @@
       "subcat": "",
       "notes": "Correa retráctil para mascotas, diseño colorido de huellas de patas, correa portátil y duradera de 3 m para gatos y perros, ideal para paseos al aire libre y tiempo de juego",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791131922/productos/l6ihxpmy86k5kksbe8zv.jpg",
-      "precioUSD": 12,
-      "precioCUP": 9360,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "max": 1,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      }
-    },
-    {
-      "id": "p_1791230020363",
-      "codigo": "6AGD",
-      "name": "Cortina de luces \"Cuento de hadas\"",
-      "cat": "Decoración",
-      "subcat": "",
-      "notes": "Medidas 3x2metros\nDiseño exacto a la imagen\nAlimentación:pilas AA(no incluídas)",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791229887/productos/wcgjp0rqkewy5yqyy1jx.jpg",
       "precioUSD": 12,
       "precioCUP": 9360,
       "moneda": "usd",
@@ -4624,25 +4605,6 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
-    },
-    {
-      "id": "p_1787942484201",
-      "codigo": "JLJH",
-      "name": "Pulceras rígidas plateadas",
-      "cat": "Reloj y Prendas",
-      "subcat": "",
-      "notes": "Pareja de pulseras plateadas.",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787942382/productos/qa3gwbbj6thh3n6zitmx.jpg",
-      "precioUSD": 1.09,
-      "precioCUP": 850,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false,
-      "max": 1,
-      "envio": {
-        "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
