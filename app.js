@@ -577,7 +577,13 @@ function urlProducto(p) {
 function textoCompartir(p, url) {
   const lineas = ['*' + p.name + '*', precioTexto(p)];
   if (p.envio && p.envio.corto) lineas.push(p.envio.corto);
-  lineas.push('', url);
+  const desc = String(p.notes || '').trim();
+  if (desc) lineas.push('', desc);
+  // El enlace del PRODUCTO va antes que el del grupo a proposito: WhatsApp pinta la
+  // vista previa del PRIMER enlace del mensaje, y la que queremos es la del producto.
+  lineas.push('', '👉 Míralo aquí: ' + url);
+  const grupo = String((CAT.tienda || {}).grupoWA || '').trim();
+  if (grupo) lineas.push('', '👥 Únete a nuestro grupo de ofertas: ' + grupo);
   return lineas.join('\n');
 }
 
