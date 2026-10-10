@@ -690,19 +690,23 @@ body.con-barra-movil{padding-bottom:var(--barra-movil-h, 84px)}
 .modal-accion{display:flex}
 .modal-accion .add,.modal-accion .qty{width:100%}
 /* ── Compartir (dentro del modal de detalle) ── */
+/* Los botones son del mismo alto que el de «Añadir» (48px, el de .btn): con 40px y
+   letra de 13px Ruth los vio diminutos en el telefono. `flex:1 1 140px` los reparte
+   a lo ancho y a 375px caen dos arriba y uno abajo, sin desbordar. */
 .compartir{margin-top:var(--e4);padding-top:var(--e3);border-top:1px solid var(--border)}
-.compartir-tit{display:block;font-size:var(--t-xs);color:var(--text-3);margin-bottom:var(--e1)}
+.compartir-tit{display:block;font-size:var(--t-sm);font-weight:700;color:var(--text);margin-bottom:var(--e2)}
 .compartir-botones{display:flex;gap:var(--e1);flex-wrap:wrap}
 .compartir-btn{
-  display:inline-flex;align-items:center;gap:var(--e0);
-  min-height:40px;padding:0 var(--e2);
-  border:1px solid var(--border);border-radius:var(--radio-pill);
+  flex:1 1 140px;
+  display:inline-flex;align-items:center;justify-content:center;gap:var(--e1);
+  min-height:48px;padding:0 var(--e3);
+  border:1px solid var(--border);border-radius:var(--radio-control);
   background:var(--surface);color:var(--text);
-  font-family:inherit;font-size:var(--t-sm);font-weight:600;line-height:1;cursor:pointer;
-  transition:border-color var(--dur) var(--ease), background-color var(--dur) var(--ease);
+  font-family:inherit;font-size:var(--t-md);font-weight:700;line-height:1.1;cursor:pointer;
+  transition:background-color var(--dur) var(--ease), border-color var(--dur) var(--ease);
 }
 .compartir-btn:hover{border-color:var(--brand);background:var(--brand-soft)}
-.compartir-aviso{min-height:18px;margin:var(--e1) 0 0;font-size:var(--t-xs);color:var(--text-2)}
+.compartir-aviso{min-height:20px;margin:var(--e2) 0 0;font-size:var(--t-sm);color:var(--text-2)}
 
 /* ── Carrito (hoja) ── */
 .panel{position:fixed;inset:0;z-index:30;display:flex;align-items:flex-end;justify-content:center}
