@@ -706,6 +706,9 @@ body.con-barra-movil{padding-bottom:var(--barra-movil-h, 84px)}
   transition:background-color var(--dur) var(--ease), border-color var(--dur) var(--ease);
 }
 .compartir-btn:hover{border-color:var(--brand);background:var(--brand-soft)}
+/* Logos de marca (SVG inline, con su color en el propio markup). Misma altura que
+   el texto; flex:none para que el boton no los aplaste. */
+.compartir-logo{width:20px;height:20px;flex:none}
 /* El principal de la fila: fondo de marca. En oscuro --brand es rosa claro y
    --brand-ink oscuro, asi que el contraste se invierte solo con los tokens. */
 .compartir-btn-foto{background:var(--brand);border-color:var(--brand);color:var(--brand-ink)}

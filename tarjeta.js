@@ -8,7 +8,19 @@
 (function () {
   var ANCHO = 1080;
   var ALTO = 1920;
-  var ALTO_FOTO = 1280;
+  var ALTO_FOTO = 1080;
+  // ZONA MUERTA: los ultimos 220 px (y > 1700) NO llevan contenido. La interfaz del estado
+  // de WhatsApp y de las historias de Instagram (campo «Responder», barra del sistema,
+  // botones de la app) se dibuja ENCIMA de la imagen y tapa esa franja; ahi iba la llamada
+  // a la accion y no se leia. No bajar nada de aqui: si falta sitio, se encoge la foto
+  // (ALTO_FOTO), nunca el precio. Todo el texto cuelga de ALTO_FOTO, asi que cambiarla
+  // mueve el bloque entero; el pie acaba justo en LIMITE_SEGURO.
+  var LIMITE_SEGURO = ALTO - 220; // 1700
+  var Y_NOMBRE = ALTO_FOTO + 70;  // centro de la 1.a linea del nombre
+  var Y_PRECIO = ALTO_FOTO + 260;
+  var Y_ANTES = ALTO_FOTO + 350;
+  var Y_FRASE = ALTO_FOTO + 460;
+  var Y_PIE = ALTO_FOTO + 575;    // centro del logo; con 80 px de alto acaba en 1695
   var ANCHO_TEXTO = 960; // 1080 menos 60 de margen a cada lado
   var COLOR_MARCA = '#7A2E5D';
   var FUENTE = 'system-ui, sans-serif'; // sin webfonts: la CSP no tiene font-src
@@ -137,33 +149,41 @@
         tam -= 2;
       }
       if (lineas.length > 2) lineas = lineasNombre(p.name, cabe, 2);
-      lineas.forEach(function (l, i) { ctx.fillText(l, ANCHO / 2, 1420 + i * Math.round(tam * 1.19)); });
+      lineas.forEach(function (l, i) { ctx.fillText(l, ANCHO / 2, Y_NOMBRE + i * Math.round(tam * 1.19)); });
 
       // 4) precio grande y, si hay oferta, el de antes tachado
       var precio = precioTarjeta(p);
       ctx.fillStyle = COLOR_MARCA;
       ajustarFuente(ctx, precio.grande, 92, 56, ANCHO - 80, 'bold');
-      ctx.fillText(precio.grande, ANCHO / 2, 1610);
+      ctx.fillText(precio.grande, ANCHO / 2, Y_PRECIO);
       if (precio.antes) {
         ctx.fillStyle = '#6B6370';
         ctx.font = '48px ' + FUENTE;
         var w = ctx.measureText(precio.antes).width;
-        ctx.fillText(precio.antes, ANCHO / 2, 1700);
-        ctx.fillRect(ANCHO / 2 - w / 2, 1700, w, 4);
+        ctx.fillText(precio.antes, ANCHO / 2, Y_ANTES);
+        ctx.fillRect(ANCHO / 2 - w / 2, Y_ANTES, w, 4);
       }
 
-      // 5) pie: logo a la izquierda y el dominio a su derecha, el conjunto centrado
-      var altoLogo = 90;
-      var anchoLogo = altoLogo * (logo.naturalWidth / logo.naturalHeight);
+      // 5) pie. En el estado de WhatsApp y en una historia el enlace no se puede pinchar:
+      //    quien ve la foto tiene que LEER a donde ir. Arriba, una frase pequena en gris;
+      //    debajo, el logo a la izquierda y el dominio a su derecha, el conjunto centrado.
       ctx.fillStyle = '#6B6370';
-      ctx.font = '44px ' + FUENTE;
-      ctx.textAlign = 'left';
-      var dominio = '3bqba.com';
-      var anchoDominio = ctx.measureText(dominio).width;
+      ctx.textAlign = 'center';
+      ctx.font = '36px ' + FUENTE;
+      ctx.fillText('Busca más productos y detalles en', ANCHO / 2, Y_FRASE);
+
+      var altoLogo = 80;
+      var anchoLogo = altoLogo * (logo.naturalWidth / logo.naturalHeight);
       var hueco = 24;
+      var dominio = 'www.3bqba.com';
+      // Si no cupiera junto al logo se baja el cuerpo de la letra; el dominio no se recorta.
+      ajustarFuente(ctx, dominio, 44, 28, ANCHO - 120 - anchoLogo - hueco, '');
+      ctx.textAlign = 'left';
+      var anchoDominio = ctx.measureText(dominio).width;
       var x0 = (ANCHO - (anchoLogo + hueco + anchoDominio)) / 2;
-      ctx.drawImage(logo, x0, 1830 - altoLogo / 2, anchoLogo, altoLogo);
-      ctx.fillText(dominio, x0 + anchoLogo + hueco, 1830);
+      ctx.drawImage(logo, x0, Y_PIE - altoLogo / 2, anchoLogo, altoLogo);
+      ctx.fillText(dominio, x0 + anchoLogo + hueco, Y_PIE);
+      if (Y_PIE + altoLogo / 2 > LIMITE_SEGURO) throw new Error('El pie de la tarjeta invade la zona muerta');
 
       var dataUrl = canvas.toDataURL('image/jpeg', 0.9);
       return new Promise(function (resolve, reject) {
