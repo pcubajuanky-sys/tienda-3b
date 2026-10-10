@@ -8,7 +8,7 @@
 (function () {
   var ANCHO = 1080;
   var ALTO = 1920;
-  var ALTO_FOTO = 1080;
+  var ALTO_FOTO = 1040;
   // ZONA MUERTA: los ultimos 220 px (y > 1700) NO llevan contenido. La interfaz del estado
   // de WhatsApp y de las historias de Instagram (campo «Responder», barra del sistema,
   // botones de la app) se dibuja ENCIMA de la imagen y tapa esa franja; ahi iba la llamada
@@ -19,8 +19,8 @@
   var Y_NOMBRE = ALTO_FOTO + 70;  // centro de la 1.a linea del nombre
   var Y_PRECIO = ALTO_FOTO + 260;
   var Y_ANTES = ALTO_FOTO + 350;
-  var Y_FRASE = ALTO_FOTO + 460;
-  var Y_PIE = ALTO_FOTO + 575;    // centro del logo; con 80 px de alto acaba en 1695
+  var Y_FRASE = ALTO_FOTO + 465;
+  var Y_PIE = ALTO_FOTO + 595;    // centro del logo; con 96 px de alto acaba en 1683
   var ANCHO_TEXTO = 960; // 1080 menos 60 de margen a cada lado
   var COLOR_MARCA = '#7A2E5D';
   var FUENTE = 'system-ui, sans-serif'; // sin webfonts: la CSP no tiene font-src
@@ -165,19 +165,22 @@
       }
 
       // 5) pie. En el estado de WhatsApp y en una historia el enlace no se puede pinchar:
-      //    quien ve la foto tiene que LEER a donde ir. Arriba, una frase pequena en gris;
+      //    quien ve la foto tiene que LEER a donde ir. Arriba, una frase en gris (48 px);
       //    debajo, el logo a la izquierda y el dominio a su derecha, el conjunto centrado.
       ctx.fillStyle = '#6B6370';
       ctx.textAlign = 'center';
-      ctx.font = '36px ' + FUENTE;
+      ctx.font = '48px ' + FUENTE;
       ctx.fillText('Busca más productos y detalles en', ANCHO / 2, Y_FRASE);
 
-      var altoLogo = 80;
+      var altoLogo = 96;
       var anchoLogo = altoLogo * (logo.naturalWidth / logo.naturalHeight);
-      var hueco = 24;
+      var hueco = 28;
       var dominio = 'www.3bqba.com';
       // Si no cupiera junto al logo se baja el cuerpo de la letra; el dominio no se recorta.
-      ajustarFuente(ctx, dominio, 44, 28, ANCHO - 120 - anchoLogo - hueco, '');
+      // El dominio es lo unico que se puede LEER para llegar a la tienda (en el estado y en las
+      // historias el enlace no se pincha): va en negrita y es lo segundo en jerarquia tras el precio.
+      ctx.fillStyle = '#3B2F40';
+      ajustarFuente(ctx, dominio, 60, 40, ANCHO - 120 - anchoLogo - hueco, 'bold');
       ctx.textAlign = 'left';
       var anchoDominio = ctx.measureText(dominio).width;
       var x0 = (ANCHO - (anchoLogo + hueco + anchoDominio)) / 2;
