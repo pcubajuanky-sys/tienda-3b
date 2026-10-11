@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-10T21:06:53.132Z",
+  "generado": "2026-10-11T02:23:32.917Z",
   "tasa": 780,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -1106,7 +1106,7 @@
       "moneda": "cup",
       "enOferta": false,
       "destacado": false,
-      "max": 2,
+      "max": 1,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -3652,7 +3652,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 2,
+      "max": 1,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -4608,35 +4608,6 @@
       }
     },
     {
-      "id": "p_1789240666897",
-      "codigo": "WLKK",
-      "name": "Pulover de hombre 1",
-      "cat": "Ropa",
-      "subcat": "",
-      "notes": "Pulover algodonada elastizado. Importado de USA",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789240533/productos/qcwfdts5ddd82zcwp1bv.jpg",
-      "precioUSD": 4,
-      "precioCUP": 3120,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "variantes": {
-        "ejes": [
-          "Talla"
-        ],
-        "opciones": [
-          "M"
-        ]
-      },
-      "maxOpciones": {
-        "M": 1
-      },
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      }
-    },
-    {
       "id": "p_1789240757263",
       "codigo": "DECX",
       "name": "Pulover de hombre 2",
@@ -4883,6 +4854,27 @@
       "moneda": "cup",
       "enOferta": false,
       "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Colores"
+        ],
+        "opciones": [
+          "NEGRO",
+          "BLANCO",
+          "ROJO",
+          "ROSA",
+          "AZUL",
+          "CELESTE"
+        ]
+      },
+      "maxOpciones": {
+        "NEGRO": 1,
+        "BLANCO": 2,
+        "ROJO": 2,
+        "ROSA": 2,
+        "AZUL": 1,
+        "CELESTE": 1
+      },
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -5646,7 +5638,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 3,
+      "max": 2,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
