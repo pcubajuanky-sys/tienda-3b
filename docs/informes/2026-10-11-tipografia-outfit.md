@@ -61,10 +61,38 @@ tras la corrección 4 (se miró portada y parrilla). 9. `/taxi`: OK (formulario 
 - El servidor del plan manda `/taxi` (sin extensión) a `index.html`; para ver el taxi en local se usa `/taxi.html`.
 - Las insignias de un emoji miden 31x30 (no 30x30) en escritorio: 1px de píldora, imperceptible.
 
+## Publicado y verificado en producción (2026-10-11, tras el informe de arriba)
+
+Ruth autorizó el `git push`. El push fue **rechazado la primera vez**: Stock+ había publicado cuatro veces
+`catalogo.json` en el remoto durante la sesión (commits automáticos `catalogo: 24N productos`). Se resolvió con
+`git pull --rebase`, que reaplicó los 9 commits locales encima sin un solo conflicto — ninguno toca `catalogo.json`.
+**Esto va a repetirse cada vez que se toque la tienda a mano:** el panel escribe directo en el remoto, así que lo normal
+es rebasar antes de publicar, no es un problema.
+
+Medido en `https://www.3bqba.com` con el navegador, ya desplegado:
+
+- `/fuentes/outfit-latin-v15.woff2` → **HTTP 200**, `content-type: font/woff2`, **32.292 bytes**. La CSP de Vercel
+  **no la bloquea**: era el único riesgo que el servidor local no podía descartar. Cierra el ⚠ de abajo.
+- `document.fonts` contiene **`Outfit:loaded`** (la cara cargada de verdad).
+- `.cat3d-nombre` computa `Outfit` a **12.5px**.
+- `.cat3d-inner` mide **112x112** — el círculo no se estira en producción (la corrección 1 aguanta).
+- La insignia mide **31x30** y queda **dentro** del círculo.
+- Mirado a ojo: nombres legibles, círculos redondos, insignias enteras, el resto del sitio en Outfit.
+
+### Una trampa del plan, para quien venga
+
+El plan mandaba verificar con `document.fonts.check('600 12.5px Outfit')`. **Esa comprobación da falso positivo:**
+se ejecutó contra la versión vieja del sitio, todavía sin `@font-face`, y devolvió **`true`** igualmente (`check()`
+responde que sí cuando no hay ninguna cara declarada que contradiga la petición). Si alguna vez hay que comprobar
+que una fuente cargó de verdad, usar en su lugar:
+
+```js
+[...document.fonts].map(f => f.family + ':' + f.status)   // tiene que salir "Outfit:loaded"
+getComputedStyle(document.querySelector('.cat3d-nombre')).fontFamily   // tiene que empezar por Outfit
+```
+
 ## ⚠ NO VERIFICADO
 
-- **Producción:** nada se ha publicado. **No se hizo `git push`**: queda a decisión del dueño (Tarea 8, paso 4). Tras el push
-  hay que abrir `https://www.3bqba.com` con Ctrl+F5 y confirmar que se ve igual que en local.
 - Los emojis se dibujan con la fuente de emoji de cada sistema; aquí se vieron con la de Windows/Chrome. En Android/iOS
-  el glifo y su ancho cambian, y la píldora de dos emojis puede medir otro tanto.
-- La CSP real de Vercel no se probó (el servidor local no la aplica); la fuente va desde el mismo dominio, así que no debería hacer falta.
+  el glifo y su ancho cambian, y la píldora de dos emojis puede medir otro tanto. **Es lo único que queda por ver en un
+  teléfono de verdad.**
