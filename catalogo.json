@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-11T18:23:47.921Z",
+  "generado": "2026-10-11T23:53:52.011Z",
   "tasa": 780,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -753,25 +753,6 @@
       }
     },
     {
-      "id": "p_1788813668772",
-      "codigo": "5H6N",
-      "name": "Agujas de coser a mano",
-      "cat": "Hogar",
-      "subcat": "",
-      "notes": "Paquete de 10 agujas de coser a mano",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788813535/productos/b83asoaayqn2wofqhwf0.jpg",
-      "precioUSD": 1.28,
-      "precioCUP": 1000,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false,
-      "max": 1,
-      "envio": {
-        "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
-      }
-    },
-    {
       "id": "p_1788814692844",
       "codigo": "C76G",
       "name": "Ajusta invisible sin tirantes",
@@ -953,13 +934,11 @@
         ],
         "opciones": [
           "PLATEADO",
-          "DORADO",
-          "MIXTOS"
+          "DORADO"
         ]
       },
       "maxOpciones": {
-        "PLATEADO": 7,
-        "MIXTOS": 1
+        "PLATEADO": 7
       },
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
@@ -1407,16 +1386,18 @@
       "subcat": "",
       "notes": "Cafetera italiana para café expreso",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788891782/productos/b8cptn2c5lert8u7rad6.jpg",
-      "precioUSD": 6.41,
-      "precioCUP": 5000,
+      "precioUSD": 6,
+      "precioCUP": 4680,
       "moneda": "cup",
-      "enOferta": false,
+      "enOferta": true,
       "destacado": false,
       "max": 2,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "precioNormalUSD": 7,
+      "precioNormalCUP": 5460
     },
     {
       "id": "p_1790983047647",
@@ -1579,9 +1560,9 @@
       "subcat": "",
       "notes": "Fácil instalación adhesiva sin herramientas con un fuerte agarre para nevera, gabinete, puerta de despensa y electrodomésticos de cocina | Cerraduras seguras para puertas y gabinetes para la seguridad del hogar y la cocina - Seguro para mascotas y familiares",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788049482/productos/axnjnxg6zuntczll5kc9.jpg",
-      "precioUSD": 1.03,
-      "precioCUP": 800,
-      "moneda": "cup",
+      "precioUSD": 1.2,
+      "precioCUP": 936,
+      "moneda": "usd",
       "enOferta": false,
       "destacado": false,
       "max": 7,
@@ -1911,24 +1892,6 @@
       }
     },
     {
-      "id": "p_1780092645027",
-      "codigo": "CNQV",
-      "name": "Esponjas de Fregar",
-      "cat": "Hogar",
-      "subcat": "",
-      "notes": "El precio es por un paquete de 5 esponjas",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787956344/productos/bobyh23bclobciqvbiws.jpg",
-      "precioUSD": 1.03,
-      "precioCUP": 800,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
-      }
-    },
-    {
       "id": "p_1791314349706",
       "codigo": "C825",
       "name": "Estrellas fosforescentes (100 unidades)",
@@ -1936,12 +1899,12 @@
       "subcat": "",
       "notes": "✨100 unidades de  Estrellas fosforescentes que brillan en la oscuridad\nLleva el cielo a tu habitación. Pack de estrellas adhesivas en colores vivos (verde, azul, amarillo y rosa). Ideales para decorar paredes, techos o habitaciones infantiles.\nBrillan varias horas tras absorber luz. Fáciles de colocar y retirar.",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791314215/productos/t8qiszgv8ae7obbtte82.jpg",
-      "precioUSD": 2.18,
-      "precioCUP": 1700,
-      "moneda": "cup",
+      "precioUSD": 2.5,
+      "precioCUP": 1950,
+      "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 1,
+      "max": 4,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -1955,12 +1918,12 @@
       "subcat": "",
       "notes": "Paquete de 250 estrellitas con su adhesivo.\nEstrellas fosforescentes que brillan en la oscuridad\nLleva el cielo a tu habitación. Pack de estrellas adhesivas en colores vivos (verde, azul, amarillo y rosa). Ideales para decorar paredes, techos o habitaciones infantiles.\nBrillan varias horas tras absorber luz. Fáciles de colocar y retirar.",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791294581/productos/j5daxkdp8nlct720u1ht.jpg",
-      "precioUSD": 4.62,
-      "precioCUP": 3600,
-      "moneda": "cup",
+      "precioUSD": 6,
+      "precioCUP": 4680,
+      "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 5,
+      "max": 6,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -1995,25 +1958,6 @@
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788199912/productos/zi07dgtj1fxicbqru7oa.jpg",
       "precioUSD": 4.62,
       "precioCUP": 3600,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false,
-      "max": 5,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      }
-    },
-    {
-      "id": "p_1788533425716",
-      "codigo": "XNAA",
-      "name": "Estropajo de aluminio",
-      "cat": "Hogar",
-      "subcat": "",
-      "notes": "Paquete de 5 estropajos de aluminio de alta calidad. Inoxidable y muy duradero",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788533301/productos/txglc57hsr3munkrokuz.jpg",
-      "precioUSD": 1.92,
-      "precioCUP": 1500,
       "moneda": "cup",
       "enOferta": false,
       "destacado": false,
@@ -2062,9 +2006,9 @@
       "subcat": "",
       "notes": "Útil accesorio de uso diario, exprimidor de tubos de pastas tanto dental, como tintes, cremas y demás productos",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788839767/productos/qpnmcilryql7g6ewatrl.jpg",
-      "precioUSD": 0.51,
-      "precioCUP": 400,
-      "moneda": "cup",
+      "precioUSD": 0.6,
+      "precioCUP": 468,
+      "moneda": "usd",
       "enOferta": false,
       "destacado": false,
       "variantes": {
@@ -2229,26 +2173,8 @@
         ]
       },
       "maxOpciones": {
-        "NEGRO": 3
+        "NEGRO": 2
       },
-      "envio": {
-        "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
-      }
-    },
-    {
-      "id": "p_1780092427629",
-      "codigo": "XFT3",
-      "name": "Ganchos de silicona",
-      "cat": "Hogar",
-      "subcat": "",
-      "notes": "Cada paquete trae 10 ganchos. 2 diseños disponibles(detalles alpv)\nA, partir de 2 paquetes",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787956401/productos/x5b7h43xmdftd8ufs5rq.jpg",
-      "precioUSD": 1.22,
-      "precioCUP": 950,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false,
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
@@ -2398,7 +2324,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": true,
-      "max": 5,
+      "max": 8,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -2454,7 +2380,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 3,
+      "max": 4,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -2492,7 +2418,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 4,
+      "max": 3,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -2571,25 +2497,6 @@
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
-      }
-    },
-    {
-      "id": "p_1785769239613",
-      "codigo": "SEJX",
-      "name": "Lámpara de techo corta",
-      "cat": "Decoración",
-      "subcat": "",
-      "notes": "Materiales:metal\nColor: Negro mate\n• No incluye foco 💡",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785769141/productos/ecuea6rhnqy7bejz0lkk.jpg",
-      "precioUSD": 16,
-      "precioCUP": 12480,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "max": 1,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
       }
     },
     {
@@ -3188,26 +3095,6 @@
       }
     },
     {
-      "id": "p_1781005769619",
-      "codigo": "87SU",
-      "name": "Mini Embudos plegables",
-      "cat": "Hogar",
-      "subcat": "",
-      "notes": "Juego de 3 mini embudos de diferentes tamaños. De silicona,plegables. Tonos azules o rosados según su elección",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787956513/productos/gyr60uzsoyvpsrfdbczp.jpg",
-      "precioUSD": 1.41,
-      "precioCUP": 1100,
-      "moneda": "cup",
-      "enOferta": true,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Gratis desde 1,500 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
-      },
-      "precioNormalUSD": 1.92,
-      "precioNormalCUP": 1500
-    },
-    {
       "id": "p_1781005462535",
       "codigo": "98F3",
       "name": "Mini Gavetero con Espejo",
@@ -3665,25 +3552,6 @@
       }
     },
     {
-      "id": "p_1788633439812",
-      "codigo": "XEVD",
-      "name": "Papel tapiz ROCA NEGRA Grande",
-      "cat": "Decoración",
-      "subcat": "",
-      "notes": "Forros para pared Ideal para cubrir humedades, ayuda a insonorizar, repeler el calor, es lavable, y duradero, además de altamente estético La caja contiene 50 hojas Cada hoja mide 35cmx38cm",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788633235/productos/exlsh5qdop0qcqi5mbgc.jpg",
-      "precioUSD": 35,
-      "precioCUP": 27300,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "max": 1,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      }
-    },
-    {
       "id": "p_1780620222381",
       "codigo": "L4P6",
       "name": "Paquete de 10 flores hawaianas",
@@ -3722,6 +3590,25 @@
       }
     },
     {
+      "id": "p_1780092427629",
+      "codigo": "XFT3",
+      "name": "Paquete de 10 ganchos de silicona",
+      "cat": "Hogar",
+      "subcat": "",
+      "notes": "Cada paquete trae 10 ganchos.",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787956401/productos/x5b7h43xmdftd8ufs5rq.jpg",
+      "precioUSD": 1.5,
+      "precioCUP": 1170,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "max": 9,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
+      }
+    },
+    {
       "id": "p_1780608723108",
       "codigo": "3KD5",
       "name": "Paquete de 10 mariposas Metálicas",
@@ -3753,7 +3640,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 1,
+      "max": 5,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -3798,6 +3685,39 @@
       }
     },
     {
+      "id": "p_1781005769619",
+      "codigo": "87SU",
+      "name": "Paquete de 3 Mini Embudos plegables engomados",
+      "cat": "Hogar",
+      "subcat": "",
+      "notes": "Juego de 3 mini embudos de diferentes tamaños. De silicona,plegables. Tonos azules o rosados según su elección",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787956513/productos/gyr60uzsoyvpsrfdbczp.jpg",
+      "precioUSD": 1.41,
+      "precioCUP": 1100,
+      "moneda": "usd",
+      "enOferta": true,
+      "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Color"
+        ],
+        "opciones": [
+          "AZUL",
+          "ROSA"
+        ]
+      },
+      "maxOpciones": {
+        "AZUL": 4,
+        "ROSA": 5
+      },
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
+      },
+      "precioNormalUSD": 2.2,
+      "precioNormalCUP": 1716
+    },
+    {
       "id": "p_1786930924590",
       "codigo": "8DEM",
       "name": "Paquete de 4 pellizcos de perlitas",
@@ -3835,6 +3755,43 @@
       },
       "precioNormalUSD": 0.87,
       "precioNormalCUP": 680
+    },
+    {
+      "id": "p_1780092645027",
+      "codigo": "CNQV",
+      "name": "Paquete de 5 esponjas de Fregar",
+      "cat": "Hogar",
+      "subcat": "",
+      "notes": "El precio es por un paquete de 5 esponjas",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787956344/productos/bobyh23bclobciqvbiws.jpg",
+      "precioUSD": 1.2,
+      "precioCUP": 936,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 1,500 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
+      }
+    },
+    {
+      "id": "p_1788533425716",
+      "codigo": "XNAA",
+      "name": "Paquete de 5 estropajos de aluminio",
+      "cat": "Hogar",
+      "subcat": "",
+      "notes": "Paquete de 5 estropajos de aluminio de alta calidad. Inoxidable y muy duradero",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788533301/productos/txglc57hsr3munkrokuz.jpg",
+      "precioUSD": 2,
+      "precioCUP": 1560,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "max": 5,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
     },
     {
       "id": "p_1785269406794",
@@ -4841,7 +4798,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 2,
+      "max": 3,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -5176,25 +5133,6 @@
       "enOferta": false,
       "destacado": false,
       "max": 1,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      }
-    },
-    {
-      "id": "p_1791228719057",
-      "codigo": "UP4H",
-      "name": "Rollo de papel tapiz autoadhesivo 3",
-      "cat": "Decoración",
-      "subcat": "",
-      "notes": "Diseño exacto de la imagen\nMedias 40x100cm",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791228705/productos/qrz6e5vgms1rpg4bwxrv.jpg",
-      "precioUSD": 4,
-      "precioCUP": 3120,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "max": 3,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -5551,6 +5489,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
+      "max": 3,
       "envio": {
         "corto": "🛵 Gratis desde 1,500 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 1,500 CUP en San Antonio · puedes completar con otros artículos"
