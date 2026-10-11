@@ -93,3 +93,18 @@ navegador.
   (nombre, foto, descripción, precio con recargo). Nunca costos, stock ni proveedores.
 - El **teléfono de WhatsApp queda público**. Usa el número del negocio.
 - Si la PC está apagada, la tienda sigue online con el catálogo de la última publicación.
+
+## La letra del sitio
+
+La tienda escribe en **Outfit** (SIL Open Font License 1.1), y el archivo vive en `fuentes/`, no en
+Google Fonts: la CSP del sitio lleva `default-src 'self'` sin `font-src`, así que una fuente traída
+de fuera la bloquea el navegador **en silencio** y la página se queda con la letra del sistema sin
+dar ningún error. Si algún día el sitio amanece con otra letra, mira ahí antes que en el CSS.
+
+Para cambiarla: se baja el `.woff2` nuevo a `fuentes/`, se cambia el `@font-face` del principio de
+`estilos.css` y el token `--fuente`. El `<link rel="preload">` del `<head>` de `index.html` y
+`taxi.html` apunta al archivo por su nombre: hay que cambiarlo también, o la precarga baja un
+archivo que nadie usa.
+
+Las letras del escudo "3B STORE" (`.logo-mono` y `.logo-word`) **no** usan esa fuente a propósito:
+son parte del logo y declaran su propia pila.
