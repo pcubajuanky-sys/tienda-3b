@@ -25,6 +25,11 @@
 <meta name="twitter:description" content="Calcula lo que cuesta tu viaje antes de montarte. Viajes privados y asientos compartidos.">
 <meta name="twitter:image" content="https://www.3bqba.com/taxi-portada.jpg">
 
+<!-- La fuente, pedida ya: sin esto el navegador no se entera de que existe hasta
+     que termina de leer estilos.css. El atributo crossorigin es OBLIGATORIO en las
+     fuentes aunque sean del mismo dominio; sin el, el navegador baja el archivo DOS
+     veces y la precarga no sirve de nada. -->
+<link rel="preload" href="/fuentes/outfit-latin-v15.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="estilos.css">
 <link rel="stylesheet" href="taxi.css">
 </head>
