@@ -128,6 +128,12 @@ body{
   padding-bottom:32px;
   -webkit-font-smoothing:antialiased;
 }
+/* Los controles de formulario NO heredan la fuente del body por defecto (el navegador
+   les pone la suya, Arial en Windows): sin esto el buscador, el carrito, los botones
+   de cerrar y todos los formularios de /taxi se quedaban con otra letra. Se heredan
+   solo la familia: el tamano y el peso de cada control siguen siendo los suyos.
+   Verificado en el navegador el 2026-10-11. */
+button,input,select,textarea{font-family:inherit}
 
 .wrap{max-width:1180px;margin:0 auto;padding:0 16px}
 
@@ -420,15 +426,24 @@ a{color:inherit}
 /* 2026-10-11: overflow pasa a visible para que la insignia del emoji pueda
    asomar por el borde. El recorte circular de la FOTO no se pierde: se lo
    queda .cat3d-foto, que es quien contiene el <img>. Si algun dia vuelves a
-   poner overflow:hidden aqui, la insignia se corta por la mitad. */
+   poner overflow:hidden aqui, la insignia se corta por la mitad.
+   min-height:0 es OBLIGATORIO con overflow:visible: con overflow:hidden el minimo
+   automatico de un cuadro con aspect-ratio era 0, pero con visible pasa a ser el
+   alto del contenido, y una foto vertical (p. ej. "Ropa") estiraba el circulo a
+   112x148 en vez de 112x112. Verificado en el navegador el 2026-10-11. */
 .cat3d-inner{
-  position:relative;display:block;width:100%;aspect-ratio:1;
+  position:relative;display:block;width:100%;aspect-ratio:1;min-height:0;
   border-radius:50%;overflow:visible;
   background:var(--surface);box-shadow:var(--sombra-1);border:1px solid var(--border);
   transition:transform var(--dur) ease, box-shadow var(--dur) ease;
 }
+/* display:block es OBLIGATORIO: .cat3d-foto es un <span> y por defecto es inline, y en
+   un elemento inline overflow y border-radius NO recortan nada -> la foto salia
+   cuadrada. Antes recortaba el padre (.cat3d-inner con overflow:hidden); ahora
+   que el padre es visible, el recorte lo hace este. Verificado en el navegador
+   el 2026-10-11. */
 .cat3d-foto{
-  width:100%;height:100%;background:var(--surface-2);position:relative;
+  display:block;width:100%;height:100%;background:var(--surface-2);position:relative;
   border-radius:50%;overflow:hidden;
 }
 .cat3d-foto img{width:100%;height:100%;object-fit:cover;display:block}
@@ -459,14 +474,21 @@ a{color:inherit}
 /* La insignia del emoji: fuera del renglon del nombre, posada en la esquina
    del circulo. El emoji lo dibuja el telefono del cliente, no Outfit, asi que
    lo unico que decidimos aqui es el sitio y el tamano. */
+/* Varias categorias llevan DOS emojis (p. ej. "Bocinas Celulares y Accesorios" 📢🎧).
+   Con un ancho fijo de 26/30px el segundo se partia a otro renglon y se caia FUERA
+   de la insignia (verificado en el navegador el 2026-10-11). Por eso el ancho es un
+   minimo y la insignia es una pildora (border-radius:999px): con UN emoji sigue
+   siendo un circulo exacto (min-width = height) y con dos se ensancha hacia la
+   izquierda, sin partirse (white-space:nowrap). */
 .cat3d-emoji{
   position:absolute;right:0;bottom:0;z-index:2;
-  width:26px;height:26px;display:flex;align-items:center;justify-content:center;
-  font-size:13px;line-height:1;border-radius:50%;
+  box-sizing:border-box;min-width:26px;height:26px;padding:0 4px;white-space:nowrap;
+  display:flex;align-items:center;justify-content:center;
+  font-size:13px;line-height:1;border-radius:999px;
   background:var(--surface);border:1px solid var(--border);box-shadow:var(--sombra-1);
 }
 @media (min-width:760px){
-  .cat3d-emoji{width:30px;height:30px;font-size:15px}
+  .cat3d-emoji{min-width:30px;height:30px;font-size:15px}
 }
 .cat3d-n{
   display:block;margin-top:3px;font-size:11px;color:var(--text-3);font-weight:500;
