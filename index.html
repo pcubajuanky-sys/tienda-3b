@@ -303,6 +303,13 @@
       <p id="modal-desc" class="modal-desc"></p>
       <div class="modal-tallas" id="modal-tallas" hidden></div>
       <div class="modal-accion" id="modal-accion"></div>
+        <!-- Relacionados: va DEBAJO de la accion de compra y ENCIMA de compartir. Lo
+             pinta pintarRelacionados() en app.js; con menos de dos candidatos queda
+             oculto (ver relacionados.js). -->
+        <section class="rel" id="modal-rel" hidden aria-labelledby="rel-titulo">
+          <h3 class="rel-titulo" id="rel-titulo">Más de esta categoría</h3>
+          <div class="rel-tira" id="rel-tira"></div>
+        </section>
       <div class="compartir" id="modal-compartir">
         <span class="compartir-tit">Comparte los productos para que ganes comisiones</span>
         <div class="compartir-botones">
@@ -405,6 +412,7 @@
 </div>
 
 <script src="mundos.js"></script>
+<script src="relacionados.js"></script>
 <script src="tarjeta.js"></script>
 <script src="app.js"></script>
 <script src="encargos.js"></script>

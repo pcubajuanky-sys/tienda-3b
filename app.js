@@ -496,6 +496,23 @@ function pintarChipsVariante(id) {
 
 // ── Detalle de producto (modal) ──
 
+// Relacionados de la ficha abierta. Con menos de dos candidatos la seccion no se pinta
+// (lo decide relacionados.js, no esta funcion).
+function pintarRelacionados(p) {
+  const sec = document.getElementById('modal-rel');
+  const tira = document.getElementById('rel-tira');
+  if (!sec || !tira) return;
+  const lista = window.Relacionados.elegir(p, CAT.items || [], 6);
+  if (!lista.length) { sec.hidden = true; tira.innerHTML = ''; return; }
+  sec.hidden = false;
+  tira.innerHTML = lista.map((x) =>
+    `<button type="button" class="rel-card" data-rel="${x.id}">` +
+    `<span class="rel-foto"><img src="${fotoMosaico(x.photo)}" alt="" loading="lazy"></span>` +
+    `<span class="rel-nom">${escapeHtml(x.name)}</span>` +
+    `<span class="rel-precio">${x.moneda === 'usd' ? '$' + x.precioUSD : fmt(x.precioCUP) + ' CUP'}</span>` +
+    `</button>`).join('');
+}
+
 function abrirDetalle(id) {
   const p = (CAT.items || []).find((x) => x.id === id);
   if (!p) return;
@@ -511,6 +528,7 @@ function abrirDetalle(id) {
   seleccionVar = [];
   pintarChipsVariante(id);
   document.getElementById('modal-accion').innerHTML = accionHtml(id, null);
+  pintarRelacionados(p);
   const avisoComp = document.getElementById('compartir-aviso');
   if (avisoComp) avisoComp.textContent = '';   // no arrastrar el «copiado» del producto anterior
 
@@ -524,6 +542,8 @@ function abrirDetalle(id) {
 function cerrarDetalle() {
   document.getElementById('modal-detalle').hidden = true;
   productoModal = null;
+  const secRel = document.getElementById('modal-rel');
+  if (secRel) { secRel.hidden = true; document.getElementById('rel-tira').innerHTML = ''; }
   seleccionVar = [];
   const img = document.getElementById('modal-img');
   // Un src="" hace que el navegador re-pida la página entera como si fuera la imagen.
@@ -1576,6 +1596,12 @@ async function iniciar() {
     const add = e.target.closest('[data-add]');
     const minus = e.target.closest('[data-minus]');
     const plus = e.target.closest('[data-plus]');
+    const rel = e.target.closest('[data-rel]');
+    if (rel) {
+      abrirDetalle(rel.dataset.rel);
+      document.querySelector('#modal-detalle .modal-caja').scrollTop = 0;
+      return;
+    }
     const chip = e.target.closest('[data-val]');
     const irDetalle = e.target.closest('[data-detalle]');
     if (chip) {
