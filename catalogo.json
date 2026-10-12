@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-12T17:08:59.625Z",
+  "generado": "2026-10-12T19:50:00.142Z",
   "tasa": 785,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -385,6 +385,16 @@
         "id": "cesto-de-ropa",
         "nombre": "cesto de ropa",
         "lb": 0.35
+      },
+      {
+        "id": "malla-de-proteccion-solar-2m-x-2m",
+        "nombre": "Malla de protección solar (2m x 2m)",
+        "lb": 1
+      },
+      {
+        "id": "malla-de-proteccion-solar-3m-x-2m",
+        "nombre": "Malla de protección solar (3m x 2m)",
+        "lb": 1.1
       }
     ],
     "ejemplos": [
@@ -1450,16 +1460,18 @@
       "subcat": "",
       "notes": "Alarma para Motocicleta con Cerradura de Disco y Línea Recordatoria - Recargable, 130dB de Sonido, Antirrobo e Impermeable, Carga Rápida en 2 Horas, Pasador Universal de 7mm, Adecuada para Cascos, Motos, Bicicletas Eléctricas y de Montaña, Incluye Cordón Recordatorio y Llave Hexagonal",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790879264/productos/r7vnk2bmd3ypfg6yy8vh.jpg",
-      "precioUSD": 25,
-      "precioCUP": 19625,
+      "precioUSD": 23,
+      "precioCUP": 18055,
       "moneda": "usd",
-      "enOferta": false,
+      "enOferta": true,
       "destacado": true,
       "max": 4,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "precioNormalUSD": 25,
+      "precioNormalCUP": 19625
     },
     {
       "id": "p_1790801699259",
@@ -2932,6 +2944,43 @@
       }
     },
     {
+      "id": "p_1791834504483",
+      "codigo": "4CD7",
+      "name": "Malla de protección solar (2m x 2m)",
+      "cat": "Decoración",
+      "subcat": "",
+      "notes": "Malla de protección solar, Malla de aislamiento para patio al aire libre, Malla de sombra para patio, Balcón de camping duradero resistente a los rayos UV, Malla de sombra encriptada.con sus ojales",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791834204/productos/ebruqxzo2wrck8jrlokj.jpg",
+      "precioUSD": 16,
+      "precioCUP": 12560,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "max": 6,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
+      "id": "p_1785768634737",
+      "codigo": "74GQ",
+      "name": "Malla de protección solar (3m x 2m)",
+      "cat": "Decoración",
+      "subcat": "",
+      "notes": "Color y diseño exactamente como en la imagen, con sus ojales de fabrica,es solo llegar y colocar\nMedidas :3mx2m\nMaterial: Malla de nylon",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785768595/productos/hkkmrijuemjfntdqb1be.jpg",
+      "precioUSD": 20,
+      "precioCUP": 15700,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
       "id": "p_1781640150594",
       "codigo": "LZJ5",
       "name": "Mangas para el sol",
@@ -3226,7 +3275,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 2,
+      "max": 1,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -3245,7 +3294,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 5,
+      "max": 4,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -5470,11 +5519,13 @@
           "Color"
         ],
         "opciones": [
+          "NEGRO",
           "CELESTE"
         ]
       },
       "maxOpciones": {
-        "CELESTE": 4
+        "NEGRO": 7,
+        "CELESTE": 5
       },
       "envio": {
         "corto": "🛵 Mensajería gratis",
