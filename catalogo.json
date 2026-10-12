@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-12T19:50:00.142Z",
+  "generado": "2026-10-12T20:20:17.955Z",
   "tasa": 785,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -3663,6 +3663,25 @@
       }
     },
     {
+      "id": "p_1791836341972",
+      "codigo": "RNCH",
+      "name": "Papel Tapiz Mármol Negro",
+      "cat": "Decoración",
+      "subcat": "",
+      "notes": "Forros para pared Ideal para cubrir humedades, ayuda a insonorizar, repeler el calor, es lavable, y duradero, además de altamente estético La caja contiene 50 hojas Cada hoja mide 35cmx30cm",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791836204/productos/bhk5mekf40eu67gzyafn.jpg",
+      "precioUSD": 35,
+      "precioCUP": 27475,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "max": 2,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
       "id": "p_1788729005365",
       "codigo": "35H3",
       "name": "Papel tapiz Negro",
@@ -4752,6 +4771,42 @@
       "enOferta": false,
       "destacado": false,
       "max": 1,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
+      "id": "p_1791836377621",
+      "codigo": "8QV7",
+      "name": "Pulover de hombre 1",
+      "cat": "Ropa",
+      "subcat": "",
+      "notes": "Tela elastizada de alta calidad",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791836055/productos/kvuqeq1yjssivmcupogb.jpg",
+      "precioUSD": 5,
+      "precioCUP": 3925,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Color",
+          "Talla"
+        ],
+        "opciones": [
+          "NEGRO CON ROJO / M",
+          "NEGRO CON ROJO / L",
+          "NEGRO CON VERDE / M",
+          "NEGRO CON VERDE / L"
+        ]
+      },
+      "maxOpciones": {
+        "NEGRO CON ROJO / M": 3,
+        "NEGRO CON ROJO / L": 2,
+        "NEGRO CON VERDE / M": 7,
+        "NEGRO CON VERDE / L": 2
+      },
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
