@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-12T02:42:34.980Z",
+  "generado": "2026-10-12T08:01:12.983Z",
   "tasa": 780,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -2072,6 +2072,101 @@
       "enOferta": false,
       "destacado": false,
       "max": 2,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
+      "id": "p_1785957052228",
+      "codigo": "8X9D",
+      "name": "Gafas Cristal transparente",
+      "cat": "Accesorio de vestir",
+      "subcat": "",
+      "notes": "Protección contra luz azul, ideal para personas que usan mucho pantallas como celulares ,laptops y televisión.\nTambién es un muy buen accesorio para personas que manejan moto en horario nocturno, protege los ojos sin afectar la visibilidad en la oscuridad",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785956773/productos/gufvuhffd4ibygz29anq.jpg",
+      "precioUSD": 2,
+      "precioCUP": 1560,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Color"
+        ],
+        "opciones": [
+          "BLANCO"
+        ]
+      },
+      "maxOpciones": {
+        "BLANCO": 1
+      },
+      "envio": {
+        "corto": "🛵 Gratis desde 2,000 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
+      }
+    },
+    {
+      "id": "p_1791773820151",
+      "codigo": "UZZC",
+      "name": "Gafas Cristal Transparente 🖤🤍🩷",
+      "cat": "Accesorio de vestir",
+      "subcat": "",
+      "notes": "Gafas para uso nocturno con cristal anti luz azul. Ideal para el uso constante de pantallas como celular, televisor, laptop etc.. Hermoso y elegante accesorio para salidas,fotos y eventos",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791773684/productos/pzclpats8lmxuehmfebz.jpg",
+      "precioUSD": 3,
+      "precioCUP": 2340,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Color"
+        ],
+        "opciones": [
+          "NEGRA",
+          "BLANCA",
+          "ROSA"
+        ]
+      },
+      "maxOpciones": {
+        "NEGRA": 2,
+        "BLANCA": 2,
+        "ROSA": 2
+      },
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
+      "id": "p_1791773233689",
+      "codigo": "DTBS",
+      "name": "Gafas cristal transparente 🤍🤎🖤",
+      "cat": "Accesorio de vestir",
+      "subcat": "",
+      "notes": "Gafas para uso nocturno con cristal anti luz azul. Ideal para el uso constante de pantallas como celular, televisor, laptop etc.. Hermoso y elegante accesorio para salidas,fotos y eventos",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791773062/productos/bycyo579ql5t2imrfueq.jpg",
+      "precioUSD": 3,
+      "precioCUP": 2340,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Color"
+        ],
+        "opciones": [
+          "NEGRO",
+          "BLANCO",
+          "PUMA"
+        ]
+      },
+      "maxOpciones": {
+        "NEGRO": 3,
+        "BLANCO": 3,
+        "PUMA": 3
+      },
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
