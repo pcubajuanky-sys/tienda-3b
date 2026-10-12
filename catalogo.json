@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-12T08:01:12.983Z",
+  "generado": "2026-10-12T16:20:01.458Z",
   "tasa": 780,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -1078,25 +1078,6 @@
       "precioNormalCUP": 600
     },
     {
-      "id": "p_1787957504529",
-      "codigo": "39TD",
-      "name": "Audífonos Inalámbricos A6S",
-      "cat": "Bocinas Celulares y Accesorios",
-      "subcat": "",
-      "notes": "Auriculares Inalámbricos A6S, Audífonos Inalámbricos, Auriculares Internos, Control de Botones, Soporte para Reducción de Ruido en Llamadas, Luz Indicadora de Energía, Calidad de Sonido de Alta Definición, Puerto de Carga Tipo-C [Cable de Carga USB No Incluido]",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791226956/productos/kedky7empch1tl5jw8m9.jpg",
-      "precioUSD": 3.85,
-      "precioCUP": 3000,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false,
-      "max": 1,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      }
-    },
-    {
       "id": "p_1780092109867",
       "codigo": "QD4E",
       "name": "Audífonos inalámbricos X55",
@@ -1353,7 +1334,7 @@
       "moneda": "cup",
       "enOferta": false,
       "destacado": false,
-      "max": 4,
+      "max": 3,
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
@@ -4491,7 +4472,7 @@
       "moneda": "cup",
       "enOferta": false,
       "destacado": false,
-      "max": 9,
+      "max": 7,
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
