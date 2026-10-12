@@ -1,8 +1,8 @@
 {
-  "generado": "2026-10-07T12:11:48.416Z",
+  "generado": "2026-10-12T17:09:10.192Z",
   "vigenciaHoras": 48,
   "activo": true,
-  "tasa": 775,
+  "tasa": 785,
   "whatsapp": "5358856820",
   "whatsappAltas": "5354978966",
   "marca": {
@@ -14,13 +14,12 @@
   },
   "esperaHoraCUP": 0,
   "recta": {
-    "porKmCUP": 646.8150000000002,
-    "baseCUP": 3022.5000000000005,
+    "porKmCUP": 655.1610000000002,
+    "baseCUP": 3061.5000000000005,
     "redondeoCUP": 50,
     "factorCompartido": 1.25
   },
   "mostrarDesglose": false,
-  "conectadosActivo": true,
   "referidores": [
     {
       "code": "N89WN",
@@ -85,35 +84,14 @@
     {
       "code": "H9N6E",
       "nombre": "Raquel"
+    },
+    {
+      "code": "XRBJV",
+      "nombre": "Lisandra Estevez González"
     }
   ],
   "comisionPorKmCUP": 20,
   "agenda": [
-    {
-      "fecha": "2026-10-07",
-      "manana": false,
-      "tarde": false
-    },
-    {
-      "fecha": "2026-10-08",
-      "manana": false,
-      "tarde": false
-    },
-    {
-      "fecha": "2026-10-09",
-      "manana": false,
-      "tarde": false
-    },
-    {
-      "fecha": "2026-10-10",
-      "manana": false,
-      "tarde": false
-    },
-    {
-      "fecha": "2026-10-11",
-      "manana": false,
-      "tarde": false
-    },
     {
       "fecha": "2026-10-12",
       "manana": false,
@@ -158,6 +136,31 @@
       "fecha": "2026-10-20",
       "manana": false,
       "tarde": false
+    },
+    {
+      "fecha": "2026-10-21",
+      "manana": false,
+      "tarde": false
+    },
+    {
+      "fecha": "2026-10-22",
+      "manana": false,
+      "tarde": false
+    },
+    {
+      "fecha": "2026-10-23",
+      "manana": false,
+      "tarde": false
+    },
+    {
+      "fecha": "2026-10-24",
+      "manana": false,
+      "tarde": false
+    },
+    {
+      "fecha": "2026-10-25",
+      "manana": false,
+      "tarde": false
     }
   ],
   "destinos": [
@@ -165,70 +168,70 @@
       "id": "acuario",
       "nombre": "Acuario Nacional",
       "km": 29,
-      "idaCUP": 21800,
+      "idaCUP": 22100,
       "idaUSD": 28.1,
-      "idaVueltaCUP": 21800,
+      "idaVueltaCUP": 22100,
       "idaVueltaUSD": 28.1,
       "asientoCUP": {
-        "2": 13650,
-        "3": 9100,
-        "4": 6850
+        "2": 13800,
+        "3": 9200,
+        "4": 6900
       }
     },
     {
       "id": "capitolio",
       "nombre": "Capitolio Nacional",
       "km": 42,
-      "idaCUP": 30200,
+      "idaCUP": 30600,
       "idaUSD": 38.95,
-      "idaVueltaCUP": 30200,
+      "idaVueltaCUP": 30600,
       "idaVueltaUSD": 38.95,
       "asientoCUP": {
-        "2": 18900,
-        "3": 12600,
-        "4": 9450
+        "2": 19150,
+        "3": 12750,
+        "4": 9600
       }
     },
     {
       "id": "guira",
       "nombre": "Güira de Melena",
       "km": 11,
-      "idaCUP": 10150,
+      "idaCUP": 10300,
       "idaUSD": 13.08,
-      "idaVueltaCUP": 10150,
+      "idaVueltaCUP": 10300,
       "idaVueltaUSD": 13.08,
       "asientoCUP": {
-        "2": 6350,
-        "3": 4250,
-        "4": 3200
+        "2": 6450,
+        "3": 4300,
+        "4": 3250
       }
     },
     {
       "id": "calixto",
       "nombre": "Hospital Calixto García",
       "km": 34,
-      "idaCUP": 25050,
+      "idaCUP": 25350,
       "idaUSD": 32.28,
-      "idaVueltaCUP": 25050,
+      "idaVueltaCUP": 25350,
       "idaVueltaUSD": 32.28,
       "asientoCUP": {
-        "2": 15650,
-        "3": 10450,
-        "4": 7850
+        "2": 15850,
+        "3": 10600,
+        "4": 7950
       }
     },
     {
       "id": "terminal",
       "nombre": "Terminal de Ómnibus Nacionales",
       "km": 32,
-      "idaCUP": 23750,
+      "idaCUP": 24050,
       "idaUSD": 30.61,
-      "idaVueltaCUP": 23750,
+      "idaVueltaCUP": 24050,
       "idaVueltaUSD": 30.61,
       "asientoCUP": {
-        "2": 14850,
-        "3": 9900,
-        "4": 7450
+        "2": 15050,
+        "3": 10050,
+        "4": 7550
       }
     }
   ],
