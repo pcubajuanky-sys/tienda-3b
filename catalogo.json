@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-12T16:45:00.391Z",
+  "generado": "2026-10-12T17:08:59.625Z",
   "tasa": 785,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -66,6 +66,10 @@
     {
       "code": "H9N6E",
       "nombre": "Raquel"
+    },
+    {
+      "code": "XRBJV",
+      "nombre": "Lisandra Estevez González"
     }
   ],
   "categorias": [
