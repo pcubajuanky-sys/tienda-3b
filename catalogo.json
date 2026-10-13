@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-13T03:17:32.422Z",
+  "generado": "2026-10-13T08:39:24.685Z",
   "tasa": 785,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -3245,6 +3245,11 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791870947/productos/bv24wn9avfesp9hd7rmw.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791870968/productos/dncpe9fphgc8v6bxtxby.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791870995/productos/wazysb6m70j6g3djrteo.jpg"
+      ],
       "max": 1,
       "envio": {
         "corto": "🛵 Mensajería gratis",
@@ -3369,6 +3374,12 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791871044/productos/njfkbi355vvftf3hllyf.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791871054/productos/y6j8b8rc8ud7lranqvj9.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791871063/productos/flhddikbz3ovypvybz97.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791871072/productos/j80lkq6ozm58bvsrci3q.jpg"
+      ],
       "max": 2,
       "envio": {
         "corto": "🛵 Mensajería gratis",
@@ -5909,6 +5920,11 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791868895/productos/b86kuk4smvvz82fovr3l.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791868908/productos/z50obqs0d6lnljb2okaw.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791868913/productos/xftbdlz4zxiq0n4wxzdj.jpg"
+      ],
       "max": 3,
       "envio": {
         "corto": "🛵 Mensajería gratis",
