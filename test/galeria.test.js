@@ -11,7 +11,7 @@ const vm = require('node:vm');
 const sandbox = { window: {} };
 vm.createContext(sandbox);
 vm.runInContext(fs.readFileSync(path.join(__dirname, '..', 'galeria.js'), 'utf8'), sandbox);
-const { fotosDe: fotosDeVm } = sandbox.window.Galeria;
+const { fotosDe: fotosDeVm, pasoDelGesto, indiceSiguiente } = sandbox.window.Galeria;
 
 // Los arrays que devuelve el sandbox de node:vm nacen en OTRO realm: deepStrictEqual
 // los da por distintos de un [] normal aunque tengan lo mismo. Se copian a un Array
@@ -42,4 +42,49 @@ test('tira huecos y cosas que no son texto', () => {
 test('un producto sin foto ninguna da lista vacia, no revienta', () => {
   assert.deepStrictEqual(fotosDe({}), []);
   assert.deepStrictEqual(fotosDe(null), []);
+});
+
+// ── El gesto ──
+// pasoDelGesto(dx, dy) -> +1 (siguiente), -1 (anterior) o 0 (no fue un deslizamiento).
+// dx positivo = el dedo fue hacia la DERECHA = se quiere la foto ANTERIOR.
+
+test('un deslizamiento claro hacia la izquierda pide la foto siguiente', () => {
+  assert.strictEqual(pasoDelGesto(-120, 5), 1);
+});
+
+test('un deslizamiento claro hacia la derecha pide la foto anterior', () => {
+  assert.strictEqual(pasoDelGesto(120, -8), -1);
+});
+
+test('un toque sin arrastre no es un deslizamiento', () => {
+  assert.strictEqual(pasoDelGesto(0, 0), 0);
+  assert.strictEqual(pasoDelGesto(3, 2), 0);
+});
+
+test('un arrastre horizontal corto no cuenta: el umbral son 40 px', () => {
+  assert.strictEqual(pasoDelGesto(-39, 0), 0);
+  assert.strictEqual(pasoDelGesto(-40, 0), 1);
+});
+
+test('si el dedo fue mas en vertical que en horizontal, NO es deslizamiento (es scroll)', () => {
+  assert.strictEqual(pasoDelGesto(-50, 90), 0);
+  assert.strictEqual(pasoDelGesto(60, -70), 0);
+});
+
+test('pasoDelGesto aguanta basura sin reventar', () => {
+  assert.strictEqual(pasoDelGesto(undefined, undefined), 0);
+  assert.strictEqual(pasoDelGesto(NaN, 0), 0);
+  assert.strictEqual(pasoDelGesto('mucho', 0), 0);
+});
+
+test('indiceSiguiente da la vuelta en los dos sentidos', () => {
+  assert.strictEqual(indiceSiguiente(2, 3, 1), 0);
+  assert.strictEqual(indiceSiguiente(0, 3, -1), 2);
+  assert.strictEqual(indiceSiguiente(0, 3, 1), 1);
+  assert.strictEqual(indiceSiguiente(1, 3, 1), 2);
+});
+
+test('indiceSiguiente con una sola foto, o ninguna, se queda en 0', () => {
+  assert.strictEqual(indiceSiguiente(0, 1, 1), 0);
+  assert.strictEqual(indiceSiguiente(0, 0, 1), 0);
 });
