@@ -47,6 +47,11 @@
      fuentes aunque sean del mismo dominio; sin el, el navegador baja el archivo DOS
      veces y la precarga no sirve de nada. -->
 <link rel="preload" href="/fuentes/outfit-latin-v15.woff2" as="font" type="font/woff2" crossorigin>
+<!-- Datos estructurados del negocio. Bloque de DATOS, no un script ejecutable: la CSP
+     `script-src 'self'` no lo bloquea. Va fijo aquí porque no depende del catálogo. -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Store","name":"3B Store","url":"https://www.3bqba.com/","image":"https://www.3bqba.com/og-3b.jpg","logo":"https://www.3bqba.com/logo-3b.png","description":"Tienda online en San Antonio de los Baños: cuidado personal, hogar, electrodomésticos, ropa y más. Pedidos por WhatsApp.","address":{"@type":"PostalAddress","addressLocality":"San Antonio de los Baños","addressRegion":"Artemisa","addressCountry":"CU"},"currenciesAccepted":"CUP, USD","areaServed":"San Antonio de los Baños"}
+</script>
 <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
@@ -146,7 +151,14 @@
     <div class="hero-logo" aria-hidden="true">
       <img class="logo-img" src="/logo-3b.png" width="320" height="320" alt="" aria-hidden="true">
     </div>
-    <h1>Compras + Pagas -</h1>
+    <!-- El eslogan del dueño sigue siendo lo más grande de la portada; debajo, dentro
+         del MISMO h1, una línea que dice qué es esto y dónde está. Antes el h1 era solo
+         el eslogan: para quien llega de Google o de un enlace compartido no decía ni qué
+         se vende ni dónde. -->
+    <h1>
+      <span class="hero-eslogan">Compras + Pagas -</span>
+      <span class="hero-que-es">Tienda online en San Antonio de los Baños</span>
+    </h1>
     <p class="hero-sub">Mira el catálogo, arma tu pedido y nos escribes por WhatsApp.</p>
     <!-- Con la tienda cerrada este cartel sustituye a los botones: el cliente lo
          entiende al entrar, sin bajar. El título y el texto son los mismos de la
