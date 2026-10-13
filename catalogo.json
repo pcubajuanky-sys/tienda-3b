@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-13T19:21:44.097Z",
+  "generado": "2026-10-13T19:50:07.683Z",
   "tasa": 790,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -70,6 +70,10 @@
     {
       "code": "XRBJV",
       "nombre": "Lisandra Estevez González"
+    },
+    {
+      "code": "6GWN3",
+      "nombre": "Ketisleydis"
     }
   ],
   "categorias": [
@@ -1817,7 +1821,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 4,
+      "max": 3,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
