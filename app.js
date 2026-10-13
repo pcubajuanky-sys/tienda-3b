@@ -531,6 +531,36 @@ function pintarGaleria(i) {
     `<img src="${fotoMosaico(u)}" alt="" loading="lazy"></button>`).join('');
 }
 
+// Deslizar sobre la foto grande para pasar a la siguiente. Eventos de PUNTERO: el mismo
+// codigo sirve para el dedo y para el raton.
+//
+// 🔴 Aqui NO se llama a preventDefault() ni se toca touch-action, a proposito: el
+// navegador sigue mandando sobre el desplazamiento vertical de la pagina. Si decide que
+// el gesto es un scroll suyo, emite 'pointercancel' y nosotros abandonamos. Esa es la
+// señal, y por eso el cliente puede seguir bajando por la ficha con el dedo encima de la
+// foto. Quien cambie esto por touchstart/touchmove con preventDefault, lo romperá.
+let gestoX = null;
+let gestoY = null;
+
+function engancharGestoGaleria() {
+  const caja = document.querySelector('.modal-foto');
+  if (!caja) return;
+  caja.addEventListener('pointerdown', (e) => {
+    if (galeriaFotos.length < 2) return;
+    gestoX = e.clientX;
+    gestoY = e.clientY;
+  });
+  caja.addEventListener('pointercancel', () => { gestoX = null; gestoY = null; });
+  caja.addEventListener('pointerup', (e) => {
+    if (gestoX === null) return;
+    const paso = window.Galeria.pasoDelGesto(e.clientX - gestoX, e.clientY - gestoY);
+    gestoX = null;
+    gestoY = null;
+    if (!paso) return;
+    pintarGaleria(window.Galeria.indiceSiguiente(galeriaIndice, galeriaFotos.length, paso));
+  });
+}
+
 function abrirDetalle(id) {
   const p = (CAT.items || []).find((x) => x.id === id);
   if (!p) return;
@@ -1661,6 +1691,7 @@ async function iniciar() {
   });
   window.addEventListener('focus', revalidarCierre);
 
+  engancharGestoGaleria();
   medirHeader();
   await cargarCatalogo();
   renderMundos();
