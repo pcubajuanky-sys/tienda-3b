@@ -68,7 +68,10 @@ self.addEventListener('fetch', (e) => {
   // Las paginas (/, /p/XXXX, /MARIA): red primero tambien, porque /p/<codigo> lo arma el
   // servidor con las etiquetas og: de ESE producto. Sin red, el index guardado.
   if (req.mode === 'navigate') {
-    e.respondWith(fetch(req).catch(() => caches.match('/index.html')));
+    // Se prueba '/' ANTES que '/index.html': hay hosts (Cloudflare Pages, 'serve') que
+    // redirigen /index.html a /, y una respuesta guardada con redirected=true la rechaza
+    // el navegador al responder una navegacion (ERR_FAILED: la tienda no abriria sin red).
+    e.respondWith(fetch(req).catch(() => caches.match('/').then((r) => r || caches.match('/index.html'))));
     return;
   }
 
