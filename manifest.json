@@ -1,0 +1,16 @@
+{
+  "name": "3B Store — Tienda online",
+  "short_name": "3B Store",
+  "description": "Catálogo de 3B Store en San Antonio de los Baños. Arma tu pedido y lo coordinas por WhatsApp.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "lang": "es",
+  "background_color": "#1a0d18",
+  "theme_color": "#7A2E5D",
+  "icons": [
+    { "src": "/icono-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icono-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}
