@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-13T08:39:24.685Z",
+  "generado": "2026-10-13T11:35:26.674Z",
   "tasa": 785,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -3169,6 +3169,11 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791891045/productos/omlbk4vkdjhl63k5ehgn.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791891050/productos/a9cp4bnw9bw1y3mnejp1.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791891057/productos/os1z5oekeklnracpfoup.jpg"
+      ],
       "max": 1,
       "envio": {
         "corto": "🛵 Mensajería gratis",
@@ -3538,6 +3543,11 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791891093/productos/urbd30x3cvlolb3yjufj.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791891100/productos/stk6gfq3ieki0ulah8h8.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791891105/productos/macvdfestpikb6gfgpob.jpg"
+      ],
       "max": 2,
       "envio": {
         "corto": "🛵 Mensajería gratis",
@@ -3551,12 +3561,18 @@
       "cat": "Electrodomésticos",
       "subcat": "",
       "notes": "Nebulizador portátil para adultos y niños - Inhalador de mano con tecnología de ondas de sonido y funcionamiento silencioso, compacto y apto para viajes, sistema de malla fácil de limpiar para uso de emergencia - Apto para fibrosis quística",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786918789/productos/luesaf8sfazuwe7jbv4b.jpg",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791891146/productos/qm5l2kunip5msjf3cxwe.jpg",
       "precioUSD": 19,
       "precioCUP": 14915,
       "moneda": "usd",
       "enOferta": true,
       "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791891158/productos/lzqnmoyw2fslxedfswya.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791891167/productos/vlspaur8u3wwame38s03.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791891175/productos/zn59pbw5utfspnrstamf.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791891181/productos/eooqfgwlp88y1megleyg.jpg"
+      ],
       "max": 3,
       "envio": {
         "corto": "🛵 Mensajería gratis",
@@ -5743,6 +5759,11 @@
       "moneda": "usd",
       "enOferta": true,
       "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791891209/productos/uvqs5dtm7rd75alz4nb7.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791891216/productos/qbyyxwycje8bh95n7kal.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791891223/productos/wjxyghkwtglgqbyn5rlt.jpg"
+      ],
       "max": 2,
       "envio": {
         "corto": "🛵 Mensajería gratis",
