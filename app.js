@@ -513,13 +513,32 @@ function pintarRelacionados(p) {
     `</button>`).join('');
 }
 
+// Galería de la ficha: las fotos del producto abierto y cuál se está viendo.
+let galeriaFotos = [];
+let galeriaIndice = 0;
+
+// Pinta la tira y pone la foto `i` en grande. Con una sola foto la tira queda oculta:
+// un carrusel de un elemento es ruido.
+function pintarGaleria(i) {
+  galeriaIndice = i;
+  const img = document.getElementById('modal-img');
+  const tira = document.getElementById('modal-miniaturas');
+  img.src = fotoDetalle(galeriaFotos[i]);
+  if (galeriaFotos.length < 2) { tira.hidden = true; tira.innerHTML = ''; return; }
+  tira.hidden = false;
+  tira.innerHTML = galeriaFotos.map((u, n) =>
+    `<button type="button" class="modal-miniatura" data-foto="${n}" aria-current="${n === i}" aria-label="Ver foto ${n + 1}">` +
+    `<img src="${fotoMosaico(u)}" alt="" loading="lazy"></button>`).join('');
+}
+
 function abrirDetalle(id) {
   const p = (CAT.items || []).find((x) => x.id === id);
   if (!p) return;
   productoModal = id;
-  document.getElementById('modal-img').src = fotoDetalle(p.photo);
   document.getElementById('modal-img').alt = p.name;
   document.getElementById('modal-img').setAttribute('onerror', 'imgFallback(this)');
+  galeriaFotos = window.Galeria.fotosDe(p);
+  pintarGaleria(0);
   document.getElementById('modal-cat').textContent = p.cat || '';
   document.getElementById('modal-nombre').textContent = p.name;
   document.getElementById('modal-desc').textContent = p.notes || '';
@@ -545,6 +564,10 @@ function cerrarDetalle() {
   const secRel = document.getElementById('modal-rel');
   if (secRel) { secRel.hidden = true; document.getElementById('rel-tira').innerHTML = ''; }
   seleccionVar = [];
+  galeriaFotos = [];
+  galeriaIndice = 0;
+  const tira = document.getElementById('modal-miniaturas');
+  if (tira) { tira.hidden = true; tira.innerHTML = ''; }
   const img = document.getElementById('modal-img');
   // Un src="" hace que el navegador re-pida la página entera como si fuera la imagen.
   // Sin el atributo, no hay petición: la foto vuelve a ponerse solo al abrir el detalle.
@@ -1602,6 +1625,8 @@ async function iniciar() {
       document.querySelector('#modal-detalle .modal-caja').scrollTop = 0;
       return;
     }
+    const mini = e.target.closest('[data-foto]');
+    if (mini) { pintarGaleria(Number(mini.dataset.foto) || 0); return; }
     const chip = e.target.closest('[data-val]');
     const irDetalle = e.target.closest('[data-detalle]');
     if (chip) {

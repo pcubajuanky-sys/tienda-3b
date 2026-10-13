@@ -296,6 +296,9 @@
     <div class="modal-foto">
       <img id="modal-img" alt="">
     </div>
+    <!-- Tira de miniaturas: oculta cuando el producto tiene una sola foto. La pinta
+         pintarGaleria() en app.js a partir de p.fotos (ver galeria.js). -->
+    <div class="modal-miniaturas" id="modal-miniaturas" hidden></div>
     <div class="modal-body">
       <div class="modal-cat" id="modal-cat"></div>
       <h2 id="modal-nombre"></h2>
@@ -413,6 +416,7 @@
 
 <script src="mundos.js"></script>
 <script src="relacionados.js"></script>
+<script src="galeria.js"></script>
 <script src="tarjeta.js"></script>
 <script src="app.js"></script>
 <script src="encargos.js"></script>
