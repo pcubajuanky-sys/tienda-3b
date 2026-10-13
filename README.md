@@ -87,6 +87,23 @@ Dos cosas que no son obvias y se pagan caro si se rompen:
 `node:vm` con un `window` falso: en Node no hay canvas, así que el dibujo en sí se revisa a ojo en el
 navegador.
 
+## Productos relacionados (`relacionados.js`)
+
+Debajo de la acción de compra, la ficha enseña hasta 6 productos parecidos (sección «Más de esta
+categoría»: una tira que se arrastra). `relacionados.js` es un módulo puro (IIFE con
+`window.Relacionados.elegir(p, items, tope)`, mismo patrón que `tarjeta.js`): primero los de la misma
+subcategoría y luego el resto de la categoría; dentro de cada grupo, destacados, luego ofertas, luego
+por nombre. El orden es **determinista** (nada de `Math.random`) y nunca incluye el producto abierto.
+**Regla del mínimo de dos:** si no hay al menos 2 candidatos, la sección no se pinta (una sola tarjeta
+es ruido); con el catálogo de hoy les pasa a Uñas, Porcelana y Confituras. `app.js` solo pinta
+(`pintarRelacionados`) y engancha el clic (`data-rel`). `test/relacionados.test.js` prueba el módulo con
+`node:vm`; como las listas vacías nacen en otro contexto, se comparan con `JSON.stringify` (igual que
+`tarjeta.test.js`), no con `deepStrictEqual`.
+
+Ojo al CSS de la tira: `.rel-foto` y `.rel-precio` son `<span>` y necesitan `display:block` para que
+`width/height/border-radius` apliquen, y el `<button>` necesita `color:inherit` o el texto sale negro
+en modo oscuro.
+
 ## Avisos
 
 - `catalogo.json` es **público**: cualquiera puede leerlo entero. Solo lleva lo que se ve en la web
