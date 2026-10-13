@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-12T20:20:17.955Z",
+  "generado": "2026-10-13T01:39:43.774Z",
   "tasa": 785,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -952,7 +952,7 @@
         ]
       },
       "maxOpciones": {
-        "PLATEADO": 7
+        "PLATEADO": 6
       },
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
@@ -972,7 +972,7 @@
       "moneda": "cup",
       "enOferta": false,
       "destacado": false,
-      "max": 3,
+      "max": 2,
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
@@ -1406,7 +1406,7 @@
       "moneda": "cup",
       "enOferta": true,
       "destacado": false,
-      "max": 2,
+      "max": 1,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -1465,7 +1465,7 @@
       "moneda": "usd",
       "enOferta": true,
       "destacado": true,
-      "max": 4,
+      "max": 3,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -2367,25 +2367,6 @@
       }
     },
     {
-      "id": "p_1785357289638",
-      "codigo": "8N4Y",
-      "name": "Guantillas",
-      "cat": "Gym y Suplementos",
-      "subcat": "",
-      "notes": "Accesorio para gimnasio y motos\nDisponibles en negro con detalles en gris 🩶 o en rosa 🩷\nTallas S ,M y L",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785357184/productos/p2wprzs1rrt5ab7ot3wb.jpg",
-      "precioUSD": 3.82,
-      "precioCUP": 3000,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false,
-      "max": 1,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      }
-    },
-    {
       "id": "p_1785008058883",
       "codigo": "BSLH",
       "name": "Hamaca azul",
@@ -2609,25 +2590,6 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
-    },
-    {
-      "id": "p_1785769308192",
-      "codigo": "636Y",
-      "name": "Lámpara de techo larga",
-      "cat": "Decoración",
-      "subcat": "",
-      "notes": "Materiales: Metal\nColor: Negro mate\n• No incluye foco 💡",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785769225/productos/kgxujlysuov9mhlgb1fu.jpg",
-      "precioUSD": 20,
-      "precioCUP": 15700,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "max": 1,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
       }
     },
     {
@@ -3117,13 +3079,13 @@
       "id": "p_1780092595587",
       "codigo": "YKGQ",
       "name": "Medias",
-      "cat": "Ropa",
+      "cat": "Ropa Interior",
       "subcat": "",
       "notes": "Variedad de colores.",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1781664214/productos/frkpoykricnh3mtxabig.jpg",
-      "precioUSD": 0.43,
-      "precioCUP": 340,
-      "moneda": "cup",
+      "precioUSD": 0.5,
+      "precioCUP": 393,
+      "moneda": "usd",
       "enOferta": false,
       "destacado": false,
       "envio": {
@@ -4813,15 +4775,15 @@
       }
     },
     {
-      "id": "p_1789240757263",
-      "codigo": "DECX",
+      "id": "p_1791836928935",
+      "codigo": "KAVV",
       "name": "Pulover de hombre 2",
       "cat": "Ropa",
       "subcat": "",
-      "notes": "Pulover algodonada elastizado. Importado de USA",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789240681/productos/arra6wfjbee02aq5k9jd.jpg",
-      "precioUSD": 4,
-      "precioCUP": 3140,
+      "notes": "Tela algodonada elastizada",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791836834/productos/dd4oggnothhnu08vqclx.jpg",
+      "precioUSD": 5,
+      "precioCUP": 3925,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -4830,11 +4792,11 @@
           "Talla"
         ],
         "opciones": [
-          "M"
+          "S"
         ]
       },
       "maxOpciones": {
-        "M": 1
+        "S": 1
       },
       "envio": {
         "corto": "🛵 Mensajería gratis",
@@ -4880,6 +4842,93 @@
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791647061/productos/tuc6kyfzvdr6bu69guul.jpg",
       "precioUSD": 4,
       "precioCUP": 3140,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Talla"
+        ],
+        "opciones": [
+          "S"
+        ]
+      },
+      "maxOpciones": {
+        "S": 1
+      },
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
+      "id": "p_1791837207801",
+      "codigo": "4FUU",
+      "name": "Pulover de hombre 5",
+      "cat": "Ropa",
+      "subcat": "",
+      "notes": "Tela algodonada elastizada",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791837097/productos/tqqcc5wb3rozfzkqmwzt.jpg",
+      "precioUSD": 5,
+      "precioCUP": 3925,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Talla"
+        ],
+        "opciones": [
+          "L"
+        ]
+      },
+      "maxOpciones": {
+        "L": 1
+      },
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
+      "id": "p_1791837243848",
+      "codigo": "EQT3",
+      "name": "Pulover de hombre 6",
+      "cat": "Ropa",
+      "subcat": "",
+      "notes": "Tela algodonada elastizada",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791837152/productos/x2kz8q6dt0faiuzc7ad4.jpg",
+      "precioUSD": 5,
+      "precioCUP": 3925,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Talla"
+        ],
+        "opciones": [
+          "XL"
+        ]
+      },
+      "maxOpciones": {
+        "XL": 1
+      },
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      }
+    },
+    {
+      "id": "p_1791837295509",
+      "codigo": "SJU6",
+      "name": "Pulover de hombre 7",
+      "cat": "Ropa",
+      "subcat": "",
+      "notes": "Tela algodonada elastizada",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791837241/productos/vdywxkkwybohpohuv44k.jpg",
+      "precioUSD": 5,
+      "precioCUP": 3925,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -4995,7 +5044,7 @@
       "name": "Pulover Unisex Negro de Pantera",
       "cat": "Ropa",
       "subcat": "",
-      "notes": "Tallas S y M(agrandadas). Tela algodonada elastizada",
+      "notes": "Tallas S (agrandadas). Tela algodonada elastizada",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791646520/productos/pefp9pwkm8acwifvz7au.jpg",
       "precioUSD": 3.18,
       "precioCUP": 2500,
