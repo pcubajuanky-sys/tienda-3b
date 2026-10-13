@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-13T15:36:44.731Z",
+  "generado": "2026-10-13T19:21:44.097Z",
   "tasa": 790,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -692,25 +692,6 @@
       "precioNormalCUP": 4740
     },
     {
-      "id": "p_1790619584689",
-      "codigo": "4TKD",
-      "name": "Accesorio para llave de agua",
-      "cat": "Ferretería",
-      "subcat": "",
-      "notes": "Adaptador multifuncional para grifo o llave de agua. Tiene 3 funciones,fácil colocación",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790619459/productos/geguaz3cr1lsfh3ekwvu.jpg",
-      "precioUSD": 10,
-      "precioCUP": 7900,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "max": 2,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      }
-    },
-    {
       "id": "p_1786943265900",
       "codigo": "GZBC",
       "name": "Aceite especial de gengibre para cabellos",
@@ -1356,7 +1337,7 @@
         ]
       },
       "maxOpciones": {
-        "AZUL": 2
+        "AZUL": 1
       },
       "envio": {
         "corto": "🛵 Mensajería gratis",
@@ -3545,6 +3526,9 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791919213/productos/uheclodh2ny8ts6wwja0.jpg"
+      ],
       "max": 1,
       "envio": {
         "corto": "🛵 Mensajería gratis",
@@ -4579,25 +4563,6 @@
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782329615/productos/m0im1q6zm39ylege8jxh.jpg",
       "precioUSD": 0.63,
       "precioCUP": 500,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false,
-      "max": 7,
-      "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
-    },
-    {
-      "id": "p_1788133110062",
-      "codigo": "Z9ND",
-      "name": "Pezoneras de silicona",
-      "cat": "Accesorio de vestir",
-      "subcat": "",
-      "notes": "Parejas de pezoneras de silicona",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788132925/productos/hlnhlfpfcozrqm2mynj4.jpg",
-      "precioUSD": 1.01,
-      "precioCUP": 800,
       "moneda": "cup",
       "enOferta": false,
       "destacado": false,
