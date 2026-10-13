@@ -1668,3 +1668,12 @@ async function iniciar() {
 }
 
 iniciar();
+
+// Service worker: va aqui y no en un <script> del HTML porque la CSP de produccion
+// lleva script-src con hashes y un <script> nuevo exigiria recalcularlos. Si falla,
+// falla callando: la tienda funciona igual sin el.
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js').catch(() => {});
+  });
+}
