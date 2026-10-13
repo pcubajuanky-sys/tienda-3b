@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-13T02:57:17.018Z",
+  "generado": "2026-10-13T03:17:32.422Z",
   "tasa": 785,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -802,12 +802,17 @@
       "cat": "Electrodomésticos",
       "subcat": "",
       "notes": "Alarma ideal para la protección de su casa, de habitaciones, closets o incluso gavetas, TODA SEGURIDAD ES POCA EN ESTOS TIEMPOS!!",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787110254/productos/isqaptoba6wgp0ogrwni.jpg",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791861204/productos/eqbueci4m1g9m7wiqc8n.jpg",
       "precioUSD": 2.4,
       "precioCUP": 1884,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791861153/productos/fq3kfhciqxzputkxgkcr.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791861189/productos/p8le721er1pxu07hxvbm.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791861197/productos/gx9lfooymrsxtb8perrj.jpg"
+      ],
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
