@@ -104,6 +104,37 @@ Ojo al CSS de la tira: `.rel-foto` y `.rel-precio` son `<span>` y necesitan `dis
 `width/height/border-radius` apliquen, y el `<button>` necesita `color:inherit` o el texto sale negro
 en modo oscuro.
 
+## La tienda instalable (PWA)
+
+La tienda se puede **añadir a la pantalla de inicio** del teléfono y abre aunque la señal sea mala.
+Lo hacen `manifest.json` (nombre, colores e iconos `icono-192.png` / `icono-512.png`) y `sw.js` (el
+service worker). `app.js` lo registra al final del archivo, no en un `<script>` del HTML: la CSP lleva
+`script-src` con hashes y un `<script>` suelto exigiría recalcularlos.
+
+Qué guarda y cómo:
+
+- **El armazón** (HTML, CSS, JS, la fuente y los logos, lista `ARMAZON` en `sw.js`): caché primero.
+- **`catalogo.json`: RED PRIMERO.** Son precios; la copia guardada solo se sirve si la red falla. La
+  copia vive bajo la clave fija `/catalogo.json` (sin query) porque `app.js` lo pide con `?v=Date.now()`.
+- **Las páginas** (`/`, `/p/CODIGO`, `/MARIA`): red primero; sin red, la portada guardada.
+- **Las fotos de Cloudinary NO se guardan** (muchas y pesadas): sin red salen rotas, es lo esperado.
+
+🔴 **Cada vez que cambie `estilos.css`, `app.js` o cualquier archivo de `ARMAZON`, hay que subir el
+número de `CACHE` en `sw.js`** (`tienda-3b-v1` → `v2`…), o los clientes seguirán viendo la versión
+vieja. Y si se **añade** un `<script src>` o un archivo nuevo al `index.html`, hay que añadirlo también a
+`ARMAZON`: lo que falte en esa lista no está disponible sin conexión.
+
+**Botón de pánico.** Si un service worker sale mal en producción, se publica un `sw.js` cuyo contenido
+entero sea esto; desinstala el service worker y vacía la caché en todos los teléfonos:
+
+```js
+self.addEventListener('install',()=>self.skipWaiting());self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(k=>Promise.all(k.map(n=>caches.delete(n)))).then(()=>self.registration.unregister())));
+```
+
+`vercel.json` y `_headers` marcan `/sw.js` como `Cache-Control: no-cache` para que el CDN no lo congele.
+Un service worker solo funciona en `https://` o en `localhost`; no se prueba en Node, se prueba en el
+navegador y con la red cortada.
+
 ## Avisos
 
 - `catalogo.json` es **público**: cualquiera puede leerlo entero. Solo lleva lo que se ve en la web
