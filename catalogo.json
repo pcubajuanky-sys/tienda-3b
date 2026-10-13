@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-13T01:39:43.774Z",
+  "generado": "2026-10-13T02:50:33.465Z",
   "tasa": 785,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -1160,6 +1160,9 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": true,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791859754/productos/ai4oxxgzcnikwvwtn0gz.jpg"
+      ],
       "max": 1,
       "envio": {
         "corto": "🚚 Transporte aparte",
