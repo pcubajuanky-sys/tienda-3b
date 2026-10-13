@@ -74,7 +74,7 @@ module.exports = function handler(req, res) {
     if (p && i !== -1 && j > i) {
       const url = RAIZ + '/p/' + String(p.codigo).toUpperCase() + (ref ? '?ref=' + ref : '');
       salida = html.slice(0, i + INICIO.length) + '\n' +
-               bloqueOg(ogDeProducto(p, url)) + '\n' +
+               bloqueOg(ogDeProducto(p, url), p, url) + '\n' +
                html.slice(j);
     }
   } catch (e) {

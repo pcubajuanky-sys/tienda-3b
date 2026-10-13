@@ -69,7 +69,7 @@ function ogDeProducto(p, url) {
   };
 }
 
-function bloqueOg(d) {
+function bloqueOg(d, p, url) {
   const t = escapar(d.titulo);
   const desc = escapar(d.descripcion);
   const img = escapar(d.imagen);
@@ -96,7 +96,39 @@ function bloqueOg(d) {
   lineas.push('<meta name="twitter:title" content="' + t + '">');
   lineas.push('<meta name="twitter:description" content="' + desc + '">');
   lineas.push('<meta name="twitter:image" content="' + img + '">');
+  // Sin producto no hay datos estructurados: la firma vieja bloqueOg(d) sigue valiendo.
+  if (p) lineas.push(jsonLdProducto(p, url || d.url));
   return lineas.join('\n');
 }
 
-module.exports = { ogDeProducto, bloqueOg, precioTexto, descripcionOg, imagenOg, escapar };
+// Datos estructurados del producto (schema.org). Esto es lo que permite a Google
+// enseñar precio y disponibilidad en los resultados.
+//
+// 🔴 Es un bloque de DATOS, no un script ejecutable: la CSP `script-src 'self'` no lo
+// bloquea. Y el precio va en CUP a propósito: es la moneda en la que se cobra.
+//
+// El `</` de cualquier texto se parte para que un nombre con `</script>` dentro no pueda
+// cerrar la etiqueta antes de tiempo. Es la única forma de inyección posible aquí,
+// porque el resto ya lo escapa JSON.stringify.
+function jsonLdProducto(p, url) {
+  const datos = {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: String(p.name || ''),
+    description: descripcionOg(p),
+    image: imagenOg(p),
+    sku: String(p.codigo || ''),
+    brand: { '@type': 'Brand', name: '3B Store' },
+    offers: {
+      '@type': 'Offer',
+      url: url,
+      price: Number(p.precioCUP) || 0,
+      priceCurrency: 'CUP',
+      availability: 'https://schema.org/InStock',
+    },
+  };
+  const json = JSON.stringify(datos).replace(/<\//g, '<\\/');
+  return `<script type="application/ld+json">${json}</script>`;
+}
+
+module.exports = { ogDeProducto, bloqueOg, precioTexto, descripcionOg, imagenOg, escapar, jsonLdProducto };

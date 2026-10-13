@@ -2,7 +2,7 @@
 // Se corren desde la raiz del repo con:  node --test test/
 const test = require('node:test');
 const assert = require('node:assert');
-const { ogDeProducto, bloqueOg, precioTexto, descripcionOg, imagenOg, escapar } = require('../api/_og');
+const { ogDeProducto, bloqueOg, precioTexto, descripcionOg, imagenOg, escapar, jsonLdProducto } = require('../api/_og');
 
 const BASE = {
   codigo: 'U8DN',
@@ -100,4 +100,45 @@ test('sin transformacion de Cloudinary no se declaran las medidas', () => {
   const p = Object.assign({}, BASE, { photo: 'https://ejemplo.com/foto.jpg' });
   const html = bloqueOg(ogDeProducto(p, URL_OK));
   assert.ok(!html.includes('og:image:width'), 'declaro 1200x630 de una foto que no redimensiono');
+});
+
+test('el JSON-LD del producto es JSON valido y de tipo Product', () => {
+  const p = { codigo: '5HP4', name: 'Abrigo de Chihuahua', notes: 'Tela gruesa', precioCUP: 3900, precioUSD: 5, moneda: 'usd', photo: 'https://res.cloudinary.com/x/y.jpg' };
+  const bloque = jsonLdProducto(p, 'https://www.3bqba.com/p/5HP4');
+  const crudo = bloque.replace(/^[\s\S]*?>/, '').replace(/<\/script>\s*$/, '');
+  const j = JSON.parse(crudo);
+  assert.strictEqual(j['@type'], 'Product');
+  assert.strictEqual(j.name, 'Abrigo de Chihuahua');
+  assert.strictEqual(j.offers.priceCurrency, 'CUP');
+  assert.strictEqual(j.offers.price, 3900);
+  assert.strictEqual(j.offers.url, 'https://www.3bqba.com/p/5HP4');
+});
+
+test('el precio va en CUP, que es la moneda en la que se cobra', () => {
+  const p = { codigo: 'AAAA', name: 'X', precioCUP: 1500, precioUSD: 2, moneda: 'cup' };
+  const j = JSON.parse(jsonLdProducto(p, 'u').replace(/^[\s\S]*?>/, '').replace(/<\/script>\s*$/, ''));
+  assert.strictEqual(j.offers.price, 1500);
+  assert.strictEqual(j.offers.priceCurrency, 'CUP');
+});
+
+test('un nombre con comillas o < no rompe el JSON ni se escapa a HTML', () => {
+  const p = { codigo: 'AAAA', name: 'Cable "USB" <nuevo>', precioCUP: 100, precioUSD: 1 };
+  const bloque = jsonLdProducto(p, 'u');
+  // el unico </script es el de cierre: el contenido no puede cerrar la etiqueta antes
+  assert.strictEqual((bloque.match(/<\/script/g) || []).length, 1);
+  const j = JSON.parse(bloque.replace(/^[\s\S]*?>/, '').replace(/<\/script>\s*$/, ''));
+  assert.strictEqual(j.name, 'Cable "USB" <nuevo>');
+});
+
+test('bloqueOg incluye el JSON-LD', () => {
+  const p = { codigo: '5HP4', name: 'Abrigo', precioCUP: 3900, precioUSD: 5, photo: 'https://res.cloudinary.com/x/y.jpg' };
+  const url = 'https://www.3bqba.com/p/5HP4';
+  const html = bloqueOg(ogDeProducto(p, url), p, url);
+  assert.ok(html.includes('application/ld+json'));
+});
+
+test('bloqueOg sin producto no lleva JSON-LD (la firma vieja sigue valiendo)', () => {
+  const p = { codigo: '5HP4', name: 'Abrigo', precioCUP: 3900, precioUSD: 5 };
+  const html = bloqueOg(ogDeProducto(p, 'https://www.3bqba.com/p/5HP4'));
+  assert.strictEqual(html.includes('application/ld+json'), false);
 });
