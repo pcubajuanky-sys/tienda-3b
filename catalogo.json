@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-14T19:15:10.474Z",
+  "generado": "2026-10-14T20:48:42.907Z",
   "tasa": 790,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -74,6 +74,10 @@
     {
       "code": "6GWN3",
       "nombre": "Ketisleydis"
+    },
+    {
+      "code": "YPUD8",
+      "nombre": "Sahel González"
     }
   ],
   "categorias": [
