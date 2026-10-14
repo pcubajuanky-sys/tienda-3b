@@ -3,27 +3,37 @@
 Plan: `C:\inventario\inventario-stockmas\docs\superpowers\plans\2026-10-14-tienda-ordenar-y-filtrar.md`
 Dos repos. Sin `git push`.
 
-## 🔴 Discrepancia que necesita decisión del dueño
+## Punto 6 del Step 2: el plan estaba mal (decisión del coordinador: opción A)
 
-**Punto 6 del Step 2 de la Task 4 NO se cumple tal como está escrito.** Con el `catalogo.json`
-ORIGINAL (sin `creado` ni `envioGratis`) la fila de controles **sí aparece**: enseña el
-desplegable con tres opciones (Nombre A–Z, Más baratos primero, Más caros primero). Medido en
-Chrome a 375 px: `#controles` visible, `hidden` falso, `.grid-head` con hijos visibles
-`grid-titulo` + `controles` (el chip 🛵 sí queda oculto).
+El plan pedía que, con el `catalogo.json` original (sin `creado` ni `envioGratis`), la fila de
+controles **no apareciera**. Eso era un error del plan: ordenar A–Z, «Más baratos primero» y «Más
+caros primero» solo usan `precioCUP`, que **ya se publica hoy**, así que esas tres opciones
+funcionan sin republicar y se enseñan desde ya (medido en Chrome a 375 px con el catálogo
+original: desplegable visible con tres opciones, chip 🛵 oculto). El chip 🛵 y «Lo más nuevo»
+aparecen cuando Stock+ publique `envioGratis` y `creado`. `renderControles()` no se toca por esto.
 
-Causa: el código del propio plan, `cont.hidden = ops.length < 2 && !hayEnvio`. Con el catálogo
-viejo `opcionesUtiles` devuelve 3 opciones (`barato`/`caro` solo necesitan `precioCUP`, que ya se
-publica), así que no se esconde. Además la prueba `opcionesUtiles esconde «nuevo»...` del plan
-exige que `az` y `barato` sigan ahí. Es decir: el código y las pruebas del plan dicen una cosa y
-el punto 6 dice otra. **No lo cambié.** Capturas: `p6-original-375px.png` (en el scratchpad, ver
-abajo).
+## Arreglo posterior: parrilla vacía sin mensaje
 
-Dos salidas:
-- **A (dejarlo):** el desplegable sale hoy mismo en producción con A–Z / baratos / caros, que
-  funcionan con los datos actuales; «Lo más nuevo» y el chip 🛵 esperan a que Ruth republique.
-- **B (cumplir el punto 6 al pie de la letra):** cambiar en `renderControles()` la línea a
-  `cont.hidden = !(ops.length > 3 || hayEnvio)` o equivalente (mostrar solo si hay «nuevo» o
-  chip). Es un cambio de una línea en `app.js`; con él, además, el punto 6 se cumple.
+Fallo real introducido por este cambio: `#vacio` («No hay productos que coincidan con tu búsqueda»
++ botón) se decidía con `visibles()` ANTES del filtro 🛵, y el chip no contaba como filtro. Con el
+chip puesto y una categoría sin ningún producto de mensajería gratis, la parrilla quedaba en blanco
+sin explicación. Ahora `renderGrid()` lo decide con la lista FINAL:
+`vacio.hidden = !(lista.length === 0 && (buscando || soloEnvioGratis))`.
+
+Comprobado en Chrome a 375 px (catálogo de prueba: 131 con `envioGratis`, la categoría Muebles, 6
+productos, con 0 gratis; captura `scratchpadordenacio-chip-categoria.png`):
+0. Sin filtros: mensaje oculto, 234 tarjetas.
+1. Chip puesto, sin categoría: mensaje oculto, 127 tarjetas.
+2. Chip + Muebles: **mensaje visible** con su botón «Ver todo el catálogo», 0 tarjetas.
+3. Quitar el chip (misma categoría): mensaje oculto, vuelven las 6 tarjetas.
+4. Chip otra vez: mensaje visible de nuevo.
+5. Pulsar «Ver todo el catálogo» con el chip aún puesto: mensaje oculto, 127 tarjetas, categoría
+   limpia. (Ese botón limpia búsqueda y categoría pero NO el chip; quedan los 127 con mensajería
+   gratis, no los 234. No se cambió.)
+6. Quitar el chip: 234 tarjetas.
+7. Regresión: búsqueda sin resultados y sin chip: mensaje visible.
+8. Regresión: limpiar la búsqueda: mensaje oculto, 234 tarjetas.
+Cero errores de página.
 
 ## Lo cambiado
 
@@ -70,7 +80,7 @@ justo tras `engancharGestoGaleria();`.
 ## Cifras observadas
 
 Stock+ `npm test`: antes 1522/1522, después **1526/1526**, exit 0 las dos.
-Tienda `node --test`: antes 61/61, después **71/71**, exit 0 las dos.
+Tienda `node --test`: antes 61/61, después **71/71** (y 71/71 tras el arreglo del aviso), exit 0 las dos.
 Se vio rojo antes de verde: Task 1 (2 de las 4 pruebas fallaban antes de implementar) y Task 2
 (`ENOENT orden.js`).
 
@@ -94,7 +104,10 @@ por una foto anterior del catálogo.)
 5. Con chip + «Más baratos» puestos, al **buscar** «a» (136 resultados) y al **elegir la
    categoría** Electrodomésticos (14 resultados) el filtro y el orden se mantienen (todo gratis,
    todo de la categoría, precios ascendentes, chip y desplegable intactos).
-6. **NO CUMPLE** — ver la discrepancia de arriba.
+6. El plan pedía que los controles NO aparecieran con el catálogo original; era un error del plan.
+   A–Z, más baratos y más caros funcionan sin republicar, así que se enseñan desde ya; el chip 🛵 y
+   «Lo más nuevo» aparecen cuando Stock+ publique `envioGratis` y `creado`. Visto: con el catálogo
+   original el desplegable sale con tres opciones y el chip queda oculto.
 7. Captura: `C:\inventario\tienda-3b\docs\informes\2026-10-14-orden-filtro-375px.png`. Otras, en el
    scratchpad de la sesión (`...\scratchpad\orden\`): `p6-original-375px.png`,
    `final-dark-375px.png`, `p4-chip-activo-light.png`, `p5-categoria-dark.png`.
@@ -106,8 +119,6 @@ Cero errores de página/consola en las tres pasadas. `catalogo.json` se tocó so
 
 - El carrusel «Los más vendidos» no se filtra ni se ordena: en portada, con el chip puesto, los
   destacados siguen arriba aunque no tengan mensajería gratis (la parrilla de abajo sí).
-- `#vacio` («sin resultados») se decide con `visibles()` ANTES del filtro 🛵: si búsqueda/categoría
-  tienen resultados pero ninguno con mensajería gratis, la parrilla queda vacía sin mensaje.
 
 ## ⚠ NO VERIFICADO
 

@@ -470,11 +470,14 @@ function renderControles() {
 function renderGrid() {
   const items = visibles();
   const buscando = busqueda.trim() !== '' || filtroCat !== '' || filtroOferta;
-  document.getElementById('vacio').hidden = !(items.length === 0 && buscando);
   // En la portada los destacados viven en el carrusel de arriba; aquí se omiten
   // para no duplicar ids. Al buscar o filtrar no hay carrusel, así que entran.
   const base = buscando ? items : items.filter((p) => !p.destacado);
   const lista = window.Orden.ordenar(window.Orden.filtrar(base, soloEnvioGratis), ordenSel);
+  // El aviso de «sin resultados» se decide con la lista FINAL, ya filtrada y ordenada, y
+  // el chip de mensajería cuenta como filtro: si no, al dejar la parrilla vacía solo con
+  // el chip, el cliente se queda ante una pantalla en blanco sin explicación.
+  document.getElementById('vacio').hidden = !(lista.length === 0 && (buscando || soloEnvioGratis));
   const tarjetas = lista.map(tarjetaHtml);
   // El reclamo de gestores va DENTRO de la parrilla, ocupando una fila entera
   // (.cta-comi trae grid-column:1/-1). Antes vivía en un hueco aparte: pegado
