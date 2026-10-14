@@ -227,6 +227,14 @@
     <div id="cta-encargos-hueco" hidden></div>
     <div class="grid-head">
       <h2 class="grid-titulo">Catálogo</h2>
+      <!-- Orden y filtro. Lo puebla renderControles() en app.js y se esconde entero si el
+           catálogo no soporta ninguna opción (por ejemplo, mientras Stock+ no publique
+           `creado` ni `envioGratis`). -->
+      <div class="controles" id="controles" hidden>
+        <label class="sr-only" for="orden-sel">Ordenar por</label>
+        <select id="orden-sel" class="orden-sel"></select>
+        <button id="btn-envio-gratis" class="chip-filtro" type="button" aria-pressed="false" hidden>🛵 Mensajería gratis</button>
+      </div>
       <button id="filtro-pill" class="filtro-pill" type="button" hidden>
         <span id="filtro-pill-texto"></span>
         <span class="filtro-pill-x" aria-hidden="true">✕</span>
@@ -428,6 +436,7 @@
 </div>
 
 <script src="mundos.js"></script>
+<script src="orden.js"></script>
 <script src="relacionados.js"></script>
 <script src="galeria.js"></script>
 <script src="tarjeta.js"></script>

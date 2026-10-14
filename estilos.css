@@ -523,6 +523,11 @@ a{color:inherit}
    hacen las tarjetas de categoría de arriba. */
 main{padding-top:20px}
 .grid-head{display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:14px}
+/* Orden y filtro. En móvil caen a su propia línea, debajo del título. */
+.controles{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.orden-sel{font:inherit;font-size:14px;padding:8px 10px;border-radius:10px;border:1px solid var(--border);background:var(--surface-2);color:inherit;cursor:pointer}
+.chip-filtro{font:inherit;font-size:14px;font-weight:600;padding:8px 12px;border-radius:999px;border:1px solid var(--border);background:var(--surface-2);color:inherit;cursor:pointer}
+.chip-filtro[aria-pressed="true"]{background:var(--brand);border-color:var(--brand);color:var(--brand-ink)}
 .grid-titulo{font-size:var(--t-xl);font-weight:800;letter-spacing:-.01em}
 .filtro-pill{
   display:inline-flex;align-items:center;gap:8px;min-height:36px;padding:6px 8px 6px 14px;

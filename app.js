@@ -3,6 +3,8 @@
 let CAT = null;          // el catalogo.json cargado
 let filtroCat = '';      // categoría activa ('' = todas)
 let filtroOferta = false;
+let ordenSel = 'az';          // criterio de orden elegido; 'az' es el de siempre
+let soloEnvioGratis = false;  // filtro de mensajería gratis incondicional
 let busqueda = '';
 let elementoAnteriorFoco = null;   // para devolver el foco al cerrar modal/carrito
 let productoModal = null;
@@ -444,13 +446,35 @@ function renderMasVendidos() {
   else document.getElementById('mv-tira').innerHTML = '';
 }
 
+// Pinta los controles de orden y filtro según lo que soporte el catálogo cargado. Si no
+// hay ninguna opción útil, la fila entera queda oculta: mientras Stock+ no publique
+// `creado` ni `envioGratis`, la tienda se ve exactamente como antes.
+function renderControles() {
+  const cont = document.getElementById('controles');
+  const sel = document.getElementById('orden-sel');
+  const chip = document.getElementById('btn-envio-gratis');
+  if (!cont || !sel || !chip) return;
+  const items = CAT.items || [];
+  const ops = window.Orden.opcionesUtiles(items);
+  sel.innerHTML = ops.map((o) => `<option value="${o.id}">${escapeHtml(o.texto)}</option>`).join('');
+  sel.value = ops.some((o) => o.id === ordenSel) ? ordenSel : 'az';
+  ordenSel = sel.value;   // si la opción elegida ya no existe en este catálogo, vuelve a A–Z
+  const hayEnvio = window.Orden.hayEnvioGratis(items);
+  chip.hidden = !hayEnvio;
+  if (!hayEnvio) soloEnvioGratis = false;   // chip oculto => filtro apagado, o la parrilla quedaría vacía sin salida
+  chip.setAttribute('aria-pressed', String(soloEnvioGratis));
+  // Con una sola opción de orden y sin filtro no hay nada que elegir: fuera.
+  cont.hidden = ops.length < 2 && !hayEnvio;
+}
+
 function renderGrid() {
   const items = visibles();
   const buscando = busqueda.trim() !== '' || filtroCat !== '' || filtroOferta;
   document.getElementById('vacio').hidden = !(items.length === 0 && buscando);
   // En la portada los destacados viven en el carrusel de arriba; aquí se omiten
   // para no duplicar ids. Al buscar o filtrar no hay carrusel, así que entran.
-  const lista = buscando ? items : items.filter((p) => !p.destacado);
+  const base = buscando ? items : items.filter((p) => !p.destacado);
+  const lista = window.Orden.ordenar(window.Orden.filtrar(base, soloEnvioGratis), ordenSel);
   const tarjetas = lista.map(tarjetaHtml);
   // El reclamo de gestores va DENTRO de la parrilla, ocupando una fila entera
   // (.cta-comi trae grid-column:1/-1). Antes vivía en un hueco aparte: pegado
@@ -1536,6 +1560,7 @@ async function cargarCatalogo() {
   renderCarrito();   // el aside lateral (≥1024px) no espera a que se abra el panel modal
   renderFiltroPill();
   renderCategorias3D();
+  renderControles();   // antes de renderGrid: valida ordenSel/soloEnvioGratis contra ESTE catálogo
   renderGrid();
   renderFooterExtra();
   renderServicios();
@@ -1692,6 +1717,14 @@ async function iniciar() {
   window.addEventListener('focus', revalidarCierre);
 
   engancharGestoGaleria();
+  const selOrden = document.getElementById('orden-sel');
+  if (selOrden) selOrden.addEventListener('change', (e) => { ordenSel = e.target.value; renderGrid(); });
+  const chipEnvio = document.getElementById('btn-envio-gratis');
+  if (chipEnvio) chipEnvio.addEventListener('click', () => {
+    soloEnvioGratis = !soloEnvioGratis;
+    chipEnvio.setAttribute('aria-pressed', String(soloEnvioGratis));
+    renderGrid();
+  });
   medirHeader();
   await cargarCatalogo();
   renderMundos();
