@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-14T12:18:33.122Z",
+  "generado": "2026-10-14T13:37:30.898Z",
   "tasa": 790,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -2964,31 +2964,6 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
-    },
-    {
-      "id": "p_1791138353006",
-      "codigo": "4KZR",
-      "name": "Máquina de Pelar Profesional",
-      "cat": "Electrodomésticos",
-      "subcat": "",
-      "notes": "Juego de cortapelos y recortadora de barba para hombre. Cortapelos para corte de pelo, recargable por USB, apto para uso doméstico, incluye 8 peines guía, peine para el pelo, cepillo de limpieza - Regalo para hombre para el Día del Padre, cumpleaños, Navidad",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791896104/productos/pxnnsadz8grhw3sdhrkq.jpg",
-      "precioUSD": 15,
-      "precioCUP": 11850,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "fotos": [
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791896039/productos/glcrfklhd9h2dba7ykns.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791896074/productos/rizyv8vyx0h3vdfo7xux.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791896088/productos/aiba15epy1h4slyoyt37.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791896098/productos/zphuhtf0yeagszqksbvl.jpg"
-      ],
-      "max": 1,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
       }
     },
     {
