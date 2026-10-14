@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-13T19:50:07.683Z",
+  "generado": "2026-10-14T01:18:32.879Z",
   "tasa": 790,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -399,6 +399,16 @@
         "id": "malla-de-proteccion-solar-3m-x-2m",
         "nombre": "Malla de protección solar (3m x 2m)",
         "lb": 1.1
+      },
+      {
+        "id": "plancha-de-pelo",
+        "nombre": "plancha de pelo",
+        "lb": 0.9
+      },
+      {
+        "id": "cercadora-de-pelo",
+        "nombre": "cercadora de Pelo",
+        "lb": 2
       }
     ],
     "ejemplos": [
@@ -773,7 +783,7 @@
         ]
       },
       "maxOpciones": {
-        "NEGRO": 4
+        "NEGRO": 3
       },
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
@@ -1575,7 +1585,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 7,
+      "max": 6,
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
@@ -2091,35 +2101,6 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
-    },
-    {
-      "id": "p_1785957052228",
-      "codigo": "8X9D",
-      "name": "Gafas Cristal transparente",
-      "cat": "Accesorio de vestir",
-      "subcat": "",
-      "notes": "Protección contra luz azul, ideal para personas que usan mucho pantallas como celulares ,laptops y televisión.\nTambién es un muy buen accesorio para personas que manejan moto en horario nocturno, protege los ojos sin afectar la visibilidad en la oscuridad",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785956773/productos/gufvuhffd4ibygz29anq.jpg",
-      "precioUSD": 2,
-      "precioCUP": 1580,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "variantes": {
-        "ejes": [
-          "Color"
-        ],
-        "opciones": [
-          "BLANCO"
-        ]
-      },
-      "maxOpciones": {
-        "BLANCO": 1
-      },
-      "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
       }
     },
     {
@@ -2941,6 +2922,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
+      "max": 9,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -3010,56 +2992,39 @@
       }
     },
     {
-      "id": "p_1785733637147",
-      "codigo": "XXHW",
-      "name": "Mariposas",
+      "id": "p_1791925032570",
+      "codigo": "AJV9",
+      "name": "Mariposas decorativas",
       "cat": "Decoración",
       "subcat": "",
-      "notes": "Juego de 12 mariposas de diferentes tamaños\nDiseños disponibles en negro y amarillo",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785733520/productos/kxvvr6yckd2fd5gb8nzo.jpg",
-      "precioUSD": 1.9,
-      "precioCUP": 1500,
-      "moneda": "cup",
+      "notes": "Kit de 12 hermosas mariposas decorativas. Variadas en tamaño y diseño.imcluye su cinta de doble contacto. Color a elegir entre los 4 de la imagen",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791924633/productos/wxo6bbmvmpgn7fedebkd.jpg",
+      "precioUSD": 2,
+      "precioCUP": 1580,
+      "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 1,
-      "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
-    },
-    {
-      "id": "p_1785733763335",
-      "codigo": "9X4K",
-      "name": "Mariposas",
-      "cat": "Decoración",
-      "subcat": "",
-      "notes": "12 mariposas de diferentes tamaños\nDisponibles en dorado y en plateado ( como se muestra en la imagen)",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785733657/productos/yvd9alx6dsl4zsos8qc5.jpg",
-      "precioUSD": 1.52,
-      "precioCUP": 1200,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
-    },
-    {
-      "id": "p_1788205797035",
-      "codigo": "EKUQ",
-      "name": "Maripositas tornasol",
-      "cat": "Decoración",
-      "subcat": "",
-      "notes": "12 Maripositas tornasoladas de diferentes tamaños con su adhesivo incluído\nEn más de un paquete",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788205622/productos/wukixgvlhrcnxyikbuy3.jpg",
-      "precioUSD": 1.27,
-      "precioCUP": 1000,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false,
-      "max": 6,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791924637/productos/bqv9nptf25qw5dzogsvj.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791924641/productos/bocxhm6v0vfm7re1w8a5.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791924646/productos/ye9ndkmeyx6a2j0hiuqp.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791924652/productos/ipjoyvw9evwixb5ydkoy.jpg"
+      ],
+      "variantes": {
+        "ejes": [
+          "Color"
+        ],
+        "opciones": [
+          "NEGRO",
+          "DORADO",
+          "PLATEADO",
+          "TORNASOL"
+        ]
+      },
+      "maxOpciones": {
+        "PLATEADO": 6,
+        "TORNASOL": 5
+      },
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
@@ -5318,7 +5283,7 @@
         ]
       },
       "maxOpciones": {
-        "C": 2,
+        "C": 1,
         "B": 1
       },
       "envio": {
@@ -5854,25 +5819,6 @@
       "enOferta": false,
       "destacado": false,
       "max": 3,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      }
-    },
-    {
-      "id": "p_1788542394214",
-      "codigo": "2RXL",
-      "name": "Trípode profesional",
-      "cat": "Bocinas Celulares y Accesorios",
-      "subcat": "",
-      "notes": "Trípode profesional de alta resistencia. Alcanza un alto de hasta 1.75 metros",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788541439/productos/iqykxichtc4bysouhoxv.jpg",
-      "precioUSD": 15,
-      "precioCUP": 11850,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "max": 1,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
