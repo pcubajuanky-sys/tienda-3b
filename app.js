@@ -1861,6 +1861,31 @@ iniciar();
 // lleva script-src con hashes y un <script> nuevo exigiria recalcularlos. Si falla,
 // falla callando: la tienda funciona igual sin el.
 if ('serviceWorker' in navigator) {
+  // ¿Había ya un service worker mandando cuando se cargó esta página? Se mira AQUÍ, antes
+  // de registrar nada: si no lo había, esta es la primera visita y el código que se está
+  // ejecutando ya viene de la red, así que recargar no aportaría nada.
+  const habiaControlador = !!navigator.serviceWorker.controller;
+  let recargando = false;
+
+  // ¿El cliente ya empezó a escribir su pedido? Entonces NO se recarga: perdería su
+  // nombre, su teléfono y su dirección. Se queda con la versión vieja esta visita, que es
+  // mucho menos malo. El carrito en sí no se pierde nunca: vive en localStorage.
+  function escribiendoPedido() {
+    const f = document.getElementById('form-pedido');
+    if (!f || f.hidden) return false;
+    return [...f.querySelectorAll('input, textarea, select')].some((c) => String(c.value || '').trim() !== '');
+  }
+
+  // El service worker nuevo acaba de tomar el mando: la caché ya tiene el código nuevo,
+  // pero esta página sigue ejecutando el viejo. Una recarga y queda al día.
+  // 🔴 Sin esto, el cliente ve la versión nueva solo en su SEGUNDA visita, y casi nadie
+  // recarga dos veces (medido en producción varias veces el 2026-10-14 y el 15).
+  navigator.serviceWorker.addEventListener('controllerchange', () => {
+    if (!habiaControlador || recargando || escribiendoPedido()) return;
+    recargando = true;
+    location.reload();
+  });
+
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('/sw.js').catch(() => {});
   });
