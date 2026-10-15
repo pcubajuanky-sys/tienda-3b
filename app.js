@@ -83,13 +83,19 @@ function fotoUrl(url, transform) {
 
 function fotoCard(url) {
   if (!esCloudinary(url)) return { src: url, srcset: '' };
-  const w400 = fotoUrl(url, 'f_auto,q_auto,w_400,c_limit');
-  const w800 = fotoUrl(url, 'f_auto,q_auto,w_800,c_limit');
+  // `ar_1:1,c_pad,b_auto` en vez de `c_limit`: la tarjeta ya era cuadrada por CSS
+  // (`aspect-ratio:1` + `object-fit:cover`), así que lo que hacía era RECORTAR —medido el
+  // 2026-10-15: 10 % de media y hasta un 33 % en una foto de 536×800—. Rellenando, el
+  // producto se ve entero y el borde lo pone Cloudinary con el color de la propia foto.
+  const w400 = fotoUrl(url, 'f_auto,q_auto,w_400,ar_1:1,c_pad,b_auto');
+  const w800 = fotoUrl(url, 'f_auto,q_auto,w_800,ar_1:1,c_pad,b_auto');
   return { src: w400, srcset: `${w400} 400w, ${w800} 800w` };
 }
 
 function fotoDetalle(url) {
-  return esCloudinary(url) ? fotoUrl(url, 'f_auto,q_auto,w_900,c_limit') : url;
+  // Misma razón que en la tarjeta, y aquí pesa más: la ficha es donde se decide la compra,
+  // y `.modal-foto` también recorta con `object-fit:cover`.
+  return esCloudinary(url) ? fotoUrl(url, 'f_auto,q_auto,w_900,ar_1:1,c_pad,b_auto') : url;
 }
 
 function fotoMosaico(url) {
