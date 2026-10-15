@@ -1130,8 +1130,10 @@ function pintarBandaGestor() {
   if (!corto) { el.hidden = true; el.innerHTML = ''; }
   else {
     el.hidden = false;
+    // 🔴 Texto NEUTRO: entre los gestores hay hombres y mujeres (Diego, Boris, Elaine...).
+    // «le llega a ella» le pondria el genero equivocado a una persona real en su propia pagina.
     el.innerHTML = `🤝 Estás en la página de <b>${escapeHtml(corto)}</b> — sus precios y su atención. `
-      + `Tu pedido le llega a ella directamente.`;
+      + `Tu pedido le llega directamente.`;
   }
   const ficha = document.getElementById('banda-gestor-ficha');
   if (ficha) { ficha.hidden = el.hidden; ficha.innerHTML = el.innerHTML; }
