@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-15T21:30:27.838Z",
+  "generado": "2026-10-15T23:52:05.074Z",
   "tasa": 800,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -813,31 +813,6 @@
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
       },
       "creado": 1788814692844
-    },
-    {
-      "id": "p_1787110390009",
-      "codigo": "KLNL",
-      "name": "Alarma de puertas y ventanas",
-      "cat": "Electrodomésticos",
-      "subcat": "",
-      "notes": "Alarma ideal para la protección de su casa, de habitaciones, closets o incluso gavetas, TODA SEGURIDAD ES POCA EN ESTOS TIEMPOS!!",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791861204/productos/eqbueci4m1g9m7wiqc8n.jpg",
-      "precioUSD": 2.4,
-      "precioCUP": 1920,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "fotos": [
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791861153/productos/fq3kfhciqxzputkxgkcr.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791861189/productos/p8le721er1pxu07hxvbm.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791861197/productos/gx9lfooymrsxtb8perrj.jpg"
-      ],
-      "max": 4,
-      "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      },
-      "creado": 1787110390009
     },
     {
       "id": "p_1787498809174",
@@ -1683,7 +1658,7 @@
       "moneda": "cup",
       "enOferta": false,
       "destacado": false,
-      "max": 4,
+      "max": 3,
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
@@ -3343,32 +3318,6 @@
       },
       "envioGratis": true,
       "creado": 1781005462535
-    },
-    {
-      "id": "p_1780452122083",
-      "codigo": "LX3Z",
-      "name": "Mini Lavadora",
-      "cat": "Electrodomésticos",
-      "subcat": "",
-      "notes": "Lavadora plegable y portátil\nCompacta, ahorra espacio y se guarda fácilmente. Perfecta para lavar ropa interior, calcetines, pañales y prendas delicadas. Ahorra agua y esfuerzo. 110V -220v\nIncluye su transformador, manguera de desagüe y cesta de secado\nCapacidad 11L",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1784912344/productos/pkjeaowywyiykoigcxok.jpg",
-      "precioUSD": 35,
-      "precioCUP": 28000,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "fotos": [
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791870947/productos/bv24wn9avfesp9hd7rmw.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791870968/productos/dncpe9fphgc8v6bxtxby.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791870995/productos/wazysb6m70j6g3djrteo.jpg"
-      ],
-      "max": 1,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1780452122083
     },
     {
       "id": "p_1780451802473",
@@ -5926,7 +5875,7 @@
         ]
       },
       "maxOpciones": {
-        "NEGRO": 7,
+        "NEGRO": 6,
         "CELESTE": 5
       },
       "envio": {
