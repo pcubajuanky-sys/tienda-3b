@@ -34,6 +34,15 @@ function catalogo() {
   return cacheCat;
 }
 
+let cacheGest = undefined;   // undefined = sin intentar; null = no hay archivo
+function preciosGestores() {
+  if (cacheGest === undefined) {
+    try { cacheGest = JSON.parse(leer('precios-gestores.json')); }
+    catch (e) { cacheGest = null; }   // no existe o esta roto: precios de la casa
+  }
+  return cacheGest;
+}
+
 // Vercel entrega req.query; si algun dia no estuviera, se saca de la URL.
 function consulta(req) {
   if (req && req.query) return req.query;
@@ -66,9 +75,23 @@ module.exports = function handler(req, res) {
     const q = consulta(req);
     const cod = limpio(q.c, /^[A-Za-z0-9]{1,8}$/).toUpperCase();
     const ref = limpio(q.ref, /^[A-Za-z0-9]{1,10}$/).toUpperCase();
-    const p = cod
+    let p = cod
       ? (catalogo().items || []).find((x) => String(x.codigo).toUpperCase() === cod)
       : null;
+    // El precio de la tarjeta compartida tiene que ser el MISMO que vera el visitante al
+    // abrirla. La tabla la publica Stock+ ya calculada; aqui solo se sustituye.
+    if (p && ref) {
+      const tabla = preciosGestores();
+      const suya = tabla && tabla[ref];
+      const e = suya && suya[String(p.codigo).toUpperCase()];
+      if (e && Number(e.u) > 0 && Number(e.c) > 0) {
+        p = Object.assign({}, p, { precioUSD: Number(e.u), precioCUP: Number(e.c) });
+        if (Number(e.nu) > 0 && Number(e.nc) > 0) {
+          p.precioNormalUSD = Number(e.nu);
+          p.precioNormalCUP = Number(e.nc);
+        }
+      }
+    }
     const i = html.indexOf(INICIO);
     const j = html.indexOf(FIN);
     if (p && i !== -1 && j > i) {

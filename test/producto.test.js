@@ -88,3 +88,39 @@ test('la pagina de producto fija la base en la raiz', () => {
   const r = pedir({ c: UNO.codigo });
   assert.ok(r.cuerpo.includes('<base href="/">'), 'falta la etiqueta base');
 });
+
+// El archivo de precios por gestor NO está en el repo (lo publica Stock+), así que estos
+// tests lo escriben, prueban y lo borran. `cacheGest` del handler se cachea en el primer
+// uso: por eso el test del archivo AUSENTE va antes de escribirlo.
+test('sin precios-gestores.json la pagina sale normal, con el precio de la casa', () => {
+  assert.strictEqual(fs.existsSync('precios-gestores.json'), false, 'borra ese archivo antes de correr los tests');
+  const r = pedir({ c: UNO.codigo, ref: 'ELA' });
+  assert.strictEqual(r.statusCode, 200);
+  assert.ok(r.cuerpo.includes(String(UNO.precioCUP)) || r.cuerpo.includes(UNO.precioCUP.toLocaleString('en-US')));
+});
+
+test('con precios-gestores.json la tarjeta lleva el precio del gestor', () => {
+  const cod = String(UNO.codigo).toUpperCase();
+  const tabla = { ELA: {} };
+  tabla.ELA[cod] = { u: Math.round(UNO.precioUSD * 1.5 * 100) / 100, c: UNO.precioCUP * 2 };
+  fs.writeFileSync('precios-gestores.json', JSON.stringify(tabla));
+  try {
+    // El handler ya cacheó `null` en el test anterior: se recarga en un proceso limpio.
+    delete require.cache[require.resolve('../api/producto')];
+    delete require.cache[require.resolve('../api/_og')];
+    const limpio = require('../api/producto');
+    const res = {
+      statusCode: 0, cabeceras: {}, cuerpo: '',
+      setHeader(k, v) { this.cabeceras[String(k).toLowerCase()] = v; },
+      end(b) { this.cuerpo = b == null ? '' : String(b); },
+    };
+    limpio({ query: { c: UNO.codigo, ref: 'ELA' }, url: '/api/producto' }, res);
+    const esperado = (UNO.precioCUP * 2).toLocaleString('en-US');
+    assert.ok(res.cuerpo.includes(esperado) || res.cuerpo.includes(String(UNO.precioCUP * 2)),
+      'la tarjeta no lleva el precio del gestor');
+  } finally {
+    fs.unlinkSync('precios-gestores.json');
+    delete require.cache[require.resolve('../api/producto')];
+    delete require.cache[require.resolve('../api/_og')];
+  }
+});
