@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-15T14:57:29.445Z",
+  "generado": "2026-10-15T15:28:15.734Z",
   "tasa": 790,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -203,6 +203,7 @@
     "absorbePct": 7.5,
     "redondeoCUP": 50,
     "politica": "Revisa toda tu mercancía delante de la mensajera. Una vez que se va, no aceptamos devoluciones. Si la mensajería era incluida y al revisar decides no quedarte el producto, la mensajería se paga igual, porque la mensajera ya hizo el viaje.",
+    "garantia": "Revisas todo delante de la mensajera antes de pagar. Si no te convence, no te lo llevas: solo pagas el viaje de la mensajera.",
     "grupoWA": "https://chat.whatsapp.com/BragbcwxeYrKrL0DwjrGbQ?s=sw&p=a&ilr=4",
     "pagoUrl": "",
     "contactos": [
