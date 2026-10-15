@@ -55,14 +55,13 @@ de `preciosGestor` + 2 de `producto`).
 
 ## ⚠ NO VERIFICADO, y por qué
 
-- 🔴 **El service worker no se pudo probar.** En el navegador del panel, `navigator.serviceWorker
-  .register()` falla con «An unknown error occurred when fetching the script», aunque `fetch('/sw.js')`
-  devuelve 200 con el tipo correcto. **Se comprobó que NO es culpa del cambio:** se registró el
-  `sw.js` ANTERIOR (el `tienda-3b-v11` que lleva meses en producción) y **falla exactamente igual**.
-  Es una limitación del entorno. Lo que sí está verificado del `sw.js` nuevo: `node --check` limpio,
-  `CACHE` subido a `v12`, `/preciosGestor.js` en `ARMAZON` y los **dos** usos de la clave (el `put` y
-  el `match`) pasados a la variable `clave`, que es lo que evita que los precios del gestor pisen al
-  catálogo guardado. **Hay que mirarlo en un teléfono o en Chrome de escritorio tras desplegar.**
+- **El service worker no se pudo probar EN LOCAL.** En el navegador del panel,
+  `navigator.serviceWorker.register()` falla con «An unknown error occurred when fetching the
+  script», aunque `fetch('/sw.js')` devuelve 200 con el tipo correcto. **Se comprobó que NO es culpa
+  del cambio:** se registró el `sw.js` ANTERIOR (el `tienda-3b-v11` que lleva meses en producción) y
+  **falla exactamente igual**. Es una limitación del entorno. **En producción sí quedó verificado**
+  (ver la sección de arriba): la caché pasó a `tienda-3b-v12`. Lo que sigue sin verse: la tienda
+  **instalada en un teléfono real** y abriendo **sin conexión**.
 - **El 404 de `precios-gestores.json`** aparece en la consola mientras Stock+ no haya publicado ese
   archivo por primera vez. Es la degradación diseñada (la tienda se queda con los precios de la
   casa), pero ensucia la consola hasta la primera publicación. Después el archivo existe siempre,
@@ -71,6 +70,26 @@ de `preciosGestor` + 2 de `producto`).
 - La verificación se hizo **midiendo desde la propia página** (precios, anchos, URLs, estado de la
   banda), no a ojo sobre capturas: el panel del navegador mide ~294 px y escala las capturas, como ya
   avisa el `CLAUDE.md` del proyecto.
+
+## Desplegado y verificado EN PRODUCCIÓN (2026-10-15)
+
+`git push origin main` → `6381669..5d81f67`, 9 commits. Vercel redesplegó. Comprobado en
+`https://www.3bqba.com`:
+
+| Qué | Resultado |
+|---|---|
+| `sw.js` servido | `tienda-3b-v12` |
+| `preciosGestor.js` | 200, con el módulo |
+| `precios-gestores.json` | **404** — lo esperado hasta que Ruth reinicie y publique |
+| Portada, visitante normal | Banda **oculta**, precios de la casa (4.000), 233 tarjetas, `scrollWidth` 375, **cero errores de consola** |
+| `/9H5MM` en producción | Banda **oculta** y precio **4.000**: correcto, porque Elaine todavía **no tiene recargo** |
+
+🔴 **El service worker SÍ quedó verificado, pero solo en producción y a la segunda carga.** En la
+primera, `pintarBandaGestor` salía `undefined` mientras el `app.js` pedido por red **sí** traía el
+código nuevo: era el service worker viejo sirviendo su caché, el comportamiento ya documentado
+(«la primera carga tras un despliegue corre el código viejo»). Tras recargar: `caches` quedó en
+**`tienda-3b-v12`** (la vieja borrada) y `pintarBandaGestor` pasó a `function`. **Así se comprueba
+qué código corre de verdad: `typeof` de una función nueva en la consola, no el `curl` del archivo.**
 
 ## Defectos del plan encontrados durante la ejecución
 
