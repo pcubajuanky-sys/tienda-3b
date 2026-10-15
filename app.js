@@ -1,6 +1,7 @@
 // app.js — tienda 3B. Lee catalogo.json y pinta el catálogo.
 // Sin dependencias, sin backend: todo pasa en el navegador del cliente.
 let CAT = null;          // el catalogo.json cargado
+let gestorRecargo = null;   // el gestor cuyos precios se estan enseñando, si los hay
 let filtroCat = '';      // categoría activa ('' = todas)
 let filtroOferta = false;
 let ordenSel = 'az';          // criterio de orden elegido; 'az' es el de siempre
@@ -1662,6 +1663,23 @@ async function cargarCatalogo() {
 
   const v = resolverVendedor();
   document.getElementById('vendedor').textContent = v ? `Te atiende: ${v.nombre}` : '';
+  // La pagina de un gestor con recargo: sus precios los publica Stock+ en otro archivo
+  // y la tienda SOLO los sustituye (ver preciosGestor.js). Se baja unicamente si hay
+  // gestor; si falla, o el gestor no esta en la tabla, se queda el precio de la casa.
+  gestorRecargo = null;
+  if (v) {
+    try {
+      const rp = await fetch('precios-gestores.json?v=' + Date.now());
+      if (rp.ok) {
+        const tabla = await rp.json();
+        const suya = tabla && tabla[String(v.code).toUpperCase()];
+        if (suya && Object.keys(suya).length) {
+          CAT.items = window.PreciosGestor.aplicar(CAT.items || [], suya);
+          gestorRecargo = v;
+        }
+      }
+    } catch (err) { /* sin red o archivo ausente: precios de la casa */ }
+  }
   document.getElementById('actualizado').textContent =
     'Catálogo actualizado el ' + new Date(CAT.generado).toLocaleString('es-MX');
 
