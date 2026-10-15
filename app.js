@@ -96,14 +96,38 @@ function fotoMosaico(url) {
   return esCloudinary(url) ? fotoUrl(url, 'f_auto,q_auto,w_200,c_limit') : url;
 }
 
-// Recuadro con la inicial cuando la foto no carga (tarjetas de producto y modal).
+// Marcador con la inicial cuando la foto no carga (tarjetas de producto y modal).
 // Las fotos del mosaico de categorías usan su propio fallback: cat3dImgFallback.
+//
+// 🔴 NO se sustituye el contenido del contenedor. Hacerlo destruía `<img id="modal-img">`
+// para siempre y la SIGUIENTE ficha que se abriera reventaba al buscarlo (fallo real
+// encontrado el 2026-10-14: el cliente perdía ese producto y el siguiente). Además
+// borraba los sellos OFERTA / ⭐ MÁS VENDIDO, que son hermanos de la imagen.
+// Ahora se oculta la imagen y se le pone un hermano: el <img> sobrevive y los sellos
+// también. El `hidden` necesita ayuda del CSS, porque `.card-foto img` y `.modal-foto img`
+// declaran `display:block`, que gana sobre el atributo (ver estilos.css).
 function imgFallback(img) {
   const cont = img.closest('.card-foto') || img.closest('.modal-foto');
   if (!cont) return;
+  img.hidden = true;
+  if (cont.querySelector('.inicial')) return;   // ya puesto: no duplicar
   const nombre = (img.alt || '').trim();
   const inicial = nombre.charAt(0).toUpperCase() || '?';
-  cont.innerHTML = `<div class="inicial" aria-hidden="true">${inicial}</div>`;
+  const marca = document.createElement('div');
+  marca.className = 'inicial';
+  marca.setAttribute('aria-hidden', 'true');
+  marca.textContent = inicial;
+  cont.appendChild(marca);
+}
+
+// Devuelve la imagen a la vista y quita el marcador. Se llama ANTES de poner un `src`
+// nuevo: si no, una foto rota dejaría su inicial encima de la foto siguiente.
+function limpiarFallback(img) {
+  if (!img) return;
+  img.hidden = false;
+  const cont = img.closest('.card-foto') || img.closest('.modal-foto');
+  const marca = cont && cont.querySelector('.inicial');
+  if (marca) marca.remove();
 }
 
 // ── Filtro y búsqueda ──
@@ -561,6 +585,7 @@ function pintarGaleria(i) {
   galeriaIndice = i;
   const img = document.getElementById('modal-img');
   const tira = document.getElementById('modal-miniaturas');
+  limpiarFallback(img);   // por si la foto anterior falló: si no, su inicial tapa esta
   img.src = fotoDetalle(galeriaFotos[i]);
   if (galeriaFotos.length < 2) { tira.hidden = true; tira.innerHTML = ''; return; }
   tira.hidden = false;
