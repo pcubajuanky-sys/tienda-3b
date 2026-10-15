@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-14T20:48:42.907Z",
+  "generado": "2026-10-15T01:33:05.829Z",
   "tasa": 790,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -685,6 +685,8 @@
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
       },
+      "envioGratis": true,
+      "creado": 1786921885931,
       "precioNormalUSD": 6,
       "precioNormalCUP": 4740
     },
@@ -706,6 +708,8 @@
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
       },
+      "envioGratis": true,
+      "creado": 1786921926228,
       "precioNormalUSD": 6,
       "precioNormalCUP": 4740
     },
@@ -726,7 +730,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1786943265900
     },
     {
       "id": "p_1789489796373",
@@ -744,7 +750,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1789489796373
     },
     {
       "id": "p_1785092425018",
@@ -763,7 +770,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1785092425019
     },
     {
       "id": "p_1788814692844",
@@ -792,7 +800,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1788814692844
     },
     {
       "id": "p_1787110390009",
@@ -816,7 +825,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1787110390009
     },
     {
       "id": "p_1787498809174",
@@ -835,7 +845,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1787498809176
     },
     {
       "id": "p_1787499027901",
@@ -853,7 +864,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1787499027905
     },
     {
       "id": "p_1782340130001",
@@ -871,7 +883,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1782340130001
     },
     {
       "id": "p_1781551585230",
@@ -902,7 +915,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1781551585230
     },
     {
       "id": "p_1790793838226",
@@ -932,7 +946,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1790793838226
     },
     {
       "id": "p_1787457398463",
@@ -962,7 +977,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1787457398463
     },
     {
       "id": "p_1787495641341",
@@ -981,7 +997,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1787495641341
     },
     {
       "id": "p_1787497741914",
@@ -1000,7 +1017,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1787497741914
     },
     {
       "id": "p_1787498656646",
@@ -1019,7 +1037,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1787498656647
     },
     {
       "id": "p_1786922285289",
@@ -1039,6 +1058,8 @@
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
       },
+      "envioGratis": true,
+      "creado": 1786922285289,
       "precioNormalUSD": 8,
       "precioNormalCUP": 6320
     },
@@ -1059,7 +1080,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1790965760166
     },
     {
       "id": "p_1781552195237",
@@ -1093,6 +1116,7 @@
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
       },
+      "creado": 1781552195237,
       "precioNormalUSD": 0.76,
       "precioNormalCUP": 600
     },
@@ -1113,7 +1137,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1780092109877
     },
     {
       "id": "p_1786923820539",
@@ -1131,7 +1157,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1786923820539
     },
     {
       "id": "p_1789482363354",
@@ -1150,7 +1177,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1789482363354
     },
     {
       "id": "p_1788830868023",
@@ -1173,6 +1202,7 @@
         "corto": "🚚 Transporte aparte",
         "largo": "🚚 Por su tamaño, el transporte se coordina por WhatsApp según tu zona"
       },
+      "creado": 1788830868023,
       "envioAparte": true
     },
     {
@@ -1192,7 +1222,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1785877309060
     },
     {
       "id": "p_1785877459055",
@@ -1211,7 +1243,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1785877459055
     },
     {
       "id": "p_1788816083247",
@@ -1275,7 +1309,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1788816083247
     },
     {
       "id": "p_1789229417668",
@@ -1294,7 +1329,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1789229417669
     },
     {
       "id": "p_1781215775166",
@@ -1313,7 +1350,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1781215775166
     },
     {
       "id": "p_1790797351647",
@@ -1332,7 +1371,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1790797351648
     },
     {
       "id": "p_1785182779881",
@@ -1361,7 +1402,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1785182779881
     },
     {
       "id": "p_1781215403591",
@@ -1380,7 +1423,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1781215403591
     },
     {
       "id": "p_1787540422288",
@@ -1399,7 +1443,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1787540422288
     },
     {
       "id": "p_1788892014454",
@@ -1419,6 +1464,8 @@
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
       },
+      "envioGratis": true,
+      "creado": 1788892014454,
       "precioNormalUSD": 6.91,
       "precioNormalCUP": 5460
     },
@@ -1439,7 +1486,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1790983047649
     },
     {
       "id": "p_1790983107410",
@@ -1458,7 +1507,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1790983107410
     },
     {
       "id": "p_1781707937680",
@@ -1478,6 +1529,8 @@
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
       },
+      "envioGratis": true,
+      "creado": 1781707937680,
       "precioNormalUSD": 25,
       "precioNormalCUP": 19750
     },
@@ -1498,7 +1551,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1790801699260
     },
     {
       "id": "p_1788234125684",
@@ -1517,7 +1572,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1788234125684
     },
     {
       "id": "p_1791729019839",
@@ -1536,7 +1593,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1791729019839
     },
     {
       "id": "p_1785528271738",
@@ -1555,6 +1614,7 @@
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
       },
+      "creado": 1785528271738,
       "precioNormalUSD": 1.9,
       "precioNormalCUP": 1500
     },
@@ -1575,7 +1635,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1786969504250
     },
     {
       "id": "p_1788049609744",
@@ -1594,7 +1656,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1788049609744
     },
     {
       "id": "p_1786998526143",
@@ -1609,11 +1672,12 @@
       "moneda": "cup",
       "enOferta": false,
       "destacado": false,
-      "max": 5,
+      "max": 4,
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1786998526143
     },
     {
       "id": "p_1786998892313",
@@ -1632,7 +1696,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1786998892314
     },
     {
       "id": "p_1787756966125",
@@ -1651,7 +1716,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1787756966125
     },
     {
       "id": "p_1780347243525",
@@ -1670,7 +1736,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1780347243525
     },
     {
       "id": "p_1787947439148",
@@ -1689,7 +1756,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1787947439148
     },
     {
       "id": "p_1788150804465",
@@ -1708,7 +1777,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1788150804470
     },
     {
       "id": "p_1782340847017",
@@ -1726,7 +1797,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1782340847017
     },
     {
       "id": "p_1786918098322",
@@ -1745,7 +1817,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1786918098322
     },
     {
       "id": "p_1787498299932",
@@ -1764,7 +1838,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1787498299932
     },
     {
       "id": "p_1787453147089",
@@ -1783,7 +1859,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1787453147089
     },
     {
       "id": "p_1787453447601",
@@ -1802,7 +1879,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1787453447601
     },
     {
       "id": "p_1791132152189",
@@ -1821,7 +1899,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1791132152189
     },
     {
       "id": "p_1788907857613",
@@ -1840,7 +1920,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1788907857613
     },
     {
       "id": "p_1782259192464",
@@ -1858,7 +1940,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1782259192464
     },
     {
       "id": "p_1788212080090",
@@ -1877,7 +1960,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1788212080090
     },
     {
       "id": "p_1788212193696",
@@ -1896,7 +1981,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1788212193696
     },
     {
       "id": "p_1787088450511",
@@ -1914,7 +2001,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1787088450518
     },
     {
       "id": "p_1791314349706",
@@ -1933,7 +2021,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1791314349706
     },
     {
       "id": "p_1785733992043",
@@ -1952,7 +2041,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1785733992044
     },
     {
       "id": "p_1784925486862",
@@ -1971,7 +2062,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1784925486863
     },
     {
       "id": "p_1788200037557",
@@ -1990,7 +2082,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1788200037557
     },
     {
       "id": "p_1788840928879",
@@ -2021,7 +2115,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1788840928879
     },
     {
       "id": "p_1788839956775",
@@ -2052,7 +2147,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1788839956775
     },
     {
       "id": "p_1788816392396",
@@ -2081,7 +2177,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1788816392396
     },
     {
       "id": "p_1791632060761",
@@ -2106,7 +2204,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1791632060761
     },
     {
       "id": "p_1791773820151",
@@ -2139,7 +2239,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1791773820151
     },
     {
       "id": "p_1791773233689",
@@ -2172,7 +2274,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1791773233689
     },
     {
       "id": "p_1785957866193",
@@ -2190,7 +2294,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1785957866194
     },
     {
       "id": "p_1785961221160",
@@ -2209,7 +2314,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1785961221160
     },
     {
       "id": "p_1785961108734",
@@ -2228,7 +2335,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1785961108734
     },
     {
       "id": "p_1785959109839",
@@ -2246,7 +2354,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1785959109839
     },
     {
       "id": "p_1788841621469",
@@ -2275,7 +2384,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1788841621469
     },
     {
       "id": "p_1785006638149",
@@ -2294,7 +2404,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1785006638149
     },
     {
       "id": "p_1780620383239",
@@ -2312,7 +2424,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1780620383239
     },
     {
       "id": "p_1786923457095",
@@ -2330,7 +2444,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1786923457095
     },
     {
       "id": "p_1785357535101",
@@ -2349,7 +2464,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1785357535523
     },
     {
       "id": "p_1785008058883",
@@ -2368,7 +2485,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1785008058883
     },
     {
       "id": "p_1785008412468",
@@ -2387,7 +2506,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1785008412468
     },
     {
       "id": "p_1781005179627",
@@ -2411,7 +2532,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1781005179627
     },
     {
       "id": "p_1782340744519",
@@ -2429,7 +2552,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1782340744519
     },
     {
       "id": "p_1791143406938",
@@ -2448,7 +2572,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1791143406938
     },
     {
       "id": "p_1791140393037",
@@ -2467,7 +2593,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1791140393037
     },
     {
       "id": "p_1791140430195",
@@ -2486,7 +2614,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1791140430195
     },
     {
       "id": "p_1791140226984",
@@ -2505,7 +2635,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1791140226984
     },
     {
       "id": "p_1791140286324",
@@ -2524,7 +2656,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1791140286324
     },
     {
       "id": "p_1791140326794",
@@ -2543,7 +2677,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1791140326794
     },
     {
       "id": "p_1782259495565",
@@ -2561,7 +2697,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1782259495566
     },
     {
       "id": "p_1782329548997",
@@ -2580,7 +2717,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1782329548998
     },
     {
       "id": "p_1782259309845",
@@ -2598,7 +2736,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1782259309845
     },
     {
       "id": "p_1790714894835",
@@ -2639,7 +2778,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1790714894835
     },
     {
       "id": "p_1789233150296",
@@ -2671,7 +2811,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1789233150296
     },
     {
       "id": "p_1789233318851",
@@ -2707,7 +2849,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1789233318851
     },
     {
       "id": "p_1789235076276",
@@ -2741,7 +2885,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1789235076278
     },
     {
       "id": "p_1789235611281",
@@ -2760,7 +2906,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1789235611432
     },
     {
       "id": "p_1782339511897",
@@ -2779,6 +2927,8 @@
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
       },
+      "envioGratis": true,
+      "creado": 1782339511897,
       "precioNormalUSD": 3.42,
       "precioNormalCUP": 2700
     },
@@ -2799,7 +2949,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1788314603975
     },
     {
       "id": "p_1788314424331",
@@ -2818,7 +2969,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1788314424331
     },
     {
       "id": "p_1788036490389",
@@ -2836,7 +2988,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1788036490389
     },
     {
       "id": "p_1787497927674",
@@ -2855,7 +3008,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1787497927674
     },
     {
       "id": "p_1788533709140",
@@ -2874,7 +3028,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1788533709140
     },
     {
       "id": "p_1788540627385",
@@ -2893,7 +3048,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1788540627385
     },
     {
       "id": "p_1791834504483",
@@ -2912,7 +3069,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1791834504483
     },
     {
       "id": "p_1785768634737",
@@ -2931,7 +3090,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1785768634738
     },
     {
       "id": "p_1781640150594",
@@ -2969,7 +3130,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1781640150595
     },
     {
       "id": "p_1791925032570",
@@ -3008,7 +3170,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1791925032570
     },
     {
       "id": "p_1782259680772",
@@ -3026,7 +3189,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1782259680772
     },
     {
       "id": "p_1780092595587",
@@ -3044,7 +3209,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1780092595587
     },
     {
       "id": "p_1789255852331",
@@ -3062,7 +3228,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1789255852332
     },
     {
       "id": "p_1789256890851",
@@ -3093,7 +3260,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1789256890851
     },
     {
       "id": "p_1790795440877",
@@ -3117,7 +3285,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1790795440877
     },
     {
       "id": "p_1789506414289",
@@ -3142,7 +3312,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1789506414289
     },
     {
       "id": "p_1786916805434",
@@ -3161,7 +3333,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1786916805434
     },
     {
       "id": "p_1781005462535",
@@ -3180,7 +3353,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1781005462535
     },
     {
       "id": "p_1780452122083",
@@ -3204,7 +3379,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1780452122083
     },
     {
       "id": "p_1780451802473",
@@ -3229,7 +3406,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1780451802473
     },
     {
       "id": "p_1788038065429",
@@ -3247,7 +3426,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1788038065429
     },
     {
       "id": "p_1788037932911",
@@ -3265,7 +3445,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1788037932911
     },
     {
       "id": "p_1785181129029",
@@ -3284,7 +3465,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1785181129033
     },
     {
       "id": "p_1789009525416",
@@ -3315,7 +3498,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1789009525416
     },
     {
       "id": "p_1790619248550",
@@ -3340,7 +3525,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1790619248550
     },
     {
       "id": "p_1789218727536",
@@ -3374,7 +3561,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1789218727536
     },
     {
       "id": "p_1787080747584",
@@ -3405,7 +3594,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1787080747584
     },
     {
       "id": "p_1789228482999",
@@ -3439,7 +3630,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1789228482999
     },
     {
       "id": "p_1786922026243",
@@ -3459,6 +3652,8 @@
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
       },
+      "envioGratis": true,
+      "creado": 1786922026243,
       "precioNormalUSD": 8,
       "precioNormalCUP": 6320
     },
@@ -3482,7 +3677,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1788897850953
     },
     {
       "id": "p_1784914843855",
@@ -3502,11 +3699,13 @@
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1791891100/productos/stk6gfq3ieki0ulah8h8.jpg",
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1791891105/productos/macvdfestpikb6gfgpob.jpg"
       ],
-      "max": 2,
+      "max": 1,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1784914843855
     },
     {
       "id": "p_1786732384337",
@@ -3532,6 +3731,8 @@
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
       },
+      "envioGratis": true,
+      "creado": 1786732384382,
       "precioNormalUSD": 20,
       "precioNormalCUP": 15800
     },
@@ -3553,6 +3754,8 @@
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
       },
+      "envioGratis": true,
+      "creado": 1786708481607,
       "precioNormalUSD": 30,
       "precioNormalCUP": 23700
     },
@@ -3573,7 +3776,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1785006327470
     },
     {
       "id": "p_1785183311846",
@@ -3592,7 +3797,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1785183311846
     },
     {
       "id": "p_1788730145038",
@@ -3611,7 +3818,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1788730145038
     },
     {
       "id": "p_1791836341972",
@@ -3630,7 +3839,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1791836341972
     },
     {
       "id": "p_1788729005365",
@@ -3649,7 +3860,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1788729005365
     },
     {
       "id": "p_1788728922579",
@@ -3668,7 +3881,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1788728922580
     },
     {
       "id": "p_1788728731980",
@@ -3687,7 +3902,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1788728731980
     },
     {
       "id": "p_1780620222381",
@@ -3706,7 +3923,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1780620222381
     },
     {
       "id": "p_1780608108403",
@@ -3725,7 +3944,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1780608108403
     },
     {
       "id": "p_1780092427629",
@@ -3744,7 +3964,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1780092427629
     },
     {
       "id": "p_1780608723108",
@@ -3763,7 +3984,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1780608723108
     },
     {
       "id": "p_1788618415087",
@@ -3782,7 +4004,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1788618415087
     },
     {
       "id": "p_1780951622289",
@@ -3801,7 +4025,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1780951622289
     },
     {
       "id": "p_1780608497220",
@@ -3820,7 +4045,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1780608497220
     },
     {
       "id": "p_1781005769619",
@@ -3852,6 +4078,7 @@
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
       },
+      "creado": 1781005769619,
       "precioNormalUSD": 2.2,
       "precioNormalCUP": 1738
     },
@@ -3872,7 +4099,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1786930924590
     },
     {
       "id": "p_1780614185839",
@@ -3891,6 +4119,7 @@
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
       },
+      "creado": 1780614185839,
       "precioNormalUSD": 0.86,
       "precioNormalCUP": 680
     },
@@ -3910,7 +4139,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1780092645027
     },
     {
       "id": "p_1788533425716",
@@ -3929,7 +4159,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1788533425716
     },
     {
       "id": "p_1785269406794",
@@ -3948,7 +4179,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1785269406794
     },
     {
       "id": "p_1788150972260",
@@ -3967,7 +4200,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1788150972260
     },
     {
       "id": "p_1791650740474",
@@ -3986,7 +4220,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1791650740477
     },
     {
       "id": "p_1791650742291",
@@ -4005,7 +4240,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1791650742291
     },
     {
       "id": "p_1791650745560",
@@ -4024,7 +4260,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1791650745560
     },
     {
       "id": "p_1780609726389",
@@ -4042,7 +4279,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1780609726389
     },
     {
       "id": "p_1785271247802",
@@ -4061,7 +4300,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1785271247806
     },
     {
       "id": "p_1780613171948",
@@ -4079,7 +4319,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1780613171948
     },
     {
       "id": "p_1787412191026",
@@ -4097,7 +4339,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1787412191026
     },
     {
       "id": "p_1786714572024",
@@ -4115,7 +4358,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1786714572024
     },
     {
       "id": "p_1785275574502",
@@ -4134,7 +4378,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1785275574502
     },
     {
       "id": "p_1785268500695",
@@ -4153,7 +4398,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1785268500695
     },
     {
       "id": "p_1790798324777",
@@ -4183,7 +4429,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1790798324777
     },
     {
       "id": "p_1791638013723",
@@ -4216,7 +4463,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1791638013723
     },
     {
       "id": "p_1788234402387",
@@ -4234,7 +4482,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1788234402388
     },
     {
       "id": "p_1791633427118",
@@ -4293,7 +4542,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1791633427118
     },
     {
       "id": "p_1788206192356",
@@ -4312,7 +4562,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1788206192356
     },
     {
       "id": "p_1781640704239",
@@ -4331,7 +4583,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1781640704239
     },
     {
       "id": "p_1785012145699",
@@ -4350,7 +4604,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1785012145699
     },
     {
       "id": "p_1791650300211",
@@ -4368,7 +4624,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1791650300211
     },
     {
       "id": "p_1780092503212",
@@ -4386,7 +4643,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1780092503212
     },
     {
       "id": "p_1780956166935",
@@ -4406,6 +4664,7 @@
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
       },
+      "creado": 1780956166935,
       "precioNormalUSD": 0.63,
       "precioNormalCUP": 500
     },
@@ -4426,7 +4685,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1780951069722
     },
     {
       "id": "p_1780950975688",
@@ -4444,7 +4704,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1780950975688
     },
     {
       "id": "p_1780945492775",
@@ -4463,7 +4724,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1780945492775
     },
     {
       "id": "p_1785275083288",
@@ -4482,7 +4744,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1785275083288
     },
     {
       "id": "p_1785275149243",
@@ -4500,7 +4763,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1785275149243
     },
     {
       "id": "p_1782329655762",
@@ -4519,7 +4783,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1782329655762
     },
     {
       "id": "p_1786922817374",
@@ -4538,7 +4803,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1786922817374
     },
     {
       "id": "p_1786922877587",
@@ -4557,7 +4823,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1786922877587
     },
     {
       "id": "p_1788038977633",
@@ -4575,7 +4842,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1788038977633
     },
     {
       "id": "p_1788842619496",
@@ -4594,7 +4862,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1788842619496
     },
     {
       "id": "p_1785092176064",
@@ -4614,6 +4884,7 @@
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
       },
+      "creado": 1785092176064,
       "precioNormalUSD": 0.63,
       "precioNormalCUP": 500
     },
@@ -4635,6 +4906,7 @@
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
       },
+      "creado": 1780623482446,
       "precioNormalUSD": 1.65,
       "precioNormalCUP": 1300
     },
@@ -4654,7 +4926,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1782343083267
     },
     {
       "id": "p_1785877916356",
@@ -4687,7 +4960,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1785877916356
     },
     {
       "id": "p_1790978748079",
@@ -4706,7 +4981,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1790978748079
     },
     {
       "id": "p_1791836377621",
@@ -4742,7 +5019,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1791836377621
     },
     {
       "id": "p_1791836928935",
@@ -4771,7 +5050,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1791836928935
     },
     {
       "id": "p_1789240844908",
@@ -4800,7 +5081,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1789240844908
     },
     {
       "id": "p_1789242483636",
@@ -4829,7 +5112,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1789242483636
     },
     {
       "id": "p_1791837207801",
@@ -4858,7 +5143,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1791837207801
     },
     {
       "id": "p_1791837243848",
@@ -4887,7 +5174,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1791837243848
     },
     {
       "id": "p_1791837295509",
@@ -4916,7 +5205,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1791837295509
     },
     {
       "id": "p_1789241914026",
@@ -4945,7 +5236,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1789241914026
     },
     {
       "id": "p_1789242333082",
@@ -4977,7 +5270,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1789242333083
     },
     {
       "id": "p_1789242386934",
@@ -5006,7 +5301,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1789242386935
     },
     {
       "id": "p_1788792642568",
@@ -5025,7 +5322,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1788792642569
     },
     {
       "id": "p_1788034256550",
@@ -5044,7 +5343,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1788034256550
     },
     {
       "id": "p_1788528610951",
@@ -5068,7 +5369,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1788528610951
     },
     {
       "id": "p_1788551044899",
@@ -5088,7 +5391,6 @@
           "Colores"
         ],
         "opciones": [
-          "NEGRO",
           "BLANCO",
           "ROJO",
           "ROSA",
@@ -5097,7 +5399,6 @@
         ]
       },
       "maxOpciones": {
-        "NEGRO": 1,
         "BLANCO": 2,
         "ROJO": 2,
         "ROSA": 2,
@@ -5107,7 +5408,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1788551044899
     },
     {
       "id": "p_1781213126908",
@@ -5126,7 +5428,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1781213126913
     },
     {
       "id": "p_1781213598622",
@@ -5145,7 +5449,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1781213598622
     },
     {
       "id": "p_1789489238446",
@@ -5164,7 +5470,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1789489238446
     },
     {
       "id": "p_1789500476471",
@@ -5201,7 +5509,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1789500476471
     },
     {
       "id": "p_1790875375235",
@@ -5238,7 +5548,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1790875375235
     },
     {
       "id": "p_1787458002424",
@@ -5269,7 +5581,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1787458002425
     },
     {
       "id": "p_1788151078303",
@@ -5290,7 +5604,6 @@
         ],
         "opciones": [
           "A",
-          "B",
           "C",
           "D",
           "E",
@@ -5299,7 +5612,6 @@
       },
       "maxOpciones": {
         "A": 1,
-        "B": 1,
         "C": 1,
         "D": 1,
         "E": 1,
@@ -5308,7 +5620,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1788151078303
     },
     {
       "id": "p_1788199586927",
@@ -5345,7 +5658,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1788199586927
     },
     {
       "id": "p_1791228478752",
@@ -5364,7 +5678,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1791228478752
     },
     {
       "id": "p_1791228633743",
@@ -5383,7 +5699,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1791228633743
     },
     {
       "id": "p_1791228936507",
@@ -5402,7 +5720,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1791228936507
     },
     {
       "id": "p_1791229767371",
@@ -5421,7 +5741,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1791229767371
     },
     {
       "id": "p_1785875419963",
@@ -5440,7 +5762,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1785875419963
     },
     {
       "id": "p_1785541577339",
@@ -5460,6 +5784,8 @@
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
       },
+      "envioGratis": true,
+      "creado": 1785541577443,
       "precioNormalUSD": 12,
       "precioNormalCUP": 9480
     },
@@ -5481,6 +5807,8 @@
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
       },
+      "envioGratis": true,
+      "creado": 1785534103928,
       "precioNormalUSD": 12,
       "precioNormalCUP": 9480
     },
@@ -5502,6 +5830,8 @@
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
       },
+      "envioGratis": true,
+      "creado": 1785533846345,
       "precioNormalUSD": 12,
       "precioNormalCUP": 9480
     },
@@ -5521,7 +5851,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1782259924259
     },
     {
       "id": "p_1782339751417",
@@ -5540,7 +5872,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1782339751417
     },
     {
       "id": "p_1782339821859",
@@ -5559,7 +5892,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1782339821867
     },
     {
       "id": "p_1786917303962",
@@ -5578,7 +5912,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1786917303963
     },
     {
       "id": "p_1790975712067",
@@ -5609,7 +5945,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1790975712068
     },
     {
       "id": "p_1789411169180",
@@ -5628,7 +5966,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1789411169180
     },
     {
       "id": "p_1785533206456",
@@ -5647,7 +5987,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1785533206456
     },
     {
       "id": "p_1789411311758",
@@ -5666,7 +6008,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1789411311758
     },
     {
       "id": "p_1786991410391",
@@ -5684,7 +6028,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1786991410394
     },
     {
       "id": "p_1788537976001",
@@ -5708,6 +6053,8 @@
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
       },
+      "envioGratis": true,
+      "creado": 1788537976001,
       "precioNormalUSD": 16,
       "precioNormalCUP": 12640
     },
@@ -5727,7 +6074,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1789425875477
     },
     {
       "id": "p_1788138688106",
@@ -5746,7 +6094,8 @@
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      }
+      },
+      "creado": 1788138688106
     },
     {
       "id": "p_1780346613571",
@@ -5764,7 +6113,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1780346613571
     },
     {
       "id": "p_1789239391483",
@@ -5783,7 +6134,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1789239391542
     },
     {
       "id": "p_1788541433924",
@@ -5802,7 +6155,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1788541433924
     },
     {
       "id": "p_1790954066390",
@@ -5821,7 +6176,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1790954066391
     },
     {
       "id": "p_1787764782825",
@@ -5846,7 +6203,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1787764782825
     },
     {
       "id": "p_1787765188160",
@@ -5870,7 +6229,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1787765188160
     },
     {
       "id": "p_1780277915922",
@@ -5895,6 +6256,8 @@
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
       },
+      "envioGratis": true,
+      "creado": 1780277915922,
       "precioNormalUSD": 55,
       "precioNormalCUP": 43450
     },
@@ -5927,7 +6290,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1789226088397
     },
     {
       "id": "p_1789219477837",
@@ -5959,7 +6324,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1789219477837
     },
     {
       "id": "p_1789221251954",
@@ -5993,7 +6360,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1789221251954
     },
     {
       "id": "p_1785358002090",
@@ -6012,7 +6381,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1785358002090
     },
     {
       "id": "p_1785533281949",
@@ -6031,7 +6402,9 @@
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
-      }
+      },
+      "envioGratis": true,
+      "creado": 1785533281949
     }
   ]
 }
