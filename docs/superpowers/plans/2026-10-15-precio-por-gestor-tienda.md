@@ -78,7 +78,7 @@ en el informe.
 - Crear: `test/preciosGestor.test.js`
 - Modificar: `index.html` (un `<script src>` más)
 
-- [ ] **Paso 1: escribe el test que falla**
+- [x] **Paso 1: escribe el test que falla**
 
 Crea `test/preciosGestor.test.js` (mismo molde que `test/orden.test.js`):
 
@@ -152,7 +152,7 @@ test('nombreCorto deja solo la primera palabra', () => {
 });
 ```
 
-- [ ] **Paso 2: córrelo y comprueba que falla**
+- [x] **Paso 2: córrelo y comprueba que falla**
 
 ```bash
 node --test
@@ -160,7 +160,7 @@ node --test
 
 Esperado: FAIL, no existe `preciosGestor.js`.
 
-- [ ] **Paso 3: escribe el módulo**
+- [x] **Paso 3: escribe el módulo**
 
 Crea `preciosGestor.js`:
 
@@ -217,7 +217,7 @@ Crea `preciosGestor.js`:
 }());
 ```
 
-- [ ] **Paso 4: córrelo y comprueba que pasa**
+- [x] **Paso 4: córrelo y comprueba que pasa**
 
 ```bash
 node --test
@@ -225,7 +225,7 @@ node --test
 
 Esperado: baseline (71) + 7 = **78**, cero fallos.
 
-- [ ] **Paso 5: cárgalo en la página**
+- [x] **Paso 5: cárgalo en la página**
 
 En `index.html`, busca el `<script src="orden.js"></script>` (o la línea donde se cargan los módulos)
 y añade al lado:
@@ -236,7 +236,7 @@ y añade al lado:
 
 🔴 Tiene que ir **antes** de `app.js`, que es quien lo usa.
 
-- [ ] **Paso 6: commit**
+- [x] **Paso 6: commit**
 
 ```bash
 git add preciosGestor.js test/preciosGestor.test.js index.html
@@ -250,7 +250,7 @@ git commit -m "feat: modulo de precios por gestor"
 **Archivos:**
 - Modificar: `app.js` (`cargarCatalogo`)
 
-- [ ] **Paso 1: añade la descarga**
+- [x] **Paso 1: añade la descarga**
 
 En `cargarCatalogo`, hoy está esto:
 
@@ -283,7 +283,7 @@ Déjalo así:
   }
 ```
 
-- [ ] **Paso 2: declara la variable**
+- [x] **Paso 2: declara la variable**
 
 Arriba del archivo, junto a `let CAT = null;`, añade:
 
@@ -291,7 +291,7 @@ Arriba del archivo, junto a `let CAT = null;`, añade:
 let gestorRecargo = null;   // el gestor cuyos precios se estan enseñando, si los hay
 ```
 
-- [ ] **Paso 3: comprueba que no rompiste nada**
+- [x] **Paso 3: comprueba que no rompiste nada**
 
 ```bash
 node --check app.js
@@ -301,7 +301,7 @@ node --test
 Esperado: `node --check` sin salida, y los 78 tests siguen verdes (`app.js` no se carga en las
 pruebas: llama a `iniciar()` al final y toca `document`).
 
-- [ ] **Paso 4: commit**
+- [x] **Paso 4: commit**
 
 ```bash
 git add app.js
@@ -317,7 +317,7 @@ git commit -m "feat: la tienda aplica los precios del gestor cuando los hay"
 - Modificar: `estilos.css` (el estilo)
 - Modificar: `app.js` (pintarla)
 
-- [ ] **Paso 1: el hueco en el HTML**
+- [x] **Paso 1: el hueco en el HTML**
 
 En `index.html`, justo **después** de la etiqueta de apertura del `<main>` (o inmediatamente antes de
 la portada, lo primero que ve el visitante al abrir), inserta:
@@ -326,7 +326,7 @@ la portada, lo primero que ve el visitante al abrir), inserta:
 <div id="banda-gestor" class="banda-gestor" hidden></div>
 ```
 
-- [ ] **Paso 2: el estilo**
+- [x] **Paso 2: el estilo**
 
 Al final de `estilos.css`:
 
@@ -337,8 +337,8 @@ Al final de `estilos.css`:
 .banda-gestor {
   margin: 0 0 12px;
   padding: 10px 14px;
-  border-radius: var(--radius-sm);
-  background: var(--surface2, var(--surface));
+  border-radius: var(--radio-control);
+  background: var(--surface-2);
   border: 1px solid var(--border);
   font-size: 13px;
   line-height: 1.4;
@@ -347,11 +347,12 @@ Al final de `estilos.css`:
 .banda-gestor b { color: var(--text); }
 ```
 
-Si `--surface2` no existe en el archivo, usa `var(--surface)` a secas: **comprueba** qué tokens hay
-declarados en `:root` y en el bloque de modo oscuro antes de escribir uno nuevo. Un token inexistente
-deja la banda sin fondo y no avisa de nada.
+🔴 Los tokens son `--surface-2` (`estilos.css:36`, redefinido en oscuro en `:100`) y
+`--radio-control` (`:75`). **`--surface2` y `--radius-sm` NO existen** en este archivo: una version
+anterior de este plan los usaba y la banda habria salido sin fondo y sin avisar de nada.
+Comprueba siempre un token en `:root` y en el bloque de modo oscuro antes de escribirlo.
 
-- [ ] **Paso 3: pintarla**
+- [x] **Paso 3: pintarla**
 
 En `app.js`, junto a las otras funciones `pintar*` (por ejemplo al lado de `pintarGarantia`), añade:
 
@@ -365,8 +366,10 @@ function pintarBandaGestor() {
   const corto = gestorRecargo ? window.PreciosGestor.nombreCorto(gestorRecargo.nombre) : '';
   if (!corto) { el.hidden = true; el.innerHTML = ''; return; }
   el.hidden = false;
+  // 🔴 Texto NEUTRO: entre los gestores hay hombres y mujeres (Diego, Boris, Elaine...).
+  // «le llega a ella» le pondria el genero equivocado a una persona real en su propia pagina.
   el.innerHTML = `🤝 Estás en la página de <b>${escapeHtml(corto)}</b> — sus precios y su atención. `
-    + `Tu pedido le llega a ella directamente.`;
+    + `Tu pedido le llega directamente.`;
 }
 ```
 
@@ -376,7 +379,7 @@ Y llámala dentro de `cargarCatalogo`, en la misma tanda de `pintarGarantia()`:
   pintarBandaGestor();
 ```
 
-- [ ] **Paso 4: la misma banda en la ficha del producto**
+- [x] **Paso 4: la misma banda en la ficha del producto**
 
 La ficha es donde se decide la compra, así que ahí también tiene que estar. Busca en `index.html` el
 contenedor del modal de detalle y añade, justo antes del bloque de la acción de compra
@@ -396,14 +399,14 @@ Y en `pintarBandaGestor`, después de pintar el primero, añade:
 🔴 Dos `id` distintos a propósito: duplicar un `id` rompe `getElementById` en silencio (ya pasó en
 esta tienda con el formulario del aside).
 
-- [ ] **Paso 5: comprueba**
+- [x] **Paso 5: comprueba**
 
 ```bash
 node --check app.js
 node --test
 ```
 
-- [ ] **Paso 6: commit**
+- [x] **Paso 6: commit**
 
 ```bash
 git add index.html estilos.css app.js
@@ -433,7 +436,7 @@ node -e "const c=require('./catalogo.json');console.log(JSON.stringify(c.vendedo
 
 🔴 Nunca inventes el campo desde aquí: el que decide qué sale al JSON público es Stock+.
 
-- [ ] **Paso 1: manda el pedido a su número**
+- [x] **Paso 1: manda el pedido a su número**
 
 En `enviarPorWhatsApp`, busca la última línea:
 
@@ -454,19 +457,19 @@ y déjala así:
   window.open(`https://api.whatsapp.com/send?phone=${destino}&text=${encodeURIComponent(lineas.join('\n'))}`, '_blank');
 ```
 
-- [ ] **Paso 2: comprueba que `resolverVendedor` devuelve el móvil**
+- [x] **Paso 2: comprueba que `resolverVendedor` devuelve el móvil**
 
 `resolverVendedor` devuelve el objeto tal cual viene de `CAT.vendedores`, así que `telPublico` llega
 solo. Confírmalo leyendo la función; no hace falta tocarla.
 
-- [ ] **Paso 3: comprueba**
+- [x] **Paso 3: comprueba**
 
 ```bash
 node --check app.js
 node --test
 ```
 
-- [ ] **Paso 4: commit**
+- [x] **Paso 4: commit**
 
 ```bash
 git add app.js
@@ -484,7 +487,7 @@ git commit -m "feat: el pedido de la pagina de un gestor va a su WhatsApp"
 Sin esto, un enlace `/p/5HP4?ref=ELA` compartido por WhatsApp enseña en la tarjeta el precio de la
 casa y, al abrirlo, la página dice otro. Es la contradicción más visible de todas.
 
-- [ ] **Paso 1: escribe el test que falla**
+- [x] **Paso 1: escribe el test que falla**
 
 Al final de `test/producto.test.js`. Reutiliza el `pedir(query)`, el `CAT` y el `UNO` que ese archivo
 ya define arriba (no los redeclares):
@@ -532,13 +535,13 @@ no puede caerse por eso. Si el formato del precio en el HTML no cuadra con ningu
 que prueba el `assert`, **córrelo y mira la salida real** (`console.log(res.cuerpo.slice(0, 600))`) y
 ajusta la cadena a lo que imprime `precioTexto` de `api/_og.js`.
 
-- [ ] **Paso 2: córrelo y comprueba que falla**
+- [x] **Paso 2: córrelo y comprueba que falla**
 
 ```bash
 node --test
 ```
 
-- [ ] **Paso 3: lee la tabla**
+- [x] **Paso 3: lee la tabla**
 
 En `api/producto.js`, junto al `cacheCat` que ya existe, añade su gemelo:
 
@@ -553,7 +556,7 @@ function preciosGestores() {
 }
 ```
 
-- [ ] **Paso 4: aplícala antes de componer las `og:`**
+- [x] **Paso 4: aplícala antes de componer las `og:`**
 
 Busca este bloque:
 
@@ -587,7 +590,7 @@ y déjalo así:
 
 (`ref` ya está limpiado y en mayúsculas unas líneas más arriba; no lo vuelvas a sanear.)
 
-- [ ] **Paso 5: córrelo**
+- [x] **Paso 5: córrelo**
 
 ```bash
 node --test
@@ -595,7 +598,7 @@ node --test
 
 Esperado: 78 + los tests nuevos, cero fallos.
 
-- [ ] **Paso 6: commit**
+- [x] **Paso 6: commit**
 
 ```bash
 git add api/producto.js test/producto.test.js
@@ -609,12 +612,12 @@ git commit -m "feat: la tarjeta compartida lleva el precio del gestor"
 **Archivos:**
 - Modificar: `sw.js`
 
-- [ ] **Paso 1: el módulo nuevo, a `ARMAZON`**
+- [x] **Paso 1: el módulo nuevo, a `ARMAZON`**
 
 En la lista `ARMAZON`, añade `'/preciosGestor.js',` junto a `'/orden.js',`. Lo que falte en esa lista
 no está disponible sin conexión.
 
-- [ ] **Paso 2: el archivo de precios, por red primero**
+- [x] **Paso 2: el archivo de precios, por red primero**
 
 Junto a `const CATALOGO = '/catalogo.json';` añade:
 
@@ -654,7 +657,7 @@ encima del catálogo. Déjala así:
   }
 ```
 
-- [ ] **Paso 3: SUBE la caché** (obligatorio)
+- [x] **Paso 3: SUBE la caché** (obligatorio)
 
 ```js
 const CACHE = 'tienda-3b-v12';
@@ -663,14 +666,14 @@ const CACHE = 'tienda-3b-v12';
 Sin esto, quien tenga la tienda instalada sigue con el `app.js` viejo y **parece que el cambio no
 llegó**.
 
-- [ ] **Paso 4: comprueba**
+- [x] **Paso 4: comprueba**
 
 ```bash
 node --check sw.js
 node --test
 ```
 
-- [ ] **Paso 5: commit**
+- [x] **Paso 5: commit**
 
 ```bash
 git add sw.js
