@@ -1244,3 +1244,16 @@ button.footer-link{background:none;border:none;font-family:inherit;cursor:pointe
 @media (min-width:1024px){
   .servicios{grid-column:1}
 }
+
+/* ── Confianza (portada) ── */
+/* Compacta a propósito: va entre la portada y las categorías, y cada píxel que ocupa es
+   un píxel que aleja el catálogo. */
+.confianza{margin:18px auto 6px}
+.pasos{list-style:none;display:flex;gap:10px;flex-wrap:wrap;margin:0;padding:0}
+.paso{flex:1 1 220px;display:flex;gap:10px;align-items:flex-start;font-size:14px;line-height:1.4}
+.paso-n{flex:0 0 24px;height:24px;border-radius:50%;background:var(--brand);color:var(--brand-ink,#fff);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px}
+.garantia{margin-top:12px;padding:12px 14px;border-radius:12px;background:var(--surface-2);border:1px solid var(--border);font-size:14px;line-height:1.45}
+.garantia::before{content:"🛡️ ";}
+/* En la ficha del producto, el mismo texto pero sin caja, debajo del botón de añadir. */
+.garantia-ficha{margin-top:12px;font-size:13px;line-height:1.45;color:var(--text-2)}
+.garantia-ficha::before{content:"🛡️ ";}

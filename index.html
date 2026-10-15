@@ -186,6 +186,18 @@
      (y=948). Ahora es hermano directo en la columna 2 desde la primera fila
      (ver estilos.css, @media min-width:1024px) — visible sin hacer scroll.
      Por debajo de 1024px es display:block y no cambia nada. -->
+<!-- Confianza, antes de que el cliente baje al catálogo. Los tres pasos van fijos aquí
+     porque describen cómo funciona la tienda; la garantía NO, porque habla de dinero: la
+     pinta app.js desde `tienda.garantia` para que Ruth la pueda cambiar sin tocar código. -->
+<section class="confianza wrap" aria-labelledby="confianza-titulo">
+  <h2 id="confianza-titulo" class="sr-only">Cómo comprar en 3B</h2>
+  <ol class="pasos">
+    <li class="paso"><span class="paso-n" aria-hidden="true">1</span><span class="paso-txt"><b>Elige</b> lo que te guste y añádelo a tu pedido.</span></li>
+    <li class="paso"><span class="paso-n" aria-hidden="true">2</span><span class="paso-txt"><b>Pide por WhatsApp.</b> El mensaje sale escrito solo.</span></li>
+    <li class="paso"><span class="paso-n" aria-hidden="true">3</span><span class="paso-txt"><b>Recibes y revisas</b> antes de pagar.</span></li>
+  </ol>
+  <p class="garantia" id="garantia" hidden></p>
+</section>
 <div class="contenido">
   <section class="categorias-3d-wrap" aria-label="Categorías">
     <h2 class="categorias-3d-titulo wrap">Categorías</h2>
@@ -327,6 +339,7 @@
       <p id="modal-desc" class="modal-desc"></p>
       <div class="modal-tallas" id="modal-tallas" hidden></div>
       <div class="modal-accion" id="modal-accion"></div>
+        <p class="garantia-ficha" id="garantia-ficha" hidden></p>
         <!-- Relacionados: va DEBAJO de la accion de compra y ENCIMA de compartir. Lo
              pinta pintarRelacionados() en app.js; con menos de dos candidatos queda
              oculto (ver relacionados.js). -->
