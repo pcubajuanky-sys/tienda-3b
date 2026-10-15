@@ -438,7 +438,12 @@ function tarjetaComisionistaHtml() {
 // de las copias dejaría de actualizarse en silencio.
 function renderMasVendidos() {
   const buscando = busqueda.trim() !== '' || filtroCat !== '' || filtroOferta;
-  const destacados = (CAT.items || []).filter((p) => p.destacado);
+  // El chip de mensajería manda también aquí: con el filtro puesto, un carrusel de
+  // productos que NO la llevan contradice lo que el cliente acaba de pedir. Si no queda
+  // ninguno, la sección entera se esconde sola (lo decide `mostrar`, más abajo).
+  // El ORDEN no se toca a propósito: esto es una tira curada de «más vendidos», no una
+  // parrilla que el cliente esté ordenando.
+  const destacados = window.Orden.filtrar((CAT.items || []).filter((p) => p.destacado), soloEnvioGratis);
   const sec = document.getElementById('mas-vendidos');
   const mostrar = !buscando && destacados.length > 0;
   sec.hidden = !mostrar;
@@ -1644,8 +1649,13 @@ async function iniciar() {
   document.getElementById('btn-cats-ver-todas').addEventListener('click', toggleCatsExpandidas);
 
   document.getElementById('btn-ver-todo').addEventListener('click', () => {
-    busqueda = ''; filtroCat = ''; filtroOferta = false;
+    // El chip también se quita: el botón dice «Ver todo el catálogo» y con el filtro
+    // puesto no enseñaría todo. El ORDEN elegido sí se conserva: es una preferencia del
+    // cliente, no un filtro.
+    busqueda = ''; filtroCat = ''; filtroOferta = false; soloEnvioGratis = false;
     document.getElementById('buscador').value = '';
+    const chipEnvio = document.getElementById('btn-envio-gratis');
+    if (chipEnvio) chipEnvio.setAttribute('aria-pressed', 'false');
     renderFiltroPill(); renderCategorias3D(); renderGrid();
   });
   document.getElementById('btn-reintentar').addEventListener('click', cargarCatalogo);
