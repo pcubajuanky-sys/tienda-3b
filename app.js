@@ -437,6 +437,24 @@ function precioHtml(p) {
   return tachado + `<span class="precio">${principal}<span class="usd">· ${secundario}</span></span>`;
 }
 
+// Cuántas quedan, solo cuando de verdad quedan pocas.
+//
+// 🔴 Hasta 3 y no más: Stock+ publica `max` siempre que queden menos de 10, y hoy eso son
+// 152 productos de 240 (46 con 1, 24 con 2, 22 con 3, y el resto hasta 9). «Quedan 9» no es
+// urgencia, es ruido, y un aviso que sale en medio catálogo enseña al cliente a no mirarlo.
+//
+// 🔴 Los productos con variantes se quedan fuera: publican `maxOpciones` (cuánto queda de
+// cada combinación) y sumarlas sería mentir — «Quedan 3» cuando es 1 roja y 2 azules engaña
+// a quien quiere la roja.
+const QUEDAN_AVISO_MAX = 3;
+
+function avisoQuedanHtml(p) {
+  if (variantesDe(p)) return '';
+  const n = Number(p.max);
+  if (!(n > 0) || n > QUEDAN_AVISO_MAX) return '';
+  return `<div class="card-quedan">${n === 1 ? 'Queda 1' : `Quedan ${n}`}</div>`;
+}
+
 function tarjetaHtml(p) {
   const foto = fotoCard(p.photo);
   return `
@@ -453,6 +471,7 @@ function tarjetaHtml(p) {
         <div class="nom">${escapeHtml(p.name)}</div>
         ${p.notes ? `<div class="desc">${escapeHtml(p.notes)}</div>` : ''}
         <div class="precio-linea">${precioHtml(p)}</div>
+        ${avisoQuedanHtml(p)}
         ${p.envio ? `<div class="envio-chip">${escapeHtml(p.envio.corto)}</div>` : ''}
         <div class="card-accion" id="acc-${p.id}">${accionHtml(p.id)}</div>
       </div>
