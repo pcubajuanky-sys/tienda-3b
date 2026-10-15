@@ -1036,6 +1036,23 @@ function totalGeneralUSD() {
   return Math.round((totalCarritoUSD() + envioUSD) * 100) / 100;
 }
 
+// La garantía en positivo (tienda.garantia). Vacía o ausente ⇒ no se pinta nada, ni en la
+// portada ni en la ficha: más vale un hueco que una promesa a medias.
+function garantiaTexto() {
+  const t = (CAT && CAT.tienda) || {};
+  return (t.garantia || '').toString().trim();
+}
+
+function pintarGarantia() {
+  const txt = garantiaTexto();
+  for (const id of ['garantia', 'garantia-ficha']) {
+    const el = document.getElementById(id);
+    if (!el) continue;
+    el.hidden = !txt;
+    el.textContent = txt;
+  }
+}
+
 // Cláusulas de entrega (tienda.politica). Vacío/ausente ⇒ no se pinta nada.
 function politicaTexto() {
   const t = (CAT && CAT.tienda) || {};
@@ -1574,6 +1591,7 @@ async function cargarCatalogo() {
   renderCarrito();   // el aside lateral (≥1024px) no espera a que se abra el panel modal
   renderFiltroPill();
   renderCategorias3D();
+  pintarGarantia();
   renderControles();   // antes de renderGrid: valida ordenSel/soloEnvioGratis contra ESTE catálogo
   renderGrid();
   renderFooterExtra();
