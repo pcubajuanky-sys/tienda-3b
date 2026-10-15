@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-15T15:34:20.738Z",
+  "generado": "2026-10-15T19:08:15.642Z",
   "tasa": 800,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -3277,32 +3277,6 @@
       "creado": 1789256890851
     },
     {
-      "id": "p_1790795440877",
-      "codigo": "54WG",
-      "name": "Medidor de presión recargable",
-      "cat": "Electrodomésticos",
-      "subcat": "",
-      "notes": "Incluye todo lo de la imagen. Solo en color rosado. Recargable",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791896222/productos/crb3qw8fbzp4toylktze.jpg",
-      "precioUSD": 25,
-      "precioCUP": 20000,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "fotos": [
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791896167/productos/x3emxzkvljabovwmceng.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791896193/productos/bzkupirfjeoaidp2zgk5.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791896212/productos/wf2bsewh8zmcrkoxncag.jpg"
-      ],
-      "max": 1,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1790795440877
-    },
-    {
       "id": "p_1789506414289",
       "codigo": "YP64",
       "name": "Merenguera mezcladora",
@@ -4592,7 +4566,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 2,
+      "max": 1,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
