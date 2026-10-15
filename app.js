@@ -1537,7 +1537,14 @@ function enviarPorWhatsApp(ev) {
   const refs = items.filter(({ p }) => p.codigo).map(({ p, qty, clave }) => `${p.codigo}${clave ? '/' + clave.split(SEP_VAR).join('+') : ''} x${qty}`);
   if (refs.length && refs.length === items.length) lineas.push('', `Ref: ${refs.join(', ')}`);
 
-  window.open(`https://api.whatsapp.com/send?phone=${CAT.whatsapp}&text=${encodeURIComponent(lineas.join('\n'))}`, '_blank');
+  // Quien pone el precio, atiende: si el cliente entro por la pagina de un gestor con
+  // recargo, el pedido va a SU WhatsApp y el lo reenvia al numero de la casa (el mensaje
+  // lleva `Vendedor: CODIGO`, asi que Stock+ lo anota igual al reenviarlo). Sin gestor con
+  // recargo, el numero de la casa, como siempre.
+  // 🔴 NADA de `await` antes de este window.open: el bloqueador de emergentes se come el
+  // enlace de WhatsApp (iOS sobre todo).
+  const destino = (gestorRecargo && gestorRecargo.telPublico) || CAT.whatsapp;
+  window.open(`https://api.whatsapp.com/send?phone=${destino}&text=${encodeURIComponent(lineas.join('\n'))}`, '_blank');
 }
 
 // ── Portada: mosaico de fotos reales + dato de productos ──
