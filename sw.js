@@ -8,7 +8,7 @@
 //    clientes seguiran viendo el CSS y el JS viejos.
 // 3. Solo se guarda lo del propio dominio. Las fotos de Cloudinary NO: son muchas,
 //    pesan, y la CSP de la pagina ya decide quien puede servirlas.
-const CACHE = 'tienda-3b-v11';
+const CACHE = 'tienda-3b-v12';
 
 // Los <script src> de index.html tienen que estar TODOS aqui (y los archivos nuevos que
 // cargue la pagina): lo que falte en esta lista no esta disponible sin conexion.
@@ -19,6 +19,7 @@ const ARMAZON = [
   '/app.js',
   '/mundos.js',
   '/orden.js',
+  '/preciosGestor.js',
   '/relacionados.js',
   '/galeria.js',
   '/tarjeta.js',
@@ -32,6 +33,9 @@ const ARMAZON = [
 // se guardara con esa URL, la cache crecería una entrada por visita y sin red nunca
 // acertaria. Por eso la copia vive SIEMPRE bajo esta clave fija, sin query.
 const CATALOGO = '/catalogo.json';
+// Los precios por gestor son precios: misma regla que el catalogo (red primero, clave
+// fija porque app.js los pide con ?v=<fecha>).
+const PRECIOS_GESTOR = '/precios-gestores.json';
 
 self.addEventListener('install', (e) => {
   // addAll falla entero si UN archivo falla; por eso se mete uno a uno y se perdona el
@@ -55,14 +59,15 @@ self.addEventListener('fetch', (e) => {
 
   // El catalogo: red primero. Si responde, se guarda copia y se sirve. Si no hay red,
   // se sirve la ultima copia buena (y el cliente ve precios de ayer, no una pagina rota).
-  if (url.pathname === CATALOGO) {
+  if (url.pathname === CATALOGO || url.pathname === PRECIOS_GESTOR) {
+    const clave = url.pathname;   // sin query: ver el comentario de CATALOGO
     e.respondWith(fetch(req).then((r) => {
       if (r.ok) {
         const copia = r.clone();
-        caches.open(CACHE).then((c) => c.put(CATALOGO, copia));
+        caches.open(CACHE).then((c) => c.put(clave, copia));
       }
       return r;
-    }).catch(() => caches.match(CATALOGO)));
+    }).catch(() => caches.match(clave)));
     return;
   }
 
