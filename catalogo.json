@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-15T20:58:43.909Z",
+  "generado": "2026-10-15T21:02:08.349Z",
   "tasa": 800,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -9,7 +9,8 @@
     },
     {
       "code": "9H5MM",
-      "nombre": "Elaine Ocampo Pino"
+      "nombre": "Elaine Ocampo Pino",
+      "telPublico": "5358856820"
     },
     {
       "code": "5D9K9",
