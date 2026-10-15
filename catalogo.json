@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-15T01:45:39.617Z",
+  "generado": "2026-10-15T03:46:49.787Z",
   "tasa": 790,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -207,11 +207,11 @@
     "pagoUrl": "",
     "contactos": [
       {
-        "nombre": "Admin principal",
+        "nombre": "Ruth",
         "tel": "5363268423"
       },
       {
-        "nombre": "Admin secundario",
+        "nombre": "Atención al cliente",
         "tel": "5354978966"
       }
     ],
@@ -413,6 +413,16 @@
         "id": "cercadora-de-pelo",
         "nombre": "cercadora de Pelo",
         "lb": 2
+      },
+      {
+        "id": "mueble-plastico-de-3-pisos",
+        "nombre": "mueble plástico de 3 pisos",
+        "lb": 4.3
+      },
+      {
+        "id": "mueble-plastico-de-5-niveles",
+        "nombre": "mueble plástico de 5 niveles",
+        "lb": 7.6
       }
     ],
     "ejemplos": [
