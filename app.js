@@ -107,7 +107,9 @@ function fotoMosaico(url) {
 // también. El `hidden` necesita ayuda del CSS, porque `.card-foto img` y `.modal-foto img`
 // declaran `display:block`, que gana sobre el atributo (ver estilos.css).
 function imgFallback(img) {
-  const cont = img.closest('.card-foto') || img.closest('.modal-foto');
+  // `.linea` es el carrito: su imagen cuelga directa de ahí y antes la función salía por el
+  // `return`, así que esas fotos rotas enseñaban el icono roto del navegador.
+  const cont = img.closest('.card-foto') || img.closest('.modal-foto') || img.closest('.linea');
   if (!cont) return;
   img.hidden = true;
   if (cont.querySelector('.inicial')) return;   // ya puesto: no duplicar
@@ -117,7 +119,9 @@ function imgFallback(img) {
   marca.className = 'inicial';
   marca.setAttribute('aria-hidden', 'true');
   marca.textContent = inicial;
-  cont.appendChild(marca);
+  // En la línea del carrito (fila flex) el marcador tiene que ocupar el HUECO de la foto: con
+  // appendChild iría al final de la fila, a la derecha del subtotal.
+  if (cont.classList.contains('linea')) img.after(marca); else cont.appendChild(marca);
 }
 
 // Devuelve la imagen a la vista y quita el marcador. Se llama ANTES de poner un `src`
@@ -125,7 +129,8 @@ function imgFallback(img) {
 function limpiarFallback(img) {
   if (!img) return;
   img.hidden = false;
-  const cont = img.closest('.card-foto') || img.closest('.modal-foto');
+  // Mismo contenedor que en imgFallback (incluye `.linea`, el carrito).
+  const cont = img.closest('.card-foto') || img.closest('.modal-foto') || img.closest('.linea');
   const marca = cont && cont.querySelector('.inicial');
   if (marca) marca.remove();
 }
@@ -891,6 +896,14 @@ function addCarrito(clave) {
   guardarCarrito(); refrescarAcciones(idDeClave(clave)); renderCarrito();
 }
 
+// Quita la línea ENTERA, no una unidad: es lo que espera quien pulsa la ✕. Antes la única
+// forma de sacar un producto era salir del carrito, encontrarlo en la parrilla y bajarle
+// la cantidad, o vaciar el pedido entero.
+function quitarLineaCarrito(clave) {
+  delete carrito[clave];
+  guardarCarrito(); refrescarAcciones(idDeClave(clave)); renderCarrito();
+}
+
 function quitarCarrito(clave) {
   carrito[clave] = (carrito[clave] || 0) - 1;
   if (carrito[clave] <= 0) delete carrito[clave];
@@ -986,7 +999,10 @@ function totalBloqueHtml(claseTotalCup, claseTotalUsd) {
   return (
     `<div class="desglose-linea"><span>Productos</span><span>${fmt(totalCarrito())} CUP</span></div>` +
     `<div class="desglose-linea"><span>Mensajería</span><span>${m.coordinar ? 'a coordinar' : (m.gratis ? 'GRATIS' : fmt(m.monto) + ' CUP')}</span></div>` +
-    `<p class="desglose-nota">El costo de mensajería depende de la zona; se confirma por WhatsApp.</p>` +
+    // 🔴 La nota solo cuando hay algo que cobrar. Antes salía SIEMPRE, así que un pedido con
+    // envío gratis leía «Mensajería GRATIS» e inmediatamente debajo «el costo depende de la
+    // zona»: se le sembraba la duda justo donde se le acababa de dar una buena noticia.
+    (m.gratis || m.coordinar ? '' : `<p class="desglose-nota">El costo de mensajería depende de la zona; se confirma por WhatsApp.</p>`) +
     notaAparteHtml() +
     `<div class="desglose-linea desglose-total"><span>Total</span><span>${fmt(totalGeneralCUP())} CUP</span></div>` +
     usdLineaHtml(claseTotalUsd)
@@ -1207,13 +1223,28 @@ function pintarCierre() {
 
 function lineaCarritoHtml(p, qty, clave) {
   const foto = fotoCard(p.photo);
+  // `k` es la clave del CARRITO (id|combinación), que es lo que entienden addCarrito y
+  // quitarCarrito. `data-minus` y `data-plus` ya los escucha la delegación global, así que
+  // estos dos botones no necesitan lógica nueva: salen gratis, y con el tope de existencias
+  // ya respetado por addCarrito.
+  const k = claveCarrito(p.id, clave);
+  const tope = topeDe(p.id, clave);
+  const alTope = tope !== null && qty >= tope;
+  // `alt` lleva el nombre para que imgFallback saque la inicial del producto y no un «?».
   return `<div class="linea">
-      <img src="${foto.src}" alt="" loading="lazy" onerror="imgFallback(this)">
+      <img src="${foto.src}" alt="${escapeHtml(p.name)}" loading="lazy" onerror="imgFallback(this)">
       <div class="linea-info">
         <div class="linea-nom">${escapeHtml(p.name)}${clave ? ` <span class="linea-talla">· ${escapeHtml(clave)}</span>` : ''}</div>
-        <div class="linea-qty">x${qty}</div>
+        <div class="qty qty-linea">
+          <button type="button" data-minus="${escapeHtml(k)}" aria-label="Quitar una unidad de ${escapeHtml(p.name)}">−</button>
+          <strong aria-hidden="true">${qty}</strong><span class="sr-only">${qty} en el pedido</span>
+          <button type="button" data-plus="${escapeHtml(k)}" aria-label="Añadir una unidad de ${escapeHtml(p.name)}"${alTope ? ' disabled' : ''}>+</button>
+        </div>
       </div>
-      <div class="linea-sub">${fmt(p.precioCUP * qty)} CUP</div>
+      <div class="linea-derecha">
+        <div class="linea-sub">${fmt(p.precioCUP * qty)} CUP</div>
+        <button type="button" class="linea-quitar" data-quitar-linea="${escapeHtml(k)}" aria-label="Quitar ${escapeHtml(p.name)} del pedido">✕</button>
+      </div>
     </div>`;
 }
 
@@ -1736,6 +1767,9 @@ async function iniciar() {
     const add = e.target.closest('[data-add]');
     const minus = e.target.closest('[data-minus]');
     const plus = e.target.closest('[data-plus]');
+    // `data-quitar-linea` y no `data-quitar`: encargos.js ya usa `data-quitar` (índice de artículo)
+    // y este manejador vive en `document`, así que atraparía también sus botones.
+    const quitar = e.target.closest('[data-quitar-linea]');
     const rel = e.target.closest('[data-rel]');
     if (rel) {
       abrirDetalle(rel.dataset.rel);
@@ -1761,6 +1795,7 @@ async function iniciar() {
     else if (add) { e.stopPropagation(); addCarrito(add.dataset.add); }
     else if (minus) { e.stopPropagation(); quitarCarrito(minus.dataset.minus); }
     else if (plus) { e.stopPropagation(); addCarrito(plus.dataset.plus); }
+    else if (quitar) { e.stopPropagation(); quitarLineaCarrito(quitar.dataset.quitarLinea); }
   });
 
   document.getElementById('aviso-ajuste-cerrar').addEventListener('click', () => {

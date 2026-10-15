@@ -854,9 +854,19 @@ body.con-barra-movil{padding-bottom:var(--barra-movil-h, 84px)}
 }
 .linea{display:flex;align-items:center;gap:10px;padding:var(--e2) 0;border-bottom:1px solid var(--border);font-size:var(--t-sm)}
 .linea img{width:52px;height:52px;border-radius:var(--e2);object-fit:cover;background:var(--surface-2);flex-shrink:0}
+/* El marcador ocupa exactamente el hueco de la foto, para que la línea no se deforme. */
+.linea img[hidden]{display:none}
+.linea .inicial{width:52px;height:52px;border-radius:var(--e2);background:var(--surface-2);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--text-3)}
 .linea .linea-info{flex:1;min-width:0}
 .linea .linea-nom{font-weight:600;line-height:1.3}
-.linea .linea-qty{color:var(--text-3);font-size:12px}
+/* Contador dentro de la línea del carrito. Los botones conservan los 44 px de la parrilla
+   (nada de transform:scale, que los dejaba en ~37 px y con la zona táctil desfasada del
+   dibujo): se reduce el hueco, no el botón. inline-flex para que no se estire a todo el
+   ancho de la columna del nombre. */
+.qty-linea{display:inline-flex;justify-content:flex-start;gap:4px;margin-top:6px}
+.linea-derecha{display:flex;align-items:center;gap:4px;flex-shrink:0}
+.linea-quitar{min-width:40px;min-height:40px;border:none;background:none;cursor:pointer;color:var(--text-3);font-size:16px;line-height:1;padding:6px;border-radius:8px}
+.linea-quitar:hover{color:var(--text);background:var(--surface-2)}
 .linea .linea-sub{font-weight:700;white-space:nowrap}
 .total{padding:14px 0;text-align:right}
 .envio-linea{display:block;font-size:12px;font-weight:600;color:var(--brand);margin-bottom:4px}
