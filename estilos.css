@@ -1280,3 +1280,18 @@ button.footer-link{background:none;border:none;font-family:inherit;cursor:pointe
 /* En la ficha del producto, el mismo texto pero sin caja, debajo del botón de añadir. */
 .garantia-ficha{margin-top:12px;font-size:13px;line-height:1.45;color:var(--text-2)}
 .garantia-ficha::before{content:"🛡️ ";}
+
+/* Banda de la pagina de un gestor con recargo (2026-10-15). Solo sale cuando el
+   visitante entra por su enlace Y ese gestor tiene precios propios: sin eso, la tienda
+   se ve exactamente como siempre. */
+.banda-gestor {
+  margin: 10px 0 12px;
+  padding: 10px 14px;
+  border-radius: var(--radio-control);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--text);
+}
+.banda-gestor b { color: var(--text); }

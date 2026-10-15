@@ -1120,6 +1120,23 @@ function pintarGarantia() {
   }
 }
 
+// La pagina de un gestor con recargo se identifica como SUYA: el precio que se ve es el
+// que el puso y es el quien responde por el. Solo el nombre, sin apellidos (decision de
+// Ruth, 2026-10-15). Si no hay gestor con recargo, la banda no existe para el visitante.
+function pintarBandaGestor() {
+  const el = document.getElementById('banda-gestor');
+  if (!el) return;
+  const corto = gestorRecargo ? window.PreciosGestor.nombreCorto(gestorRecargo.nombre) : '';
+  if (!corto) { el.hidden = true; el.innerHTML = ''; }
+  else {
+    el.hidden = false;
+    el.innerHTML = `🤝 Estás en la página de <b>${escapeHtml(corto)}</b> — sus precios y su atención. `
+      + `Tu pedido le llega a ella directamente.`;
+  }
+  const ficha = document.getElementById('banda-gestor-ficha');
+  if (ficha) { ficha.hidden = el.hidden; ficha.innerHTML = el.innerHTML; }
+}
+
 // Cláusulas de entrega (tienda.politica). Vacío/ausente ⇒ no se pinta nada.
 function politicaTexto() {
   const t = (CAT && CAT.tienda) || {};
@@ -1691,6 +1708,7 @@ async function cargarCatalogo() {
   renderFiltroPill();
   renderCategorias3D();
   pintarGarantia();
+  pintarBandaGestor();
   renderControles();   // antes de renderGrid: valida ordenSel/soloEnvioGratis contra ESTE catálogo
   renderGrid();
   renderFooterExtra();
