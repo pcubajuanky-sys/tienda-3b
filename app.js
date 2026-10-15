@@ -127,7 +127,8 @@ function setOferta() { filtroOferta = true; filtroCat = ''; renderFiltroPill(); 
 function renderFiltroPill() {
   const pill = document.getElementById('filtro-pill');
   if (!pill) return;
-  const items = CAT.items || [];
+  // Mismo criterio que las tarjetas de categoría: la cifra es la de lo que se ve.
+  const items = window.Orden.filtrar(CAT.items || [], soloEnvioGratis);
   const activo = filtroOferta || filtroCat !== '';
   pill.hidden = !activo;
   if (!activo) return;
@@ -230,7 +231,12 @@ function cat3dFotoHtml(fotos, marcador, alternas) {
 function renderCategorias3D() {
   const cont = document.getElementById('categorias-3d');
   if (!cont) return;
-  const items = CAT.items || [];
+  // Las cifras tienen que describir lo que el cliente VA A VER: si el chip 🛵 está
+  // puesto, contar sobre el catálogo entero hace que una categoría prometa 8 y la
+  // parrilla enseñe 2 (fallo real, 2026-10-14, «Ropa Interior»). Con el filtro puesto,
+  // una categoría que se queda sin productos desaparece de la tira: es lo mismo que hace
+  // `cats` cuando una categoría está vacía, y evita que se pueda entrar a una nada.
+  const items = window.Orden.filtrar(CAT.items || [], soloEnvioGratis);
   const cats = (CAT.categorias || []).filter((c) => items.some((p) => p.cat === c.n));
   const nOfertas = items.filter((p) => p.enOferta).length;
   const totalTarjetas = (nOfertas === 0 ? 0 : 1) + cats.length;
@@ -1736,7 +1742,9 @@ async function iniciar() {
   if (chipEnvio) chipEnvio.addEventListener('click', () => {
     soloEnvioGratis = !soloEnvioGratis;
     chipEnvio.setAttribute('aria-pressed', String(soloEnvioGratis));
-    renderGrid();
+    // Las cifras de las categorías y de la píldora dependen del filtro: si no se
+    // repintan aquí, siguen anunciando el total del catálogo.
+    renderFiltroPill(); renderCategorias3D(); renderGrid();
   });
   medirHeader();
   await cargarCatalogo();
