@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-16T23:41:26.790Z",
+  "generado": "2026-10-17T05:11:26.884Z",
   "tasa": 800,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -927,7 +927,7 @@
         ]
       },
       "maxOpciones": {
-        "ROSA🩷": 6
+        "ROSA🩷": 5
       },
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
@@ -1353,7 +1353,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 5,
+      "max": 4,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -4715,7 +4715,7 @@
       "moneda": "cup",
       "enOferta": false,
       "destacado": false,
-      "max": 7,
+      "max": 6,
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
