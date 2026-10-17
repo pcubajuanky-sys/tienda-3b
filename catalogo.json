@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-17T15:48:30.204Z",
+  "generado": "2026-10-17T19:30:27.317Z",
   "tasa": 805,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -1254,20 +1254,14 @@
         "opciones": [
           "S / NEGRO",
           "S / BLANCO",
-          "S / GRIS",
           "S / AZUL",
-          "S / ROJO",
           "S / ROSA",
           "S / BEIGE",
           "M / NEGRO",
-          "M / GRIS",
-          "M / ROJO",
-          "M / BEIGE",
           "L / NEGRO",
           "L / BLANCO",
           "L / GRIS",
           "L / AZUL",
-          "L / ROJO",
           "L / ROSA",
           "L / BEIGE"
         ]
@@ -1275,20 +1269,14 @@
       "maxOpciones": {
         "S / NEGRO": 3,
         "S / BLANCO": 1,
-        "S / GRIS": 1,
-        "S / AZUL": 2,
-        "S / ROJO": 1,
-        "S / ROSA": 3,
-        "S / BEIGE": 3,
+        "S / AZUL": 1,
+        "S / ROSA": 1,
+        "S / BEIGE": 1,
         "M / NEGRO": 1,
-        "M / GRIS": 1,
-        "M / ROJO": 1,
-        "M / BEIGE": 1,
         "L / NEGRO": 2,
-        "L / BLANCO": 3,
-        "L / GRIS": 3,
+        "L / BLANCO": 1,
+        "L / GRIS": 1,
         "L / AZUL": 2,
-        "L / ROJO": 1,
         "L / ROSA": 2,
         "L / BEIGE": 3
       },
@@ -1930,6 +1918,38 @@
       "creado": 1782259192464
     },
     {
+      "id": "p_1789256890851",
+      "codigo": "UFJ3",
+      "name": "Dos pares de medias",
+      "cat": "Ropa Interior",
+      "subcat": "",
+      "notes": "",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792262372/productos/zgtcnx22koltd0wzkzro.jpg",
+      "precioUSD": 1,
+      "precioCUP": 805,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Color"
+        ],
+        "opciones": [
+          "NEGRO",
+          "BLANCO",
+          "GRIS"
+        ]
+      },
+      "maxOpciones": {
+        "GRIS": 1
+      },
+      "envio": {
+        "corto": "🛵 Gratis desde 2,000 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
+      },
+      "creado": 1789256890851
+    },
+    {
       "id": "p_1788212080090",
       "codigo": "D5Q2",
       "name": "Espejo de flor giratorio",
@@ -2155,11 +2175,11 @@
           "Talla"
         ],
         "opciones": [
-          "L"
+          "M"
         ]
       },
       "maxOpciones": {
-        "L": 2
+        "M": 2
       },
       "envio": {
         "corto": "🛵 Mensajería gratis",
@@ -2767,13 +2787,11 @@
           "Color"
         ],
         "opciones": [
-          "L(REDUCIDA) / MARRÓN🤎",
           "L(REDUCIDA) / GRIS🩶"
         ]
       },
       "maxOpciones": {
-        "L(REDUCIDA) / MARRÓN🤎": 1,
-        "L(REDUCIDA) / GRIS🩶": 3
+        "L(REDUCIDA) / GRIS🩶": 2
       },
       "envio": {
         "corto": "🛵 Mensajería gratis",
@@ -2855,6 +2873,37 @@
       },
       "envioGratis": true,
       "creado": 1789235076278
+    },
+    {
+      "id": "p_1792263885053",
+      "codigo": "JSRK",
+      "name": "Licra faja invisible",
+      "cat": "Ropa",
+      "subcat": "",
+      "notes": "Licra faja de tela lijera y elastizada. Ideal para el ajuste de la cintura, con tela reforzada para esa zona y varillas para el control de la silueta. Tela y diseño confeccionados especialmente para su uso con vestidos y prendas que lo requieran , proporcionando así una imagen más estilizada y un abdomen más firme",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792263645/productos/ld6jraupnrz0in6dfnie.jpg",
+      "precioUSD": 10,
+      "precioCUP": 8050,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Talla"
+        ],
+        "opciones": [
+          "S"
+        ]
+      },
+      "maxOpciones": {
+        "S": 1
+      },
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1792263885054
     },
     {
       "id": "p_1789235611281",
@@ -3161,25 +3210,6 @@
       "creado": 1782259680772
     },
     {
-      "id": "p_1780092595587",
-      "codigo": "YKGQ",
-      "name": "Medias",
-      "cat": "Ropa Interior",
-      "subcat": "",
-      "notes": "Variedad de colores.",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1781664214/productos/frkpoykricnh3mtxabig.jpg",
-      "precioUSD": 0.5,
-      "precioCUP": 403,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      },
-      "creado": 1780092595587
-    },
-    {
       "id": "p_1789255852331",
       "codigo": "YL97",
       "name": "Medias Negras (2 pares)",
@@ -3197,38 +3227,6 @@
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
       },
       "creado": 1789255852332
-    },
-    {
-      "id": "p_1789256890851",
-      "codigo": "UFJ3",
-      "name": "Medias variadas",
-      "cat": "Ropa Interior",
-      "subcat": "",
-      "notes": "",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789256579/productos/e49l6h0uldhsq9ldzbjp.jpg",
-      "precioUSD": 0.5,
-      "precioCUP": 403,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "variantes": {
-        "ejes": [
-          "Color"
-        ],
-        "opciones": [
-          "NEGRO",
-          "BLANCO",
-          "GRIS"
-        ]
-      },
-      "maxOpciones": {
-        "GRIS": 2
-      },
-      "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      },
-      "creado": 1789256890851
     },
     {
       "id": "p_1789506414289",
@@ -3464,14 +3462,14 @@
         ],
         "opciones": [
           "S / NEGRO",
-          "S / VERDE",
-          "M / NEGRO"
+          "M / NEGRO",
+          "M / VERDE"
         ]
       },
       "maxOpciones": {
         "S / NEGRO": 2,
-        "S / VERDE": 1,
-        "M / NEGRO": 2
+        "M / NEGRO": 2,
+        "M / VERDE": 1
       },
       "envio": {
         "corto": "🛵 Mensajería gratis",
@@ -3571,30 +3569,6 @@
       "creado": 1786922026243,
       "precioNormalUSD": 8,
       "precioNormalCUP": 6440
-    },
-    {
-      "id": "p_1788897850953",
-      "codigo": "8ARJ",
-      "name": "Mueble de puertas 3 pisos",
-      "cat": "Muebles",
-      "subcat": "",
-      "notes": "Mueble con rueditas, y puertas con imanes para mejor cierre. Ideal organizador para cualquier lugar de la casa, tanto habitaciones,cocina, baño,oficina,etc...",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788897774/productos/unvimltpxn8k3vfrvqoh.jpg",
-      "precioUSD": 40,
-      "precioCUP": 32200,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "fotos": [
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791919213/productos/uheclodh2ny8ts6wwja0.jpg"
-      ],
-      "max": 1,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1788897850953
     },
     {
       "id": "p_1784914843855",
@@ -4926,9 +4900,9 @@
         ]
       },
       "maxOpciones": {
-        "NEGRO CON ROJO / M": 3,
+        "NEGRO CON ROJO / M": 2,
         "NEGRO CON ROJO / L": 2,
-        "NEGRO CON VERDE / M": 7,
+        "NEGRO CON VERDE / M": 5,
         "NEGRO CON VERDE / L": 2
       },
       "envio": {
@@ -5032,37 +5006,6 @@
       "creado": 1789242483636
     },
     {
-      "id": "p_1791837207801",
-      "codigo": "4FUU",
-      "name": "Pulover de hombre 5",
-      "cat": "Ropa",
-      "subcat": "",
-      "notes": "Tela algodonada elastizada",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791837097/productos/tqqcc5wb3rozfzkqmwzt.jpg",
-      "precioUSD": 5,
-      "precioCUP": 4025,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "variantes": {
-        "ejes": [
-          "Talla"
-        ],
-        "opciones": [
-          "L"
-        ]
-      },
-      "maxOpciones": {
-        "L": 1
-      },
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1791837207801
-    },
-    {
       "id": "p_1791837243848",
       "codigo": "EQT3",
       "name": "Pulover de hombre 6",
@@ -5111,11 +5054,13 @@
           "Talla"
         ],
         "opciones": [
-          "S"
+          "S",
+          "M"
         ]
       },
       "maxOpciones": {
-        "S": 1
+        "S": 1,
+        "M": 1
       },
       "envio": {
         "corto": "🛵 Mensajería gratis",
@@ -5309,7 +5254,6 @@
           "BLANCO",
           "ROJO",
           "ROSA",
-          "AZUL",
           "CELESTE"
         ]
       },
@@ -5317,7 +5261,6 @@
         "BLANCO": 2,
         "ROJO": 2,
         "ROSA": 2,
-        "AZUL": 1,
         "CELESTE": 1
       },
       "envio": {
@@ -5865,27 +5808,6 @@
       "creado": 1790975712068
     },
     {
-      "id": "p_1789411169180",
-      "codigo": "DAMG",
-      "name": "Tacitas 12 piezas",
-      "cat": "Porcelana",
-      "subcat": "",
-      "notes": "Conjunto de 12 piezas de tazas de café.\n6 tazas con 6 platicos.",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789411058/productos/xhdokldz5nbz707deyqs.jpg",
-      "precioUSD": 5,
-      "precioCUP": 4025,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "max": 1,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1789411169180
-    },
-    {
       "id": "p_1785533206456",
       "codigo": "M82M",
       "name": "Tacones 🤍",
@@ -6031,27 +5953,6 @@
       },
       "envioGratis": true,
       "creado": 1780346613571
-    },
-    {
-      "id": "p_1789239391483",
-      "codigo": "3LJZ",
-      "name": "Top Rosa 🩷",
-      "cat": "Ropa Interior",
-      "subcat": "",
-      "notes": "Lindo top Rosa con esponjas. Ideal para muchachas delgadas o adolescentes. Tela algodonada elastizada",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789239275/productos/pmfqwel3flhdlmn2gpgy.jpg",
-      "precioUSD": 3,
-      "precioCUP": 2415,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "max": 1,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1789239391542
     },
     {
       "id": "p_1788541433924",
