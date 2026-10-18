@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-18T01:01:05.526Z",
+  "generado": "2026-10-18T01:04:49.215Z",
   "vigenciaHoras": 48,
   "activo": true,
   "tasa": 805,
@@ -100,6 +100,10 @@
     {
       "code": "CXESR",
       "nombre": "Yohanset"
+    },
+    {
+      "code": "QGZUQ",
+      "nombre": "Alejandro"
     }
   ],
   "comisionPorKmCUP": 20,
