@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-18T21:08:39.074Z",
+  "generado": "2026-10-18T23:55:25.451Z",
   "tasa": 805,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -4473,27 +4473,6 @@
       "creado": 1791633427118
     },
     {
-      "id": "p_1788206192356",
-      "codigo": "R2C4",
-      "name": "Pareja de Mini espejos retrovisores",
-      "cat": "Motos / Accesorios",
-      "subcat": "",
-      "notes": "El precio es por la pareja. Pequeños,para múltiples uso, como doble espejo en las motos o para las bicicletas",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788205791/productos/m7iur6b6u18rt4mnyw8b.jpg",
-      "precioUSD": 5,
-      "precioCUP": 4025,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "max": 1,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1788206192356
-    },
-    {
       "id": "p_1781640704239",
       "codigo": "RYV8",
       "name": "Pareja de neblineros con su conmutador",
@@ -5453,14 +5432,12 @@
           "Diseño"
         ],
         "opciones": [
-          "A",
           "D",
           "E",
           "H"
         ]
       },
       "maxOpciones": {
-        "A": 1,
         "D": 1,
         "E": 2,
         "H": 1
