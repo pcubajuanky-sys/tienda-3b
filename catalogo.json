@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-18T01:04:05.236Z",
+  "generado": "2026-10-18T06:11:58.959Z",
   "tasa": 805,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -745,10 +745,10 @@
       "subcat": "",
       "notes": "¡Despierta el poder natural de tu cabello!\nEl aceite esencial de jengibre no es solo un aroma… es un impulso de vida para tu melena.\nEstimula el cuero cabelludo, fortalece desde la raíz, reduce la caída y deja tu cabello más brillante, denso y con un brillo saludable que se nota.\nUnas gotas al día y tu cabello empieza a hablar por ti.\nJengibre puro. Resultados reales.\nTu cabello merece este despertar.",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786943069/productos/bm4t98qh8ogtry5nnpxt.jpg",
-      "precioUSD": 3.11,
-      "precioCUP": 2500,
-      "moneda": "cup",
-      "enOferta": false,
+      "precioUSD": 3.3,
+      "precioCUP": 2657,
+      "moneda": "usd",
+      "enOferta": true,
       "destacado": false,
       "max": 3,
       "envio": {
@@ -756,7 +756,9 @@
         "largo": "🛵 MENSAJERÍA GRATIS"
       },
       "envioGratis": true,
-      "creado": 1786943265900
+      "creado": 1786943265900,
+      "precioNormalUSD": 3.73,
+      "precioNormalCUP": 3003
     },
     {
       "id": "p_1789489796373",
@@ -1132,7 +1134,7 @@
       "moneda": "cup",
       "enOferta": false,
       "destacado": false,
-      "max": 2,
+      "max": 1,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -1457,30 +1459,9 @@
       "precioNormalCUP": 5460
     },
     {
-      "id": "p_1790983047647",
-      "codigo": "NM9F",
-      "name": "Calcomanía para tanque de moto 1",
-      "cat": "Motos / Accesorios",
-      "subcat": "",
-      "notes": "Juego de almohadillas para tanque de motocicleta y protector de tapa de combustible, calcomanías de PVC para protección contra arañazos del tanque.",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791646495/productos/cobqtkiyxarw1gwdfkua.jpg",
-      "precioUSD": 5,
-      "precioCUP": 4025,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "max": 1,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1790983047649
-    },
-    {
       "id": "p_1790983107410",
       "codigo": "QXG8",
-      "name": "Calcomanía para tanque de moto 2",
+      "name": "Calcomanía para tanque de moto con relieve",
       "cat": "Motos / Accesorios",
       "subcat": "",
       "notes": "Juego de almohadillas para tanque de motocicleta y protector de tapa de combustible, calcomanías de PVC para protección contra arañazos del tanque.",
@@ -1499,9 +1480,51 @@
       "creado": 1790983107410
     },
     {
+      "id": "p_1790983047647",
+      "codigo": "NM9F",
+      "name": "Calcomanía para tanque de moto Marmoleada",
+      "cat": "Motos / Accesorios",
+      "subcat": "",
+      "notes": "Juego de almohadillas para tanque de motocicleta y protector de tapa de combustible, calcomanías de PVC para protección contra arañazos del tanque.",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791646495/productos/cobqtkiyxarw1gwdfkua.jpg",
+      "precioUSD": 5,
+      "precioCUP": 4025,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "max": 1,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1790983047649
+    },
+    {
+      "id": "p_1790801699259",
+      "codigo": "96J6",
+      "name": "Candado/Alarma de motos y bicicletas de Pilas",
+      "cat": "Motos / Accesorios",
+      "subcat": "",
+      "notes": "Candado de disco con alarma para motocicleta, candado antirrobo de seguridad para rueda de disco de motocicleta, sonido de alarma de 110 dB, para motocicletas ligeras, bicicletas, motocicletas y scooters.",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790801561/productos/vnj2xw8zekwu9noskula.jpg",
+      "precioUSD": 18,
+      "precioCUP": 14490,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "max": 2,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1790801699260
+    },
+    {
       "id": "p_1781707937680",
       "codigo": "ECQJ",
-      "name": "Candado/Alarma de Motos y Bicicletas 1",
+      "name": "Candado/Alarma de Motos y Bicicletas Recargable",
       "cat": "Motos / Accesorios",
       "subcat": "",
       "notes": "Alarma para Motocicleta con Cerradura de Disco y Línea Recordatoria - Recargable, 130dB de Sonido, Antirrobo e Impermeable, Carga Rápida en 2 Horas, Pasador Universal de 7mm, Adecuada para Cascos, Motos, Bicicletas Eléctricas y de Montaña, Incluye Cordón Recordatorio y Llave Hexagonal",
@@ -1520,27 +1543,6 @@
       "creado": 1781707937680,
       "precioNormalUSD": 25,
       "precioNormalCUP": 20125
-    },
-    {
-      "id": "p_1790801699259",
-      "codigo": "96J6",
-      "name": "Candado/Alarma de motos y bicicletas 2",
-      "cat": "Motos / Accesorios",
-      "subcat": "",
-      "notes": "Candado de disco con alarma para motocicleta, candado antirrobo de seguridad para rueda de disco de motocicleta, sonido de alarma de 110 dB, para motocicletas ligeras, bicicletas, motocicletas y scooters.",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790801561/productos/vnj2xw8zekwu9noskula.jpg",
-      "precioUSD": 18,
-      "precioCUP": 14490,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "max": 2,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1790801699260
     },
     {
       "id": "p_1788234125684",
@@ -1673,84 +1675,50 @@
       "creado": 1792276934627
     },
     {
-      "id": "p_1786998526143",
-      "codigo": "RHH5",
-      "name": "Cintos 1",
+      "id": "p_1792294682081",
+      "codigo": "VQ93",
+      "name": "Cintos finos de mujer",
       "cat": "Accesorio de vestir",
       "subcat": "",
-      "notes": "Cintos finos de mujer. Medidas 👇🏻\nAncho: 1.2cm\nLargo: 105cm",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786998257/productos/gogjyz4xkuai2twsk7l6.jpg",
-      "precioUSD": 2.36,
-      "precioCUP": 1900,
-      "moneda": "cup",
+      "notes": "Variedad de diseños de cinturones de mujer\nMedidas: Entre 1.2 y 1.6cm de ancho y 105cm de largo",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792294486/productos/qzzq64eve7avlh6k1n6c.jpg",
+      "precioUSD": 2,
+      "precioCUP": 1610,
+      "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 3,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792294517/productos/repccjnnucigamomlz26.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792294523/productos/rfh8e1hazkti0kg6w7yk.jpg"
+      ],
+      "variantes": {
+        "ejes": [
+          "Diseño"
+        ],
+        "opciones": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G"
+        ]
+      },
+      "maxOpciones": {
+        "A": 1,
+        "B": 1,
+        "C": 2,
+        "D": 1,
+        "E": 1,
+        "F": 3,
+        "G": 1
+      },
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
       },
-      "creado": 1786998526143
-    },
-    {
-      "id": "p_1786998892313",
-      "codigo": "PWSW",
-      "name": "Cintos 2",
-      "cat": "Accesorio de vestir",
-      "subcat": "",
-      "notes": "Cintos finos de mujer. Medidas 👇🏻\nAncho: 1.6cm\nLargo: 105cm\nPor el momento,solo disponible en beige claro",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786998742/productos/q6yotu9lsmrhn7hfinsl.jpg",
-      "precioUSD": 2.36,
-      "precioCUP": 1900,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false,
-      "max": 1,
-      "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      },
-      "creado": 1786998892314
-    },
-    {
-      "id": "p_1787756966125",
-      "codigo": "KYGQ",
-      "name": "Cintos finos variados",
-      "cat": "Accesorio de vestir",
-      "subcat": "",
-      "notes": "",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787756837/productos/sxwqjer7oekvpoxsp8ky.jpg",
-      "precioUSD": 2.24,
-      "precioCUP": 1800,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false,
-      "max": 4,
-      "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      },
-      "creado": 1787756966125
-    },
-    {
-      "id": "p_1780347243525",
-      "codigo": "N6SH",
-      "name": "Cintos Unisex",
-      "cat": "Accesorio de vestir",
-      "subcat": "",
-      "notes": "Cintos finos\nSolo los Colores de la imagen",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1780347137/productos/chqkc5z7cubcnsinbnay.jpg",
-      "precioUSD": 2.24,
-      "precioCUP": 1800,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false,
-      "max": 2,
-      "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      },
-      "creado": 1780347243525
+      "creado": 1792294682081
     },
     {
       "id": "p_1787947439148",
@@ -2034,7 +2002,7 @@
       "id": "p_1787088450511",
       "codigo": "TF6K",
       "name": "Esponjas de baño",
-      "cat": "Cuidado Personal",
+      "cat": "Hogar",
       "subcat": "",
       "notes": "Esponjas de baño de variedad de colores 🌈",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791646509/productos/hpgyka4hnhygbxsumvre.jpg",
@@ -2808,9 +2776,40 @@
       "creado": 1790714894835
     },
     {
+      "id": "p_1792263885053",
+      "codigo": "JSRK",
+      "name": "Licra faja invisible",
+      "cat": "Ropa",
+      "subcat": "",
+      "notes": "Licra faja de tela lijera y elastizada. Ideal para el ajuste de la cintura, con tela reforzada para esa zona y varillas para el control de la silueta. Tela y diseño confeccionados especialmente para su uso con vestidos y prendas que lo requieran , proporcionando así una imagen más estilizada y un abdomen más firme",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792263645/productos/ld6jraupnrz0in6dfnie.jpg",
+      "precioUSD": 10,
+      "precioCUP": 8050,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Talla"
+        ],
+        "opciones": [
+          "S"
+        ]
+      },
+      "maxOpciones": {
+        "S": 1
+      },
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1792263885054
+    },
+    {
       "id": "p_1789233150296",
       "codigo": "NU2L",
-      "name": "Licra corta 1",
+      "name": "Licra levanta/glúteos con pliegue lateral",
       "cat": "Ropa",
       "subcat": "",
       "notes": "Licra levanta glúteos corta. Alta calidad, importadas de USA.Talla reducida, viene siendo una M",
@@ -2840,47 +2839,30 @@
       "creado": 1789233150296
     },
     {
-      "id": "p_1789233318851",
-      "codigo": "KRG9",
-      "name": "Licra corta 2",
+      "id": "p_1789235611281",
+      "codigo": "K4UQ",
+      "name": "Licra levanta/glúteos larga",
       "cat": "Ropa",
       "subcat": "",
-      "notes": "Licra corta levanta glúteos.Alta calidad, importadas de USA. Fiel a la talla. Exactamente los tonos de la imagen",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789233113/productos/iobfneseakk7fo5p9d5q.jpg",
-      "precioUSD": 3,
-      "precioCUP": 2415,
+      "notes": "Licra larga estilizadora. Función reductora de cintura y levantadora de glúteos.Alta calidad, importadas de USA. Color de la imagen. Talla M reducida",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789235438/productos/pp8qmssraxnetipkstgx.jpg",
+      "precioUSD": 6,
+      "precioCUP": 4830,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "variantes": {
-        "ejes": [
-          "Talla",
-          "Color"
-        ],
-        "opciones": [
-          "S / NEGRO",
-          "S / NARANJA",
-          "S / AZUL",
-          "S / VERDE MILITAR"
-        ]
-      },
-      "maxOpciones": {
-        "S / NEGRO": 1,
-        "S / NARANJA": 4,
-        "S / AZUL": 2,
-        "S / VERDE MILITAR": 3
-      },
+      "max": 1,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
       },
       "envioGratis": true,
-      "creado": 1789233318851
+      "creado": 1789235611432
     },
     {
       "id": "p_1789235076276",
       "codigo": "44JV",
-      "name": "Licra corta 3",
+      "name": "Licra levanta/glúteos semi estampadas",
       "cat": "Ropa",
       "subcat": "",
       "notes": "Licras cortas levanta glúteos. Alta calidad, importadas de USA. Exactamente los tonos de la imagen,talla reducida.",
@@ -2914,56 +2896,42 @@
       "creado": 1789235076278
     },
     {
-      "id": "p_1792263885053",
-      "codigo": "JSRK",
-      "name": "Licra faja invisible",
+      "id": "p_1789233318851",
+      "codigo": "KRG9",
+      "name": "Licras levanta/glúteos color entero",
       "cat": "Ropa",
       "subcat": "",
-      "notes": "Licra faja de tela lijera y elastizada. Ideal para el ajuste de la cintura, con tela reforzada para esa zona y varillas para el control de la silueta. Tela y diseño confeccionados especialmente para su uso con vestidos y prendas que lo requieran , proporcionando así una imagen más estilizada y un abdomen más firme",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792263645/productos/ld6jraupnrz0in6dfnie.jpg",
-      "precioUSD": 10,
-      "precioCUP": 8050,
+      "notes": "Licra corta levanta glúteos.Alta calidad, importadas de USA. Fiel a la talla. Exactamente los tonos de la imagen",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789233113/productos/iobfneseakk7fo5p9d5q.jpg",
+      "precioUSD": 3,
+      "precioCUP": 2415,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
       "variantes": {
         "ejes": [
-          "Talla"
+          "Talla",
+          "Color"
         ],
         "opciones": [
-          "S"
+          "S / NEGRO",
+          "S / NARANJA",
+          "S / AZUL",
+          "S / VERDE MILITAR"
         ]
       },
       "maxOpciones": {
-        "S": 1
+        "S / NEGRO": 1,
+        "S / NARANJA": 4,
+        "S / AZUL": 2,
+        "S / VERDE MILITAR": 3
       },
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
       },
       "envioGratis": true,
-      "creado": 1792263885054
-    },
-    {
-      "id": "p_1789235611281",
-      "codigo": "K4UQ",
-      "name": "Licra larga",
-      "cat": "Ropa",
-      "subcat": "",
-      "notes": "Licra larga estilizadora. Función reductora de cintura y levantadora de glúteos.Alta calidad, importadas de USA. Color de la imagen. Talla M reducida",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789235438/productos/pp8qmssraxnetipkstgx.jpg",
-      "precioUSD": 6,
-      "precioCUP": 4830,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "max": 1,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1789235611432
+      "creado": 1789233318851
     },
     {
       "id": "p_1782339511897",
@@ -3484,7 +3452,7 @@
     {
       "id": "p_1789218727536",
       "codigo": "6FTU",
-      "name": "Mono enterizo 1",
+      "name": "Mono enterizo corto",
       "cat": "Ropa",
       "subcat": "",
       "notes": "Mono peto con tirantes y pantalones cortos de moda casual para mujer, primavera y verano 2026",
@@ -3518,42 +3486,9 @@
       "creado": 1789218727536
     },
     {
-      "id": "p_1787080747584",
-      "codigo": "JSMN",
-      "name": "Mono enterizo 2",
-      "cat": "Ropa",
-      "subcat": "",
-      "notes": "Solo en color negro. Exelente tela, ligero, cómodo y elegante.",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787080610/productos/tm0xsuiwvxmdn5kvgeug.jpg",
-      "precioUSD": 15,
-      "precioCUP": 12075,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "variantes": {
-        "ejes": [
-          "Talla"
-        ],
-        "opciones": [
-          "XL",
-          "2XL"
-        ]
-      },
-      "maxOpciones": {
-        "XL": 1,
-        "2XL": 4
-      },
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1787080747584
-    },
-    {
       "id": "p_1789228482999",
       "codigo": "ZREY",
-      "name": "Mono enterizo 3",
+      "name": "Mono enterizo levanta/glúteos",
       "cat": "Ropa",
       "subcat": "",
       "notes": "Monos deportivos tela de licra,largos,para ancha,levanta glúteos y estilizadores . Máxima calidad y confort",
@@ -3585,6 +3520,39 @@
       },
       "envioGratis": true,
       "creado": 1789228482999
+    },
+    {
+      "id": "p_1787080747584",
+      "codigo": "JSMN",
+      "name": "Mono enterizo oversize",
+      "cat": "Ropa",
+      "subcat": "",
+      "notes": "Solo en color negro. Exelente tela, ligero, cómodo y elegante.",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787080610/productos/tm0xsuiwvxmdn5kvgeug.jpg",
+      "precioUSD": 15,
+      "precioCUP": 12075,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Talla"
+        ],
+        "opciones": [
+          "XL",
+          "2XL"
+        ]
+      },
+      "maxOpciones": {
+        "XL": 1,
+        "2XL": 4
+      },
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1787080747584
     },
     {
       "id": "p_1786922026243",
@@ -4152,49 +4120,9 @@
       "creado": 1791650740477
     },
     {
-      "id": "p_1791650742291",
-      "codigo": "CDMN",
-      "name": "Paquete de 5 pulseras",
-      "cat": "Reloj y Prendas",
-      "subcat": "",
-      "notes": "Paquete de 5 pulseras de colores aleatorios,con lindos mensajes motivacionales, de amistad y de amor. Para amigos  y parejas familiares. Pequeño y emotivo regalo",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791650523/productos/jra0du6i5q6p89za4den.jpg",
-      "precioUSD": 1,
-      "precioCUP": 805,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "max": 6,
-      "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      },
-      "creado": 1791650742291
-    },
-    {
-      "id": "p_1791650745560",
-      "codigo": "UGP8",
-      "name": "Paquete de 5 pulseras",
-      "cat": "Reloj y Prendas",
-      "subcat": "",
-      "notes": "Paquete de 5 pulseras de colores aleatorios,con lindos mensajes motivacionales, de amistad y de amor. Para amigos  y parejas familiares. Pequeño y emotivo regalo",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791650523/productos/jra0du6i5q6p89za4den.jpg",
-      "precioUSD": 1,
-      "precioCUP": 805,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "max": 6,
-      "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      },
-      "creado": 1791650745560
-    },
-    {
       "id": "p_1780609726389",
       "codigo": "NB4J",
-      "name": "Paquete de 6 ariposas Brillantes A",
+      "name": "Paquete de 6 ariposas Brillantes",
       "cat": "Cabello",
       "subcat": "",
       "notes": "Set 6 unidades de mariposas brillantes para el cabello. Diseños en tonos rosa, celeste, lila, plateado y blanco con acabado glitter. Cierre metálico dorado seguro y resistente. Ideales para peinados infantiles, fiestas o uso diario.",
@@ -4619,7 +4547,7 @@
     {
       "id": "p_1780950975688",
       "codigo": "7UZB",
-      "name": "Pellizcos Antideslizantes",
+      "name": "Pellizcos Antideslizantes para semi recogido",
       "cat": "Cabello",
       "subcat": "",
       "notes": "Mensajería incluida a partir de 4",
@@ -4638,7 +4566,7 @@
     {
       "id": "p_1780945492775",
       "codigo": "XKYE",
-      "name": "Pellizcos Mate",
+      "name": "Pellizcos Mate Grandes",
       "cat": "Cabello",
       "subcat": "",
       "notes": "",
@@ -4914,9 +4842,166 @@
       "creado": 1790978748079
     },
     {
+      "id": "p_1791837243848",
+      "codigo": "EQT3",
+      "name": "Pulover de hombre \"Barco\"",
+      "cat": "Ropa",
+      "subcat": "",
+      "notes": "Tela algodonada elastizada",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791837152/productos/x2kz8q6dt0faiuzc7ad4.jpg",
+      "precioUSD": 5,
+      "precioCUP": 4025,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Talla"
+        ],
+        "opciones": [
+          "XL"
+        ]
+      },
+      "maxOpciones": {
+        "XL": 1
+      },
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1791837243848
+    },
+    {
+      "id": "p_1789240844908",
+      "codigo": "N53J",
+      "name": "Pulover de hombre \"Cara Molesta\"",
+      "cat": "Ropa",
+      "subcat": "",
+      "notes": "Pulover de poliéster elastizado. Importado de USA",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789240755/productos/isanspupljjdhuye6xbo.jpg",
+      "precioUSD": 4,
+      "precioCUP": 3220,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Talla"
+        ],
+        "opciones": [
+          "S"
+        ]
+      },
+      "maxOpciones": {
+        "S": 1
+      },
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1789240844908
+    },
+    {
+      "id": "p_1789242483636",
+      "codigo": "AY6T",
+      "name": "Pulover de hombre \"Eres mi Rey\"",
+      "cat": "Ropa",
+      "subcat": "",
+      "notes": "Pulover algodonada elastizado. Importado de USA",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791647061/productos/tuc6kyfzvdr6bu69guul.jpg",
+      "precioUSD": 4,
+      "precioCUP": 3220,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Talla"
+        ],
+        "opciones": [
+          "S"
+        ]
+      },
+      "maxOpciones": {
+        "S": 1
+      },
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1789242483636
+    },
+    {
+      "id": "p_1791837295509",
+      "codigo": "SJU6",
+      "name": "Pulover de hombre \"Memes\"",
+      "cat": "Ropa",
+      "subcat": "",
+      "notes": "Tela algodonada elastizada",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791837241/productos/vdywxkkwybohpohuv44k.jpg",
+      "precioUSD": 5,
+      "precioCUP": 4025,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Talla"
+        ],
+        "opciones": [
+          "S",
+          "M"
+        ]
+      },
+      "maxOpciones": {
+        "S": 1,
+        "M": 1
+      },
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1791837295509
+    },
+    {
+      "id": "p_1791836928935",
+      "codigo": "KAVV",
+      "name": "Pulover de hombre letra \"J'",
+      "cat": "Ropa",
+      "subcat": "",
+      "notes": "Tela algodonada elastizada",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791836834/productos/dd4oggnothhnu08vqclx.jpg",
+      "precioUSD": 5,
+      "precioCUP": 4025,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Talla"
+        ],
+        "opciones": [
+          "S"
+        ]
+      },
+      "maxOpciones": {
+        "S": 1
+      },
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1791836928935
+    },
+    {
       "id": "p_1791836377621",
       "codigo": "8QV7",
-      "name": "Pulover de hombre 1",
+      "name": "Pulover linea lateral",
       "cat": "Ropa",
       "subcat": "",
       "notes": "Tela elastizada de alta calidad",
@@ -4952,166 +5037,9 @@
       "creado": 1791836377621
     },
     {
-      "id": "p_1791836928935",
-      "codigo": "KAVV",
-      "name": "Pulover de hombre 2",
-      "cat": "Ropa",
-      "subcat": "",
-      "notes": "Tela algodonada elastizada",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791836834/productos/dd4oggnothhnu08vqclx.jpg",
-      "precioUSD": 5,
-      "precioCUP": 4025,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "variantes": {
-        "ejes": [
-          "Talla"
-        ],
-        "opciones": [
-          "S"
-        ]
-      },
-      "maxOpciones": {
-        "S": 1
-      },
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1791836928935
-    },
-    {
-      "id": "p_1789240844908",
-      "codigo": "N53J",
-      "name": "Pulover de hombre 3",
-      "cat": "Ropa",
-      "subcat": "",
-      "notes": "Pulover de poliéster elastizado. Importado de USA",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789240755/productos/isanspupljjdhuye6xbo.jpg",
-      "precioUSD": 4,
-      "precioCUP": 3220,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "variantes": {
-        "ejes": [
-          "Talla"
-        ],
-        "opciones": [
-          "S"
-        ]
-      },
-      "maxOpciones": {
-        "S": 1
-      },
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1789240844908
-    },
-    {
-      "id": "p_1789242483636",
-      "codigo": "AY6T",
-      "name": "Pulover de hombre 4",
-      "cat": "Ropa",
-      "subcat": "",
-      "notes": "Pulover algodonada elastizado. Importado de USA",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791647061/productos/tuc6kyfzvdr6bu69guul.jpg",
-      "precioUSD": 4,
-      "precioCUP": 3220,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "variantes": {
-        "ejes": [
-          "Talla"
-        ],
-        "opciones": [
-          "S"
-        ]
-      },
-      "maxOpciones": {
-        "S": 1
-      },
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1789242483636
-    },
-    {
-      "id": "p_1791837243848",
-      "codigo": "EQT3",
-      "name": "Pulover de hombre 6",
-      "cat": "Ropa",
-      "subcat": "",
-      "notes": "Tela algodonada elastizada",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791837152/productos/x2kz8q6dt0faiuzc7ad4.jpg",
-      "precioUSD": 5,
-      "precioCUP": 4025,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "variantes": {
-        "ejes": [
-          "Talla"
-        ],
-        "opciones": [
-          "XL"
-        ]
-      },
-      "maxOpciones": {
-        "XL": 1
-      },
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1791837243848
-    },
-    {
-      "id": "p_1791837295509",
-      "codigo": "SJU6",
-      "name": "Pulover de hombre 7",
-      "cat": "Ropa",
-      "subcat": "",
-      "notes": "Tela algodonada elastizada",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791837241/productos/vdywxkkwybohpohuv44k.jpg",
-      "precioUSD": 5,
-      "precioCUP": 4025,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "variantes": {
-        "ejes": [
-          "Talla"
-        ],
-        "opciones": [
-          "S",
-          "M"
-        ]
-      },
-      "maxOpciones": {
-        "S": 1,
-        "M": 1
-      },
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1791837295509
-    },
-    {
       "id": "p_1789241914026",
       "codigo": "KHXC",
-      "name": "Pulover Unisex Navideño 1",
+      "name": "Pulover Unisex Navideño \"JESÚS\"",
       "cat": "Ropa",
       "subcat": "",
       "notes": "Pulover algodonada elastizado . Importado de USA",
@@ -5140,9 +5068,40 @@
       "creado": 1789241914026
     },
     {
+      "id": "p_1789242386934",
+      "codigo": "D5K2",
+      "name": "Pulover Unisex Navideño \"Muñecos de Nieve\"",
+      "cat": "Ropa",
+      "subcat": "",
+      "notes": "Pulover algodonada elastizado. Importado de USA",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791647059/productos/tivxwdhtdakn1ru5sjij.jpg",
+      "precioUSD": 4,
+      "precioCUP": 3220,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Talla"
+        ],
+        "opciones": [
+          "S"
+        ]
+      },
+      "maxOpciones": {
+        "S": 1
+      },
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1789242386935
+    },
+    {
       "id": "p_1789242333082",
       "codigo": "4QLL",
-      "name": "Pulover Unisex Navideño 2",
+      "name": "Pulover Unisex Navideño \"Somos Familia\"",
       "cat": "Ropa",
       "subcat": "",
       "notes": "Pulover algodonada elastizado. Importado de USA",
@@ -5172,37 +5131,6 @@
       },
       "envioGratis": true,
       "creado": 1789242333083
-    },
-    {
-      "id": "p_1789242386934",
-      "codigo": "D5K2",
-      "name": "Pulover Unisex Navideño 3",
-      "cat": "Ropa",
-      "subcat": "",
-      "notes": "Pulover algodonada elastizado. Importado de USA",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791647059/productos/tivxwdhtdakn1ru5sjij.jpg",
-      "precioUSD": 4,
-      "precioCUP": 3220,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "variantes": {
-        "ejes": [
-          "Talla"
-        ],
-        "opciones": [
-          "S"
-        ]
-      },
-      "maxOpciones": {
-        "S": 1
-      },
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1789242386935
     },
     {
       "id": "p_1788792642568",
@@ -5483,47 +5411,9 @@
       "creado": 1787458002425
     },
     {
-      "id": "p_1788151078303",
-      "codigo": "EYNJ",
-      "name": "Relojes digitales de niños 1",
-      "cat": "Niños",
-      "subcat": "",
-      "notes": "Hermosos diseños y colores.\nTodos exepto el negro🐼 y el beige 🐿️",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792238033/productos/gklefbybffulzxh47bvy.jpg",
-      "precioUSD": 1.86,
-      "precioCUP": 1500,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false,
-      "variantes": {
-        "ejes": [
-          "Diseño"
-        ],
-        "opciones": [
-          "A",
-          "C",
-          "D",
-          "E",
-          "F"
-        ]
-      },
-      "maxOpciones": {
-        "A": 1,
-        "C": 1,
-        "D": 1,
-        "E": 1,
-        "F": 1
-      },
-      "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      },
-      "creado": 1788151078303
-    },
-    {
       "id": "p_1788199586927",
       "codigo": "AUAQ",
-      "name": "Relojes digitales de niños 2",
+      "name": "Relojes digitales de niños colores fuertes",
       "cat": "Niños",
       "subcat": "",
       "notes": "Hermosos diseños y colores.\nTodos disponibles a excepción del negro astronauta",
@@ -5559,25 +5449,42 @@
       "creado": 1788199586927
     },
     {
-      "id": "p_1791228478752",
-      "codigo": "PUET",
-      "name": "Rollo de papel tapiz autoadhesivo 1",
-      "cat": "Decoración",
+      "id": "p_1788151078303",
+      "codigo": "EYNJ",
+      "name": "Relojes digitales de niños colores pastel",
+      "cat": "Niños",
       "subcat": "",
-      "notes": "Diseño exacto de la imagen\nMedidas 40x300cm",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791228516/productos/wpbbxh0fkifxcm7yik1e.jpg",
-      "precioUSD": 12,
-      "precioCUP": 9660,
-      "moneda": "usd",
+      "notes": "Hermosos diseños y colores.\nTodos exepto el negro🐼 y el beige 🐿️",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792238033/productos/gklefbybffulzxh47bvy.jpg",
+      "precioUSD": 1.86,
+      "precioCUP": 1500,
+      "moneda": "cup",
       "enOferta": false,
       "destacado": false,
-      "max": 1,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
+      "variantes": {
+        "ejes": [
+          "Diseño"
+        ],
+        "opciones": [
+          "A",
+          "C",
+          "D",
+          "E",
+          "F"
+        ]
       },
-      "envioGratis": true,
-      "creado": 1791228478752
+      "maxOpciones": {
+        "A": 1,
+        "C": 1,
+        "D": 1,
+        "E": 1,
+        "F": 1
+      },
+      "envio": {
+        "corto": "🛵 Gratis desde 2,000 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
+      },
+      "creado": 1788151078303
     },
     {
       "id": "p_1791228633743",
@@ -5641,6 +5548,27 @@
       },
       "envioGratis": true,
       "creado": 1791229767371
+    },
+    {
+      "id": "p_1791228478752",
+      "codigo": "PUET",
+      "name": "Rollo de papel tapiz autoadhesivo madera negra 3m",
+      "cat": "Decoración",
+      "subcat": "",
+      "notes": "Diseño exacto de la imagen\nMedidas 40x300cm",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791228516/productos/wpbbxh0fkifxcm7yik1e.jpg",
+      "precioUSD": 12,
+      "precioCUP": 9660,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "max": 1,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1791228478752
     },
     {
       "id": "p_1785875419963",
@@ -5816,7 +5744,7 @@
     {
       "id": "p_1790975712067",
       "codigo": "DQCT",
-      "name": "Soporte de sel con brazo flexible 2",
+      "name": "Soporte de sel con brazo flexible y pinzas",
       "cat": "Bocinas Celulares y Accesorios",
       "subcat": "",
       "notes": "",
@@ -6152,7 +6080,7 @@
     {
       "id": "p_1789219477837",
       "codigo": "62JK",
-      "name": "Vestido largo 1",
+      "name": "Vestido largo hombro cubierto",
       "cat": "Ropa",
       "subcat": "",
       "notes": "Vestido largo de moda y elegante con estampado vintage para mujer, cuello en V y manga corta.",
@@ -6186,7 +6114,7 @@
     {
       "id": "p_1789221251954",
       "codigo": "SGL2",
-      "name": "Vestido largo 2",
+      "name": "Vestido largo manga de tirantes",
       "cat": "Ropa",
       "subcat": "",
       "notes": "Vestido de línea A con estampado floral y cuello en V - Diseño transpirable y suelto de manga corta - Ideal para la ropa de primavera y verano",
