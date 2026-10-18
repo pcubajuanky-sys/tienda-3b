@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-17T19:30:27.317Z",
+  "generado": "2026-10-18T00:41:28.197Z",
   "tasa": 805,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -424,6 +424,11 @@
         "id": "mueble-plastico-de-5-niveles",
         "nombre": "mueble plástico de 5 niveles",
         "lb": 7.6
+      },
+      {
+        "id": "cinturon-ancho",
+        "nombre": "cinturón ancho",
+        "lb": 0.2
       }
     ],
     "ejemplos": [
@@ -1632,6 +1637,32 @@
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
       },
       "creado": 1788049609744
+    },
+    {
+      "id": "p_1792276934627",
+      "codigo": "YAYM",
+      "name": "Cinto negro ancho",
+      "cat": "Accesorio de vestir",
+      "subcat": "",
+      "notes": "Elegante cinto ancho de mujer. Solo el color y diseño de la imagen.\nMedidas: 7.5cm de ancho, 64cm de circunferencia (expandible,es elastizado)",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792276630/productos/oqbostrsrlybcb4zchpz.jpg",
+      "precioUSD": 4,
+      "precioCUP": 3220,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792279158/productos/pfsk6vwpmajc5psqm55y.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792279173/productos/wpdck0cpuvifqy4ndf1g.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792279177/productos/q7ukohevdahntd7mmjwp.jpg"
+      ],
+      "max": 2,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1792276934627
     },
     {
       "id": "p_1786998526143",
