@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-18T00:41:28.197Z",
+  "generado": "2026-10-18T01:00:44.369Z",
   "tasa": 805,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -78,6 +78,10 @@
     {
       "code": "YPUD8",
       "nombre": "Sahel González"
+    },
+    {
+      "code": "CXESR",
+      "nombre": "Yohanset"
     }
   ],
   "categorias": [
