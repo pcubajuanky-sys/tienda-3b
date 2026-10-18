@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-18T01:00:44.369Z",
+  "generado": "2026-10-18T01:04:05.236Z",
   "tasa": 805,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -82,6 +82,10 @@
     {
       "code": "CXESR",
       "nombre": "Yohanset"
+    },
+    {
+      "code": "QGZUQ",
+      "nombre": "Alejandro"
     }
   ],
   "categorias": [
