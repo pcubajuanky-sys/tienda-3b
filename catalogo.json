@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-18T11:41:59.027Z",
+  "generado": "2026-10-18T15:55:30.905Z",
   "tasa": 805,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -86,6 +86,10 @@
     {
       "code": "QGZUQ",
       "nombre": "Alejandro"
+    },
+    {
+      "code": "45UGF",
+      "nombre": "Abianka"
     }
   ],
   "categorias": [
@@ -694,7 +698,7 @@
     {
       "id": "p_1786921885931",
       "codigo": "5HP4",
-      "name": "Abrigo de Chihuahua 1",
+      "name": "Abrigo de Chihuahua de rayas rosas ra",
       "cat": "Mascotas",
       "subcat": "",
       "notes": "Abrigo de perrito pequeño, dígase Chihuahua, ratonero o alguna raza sobre esa talla\nTela gruesa y esponjosa",
@@ -717,7 +721,7 @@
     {
       "id": "p_1786921926228",
       "codigo": "NRMB",
-      "name": "Abrigo de Chihuahua 2",
+      "name": "Abrigo de Chihuahua de rayas rosas y moradas",
       "cat": "Mascotas",
       "subcat": "",
       "notes": "Abrigo de perrito pequeño, dígase Chihuahua, ratonero o alguna raza sobre esa talla\nTela gruesa y esponjosa",
@@ -798,36 +802,6 @@
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
       },
       "creado": 1785092425019
-    },
-    {
-      "id": "p_1788814692844",
-      "codigo": "C76G",
-      "name": "Ajusta invisible sin tirantes",
-      "cat": "Ropa Interior",
-      "subcat": "",
-      "notes": "Útil e imprescindible prenda, reutilizable y comoda. Brinda un soporte muy estético a pechos sin importar talla,forma o edad.Colores disponibles, beige y negro.",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788814263/productos/xfb4sbqzmvfcc9cdrndb.jpg",
-      "precioUSD": 2,
-      "precioCUP": 1610,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "variantes": {
-        "ejes": [
-          "Color"
-        ],
-        "opciones": [
-          "NEGRO"
-        ]
-      },
-      "maxOpciones": {
-        "NEGRO": 2
-      },
-      "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      },
-      "creado": 1788814692844
     },
     {
       "id": "p_1787498809174",
@@ -2225,7 +2199,7 @@
     {
       "id": "p_1791773820151",
       "codigo": "UZZC",
-      "name": "Gafas Cristal Transparente 🖤🤍🩷",
+      "name": "Gafas Cristal Transparente CLÁSICAS",
       "cat": "Accesorio de vestir",
       "subcat": "",
       "notes": "Gafas para uso nocturno con cristal anti luz azul. Ideal para el uso constante de pantallas como celular, televisor, laptop etc.. Hermoso y elegante accesorio para salidas,fotos y eventos",
@@ -2260,7 +2234,7 @@
     {
       "id": "p_1791773233689",
       "codigo": "DTBS",
-      "name": "Gafas cristal transparente 🤍🤎🖤",
+      "name": "Gafas cristal transparente TIPO RYBAN",
       "cat": "Accesorio de vestir",
       "subcat": "",
       "notes": "Gafas para uso nocturno con cristal anti luz azul. Ideal para el uso constante de pantallas como celular, televisor, laptop etc.. Hermoso y elegante accesorio para salidas,fotos y eventos",
@@ -2299,12 +2273,33 @@
       "cat": "Accesorio de vestir",
       "subcat": "",
       "notes": "Tamaño mediano. Modelo ideal tanto para hombres como para mujeres\nDisponibles todos los diseños de la imagen",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785957431/productos/fn1lmdu4xjjryicw7f7t.jpg",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792326212/productos/oykcu5rbvo0c6m2dgqvm.jpg",
       "precioUSD": 2,
       "precioCUP": 1610,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Diseño"
+        ],
+        "opciones": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F"
+        ]
+      },
+      "maxOpciones": {
+        "A": 3,
+        "B": 5,
+        "C": 1,
+        "D": 9,
+        "E": 2,
+        "F": 1
+      },
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
@@ -4120,6 +4115,27 @@
       "creado": 1791650740477
     },
     {
+      "id": "p_1791230489738",
+      "codigo": "2WU6",
+      "name": "Paquete de 52 Globos graciosos",
+      "cat": "Decoración",
+      "subcat": "",
+      "notes": "Originales,coloridos, únicos y graciosos globos infantiles. Lo mejor para decoración de fiestas y para juegos",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791230365/productos/kqklyqnajcdquugbjx9c.jpg",
+      "precioUSD": 8,
+      "precioCUP": 6440,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "max": 1,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1791230489738
+    },
+    {
       "id": "p_1780609726389",
       "codigo": "NB4J",
       "name": "Paquete de 6 ariposas Brillantes",
@@ -4340,6 +4356,27 @@
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
       },
       "creado": 1788234402388
+    },
+    {
+      "id": "p_1785868358275",
+      "codigo": "MSVP",
+      "name": "Pareja de lámparas de exterior (Solares)",
+      "cat": "Decoración",
+      "subcat": "",
+      "notes": "Lámparas de carga solar con panel incluí. Luces leds de alta potencia con sensor de movimiento y mando a distancia para diferentes modalidades\nSoporte y tornillos incluidos",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785868228/productos/spulocyysctmceshiooa.jpg",
+      "precioUSD": 25,
+      "precioCUP": 20125,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "max": 1,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1785868358275
     },
     {
       "id": "p_1791633427118",
@@ -5489,7 +5526,7 @@
     {
       "id": "p_1791228633743",
       "codigo": "NC68",
-      "name": "Rollo de papel tapiz autoadhesivo 2",
+      "name": "Rollo de papel tapiz autoadhesivo 5m",
       "cat": "Decoración",
       "subcat": "",
       "notes": "Diseño exacto de la imagen\nMedias 40x500cm",
@@ -5506,48 +5543,6 @@
       },
       "envioGratis": true,
       "creado": 1791228633743
-    },
-    {
-      "id": "p_1791228936507",
-      "codigo": "32B8",
-      "name": "Rollo de papel tapiz autoadhesivo 4",
-      "cat": "Decoración",
-      "subcat": "",
-      "notes": "Diseño exacto de la imagen\nMedias 40x1000cm",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791228873/productos/fj7to0y16532rq21z6uw.jpg",
-      "precioUSD": 40,
-      "precioCUP": 32200,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "max": 1,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1791228936507
-    },
-    {
-      "id": "p_1791229767371",
-      "codigo": "SRDL",
-      "name": "Rollo de papel tapiz autoadhesivo 5",
-      "cat": "Decoración",
-      "subcat": "",
-      "notes": "Diseño exacto de la imagen\nMedias 80x250cm",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791229652/productos/hhxeyvyrb0hcng01zuid.jpg",
-      "precioUSD": 12,
-      "precioCUP": 9660,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "max": 1,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1791229767371
     },
     {
       "id": "p_1791228478752",
@@ -5569,6 +5564,48 @@
       },
       "envioGratis": true,
       "creado": 1791228478752
+    },
+    {
+      "id": "p_1791228936507",
+      "codigo": "32B8",
+      "name": "Rollo de papel tapiz autoadhesivo Mármol Gris",
+      "cat": "Decoración",
+      "subcat": "",
+      "notes": "Diseño exacto de la imagen\nMedias 40x1000cm",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791228873/productos/fj7to0y16532rq21z6uw.jpg",
+      "precioUSD": 40,
+      "precioCUP": 32200,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "max": 1,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1791228936507
+    },
+    {
+      "id": "p_1791229767371",
+      "codigo": "SRDL",
+      "name": "Rollo de papel tapiz autoadhesivo Mármol negro",
+      "cat": "Decoración",
+      "subcat": "",
+      "notes": "Diseño exacto de la imagen\nMedias 80x250cm",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791229652/productos/hhxeyvyrb0hcng01zuid.jpg",
+      "precioUSD": 12,
+      "precioCUP": 9660,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "max": 1,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1791229767371
     },
     {
       "id": "p_1785875419963",
@@ -6019,7 +6056,7 @@
     {
       "id": "p_1780277915922",
       "codigo": "U8DN",
-      "name": "Ventilador recargable",
+      "name": "Ventilador recargable Camping Fan",
       "cat": "Electrodomésticos",
       "subcat": "",
       "notes": "• Giro(90° y 45°)\n• Mando a distancia\n• Función Power Bank\n• Luces\n• Modo nocturno\n• Temporizador\n• Batería de 20mil mAh\nhaga su encargo con dirección exacta y se le hace llegar a la comodidad de su hogar Mensajería gratis, (Rebajas para compras mayores a 1 unidad)",
