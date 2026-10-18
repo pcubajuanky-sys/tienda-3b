@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-18T15:55:30.905Z",
+  "generado": "2026-10-18T21:01:10.135Z",
   "tasa": 805,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -441,6 +441,11 @@
         "id": "cinturon-ancho",
         "nombre": "cinturón ancho",
         "lb": 0.2
+      },
+      {
+        "id": "plancha-para-hacer-barquillos",
+        "nombre": "plancha para hacer barquillos",
+        "lb": 2.4
       }
     ],
     "ejemplos": [
@@ -1728,7 +1733,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 3,
+      "max": 2,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -2668,6 +2673,31 @@
       },
       "envioGratis": true,
       "creado": 1791140326794
+    },
+    {
+      "id": "p_1792342171217",
+      "codigo": "F6BK",
+      "name": "Kit de afeitado y corte de cabellos",
+      "cat": "Electrodomésticos",
+      "subcat": "",
+      "notes": "Kit de afeitado y corte de pelo para hombre de 2 piezas. Set de caja de regalo para el Día de San Valentín. Recargable por USB. Regalo para novio, regalo del Día del Padre, regalo de cumpleaños, regalo de festividades",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792341997/productos/rg0wr66xuc6n2x4rcb4n.jpg",
+      "precioUSD": 25,
+      "precioCUP": 20125,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792341999/productos/bnzaad1nlvoqich44qrs.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792342004/productos/t3ipcza2lvkejwsgv68u.jpg"
+      ],
+      "max": 2,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1792342171217
     },
     {
       "id": "p_1782259495565",
@@ -4760,6 +4790,32 @@
       "creado": 1788842619496
     },
     {
+      "id": "p_1789488822597",
+      "codigo": "MNJC",
+      "name": "Plancha para hacer barquillos",
+      "cat": "Electrodomésticos",
+      "subcat": "",
+      "notes": "Plancha antiadherente para hacer barquillos,tabaquitos, cesticas y demás.",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789488621/productos/ruwvkfvlywf73grlk01m.jpg",
+      "precioUSD": 30,
+      "precioCUP": 24150,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792356818/productos/gipz8bvnsfpghb0tbphk.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792356824/productos/vq75aao5kwjnpaoxzc39.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792356829/productos/onv8dh8zmiyni4yo6nu6.jpg"
+      ],
+      "max": 1,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1789488822597
+    },
+    {
       "id": "p_1785092176064",
       "codigo": "PUJL",
       "name": "PopSockets",
@@ -5394,7 +5450,6 @@
         ],
         "opciones": [
           "A",
-          "C",
           "D",
           "E",
           "H"
@@ -5402,7 +5457,6 @@
       },
       "maxOpciones": {
         "A": 1,
-        "C": 1,
         "D": 1,
         "E": 2,
         "H": 1
@@ -5698,6 +5752,33 @@
       "precioNormalCUP": 9660
     },
     {
+      "id": "p_1792340423078",
+      "codigo": "7W2G",
+      "name": "Secador de pelo iónico de 1875W para salón profesional",
+      "cat": "Electrodomésticos",
+      "subcat": "",
+      "notes": "Secador de pelo iónico de 1875W para salón profesional y uso doméstico, 3 niveles de calor/2 velocidades con función Cool Shot, regalo para el Día de la Madre/Navidad para mujeres, negro",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792340203/productos/dgx1nkuhaansb4rmo93y.jpg",
+      "precioUSD": 42,
+      "precioCUP": 33810,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792340210/productos/gvklxkgqwn06hbvqg3km.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792340226/productos/ys0xuzi23aak9ulkcgla.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792340234/productos/nupp5xz7k67xrnv0tn0u.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792340240/productos/ekgsj2hbfjnmt7pys9ti.jpg"
+      ],
+      "max": 1,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1792340423078
+    },
+    {
       "id": "p_1782259924259",
       "codigo": "5MDP",
       "name": "Sérum 5en1",
@@ -5810,6 +5891,42 @@
       },
       "envioGratis": true,
       "creado": 1790975712068
+    },
+    {
+      "id": "p_1788546447070",
+      "codigo": "G2DK",
+      "name": "Tablet de niñ@",
+      "cat": "Bocinas Celulares y Accesorios",
+      "subcat": "",
+      "notes": "Solo en Rosado con temática de astronauta. Incluye su cable de carga, un juego de audífonos de cable y un protector con sistema de apollo para mesa y para mejor sostén manual\nCaracterísticas:\nAndroid 14\n7 pulgadas\nWifi 5G\nBatería de gran Capacidad 4500mAh\nDoble camara\n4GB de ram\n128GB de almacenamiento\nPantalla IPS HD de 1280*800 de resolución",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792339393/productos/b1fvmkoxhizq7dxdooug.jpg",
+      "precioUSD": 58,
+      "precioCUP": 46690,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792339401/productos/snew9r5evw9j2ify38s8.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792339412/productos/wc12g84wqbwyzhrezqnt.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792339437/productos/l96ouuk8bbvlayyrr9d4.jpg"
+      ],
+      "variantes": {
+        "ejes": [
+          "Color"
+        ],
+        "opciones": [
+          "AZUL"
+        ]
+      },
+      "maxOpciones": {
+        "AZUL": 2
+      },
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1788546447071
     },
     {
       "id": "p_1785533206456",
