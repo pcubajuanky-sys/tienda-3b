@@ -163,10 +163,19 @@ test('se cierra de arriba abajo, nunca al reves', () => {
   assert.deepStrictEqual(t.cerrar, ['carrito', 'ficha:p1']);
 });
 
+// 🔴 Aqui se comprueba el LARGO y no se compara con deepStrictEqual contra un objeto
+// o un array literal: cuando los argumentos son undefined, el `[]` nace DENTRO del
+// sandbox de node:vm y no es el mismo Array que el del test, asi que deepStrictEqual
+// falla aunque el modulo este bien. (En los tests de mas arriba si vale: alli el array
+// sale de `.filter()` sobre el que le pasa el test, o sea del mismo realm.)
 test('argumentos ausentes o basura no revientan', () => {
-  assert.deepStrictEqual(transicion(undefined, undefined), { cerrar: [], abrir: [] });
+  const vacia = transicion(undefined, undefined);
+  assert.strictEqual(vacia.cerrar.length, 0);
+  assert.strictEqual(vacia.abrir.length, 0);
   assert.strictEqual(rutaDe(undefined, undefined), '/');
-  assert.deepStrictEqual(transicion([null], [null]), { cerrar: [], abrir: [] });
+  const nula = transicion([null], [null]);
+  assert.strictEqual(nula.cerrar.length, 0);
+  assert.strictEqual(nula.abrir.length, 0);
 });
 ```
 
