@@ -97,14 +97,32 @@ se tocó**.
 
 `node --check app.js` y `node --check encargos.js`: exit 0, sin salida.
 
-⚠ **Una ejecución suelta dio 99/100**, la inmediatamente posterior al `git merge` que trajo
-del remoto 81 commits de datos (1.567 líneas de `catalogo.json` reescritas, más `sitemap.xml`
-y `taxi.json`). **No se capturó qué test fue** — el filtro de la salida se comió el detalle —
-así que no se afirma cuál. **No se ha reproducido en las 4 ejecuciones siguientes**, todas
-100/100. Hipótesis razonable y no comprobada: contención de disco en una máquina de 3,9 GB
-de RAM mientras el merge aún asentaba los archivos. Si vuelve a verse un 99/100 en esta
-batería, **captura la salida entera a un archivo antes de filtrarla** y mira el nombre del
-test: puede haber un test inestable que convenga arreglar.
+### 🔴 Hallazgo aparte: la batería BORRA un archivo versionado del repo
+
+Una ejecución dio **99/100**, la inmediatamente posterior al `git merge` que trajo del remoto
+81 commits de datos. Parecía inestabilidad; **no lo era, es determinista**, y la causa está en
+`test/producto.test.js`:
+
+- **línea 96:** `assert.strictEqual(fs.existsSync('precios-gestores.json'), false, 'borra ese
+  archivo antes de correr los tests')` — el test **falla si el archivo existe**.
+- **línea 122:** otro test lo crea con `fs.writeFileSync` y lo elimina con `fs.unlinkSync`.
+
+Secuencia exacta de lo ocurrido: el merge trajo `precios-gestores.json` del remoto (existe allí
+y vale `{}`) → la primera ejecución de la batería lo encontró y **falló** → esa misma ejecución
+lo **borró** → las cuatro siguientes dieron 100/100 porque ya no estaba.
+
+Dos consecuencias, las dos reales:
+
+1. **La primera batería después de cualquier clonado, merge o `git checkout` que traiga ese
+   archivo falla**, y el mensaje del test («borra ese archivo antes de correr los tests») suena
+   a instrucción para una persona, no a un defecto.
+2. **La batería deja el árbol sucio con un borrado**, y ese borrado es fácil de commitear sin
+   querer: quitaría de producción un archivo que `app.js`, `api/producto.js` y `sw.js` piden.
+   Aquí se restauró con `git checkout -- precios-gestores.json` y se comprobó que en
+   `origin/main` sigue intacto.
+
+**Pendiente, fuera del alcance de este trabajo:** que esos dos tests usen un archivo temporal
+o restauren el original, en vez de operar sobre el del repo.
 
 ### En el navegador, a 375 px
 
@@ -136,22 +154,36 @@ por encima de «Ver todo el catálogo», con su subtítulo, sin desborde a 375 p
 - **El gesto «atrás» en un teléfono de verdad.** Todo se probó en Chrome de escritorio
   con el viewport emulado a 375×812 y `history.back()` por consola. El botón físico de
   Android y el gesto de deslizar desde el borde en iOS **no se han probado**.
-- **Cómo acabó en producción.** Ruth pidió fusionar a `main` y hacer `push`. El clon local
-  estaba **81 commits por detrás** del remoto: todos de datos (`catalogo.json`,
-  `sitemap.xml`, `taxi.json`, `precios-gestores.json` publicados por Stock+ desde el 15/10),
-  **ni una línea de código**, así que se integraron con `git merge` —no rebase, para no
-  reescribir los SHAs que cita este informe— sin un solo conflicto. El despliegue de Vercel
-  que dispara ese push **no se ha visto terminar ni se ha comprobado el sitio en vivo desde
-  esta sesión**: hay que mirarlo.
-- 🔴 **La primera visita tras el despliegue sigue corriendo el código viejo** (el service
-  worker viejo sirve su caché mientras el nuevo se instala). Hace falta **una segunda
-  carga**. Si Ruth dice «no veo el cambio», que recargue otra vez antes de dudar del
-  arreglo.
 - **El sub-caso «vaciar la parrilla solo con el chip 🛵»** no se pudo provocar: con 137
   productos de mensajería gratis la parrilla nunca queda vacía solo con el chip. Lo que
   sí se comprobó es lo que importa: sin texto en el buscador, el botón no aparece.
 - **El modal de encargos y el recuadro de gestor siguen fuera del historial**: el «atrás»
   no los cierra. Fue una decisión del plan, no un olvido.
+
+## Desplegado y verificado en producción
+
+Ruth pidió fusionar a `main` y hacer `push`. El clon local estaba **81 commits por detrás**
+del remoto: todos de datos (`catalogo.json`, `sitemap.xml`, `taxi.json`,
+`precios-gestores.json`, publicados por Stock+ desde el 15/10), **ni una línea de código**,
+así que se integraron con `git merge` —no rebase, para no reescribir los SHAs que cita este
+informe— sin un solo conflicto. Publicado en `origin/main` (`0e49296..5672366`).
+
+**Comprobado en `https://www.3bqba.com` a 375 px, con el código nuevo ya en marcha:**
+
+| Comprobación | Resultado |
+|---|---|
+| Caché del service worker | `tienda-3b-v13` |
+| `cerrarDetalle.toString()` | contiene `pedirCierreCapa` → **corre el código nuevo** |
+| Abrir una ficha | URL `/` → `/p/5HP4`, `history.length` 1 → 2 |
+| «Atrás» con la ficha abierta | ficha cerrada, URL `/`, **sigue en la tienda** |
+| Buscar «televisor plasma» | «Pregúntanos por «televisor plasma»» → `api.whatsapp.com` |
+
+🔴 **El desfase del service worker se vio en vivo, tal como lo avisa el `CLAUDE.md`:** en la
+primera carga tras el despliegue la caché seguía en `v12` y `cerrarDetalle` era **el viejo**,
+con el `replaceState` que este trabajo elimina. Hizo falta **otra recarga** para que entrara
+el código nuevo. Si Ruth dice «no veo el cambio», que recargue otra vez antes de dudar del
+arreglo; y para comprobarlo, `cerrarDetalle.toString()` en la consola, no el `curl` del
+archivo (el `curl` ya traía lo nuevo mientras la página ejecutaba lo viejo).
 
 ## Lo que sigue pendiente (y era pendiente antes)
 
@@ -161,10 +193,5 @@ por encima de «Ver todo el catálogo», con su subtítulo, sin desborde a 375 p
 - Solo 20 de los 232 productos tienen fotos extra: la galería de 4 fotos está vacía en el
   91 % del catálogo. Eso es trabajo en el panel de Stock+, no en la tienda.
 
-## Si hay que desplegar
-
-Lo decide Ruth: es un `git push` del repo de la tienda tras fusionar la rama. Cuando se
-haga, la **primera** visita todavía corre el código viejo (el service worker viejo sirve
-su caché mientras el nuevo se instala); hace falta una segunda carga. Antes de dudar del
-cambio, mirar en la consola qué código corre de verdad con `cerrarDetalle.toString()`,
-no solo el `curl` del archivo.
+- 🔴 **La batería borra `precios-gestores.json`** (ver el hallazgo de arriba): dos tests de
+  `test/producto.test.js` deberían usar un archivo temporal en vez del del repo.
