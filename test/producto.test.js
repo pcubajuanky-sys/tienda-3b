@@ -2,7 +2,7 @@
 // Finge el req/res de Vercel: la funcion es sincrona, asi que basta con llamarla.
 // Se corren DESDE LA RAIZ del repo (la funcion lee index.html y catalogo.json
 // relativos a process.cwd()).
-const test = require('node:test');
+const { test, after } = require('node:test');
 const assert = require('node:assert');
 const fs = require('fs');
 const handler = require('../api/producto');
@@ -89,38 +89,66 @@ test('la pagina de producto fija la base en la raiz', () => {
   assert.ok(r.cuerpo.includes('<base href="/">'), 'falta la etiqueta base');
 });
 
-// El archivo de precios por gestor NO está en el repo (lo publica Stock+), así que estos
-// tests lo escriben, prueban y lo borran. `cacheGest` del handler se cachea en el primer
-// uso: por eso el test del archivo AUSENTE va antes de escribirlo.
+// precios-gestores.json SI esta en el repo: Stock+ lo publica por GitHub (hoy vale {}) y
+// lo piden app.js, api/producto.js y sw.js. Estos tests NUNCA lo borran ni lo cambian de
+// forma permanente: guardan sus bytes exactos, lo apartan o lo sobrescriben mientras dura
+// la prueba y lo restauran siempre (en un finally y, de red, en after()). Si no existia,
+// se queda sin existir.
+// `cacheGest` del handler se cachea en el primer uso: por eso cada prueba que cambia el
+// archivo recarga el handler con un require.cache limpio.
+const ARCHIVO = 'precios-gestores.json';
+const ORIGINAL = fs.existsSync(ARCHIVO) ? fs.readFileSync(ARCHIVO) : null;   // Buffer exacto o null
+
+function restaurarArchivo() {
+  if (ORIGINAL !== null) fs.writeFileSync(ARCHIVO, ORIGINAL);
+  else if (fs.existsSync(ARCHIVO)) fs.unlinkSync(ARCHIVO);
+}
+
+function handlerLimpio() {
+  delete require.cache[require.resolve('../api/producto')];
+  delete require.cache[require.resolve('../api/_og')];
+  return require('../api/producto');
+}
+
+function pedirCon(h, query) {
+  const res = {
+    statusCode: 0, cabeceras: {}, cuerpo: '',
+    setHeader(k, v) { this.cabeceras[String(k).toLowerCase()] = v; },
+    end(b) { this.cuerpo = b == null ? '' : String(b); },
+  };
+  h({ query: query, url: '/api/producto' }, res);
+  return res;
+}
+
+// Red de seguridad: pase lo que pase en los tests, el repo queda como estaba.
+after(() => { restaurarArchivo(); handlerLimpio(); });
+
 test('sin precios-gestores.json la pagina sale normal, con el precio de la casa', () => {
-  assert.strictEqual(fs.existsSync('precios-gestores.json'), false, 'borra ese archivo antes de correr los tests');
-  const r = pedir({ c: UNO.codigo, ref: 'ELA' });
-  assert.strictEqual(r.statusCode, 200);
-  assert.ok(r.cuerpo.includes(String(UNO.precioCUP)) || r.cuerpo.includes(UNO.precioCUP.toLocaleString('en-US')));
+  try {
+    if (fs.existsSync(ARCHIVO)) fs.unlinkSync(ARCHIVO);   // apartado: se restaura abajo
+    const h = handlerLimpio();                            // sin cacheGest de pruebas anteriores
+    assert.strictEqual(fs.existsSync(ARCHIVO), false, 'el archivo deberia estar ausente en esta prueba');
+    const r = pedirCon(h, { c: UNO.codigo, ref: 'ELA' });
+    assert.strictEqual(r.statusCode, 200);
+    assert.ok(r.cuerpo.includes(String(UNO.precioCUP)) || r.cuerpo.includes(UNO.precioCUP.toLocaleString('en-US')));
+  } finally {
+    restaurarArchivo();
+    handlerLimpio();
+  }
 });
 
 test('con precios-gestores.json la tarjeta lleva el precio del gestor', () => {
   const cod = String(UNO.codigo).toUpperCase();
   const tabla = { ELA: {} };
   tabla.ELA[cod] = { u: Math.round(UNO.precioUSD * 1.5 * 100) / 100, c: UNO.precioCUP * 2 };
-  fs.writeFileSync('precios-gestores.json', JSON.stringify(tabla));
   try {
-    // El handler ya cacheó `null` en el test anterior: se recarga en un proceso limpio.
-    delete require.cache[require.resolve('../api/producto')];
-    delete require.cache[require.resolve('../api/_og')];
-    const limpio = require('../api/producto');
-    const res = {
-      statusCode: 0, cabeceras: {}, cuerpo: '',
-      setHeader(k, v) { this.cabeceras[String(k).toLowerCase()] = v; },
-      end(b) { this.cuerpo = b == null ? '' : String(b); },
-    };
-    limpio({ query: { c: UNO.codigo, ref: 'ELA' }, url: '/api/producto' }, res);
+    fs.writeFileSync(ARCHIVO, JSON.stringify(tabla));
+    const r = pedirCon(handlerLimpio(), { c: UNO.codigo, ref: 'ELA' });
     const esperado = (UNO.precioCUP * 2).toLocaleString('en-US');
-    assert.ok(res.cuerpo.includes(esperado) || res.cuerpo.includes(String(UNO.precioCUP * 2)),
+    assert.ok(r.cuerpo.includes(esperado) || r.cuerpo.includes(String(UNO.precioCUP * 2)),
       'la tarjeta no lleva el precio del gestor');
   } finally {
-    fs.unlinkSync('precios-gestores.json');
-    delete require.cache[require.resolve('../api/producto')];
-    delete require.cache[require.resolve('../api/_og')];
+    restaurarArchivo();
+    handlerLimpio();
   }
 });
