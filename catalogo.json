@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-19T21:28:14.593Z",
+  "generado": "2026-10-19T21:48:11.082Z",
   "tasa": 815,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -1663,7 +1663,6 @@
         ],
         "opciones": [
           "A",
-          "B",
           "C",
           "D",
           "E",
@@ -1673,7 +1672,6 @@
       },
       "maxOpciones": {
         "A": 1,
-        "B": 1,
         "C": 2,
         "D": 1,
         "E": 1,
@@ -2678,7 +2676,7 @@
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1792357434/productos/dacuvxu3bvtduzmp7e2r.jpg",
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1792357439/productos/mlgso4zkjxqkihtjureb.jpg"
       ],
-      "max": 2,
+      "max": 1,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -3246,33 +3244,6 @@
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
       },
       "creado": 1789255852332
-    },
-    {
-      "id": "p_1789506414289",
-      "codigo": "YP64",
-      "name": "Merenguera mezcladora",
-      "cat": "Electrodomésticos",
-      "subcat": "",
-      "notes": "Incluye 4 piezas de batir, la base plástica la vasija de acero inoxidable y por supuesto, la merenguera. Puede usarse en su base o de forma manual",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789506301/productos/sa7kwkxe59m4lmbtwb8f.jpg",
-      "precioUSD": 30,
-      "precioCUP": 24450,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "fotos": [
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791895132/productos/vb6paufae5wbiji3emjz.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791895143/productos/qvxxciae3tcxeubliz69.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791895150/productos/vciif8jysiykxqkk4s0u.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791895159/productos/vwoflkgrnuknzu5g9arc.jpg"
-      ],
-      "max": 1,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1789506414289
     },
     {
       "id": "p_1786916805434",
