@@ -671,6 +671,11 @@ function sincronizarCapas(destino) {
     if (c.tipo === 'carrito') mostrarCarrito(); else mostrarDetalle(c.id);
   });
   capasAbiertas = (destino || []).filter(Boolean);
+  // La ficha es UN solo modal: cerrar la de arriba lo oculta entero, aunque debajo
+  // quede otra ficha (pasa al volver atras desde "Mas de esta categoria"). Si en el
+  // destino queda una ficha y el modal esta oculto, se repinta la que toca.
+  const fichaViva = capasAbiertas.filter((c) => c.tipo === 'ficha').pop();
+  if (fichaViva && document.getElementById('modal-detalle').hidden) mostrarDetalle(fichaViva.id);
 }
 
 function abrirCapa(capa) {
