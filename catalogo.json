@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-19T20:41:31.732Z",
+  "generado": "2026-10-19T21:28:14.593Z",
   "tasa": 815,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -94,6 +94,10 @@
     {
       "code": "JZ8PU",
       "nombre": "Alejandro"
+    },
+    {
+      "code": "XPT9B",
+      "nombre": "Camilita"
     }
   ],
   "categorias": [
