@@ -533,6 +533,22 @@ function renderControles() {
   cont.hidden = ops.length < 2 && !hayEnvio;
 }
 
+// Buscó algo que no está: en vez de un callejón sin salida, un botón que abre WhatsApp
+// con lo que escribió. El destino es el mismo criterio que el del pedido —quien pone el
+// precio, atiende—: el gestor con recargo si se entró por su página, y si no, la casa.
+function pintarPregunta(termino) {
+  const caja = document.getElementById('vacio-pregunta');
+  if (!caja) return;
+  const t = window.Faltante.limpiar(termino);
+  const destino = (gestorRecargo && gestorRecargo.telPublico) || (CAT && CAT.whatsapp);
+  const url = window.Faltante.enlace(destino, t);
+  if (!url) { caja.hidden = true; caja.innerHTML = ''; return; }   // vacío por el chip, no por una búsqueda
+  caja.hidden = false;
+  caja.innerHTML = '<a class="btn btn-primario" href="' + escapeHtml(url) +
+    '" target="_blank" rel="noopener">Pregúntanos por «' + escapeHtml(t) + '»</a>' +
+    '<p class="vacio-sub">Te decimos si lo tenemos o si te lo podemos conseguir.</p>';
+}
+
 function renderGrid() {
   const items = visibles();
   const buscando = busqueda.trim() !== '' || filtroCat !== '' || filtroOferta;
@@ -544,6 +560,7 @@ function renderGrid() {
   // el chip de mensajería cuenta como filtro: si no, al dejar la parrilla vacía solo con
   // el chip, el cliente se queda ante una pantalla en blanco sin explicación.
   document.getElementById('vacio').hidden = !(lista.length === 0 && (buscando || soloEnvioGratis));
+  pintarPregunta(busqueda);
   const tarjetas = lista.map(tarjetaHtml);
   // El reclamo de gestores va DENTRO de la parrilla, ocupando una fila entera
   // (.cta-comi trae grid-column:1/-1). Antes vivía en un hueco aparte: pegado

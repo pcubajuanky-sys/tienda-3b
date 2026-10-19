@@ -1295,3 +1295,13 @@ button.footer-link{background:none;border:none;font-family:inherit;cursor:pointe
   color: var(--text);
 }
 .banda-gestor b { color: var(--text); }
+
+/* Búsqueda sin resultados: el botón que abre WhatsApp con lo que el cliente buscó.
+   Va por encima de «Ver todo el catálogo» y pesa más que él a propósito. */
+.vacio-pregunta { margin: 0 0 14px; }
+.vacio-pregunta .btn { display: inline-flex; max-width: 100%; }
+.vacio-pregunta .vacio-sub {
+  margin: 8px 0 0;
+  font-size: .9rem;
+  opacity: .75;
+}
