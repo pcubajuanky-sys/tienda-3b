@@ -1,6 +1,6 @@
 {
-  "generado": "2026-10-15T19:08:15.642Z",
-  "tasa": 800,
+  "generado": "2026-10-18T23:55:25.451Z",
+  "tasa": 805,
   "whatsapp": "5354978966",
   "vendedores": [
     {
@@ -78,6 +78,22 @@
     {
       "code": "YPUD8",
       "nombre": "Sahel González"
+    },
+    {
+      "code": "CXESR",
+      "nombre": "Yohanset"
+    },
+    {
+      "code": "QGZUQ",
+      "nombre": "Alejandro"
+    },
+    {
+      "code": "45UGF",
+      "nombre": "Abianka"
+    },
+    {
+      "code": "JZ8PU",
+      "nombre": "Alejandro"
     }
   ],
   "categorias": [
@@ -424,6 +440,16 @@
         "id": "mueble-plastico-de-5-niveles",
         "nombre": "mueble plástico de 5 niveles",
         "lb": 7.6
+      },
+      {
+        "id": "cinturon-ancho",
+        "nombre": "cinturón ancho",
+        "lb": 0.2
+      },
+      {
+        "id": "plancha-para-hacer-barquillos",
+        "nombre": "plancha para hacer barquillos",
+        "lb": 2.4
       }
     ],
     "ejemplos": [
@@ -681,13 +707,13 @@
     {
       "id": "p_1786921885931",
       "codigo": "5HP4",
-      "name": "Abrigo de Chihuahua 1",
+      "name": "Abrigo de Chihuahua de rayas rosas ra",
       "cat": "Mascotas",
       "subcat": "",
       "notes": "Abrigo de perrito pequeño, dígase Chihuahua, ratonero o alguna raza sobre esa talla\nTela gruesa y esponjosa",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786921728/productos/giihqmplkgyweovdisky.jpg",
       "precioUSD": 5,
-      "precioCUP": 4000,
+      "precioCUP": 4025,
       "moneda": "usd",
       "enOferta": true,
       "destacado": false,
@@ -699,18 +725,18 @@
       "envioGratis": true,
       "creado": 1786921885931,
       "precioNormalUSD": 6,
-      "precioNormalCUP": 4800
+      "precioNormalCUP": 4830
     },
     {
       "id": "p_1786921926228",
       "codigo": "NRMB",
-      "name": "Abrigo de Chihuahua 2",
+      "name": "Abrigo de Chihuahua de rayas rosas y moradas",
       "cat": "Mascotas",
       "subcat": "",
       "notes": "Abrigo de perrito pequeño, dígase Chihuahua, ratonero o alguna raza sobre esa talla\nTela gruesa y esponjosa",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786921857/productos/w7gntcvjf4co0qn3tben.jpg",
       "precioUSD": 5,
-      "precioCUP": 4000,
+      "precioCUP": 4025,
       "moneda": "usd",
       "enOferta": true,
       "destacado": false,
@@ -722,7 +748,7 @@
       "envioGratis": true,
       "creado": 1786921926228,
       "precioNormalUSD": 6,
-      "precioNormalCUP": 4800
+      "precioNormalCUP": 4830
     },
     {
       "id": "p_1786943265900",
@@ -732,10 +758,10 @@
       "subcat": "",
       "notes": "¡Despierta el poder natural de tu cabello!\nEl aceite esencial de jengibre no es solo un aroma… es un impulso de vida para tu melena.\nEstimula el cuero cabelludo, fortalece desde la raíz, reduce la caída y deja tu cabello más brillante, denso y con un brillo saludable que se nota.\nUnas gotas al día y tu cabello empieza a hablar por ti.\nJengibre puro. Resultados reales.\nTu cabello merece este despertar.",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786943069/productos/bm4t98qh8ogtry5nnpxt.jpg",
-      "precioUSD": 3.13,
-      "precioCUP": 2500,
-      "moneda": "cup",
-      "enOferta": false,
+      "precioUSD": 3.3,
+      "precioCUP": 2657,
+      "moneda": "usd",
+      "enOferta": true,
       "destacado": false,
       "max": 3,
       "envio": {
@@ -743,7 +769,9 @@
         "largo": "🛵 MENSAJERÍA GRATIS"
       },
       "envioGratis": true,
-      "creado": 1786943265900
+      "creado": 1786943265900,
+      "precioNormalUSD": 3.73,
+      "precioNormalCUP": 3003
     },
     {
       "id": "p_1789489796373",
@@ -754,7 +782,7 @@
       "notes": "",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789489714/productos/fg4fdehztii5v9yybzgh.jpg",
       "precioUSD": 1,
-      "precioCUP": 800,
+      "precioCUP": 805,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -785,61 +813,6 @@
       "creado": 1785092425019
     },
     {
-      "id": "p_1788814692844",
-      "codigo": "C76G",
-      "name": "Ajusta invisible sin tirantes",
-      "cat": "Ropa Interior",
-      "subcat": "",
-      "notes": "Útil e imprescindible prenda, reutilizable y comoda. Brinda un soporte muy estético a pechos sin importar talla,forma o edad.Colores disponibles, beige y negro.",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788814263/productos/xfb4sbqzmvfcc9cdrndb.jpg",
-      "precioUSD": 2,
-      "precioCUP": 1600,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "variantes": {
-        "ejes": [
-          "Color"
-        ],
-        "opciones": [
-          "NEGRO"
-        ]
-      },
-      "maxOpciones": {
-        "NEGRO": 2
-      },
-      "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      },
-      "creado": 1788814692844
-    },
-    {
-      "id": "p_1787110390009",
-      "codigo": "KLNL",
-      "name": "Alarma de puertas y ventanas",
-      "cat": "Electrodomésticos",
-      "subcat": "",
-      "notes": "Alarma ideal para la protección de su casa, de habitaciones, closets o incluso gavetas, TODA SEGURIDAD ES POCA EN ESTOS TIEMPOS!!",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791861204/productos/eqbueci4m1g9m7wiqc8n.jpg",
-      "precioUSD": 2.4,
-      "precioCUP": 1920,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "fotos": [
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791861153/productos/fq3kfhciqxzputkxgkcr.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791861189/productos/p8le721er1pxu07hxvbm.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791861197/productos/gx9lfooymrsxtb8perrj.jpg"
-      ],
-      "max": 2,
-      "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      },
-      "creado": 1787110390009
-    },
-    {
       "id": "p_1787498809174",
       "codigo": "RWLZ",
       "name": "Anillos de acero quirúrgico",
@@ -847,7 +820,7 @@
       "subcat": "",
       "notes": "El precio es por 5 anillos. El paquete trae variedad de tallas y colores tal como en la imagen",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787498630/productos/wuzfqeewkc7rxfvzkhyg.jpg",
-      "precioUSD": 1.13,
+      "precioUSD": 1.12,
       "precioCUP": 900,
       "moneda": "cup",
       "enOferta": false,
@@ -867,7 +840,7 @@
       "subcat": "",
       "notes": "El precio es por 5 anillos. El paquete trae variedad en tallas y colores tal como en la imagen",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787498788/productos/g5e0hvzdgvwx8iud9jfu.jpg",
-      "precioUSD": 1.13,
+      "precioUSD": 1.12,
       "precioCUP": 900,
       "moneda": "cup",
       "enOferta": false,
@@ -886,7 +859,7 @@
       "subcat": "",
       "notes": "",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782340086/productos/g8ijdb0wchzfnhjqkm48.jpg",
-      "precioUSD": 0.44,
+      "precioUSD": 0.43,
       "precioCUP": 350,
       "moneda": "cup",
       "enOferta": false,
@@ -906,7 +879,7 @@
       "notes": "Apollo de celular y Mandos, para colocar en pared (ideal para cuando vas a dormir colgar tu móvil). Incluye su adhesivo para más facil colocación (colores blancos,gris y negros )",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785087860/productos/rvyuo7iwnevw6yztbsh8.jpg",
       "precioUSD": 1,
-      "precioCUP": 800,
+      "precioCUP": 805,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -938,7 +911,7 @@
       "notes": "Apollos plásticos para celulares o tablets. Colores disponibles: 🩷 y 💙",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790793416/productos/rpc68jeplxinlu5sylnt.jpg",
       "precioUSD": 1,
-      "precioCUP": 800,
+      "precioCUP": 805,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -952,7 +925,7 @@
         ]
       },
       "maxOpciones": {
-        "ROSA🩷": 6
+        "ROSA🩷": 5
       },
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
@@ -968,7 +941,7 @@
       "subcat": "",
       "notes": "Conjunto de 10 pares de aretes antialérgicos de diseño variado y pequeño. Totalmente de silicona, ideal para pieles sensibles.\nOJO: No es posible la venta por unidad 😔\n🤩",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787457165/productos/qfxp9bk6i7kvkx9gshau.jpg",
-      "precioUSD": 1.19,
+      "precioUSD": 1.18,
       "precioCUP": 950,
       "moneda": "cup",
       "enOferta": false,
@@ -1060,7 +1033,7 @@
       "notes": "Color gris 🩶\nIdeal para perros entre 9-14lb(ajustable)\nDetalles reflectantes para evitar accidentes\nNo incluye correa",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786922159/productos/wjwhhkxhhgxu9wzygnp6.jpg",
       "precioUSD": 7,
-      "precioCUP": 5600,
+      "precioCUP": 5635,
       "moneda": "usd",
       "enOferta": true,
       "destacado": false,
@@ -1072,7 +1045,7 @@
       "envioGratis": true,
       "creado": 1786922285289,
       "precioNormalUSD": 8,
-      "precioNormalCUP": 6400
+      "precioNormalCUP": 6440
     },
     {
       "id": "p_1790965760166",
@@ -1083,7 +1056,7 @@
       "notes": "Audífonos inalámbricos tipo casco, con almohadillas acolchadas para uso prolongado",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790965642/productos/jss9vmgdeoy0g5alq399.jpg",
       "precioUSD": 6,
-      "precioCUP": 4800,
+      "precioCUP": 4830,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -1139,12 +1112,12 @@
       "subcat": "",
       "notes": "Auriculares inalámbricos modelo X55, Presentan un diseño ultraligero y delgado qu garantiza comodidad durante su uso, con reducción de ruido avanzada y forma ergonómica que evita la presión en los oídos, incluso al dormir de lado. Ideales para un descanso profundo y sin interrupciones.",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785089336/productos/k1vaswogj1rww7enirsk.jpg",
-      "precioUSD": 4.06,
+      "precioUSD": 4.04,
       "precioCUP": 3250,
       "moneda": "cup",
       "enOferta": false,
       "destacado": false,
-      "max": 2,
+      "max": 1,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -1180,7 +1153,7 @@
       "notes": "Altavoz Inalámbrico con Sonido HD. Portátil hasta 10H de Reproducción .Entrada AUX y Tarjeta TF y USB . Altavoces Inalámbricos 5.3 para Hogar/Fiesta/Exteriores. Solo e color negro como en la imagen",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791038875/productos/rxotqclqvwihghohipqw.jpg",
       "precioUSD": 25,
-      "precioCUP": 20000,
+      "precioCUP": 20125,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -1201,7 +1174,7 @@
       "notes": "Bicicleta Eléctrica de 500W para Adultos, Batería Extraíble de 48V 15AH, Velocidad de 15-20 mph, Largo Alcance de 10-35 Millas, Plegable de 14 Pulgadas, Pantalla LCD, Frenos de Disco Duales, Súper Suspensión, Regalo para Adolescentes, Bicicleta Eléctrica para Adultos - Motocicleta\n\nNueva está en su caja sellada",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788830814/productos/mbtm7sr4opagfnenqeht.jpg",
       "precioUSD": 465,
-      "precioCUP": 372000,
+      "precioCUP": 374325,
       "moneda": "usd",
       "enOferta": false,
       "destacado": true,
@@ -1225,7 +1198,7 @@
       "notes": "Talla M",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785877196/productos/zdpp1zs4kg8bkem9taba.jpg",
       "precioUSD": 16,
-      "precioCUP": 12800,
+      "precioCUP": 12880,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -1246,7 +1219,7 @@
       "notes": "Talla S",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785877334/productos/hjq5zlysusppcspt0bge.jpg",
       "precioUSD": 12,
-      "precioCUP": 9600,
+      "precioCUP": 9660,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -1267,7 +1240,7 @@
       "notes": "100% algodón,la mejor opción para el cuidado de la zona íntima, el material recomendado por los especialistas para evitar la humedad acumulada y permitir que transpire una de las zonas más delicadas del cuerpo.Variedad de colores y tallas elegibles en la página web de nuestra tienda.",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788815109/productos/whyucj67zscpwltr6jbj.jpg",
       "precioUSD": 1,
-      "precioCUP": 800,
+      "precioCUP": 805,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -1279,20 +1252,14 @@
         "opciones": [
           "S / NEGRO",
           "S / BLANCO",
-          "S / GRIS",
           "S / AZUL",
-          "S / ROJO",
           "S / ROSA",
           "S / BEIGE",
           "M / NEGRO",
-          "M / GRIS",
-          "M / ROJO",
-          "M / BEIGE",
           "L / NEGRO",
           "L / BLANCO",
           "L / GRIS",
           "L / AZUL",
-          "L / ROJO",
           "L / ROSA",
           "L / BEIGE"
         ]
@@ -1300,20 +1267,14 @@
       "maxOpciones": {
         "S / NEGRO": 3,
         "S / BLANCO": 1,
-        "S / GRIS": 1,
-        "S / AZUL": 2,
-        "S / ROJO": 1,
-        "S / ROSA": 3,
-        "S / BEIGE": 3,
+        "S / AZUL": 1,
+        "S / ROSA": 1,
+        "S / BEIGE": 1,
         "M / NEGRO": 1,
-        "M / GRIS": 1,
-        "M / ROJO": 1,
-        "M / BEIGE": 1,
         "L / NEGRO": 2,
-        "L / BLANCO": 3,
-        "L / GRIS": 3,
+        "L / BLANCO": 1,
+        "L / GRIS": 1,
         "L / AZUL": 2,
-        "L / ROJO": 1,
         "L / ROSA": 2,
         "L / BEIGE": 3
       },
@@ -1332,7 +1293,7 @@
       "notes": "Exelente calidad y comodidad. Tela elastizada y duradera. Frescura y protección contra el Sol en una misma pieza.Solo del color de la imagen y en talla S",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789229232/productos/iint1nqsydkjxzi86gsf.jpg",
       "precioUSD": 8,
-      "precioCUP": 6400,
+      "precioCUP": 6440,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -1353,7 +1314,7 @@
       "notes": "Dispositivo de audio inalámbrico con altavoces duales, estéreo TWS, llamadas manos libres, radio FM y soporte para tarjetas TF y unidades USB. Se conecta a teléfonos móviles y tabletas. Máxima calidad de sonido",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1781215701/productos/yu7wkzi3wojjmssnk4ec.jpg",
       "precioUSD": 20,
-      "precioCUP": 16000,
+      "precioCUP": 16100,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -1374,11 +1335,11 @@
       "notes": "Solo en color negro. Tela de mochila ultra resistente. Ideal para el uso diario , prenda de mujer , hombre o niño, sin distinción de género o edad.  Variedad de usos",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790797185/productos/gz6cdwegzssokij4dh6t.jpg",
       "precioUSD": 8,
-      "precioCUP": 6400,
+      "precioCUP": 6440,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 5,
+      "max": 4,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -1394,7 +1355,7 @@
       "subcat": "",
       "notes": "Bolso de Pecho Ligero y Elegante para Hombres para Actividades al Aire Libre - Bolso Bandolera Duradero de Tela Oxford para Senderismo, Ciclismo y Viajes - Bolso de Hombro Único Portátil, Regalo Perfecto.\n(Todos los Colores de la foto)",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785182616/productos/mkiut7qu8g9eckwr9evg.jpg",
-      "precioUSD": 3.88,
+      "precioUSD": 3.85,
       "precioCUP": 3100,
       "moneda": "cup",
       "enOferta": false,
@@ -1425,7 +1386,7 @@
       "subcat": "",
       "notes": "Cable de Carga Rápida USB C Cable de Carga USB A a Tipo C Trenzado de Nylon. Calidad Premium. Largo alcance (3metros)",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791165695/productos/ccwcaxqppjt5e9gs083u.jpg",
-      "precioUSD": 2.25,
+      "precioUSD": 2.24,
       "precioCUP": 1800,
       "moneda": "cup",
       "enOferta": false,
@@ -1445,7 +1406,7 @@
       "subcat": "",
       "notes": "Variedad de diseños. Escribir al pv para ver los disponibles en ese momento",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788630744/productos/hgygoifuzzmziys2gotz.jpg",
-      "precioUSD": 1.25,
+      "precioUSD": 1.24,
       "precioCUP": 1000,
       "moneda": "cup",
       "enOferta": false,
@@ -1465,7 +1426,7 @@
       "subcat": "",
       "notes": "Cafetera italiana para café expreso",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788891782/productos/b8cptn2c5lert8u7rad6.jpg",
-      "precioUSD": 5.85,
+      "precioUSD": 5.81,
       "precioCUP": 4680,
       "moneda": "cup",
       "enOferta": true,
@@ -1477,40 +1438,19 @@
       },
       "envioGratis": true,
       "creado": 1788892014454,
-      "precioNormalUSD": 6.83,
+      "precioNormalUSD": 6.78,
       "precioNormalCUP": 5460
-    },
-    {
-      "id": "p_1790983047647",
-      "codigo": "NM9F",
-      "name": "Calcomanía para tanque de moto 1",
-      "cat": "Motos / Accesorios",
-      "subcat": "",
-      "notes": "Juego de almohadillas para tanque de motocicleta y protector de tapa de combustible, calcomanías de PVC para protección contra arañazos del tanque.",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791646495/productos/cobqtkiyxarw1gwdfkua.jpg",
-      "precioUSD": 5,
-      "precioCUP": 4000,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "max": 1,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1790983047649
     },
     {
       "id": "p_1790983107410",
       "codigo": "QXG8",
-      "name": "Calcomanía para tanque de moto 2",
+      "name": "Calcomanía para tanque de moto con relieve",
       "cat": "Motos / Accesorios",
       "subcat": "",
       "notes": "Juego de almohadillas para tanque de motocicleta y protector de tapa de combustible, calcomanías de PVC para protección contra arañazos del tanque.",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790983010/productos/lrorlkseo574nqnp1ba6.jpg",
       "precioUSD": 6,
-      "precioCUP": 4800,
+      "precioCUP": 4830,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -1523,38 +1463,36 @@
       "creado": 1790983107410
     },
     {
-      "id": "p_1781707937680",
-      "codigo": "ECQJ",
-      "name": "Candado/Alarma de Motos y Bicicletas 1",
+      "id": "p_1790983047647",
+      "codigo": "NM9F",
+      "name": "Calcomanía para tanque de moto Marmoleada",
       "cat": "Motos / Accesorios",
       "subcat": "",
-      "notes": "Alarma para Motocicleta con Cerradura de Disco y Línea Recordatoria - Recargable, 130dB de Sonido, Antirrobo e Impermeable, Carga Rápida en 2 Horas, Pasador Universal de 7mm, Adecuada para Cascos, Motos, Bicicletas Eléctricas y de Montaña, Incluye Cordón Recordatorio y Llave Hexagonal",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790879264/productos/r7vnk2bmd3ypfg6yy8vh.jpg",
-      "precioUSD": 23,
-      "precioCUP": 18400,
+      "notes": "Juego de almohadillas para tanque de motocicleta y protector de tapa de combustible, calcomanías de PVC para protección contra arañazos del tanque.",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791646495/productos/cobqtkiyxarw1gwdfkua.jpg",
+      "precioUSD": 5,
+      "precioCUP": 4025,
       "moneda": "usd",
-      "enOferta": true,
-      "destacado": true,
-      "max": 3,
+      "enOferta": false,
+      "destacado": false,
+      "max": 1,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
       },
       "envioGratis": true,
-      "creado": 1781707937680,
-      "precioNormalUSD": 25,
-      "precioNormalCUP": 20000
+      "creado": 1790983047649
     },
     {
       "id": "p_1790801699259",
       "codigo": "96J6",
-      "name": "Candado/Alarma de motos y bicicletas 2",
+      "name": "Candado/Alarma de motos y bicicletas de Pilas",
       "cat": "Motos / Accesorios",
       "subcat": "",
       "notes": "Candado de disco con alarma para motocicleta, candado antirrobo de seguridad para rueda de disco de motocicleta, sonido de alarma de 110 dB, para motocicletas ligeras, bicicletas, motocicletas y scooters.",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790801561/productos/vnj2xw8zekwu9noskula.jpg",
       "precioUSD": 18,
-      "precioCUP": 14400,
+      "precioCUP": 14490,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -1567,6 +1505,29 @@
       "creado": 1790801699260
     },
     {
+      "id": "p_1781707937680",
+      "codigo": "ECQJ",
+      "name": "Candado/Alarma de Motos y Bicicletas Recargable",
+      "cat": "Motos / Accesorios",
+      "subcat": "",
+      "notes": "Alarma para Motocicleta con Cerradura de Disco y Línea Recordatoria - Recargable, 130dB de Sonido, Antirrobo e Impermeable, Carga Rápida en 2 Horas, Pasador Universal de 7mm, Adecuada para Cascos, Motos, Bicicletas Eléctricas y de Montaña, Incluye Cordón Recordatorio y Llave Hexagonal",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790879264/productos/r7vnk2bmd3ypfg6yy8vh.jpg",
+      "precioUSD": 23,
+      "precioCUP": 18515,
+      "moneda": "usd",
+      "enOferta": true,
+      "destacado": true,
+      "max": 3,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1781707937680,
+      "precioNormalUSD": 25,
+      "precioNormalCUP": 20125
+    },
+    {
       "id": "p_1788234125684",
       "codigo": "X8RX",
       "name": "Cesta de lavado",
@@ -1575,7 +1536,7 @@
       "notes": "Facilita y agiliza el lavado de granos, frutas y verduras. Cómodo y útil",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788234018/productos/dfybp6rebr6hsibygml1.jpg",
       "precioUSD": 4,
-      "precioCUP": 3200,
+      "precioCUP": 3220,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -1596,7 +1557,7 @@
       "notes": "Cesto de tela de alta calidad y Súper Gran Capacidad. Agarraderas metálicas",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791728837/productos/la1c8t3m8fmm5pybllmq.jpg",
       "precioUSD": 7,
-      "precioCUP": 5600,
+      "precioCUP": 5635,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -1616,7 +1577,7 @@
       "subcat": "",
       "notes": "Tallas 36,37,38y39",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785528145/productos/cwpx4f9yjkbarg0486ja.jpg",
-      "precioUSD": 1.5,
+      "precioUSD": 1.49,
       "precioCUP": 1200,
       "moneda": "cup",
       "enOferta": true,
@@ -1626,7 +1587,7 @@
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
       },
       "creado": 1785528271738,
-      "precioNormalUSD": 1.88,
+      "precioNormalUSD": 1.86,
       "precioNormalCUP": 1500
     },
     {
@@ -1638,7 +1599,7 @@
       "notes": "Pantalón de mujer de nylon, deportivo,fresco y cómodo\nTalla S",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786969396/productos/aplycgoaa7tcwpmtbx7i.jpg",
       "precioUSD": 10,
-      "precioCUP": 8000,
+      "precioCUP": 8050,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -1659,7 +1620,7 @@
       "notes": "Fácil instalación adhesiva sin herramientas con un fuerte agarre para nevera, gabinete, puerta de despensa y electrodomésticos de cocina | Cerraduras seguras para puertas y gabinetes para la seguridad del hogar y la cocina - Seguro para mascotas y familiares",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788049482/productos/axnjnxg6zuntczll5kc9.jpg",
       "precioUSD": 1.2,
-      "precioCUP": 960,
+      "precioCUP": 966,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -1671,84 +1632,76 @@
       "creado": 1788049609744
     },
     {
-      "id": "p_1786998526143",
-      "codigo": "RHH5",
-      "name": "Cintos 1",
+      "id": "p_1792276934627",
+      "codigo": "YAYM",
+      "name": "Cinto negro ancho",
       "cat": "Accesorio de vestir",
       "subcat": "",
-      "notes": "Cintos finos de mujer. Medidas 👇🏻\nAncho: 1.2cm\nLargo: 105cm",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786998257/productos/gogjyz4xkuai2twsk7l6.jpg",
-      "precioUSD": 2.38,
-      "precioCUP": 1900,
-      "moneda": "cup",
+      "notes": "Elegante cinto ancho de mujer. Solo el color y diseño de la imagen.\nMedidas: 7.5cm de ancho, 64cm de circunferencia (expandible,es elastizado)",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792276630/productos/oqbostrsrlybcb4zchpz.jpg",
+      "precioUSD": 4,
+      "precioCUP": 3220,
+      "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 4,
-      "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      },
-      "creado": 1786998526143
-    },
-    {
-      "id": "p_1786998892313",
-      "codigo": "PWSW",
-      "name": "Cintos 2",
-      "cat": "Accesorio de vestir",
-      "subcat": "",
-      "notes": "Cintos finos de mujer. Medidas 👇🏻\nAncho: 1.6cm\nLargo: 105cm\nPor el momento,solo disponible en beige claro",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786998742/productos/q6yotu9lsmrhn7hfinsl.jpg",
-      "precioUSD": 2.38,
-      "precioCUP": 1900,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false,
-      "max": 1,
-      "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      },
-      "creado": 1786998892314
-    },
-    {
-      "id": "p_1787756966125",
-      "codigo": "KYGQ",
-      "name": "Cintos finos variados",
-      "cat": "Accesorio de vestir",
-      "subcat": "",
-      "notes": "",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787756837/productos/sxwqjer7oekvpoxsp8ky.jpg",
-      "precioUSD": 2.25,
-      "precioCUP": 1800,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false,
-      "max": 4,
-      "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      },
-      "creado": 1787756966125
-    },
-    {
-      "id": "p_1780347243525",
-      "codigo": "N6SH",
-      "name": "Cintos Unisex",
-      "cat": "Accesorio de vestir",
-      "subcat": "",
-      "notes": "Cintos finos\nSolo los Colores de la imagen",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1780347137/productos/chqkc5z7cubcnsinbnay.jpg",
-      "precioUSD": 2.25,
-      "precioCUP": 1800,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792279158/productos/pfsk6vwpmajc5psqm55y.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792279173/productos/wpdck0cpuvifqy4ndf1g.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792279177/productos/q7ukohevdahntd7mmjwp.jpg"
+      ],
       "max": 2,
       "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1792276934627
+    },
+    {
+      "id": "p_1792294682081",
+      "codigo": "VQ93",
+      "name": "Cintos finos de mujer",
+      "cat": "Accesorio de vestir",
+      "subcat": "",
+      "notes": "Variedad de diseños de cinturones de mujer\nMedidas: Entre 1.2 y 1.6cm de ancho y 105cm de largo",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792294486/productos/qzzq64eve7avlh6k1n6c.jpg",
+      "precioUSD": 2,
+      "precioCUP": 1610,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792294517/productos/repccjnnucigamomlz26.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792294523/productos/rfh8e1hazkti0kg6w7yk.jpg"
+      ],
+      "variantes": {
+        "ejes": [
+          "Diseño"
+        ],
+        "opciones": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G"
+        ]
+      },
+      "maxOpciones": {
+        "A": 1,
+        "B": 1,
+        "C": 2,
+        "D": 1,
+        "E": 1,
+        "F": 3,
+        "G": 1
+      },
+      "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
       },
-      "creado": 1780347243525
+      "creado": 1792294682081
     },
     {
       "id": "p_1787947439148",
@@ -1759,7 +1712,7 @@
       "notes": "Pareja de collares de dije de acero quirúrgico de alta calidad",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787947303/productos/wwjl7tnmphipqjbowcip.jpg",
       "precioUSD": 5,
-      "precioCUP": 4000,
+      "precioCUP": 4025,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -1780,11 +1733,11 @@
       "notes": "El conjunto consta de una malla negra de asiento de moto y un forro color aluminio que repele el agua y el sol",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788150599/productos/fgyzktdzuinxtzxbjmg0.jpg",
       "precioUSD": 6,
-      "precioCUP": 4800,
+      "precioCUP": 4830,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 3,
+      "max": 2,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -1801,7 +1754,7 @@
       "notes": "Perfiladores de cejas, bigote y demás. Exelente calidad y comodidad de uso. El precio es por 5 unidades con Mensajería Gratis",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782340778/productos/p9vpyhp3we5xjff90cb0.jpg",
       "precioUSD": 1,
-      "precioCUP": 800,
+      "precioCUP": 805,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -1820,7 +1773,7 @@
       "notes": "Súper conjunto escolar. Todo lo de la imagen ( mochila, bolsa, carterita, cartuchera, peluche y chapillas decorativas)\nDisponibles todos los colores de la imagen\nOJO: Mochila grande pero talla escolar, no es tamaño XL para negocios, transportar mercancía etc...",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788537413/productos/slyafhkdssobyp1tgvlu.jpg",
       "precioUSD": 22,
-      "precioCUP": 17600,
+      "precioCUP": 17710,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -1840,7 +1793,7 @@
       "subcat": "",
       "notes": "Exacto los diseños de la imagen. El precio es por el conjunto completo. Prendas originales y hermosas.",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787498185/productos/xzhldk5amcaolopit8ep.jpg",
-      "precioUSD": 3.13,
+      "precioUSD": 3.11,
       "precioCUP": 2500,
       "moneda": "cup",
       "enOferta": false,
@@ -1861,7 +1814,7 @@
       "subcat": "",
       "notes": "Exactamente el diseño de la imagen",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787844052/productos/zfbbgklbmazqnrb8rzfd.jpg",
-      "precioUSD": 2.25,
+      "precioUSD": 2.24,
       "precioCUP": 1800,
       "moneda": "cup",
       "enOferta": false,
@@ -1881,7 +1834,7 @@
       "subcat": "",
       "notes": "Exactamente el diseño de la imagen",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787453332/productos/hgvzduzoya6btwnccu2f.jpg",
-      "precioUSD": 1.63,
+      "precioUSD": 1.61,
       "precioCUP": 1300,
       "moneda": "cup",
       "enOferta": false,
@@ -1902,7 +1855,7 @@
       "notes": "Correa retráctil para mascotas, diseño colorido de huellas de patas, correa portátil y duradera de 3 m para gatos y perros, ideal para paseos al aire libre y tiempo de juego",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791131922/productos/l6ihxpmy86k5kksbe8zv.jpg",
       "precioUSD": 12,
-      "precioCUP": 9600,
+      "precioCUP": 9660,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -1923,7 +1876,7 @@
       "notes": "Beneficios de esta creatina:\nAumenta la fuerza y potencia muscular\nMejora el rendimiento en ejercicios de alta intensidad\nFavorece el crecimiento y recuperación muscular\nApoya la función cognitiva\nFórmula micronizada + complejo de Maca y Shilajit para potenciar resultados\nContiene 300 g, lo que equivale a 60 servicios (5 g por porción).",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788907712/productos/on2wggnxyfkkyazwr6g9.jpg",
       "precioUSD": 15,
-      "precioCUP": 12000,
+      "precioCUP": 12075,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -1955,6 +1908,38 @@
       "creado": 1782259192464
     },
     {
+      "id": "p_1789256890851",
+      "codigo": "UFJ3",
+      "name": "Dos pares de medias",
+      "cat": "Ropa Interior",
+      "subcat": "",
+      "notes": "",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792262372/productos/zgtcnx22koltd0wzkzro.jpg",
+      "precioUSD": 1,
+      "precioCUP": 805,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Color"
+        ],
+        "opciones": [
+          "NEGRO",
+          "BLANCO",
+          "GRIS"
+        ]
+      },
+      "maxOpciones": {
+        "GRIS": 1
+      },
+      "envio": {
+        "corto": "🛵 Gratis desde 2,000 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
+      },
+      "creado": 1789256890851
+    },
+    {
       "id": "p_1788212080090",
       "codigo": "D5Q2",
       "name": "Espejo de flor giratorio",
@@ -1963,7 +1948,7 @@
       "notes": "Solo disponible en color blanco\n28cm de alto",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788211960/productos/frgnqs3xs1uy6lzojds7.jpg",
       "precioUSD": 5,
-      "precioCUP": 4000,
+      "precioCUP": 4025,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -1984,7 +1969,7 @@
       "notes": "Solo disponible en color rosado\n19cm de alto",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788212042/productos/yw0dmsoqnsurdtvaakyd.jpg",
       "precioUSD": 3,
-      "precioCUP": 2400,
+      "precioCUP": 2415,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -2000,11 +1985,11 @@
       "id": "p_1787088450511",
       "codigo": "TF6K",
       "name": "Esponjas de baño",
-      "cat": "Cuidado Personal",
+      "cat": "Hogar",
       "subcat": "",
       "notes": "Esponjas de baño de variedad de colores 🌈",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791646509/productos/hpgyka4hnhygbxsumvre.jpg",
-      "precioUSD": 0.63,
+      "precioUSD": 0.62,
       "precioCUP": 500,
       "moneda": "cup",
       "enOferta": false,
@@ -2024,7 +2009,7 @@
       "notes": "✨100 unidades de  Estrellas fosforescentes que brillan en la oscuridad\nLleva el cielo a tu habitación. Pack de estrellas adhesivas en colores vivos (verde, azul, amarillo y rosa). Ideales para decorar paredes, techos o habitaciones infantiles.\nBrillan varias horas tras absorber luz. Fáciles de colocar y retirar.",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791314215/productos/t8qiszgv8ae7obbtte82.jpg",
       "precioUSD": 2.5,
-      "precioCUP": 2000,
+      "precioCUP": 2013,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -2045,7 +2030,7 @@
       "notes": "Paquete de 250 estrellitas con su adhesivo.\nEstrellas fosforescentes que brillan en la oscuridad\nLleva el cielo a tu habitación. Pack de estrellas adhesivas en colores vivos (verde, azul, amarillo y rosa). Ideales para decorar paredes, techos o habitaciones infantiles.\nBrillan varias horas tras absorber luz. Fáciles de colocar y retirar.",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791294581/productos/j5daxkdp8nlct720u1ht.jpg",
       "precioUSD": 6,
-      "precioCUP": 4800,
+      "precioCUP": 4830,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -2065,7 +2050,7 @@
       "subcat": "",
       "notes": "Paquete de 100 estrellitas.Fluorescentes con su adhesivo incluído. Colores varios",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1784925295/productos/yk3nbqzxca6aehscfkpk.jpg",
-      "precioUSD": 2.13,
+      "precioUSD": 2.11,
       "precioCUP": 1700,
       "moneda": "cup",
       "enOferta": false,
@@ -2085,7 +2070,7 @@
       "subcat": "",
       "notes": "Paquete de 250 estrellitas. Fluorescentes de colores variados con su adhesivo incluído",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788199912/productos/zi07dgtj1fxicbqru7oa.jpg",
-      "precioUSD": 4.5,
+      "precioUSD": 4.47,
       "precioCUP": 3600,
       "moneda": "cup",
       "enOferta": false,
@@ -2107,7 +2092,7 @@
       "notes": "Etiquetas autoadhesivas para nombrar las libretas y demás pertenencias de los niños. Diseños femeninos y masculinos. Tamaño exacto detallado en la imagen",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788840708/productos/m1w5hcjkk89t1q4qlqxo.jpg",
       "precioUSD": 1,
-      "precioCUP": 800,
+      "precioCUP": 805,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -2139,7 +2124,7 @@
       "notes": "Útil accesorio de uso diario, exprimidor de tubos de pastas tanto dental, como tintes, cremas y demás productos",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788839767/productos/qpnmcilryql7g6ewatrl.jpg",
       "precioUSD": 0.6,
-      "precioCUP": 480,
+      "precioCUP": 483,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -2171,7 +2156,7 @@
       "notes": "Fajas colombianas tipo short de cintura alta levantadoras y moldeadora. Control de abdomen, paneles de encaje y compresión para moldear muslos, realzadoras, adecuadas para figura de reloj de arena, entrenamiento y atuendo casual",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788816300/productos/brqlriw0fxdiuf8bfv8s.jpg",
       "precioUSD": 25,
-      "precioCUP": 20000,
+      "precioCUP": 20125,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -2180,11 +2165,11 @@
           "Talla"
         ],
         "opciones": [
-          "L"
+          "M"
         ]
       },
       "maxOpciones": {
-        "L": 2
+        "M": 2
       },
       "envio": {
         "corto": "🛵 Mensajería gratis",
@@ -2202,7 +2187,7 @@
       "notes": "Luz led frontal ,para uso en la cabeza, incluye su cinta ajustable elastizada au cómoda. Útil y ligero, ideal para trabajos que requieran iluminación directa, excursiones al aire libre o cualquier tipo de iluminación sin ocupar las manos. Doble modo de luz",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791631877/productos/w7ddcadgayefzohyohwv.jpg",
       "precioUSD": 6,
-      "precioCUP": 4800,
+      "precioCUP": 4830,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -2223,13 +2208,13 @@
     {
       "id": "p_1791773820151",
       "codigo": "UZZC",
-      "name": "Gafas Cristal Transparente 🖤🤍🩷",
+      "name": "Gafas Cristal Transparente CLÁSICAS",
       "cat": "Accesorio de vestir",
       "subcat": "",
       "notes": "Gafas para uso nocturno con cristal anti luz azul. Ideal para el uso constante de pantallas como celular, televisor, laptop etc.. Hermoso y elegante accesorio para salidas,fotos y eventos",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791773684/productos/pzclpats8lmxuehmfebz.jpg",
       "precioUSD": 3,
-      "precioCUP": 2400,
+      "precioCUP": 2415,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -2258,13 +2243,13 @@
     {
       "id": "p_1791773233689",
       "codigo": "DTBS",
-      "name": "Gafas cristal transparente 🤍🤎🖤",
+      "name": "Gafas cristal transparente TIPO RYBAN",
       "cat": "Accesorio de vestir",
       "subcat": "",
       "notes": "Gafas para uso nocturno con cristal anti luz azul. Ideal para el uso constante de pantallas como celular, televisor, laptop etc.. Hermoso y elegante accesorio para salidas,fotos y eventos",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791773062/productos/bycyo579ql5t2imrfueq.jpg",
       "precioUSD": 3,
-      "precioCUP": 2400,
+      "precioCUP": 2415,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -2297,12 +2282,33 @@
       "cat": "Accesorio de vestir",
       "subcat": "",
       "notes": "Tamaño mediano. Modelo ideal tanto para hombres como para mujeres\nDisponibles todos los diseños de la imagen",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785957431/productos/fn1lmdu4xjjryicw7f7t.jpg",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792326212/productos/oykcu5rbvo0c6m2dgqvm.jpg",
       "precioUSD": 2,
-      "precioCUP": 1600,
+      "precioCUP": 1610,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Diseño"
+        ],
+        "opciones": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F"
+        ]
+      },
+      "maxOpciones": {
+        "A": 3,
+        "B": 5,
+        "C": 1,
+        "D": 9,
+        "E": 2,
+        "F": 1
+      },
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
@@ -2318,7 +2324,7 @@
       "notes": "Gafas de máxima calidad, armadura metálica de color negro o dorado y cristales oscuros y semi claros\nHermoso diseño para mujeres y hombres",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788626193/productos/sgqc9dmkhiihxjloiavv.jpg",
       "precioUSD": 3,
-      "precioCUP": 2400,
+      "precioCUP": 2415,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -2338,7 +2344,7 @@
       "subcat": "",
       "notes": "Variedad de diseños tanto para hombres como para mujeres y adolescentes",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787844050/productos/lucqf8ourwaufnovjbjl.jpg",
-      "precioUSD": 1.13,
+      "precioUSD": 1.12,
       "precioCUP": 900,
       "moneda": "cup",
       "enOferta": false,
@@ -2359,7 +2365,7 @@
       "notes": "Exactamente el diseño de la imagen",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785959018/productos/myajl2zdcccmbh4wnjqq.jpg",
       "precioUSD": 2,
-      "precioCUP": 1600,
+      "precioCUP": 1610,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -2378,7 +2384,7 @@
       "notes": "Alarga la vida útil de las máquinas de afeitar evitando el óxido por acumulación de agua,mantiene el espacio limpio, ordenado y propicia mayor accesibilidad de este instrumento de uso diario.",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788841425/productos/sgxqsuyjleeuyulbuazw.jpg",
       "precioUSD": 1,
-      "precioCUP": 800,
+      "precioCUP": 805,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -2408,7 +2414,7 @@
       "notes": "2 gavetas con espejo giratorio vertical y organizadores laterales\nTipo Formica,no es plástico",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785006341/productos/jfqmildcf9hh18lsfmf9.jpg",
       "precioUSD": 20,
-      "precioCUP": 16000,
+      "precioCUP": 16100,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -2428,7 +2434,7 @@
       "subcat": "",
       "notes": "Set de 6 mini gloss. Hermosos y variados tonos. Mensajería gratis",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782219129/productos/kj3w0n6vt5ymzqluqaap.jpg",
-      "precioUSD": 5,
+      "precioUSD": 4.97,
       "precioCUP": 4000,
       "moneda": "cup",
       "enOferta": false,
@@ -2468,7 +2474,7 @@
       "notes": "Glucomanano: tu aliado natural para adelgazar y sentirte mejor!\nFibra soluble de konjac que absorbe agua y forma un gel en el estómago.\nBeneficios clave:\nSaciedad inmediata → comes menos sin pasar hambre\nAyuda a perder peso de forma natural\nReduce el colesterol y controla el azúcar\nMejora el tránsito intestinal y combate el estreñimiento\nCómo tomarlo: 1 g antes de cada comida + abundante agua.\nResultados reales + fórmula 100 % natural.\n¡Empieza hoy y siente la diferencia!",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791646511/productos/zs3d43e6wptfjygw2pqt.jpg",
       "precioUSD": 25,
-      "precioCUP": 20000,
+      "precioCUP": 20125,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -2489,7 +2495,7 @@
       "notes": "Hamaca de uso personal con capacidad para adultos y niños",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785007865/productos/cpkmq5uzrq5syrnkbwg0.jpg",
       "precioUSD": 12,
-      "precioCUP": 9600,
+      "precioCUP": 9660,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -2510,7 +2516,7 @@
       "notes": "Hamaca de uso personal con capacidad para adultos y niños",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785008341/productos/f8dhc1t8mcn3yodirdvx.jpg",
       "precioUSD": 13,
-      "precioCUP": 10400,
+      "precioCUP": 10465,
       "moneda": "usd",
       "enOferta": false,
       "destacado": true,
@@ -2531,7 +2537,7 @@
       "notes": "A demás de brindar una luz tenue y agradable para el descanso,esparse un dulce aroma de su elección ( incluye 2 aceites esenciales) y también humidifica la habitación, exelente tratamiento contra la congestión y para la calidad no solo respiratoria, también cutánea, favoreciendo la elasticidad de la piel. Cuenta con mando a distancia",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791895952/productos/v4jrnhjajxa3wajl9ptc.jpg",
       "precioUSD": 15,
-      "precioCUP": 12000,
+      "precioCUP": 12075,
       "moneda": "usd",
       "enOferta": false,
       "destacado": true,
@@ -2568,27 +2574,6 @@
       "creado": 1782340744519
     },
     {
-      "id": "p_1791143406938",
-      "codigo": "58XL",
-      "name": "Juego de 5 Calderos de acero inoxidable",
-      "cat": "Hogar",
-      "subcat": "",
-      "notes": "El conjunto cuenta con 10 piezas. 5 Calderos de acero inoxidable con sus 5 tapas de cristal. Alta calidad y resistencia, todo es metálico,incluso las asas y la copita de las tapas, nada plástico. Ideal para todo tipo de fogones: inducción, infrarrojo,gas, etc... Lo mejor para la cocina, no se pegan los alimentos,no se ralla con el uso ni se desgasta,no pierde color ni propiedades el material, puede limpiarse con paños de aluminio sin que le afecte. Lo mejor para la cocina cubana.",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791143110/productos/pn03og4qehjxbqxyxqpn.jpg",
-      "precioUSD": 42,
-      "precioCUP": 33600,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "max": 1,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1791143406938
-    },
-    {
       "id": "p_1791140393037",
       "codigo": "NU4W",
       "name": "Kit de 30 Globos 💙 💛",
@@ -2597,7 +2582,7 @@
       "notes": "El paquete contiene 30 globos entre dorado,color y con brillos tal como la imagen muestra. Las cantidades de cada diseño están también plasmadas en la imagen.",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791140331/productos/k4egjgvuqqkxvqpdw2mg.jpg",
       "precioUSD": 7,
-      "precioCUP": 5600,
+      "precioCUP": 5635,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -2618,7 +2603,7 @@
       "notes": "El paquete contiene 30 globos entre dorado,color y con brillos tal como la imagen muestra. Las cantidades de cada diseño están también plasmadas en la imagen.",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791140370/productos/m5yxwmqt164n0bzipqjv.jpg",
       "precioUSD": 7,
-      "precioCUP": 5600,
+      "precioCUP": 5635,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -2639,7 +2624,7 @@
       "notes": "El paquete contiene 30 globos entre dorado,color y con brillos tal como la imagen muestra. Las cantidades de cada diseño están también plasmadas en la imagen.",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791139941/productos/k4mhq9sttgckfwyg9uua.jpg",
       "precioUSD": 7,
-      "precioCUP": 5600,
+      "precioCUP": 5635,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -2660,7 +2645,7 @@
       "notes": "El paquete contiene 30 globos entre dorado,color y con brillos tal como la imagen muestra. Las cantidades de cada diseño están también plasmadas en la imagen.",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791140202/productos/mf9u4foircufryhoh8io.jpg",
       "precioUSD": 7,
-      "precioCUP": 5600,
+      "precioCUP": 5635,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -2681,7 +2666,7 @@
       "notes": "El paquete contiene 30 globos entre dorado,color y con brillos tal como la imagen muestra. Las cantidades de cada diseño están también plasmadas en la imagen.",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791140236/productos/vvllebrndvrrlcce8ibt.jpg",
       "precioUSD": 7,
-      "precioCUP": 5600,
+      "precioCUP": 5635,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -2694,6 +2679,31 @@
       "creado": 1791140326794
     },
     {
+      "id": "p_1792342171217",
+      "codigo": "F6BK",
+      "name": "Kit de afeitado y corte de cabellos",
+      "cat": "Electrodomésticos",
+      "subcat": "",
+      "notes": "Kit de afeitado y corte de pelo para hombre de 2 piezas. Set de caja de regalo para el Día de San Valentín. Recargable por USB. Regalo para novio, regalo del Día del Padre, regalo de cumpleaños, regalo de festividades",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792357425/productos/amllbqtskswfbmgwzgix.jpg",
+      "precioUSD": 25,
+      "precioCUP": 20125,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792357434/productos/dacuvxu3bvtduzmp7e2r.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792357439/productos/mlgso4zkjxqkihtjureb.jpg"
+      ],
+      "max": 2,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1792342171217
+    },
+    {
       "id": "p_1782259495565",
       "codigo": "2Q88",
       "name": "Kit de pinzas de cejas",
@@ -2702,7 +2712,7 @@
       "notes": "Pinzas de cejas(4en1):Juego de 4 pinzas de acero inoxidable de alta densidad. Adecuadas para herramientas de depilación, recorte de barba y diseño de cejas. Un ayudante versátil, duradero y esencial para todas las estaciones.",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790863888/productos/sywejap0dlykstcxr9mq.jpg",
       "precioUSD": 2.5,
-      "precioCUP": 2000,
+      "precioCUP": 2013,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -2721,7 +2731,7 @@
       "subcat": "",
       "notes": "",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782343113/productos/yz4hspngpz00bm2zo20p.jpg",
-      "precioUSD": 0.63,
+      "precioUSD": 0.62,
       "precioCUP": 500,
       "moneda": "cup",
       "enOferta": false,
@@ -2760,7 +2770,7 @@
       "subcat": "",
       "notes": "Lazos aterciopelados de evilla metálica y adornados con brillantes. Ideal para niñas , adolecentes y jóvenes. Hermosos y elegantes diseños. Variedad de colores disponibles.",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790714260/productos/oxvautqjuev0sdkbkliz.jpg",
-      "precioUSD": 1.88,
+      "precioUSD": 1.86,
       "precioCUP": 1500,
       "moneda": "cup",
       "enOferta": false,
@@ -2795,15 +2805,46 @@
       "creado": 1790714894835
     },
     {
+      "id": "p_1792263885053",
+      "codigo": "JSRK",
+      "name": "Licra faja invisible",
+      "cat": "Ropa",
+      "subcat": "",
+      "notes": "Licra faja de tela lijera y elastizada. Ideal para el ajuste de la cintura, con tela reforzada para esa zona y varillas para el control de la silueta. Tela y diseño confeccionados especialmente para su uso con vestidos y prendas que lo requieran , proporcionando así una imagen más estilizada y un abdomen más firme",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792263645/productos/ld6jraupnrz0in6dfnie.jpg",
+      "precioUSD": 10,
+      "precioCUP": 8050,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Talla"
+        ],
+        "opciones": [
+          "S"
+        ]
+      },
+      "maxOpciones": {
+        "S": 1
+      },
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1792263885054
+    },
+    {
       "id": "p_1789233150296",
       "codigo": "NU2L",
-      "name": "Licra corta 1",
+      "name": "Licra levanta/glúteos con pliegue lateral",
       "cat": "Ropa",
       "subcat": "",
       "notes": "Licra levanta glúteos corta. Alta calidad, importadas de USA.Talla reducida, viene siendo una M",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789232992/productos/jilgowubjhhnw3ymicjw.jpg",
       "precioUSD": 4,
-      "precioCUP": 3200,
+      "precioCUP": 3220,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -2813,13 +2854,11 @@
           "Color"
         ],
         "opciones": [
-          "L(REDUCIDA) / MARRÓN🤎",
           "L(REDUCIDA) / GRIS🩶"
         ]
       },
       "maxOpciones": {
-        "L(REDUCIDA) / MARRÓN🤎": 1,
-        "L(REDUCIDA) / GRIS🩶": 3
+        "L(REDUCIDA) / GRIS🩶": 2
       },
       "envio": {
         "corto": "🛵 Mensajería gratis",
@@ -2829,15 +2868,72 @@
       "creado": 1789233150296
     },
     {
+      "id": "p_1789235611281",
+      "codigo": "K4UQ",
+      "name": "Licra levanta/glúteos larga",
+      "cat": "Ropa",
+      "subcat": "",
+      "notes": "Licra larga estilizadora. Función reductora de cintura y levantadora de glúteos.Alta calidad, importadas de USA. Color de la imagen. Talla M reducida",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789235438/productos/pp8qmssraxnetipkstgx.jpg",
+      "precioUSD": 6,
+      "precioCUP": 4830,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "max": 1,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1789235611432
+    },
+    {
+      "id": "p_1789235076276",
+      "codigo": "44JV",
+      "name": "Licra levanta/glúteos semi estampadas",
+      "cat": "Ropa",
+      "subcat": "",
+      "notes": "Licras cortas levanta glúteos. Alta calidad, importadas de USA. Exactamente los tonos de la imagen,talla reducida.",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789234896/productos/pqkfzohmt0pphqz08mdc.jpg",
+      "precioUSD": 3,
+      "precioCUP": 2415,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Talla",
+          "Color"
+        ],
+        "opciones": [
+          "L(REDUCIDA) / GRIS",
+          "L(REDUCIDA) / VERDE",
+          "L(REDUCIDA) / NARANJA"
+        ]
+      },
+      "maxOpciones": {
+        "L(REDUCIDA) / GRIS": 2,
+        "L(REDUCIDA) / VERDE": 1,
+        "L(REDUCIDA) / NARANJA": 1
+      },
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1789235076278
+    },
+    {
       "id": "p_1789233318851",
       "codigo": "KRG9",
-      "name": "Licra corta 2",
+      "name": "Licras levanta/glúteos color entero",
       "cat": "Ropa",
       "subcat": "",
       "notes": "Licra corta levanta glúteos.Alta calidad, importadas de USA. Fiel a la talla. Exactamente los tonos de la imagen",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789233113/productos/iobfneseakk7fo5p9d5q.jpg",
       "precioUSD": 3,
-      "precioCUP": 2400,
+      "precioCUP": 2415,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -2867,63 +2963,6 @@
       "creado": 1789233318851
     },
     {
-      "id": "p_1789235076276",
-      "codigo": "44JV",
-      "name": "Licra corta 3",
-      "cat": "Ropa",
-      "subcat": "",
-      "notes": "Licras cortas levanta glúteos. Alta calidad, importadas de USA. Exactamente los tonos de la imagen,talla reducida.",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789234896/productos/pqkfzohmt0pphqz08mdc.jpg",
-      "precioUSD": 3,
-      "precioCUP": 2400,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "variantes": {
-        "ejes": [
-          "Talla",
-          "Color"
-        ],
-        "opciones": [
-          "L(REDUCIDA) / GRIS",
-          "L(REDUCIDA) / VERDE",
-          "L(REDUCIDA) / NARANJA"
-        ]
-      },
-      "maxOpciones": {
-        "L(REDUCIDA) / GRIS": 2,
-        "L(REDUCIDA) / VERDE": 1,
-        "L(REDUCIDA) / NARANJA": 1
-      },
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1789235076278
-    },
-    {
-      "id": "p_1789235611281",
-      "codigo": "K4UQ",
-      "name": "Licra larga",
-      "cat": "Ropa",
-      "subcat": "",
-      "notes": "Licra larga estilizadora. Función reductora de cintura y levantadora de glúteos.Alta calidad, importadas de USA. Color de la imagen. Talla M reducida",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789235438/productos/pp8qmssraxnetipkstgx.jpg",
-      "precioUSD": 6,
-      "precioCUP": 4800,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "max": 1,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1789235611432
-    },
-    {
       "id": "p_1782339511897",
       "codigo": "K2RE",
       "name": "Lima de pies",
@@ -2931,7 +2970,7 @@
       "subcat": "",
       "notes": "Lima de pies de acero inoxidable con juego de repuesto gratuito, herramienta profesional para eliminar piel muerta, con mango antideslizante y apta para uso en seco y húmedo",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782339455/productos/f44wmt0fyjhno0mjzndp.jpg",
-      "precioUSD": 3.13,
+      "precioUSD": 3.11,
       "precioCUP": 2500,
       "moneda": "cup",
       "enOferta": true,
@@ -2942,7 +2981,7 @@
       },
       "envioGratis": true,
       "creado": 1782339511897,
-      "precioNormalUSD": 3.38,
+      "precioNormalUSD": 3.35,
       "precioNormalCUP": 2700
     },
     {
@@ -2953,7 +2992,7 @@
       "subcat": "",
       "notes": "Válvula de bola de PVC blanca de ¾ de pulgada, con manija azul tipo mariposa y conexiones de rosca. Ideal para controlar el flujo de agua en sistemas de plomería residencial o comercial. Construcción resistente y de fácil instalación.",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788314496/productos/r65thrkwopmgo5meeauu.jpg",
-      "precioUSD": 1.19,
+      "precioUSD": 1.18,
       "precioCUP": 950,
       "moneda": "cup",
       "enOferta": false,
@@ -3033,7 +3072,7 @@
       "notes": "Paquete de 5 mallas para fregar. Diseñado para zonas difíciles, limpieza fuerte y profunda. No ralla ni maltrata, ideal para cuidar el teflón y el esmalte de los artículos de la cocina",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788533526/productos/ih6lcxwtznvuhj4viazn.jpg",
       "precioUSD": 1,
-      "precioCUP": 800,
+      "precioCUP": 805,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -3053,7 +3092,7 @@
       "notes": "Hermosa malla para la playa. Unitalla. Solo en negra. No incluye bikini",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788540492/productos/wwhowrwzkv7f2q8rny0v.jpg",
       "precioUSD": 6,
-      "precioCUP": 4800,
+      "precioCUP": 4830,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -3074,7 +3113,7 @@
       "notes": "Malla de protección solar, Malla de aislamiento para patio al aire libre, Malla de sombra para patio, Balcón de camping duradero resistente a los rayos UV, Malla de sombra encriptada.con sus ojales",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791834204/productos/ebruqxzo2wrck8jrlokj.jpg",
       "precioUSD": 16,
-      "precioCUP": 12800,
+      "precioCUP": 12880,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -3095,7 +3134,7 @@
       "notes": "Color y diseño exactamente como en la imagen, con sus ojales de fabrica,es solo llegar y colocar\nMedidas :3mx2m\nMaterial: Malla de nylon",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785768595/productos/hkkmrijuemjfntdqb1be.jpg",
       "precioUSD": 20,
-      "precioCUP": 16000,
+      "precioCUP": 16100,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -3115,7 +3154,7 @@
       "subcat": "",
       "notes": "Tela muy elastizada y ultra transpirable.\nDisponibles todos los colores de la imagen\nEn más de uno Mensajería gratis",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790865870/productos/jlb3kytez3v1awgem47j.jpg",
-      "precioUSD": 1.25,
+      "precioUSD": 1.24,
       "precioCUP": 1000,
       "moneda": "cup",
       "enOferta": false,
@@ -3155,7 +3194,7 @@
       "notes": "Kit de 12 hermosas mariposas decorativas. Variadas en tamaño y diseño.imcluye su cinta de doble contacto. Color a elegir entre los 4 de la imagen",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791924633/productos/wxo6bbmvmpgn7fedebkd.jpg",
       "precioUSD": 2,
-      "precioCUP": 1600,
+      "precioCUP": 1610,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -3194,7 +3233,7 @@
       "subcat": "",
       "notes": "Mascarilla facial negra de carbón de bambú,  limpieza profunda de la piel facial para puntos negros y blancos, extractos naturales, ingrediente suave, hidratante y control de grasa, ilumina la piel, apta para todo tipo de piel, la piel luce visiblemente rejuvenecida",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782259607/productos/vyo6dwsbzxnipbsgrtc9.jpg",
-      "precioUSD": 2.63,
+      "precioUSD": 2.61,
       "precioCUP": 2100,
       "moneda": "cup",
       "enOferta": false,
@@ -3207,25 +3246,6 @@
       "creado": 1782259680772
     },
     {
-      "id": "p_1780092595587",
-      "codigo": "YKGQ",
-      "name": "Medias",
-      "cat": "Ropa Interior",
-      "subcat": "",
-      "notes": "Variedad de colores.",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1781664214/productos/frkpoykricnh3mtxabig.jpg",
-      "precioUSD": 0.5,
-      "precioCUP": 400,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      },
-      "creado": 1780092595587
-    },
-    {
       "id": "p_1789255852331",
       "codigo": "YL97",
       "name": "Medias Negras (2 pares)",
@@ -3234,7 +3254,7 @@
       "notes": "",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791646513/productos/sgwtgfloj0blvw1asheh.jpg",
       "precioUSD": 1,
-      "precioCUP": 800,
+      "precioCUP": 805,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -3245,38 +3265,6 @@
       "creado": 1789255852332
     },
     {
-      "id": "p_1789256890851",
-      "codigo": "UFJ3",
-      "name": "Medias variadas",
-      "cat": "Ropa Interior",
-      "subcat": "",
-      "notes": "",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789256579/productos/e49l6h0uldhsq9ldzbjp.jpg",
-      "precioUSD": 0.5,
-      "precioCUP": 400,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "variantes": {
-        "ejes": [
-          "Color"
-        ],
-        "opciones": [
-          "NEGRO",
-          "BLANCO",
-          "GRIS"
-        ]
-      },
-      "maxOpciones": {
-        "GRIS": 2
-      },
-      "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      },
-      "creado": 1789256890851
-    },
-    {
       "id": "p_1789506414289",
       "codigo": "YP64",
       "name": "Merenguera mezcladora",
@@ -3285,7 +3273,7 @@
       "notes": "Incluye 4 piezas de batir, la base plástica la vasija de acero inoxidable y por supuesto, la merenguera. Puede usarse en su base o de forma manual",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789506301/productos/sa7kwkxe59m4lmbtwb8f.jpg",
       "precioUSD": 30,
-      "precioCUP": 24000,
+      "precioCUP": 24150,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -3312,7 +3300,7 @@
       "notes": "El paquete contiene 8 bloquesitos de uñas negros. Medidas exactas en la imagen",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786916683/productos/nmkkdiogx2oxwgwc0hcx.jpg",
       "precioUSD": 1,
-      "precioCUP": 800,
+      "precioCUP": 805,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -3332,7 +3320,7 @@
       "notes": "2 gavetas con espejo giratorio vertical.\nTipo Formica,no es plástico",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1781005431/productos/iyjmo4dxvnedrjvbitog.jpg",
       "precioUSD": 17,
-      "precioCUP": 13600,
+      "precioCUP": 13685,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -3345,32 +3333,6 @@
       "creado": 1781005462535
     },
     {
-      "id": "p_1780452122083",
-      "codigo": "LX3Z",
-      "name": "Mini Lavadora",
-      "cat": "Electrodomésticos",
-      "subcat": "",
-      "notes": "Lavadora plegable y portátil\nCompacta, ahorra espacio y se guarda fácilmente. Perfecta para lavar ropa interior, calcetines, pañales y prendas delicadas. Ahorra agua y esfuerzo. 110V -220v\nIncluye su transformador, manguera de desagüe y cesta de secado\nCapacidad 11L",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1784912344/productos/pkjeaowywyiykoigcxok.jpg",
-      "precioUSD": 35,
-      "precioCUP": 28000,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "fotos": [
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791870947/productos/bv24wn9avfesp9hd7rmw.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791870968/productos/dncpe9fphgc8v6bxtxby.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791870995/productos/wazysb6m70j6g3djrteo.jpg"
-      ],
-      "max": 1,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1780452122083
-    },
-    {
       "id": "p_1780451802473",
       "codigo": "WM7G",
       "name": "Mini Licuadora Recargable",
@@ -3379,7 +3341,7 @@
       "notes": "Base de Motor con vaso plástica y tapa para la función de jarra\nIncluye también cable de carga\nBatería de 1500mah",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1780451710/productos/cbsipij6fvga8rhldraj.jpg",
       "precioUSD": 17,
-      "precioCUP": 13600,
+      "precioCUP": 13685,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -3389,7 +3351,7 @@
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1791895206/productos/amx7y7kptworf7qavv6o.jpg",
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1791895218/productos/akgcwpttdnmzuz3q3hbk.jpg"
       ],
-      "max": 4,
+      "max": 5,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -3444,7 +3406,7 @@
       "notes": "Calidad Premium\nMochila gris con cartuchera negra de alta resistencia. Ideal para adolescentes y jóvenes\nOJO: Mochila grande pero talla escolar, no es tamaño XL para negocios, transportar mercancía etc...",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785180741/productos/ity5mizfzjit3fs0qvsl.jpg",
       "precioUSD": 13,
-      "precioCUP": 10400,
+      "precioCUP": 10465,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -3465,7 +3427,7 @@
       "notes": "Mochilas de color negro con detalles en verde💚,naranja 🧡 o gris🩶. Mochilas escolares. Tamaño exacto en la imagen.",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789009348/productos/lfuym6qdwytctqcg9uds.jpg",
       "precioUSD": 12,
-      "precioCUP": 9600,
+      "precioCUP": 9660,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -3498,7 +3460,7 @@
       "notes": "Ideal para facilitar el trabajo diario sin importar las condiciones electro energéticas. No necesita alimentación de corriente. Incluye su cable de carga, cuchillas afiladas dobles y un accesorio para batir huevos.",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791646515/productos/pamjevfzqm37iytafdzl.jpg",
       "precioUSD": 12,
-      "precioCUP": 9600,
+      "precioCUP": 9660,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -3519,13 +3481,13 @@
     {
       "id": "p_1789218727536",
       "codigo": "6FTU",
-      "name": "Mono enterizo 1",
+      "name": "Mono enterizo corto",
       "cat": "Ropa",
       "subcat": "",
       "notes": "Mono peto con tirantes y pantalones cortos de moda casual para mujer, primavera y verano 2026",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789315739/productos/sp8qmj6mbsnlpdbwq9lq.jpg",
       "precioUSD": 15,
-      "precioCUP": 12000,
+      "precioCUP": 12075,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -3536,14 +3498,14 @@
         ],
         "opciones": [
           "S / NEGRO",
-          "S / VERDE",
-          "M / NEGRO"
+          "M / NEGRO",
+          "M / VERDE"
         ]
       },
       "maxOpciones": {
         "S / NEGRO": 2,
-        "S / VERDE": 1,
-        "M / NEGRO": 2
+        "M / NEGRO": 2,
+        "M / VERDE": 1
       },
       "envio": {
         "corto": "🛵 Mensajería gratis",
@@ -3553,48 +3515,15 @@
       "creado": 1789218727536
     },
     {
-      "id": "p_1787080747584",
-      "codigo": "JSMN",
-      "name": "Mono enterizo 2",
-      "cat": "Ropa",
-      "subcat": "",
-      "notes": "Solo en color negro. Exelente tela, ligero, cómodo y elegante.",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787080610/productos/tm0xsuiwvxmdn5kvgeug.jpg",
-      "precioUSD": 15,
-      "precioCUP": 12000,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "variantes": {
-        "ejes": [
-          "Talla"
-        ],
-        "opciones": [
-          "XL",
-          "2XL"
-        ]
-      },
-      "maxOpciones": {
-        "XL": 1,
-        "2XL": 4
-      },
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1787080747584
-    },
-    {
       "id": "p_1789228482999",
       "codigo": "ZREY",
-      "name": "Mono enterizo 3",
+      "name": "Mono enterizo levanta/glúteos",
       "cat": "Ropa",
       "subcat": "",
       "notes": "Monos deportivos tela de licra,largos,para ancha,levanta glúteos y estilizadores . Máxima calidad y confort",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791646518/productos/i6sf0yhnphkhq3yhiyef.jpg",
       "precioUSD": 18,
-      "precioCUP": 14400,
+      "precioCUP": 14490,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -3622,6 +3551,39 @@
       "creado": 1789228482999
     },
     {
+      "id": "p_1787080747584",
+      "codigo": "JSMN",
+      "name": "Mono enterizo oversize",
+      "cat": "Ropa",
+      "subcat": "",
+      "notes": "Solo en color negro. Exelente tela, ligero, cómodo y elegante.",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787080610/productos/tm0xsuiwvxmdn5kvgeug.jpg",
+      "precioUSD": 15,
+      "precioCUP": 12075,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Talla"
+        ],
+        "opciones": [
+          "XL",
+          "2XL"
+        ]
+      },
+      "maxOpciones": {
+        "XL": 1,
+        "2XL": 4
+      },
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1787080747584
+    },
+    {
       "id": "p_1786922026243",
       "codigo": "6YDU",
       "name": "Mono enterizo tallas pequeñas",
@@ -3630,7 +3592,7 @@
       "notes": "Mono enterizo para perritos y gatitos. 3 tallas disponibles,desde Chihuahua hasta pequines o demás razas de esas tallas\nTela elastizada y cómoda",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786921895/productos/u8h2hdgunqdqb7qb2zvc.jpg",
       "precioUSD": 7,
-      "precioCUP": 5600,
+      "precioCUP": 5635,
       "moneda": "usd",
       "enOferta": true,
       "destacado": false,
@@ -3642,31 +3604,7 @@
       "envioGratis": true,
       "creado": 1786922026243,
       "precioNormalUSD": 8,
-      "precioNormalCUP": 6400
-    },
-    {
-      "id": "p_1788897850953",
-      "codigo": "8ARJ",
-      "name": "Mueble de puertas 3 pisos",
-      "cat": "Muebles",
-      "subcat": "",
-      "notes": "Mueble con rueditas, y puertas con imanes para mejor cierre. Ideal organizador para cualquier lugar de la casa, tanto habitaciones,cocina, baño,oficina,etc...",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788897774/productos/unvimltpxn8k3vfrvqoh.jpg",
-      "precioUSD": 40,
-      "precioCUP": 32000,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "fotos": [
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791919213/productos/uheclodh2ny8ts6wwja0.jpg"
-      ],
-      "max": 1,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1788897850953
+      "precioNormalCUP": 6440
     },
     {
       "id": "p_1784914843855",
@@ -3677,7 +3615,7 @@
       "notes": "Nebulizador de sistema respiratorio portátil con aprobación de la FDA, nebulizador portátil, adecuado para uso en el hogar, la oficina y los viajes",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1784914749/productos/vv9dzqsudnufwodzfrzv.jpg",
       "precioUSD": 33,
-      "precioCUP": 26400,
+      "precioCUP": 26565,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -3703,7 +3641,7 @@
       "notes": "Nebulizador portátil para adultos y niños - Inhalador de mano con tecnología de ondas de sonido y funcionamiento silencioso, compacto y apto para viajes, sistema de malla fácil de limpiar para uso de emergencia - Apto para fibrosis quística",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791891146/productos/qm5l2kunip5msjf3cxwe.jpg",
       "precioUSD": 19,
-      "precioCUP": 15200,
+      "precioCUP": 15295,
       "moneda": "usd",
       "enOferta": true,
       "destacado": false,
@@ -3721,7 +3659,7 @@
       "envioGratis": true,
       "creado": 1786732384382,
       "precioNormalUSD": 20,
-      "precioNormalCUP": 16000
+      "precioNormalCUP": 16100
     },
     {
       "id": "p_1786708481607",
@@ -3732,7 +3670,7 @@
       "notes": "Delicioso Nesquik de chocolate. Pote gigante de 2.8 libras sabor chocolate con vitaminas añadidas. Importado directamente de USA",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786929207/productos/fig57zzkbowjpuo3ws8i.jpg",
       "precioUSD": 28,
-      "precioCUP": 22400,
+      "precioCUP": 22540,
       "moneda": "usd",
       "enOferta": true,
       "destacado": true,
@@ -3744,7 +3682,7 @@
       "envioGratis": true,
       "creado": 1786708481607,
       "precioNormalUSD": 30,
-      "precioNormalCUP": 24000
+      "precioNormalCUP": 24150
     },
     {
       "id": "p_1785006327470",
@@ -3755,7 +3693,7 @@
       "notes": "Organizador Delgado (Madera) para Baño con Soporte para Papel Higiénico - Gabinete de Almacenamiento de PVC Blanco, Fácil de Montar, Adecuado para Espacios Estrechos, Ideal para Cocina/ Dormitorio/Sala de Estar/Sala de Comedor y Negocios, Estética Moderna, Diseño Minimalista",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785006024/productos/vajsqmfrccqjqcq1bydg.jpg",
       "precioUSD": 38,
-      "precioCUP": 30400,
+      "precioCUP": 30590,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -3776,7 +3714,7 @@
       "notes": "Organizador con siper y asas. Tela similar a las bolsas Vima. Gran capacidad. Ideal para guardar ropa de cama, ropa de invierno , accesorios de poco uso y también para transportación de artículos ligeros.Solo en color negro",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791378065/productos/kg8hzspvx5npklnjjj2x.jpg",
       "precioUSD": 4,
-      "precioCUP": 3200,
+      "precioCUP": 3220,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -3797,7 +3735,7 @@
       "notes": "Forros para pared Ideal para cubrir humedades, ayuda a insonorizar, repeler el calor, es lavable, y duradero, además de altamente estético La caja contiene 50 hojas Cada hoja mide 35cmx30cm",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788730056/productos/zzsmdd4b5l50rzgmcahf.jpg",
       "precioUSD": 35,
-      "precioCUP": 28000,
+      "precioCUP": 28175,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -3818,7 +3756,7 @@
       "notes": "Forros para pared Ideal para cubrir humedades, ayuda a insonorizar, repeler el calor, es lavable, y duradero, además de altamente estético La caja contiene 50 hojas Cada hoja mide 35cmx30cm",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791836204/productos/bhk5mekf40eu67gzyafn.jpg",
       "precioUSD": 35,
-      "precioCUP": 28000,
+      "precioCUP": 28175,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -3839,7 +3777,7 @@
       "notes": "Forros para pared Ideal para cubrir humedades, ayuda a insonorizar, repeler el calor, es lavable, y duradero, además de altamente estético La caja contiene 50 hojas Cada hoja mide 35cmx30cm",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788728920/productos/kyv00tgbmwpgndror7dl.jpg",
       "precioUSD": 35,
-      "precioCUP": 28000,
+      "precioCUP": 28175,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -3860,7 +3798,7 @@
       "notes": "Forros para pared Ideal para cubrir humedades, ayuda a insonorizar, repeler el calor, es lavable, y duradero, además de altamente estético La caja contiene 50 hojas Cada hoja mide 35cmx30cm",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788728842/productos/v6ev02i92n0tiezu2fel.jpg",
       "precioUSD": 35,
-      "precioCUP": 28000,
+      "precioCUP": 28175,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -3881,7 +3819,7 @@
       "notes": "Forros para pared Ideal para cubrir humedades, ayuda a insonorizar, repeler el calor, es lavable, y duradero, además de altamente estético La caja contiene 50 hojas Cada hoja mide 35cmx38cm",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788728656/productos/j254gfososgqlksickeg.jpg",
       "precioUSD": 40,
-      "precioCUP": 32000,
+      "precioCUP": 32200,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -3901,7 +3839,7 @@
       "subcat": "",
       "notes": "10flores por paquete\nMateriales:Flor de goma y gancho metálico",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788131956/productos/pfnnrk7tq9teetv2mucs.jpg",
-      "precioUSD": 2.5,
+      "precioUSD": 2.48,
       "precioCUP": 2000,
       "moneda": "cup",
       "enOferta": false,
@@ -3922,7 +3860,7 @@
       "subcat": "",
       "notes": "10 Unidades cada paquete\nMateriales:flor de tela y gancho de metal",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788131870/productos/wrto4ojobtjsxqnptdii.jpg",
-      "precioUSD": 1.88,
+      "precioUSD": 1.86,
       "precioCUP": 1500,
       "moneda": "cup",
       "enOferta": false,
@@ -3943,7 +3881,7 @@
       "notes": "Cada paquete trae 10 ganchos.",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787956401/productos/x5b7h43xmdftd8ufs5rq.jpg",
       "precioUSD": 1.5,
-      "precioCUP": 1200,
+      "precioCUP": 1208,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -3962,7 +3900,7 @@
       "subcat": "",
       "notes": "Paquete de 10 mini mariposas metálicas para el cabello. Diseño delicado y elegante en acero plateado, con cierre de presión seguro. Ideales para peinados finos, recogidos o como accesorio decorativo. Ligeras, resistentes y de tamaño compacto, perfectas para uso diario o ocasiones especiales.",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788035311/productos/boandlf6ammxiganqiix.jpg",
-      "precioUSD": 1.5,
+      "precioUSD": 1.49,
       "precioCUP": 1200,
       "moneda": "cup",
       "enOferta": false,
@@ -3983,7 +3921,7 @@
       "notes": "Pajillas negras de alta calidad",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788618088/productos/sfp8rofru3m2g8xdcmvz.jpg",
       "precioUSD": 3,
-      "precioCUP": 2400,
+      "precioCUP": 2415,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -4023,7 +3961,7 @@
       "subcat": "",
       "notes": "El paquete trae 25Unidades",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1780608383/productos/huixhwzn5cnjfnf3tc3s.jpg",
-      "precioUSD": 1.25,
+      "precioUSD": 1.24,
       "precioCUP": 1000,
       "moneda": "cup",
       "enOferta": false,
@@ -4044,7 +3982,7 @@
       "notes": "Juego de 3 mini embudos de diferentes tamaños. De silicona,plegables. Tonos azules o rosados según su elección",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787956513/productos/gyr60uzsoyvpsrfdbczp.jpg",
       "precioUSD": 1.41,
-      "precioCUP": 1128,
+      "precioCUP": 1135,
       "moneda": "usd",
       "enOferta": true,
       "destacado": false,
@@ -4067,7 +4005,7 @@
       },
       "creado": 1781005769619,
       "precioNormalUSD": 2.2,
-      "precioNormalCUP": 1760
+      "precioNormalCUP": 1771
     },
     {
       "id": "p_1786930924590",
@@ -4077,7 +4015,7 @@
       "subcat": "",
       "notes": "Paquetes de 4unidades,",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786930842/productos/wzpik5gw8tzabbppxhn1.jpg",
-      "precioUSD": 1,
+      "precioUSD": 0.99,
       "precioCUP": 800,
       "moneda": "cup",
       "enOferta": false,
@@ -4107,7 +4045,7 @@
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
       },
       "creado": 1780614185839,
-      "precioNormalUSD": 0.85,
+      "precioNormalUSD": 0.84,
       "precioNormalCUP": 680
     },
     {
@@ -4119,7 +4057,7 @@
       "notes": "El precio es por un paquete de 5 esponjas",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787956344/productos/bobyh23bclobciqvbiws.jpg",
       "precioUSD": 1.2,
-      "precioCUP": 960,
+      "precioCUP": 966,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -4138,7 +4076,7 @@
       "notes": "Paquete de 5 estropajos de aluminio de alta calidad. Inoxidable y muy duradero",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788533301/productos/txglc57hsr3munkrokuz.jpg",
       "precioUSD": 2,
-      "precioCUP": 1600,
+      "precioCUP": 1610,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -4157,7 +4095,7 @@
       "subcat": "",
       "notes": "Cada paquete trae 5 unidades\nMateriales: Mariposas de tela y ganchos metálicos",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788131774/productos/uzzzxzk5rbvv2wztosn8.jpg",
-      "precioUSD": 2.5,
+      "precioUSD": 2.48,
       "precioCUP": 2000,
       "moneda": "cup",
       "enOferta": false,
@@ -4178,7 +4116,7 @@
       "subcat": "",
       "notes": "Paquete de 5 pellisquitos de metal de colores variados 🌈. Alta calidad y belleza",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788150845/productos/gvk0moampbqyylvdi65d.jpg",
-      "precioUSD": 2,
+      "precioUSD": 1.99,
       "precioCUP": 1600,
       "moneda": "cup",
       "enOferta": false,
@@ -4199,7 +4137,7 @@
       "notes": "Paquete de 5 pulseras de colores aleatorios,con lindos mensajes motivacionales, de amistad y de amor. Para amigos  y parejas familiares. Pequeño y emotivo regalo",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791650523/productos/jra0du6i5q6p89za4den.jpg",
       "precioUSD": 1,
-      "precioCUP": 800,
+      "precioCUP": 805,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -4211,54 +4149,35 @@
       "creado": 1791650740477
     },
     {
-      "id": "p_1791650742291",
-      "codigo": "CDMN",
-      "name": "Paquete de 5 pulseras",
-      "cat": "Reloj y Prendas",
+      "id": "p_1791230489738",
+      "codigo": "2WU6",
+      "name": "Paquete de 52 Globos graciosos",
+      "cat": "Decoración",
       "subcat": "",
-      "notes": "Paquete de 5 pulseras de colores aleatorios,con lindos mensajes motivacionales, de amistad y de amor. Para amigos  y parejas familiares. Pequeño y emotivo regalo",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791650523/productos/jra0du6i5q6p89za4den.jpg",
-      "precioUSD": 1,
-      "precioCUP": 800,
+      "notes": "Originales,coloridos, únicos y graciosos globos infantiles. Lo mejor para decoración de fiestas y para juegos",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791230365/productos/kqklyqnajcdquugbjx9c.jpg",
+      "precioUSD": 8,
+      "precioCUP": 6440,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 6,
+      "max": 1,
       "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
       },
-      "creado": 1791650742291
-    },
-    {
-      "id": "p_1791650745560",
-      "codigo": "UGP8",
-      "name": "Paquete de 5 pulseras",
-      "cat": "Reloj y Prendas",
-      "subcat": "",
-      "notes": "Paquete de 5 pulseras de colores aleatorios,con lindos mensajes motivacionales, de amistad y de amor. Para amigos  y parejas familiares. Pequeño y emotivo regalo",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791650523/productos/jra0du6i5q6p89za4den.jpg",
-      "precioUSD": 1,
-      "precioCUP": 800,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "max": 6,
-      "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      },
-      "creado": 1791650745560
+      "envioGratis": true,
+      "creado": 1791230489738
     },
     {
       "id": "p_1780609726389",
       "codigo": "NB4J",
-      "name": "Paquete de 6 ariposas Brillantes A",
+      "name": "Paquete de 6 ariposas Brillantes",
       "cat": "Cabello",
       "subcat": "",
       "notes": "Set 6 unidades de mariposas brillantes para el cabello. Diseños en tonos rosa, celeste, lila, plateado y blanco con acabado glitter. Cierre metálico dorado seguro y resistente. Ideales para peinados infantiles, fiestas o uso diario.",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788097881/productos/agel6mi5958o93edwstf.jpg",
-      "precioUSD": 2.5,
+      "precioUSD": 2.48,
       "precioCUP": 2000,
       "moneda": "cup",
       "enOferta": false,
@@ -4278,7 +4197,7 @@
       "subcat": "",
       "notes": "El paquete contiene 6 unidades\nMateriales: mariposas plásticas ,gancho metálico",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788131707/productos/fnawyhmwlm29vqrhlzg7.jpg",
-      "precioUSD": 2.25,
+      "precioUSD": 2.24,
       "precioCUP": 1800,
       "moneda": "cup",
       "enOferta": false,
@@ -4298,7 +4217,7 @@
       "subcat": "",
       "notes": "Paquete de 6Unidades\nMateriales: Mariposas de tela y ganchos metálicos",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1780613034/productos/ewezjlonywv5nm4mgcbi.jpg",
-      "precioUSD": 2.5,
+      "precioUSD": 2.48,
       "precioCUP": 2000,
       "moneda": "cup",
       "enOferta": false,
@@ -4318,7 +4237,7 @@
       "subcat": "",
       "notes": "El precio es por 6 pellisquitos",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787412125/productos/ljq3x7ttyw66rrs2apq7.jpg",
-      "precioUSD": 1,
+      "precioUSD": 0.99,
       "precioCUP": 800,
       "moneda": "cup",
       "enOferta": false,
@@ -4337,7 +4256,7 @@
       "subcat": "",
       "notes": "Paquetes de 6 unidades",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786714500/productos/owftuoin0hygs5ydmefm.jpg",
-      "precioUSD": 1.25,
+      "precioUSD": 1.24,
       "precioCUP": 1000,
       "moneda": "cup",
       "enOferta": false,
@@ -4356,7 +4275,7 @@
       "subcat": "",
       "notes": "Paquetes de 6 unidades",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785275511/productos/bf9mpc5kyrz2osodjuj8.jpg",
-      "precioUSD": 1,
+      "precioUSD": 0.99,
       "precioCUP": 800,
       "moneda": "cup",
       "enOferta": false,
@@ -4376,7 +4295,7 @@
       "subcat": "",
       "notes": "6 Maripositas por paquete\nMateriales: Mariposas de tela y ganchos metálicos",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788098080/productos/sx2ollfms75pocmyzfgn.jpg",
-      "precioUSD": 2.25,
+      "precioUSD": 2.24,
       "precioCUP": 1800,
       "moneda": "cup",
       "enOferta": false,
@@ -4397,7 +4316,7 @@
       "notes": "Puede elegir entre un paquete de todas las felpas negras o uno de colores aleatorios. El paquete contiene 25unidades",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790798571/productos/rofajbm7akwyx4mhtl4c.jpg",
       "precioUSD": 2,
-      "precioCUP": 1600,
+      "precioCUP": 1610,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -4428,7 +4347,7 @@
       "notes": "El kit cuenta con una pareja de anillos de acero inoxidable al azar. Lo que si puede elegir es el color, entre negro, plateado o dorado",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791634281/productos/ulqpdkm0of5ggizdtx3r.jpg",
       "precioUSD": 1,
-      "precioCUP": 800,
+      "precioCUP": 805,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -4462,7 +4381,7 @@
       "notes": "El precio es por una pareja de brochitas. Silicona resistente y duradera\nEn más de una pareja",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788234263/productos/nlp5eqskagx2n7xozs98.jpg",
       "precioUSD": 1,
-      "precioCUP": 800,
+      "precioCUP": 805,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -4473,6 +4392,27 @@
       "creado": 1788234402388
     },
     {
+      "id": "p_1785868358275",
+      "codigo": "MSVP",
+      "name": "Pareja de lámparas de exterior (Solares)",
+      "cat": "Decoración",
+      "subcat": "",
+      "notes": "Lámparas de carga solar con panel incluí. Luces leds de alta potencia con sensor de movimiento y mando a distancia para diferentes modalidades\nSoporte y tornillos incluidos",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785868228/productos/spulocyysctmceshiooa.jpg",
+      "precioUSD": 25,
+      "precioCUP": 20125,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "max": 1,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1785868358275
+    },
+    {
       "id": "p_1791633427118",
       "codigo": "HR8P",
       "name": "Pareja de Mantillas",
@@ -4481,7 +4421,7 @@
       "notes": "El precio es por 2 pulceras tipo Manillas, seleccionadas a su elección. Acero inoxidable alta duración y calidad. Ideal para mujeres hombres o niños. También puede ser usada como tobilleras en tobillos finos",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791633181/productos/velotls5vf76bz3acx3n.jpg",
       "precioUSD": 1,
-      "precioCUP": 800,
+      "precioCUP": 805,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -4533,27 +4473,6 @@
       "creado": 1791633427118
     },
     {
-      "id": "p_1788206192356",
-      "codigo": "R2C4",
-      "name": "Pareja de Mini espejos retrovisores",
-      "cat": "Motos / Accesorios",
-      "subcat": "",
-      "notes": "El precio es por la pareja. Pequeños,para múltiples uso, como doble espejo en las motos o para las bicicletas",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788205791/productos/m7iur6b6u18rt4mnyw8b.jpg",
-      "precioUSD": 5,
-      "precioCUP": 4000,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "max": 1,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1788206192356
-    },
-    {
       "id": "p_1781640704239",
       "codigo": "RYV8",
       "name": "Pareja de neblineros con su conmutador",
@@ -4562,7 +4481,7 @@
       "notes": "Calidad Premium\nNeblineros, incluye 2 focos con sus accesorios de colocación y su conmutador",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1781640623/productos/yjvrqbfpjmqofcaltal0.jpg",
       "precioUSD": 10,
-      "precioCUP": 8000,
+      "precioCUP": 8050,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -4583,7 +4502,7 @@
       "notes": "neblineros de alta calidad, incluye dos focos con sus accesorios de colocación",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785012775/productos/wnbezgm1ucncea9sqkr1.jpg",
       "precioUSD": 9,
-      "precioCUP": 7200,
+      "precioCUP": 7245,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -4604,7 +4523,7 @@
       "notes": "Colores aleatorios",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791650195/productos/yf9jtj2qboa0we6ioulq.jpg",
       "precioUSD": 1,
-      "precioCUP": 800,
+      "precioCUP": 805,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -4622,7 +4541,7 @@
       "subcat": "",
       "notes": "Solo en negro. Máxima calidad, unitalla, tela súper elastizada y transpirable\nPara más de uno",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1781638470/productos/e2aiy18ffaqquznhmmv2.jpg",
-      "precioUSD": 1.25,
+      "precioUSD": 1.24,
       "precioCUP": 1000,
       "moneda": "cup",
       "enOferta": false,
@@ -4652,7 +4571,7 @@
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
       },
       "creado": 1780956166935,
-      "precioNormalUSD": 0.63,
+      "precioNormalUSD": 0.62,
       "precioNormalCUP": 500
     },
     {
@@ -4678,7 +4597,7 @@
     {
       "id": "p_1780950975688",
       "codigo": "7UZB",
-      "name": "Pellizcos Antideslizantes",
+      "name": "Pellizcos Antideslizantes para semi recogido",
       "cat": "Cabello",
       "subcat": "",
       "notes": "Mensajería incluida a partir de 4",
@@ -4697,12 +4616,12 @@
     {
       "id": "p_1780945492775",
       "codigo": "XKYE",
-      "name": "Pellizcos Mate",
+      "name": "Pellizcos Mate Grandes",
       "cat": "Cabello",
       "subcat": "",
       "notes": "",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1780955096/productos/yx9kxoyq9re6l7sh5qnl.jpg",
-      "precioUSD": 0.63,
+      "precioUSD": 0.62,
       "precioCUP": 500,
       "moneda": "cup",
       "enOferta": false,
@@ -4761,12 +4680,12 @@
       "subcat": "",
       "notes": "Pestañas Postizas MAGEFY en Caja Estilo Mixto Naturales Largas Cruzadas Rizadas y Esponjosas, Adecuadas para Uso Diario y Viajes . Con su adhesivo incluído",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782329615/productos/m0im1q6zm39ylege8jxh.jpg",
-      "precioUSD": 0.63,
+      "precioUSD": 0.62,
       "precioCUP": 500,
       "moneda": "cup",
       "enOferta": false,
       "destacado": false,
-      "max": 7,
+      "max": 6,
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
@@ -4781,7 +4700,7 @@
       "subcat": "",
       "notes": "Paquete de 5 unidades Acero quirúrgico.Color dorado\nMaterial: acero quirúrgico",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786922771/productos/zee1y6oacy7auhrguet3.jpg",
-      "precioUSD": 1.88,
+      "precioUSD": 1.86,
       "precioCUP": 1500,
       "moneda": "cup",
       "enOferta": false,
@@ -4801,7 +4720,7 @@
       "subcat": "",
       "notes": "Paquete de 5 unidades. Acero quirúrgico.Color Plateado\nMaterial: acero quirúrgico",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786922786/productos/i15won8t85rv2ywx9dhc.jpg",
-      "precioUSD": 1.88,
+      "precioUSD": 1.86,
       "precioCUP": 1500,
       "moneda": "cup",
       "enOferta": false,
@@ -4841,7 +4760,7 @@
       "notes": "Piscina infantil inflable, la mejor opción para pasar una agradable tarde en familia y para el entretenimiento de los pequeños. Medidas en la imagen. Bombita de aire incluída",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788842305/productos/n7ucg0ccllewtwv4pc7a.jpg",
       "precioUSD": 65,
-      "precioCUP": 52000,
+      "precioCUP": 52325,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -4854,6 +4773,32 @@
       "creado": 1788842619496
     },
     {
+      "id": "p_1789488822597",
+      "codigo": "MNJC",
+      "name": "Plancha para hacer barquillos",
+      "cat": "Electrodomésticos",
+      "subcat": "",
+      "notes": "Plancha antiadherente para hacer barquillos,tabaquitos, cesticas y demás.",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789488621/productos/ruwvkfvlywf73grlk01m.jpg",
+      "precioUSD": 30,
+      "precioCUP": 24150,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792356818/productos/gipz8bvnsfpghb0tbphk.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792356824/productos/vq75aao5kwjnpaoxzc39.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792356829/productos/onv8dh8zmiyni4yo6nu6.jpg"
+      ],
+      "max": 1,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1789488822597
+    },
+    {
       "id": "p_1785092176064",
       "codigo": "PUJL",
       "name": "PopSockets",
@@ -4861,7 +4806,7 @@
       "subcat": "",
       "notes": "Accesorio ideal para el sostén y seguridad del celular a demás de brindar color y belleza. Solo disponibles los diseños de la imagen",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785092078/productos/pxb3tokwdqnd2tt8yagh.jpg",
-      "precioUSD": 0.44,
+      "precioUSD": 0.43,
       "precioCUP": 350,
       "moneda": "cup",
       "enOferta": true,
@@ -4872,7 +4817,7 @@
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
       },
       "creado": 1785092176064,
-      "precioNormalUSD": 0.63,
+      "precioNormalUSD": 0.62,
       "precioNormalCUP": 500
     },
     {
@@ -4883,7 +4828,7 @@
       "subcat": "",
       "notes": "Paquete de 50 presillas negras de metal. Resistentes y flexibles, ideales para fijar el cabello con seguridad en peinados, recogidos o cortes profesionales. Acabado liso que no daña el cabello. Prácticas y duraderas, perfectas para uso diario o en salón de belleza.",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788035042/productos/ruzhdg8v3cjawvxy7vnk.jpg",
-      "precioUSD": 1.25,
+      "precioUSD": 1.24,
       "precioCUP": 1000,
       "moneda": "cup",
       "enOferta": true,
@@ -4894,7 +4839,7 @@
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
       },
       "creado": 1780623482446,
-      "precioNormalUSD": 1.63,
+      "precioNormalUSD": 1.61,
       "precioNormalCUP": 1300
     },
     {
@@ -4906,7 +4851,7 @@
       "notes": "Ideal para proteger los oídos de los niños de la entrada de agua,ya sea en el baño,la playa, piscinas, etc... También tiene un perfecto uso para evitar manchas de tintes en esa zona\nEl paquete trae 20 pares",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782343040/productos/rzxjmldhmvwxyoh1u5ld.jpg",
       "precioUSD": 1.5,
-      "precioCUP": 1200,
+      "precioCUP": 1208,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -4925,7 +4870,7 @@
       "notes": "Protector hermético para celular, permite tomar fotos y utilizar la pantalla bajo el agua sin arriesgar la integridad del teléfono. También muy útil para días de lluvias y personas que su trabajo constante es con las manos mojadas\nColores disponibles 🖤💜🩷",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785877702/productos/dae2dqoqxjjctvsgynmo.jpg",
       "precioUSD": 3,
-      "precioCUP": 2400,
+      "precioCUP": 2415,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -4960,7 +4905,7 @@
       "notes": "Exactamente el diseño de la imagen",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790978626/productos/k3xrqptl8sy6ympxbqbu.jpg",
       "precioUSD": 5,
-      "precioCUP": 4000,
+      "precioCUP": 4025,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -4973,53 +4918,15 @@
       "creado": 1790978748079
     },
     {
-      "id": "p_1791836377621",
-      "codigo": "8QV7",
-      "name": "Pulover de hombre 1",
-      "cat": "Ropa",
-      "subcat": "",
-      "notes": "Tela elastizada de alta calidad",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791836055/productos/kvuqeq1yjssivmcupogb.jpg",
-      "precioUSD": 5,
-      "precioCUP": 4000,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "variantes": {
-        "ejes": [
-          "Color",
-          "Talla"
-        ],
-        "opciones": [
-          "NEGRO CON ROJO / M",
-          "NEGRO CON ROJO / L",
-          "NEGRO CON VERDE / M",
-          "NEGRO CON VERDE / L"
-        ]
-      },
-      "maxOpciones": {
-        "NEGRO CON ROJO / M": 3,
-        "NEGRO CON ROJO / L": 2,
-        "NEGRO CON VERDE / M": 7,
-        "NEGRO CON VERDE / L": 2
-      },
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1791836377621
-    },
-    {
-      "id": "p_1791836928935",
-      "codigo": "KAVV",
-      "name": "Pulover de hombre 2",
+      "id": "p_1791837243848",
+      "codigo": "EQT3",
+      "name": "Pulover de hombre \"Barco\"",
       "cat": "Ropa",
       "subcat": "",
       "notes": "Tela algodonada elastizada",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791836834/productos/dd4oggnothhnu08vqclx.jpg",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791837152/productos/x2kz8q6dt0faiuzc7ad4.jpg",
       "precioUSD": 5,
-      "precioCUP": 4000,
+      "precioCUP": 4025,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -5028,29 +4935,29 @@
           "Talla"
         ],
         "opciones": [
-          "S"
+          "XL"
         ]
       },
       "maxOpciones": {
-        "S": 1
+        "XL": 1
       },
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
       },
       "envioGratis": true,
-      "creado": 1791836928935
+      "creado": 1791837243848
     },
     {
       "id": "p_1789240844908",
       "codigo": "N53J",
-      "name": "Pulover de hombre 3",
+      "name": "Pulover de hombre \"Cara Molesta\"",
       "cat": "Ropa",
       "subcat": "",
       "notes": "Pulover de poliéster elastizado. Importado de USA",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789240755/productos/isanspupljjdhuye6xbo.jpg",
       "precioUSD": 4,
-      "precioCUP": 3200,
+      "precioCUP": 3220,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -5075,13 +4982,13 @@
     {
       "id": "p_1789242483636",
       "codigo": "AY6T",
-      "name": "Pulover de hombre 4",
+      "name": "Pulover de hombre \"Eres mi Rey\"",
       "cat": "Ropa",
       "subcat": "",
       "notes": "Pulover algodonada elastizado. Importado de USA",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791647061/productos/tuc6kyfzvdr6bu69guul.jpg",
       "precioUSD": 4,
-      "precioCUP": 3200,
+      "precioCUP": 3220,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -5104,77 +5011,48 @@
       "creado": 1789242483636
     },
     {
-      "id": "p_1791837207801",
-      "codigo": "4FUU",
-      "name": "Pulover de hombre 5",
-      "cat": "Ropa",
-      "subcat": "",
-      "notes": "Tela algodonada elastizada",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791837097/productos/tqqcc5wb3rozfzkqmwzt.jpg",
-      "precioUSD": 5,
-      "precioCUP": 4000,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "variantes": {
-        "ejes": [
-          "Talla"
-        ],
-        "opciones": [
-          "L"
-        ]
-      },
-      "maxOpciones": {
-        "L": 1
-      },
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1791837207801
-    },
-    {
-      "id": "p_1791837243848",
-      "codigo": "EQT3",
-      "name": "Pulover de hombre 6",
-      "cat": "Ropa",
-      "subcat": "",
-      "notes": "Tela algodonada elastizada",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791837152/productos/x2kz8q6dt0faiuzc7ad4.jpg",
-      "precioUSD": 5,
-      "precioCUP": 4000,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "variantes": {
-        "ejes": [
-          "Talla"
-        ],
-        "opciones": [
-          "XL"
-        ]
-      },
-      "maxOpciones": {
-        "XL": 1
-      },
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1791837243848
-    },
-    {
       "id": "p_1791837295509",
       "codigo": "SJU6",
-      "name": "Pulover de hombre 7",
+      "name": "Pulover de hombre \"Memes\"",
       "cat": "Ropa",
       "subcat": "",
       "notes": "Tela algodonada elastizada",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791837241/productos/vdywxkkwybohpohuv44k.jpg",
       "precioUSD": 5,
-      "precioCUP": 4000,
+      "precioCUP": 4025,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Talla"
+        ],
+        "opciones": [
+          "S",
+          "M"
+        ]
+      },
+      "maxOpciones": {
+        "S": 1,
+        "M": 1
+      },
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1791837295509
+    },
+    {
+      "id": "p_1791836928935",
+      "codigo": "KAVV",
+      "name": "Pulover de hombre letra \"J'",
+      "cat": "Ropa",
+      "subcat": "",
+      "notes": "Tela algodonada elastizada",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791836834/productos/dd4oggnothhnu08vqclx.jpg",
+      "precioUSD": 5,
+      "precioCUP": 4025,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -5194,18 +5072,56 @@
         "largo": "🛵 MENSAJERÍA GRATIS"
       },
       "envioGratis": true,
-      "creado": 1791837295509
+      "creado": 1791836928935
+    },
+    {
+      "id": "p_1791836377621",
+      "codigo": "8QV7",
+      "name": "Pulover linea lateral",
+      "cat": "Ropa",
+      "subcat": "",
+      "notes": "Tela elastizada de alta calidad",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791836055/productos/kvuqeq1yjssivmcupogb.jpg",
+      "precioUSD": 5,
+      "precioCUP": 4025,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Color",
+          "Talla"
+        ],
+        "opciones": [
+          "NEGRO CON ROJO / M",
+          "NEGRO CON ROJO / L",
+          "NEGRO CON VERDE / M",
+          "NEGRO CON VERDE / L"
+        ]
+      },
+      "maxOpciones": {
+        "NEGRO CON ROJO / M": 2,
+        "NEGRO CON ROJO / L": 2,
+        "NEGRO CON VERDE / M": 5,
+        "NEGRO CON VERDE / L": 2
+      },
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1791836377621
     },
     {
       "id": "p_1789241914026",
       "codigo": "KHXC",
-      "name": "Pulover Unisex Navideño 1",
+      "name": "Pulover Unisex Navideño \"JESÚS\"",
       "cat": "Ropa",
       "subcat": "",
       "notes": "Pulover algodonada elastizado . Importado de USA",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789241807/productos/nvc54lxofwfrczxstfar.jpg",
       "precioUSD": 4,
-      "precioCUP": 3200,
+      "precioCUP": 3220,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -5228,15 +5144,46 @@
       "creado": 1789241914026
     },
     {
+      "id": "p_1789242386934",
+      "codigo": "D5K2",
+      "name": "Pulover Unisex Navideño \"Muñecos de Nieve\"",
+      "cat": "Ropa",
+      "subcat": "",
+      "notes": "Pulover algodonada elastizado. Importado de USA",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791647059/productos/tivxwdhtdakn1ru5sjij.jpg",
+      "precioUSD": 4,
+      "precioCUP": 3220,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Talla"
+        ],
+        "opciones": [
+          "S"
+        ]
+      },
+      "maxOpciones": {
+        "S": 1
+      },
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1789242386935
+    },
+    {
       "id": "p_1789242333082",
       "codigo": "4QLL",
-      "name": "Pulover Unisex Navideño 2",
+      "name": "Pulover Unisex Navideño \"Somos Familia\"",
       "cat": "Ropa",
       "subcat": "",
       "notes": "Pulover algodonada elastizado. Importado de USA",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789242098/productos/u6uvk5zmxtesf0aekplu.jpg",
       "precioUSD": 4,
-      "precioCUP": 3200,
+      "precioCUP": 3220,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -5262,37 +5209,6 @@
       "creado": 1789242333083
     },
     {
-      "id": "p_1789242386934",
-      "codigo": "D5K2",
-      "name": "Pulover Unisex Navideño 3",
-      "cat": "Ropa",
-      "subcat": "",
-      "notes": "Pulover algodonada elastizado. Importado de USA",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791647059/productos/tivxwdhtdakn1ru5sjij.jpg",
-      "precioUSD": 4,
-      "precioCUP": 3200,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "variantes": {
-        "ejes": [
-          "Talla"
-        ],
-        "opciones": [
-          "S"
-        ]
-      },
-      "maxOpciones": {
-        "S": 1
-      },
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1789242386935
-    },
-    {
       "id": "p_1788792642568",
       "codigo": "S23D",
       "name": "Pulover Unisex Negro de Pantera",
@@ -5300,7 +5216,7 @@
       "subcat": "",
       "notes": "Tallas S (agrandadas). Tela algodonada elastizada",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791646520/productos/pefp9pwkm8acwifvz7au.jpg",
-      "precioUSD": 3.13,
+      "precioUSD": 3.11,
       "precioCUP": 2500,
       "moneda": "cup",
       "enOferta": false,
@@ -5322,7 +5238,7 @@
       "notes": "Cqortadora de verduras 6 en 1, herramienta de cocina multifunción con cuchillas de acero inoxidable para cortar, rallar, cortar en juliana y en forma de gofre",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788034096/productos/x41uqbrddleitll256n4.jpg",
       "precioUSD": 6,
-      "precioCUP": 4800,
+      "precioCUP": 4830,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -5343,7 +5259,7 @@
       "notes": "Ratón Inalámbrico Silencioso – Ratón Inalámbrico para Computadora, Ratón para Laptop, Ratón USB, Ratón para Chromebook, Ratón Inalámbrico, Ratón Inalámbrico, Ratón para PC, Ratones para Computadora, Ratón Silencioso",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788528508/productos/te3bwxztbrhsvbm7kjgt.jpg",
       "precioUSD": 15,
-      "precioCUP": 12000,
+      "precioCUP": 12075,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -5368,7 +5284,7 @@
       "subcat": "",
       "notes": "Colores de la imagen. Manilla resistente y ajustable de silicona. Para uso de cualquier edad y género",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788552124/productos/gjut3ljtezdjji8bjkx1.jpg",
-      "precioUSD": 1.88,
+      "precioUSD": 1.86,
       "precioCUP": 1500,
       "moneda": "cup",
       "enOferta": false,
@@ -5381,7 +5297,6 @@
           "BLANCO",
           "ROJO",
           "ROSA",
-          "AZUL",
           "CELESTE"
         ]
       },
@@ -5389,7 +5304,6 @@
         "BLANCO": 2,
         "ROJO": 2,
         "ROSA": 2,
-        "AZUL": 1,
         "CELESTE": 1
       },
       "envio": {
@@ -5407,7 +5321,7 @@
       "notes": ". Nuevo Smartwatch de Pantalla Grande, Compatible con Android/iPhone, con Llamadas de Voz en HD, Múltiples Modos Deportivos, Ideal para Deportes, Actividades al Aire Libre, Monitoreo del Sueño y Uso Diario. Varias Opciones de Interfaz Disponibles. Regalo Perfecto para el Día del padre\nColor gris. Manilla de silicona y esfera en forma cuadrada de metal plateado",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1781212975/productos/etq4es8z4cjkhhz98cjq.jpg",
       "precioUSD": 18,
-      "precioCUP": 14400,
+      "precioCUP": 14490,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -5428,7 +5342,7 @@
       "notes": "Reloj inteligente de pantalla grande compatible con iPhone y Android, reloj inteligente sin varillas con llamadas/SMS inalámbricos, monitor de actividad física, control remoto de cámara, reloj inteligente recargable por USB apto para hombres y mujeres, pantalla nítida, diseño moderno para regalo de papá\nColor negro, Manilla de silicona",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1781213510/productos/yipf6w3xkmgluh4tk5ad.jpg",
       "precioUSD": 18,
-      "precioCUP": 14400,
+      "precioCUP": 14490,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -5449,7 +5363,7 @@
       "notes": "Conjunto de reloj ,con Cadena, Manilla y anillo. Todo tal como en la foto .",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789489062/productos/bxwgrqn13j8iyn5lmkgh.jpg",
       "precioUSD": 12,
-      "precioCUP": 9600,
+      "precioCUP": 9660,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -5470,7 +5384,7 @@
       "notes": "Hermosos diseños.",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789500243/productos/qrccwlgkrgjj8z7tzybe.jpg",
       "precioUSD": 3,
-      "precioCUP": 2400,
+      "precioCUP": 2415,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -5509,7 +5423,7 @@
       "notes": "Diseños de relojes masculinos de alta calidad. Variedad de estilos. Perfecto regalo 🎁",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790875193/productos/wno0qlj1igxllfn3w1k8.jpg",
       "precioUSD": 6,
-      "precioCUP": 4800,
+      "precioCUP": 4830,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -5518,16 +5432,12 @@
           "Diseño"
         ],
         "opciones": [
-          "A",
-          "C",
           "D",
           "E",
           "H"
         ]
       },
       "maxOpciones": {
-        "A": 1,
-        "C": 1,
         "D": 1,
         "E": 2,
         "H": 1
@@ -5547,7 +5457,7 @@
       "subcat": "",
       "notes": "Relojes de mujer de manilla de cuero fina y delicada y muy femenina",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790871607/productos/zwcju68qn8zj0lzwk291.jpg",
-      "precioUSD": 3.13,
+      "precioUSD": 3.11,
       "precioCUP": 2500,
       "moneda": "cup",
       "enOferta": false,
@@ -5573,52 +5483,14 @@
       "creado": 1787458002425
     },
     {
-      "id": "p_1788151078303",
-      "codigo": "EYNJ",
-      "name": "Relojes digitales de niños 1",
-      "cat": "Niños",
-      "subcat": "",
-      "notes": "Hermosos diseños y colores.\nTodos exepto el negro🐼 y el beige 🐿️",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788150940/productos/xvlrmawu9pmwobeknolc.jpg",
-      "precioUSD": 1.88,
-      "precioCUP": 1500,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false,
-      "variantes": {
-        "ejes": [
-          "Diseño"
-        ],
-        "opciones": [
-          "A",
-          "C",
-          "D",
-          "E",
-          "F"
-        ]
-      },
-      "maxOpciones": {
-        "A": 1,
-        "C": 1,
-        "D": 1,
-        "E": 1,
-        "F": 1
-      },
-      "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      },
-      "creado": 1788151078303
-    },
-    {
       "id": "p_1788199586927",
       "codigo": "AUAQ",
-      "name": "Relojes digitales de niños 2",
+      "name": "Relojes digitales de niños colores fuertes",
       "cat": "Niños",
       "subcat": "",
       "notes": "Hermosos diseños y colores.\nTodos disponibles a excepción del negro astronauta",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791641462/productos/ywhlxrewc4vm3cx1rt4f.jpg",
-      "precioUSD": 1.88,
+      "precioUSD": 1.86,
       "precioCUP": 1500,
       "moneda": "cup",
       "enOferta": false,
@@ -5649,36 +5521,53 @@
       "creado": 1788199586927
     },
     {
-      "id": "p_1791228478752",
-      "codigo": "PUET",
-      "name": "Rollo de papel tapiz autoadhesivo 1",
-      "cat": "Decoración",
+      "id": "p_1788151078303",
+      "codigo": "EYNJ",
+      "name": "Relojes digitales de niños colores pastel",
+      "cat": "Niños",
       "subcat": "",
-      "notes": "Diseño exacto de la imagen\nMedidas 40x300cm",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791228516/productos/wpbbxh0fkifxcm7yik1e.jpg",
-      "precioUSD": 12,
-      "precioCUP": 9600,
-      "moneda": "usd",
+      "notes": "Hermosos diseños y colores.\nTodos exepto el negro🐼 y el beige 🐿️",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792238033/productos/gklefbybffulzxh47bvy.jpg",
+      "precioUSD": 1.86,
+      "precioCUP": 1500,
+      "moneda": "cup",
       "enOferta": false,
       "destacado": false,
-      "max": 1,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
+      "variantes": {
+        "ejes": [
+          "Diseño"
+        ],
+        "opciones": [
+          "A",
+          "C",
+          "D",
+          "E",
+          "F"
+        ]
       },
-      "envioGratis": true,
-      "creado": 1791228478752
+      "maxOpciones": {
+        "A": 1,
+        "C": 1,
+        "D": 1,
+        "E": 1,
+        "F": 1
+      },
+      "envio": {
+        "corto": "🛵 Gratis desde 2,000 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
+      },
+      "creado": 1788151078303
     },
     {
       "id": "p_1791228633743",
       "codigo": "NC68",
-      "name": "Rollo de papel tapiz autoadhesivo 2",
+      "name": "Rollo de papel tapiz autoadhesivo 5m",
       "cat": "Decoración",
       "subcat": "",
       "notes": "Diseño exacto de la imagen\nMedias 40x500cm",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791228550/productos/ue2pjtni9oahlhjhatzn.jpg",
       "precioUSD": 20,
-      "precioCUP": 16000,
+      "precioCUP": 16100,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -5691,15 +5580,36 @@
       "creado": 1791228633743
     },
     {
+      "id": "p_1791228478752",
+      "codigo": "PUET",
+      "name": "Rollo de papel tapiz autoadhesivo madera negra 3m",
+      "cat": "Decoración",
+      "subcat": "",
+      "notes": "Diseño exacto de la imagen\nMedidas 40x300cm",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791228516/productos/wpbbxh0fkifxcm7yik1e.jpg",
+      "precioUSD": 12,
+      "precioCUP": 9660,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "max": 1,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1791228478752
+    },
+    {
       "id": "p_1791228936507",
       "codigo": "32B8",
-      "name": "Rollo de papel tapiz autoadhesivo 4",
+      "name": "Rollo de papel tapiz autoadhesivo Mármol Gris",
       "cat": "Decoración",
       "subcat": "",
       "notes": "Diseño exacto de la imagen\nMedias 40x1000cm",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791228873/productos/fj7to0y16532rq21z6uw.jpg",
       "precioUSD": 40,
-      "precioCUP": 32000,
+      "precioCUP": 32200,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -5714,13 +5624,13 @@
     {
       "id": "p_1791229767371",
       "codigo": "SRDL",
-      "name": "Rollo de papel tapiz autoadhesivo 5",
+      "name": "Rollo de papel tapiz autoadhesivo Mármol negro",
       "cat": "Decoración",
       "subcat": "",
       "notes": "Diseño exacto de la imagen\nMedias 80x250cm",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791229652/productos/hhxeyvyrb0hcng01zuid.jpg",
       "precioUSD": 12,
-      "precioCUP": 9600,
+      "precioCUP": 9660,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -5740,7 +5650,7 @@
       "subcat": "",
       "notes": "Ideal para niños pequeños porque no es de hueco abierto totalmente, son de 2 huequitos para los 2 pies y proporcionar sostén y seguridad al bebé",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785875253/productos/x856nne0x9jf6ed9j7ve.jpg",
-      "precioUSD": 4.75,
+      "precioUSD": 4.72,
       "precioCUP": 3800,
       "moneda": "cup",
       "enOferta": false,
@@ -5761,7 +5671,7 @@
       "subcat": "",
       "notes": "#36",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791646522/productos/pays4the5k2mk26143ay.jpg",
-      "precioUSD": 9.28,
+      "precioUSD": 9.22,
       "precioCUP": 7425,
       "moneda": "usd",
       "enOferta": true,
@@ -5774,7 +5684,7 @@
       "envioGratis": true,
       "creado": 1785541577443,
       "precioNormalUSD": 12,
-      "precioNormalCUP": 9600
+      "precioNormalCUP": 9660
     },
     {
       "id": "p_1785534103928",
@@ -5784,7 +5694,7 @@
       "subcat": "",
       "notes": "#36",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785534019/productos/bxgaav8laeeipdgxkwf5.jpg",
-      "precioUSD": 9.28,
+      "precioUSD": 9.22,
       "precioCUP": 7425,
       "moneda": "usd",
       "enOferta": true,
@@ -5797,7 +5707,7 @@
       "envioGratis": true,
       "creado": 1785534103928,
       "precioNormalUSD": 12,
-      "precioNormalCUP": 9600
+      "precioNormalCUP": 9660
     },
     {
       "id": "p_1785533846344",
@@ -5807,7 +5717,7 @@
       "subcat": "",
       "notes": "#36",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785533514/productos/hgfzvplmba8pq6yatybu.jpg",
-      "precioUSD": 9.28,
+      "precioUSD": 9.22,
       "precioCUP": 7425,
       "moneda": "usd",
       "enOferta": true,
@@ -5820,7 +5730,34 @@
       "envioGratis": true,
       "creado": 1785533846345,
       "precioNormalUSD": 12,
-      "precioNormalCUP": 9600
+      "precioNormalCUP": 9660
+    },
+    {
+      "id": "p_1792340423078",
+      "codigo": "7W2G",
+      "name": "Secador de pelo iónico de 1875W para salón profesional",
+      "cat": "Electrodomésticos",
+      "subcat": "",
+      "notes": "Secador de pelo iónico de 1875W para salón profesional y uso doméstico, 3 niveles de calor/2 velocidades con función Cool Shot, regalo para el Día de la Madre/Navidad para mujeres, negro",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792340203/productos/dgx1nkuhaansb4rmo93y.jpg",
+      "precioUSD": 42,
+      "precioCUP": 33810,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792340210/productos/gvklxkgqwn06hbvqg3km.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792340226/productos/ys0xuzi23aak9ulkcgla.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792340234/productos/nupp5xz7k67xrnv0tn0u.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792340240/productos/ekgsj2hbfjnmt7pys9ti.jpg"
+      ],
+      "max": 1,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1792340423078
     },
     {
       "id": "p_1782259924259",
@@ -5830,7 +5767,7 @@
       "subcat": "",
       "notes": "Suero Facial 5 en 1 con Ácido Hialurónico, Colágeno, Niacinamida, Vitaminas C y E. Minimiza Poros, Control de Sebo, Hidratante. Adecuado para Todo Tipo de Piel, Hipoaergénico.",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782259706/productos/wewused76wjxguosoz5l.jpg",
-      "precioUSD": 2.63,
+      "precioUSD": 2.61,
       "precioCUP": 2100,
       "moneda": "cup",
       "enOferta": false,
@@ -5850,7 +5787,7 @@
       "subcat": "",
       "notes": "Cápsulas de Ácido Hialurónico\nHidrataión profunda\nHidratante y Suavizante para la piel\nContiene Escualano Vegetal\nVitaminas E y C\nEl paquete trae 10 cápsulas",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782339669/productos/xbmibztojd4suitasup4.jpg",
-      "precioUSD": 1,
+      "precioUSD": 0.99,
       "precioCUP": 800,
       "moneda": "cup",
       "enOferta": false,
@@ -5870,7 +5807,7 @@
       "subcat": "",
       "notes": "Cápsulas de Sérum con Vitamina E y C\nGel Encapsulado de Pureza para Rostro\nLigero y No Graso\nPara Todo Tipo de Piel\nEsencia de Cuidado Diario",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782339753/productos/uq4unqxsipovpavt4qex.jpg",
-      "precioUSD": 1,
+      "precioUSD": 0.99,
       "precioCUP": 800,
       "moneda": "cup",
       "enOferta": false,
@@ -5891,7 +5828,7 @@
       "notes": "Conjunto de 4 productos escenciales para el cuidado de las uñas. El kit contiene Deshidratador - Primer - Base - Top Coat\nTodo lo necesario para una perfecta aplicación de manicura en gel, tanto casera como profesional",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786917082/productos/qz13ovqg9b20lilzffk9.jpg",
       "precioUSD": 12,
-      "precioCUP": 9600,
+      "precioCUP": 9660,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -5906,13 +5843,13 @@
     {
       "id": "p_1790975712067",
       "codigo": "DQCT",
-      "name": "Soporte de sel con brazo flexible 2",
+      "name": "Soporte de sel con brazo flexible y pinzas",
       "cat": "Bocinas Celulares y Accesorios",
       "subcat": "",
       "notes": "",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790975570/productos/u6r6whchv81o5vhwlxgi.jpg",
       "precioUSD": 6,
-      "precioCUP": 4800,
+      "precioCUP": 4830,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -5926,7 +5863,7 @@
         ]
       },
       "maxOpciones": {
-        "NEGRO": 7,
+        "NEGRO": 6,
         "CELESTE": 5
       },
       "envio": {
@@ -5937,25 +5874,40 @@
       "creado": 1790975712068
     },
     {
-      "id": "p_1789411169180",
-      "codigo": "DAMG",
-      "name": "Tacitas 12 piezas",
-      "cat": "Porcelana",
+      "id": "p_1788546447070",
+      "codigo": "G2DK",
+      "name": "Tablet de niñ@",
+      "cat": "Bocinas Celulares y Accesorios",
       "subcat": "",
-      "notes": "Conjunto de 12 piezas de tazas de café.\n6 tazas con 6 platicos.",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789411058/productos/xhdokldz5nbz707deyqs.jpg",
-      "precioUSD": 5,
-      "precioCUP": 4000,
+      "notes": "Solo en Rosado con temática de astronauta. Incluye su cable de carga, un juego de audífonos de cable y un protector con sistema de apollo para mesa y para mejor sostén manual\nCaracterísticas:\nAndroid 14\n7 pulgadas\nWifi 5G\nBatería de gran Capacidad 4500mAh\nDoble camara\n4GB de ram\n128GB de almacenamiento\nPantalla IPS HD de 1280*800 de resolución",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792339393/productos/b1fvmkoxhizq7dxdooug.jpg",
+      "precioUSD": 58,
+      "precioCUP": 46690,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 1,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792339401/productos/snew9r5evw9j2ify38s8.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792339412/productos/wc12g84wqbwyzhrezqnt.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792339437/productos/l96ouuk8bbvlayyrr9d4.jpg"
+      ],
+      "variantes": {
+        "ejes": [
+          "Color"
+        ],
+        "opciones": [
+          "AZUL"
+        ]
+      },
+      "maxOpciones": {
+        "AZUL": 2
+      },
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
       },
       "envioGratis": true,
-      "creado": 1789411169180
+      "creado": 1788546447071
     },
     {
       "id": "p_1785533206456",
@@ -5966,7 +5918,7 @@
       "notes": "Solo #38",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785533118/productos/n6kufln4qr2nektpeatg.jpg",
       "precioUSD": 15,
-      "precioCUP": 12000,
+      "precioCUP": 12075,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -5987,7 +5939,7 @@
       "notes": "Hermoso conjunto de 4 tazas de 8oz y su base metálica.",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789411149/productos/piydqwkezskbp3pf0se3.jpg",
       "precioUSD": 7,
-      "precioCUP": 5600,
+      "precioCUP": 5635,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -6007,7 +5959,7 @@
       "subcat": "",
       "notes": "",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786991339/productos/c2rea2w2ux9tn9zixgmg.jpg",
-      "precioUSD": 0.38,
+      "precioUSD": 0.37,
       "precioCUP": 300,
       "moneda": "cup",
       "enOferta": false,
@@ -6027,7 +5979,7 @@
       "notes": "Timbre Inalámbrico Impermeable, Funciona a 100 Metros, 36 Tonos y Volumen Ajustable, 2 Receptores y 1 Transmisor Remoto con Botón de Presión",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791157524/productos/qyfve7zqeh8vcla4gye9.jpg",
       "precioUSD": 15,
-      "precioCUP": 12000,
+      "precioCUP": 12075,
       "moneda": "usd",
       "enOferta": true,
       "destacado": false,
@@ -6043,7 +5995,7 @@
       "envioGratis": true,
       "creado": 1788537976001,
       "precioNormalUSD": 16,
-      "precioNormalCUP": 12800
+      "precioNormalCUP": 12880
     },
     {
       "id": "p_1789425875477",
@@ -6054,7 +6006,7 @@
       "notes": "Mensajería gratis",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789425437/productos/a0z2ewuy3ptqagfopxbq.jpg",
       "precioUSD": 1,
-      "precioCUP": 800,
+      "precioCUP": 805,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -6073,7 +6025,7 @@
       "notes": "Toallitas ultra suaves\nEn más de una",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788138399/productos/kqmjxder2nlypy2kbxcs.jpg",
       "precioUSD": 1,
-      "precioCUP": 800,
+      "precioCUP": 805,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -6093,7 +6045,7 @@
       "notes": "Tomacorrientes de 20A Maxima Calidad Ideal para súper consumo,no se derriten",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791079338/productos/cfkfobz84waxqznqhbq2.jpg",
       "precioUSD": 3,
-      "precioCUP": 2400,
+      "precioCUP": 2415,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -6105,27 +6057,6 @@
       "creado": 1780346613571
     },
     {
-      "id": "p_1789239391483",
-      "codigo": "3LJZ",
-      "name": "Top Rosa 🩷",
-      "cat": "Ropa Interior",
-      "subcat": "",
-      "notes": "Lindo top Rosa con esponjas. Ideal para muchachas delgadas o adolescentes. Tela algodonada elastizada",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789239275/productos/pmfqwel3flhdlmn2gpgy.jpg",
-      "precioUSD": 3,
-      "precioCUP": 2400,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "max": 1,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1789239391542
-    },
-    {
       "id": "p_1788541433924",
       "codigo": "D95V",
       "name": "Trípode manual con mando a distancia",
@@ -6134,11 +6065,11 @@
       "notes": "Máxima calidad y utilidad. Alcanza un alto de más de 1 metro",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788542693/productos/umskj5gg4isekmlakjfg.jpg",
       "precioUSD": 7,
-      "precioCUP": 5600,
+      "precioCUP": 5635,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 3,
+      "max": 2,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -6155,7 +6086,7 @@
       "notes": "Velocímetro y Odómetro Digital con Cable para Bicicletas, Pantalla LCD Multifunción para Carretera y Montaña, Caja de ABS Negra, Accesorios Ciclismo, Monitorización de Velocidad, Diseño Ligero, Funciona con Pila (No Incluida)",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790954256/productos/irq5mozfnze5v4cjmh8m.jpg",
       "precioUSD": 12,
-      "precioCUP": 9600,
+      "precioCUP": 9660,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -6176,7 +6107,7 @@
       "notes": "Ventilador de camping alimentado por batería de 20000Mah - Motor dual, 8 velocidades con control remoto y 4 linternas LED, ventilador portátil para exteriores con gancho para tienda de campaña, falla de energía, obra de construcción, para viajes de camping al aire libre",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787764696/productos/k2qwog2kxffnq9yeby9m.jpg",
       "precioUSD": 60,
-      "precioCUP": 48000,
+      "precioCUP": 48300,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -6186,7 +6117,7 @@
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1791860137/productos/jnfvkqarlunnquccmbwt.jpg",
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1791860156/productos/sqeqow9ztynt5p5wisyh.jpg"
       ],
-      "max": 2,
+      "max": 1,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -6203,7 +6134,7 @@
       "notes": "Ventilador de techo portátil con carga USB, luz LED, batería, control remoto y color blanco, diseño compacto para uso en interiores y exteriores, perfecto para camping de verano y refrigeración familiar. Ventilador con control remoto para equipo de camping de verano capacidad 8000mah",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787765007/productos/zdhz0oqy81cc9l9s09yp.jpg",
       "precioUSD": 30,
-      "precioCUP": 24000,
+      "precioCUP": 24150,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -6223,13 +6154,13 @@
     {
       "id": "p_1780277915922",
       "codigo": "U8DN",
-      "name": "Ventilador recargable",
+      "name": "Ventilador recargable Camping Fan",
       "cat": "Electrodomésticos",
       "subcat": "",
       "notes": "• Giro(90° y 45°)\n• Mando a distancia\n• Función Power Bank\n• Luces\n• Modo nocturno\n• Temporizador\n• Batería de 20mil mAh\nhaga su encargo con dirección exacta y se le hace llegar a la comodidad de su hogar Mensajería gratis, (Rebajas para compras mayores a 1 unidad)",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786632028/productos/qm0djp1vcxywnxkshfis.jpg",
       "precioUSD": 50,
-      "precioCUP": 40000,
+      "precioCUP": 40250,
       "moneda": "usd",
       "enOferta": true,
       "destacado": true,
@@ -6246,7 +6177,7 @@
       "envioGratis": true,
       "creado": 1780277915922,
       "precioNormalUSD": 55,
-      "precioNormalCUP": 44000
+      "precioNormalCUP": 44275
     },
     {
       "id": "p_1789226088397",
@@ -6257,7 +6188,7 @@
       "notes": "Vestido de verano floral sin espalda con tirantes y lazo para vacaciones de verano",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789225996/productos/dmbonwu1kteatwyrkh51.jpg",
       "precioUSD": 12,
-      "precioCUP": 9600,
+      "precioCUP": 9660,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -6284,13 +6215,13 @@
     {
       "id": "p_1789219477837",
       "codigo": "62JK",
-      "name": "Vestido largo 1",
+      "name": "Vestido largo hombro cubierto",
       "cat": "Ropa",
       "subcat": "",
       "notes": "Vestido largo de moda y elegante con estampado vintage para mujer, cuello en V y manga corta.",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789218865/productos/foqqnbk1jhtpqxjkznau.jpg",
       "precioUSD": 15,
-      "precioCUP": 12000,
+      "precioCUP": 12075,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -6318,13 +6249,13 @@
     {
       "id": "p_1789221251954",
       "codigo": "SGL2",
-      "name": "Vestido largo 2",
+      "name": "Vestido largo manga de tirantes",
       "cat": "Ropa",
       "subcat": "",
       "notes": "Vestido de línea A con estampado floral y cuello en V - Diseño transpirable y suelto de manga corta - Ideal para la ropa de primavera y verano",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789221188/productos/sa3fysvkulzbgcjzvfb0.jpg",
       "precioUSD": 15,
-      "precioCUP": 12000,
+      "precioCUP": 12075,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -6360,7 +6291,7 @@
       "notes": "Beneficios del suplemento de Vitamina E\n✅ Potente antioxidante\nProtege tus células del daño de los radicales libres y del estrés oxidativo.\n✅ Apoya el sistema inmunológico\nAyuda a mantener las defensas del organismo activas y fuertes.\n✅ Cuidado de la piel\nContribuye a mantener la barrera natural de la piel, favorece la hidratación y ayuda a combatir el envejecimiento prematuro.\n✅ Salud ocular\nImportante para la visión y el cuidado de los ojos.\n✅ Salud cardiovascular y de la sangre\nColabora en el mantenimiento de vasos sanguíneos sanos y en la circulación normal.\n✅ Bienestar general\nApoya la salud celular, la función cerebral y el equilibrio del organismo.",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785357950/productos/vttg5w9ocijutikiacna.jpg",
       "precioUSD": 15,
-      "precioCUP": 12000,
+      "precioCUP": 12075,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -6381,7 +6312,7 @@
       "notes": "#37",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785533204/productos/c5vkffaygtzfqq1liff2.jpg",
       "precioUSD": 6,
-      "precioCUP": 4800,
+      "precioCUP": 4830,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,

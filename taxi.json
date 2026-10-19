@@ -1,8 +1,8 @@
 {
-  "generado": "2026-10-14T20:48:55.497Z",
+  "generado": "2026-10-18T21:08:53.544Z",
   "vigenciaHoras": 48,
   "activo": true,
-  "tasa": 790,
+  "tasa": 805,
   "whatsapp": "5358856820",
   "whatsappAltas": "5354978966",
   "marca": {
@@ -14,8 +14,8 @@
   },
   "esperaHoraCUP": 0,
   "recta": {
-    "porKmCUP": 659.3340000000002,
-    "baseCUP": 3081.0000000000005,
+    "porKmCUP": 671.8530000000002,
+    "baseCUP": 3139.5000000000005,
     "redondeoCUP": 50,
     "factorCompartido": 1.25
   },
@@ -96,30 +96,26 @@
     {
       "code": "YPUD8",
       "nombre": "Sahel González"
+    },
+    {
+      "code": "CXESR",
+      "nombre": "Yohanset"
+    },
+    {
+      "code": "QGZUQ",
+      "nombre": "Alejandro"
+    },
+    {
+      "code": "45UGF",
+      "nombre": "Abianka"
+    },
+    {
+      "code": "JZ8PU",
+      "nombre": "Alejandro"
     }
   ],
   "comisionPorKmCUP": 20,
   "agenda": [
-    {
-      "fecha": "2026-10-14",
-      "manana": false,
-      "tarde": false
-    },
-    {
-      "fecha": "2026-10-15",
-      "manana": false,
-      "tarde": false
-    },
-    {
-      "fecha": "2026-10-16",
-      "manana": false,
-      "tarde": false
-    },
-    {
-      "fecha": "2026-10-17",
-      "manana": false,
-      "tarde": false
-    },
     {
       "fecha": "2026-10-18",
       "manana": false,
@@ -169,6 +165,26 @@
       "fecha": "2026-10-27",
       "manana": false,
       "tarde": false
+    },
+    {
+      "fecha": "2026-10-28",
+      "manana": false,
+      "tarde": false
+    },
+    {
+      "fecha": "2026-10-29",
+      "manana": false,
+      "tarde": false
+    },
+    {
+      "fecha": "2026-10-30",
+      "manana": false,
+      "tarde": false
+    },
+    {
+      "fecha": "2026-10-31",
+      "manana": false,
+      "tarde": false
     }
   ],
   "destinos": [
@@ -176,70 +192,70 @@
       "id": "acuario",
       "nombre": "Acuario Nacional",
       "km": 29,
-      "idaCUP": 22250,
+      "idaCUP": 22650,
       "idaUSD": 28.1,
-      "idaVueltaCUP": 22250,
+      "idaVueltaCUP": 22650,
       "idaVueltaUSD": 28.1,
       "asientoCUP": {
-        "2": 13900,
-        "3": 9300,
-        "4": 6950
+        "2": 14150,
+        "3": 9450,
+        "4": 7100
       }
     },
     {
       "id": "capitolio",
       "nombre": "Capitolio Nacional",
       "km": 42,
-      "idaCUP": 30800,
+      "idaCUP": 31400,
       "idaUSD": 38.95,
-      "idaVueltaCUP": 30800,
+      "idaVueltaCUP": 31400,
       "idaVueltaUSD": 38.95,
       "asientoCUP": {
-        "2": 19250,
-        "3": 12850,
-        "4": 9650
+        "2": 19600,
+        "3": 13100,
+        "4": 9800
       }
     },
     {
       "id": "guira",
       "nombre": "Güira de Melena",
       "km": 11,
-      "idaCUP": 10350,
+      "idaCUP": 10550,
       "idaUSD": 13.08,
-      "idaVueltaCUP": 10350,
+      "idaVueltaCUP": 10550,
       "idaVueltaUSD": 13.08,
       "asientoCUP": {
-        "2": 6500,
-        "3": 4350,
-        "4": 3250
+        "2": 6600,
+        "3": 4400,
+        "4": 3300
       }
     },
     {
       "id": "calixto",
       "nombre": "Hospital Calixto García",
       "km": 34,
-      "idaCUP": 25500,
+      "idaCUP": 26000,
       "idaUSD": 32.28,
-      "idaVueltaCUP": 25500,
+      "idaVueltaCUP": 26000,
       "idaVueltaUSD": 32.28,
       "asientoCUP": {
-        "2": 15950,
-        "3": 10650,
-        "4": 8000
+        "2": 16250,
+        "3": 10850,
+        "4": 8150
       }
     },
     {
       "id": "terminal",
       "nombre": "Terminal de Ómnibus Nacionales",
       "km": 32,
-      "idaCUP": 24200,
+      "idaCUP": 24650,
       "idaUSD": 30.61,
-      "idaVueltaCUP": 24200,
+      "idaVueltaCUP": 24650,
       "idaVueltaUSD": 30.61,
       "asientoCUP": {
-        "2": 15150,
-        "3": 10100,
-        "4": 7600
+        "2": 15400,
+        "3": 10300,
+        "4": 7700
       }
     }
   ],
