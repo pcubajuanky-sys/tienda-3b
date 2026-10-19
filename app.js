@@ -655,7 +655,67 @@ function engancharGestoGaleria() {
   });
 }
 
+// ── Historial: el boton "atras" cierra lo que esta abierto ──
+// Cada capa abierta (ficha, carrito) es una entrada del historial. Abrir hace
+// pushState; cerrar hace history.back() y es el popstate quien cierra de verdad.
+// 🔴 Nunca ocultes una capa a mano fuera de sincronizarCapas: dejarias una entrada
+// del historial sin nada que cerrar y el siguiente "atras" sacaria al cliente.
+let capasAbiertas = [];
+
+function sincronizarCapas(destino) {
+  const plan = window.Historial.transicion(capasAbiertas, destino);
+  plan.cerrar.forEach((k) => {
+    if (k === 'carrito') ocultarCarrito(); else ocultarDetalle();
+  });
+  plan.abrir.forEach((c) => {
+    if (c.tipo === 'carrito') mostrarCarrito(); else mostrarDetalle(c.id);
+  });
+  capasAbiertas = (destino || []).filter(Boolean);
+}
+
+function abrirCapa(capa) {
+  const destino = capasAbiertas.concat([capa]);
+  history.pushState({ capas: destino }, '', window.Historial.rutaDe(destino, location.search));
+  sincronizarCapas(destino);
+}
+
+// Cierra la capa `tipo` SOLO si es la de arriba. Si no lo es (o el historial se
+// perdio: una restauracion de pestaña, otro script que pisara el state...), se oculta
+// a mano sin tocar el historial, que es preferible a arrastrarse otra capa por
+// delante con un back() a ciegas.
+function pedirCierreCapa(tipo) {
+  const st = history.state;
+  const capas = (st && Array.isArray(st.capas)) ? st.capas : [];
+  const arriba = capas[capas.length - 1];
+  if (arriba && arriba.tipo === tipo) { history.back(); return; }
+  if (tipo === 'carrito') ocultarCarrito(); else ocultarDetalle();
+  capasAbiertas = capasAbiertas.filter((c) => c.tipo !== tipo);
+}
+
+// El cliente dio "atras" (o "adelante"): el navegador ya cambio la URL; aqui solo
+// se pone la pantalla de acuerdo con el punto del historial al que ha llegado.
+function alCambiarHistorial(e) {
+  const st = e.state;
+  sincronizarCapas((st && Array.isArray(st.capas)) ? st.capas : []);
+}
+
+// Punto de partida: la entrada actual es "nada abierto". Si se entro por /p/CODIGO
+// la URL vuelve a la raiz AQUI y la ficha se apila encima (Step 5), para que el
+// primer "atras" lleve al catalogo y no fuera de la tienda.
+function prepararHistorial() {
+  const esFicha = /^\/p\//.test(location.pathname);
+  const base = esFicha ? '/' + location.search : location.pathname + location.search;
+  history.replaceState({ capas: [] }, '', base);
+}
+
 function abrirDetalle(id) {
+  const p = (CAT.items || []).find((x) => x.id === id);
+  if (!p) return;
+  abrirCapa({ tipo: 'ficha', id: id, codigo: p.codigo });
+}
+
+// Pinta la ficha. NO toca el historial: la llama sincronizarCapas.
+function mostrarDetalle(id) {
   const p = (CAT.items || []).find((x) => x.id === id);
   if (!p) return;
   productoModal = id;
@@ -682,7 +742,10 @@ function abrirDetalle(id) {
   document.addEventListener('keydown', capturarTecladoModal);
 }
 
-function cerrarDetalle() {
+function cerrarDetalle() { pedirCierreCapa('ficha'); }
+
+// Oculta la ficha. NO toca el historial: la llama sincronizarCapas.
+function ocultarDetalle() {
   document.getElementById('modal-detalle').hidden = true;
   productoModal = null;
   const secRel = document.getElementById('modal-rel');
@@ -697,24 +760,20 @@ function cerrarDetalle() {
   // Sin el atributo, no hay petición: la foto vuelve a ponerse solo al abrir el detalle.
   if (img) img.removeAttribute('src');
   document.removeEventListener('keydown', capturarTecladoModal);
-  // Se vino por un enlace de producto: la URL vuelve a la raiz para que el visitante
-  // siga navegando normal. Se conserva la query porque ahi puede ir el ?ref= del
-  // gestor, y el enlace de la barra del navegador tiene que seguir sirviendo.
-  if (location.pathname.indexOf('/p/') === 0) {
-    history.replaceState(null, '', '/' + location.search);
-  }
   if (elementoAnteriorFoco && elementoAnteriorFoco.isConnected) elementoAnteriorFoco.focus();
 }
 
-// Entrada por un enlace compartido: /p/<codigo> abre ese producto.
-// El codigo es el corto del catalogo (4 letras), no el id largo: es el que se
-// comparte y el que entiende api/producto.js.
+// Entrada por un enlace compartido: /p/<codigo>. El codigo es el corto del catalogo,
+// no el id largo: es el que se comparte y el que entiende api/producto.js.
 // Dos segmentos a proposito: codigoDeLaUrl() toma un solo segmento como codigo de
 // gestor (/MARIA), asi que /p/XXXX no puede confundirse con un vendedor.
-function abrirProductoDeLaUrl() {
+// 🔴 Se lee ANTES de prepararHistorial(), que deja la URL en la raiz.
+function codigoDeFichaDeLaUrl() {
   const m = location.pathname.match(/^\/p\/([A-Za-z0-9]{1,8})\/?$/);
-  if (!m) return;
-  const cod = m[1].toUpperCase();
+  return m ? m[1].toUpperCase() : '';
+}
+
+function abrirFichaPorCodigo(cod) {
   const p = (CAT.items || []).find((x) => String(x.codigo).toUpperCase() === cod);
   if (p) { abrirDetalle(p.id); return; }
   mostrarAvisoTexto('Ese producto ya no está disponible. Mira el resto del catálogo.');
@@ -1775,6 +1834,7 @@ async function iniciar() {
 
   document.getElementById('modal-cerrar').addEventListener('click', cerrarDetalle);
   document.getElementById('modal-fondo').addEventListener('click', cerrarDetalle);
+  window.addEventListener('popstate', alCambiarHistorial);
   document.getElementById('compartir-foto').addEventListener('click', compartirFoto);
   document.getElementById('compartir-wa').addEventListener('click', compartirWhatsApp);
   document.getElementById('compartir-fb').addEventListener('click', compartirFacebook);
@@ -1895,9 +1955,11 @@ async function iniciar() {
     renderFiltroPill(); renderCategorias3D(); renderGrid();
   });
   medirHeader();
+  const codFicha = codigoDeFichaDeLaUrl();   // ANTES de tocar la URL
   await cargarCatalogo();
   renderMundos();
-  abrirProductoDeLaUrl();   // despues de cargarCatalogo: necesita CAT.items
+  prepararHistorial();
+  if (codFicha) abrirFichaPorCodigo(codFicha);   // despues de cargarCatalogo: necesita CAT.items
 }
 
 iniciar();
