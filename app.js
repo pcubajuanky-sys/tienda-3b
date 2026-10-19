@@ -1475,7 +1475,11 @@ function vaciarPedido() {
   if (productoModal) refrescarAcciones(productoModal);
 }
 
-function abrirCarrito() {
+function abrirCarrito() { abrirCapa({ tipo: 'carrito' }); }
+function cerrarCarrito() { pedirCierreCapa('carrito'); }
+
+// Pinta el carrito. NO toca el historial: la llama sincronizarCapas.
+function mostrarCarrito() {
   renderCarrito();
   elementoAnteriorFoco = document.activeElement;
   const panel = document.getElementById('panel');
@@ -1484,7 +1488,8 @@ function abrirCarrito() {
   document.addEventListener('keydown', capturarTecladoCarrito);
 }
 
-function cerrarCarrito() {
+// Oculta el carrito. NO toca el historial: la llama sincronizarCapas.
+function ocultarCarrito() {
   document.getElementById('panel').hidden = true;
   document.removeEventListener('keydown', capturarTecladoCarrito);
   if (elementoAnteriorFoco && elementoAnteriorFoco.isConnected) elementoAnteriorFoco.focus();

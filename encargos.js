@@ -348,7 +348,7 @@
     modal.hidden = false;
     document.getElementById('enc-cerrar').focus();
     document.addEventListener('keydown', teclado);
-    if (location.hash !== '#encargos') history.replaceState(null, '', location.pathname + location.search + '#encargos');
+    if (location.hash !== '#encargos') history.replaceState(history.state, '', location.pathname + location.search + '#encargos');
   }
 
   function cerrar() {
@@ -356,7 +356,7 @@
     if (!modal || modal.hidden) return;
     modal.hidden = true;
     document.removeEventListener('keydown', teclado);
-    if (location.hash === '#encargos') history.replaceState(null, '', location.pathname + location.search);
+    if (location.hash === '#encargos') history.replaceState(history.state, '', location.pathname + location.search);
     if (focoAnterior && focoAnterior.isConnected) focoAnterior.focus();
   }
 
