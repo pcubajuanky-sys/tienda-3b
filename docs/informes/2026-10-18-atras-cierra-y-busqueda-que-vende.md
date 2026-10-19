@@ -97,6 +97,15 @@ se tocó**.
 
 `node --check app.js` y `node --check encargos.js`: exit 0, sin salida.
 
+⚠ **Una ejecución suelta dio 99/100**, la inmediatamente posterior al `git merge` que trajo
+del remoto 81 commits de datos (1.567 líneas de `catalogo.json` reescritas, más `sitemap.xml`
+y `taxi.json`). **No se capturó qué test fue** — el filtro de la salida se comió el detalle —
+así que no se afirma cuál. **No se ha reproducido en las 4 ejecuciones siguientes**, todas
+100/100. Hipótesis razonable y no comprobada: contención de disco en una máquina de 3,9 GB
+de RAM mientras el merge aún asentaba los archivos. Si vuelve a verse un 99/100 en esta
+batería, **captura la salida entera a un archivo antes de filtrarla** y mira el nombre del
+test: puede haber un test inestable que convenga arreglar.
+
 ### En el navegador, a 375 px
 
 Tienda servida con `npx --yes serve -l 4173 -s .` (la `-s` replica el rewrite de Vercel,
@@ -127,8 +136,17 @@ por encima de «Ver todo el catálogo», con su subtítulo, sin desborde a 375 p
 - **El gesto «atrás» en un teléfono de verdad.** Todo se probó en Chrome de escritorio
   con el viewport emulado a 375×812 y `history.back()` por consola. El botón físico de
   Android y el gesto de deslizar desde el borde en iOS **no se han probado**.
-- **Nada de esto está en producción.** No se hizo `git push`; sigue todo en la rama
-  `atras-y-busqueda`. `www.3bqba.com` sirve hoy el código anterior.
+- **Cómo acabó en producción.** Ruth pidió fusionar a `main` y hacer `push`. El clon local
+  estaba **81 commits por detrás** del remoto: todos de datos (`catalogo.json`,
+  `sitemap.xml`, `taxi.json`, `precios-gestores.json` publicados por Stock+ desde el 15/10),
+  **ni una línea de código**, así que se integraron con `git merge` —no rebase, para no
+  reescribir los SHAs que cita este informe— sin un solo conflicto. El despliegue de Vercel
+  que dispara ese push **no se ha visto terminar ni se ha comprobado el sitio en vivo desde
+  esta sesión**: hay que mirarlo.
+- 🔴 **La primera visita tras el despliegue sigue corriendo el código viejo** (el service
+  worker viejo sirve su caché mientras el nuevo se instala). Hace falta **una segunda
+  carga**. Si Ruth dice «no veo el cambio», que recargue otra vez antes de dudar del
+  arreglo.
 - **El sub-caso «vaciar la parrilla solo con el chip 🛵»** no se pudo provocar: con 137
   productos de mensajería gratis la parrilla nunca queda vacía solo con el chip. Lo que
   sí se comprobó es lo que importa: sin texto en el buscador, el botón no aparece.
