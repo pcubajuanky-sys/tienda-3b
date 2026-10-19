@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-19T21:48:11.082Z",
+  "generado": "2026-10-19T23:33:33.705Z",
   "tasa": 815,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -817,6 +817,36 @@
       "creado": 1785092425019
     },
     {
+      "id": "p_1788814692844",
+      "codigo": "C76G",
+      "name": "Ajusta invisible sin tirantes",
+      "cat": "Ropa Interior",
+      "subcat": "",
+      "notes": "Útil e imprescindible prenda, reutilizable y comoda. Brinda un soporte muy estético a pechos sin importar talla,forma o edad.Colores disponibles, beige y negro.",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788814263/productos/xfb4sbqzmvfcc9cdrndb.jpg",
+      "precioUSD": 2,
+      "precioCUP": 1630,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Color"
+        ],
+        "opciones": [
+          "NEGRO"
+        ]
+      },
+      "maxOpciones": {
+        "NEGRO": 2
+      },
+      "envio": {
+        "corto": "🛵 Gratis desde 2,000 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
+      },
+      "creado": 1788814692844
+    },
+    {
       "id": "p_1787498809174",
       "codigo": "RWLZ",
       "name": "Anillos de acero quirúrgico",
@@ -1090,15 +1120,11 @@
           "Color"
         ],
         "opciones": [
-          "NEGRO",
           "ROSA",
           "AZUL",
           "BLANCO",
           "AMARILLO"
         ]
-      },
-      "maxOpciones": {
-        "NEGRO": 1
       },
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
@@ -1607,7 +1633,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 6,
+      "max": 5,
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
@@ -2784,37 +2810,6 @@
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
       },
       "creado": 1790714894835
-    },
-    {
-      "id": "p_1792263885053",
-      "codigo": "JSRK",
-      "name": "Licra faja invisible",
-      "cat": "Ropa",
-      "subcat": "",
-      "notes": "Licra faja de tela lijera y elastizada. Ideal para el ajuste de la cintura, con tela reforzada para esa zona y varillas para el control de la silueta. Tela y diseño confeccionados especialmente para su uso con vestidos y prendas que lo requieran , proporcionando así una imagen más estilizada y un abdomen más firme",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792263645/productos/ld6jraupnrz0in6dfnie.jpg",
-      "precioUSD": 10,
-      "precioCUP": 8150,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "variantes": {
-        "ejes": [
-          "Talla"
-        ],
-        "opciones": [
-          "S"
-        ]
-      },
-      "maxOpciones": {
-        "S": 1
-      },
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1792263885054
     },
     {
       "id": "p_1789233150296",
