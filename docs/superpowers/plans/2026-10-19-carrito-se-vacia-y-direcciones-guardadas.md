@@ -285,7 +285,7 @@ Crea `direcciones.js` con este contenido exacto:
 - [ ] **Step 4: Córrela y comprueba que pasa**
 
 Run: `node --test`
-Expected: **112/112** (100 de antes + 12 nuevas), `exit 0`.
+Expected: **113/113** (100 de antes + 13 nuevas), `exit 0`.
 
 - [ ] **Step 5: Regístralo en la página y en el service worker**
 
@@ -469,7 +469,7 @@ Y dentro de `mostrarCarrito()`, justo después de `renderCarrito();`:
 - [ ] **Step 5: Sintaxis y batería**
 
 Run: `node --check app.js` y después `node --test`
-Expected: `--check` sin salida y **112/112** (esta tarea no añade tests: es DOM, y `app.js`
+Expected: `--check` sin salida y **113/113** (esta tarea no añade tests: es DOM, y `app.js`
 no se puede cargar en una prueba porque llama a `iniciar()` al final).
 
 - [ ] **Step 6: Commit**
@@ -587,7 +587,7 @@ Crea `traspedido.js`:
 - [ ] **Step 4: Córrela y comprueba que pasa**
 
 Run: `node --test`
-Expected: **120/120** (112 + 8 nuevas), `exit 0`.
+Expected: **121/121** (113 + 8 nuevas), `exit 0`.
 
 - [ ] **Step 5: Regístralo**
 
@@ -816,7 +816,7 @@ En `app.js`, dentro de `iniciar()`, sustituye el `visibilitychange` que ya exist
 - [ ] **Step 10: Sintaxis y batería**
 
 Run: `node --check app.js` y después `node --test`
-Expected: `--check` sin salida y **120/120**.
+Expected: `--check` sin salida y **121/121**.
 
 - [ ] **Step 11: Commit**
 
@@ -893,7 +893,7 @@ A 375 px, con el aviso «¿Ya enviaste tu pedido?» en pantalla, guarda la captu
 - [ ] **Step 6: La batería completa**
 
 Run: `node --test`
-Expected: **120/120**, `exit 0`. Apunta el número real que viste.
+Expected: **121/121**, `exit 0`. Apunta el número real que viste.
 
 - [ ] **Step 7: Deja el informe**
 
