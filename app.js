@@ -1434,6 +1434,94 @@ function medirHeader() {
   document.documentElement.style.setProperty('--header-h', h + 'px');
 }
 
+// ── La libreta de direcciones del cliente ──
+// 🔴 Vive SOLO en su telefono (localStorage). La tienda no tiene servidor y estos datos
+// no salen de ahi mas que en el mensaje de WhatsApp que el propio cliente envia.
+// 🔴 localStorage LANZA en modo incognito y con los datos del sitio bloqueados: todo
+// acceso va en try/catch y la tienda tiene que funcionar igual sin el.
+const DIRS_CLAVE = 'direcciones';
+
+function leerDirecciones() {
+  try { return window.Direcciones.cargar(localStorage.getItem(DIRS_CLAVE)); } catch (e) { return []; }
+}
+
+function escribirDirecciones(lista) {
+  try { localStorage.setItem(DIRS_CLAVE, JSON.stringify(lista)); } catch (e) { /* sin sitio donde guardar: se sigue igual */ }
+}
+
+function pintarDirecciones() {
+  const caja = document.getElementById('dir-guardadas');
+  const tira = document.getElementById('dir-guardadas-tira');
+  if (!caja || !tira) return;
+  const lista = leerDirecciones();
+  caja.hidden = lista.length === 0;
+  tira.innerHTML = lista.map((d) =>
+    `<button type="button" class="dir-chip" data-dir="${escapeHtml(d.dir)}">${escapeHtml(d.etiqueta)}</button>`
+  ).join('');
+}
+
+// Rellena el formulario con una ficha guardada. El horario puede ser uno de los del
+// desplegable o uno escrito a mano: si no esta en la lista, se usa "Otro horario…".
+function usarDireccion(dir) {
+  const d = leerDirecciones().find((x) => window.Direcciones.mismaDireccion(x, { dir: dir }));
+  if (!d) return;
+  document.getElementById('c-nombre').value = d.nombre;
+  document.getElementById('c-tel').value = d.tel;
+  document.getElementById('c-dir').value = d.dir;
+  const sel = document.getElementById('c-horario');
+  const libre = document.getElementById('c-horario-libre');
+  const opciones = [...sel.options].map((o) => o.value);
+  if (d.horario && opciones.indexOf(d.horario) !== -1) {
+    sel.value = d.horario;
+    libre.hidden = true;
+    libre.value = '';
+  } else if (d.horario) {
+    sel.value = '__libre';
+    libre.hidden = false;
+    libre.value = d.horario;
+  }
+  // Los avisos de campo vacio que hubiera se quedarian mintiendo.
+  marcarError('c-nombre', 'err-nombre', false);
+  marcarError('c-tel', 'err-tel', false);
+  marcarError('c-dir', 'err-dir', false);
+  marcarError('c-horario', 'err-horario', false);
+}
+
+function olvidarDirecciones() {
+  if (!confirm('¿Olvidar tus datos guardados en este teléfono? Tendrás que escribirlos la próxima vez.')) return;
+  try { localStorage.removeItem(DIRS_CLAVE); } catch (e) { /* nada que borrar */ }
+  pintarDirecciones();
+}
+
+// El cliente volvio a la tienda despues de irse a WhatsApp. Como la tienda NO puede saber
+// si llego a enviar el mensaje, se le pregunta en vez de decidir por el.
+function preguntarSiEnvio() {
+  const caja = document.getElementById('aviso-enviado');
+  if (!caja || !caja.hidden) return;   // ya esta puesto: no se repite
+  let marca = null;
+  try { marca = localStorage.getItem('pedidoEnviado'); } catch (e) { return; }
+  if (!window.TrasPedido.debePreguntar(marca, Date.now(), Object.keys(carrito).length > 0)) {
+    olvidarMarcaPedido();
+    return;
+  }
+  caja.hidden = false;
+}
+
+function olvidarMarcaPedido() {
+  try { localStorage.removeItem('pedidoEnviado'); } catch (e) { /* nada */ }
+}
+
+function cerrarAvisoEnviado(vaciar) {
+  const caja = document.getElementById('aviso-enviado');
+  if (caja) caja.hidden = true;
+  olvidarMarcaPedido();
+  if (vaciar) {
+    limpiarCarrito();
+    cerrarCarrito();
+    mostrarAvisoTexto('¡Gracias! Tu carrito quedó vacío. Te escribimos por WhatsApp.');
+  }
+}
+
 // Pinta el panel modal (móvil y respaldo en escritorio) Y el aside lateral
 // (solo visible ≥1024px) con las MISMAS líneas (lineaCarritoHtml) y el mismo
 // total CUP — una sola fuente de verdad, nada de lógica duplicada.
@@ -1501,10 +1589,8 @@ function renderCarrito() {
 // él — parrilla (para que las tarjetas vuelvan a "Añadir"), carrito (panel +
 // aside) y barra móvil (vía guardarCarrito). Si el modal de detalle está
 // abierto sobre un producto que estaba en el pedido, también se refresca.
-function vaciarPedido() {
-  if (!Object.keys(carrito).length) return;   // guarda defensiva: el botón está oculto si ya está vacío
-  const ok = confirm('¿Vaciar tu pedido? Perderás lo que agregaste y no se puede deshacer.');
-  if (!ok) return;
+// Vacia de verdad. NO pregunta: quien llama ya se encargo de eso.
+function limpiarCarrito() {
   carrito = {};
   guardarCarrito();
   localStorage.removeItem(CLAVE_CARRITO);
@@ -1513,12 +1599,20 @@ function vaciarPedido() {
   if (productoModal) refrescarAcciones(productoModal);
 }
 
+function vaciarPedido() {
+  if (!Object.keys(carrito).length) return;   // guarda defensiva: el botón está oculto si ya está vacío
+  const ok = confirm('¿Vaciar tu pedido? Perderás lo que agregaste y no se puede deshacer.');
+  if (!ok) return;
+  limpiarCarrito();
+}
+
 function abrirCarrito() { abrirCapa({ tipo: 'carrito' }); }
 function cerrarCarrito() { pedirCierreCapa('carrito'); }
 
 // Pinta el carrito. NO toca el historial: la llama sincronizarCapas.
 function mostrarCarrito() {
   renderCarrito();
+  pintarDirecciones();
   elementoAnteriorFoco = document.activeElement;
   const panel = document.getElementById('panel');
   panel.hidden = false;
@@ -1647,6 +1741,18 @@ function enviarPorWhatsApp(ev) {
   // enlace de WhatsApp (iOS sobre todo).
   const destino = (gestorRecargo && gestorRecargo.telPublico) || CAT.whatsapp;
   window.open(`https://api.whatsapp.com/send?phone=${destino}&text=${encodeURIComponent(lineas.join('\n'))}`, '_blank');
+
+  // Ya se fue a WhatsApp. Ahora si: guardar sus datos si lo pidio, y dejar la marca para
+  // preguntarle al volver si llego a enviarlo.
+  const chk = document.getElementById('c-guardar');
+  if (chk && chk.checked) {
+    const etiquetaDir = document.getElementById('c-etiqueta').value.trim();
+    escribirDirecciones(window.Direcciones.guardar(leerDirecciones(), {
+      etiqueta: etiquetaDir, nombre: nombre, tel: tel, dir: dir, horario: horario,
+    }));
+    pintarDirecciones();
+  }
+  try { localStorage.setItem('pedidoEnviado', String(Date.now())); } catch (e) { /* sin marca: no se preguntara */ }
 }
 
 // ── Portada: mosaico de fotos reales + dato de productos ──
@@ -1886,6 +1992,19 @@ async function iniciar() {
   document.getElementById('panel-fondo').addEventListener('click', cerrarCarrito);
   document.getElementById('form-pedido').addEventListener('submit', enviarPorWhatsApp);
   engancharHorario();
+  const tiraDirs = document.getElementById('dir-guardadas-tira');
+  if (tiraDirs) tiraDirs.addEventListener('click', (e) => {
+    const chip = e.target.closest('.dir-chip');
+    if (chip) usarDireccion(chip.dataset.dir);
+  });
+  const btnOlvidar = document.getElementById('dir-olvidar');
+  if (btnOlvidar) btnOlvidar.addEventListener('click', olvidarDirecciones);
+  const chkGuardar = document.getElementById('c-guardar');
+  if (chkGuardar) chkGuardar.addEventListener('change', () => {
+    const campo = document.getElementById('campo-etiqueta');
+    campo.hidden = !chkGuardar.checked;
+    if (chkGuardar.checked) document.getElementById('c-etiqueta').focus();
+  });
 
   document.getElementById('modal-cerrar').addEventListener('click', cerrarDetalle);
   document.getElementById('modal-fondo').addEventListener('click', cerrarDetalle);
@@ -1994,9 +2113,11 @@ async function iniciar() {
   window.addEventListener('resize', reservarEspacioBarraMovil, { passive: true });
   window.addEventListener('resize', medirHeader, { passive: true });
   document.addEventListener('visibilitychange', () => {
-    if (document.visibilityState === 'visible') revalidarCierre();
+    if (document.visibilityState === 'visible') { revalidarCierre(); preguntarSiEnvio(); }
   });
   window.addEventListener('focus', revalidarCierre);
+  document.getElementById('aviso-enviado-si').addEventListener('click', () => cerrarAvisoEnviado(true));
+  document.getElementById('aviso-enviado-no').addEventListener('click', () => cerrarAvisoEnviado(false));
 
   engancharGestoGaleria();
   const selOrden = document.getElementById('orden-sel');
@@ -2035,7 +2156,11 @@ if ('serviceWorker' in navigator) {
   function escribiendoPedido() {
     const f = document.getElementById('form-pedido');
     if (!f || f.hidden) return false;
-    return [...f.querySelectorAll('input, textarea, select')].some((c) => String(c.value || '').trim() !== '');
+    // 🔴 Un checkbox vale "on" aunque no este marcado: se mira `checked`, no `value`.
+    // Si esto se hace mal, escribiendoPedido() devuelve siempre true y el service worker
+    // no vuelve a recargar la tienda en ningun telefono.
+    return [...f.querySelectorAll('input, textarea, select')]
+      .some((c) => (c.type === 'checkbox' ? c.checked : String(c.value || '').trim() !== ''));
   }
 
   // El service worker nuevo acaba de tomar el mando: la caché ya tiene el código nuevo,

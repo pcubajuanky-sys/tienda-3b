@@ -27,6 +27,8 @@ const ARMAZON = [
   '/galeria.js',
   '/historial.js',
   '/faltante.js',
+  '/direcciones.js',
+  '/traspedido.js',
   '/tarjeta.js',
   '/encargos.js',
   '/fuentes/outfit-latin-v15.woff2',

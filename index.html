@@ -425,6 +425,11 @@
         <input type="text" id="c-dir" autocomplete="street-address">
         <span class="campo-error" id="err-dir" hidden>Falta la dirección.</span>
       </label>
+      <div id="dir-guardadas" class="dir-guardadas" hidden>
+        <span class="dir-guardadas-tit">Tus direcciones guardadas</span>
+        <div id="dir-guardadas-tira" class="dir-guardadas-tira"></div>
+        <button type="button" id="dir-olvidar" class="dir-olvidar">Olvidar mis datos</button>
+      </div>
       <label class="campo">
         <span>¿En qué horario puedes recibirlo?</span>
         <select id="c-horario">
@@ -442,6 +447,14 @@
         <span>Nota (opcional)</span>
         <textarea id="c-nota" rows="2"></textarea>
       </label>
+      <label class="campo-check">
+        <input type="checkbox" id="c-guardar">
+        <span>Guardar mis datos en este teléfono para la próxima vez</span>
+      </label>
+      <label class="campo" id="campo-etiqueta" hidden>
+        <span>¿Con qué nombre?</span>
+        <input type="text" id="c-etiqueta" placeholder="Casa, Trabajo…" maxlength="20">
+      </label>
       <p id="panel-politica" class="politica-texto" hidden></p>
       <p id="panel-terminos" class="terminos-nota" hidden>Al pedir aceptas <a href="terminos.html" target="_blank" rel="noopener">nuestros términos</a>.</p>
       <button id="btn-enviar" class="btn btn-wa btn-enviar" type="submit">Pedir por WhatsApp</button>
@@ -455,6 +468,14 @@
   </div>
 </div>
 
+  <div id="aviso-enviado" class="aviso-enviado" role="dialog" aria-labelledby="aviso-enviado-txt" hidden>
+    <p id="aviso-enviado-txt" class="aviso-enviado-txt">¿Ya enviaste tu pedido por WhatsApp?</p>
+    <div class="aviso-enviado-botones">
+      <button type="button" id="aviso-enviado-si" class="btn btn-primario">Sí, vaciar mi carrito</button>
+      <button type="button" id="aviso-enviado-no" class="btn btn-suave btn-secundario">No, conservarlo</button>
+    </div>
+  </div>
+
 <script src="mundos.js"></script>
 <script src="orden.js"></script>
 <script src="preciosGestor.js"></script>
@@ -462,6 +483,8 @@
 <script src="galeria.js"></script>
 <script src="historial.js"></script>
 <script src="faltante.js"></script>
+<script src="direcciones.js"></script>
+<script src="traspedido.js"></script>
 <script src="tarjeta.js"></script>
 <script src="negocio.js"></script>
 <script src="app.js"></script>
