@@ -82,3 +82,18 @@ test('argumentos ausentes o basura no revientan', () => {
   assert.strictEqual(nula.cerrar.length, 0);
   assert.strictEqual(nula.abrir.length, 0);
 });
+
+test('🔴 la raiz de la pagina del socio es /electripower, no /', () => {
+  // Sin raiz, se comporta como siempre (la casa).
+  assert.strictEqual(rutaDe([], ''), '/');
+  assert.strictEqual(rutaDe([CARRITO], '?ref=K7M2'), '/?ref=K7M2');
+  // Con raiz, la del socio.
+  assert.strictEqual(rutaDe([], '', '/electripower'), '/electripower');
+  assert.strictEqual(rutaDe([CARRITO], '?ref=K7M2', '/electripower'), '/electripower?ref=K7M2');
+});
+
+test('la ficha sigue manando sobre la raiz: /p/CODIGO en las dos tiendas', () => {
+  const capas = [{ tipo: 'ficha', id: 'x', codigo: '5hp4' }];
+  assert.strictEqual(rutaDe(capas, '', '/electripower'), '/p/5HP4');
+  assert.strictEqual(rutaDe(capas, '?ref=K7M2'), '/p/5HP4?ref=K7M2');
+});

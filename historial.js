@@ -19,14 +19,18 @@
 
   // La URL que le toca a la pila de capas. La manda la de arriba.
   // 🔴 search SIEMPRE se conserva: ahi viaja el ?ref= del gestor.
-  function rutaDe(capas, search) {
+  // 🔴 `raiz` es la pagina de ESTE negocio ('/' la casa, '/electripower' el socio).
+  // Sin ella, cerrar el carrito en la tienda del socio dejaba la URL en '/' y al
+  // recargar el cliente aparecia en la tienda de 3B con su carrito de inversores.
+  function rutaDe(capas, search, raiz) {
     const q = search || '';
+    const base = String(raiz || '/') || '/';
     const lista = (capas || []).filter(Boolean);
     const arriba = lista[lista.length - 1];
     if (arriba && arriba.tipo === 'ficha' && arriba.codigo) {
       return '/p/' + String(arriba.codigo).toUpperCase() + q;
     }
-    return '/' + q;
+    return base + q;
   }
 
   // De las capas abiertas AHORA a las que pide el historial: que cerrar y que abrir.

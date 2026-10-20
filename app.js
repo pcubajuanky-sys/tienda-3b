@@ -5,6 +5,8 @@ let CAT = null;          // el catalogo.json cargado
 // (= la casa); electripower.html lo lleva.
 const NEGOCIO = window.Negocio ? window.Negocio.deLaPagina(document) : '3b';
 const CLAVE_CARRITO = window.Negocio ? window.Negocio.claveCarrito(NEGOCIO) : 'carrito';
+// La pagina de este negocio, para el historial de capas y para prepararHistorial.
+const RAIZ = NEGOCIO === (window.Negocio ? window.Negocio.CASA : '3b') ? '/' : '/' + NEGOCIO;
 let gestorRecargo = null;   // el gestor cuyos precios se estan enseñando, si los hay
 let filtroCat = '';      // categoría activa ('' = todas)
 let filtroOferta = false;
@@ -701,7 +703,7 @@ function sincronizarCapas(destino) {
 
 function abrirCapa(capa) {
   const destino = capasAbiertas.concat([capa]);
-  history.pushState({ capas: destino }, '', window.Historial.rutaDe(destino, location.search));
+  history.pushState({ capas: destino }, '', window.Historial.rutaDe(destino, location.search, RAIZ));
   sincronizarCapas(destino);
 }
 
@@ -730,7 +732,7 @@ function alCambiarHistorial(e) {
 // primer "atras" lleve al catalogo y no fuera de la tienda.
 function prepararHistorial() {
   const esFicha = /^\/p\//.test(location.pathname);
-  const base = esFicha ? '/' + location.search : location.pathname + location.search;
+  const base = esFicha ? RAIZ + location.search : location.pathname + location.search;
   history.replaceState({ capas: [] }, '', base);
 }
 
