@@ -68,8 +68,13 @@
 
     if (bloque) {
       for (var b in bloque) { if (Object.prototype.hasOwnProperty.call(bloque, b)) t[b] = bloque[b]; }
-      // El numero del pedido vive en la raiz del catalogo, no en `tienda`.
-      if (bloque.whatsapp) salida.whatsapp = bloque.whatsapp;
+      // 🔴 El PEDIDO sale al numero de la CASA, siempre. Ahi vive el bot, y es lo
+      // unico que permite que el pedido se anote solo en Envios, que a Ruth le
+      // llegue copia y que el gestor cobre. El numero del socio viaja aparte, como
+      // `whatsappSocio`, y se usa solo para el boton de PREGUNTAR.
+      // No lo "arregles" mandando el pedido al socio: se pierden las tres cosas.
+      if (bloque.whatsapp) t.whatsappSocio = bloque.whatsapp;
+      delete t.whatsapp;
     }
     salida.tienda = t;
     return salida;

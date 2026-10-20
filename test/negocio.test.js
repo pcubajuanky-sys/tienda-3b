@@ -50,13 +50,25 @@ test('en la pagina de la casa solo se ven los items de la casa', () => {
   assert.equal(cat.tienda.garantia, 'Garantia de la casa');
 });
 
-test('en la pagina del socio se ven los suyos, con SU marca y SU WhatsApp', () => {
+test('en la pagina del socio se ven los suyos y con SU marca', () => {
   const N = cargar();
   const cat = N.aplicar(catalogo(), 'electripower');
   assert.deepEqual(cat.items.map((i) => i.id), ['b']);
   assert.equal(cat.tienda.nombre, 'Electripower');
   assert.equal(cat.tienda.garantia, 'Garantia del socio');
-  assert.equal(cat.whatsapp, '5358856820', 'el pedido va a SU numero');
+});
+
+test('🔴 el PEDIDO sigue saliendo al numero de la CASA', () => {
+  // Es el unico numero donde vive el bot, y por tanto lo unico que permite las tres
+  // cosas a la vez: que el pedido se anote solo en Envios, que a Ruth le llegue
+  // copia, y que el gestor cobre su comision (la linea `Vendedor: CODIGO` tiene que
+  // llegar a un sitio donde alguien la lea). El socio recibe el pedido REENVIADO.
+  // Si alguna vez esto se "arregla", se pierden las tres.
+  const N = cargar();
+  const cat = N.aplicar(catalogo(), 'electripower');
+  assert.equal(cat.whatsapp, '5354978966', 'el de la casa, NO el del socio');
+  assert.equal(cat.tienda.whatsappSocio, '5358856820', 'el del socio queda para PREGUNTAR');
+  assert.equal('whatsapp' in cat.tienda, false, 'no se cuela un whatsapp suelto en tienda');
 });
 
 test('🔴 en la pagina del socio la mensajeria no se cobra ni se anuncia', () => {

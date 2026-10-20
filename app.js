@@ -1205,6 +1205,16 @@ function pintarGarantia() {
   }
 }
 
+// El boton de preguntar de un negocio asociado: su WhatsApp, no el de la casa.
+// Se esconde si el catalogo no trae su numero. api.whatsapp.com/send, nunca wa.me.
+function pintarPreguntarSocio() {
+  const a = document.getElementById('preguntar-socio');
+  if (!a) return;
+  const tel = (CAT && CAT.tienda && CAT.tienda.whatsappSocio) || '';
+  a.hidden = !tel;
+  if (tel) a.href = 'https://api.whatsapp.com/send?phone=' + encodeURIComponent(tel);
+}
+
 // La pagina de un gestor con recargo se identifica como SUYA: el precio que se ve es el
 // que el puso y es el quien responde por el. Solo el nombre, sin apellidos (decision de
 // Ruth, 2026-10-15). Si no hay gestor con recargo, la banda no existe para el visitante.
@@ -1815,6 +1825,7 @@ async function cargarCatalogo() {
   renderFiltroPill();
   renderCategorias3D();
   pintarGarantia();
+  pintarPreguntarSocio();
   pintarBandaGestor();
   renderControles();   // antes de renderGrid: valida ordenSel/soloEnvioGratis contra ESTE catálogo
   renderGrid();
