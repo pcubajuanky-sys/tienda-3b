@@ -457,6 +457,18 @@ function mostrarError() {
   el('tx-otro').hidden = true;
 }
 
+// La pastilla del negocio asociado en la cabecera del taxi. Mismo patron que la del
+// taxi en la tienda: el interruptor viaja en el JSON (taxi.json -> electripowerActivo)
+// y aqui solo se destapa. Nada de un segundo fetch. Sin la clave, queda oculta.
+// 🔴 mundos.js decide si enseña la franja contando los logos VISIBLES, asi que hay
+// que llamarlo DESPUES de cambiar el hidden.
+function pintarMundoEp(data) {
+  const a = document.getElementById('mundo-electripower');
+  if (!a) return;
+  a.hidden = !(data && data.electripowerActivo === true);
+  if (window.Mundos) window.Mundos.refrescar();
+}
+
 async function cargar() {
   el('tx-error').hidden = true;
   try {
@@ -469,6 +481,8 @@ async function cargar() {
   }
 
   renderMarca();
+  // Antes del return del taxi apagado: el socio se ve aunque el taxi no cotice.
+  pintarMundoEp(TX);
   resolverReferidor();
   renderReferidor();
 
