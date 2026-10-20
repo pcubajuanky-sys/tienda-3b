@@ -8,13 +8,14 @@
 //    clientes seguiran viendo el CSS y el JS viejos.
 // 3. Solo se guarda lo del propio dominio. Las fotos de Cloudinary NO: son muchas,
 //    pesan, y la CSP de la pagina ya decide quien puede servirlas.
-const CACHE = 'tienda-3b-v15';
+const CACHE = 'tienda-3b-v16';
 
 // Los <script src> de index.html tienen que estar TODOS aqui (y los archivos nuevos que
 // cargue la pagina): lo que falte en esta lista no esta disponible sin conexion.
 const ARMAZON = [
   '/',
   '/index.html',
+  '/electripower',
   '/electripower.html',
   '/estilos.css',
   '/app.js',
@@ -81,7 +82,19 @@ self.addEventListener('fetch', (e) => {
     // Se prueba '/' ANTES que '/index.html': hay hosts (Cloudflare Pages, 'serve') que
     // redirigen /index.html a /, y una respuesta guardada con redirected=true la rechaza
     // el navegador al responder una navegacion (ERR_FAILED: la tienda no abriria sin red).
-    e.respondWith(fetch(req).catch(() => caches.match('/').then((r) => r || caches.match('/index.html'))));
+    // 🔴 Cada tienda cae en SU portada. Con un solo respaldo, un cliente sin red que
+    // abriera /electripower veria la tienda de 3B. Misma regla en las dos: se prueba
+    // la ruta limpia ('/electripower', '/') ANTES que el '*.html', porque el '*.html'
+    // puede cachearse como respuesta redirigida y Chrome la rechaza en una navegacion.
+    // '/electripower' esta en ARMAZON: las navegaciones no se guardan solas.
+    // (Una ficha /p/<codigo> sin red cae en la portada de 3B: la URL no dice de que
+    // negocio es el producto y el service worker no lee el catalogo para saberlo.)
+    const esSocio = url.pathname === '/electripower' || url.pathname === '/electripower/';
+    const candidatos = esSocio ? ['/electripower', '/electripower.html'] : ['/', '/index.html'];
+    e.respondWith(fetch(req).catch(() => candidatos.reduce(
+      (previo, c) => previo.then((r) => r || caches.match(c)),
+      Promise.resolve(null)
+    )));
     return;
   }
 
