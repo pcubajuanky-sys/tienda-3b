@@ -1,6 +1,10 @@
 // app.js — tienda 3B. Lee catalogo.json y pinta el catálogo.
 // Sin dependencias, sin backend: todo pasa en el navegador del cliente.
 let CAT = null;          // el catalogo.json cargado
+// De quien es ESTA pagina: lo dice <body data-negocio>. index.html no lo lleva
+// (= la casa); electripower.html lo lleva.
+const NEGOCIO = window.Negocio ? window.Negocio.deLaPagina(document) : '3b';
+const CLAVE_CARRITO = window.Negocio ? window.Negocio.claveCarrito(NEGOCIO) : 'carrito';
 let gestorRecargo = null;   // el gestor cuyos precios se estan enseñando, si los hay
 let filtroCat = '';      // categoría activa ('' = todas)
 let filtroOferta = false;
@@ -983,10 +987,10 @@ function atraparFoco(e, contenedor) {
 
 // ── Carrito ──
 // { id: cantidad }. Vive en localStorage para que un refresco no borre el pedido.
-let carrito = JSON.parse(localStorage.getItem('carrito') || '{}');
+let carrito = JSON.parse(localStorage.getItem(CLAVE_CARRITO) || '{}');
 
 function guardarCarrito() {
-  localStorage.setItem('carrito', JSON.stringify(carrito));
+  localStorage.setItem(CLAVE_CARRITO, JSON.stringify(carrito));
   const n = Object.values(carrito).reduce((s, q) => s + q, 0);
   document.getElementById('carrito-count').textContent = n;
   actualizarBarraMovil();
@@ -1491,7 +1495,7 @@ function vaciarPedido() {
   if (!ok) return;
   carrito = {};
   guardarCarrito();
-  localStorage.removeItem('carrito');
+  localStorage.removeItem(CLAVE_CARRITO);
   renderGrid();
   renderCarrito();
   if (productoModal) refrescarAcciones(productoModal);
@@ -1741,6 +1745,9 @@ function actualizarHeaderScroll() {
 function renderMundos() {
   const pastilla = document.getElementById('mundo-taxi');
   if (pastilla) pastilla.hidden = !(CAT && CAT.tienda && CAT.tienda.taxiActivo);
+  // Tercera pastilla: el negocio asociado, con su propio interruptor en el catalogo.
+  const pastillaEp = document.getElementById('mundo-electripower');
+  if (pastillaEp) pastillaEp.hidden = !(CAT && CAT.tienda && CAT.tienda.electripowerActivo);
   if (window.Mundos) window.Mundos.refrescar();   // el aviso depende de cuantos negocios se ven
   medirHeader();                                   // la franja cambia el alto de la barra fija
 }
@@ -1767,6 +1774,11 @@ async function cargarCatalogo() {
     const r = await fetch('catalogo.json?v=' + Date.now());   // sin caché: el precio tiene que ser el de ahora
     if (!r.ok) throw new Error('HTTP ' + r.status);
     CAT = await r.json();
+    // 🔴 EL UNICO FILTRO POR NEGOCIO DE TODA LA TIENDA. Aqui el catalogo pasa a ser
+    // el de ESTA pagina: sus items, su marca, su WhatsApp. Todo lo que viene
+    // despues (parrilla, buscador, ficha, relacionados, orden, carrito, tarjeta,
+    // mensaje de WhatsApp) acierta sin saber que existen dos tiendas.
+    if (window.Negocio) CAT = window.Negocio.aplicar(CAT, NEGOCIO);
   } catch (err) {
     document.getElementById('skeleton').hidden = true;
     document.getElementById('error-carga').hidden = false;
@@ -1831,6 +1843,9 @@ async function revalidarCierre() {
     const r = await fetch('catalogo.json?v=' + Date.now());
     if (!r.ok) return;
     fresco = await r.json();
+    // Mismo filtro que en cargarCatalogo: en la pagina del socio `cierre` queda a null,
+    // y comparar contra el cierre de 3B sin filtrar recargaria el catalogo cada minuto.
+    if (window.Negocio) fresco = window.Negocio.aplicar(fresco, NEGOCIO);
   } catch (err) { return; }                                // sin red: se queda como estaba
   const ahora = !!(fresco && fresco.tienda && fresco.tienda.cierre && fresco.tienda.cierre.activo);
   if (ahora === cerrada()) return;
