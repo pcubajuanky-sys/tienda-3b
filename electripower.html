@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<!-- Fija la raiz como base de TODAS las URL relativas del documento. Sin esto, una
+     visita a /p/<codigo> (dos segmentos) pide estilos.css y app.js a /p/… y el
+     comodin de vercel.json le devuelve HTML: la tienda sale sin estilos y sin JS.
+     Con los enlaces de gestor (/MARIA, un solo segmento) no pasaba, porque un
+     segmento ya resuelve contra la raiz. NO LA QUITES. -->
+<base href="/">
+<meta name="theme-color" content="#7A2E5D">
+<link rel="icon" href="/favicon-3b.png" type="image/png">
+<link rel="apple-touch-icon" href="/favicon-3b.png">
+<link rel="manifest" href="/manifest.json">
+
+<!-- Todo lo que va entre og:inicio y og:fin lo SUSTITUYE api/producto.js cuando la
+     visita entra por /p/<codigo>, para que Facebook y WhatsApp —que no ejecutan
+     JavaScript— enseñen la foto y la descripcion de ESE producto. Si mueves o
+     renombras los marcadores, la funcion deja de reconocerlos y devuelve esta
+     pagina tal cual (fallo seguro, pero sin tarjeta de producto).
+     Los enlaces del icono viven ARRIBA, fuera del bloque, para que una pagina de
+     producto no se quede sin favicon.
+     og:image por defecto: el logo de la tienda sobre negro, servido desde este
+     mismo dominio. Es lo que se ve al compartir la portada. -->
+<!-- og:inicio -->
+<title>Electripower — Baterías, inversores y respaldo energético</title>
+<meta name="description" content="Baterías, inversores y respaldo energético. Mensajería incluida. Pide por WhatsApp.">
+<link rel="canonical" href="https://www.3bqba.com/electripower">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Electripower">
+<meta property="og:title" content="Electripower — Baterías, inversores y respaldo energético">
+<meta property="og:description" content="Baterías, inversores y respaldo energético. Mensajería incluida. Pide por WhatsApp.">
+<meta property="og:url" content="https://www.3bqba.com/electripower">
+<meta property="og:image" content="https://www.3bqba.com/og-3b.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="es_CU">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Electripower — Baterías, inversores y respaldo energético">
+<meta name="twitter:description" content="Baterías, inversores y respaldo energético. Mensajería incluida. Pide por WhatsApp.">
+<meta name="twitter:image" content="https://www.3bqba.com/og-3b.jpg">
+<!-- og:fin -->
+
+<!-- La fuente, pedida ya: sin esto el navegador no se entera de que existe hasta
+     que termina de leer estilos.css. El atributo crossorigin es OBLIGATORIO en las
+     fuentes aunque sean del mismo dominio; sin el, el navegador baja el archivo DOS
+     veces y la precarga no sirve de nada. -->
+<link rel="preload" href="/fuentes/outfit-latin-v15.woff2" as="font" type="font/woff2" crossorigin>
+<!-- Datos estructurados del negocio. Bloque de DATOS, no un script ejecutable: la CSP
+     `script-src 'self'` no lo bloquea. Va fijo aquí porque no depende del catálogo. -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Store","name":"Electripower","url":"https://www.3bqba.com/electripower","image":"https://www.3bqba.com/og-3b.jpg","description":"Baterías, inversores y respaldo energético. Mensajería incluida. Pide por WhatsApp.","currenciesAccepted":"CUP, USD"}
+</script>
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body data-negocio="electripower">
+
+<!-- Aviso que descubre a los negocios socios (2026-09-13). `hidden` por
+     defecto: lo destapa mundos.js solo si hay otro negocio visible y el
+     cliente no ha tocado ninguno todavía. -->
+<!-- Franja + cabecera viajan juntas y pegadas arriba: así la franja no se va
+     nunca con el scroll (decisión del dueño, 2026-09-13) y no hay que calcular
+     a mano cuánto mide para separar una de otra. -->
+<div class="barra-fija">
+  <!-- Tienda cerrada (2026-09-19): lo pinta pintarCierre() cuando catalogo.json trae
+       tienda.cierre.activo. Vive DENTRO de .barra-fija para que viaje pegado arriba y
+       para que medirHeader() lo cuente en --header-h. NO lleva ✕: es el estado del
+       negocio, no un anuncio, así que no se puede descartar. -->
+  <div id="aviso-cierre" class="aviso-cierre" role="status" hidden>
+    <div class="aviso-cierre-caja">
+      <p class="aviso-cierre-titulo" id="aviso-cierre-titulo"></p>
+      <p class="aviso-cierre-texto" id="aviso-cierre-texto"></p>
+    </div>
+  </div>
+
+  <!-- Carrito recortado a lo que queda (2026-10-07): lo pinta ajustarCarritoATopes() al
+       cargar el catálogo cuando el carrito guardado traía más de lo que hay. SÍ se puede
+       cerrar (es un aviso puntual, no el estado del negocio). Sin manejadores en línea:
+       la CSP de producción los bloquea; el clic lo engancha app.js. -->
+  <div id="aviso-ajuste" class="aviso-ajuste" role="status" hidden>
+    <p id="aviso-ajuste-texto" class="aviso-ajuste-texto"></p>
+    <button id="aviso-ajuste-cerrar" class="aviso-ajuste-x" type="button" aria-label="Cerrar aviso">✕</button>
+  </div>
+
+  <div id="promo-mundos" class="promo promo-mundos" hidden>
+    <div class="promo-contenido">
+      <p class="promo-linea">3B es más de un negocio — toca los logos 👇</p>
+    </div>
+  </div>
+
+  <header class="header" id="header">
+    <div class="header-top wrap">
+      <nav class="mundos" aria-label="Nuestros negocios">
+        <a class="mundo mundo-3b" href="/" title="3B Store">
+          <img class="mundo-img" src="/logo-3b.png" width="256" height="256" alt="3B Store — tienda">
+        </a>
+        <a class="mundo" id="mundo-taxi" href="/taxi" hidden title="Taxi 3B">
+          <img class="mundo-img" src="/logo-taxi-3b.png" width="256" height="256" alt="Taxi 3B — viajes">
+        </a>
+        <a class="mundo mundo-on mundo-ep" id="mundo-electripower" href="/electripower" aria-current="page" title="Electripower">
+          <span class="mundo-emoji" aria-hidden="true">⚡</span>
+          <span class="sr-only">Electripower — baterías e inversores</span>
+        </a>
+      </nav>
+      <button id="btn-carrito" class="btn-carrito" aria-label="Ver tu pedido" type="button">
+        <span aria-hidden="true">🛒</span>
+        <span id="carrito-count" class="carrito-count" aria-live="polite">0</span>
+      </button>
+    </div>
+    <div class="header-buscador wrap">
+      <label for="buscador" class="sr-only">Buscar producto</label>
+      <input type="search" id="buscador" placeholder="Buscar producto…" autocomplete="off">
+    </div>
+  </header>
+</div>
+
+<div id="promo-envio" class="promo" hidden>
+  <!-- Mensajera en moto, trazo simple: alude a rapidez/eficiencia sin foto de
+       banco (ver DECISIONES.md). La coleta (último <path> del grupo) es lo
+       que la distingue de "alguien con casco". Decorativa: aria-hidden, sin
+       texto propio. -->
+  <svg class="promo-ilustracion" viewBox="0 0 220 120" aria-hidden="true" focusable="false" preserveAspectRatio="xMaxYMid meet">
+    <g fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="6" y1="56" x2="30" y2="56"></line>
+      <line x1="2" y1="70" x2="34" y2="70"></line>
+      <line x1="8" y1="84" x2="26" y2="84"></line>
+      <circle cx="66" cy="92" r="17"></circle>
+      <circle cx="162" cy="92" r="17"></circle>
+      <path d="M66 92 L104 64 L138 92 L162 92"></path>
+      <path d="M104 64 L118 92"></path>
+      <path d="M104 64 L98 46"></path>
+      <path d="M138 92 L152 66 L166 70"></path>
+      <path d="M96 46 C90 34 100 22 114 24 C126 26 130 36 124 44 L114 54 L152 66"></path>
+      <path d="M101 33 Q 82 38 80 54"></path>
+    </g>
+    <circle cx="112" cy="26" r="12" fill="currentColor"></circle>
+  </svg>
+  <div class="promo-velo" aria-hidden="true"></div>
+  <div class="promo-contenido">
+    <p class="promo-linea" id="promo-envio-texto"></p>
+    <p class="promo-fina" id="promo-envio-fina" hidden></p>
+  </div>
+</div>
+<div id="promo-campana" class="promo promo-campana" hidden>
+  <div class="promo-contenido">
+    <p class="promo-linea" id="promo-campana-texto"></p>
+  </div>
+</div>
+
+<div class="wrap"><div id="banda-gestor" class="banda-gestor" hidden></div></div>
+<section class="hero" id="hero">
+  <div class="hero-mosaico" id="hero-mosaico" aria-hidden="true"></div>
+  <div class="hero-velo" aria-hidden="true"></div>
+  <div class="hero-contenido wrap">
+    <!-- El eslogan del dueño sigue siendo lo más grande de la portada; debajo, dentro
+         del MISMO h1, una línea que dice qué es esto y dónde está. Antes el h1 era solo
+         el eslogan: para quien llega de Google o de un enlace compartido no decía ni qué
+         se vende ni dónde. -->
+    <h1>
+      <span class="hero-eslogan">Electripower</span>
+      <span class="hero-que-es">Baterías, inversores y respaldo energético</span>
+    </h1>
+    <p class="hero-sub">Mira el catálogo, arma tu pedido y nos escribes por WhatsApp.</p>
+    <!-- Con la tienda cerrada este cartel sustituye a los botones: el cliente lo
+         entiende al entrar, sin bajar. El título y el texto son los mismos de la
+         franja (una sola fuente: CAT.tienda.cierre). -->
+    <div class="hero-cierre" id="hero-cierre" hidden>
+      <p class="hero-cierre-titulo" id="hero-cierre-titulo"></p>
+      <p class="hero-cierre-texto" id="hero-cierre-texto"></p>
+      <a href="#catalogo" class="btn btn-contraste hero-cta">Mirar el catálogo</a>
+    </div>
+    <div class="hero-acciones">
+      <a href="#catalogo" class="btn btn-contraste hero-cta">Ver el catálogo</a>
+      <a href="#encargos" class="btn btn-contraste-linea hero-cta" id="hero-encargos" hidden>Hacer un encargo</a>
+    </div>
+    <ul class="hero-datos">
+      <li id="hero-dato-productos">— productos disponibles</li>
+      <li>Precios en CUP y USD</li>
+      <li>Coordinamos por WhatsApp</li>
+    </ul>
+  </div>
+</section>
+
+<!-- .contenido envuelve categorías + catálogo Y el aside: antes el aside
+     vivía DENTRO de <main>, que arranca después de la portada y las
+     categorías, así que a 1280×800 quedaba fuera de la pantalla al entrar
+     (y=948). Ahora es hermano directo en la columna 2 desde la primera fila
+     (ver estilos.css, @media min-width:1024px) — visible sin hacer scroll.
+     Por debajo de 1024px es display:block y no cambia nada. -->
+<!-- Confianza, antes de que el cliente baje al catálogo. Los tres pasos van fijos aquí
+     porque describen cómo funciona la tienda; la garantía NO, porque habla de dinero: la
+     pinta app.js desde `tienda.garantia` para que Ruth la pueda cambiar sin tocar código. -->
+<section class="confianza wrap" aria-labelledby="confianza-titulo">
+  <h2 id="confianza-titulo" class="sr-only">Cómo comprar en Electripower</h2>
+  <ol class="pasos">
+    <li class="paso"><span class="paso-n" aria-hidden="true">1</span><span class="paso-txt"><b>Elige</b> lo que te guste y añádelo a tu pedido.</span></li>
+    <li class="paso"><span class="paso-n" aria-hidden="true">2</span><span class="paso-txt"><b>Pide por WhatsApp.</b> El mensaje sale escrito solo.</span></li>
+    <li class="paso"><span class="paso-n" aria-hidden="true">3</span><span class="paso-txt"><b>Recibes y revisas</b> antes de pagar.</span></li>
+  </ol>
+  <p class="garantia" id="garantia" hidden></p>
+</section>
+<div class="contenido">
+  <section class="categorias-3d-wrap" aria-label="Categorías">
+    <h2 class="categorias-3d-titulo wrap">Categorías</h2>
+    <div class="categorias-3d wrap" id="categorias-3d"></div>
+    <!-- Visible en todos los anchos (2026-08-16, corrección de un error de
+         diseño anterior: en móvil nadie descubre que la tira se arrastra).
+         En móvil plegado la tira ya muestra las 21 arrastrable y el botón
+         se suma; al desplegar, la tira pasa a rejilla (ver estilos.css,
+         @media max-width:759px). Texto/aria-expanded los pone
+         renderCategorias3D() en app.js. -->
+    <div class="categorias-ver-todas-wrap wrap">
+      <button id="btn-cats-ver-todas" class="btn btn-suave btn-secundario" type="button" aria-expanded="false" hidden>Ver todas</button>
+    </div>
+  </section>
+
+  <!-- Servicios de 3B (hoy solo el taxi), entre las categorias y la parrilla: al final de la pagina quedaba a 45.400px y nadie la veia. NO es una categoria: una categoria sin productos no se pinta
+       (app.js, renderCategorias3D), asi que esto es una seccion propia. Oculta por defecto;
+       renderServicios() (app.js) la destapa con tienda.taxiActivo.
+       Sin onclick: es un enlace de verdad (la CSP bloquea los manejadores en linea). -->
+  <section id="servicios" class="servicios wrap" hidden aria-labelledby="servicios-titulo">
+    <h2 id="servicios-titulo" class="servicios-titulo">Servicios</h2>
+    <div class="servicios-lista">
+      <article class="serv" id="serv-taxi" hidden>
+        <div class="serv-banner"><img src="taxi-portada.jpg" width="1000" height="450" loading="lazy" alt="Taxi 3B"></div>
+        <div class="serv-cuerpo">
+          <h3 class="serv-nombre">Taxi 3B</h3>
+          <p class="serv-texto">Viajas más, pagas menos.</p>
+          <a class="btn btn-primario serv-btn" href="/taxi">Ver el taxi <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <main class="wrap" id="catalogo">
+    <section id="mas-vendidos" class="mv" hidden aria-labelledby="mv-titulo">
+      <h2 id="mv-titulo" class="mv-titulo">Los más vendidos</h2>
+      <div class="mv-tira" id="mv-tira"></div>
+    </section>
+    <div id="cta-encargos-hueco" hidden></div>
+    <div class="grid-head">
+      <h2 class="grid-titulo">Catálogo</h2>
+      <!-- Orden y filtro. Lo puebla renderControles() en app.js y se esconde entero si el
+           catálogo no soporta ninguna opción (por ejemplo, mientras Stock+ no publique
+           `creado` ni `envioGratis`). -->
+      <div class="controles" id="controles" hidden>
+        <label class="sr-only" for="orden-sel">Ordenar por</label>
+        <select id="orden-sel" class="orden-sel"></select>
+        <button id="btn-envio-gratis" class="chip-filtro" type="button" aria-pressed="false" hidden>🛵 Mensajería gratis</button>
+      </div>
+      <button id="filtro-pill" class="filtro-pill" type="button" hidden>
+        <span id="filtro-pill-texto"></span>
+        <span class="filtro-pill-x" aria-hidden="true">✕</span>
+      </button>
+    </div>
+    <div id="skeleton" class="grid" aria-hidden="true">
+      <div class="card card-skel"></div><div class="card card-skel"></div>
+      <div class="card card-skel"></div><div class="card card-skel"></div>
+      <div class="card card-skel"></div><div class="card card-skel"></div>
+      <div class="card card-skel"></div><div class="card card-skel"></div>
+    </div>
+    <div id="grid" class="grid" hidden></div>
+    <div id="vacio" class="estado" hidden>
+      <p>No hay productos que coincidan con tu búsqueda.</p>
+      <div id="vacio-pregunta" class="vacio-pregunta" hidden></div>
+      <button id="btn-ver-todo" class="btn btn-suave btn-secundario" type="button">Ver todo el catálogo</button>
+    </div>
+    <div id="error-carga" class="estado" hidden>
+      <p>No pudimos cargar el catálogo. Revisa tu conexión e intenta de nuevo.</p>
+      <button id="btn-reintentar" class="btn btn-suave btn-secundario" type="button">Reintentar</button>
+    </div>
+  </main>
+
+  <!-- Carrito lateral: solo visible en escritorio (≥1024px, ver estilos.css).
+       No lleva formulario propio: su botón abre el panel modal de siempre. -->
+  <aside id="carrito-lateral" class="carrito-lateral" hidden aria-label="Tu pedido">
+    <h2 class="lateral-titulo">Tu pedido</h2>
+    <div id="lateral-items"></div>
+    <div class="vaciar-wrap"><button id="btn-vaciar-lateral" class="btn btn-texto btn-vaciar" type="button" hidden>🗑 Vaciar pedido</button></div>
+    <p id="lateral-envio" class="lateral-envio" hidden></p>
+    <div id="lateral-total" class="lateral-total" hidden></div>
+    <p id="lateral-politica" class="politica-texto" hidden></p>
+    <p id="lateral-terminos" class="terminos-nota" hidden>Al pedir aceptas <a href="terminos.html" target="_blank" rel="noopener">nuestros términos</a>.</p>
+    <button id="btn-lateral-pedir" class="btn btn-wa" type="button" hidden>Pedir por WhatsApp</button>
+    <!-- Pago por adelantado con QvaPay (2026-08-16, opcional): tienda.pagoUrl.
+         Secundario a propósito, nunca más prominente que "Pedir por
+         WhatsApp" (ver .pago-link en estilos.css). Contenido lo pinta
+         pagoWrapHtml() en app.js; vacío/ausente ⇒ hidden y sin contenido. -->
+    <div id="lateral-pago-wrap" class="pago-wrap" hidden></div>
+  </aside>
+</div>
+
+<footer class="footer">
+  <div class="wrap footer-wrap">
+    <div class="footer-marca">
+      <span id="footer-nombre" class="footer-nombre-texto"></span>
+    </div>
+    <div id="vendedor" class="vendedor"></div>
+
+    <div class="footer-grid" id="footer-grid" hidden>
+      <div class="footer-col" id="footer-quienes" hidden>
+        <h3>Quiénes somos</h3>
+        <p id="footer-quienes-texto" class="footer-texto"></p>
+      </div>
+      <div class="footer-col" id="footer-zonas" hidden>
+        <h3>Zonas de reparto</h3>
+        <p id="footer-zonas-texto" class="footer-texto"></p>
+      </div>
+      <div class="footer-col" id="footer-contacto" hidden>
+        <h3>Contáctanos</h3>
+        <div id="footer-contacto-links" class="footer-contacto-links"></div>
+      </div>
+    </div>
+
+    <p id="actualizado" class="actualizado"></p>
+    <p class="aviso-tasa">Los precios pueden variar según la tasa del día.</p>
+    <p class="footer-terminos"><a href="terminos.html">Términos y condiciones</a></p>
+  </div>
+</footer>
+
+<div id="barra-movil" class="barra-movil" hidden>
+  <span id="barra-movil-info"></span>
+  <button id="btn-ver-pedido" class="btn" type="button">Ver pedido</button>
+</div>
+
+<!-- Detalle de producto -->
+<div id="modal-detalle" class="modal" hidden role="dialog" aria-modal="true" aria-labelledby="modal-nombre">
+  <div class="modal-fondo" id="modal-fondo" tabindex="-1"></div>
+  <div class="modal-caja">
+    <button class="modal-cerrar" id="modal-cerrar" aria-label="Cerrar" type="button">✕</button>
+    <div class="modal-foto">
+      <img id="modal-img" alt="" draggable="false">
+    </div>
+    <!-- Tira de miniaturas: oculta cuando el producto tiene una sola foto. La pinta
+         pintarGaleria() en app.js a partir de p.fotos (ver galeria.js). -->
+    <div class="modal-miniaturas" id="modal-miniaturas" hidden></div>
+    <div class="modal-body">
+      <div class="modal-cat" id="modal-cat"></div>
+      <h2 id="modal-nombre"></h2>
+      <div id="modal-precio" class="modal-precio"></div>
+      <p id="modal-desc" class="modal-desc"></p>
+      <div class="modal-tallas" id="modal-tallas" hidden></div>
+      <div id="banda-gestor-ficha" class="banda-gestor" hidden></div>
+      <div class="modal-accion" id="modal-accion"></div>
+        <p class="garantia-ficha" id="garantia-ficha" hidden></p>
+        <!-- Relacionados: va DEBAJO de la accion de compra y ENCIMA de compartir. Lo
+             pinta pintarRelacionados() en app.js; con menos de dos candidatos queda
+             oculto (ver relacionados.js). -->
+        <section class="rel" id="modal-rel" hidden aria-labelledby="rel-titulo">
+          <h3 class="rel-titulo" id="rel-titulo">Más de esta categoría</h3>
+          <div class="rel-tira" id="rel-tira"></div>
+        </section>
+      <div class="compartir" id="modal-compartir">
+        <span class="compartir-tit">Comparte los productos para que ganes comisiones</span>
+        <div class="compartir-botones">
+          <button type="button" class="compartir-btn compartir-btn-foto" id="compartir-foto">📸 Compartir foto</button>
+          <button type="button" class="compartir-btn" id="compartir-wa"><svg class="compartir-logo" viewBox="0 0 24 24" fill="#25D366" aria-hidden="true" focusable="false"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>WhatsApp</button>
+          <button type="button" class="compartir-btn" id="compartir-fb"><svg class="compartir-logo" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="12" fill="#1877F2"/><path fill="#fff" d="M16.671 15.543l.532-3.47h-3.33V9.821c0-.949.465-1.875 1.956-1.875h1.513V4.992s-1.374-.235-2.686-.235c-2.741 0-4.533 1.662-4.533 4.669v2.647H7.078v3.47h3.045v8.385a12.118 12.118 0 003.75 0v-8.385h2.798z"/></svg>Facebook</button>
+          <button type="button" class="compartir-btn" id="compartir-link">🔗 Copiar enlace</button>
+        </div>
+        <p class="compartir-aviso" id="compartir-aviso" role="status" aria-live="polite"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="modal-comi" class="modal" hidden role="dialog" aria-modal="true" aria-labelledby="comi-titulo">
+  <div class="modal-fondo" id="comi-fondo" tabindex="-1"></div>
+  <div class="modal-caja">
+    <button class="modal-cerrar" id="comi-cerrar" aria-label="Cerrar" type="button">✕</button>
+    <div class="modal-body">
+      <h2 id="comi-titulo">Gana dinero con 3B</h2>
+      <p class="comi-intro">Sin invertir nada y sin guardar mercancía en tu casa.</p>
+      <ol class="comi-pasos">
+        <li><b>Te damos tu enlace.</b> Nos escribes, nos dices tu nombre y tu correo, y te mandamos tu código.</li>
+        <li><b>Lo compartes.</b> Con tu familia, tus amigos, tu grupo, tu Facebook. Donde quieras.</li>
+        <li><b>Cobras.</b> Cada venta que entre por tu enlace queda a tu nombre.</li>
+      </ol>
+      <a class="btn btn-wa comi-wa" id="comi-wa" target="_blank" rel="noopener">Escríbenos por WhatsApp</a>
+    </div>
+  </div>
+</div>
+
+<!-- Encargos Shein/Temu (Fase C). El contenido lo pinta encargos.js; se abre con #encargos. -->
+<div id="modal-encargos" class="modal" hidden role="dialog" aria-modal="true" aria-labelledby="enc-titulo">
+  <div class="modal-fondo" id="enc-fondo" tabindex="-1"></div>
+  <div class="modal-caja enc-caja">
+    <button class="modal-cerrar" id="enc-cerrar" aria-label="Cerrar" type="button">✕</button>
+    <div class="modal-body" id="enc-cuerpo"></div>
+  </div>
+</div>
+
+<!-- Carrito -->
+<div id="panel" class="panel" hidden role="dialog" aria-modal="true" aria-labelledby="panel-titulo">
+  <div class="panel-fondo" id="panel-fondo" tabindex="-1"></div>
+  <div class="panel-caja">
+    <div class="panel-head">
+      <strong id="panel-titulo">Tu pedido</strong>
+      <button id="btn-cerrar-carrito" class="cerrar" aria-label="Cerrar" type="button">✕</button>
+    </div>
+    <div id="carrito-items"></div>
+    <div id="carrito-vacio" class="estado" hidden>
+      <p>Tu pedido está vacío.</p>
+      <button id="btn-cerrar-carrito-2" class="btn btn-suave btn-secundario" type="button">Seguir viendo el catálogo</button>
+    </div>
+    <div class="vaciar-wrap"><button id="btn-vaciar-panel" class="btn btn-texto btn-vaciar" type="button" hidden>🗑 Vaciar pedido</button></div>
+    <div id="carrito-total" class="total"></div>
+    <form id="form-pedido" class="campos" novalidate>
+      <label class="campo">
+        <span>Nombre</span>
+        <input type="text" id="c-nombre" autocomplete="name">
+        <span class="campo-error" id="err-nombre" hidden>Falta tu nombre.</span>
+      </label>
+      <label class="campo">
+        <span>Teléfono</span>
+        <input type="tel" id="c-tel" autocomplete="tel">
+        <span class="campo-error" id="err-tel" hidden>Falta tu teléfono.</span>
+      </label>
+      <label class="campo">
+        <span>Dirección de entrega</span>
+        <input type="text" id="c-dir" autocomplete="street-address">
+        <span class="campo-error" id="err-dir" hidden>Falta la dirección.</span>
+      </label>
+      <label class="campo">
+        <span>¿En qué horario puedes recibirlo?</span>
+        <select id="c-horario">
+          <option value="">Elige…</option>
+          <option value="en la mañana">En la mañana</option>
+          <option value="en la tarde">En la tarde</option>
+          <option value="todo el día en casa">Todo el día en casa</option>
+          <option value="a cualquier hora">A cualquier hora</option>
+          <option value="__libre">Otro horario…</option>
+        </select>
+        <input type="text" id="c-horario-libre" placeholder="Escribe tu horario" hidden>
+        <span class="campo-error" id="err-horario" hidden>Dinos cuándo puedes recibirlo.</span>
+      </label>
+      <label class="campo">
+        <span>Nota (opcional)</span>
+        <textarea id="c-nota" rows="2"></textarea>
+      </label>
+      <p id="panel-politica" class="politica-texto" hidden></p>
+      <p id="panel-terminos" class="terminos-nota" hidden>Al pedir aceptas <a href="terminos.html" target="_blank" rel="noopener">nuestros términos</a>.</p>
+      <button id="btn-enviar" class="btn btn-wa btn-enviar" type="submit">Pedir por WhatsApp</button>
+      <!-- Pago por adelantado con QvaPay (2026-08-16, opcional): tienda.pagoUrl.
+           Secundario a propósito, nunca más prominente que "Pedir por
+           WhatsApp" (ver .pago-link en estilos.css). Contenido lo pinta
+           pagoWrapHtml() en app.js; vacío/ausente ⇒ hidden y sin contenido. -->
+      <div id="panel-pago-wrap" class="pago-wrap" hidden></div>
+      <p class="aviso">La mensajería y la disponibilidad se confirman por WhatsApp.</p>
+    </form>
+  </div>
+</div>
+
+<script src="mundos.js"></script>
+<script src="orden.js"></script>
+<script src="preciosGestor.js"></script>
+<script src="relacionados.js"></script>
+<script src="galeria.js"></script>
+<script src="historial.js"></script>
+<script src="faltante.js"></script>
+<script src="tarjeta.js"></script>
+<script src="negocio.js"></script>
+<script src="app.js"></script>
+<script src="encargos.js"></script>
+</body>
+</html>

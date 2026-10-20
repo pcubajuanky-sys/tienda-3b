@@ -2,10 +2,11 @@
   "rewrites": [
     { "source": "/p/:codigo", "destination": "/api/producto?c=:codigo" },
     { "source": "/taxi", "destination": "/taxi.html" },
+    { "source": "/electripower", "destination": "/electripower.html" },
     { "source": "/((?!.*\\.).*)", "destination": "/index.html" }
   ],
   "functions": {
-    "api/producto.js": { "includeFiles": "{index.html,catalogo.json}" }
+    "api/producto.js": { "includeFiles": "{index.html,electripower.html,catalogo.json}" }
   },
   "headers": [
     {

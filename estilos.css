@@ -1074,6 +1074,12 @@ button.footer-link{background:none;border:none;font-family:inherit;cursor:pointe
 }
 /* Cada negocio late en SU color: el taxi en verde, la tienda en su morado. */
 #mundo-taxi::after{border-color:#12A24E}
+/* Pastilla del negocio asociado mientras no haya logo propio: el emoji centrado,
+   del mismo tamaño que las otras dos. Se borra cuando llegue logo-electripower.png. */
+.mundo-emoji{display:flex;align-items:center;justify-content:center;width:100%;height:100%;font-size:26px;line-height:1}
+.mundo-ep{background:var(--surface,#fff)}
+/* El aro del negocio activo vive en .mundo-img; esta pastilla no tiene <img>. */
+.mundo-on.mundo-ep{box-shadow:0 0 0 2px var(--brand)}
 @media (min-width:600px){ .mundo{width:52px;height:52px} }
 @media (prefers-reduced-motion:reduce){
   .mundo{transition:none}
