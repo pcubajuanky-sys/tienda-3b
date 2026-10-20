@@ -1731,6 +1731,12 @@ function enviarPorWhatsApp(ev) {
   // (nunca por nombre). Si el catálogo publicado todavía no trae `codigo` —o si algún
   // item no lo tiene— no se escribe: el servidor cae al emparejado por nombre y avisa.
   const refs = items.filter(({ p }) => p.codigo).map(({ p, qty, clave }) => `${p.codigo}${clave ? '/' + clave.split(SEP_VAR).join('+') : ''} x${qty}`);
+  // 🔴 CONTRATO con lib/pedidoWeb.js de Stock+ (igual que `Horario:`): si se cambia
+  // esta etiqueta en un lado y no en el otro, el pedido entra sin negocio y nadie se
+  // entera. La casa NO la escribe, para que su mensaje siga siendo el de siempre.
+  if (NEGOCIO !== (window.Negocio ? window.Negocio.CASA : '3b')) {
+    lineas.push(`Negocio: ${(CAT.tienda && CAT.tienda.nombre) || NEGOCIO}`);
+  }
   if (refs.length && refs.length === items.length) lineas.push('', `Ref: ${refs.join(', ')}`);
 
   // Quien pone el precio, atiende: si el cliente entro por la pagina de un gestor con

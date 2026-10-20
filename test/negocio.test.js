@@ -113,3 +113,10 @@ test('aplicar no destroza el catalogo de entrada', () => {
   assert.equal(cat.items.length, 2, 'el original sigue con sus dos items');
   assert.equal(cat.tienda.nombre, '3B Store');
 });
+
+test('🔴 el contrato de la etiqueta Negocio: sigue escrito en app.js', () => {
+  const app = fs.readFileSync(path.join(__dirname, '..', 'app.js'), 'utf8');
+  assert.ok(app.includes('`Negocio: ${'), 'app.js dejo de escribir la linea Negocio:');
+  assert.ok(app.includes("NEGOCIO !== (window.Negocio ? window.Negocio.CASA : '3b')"),
+    'la casa volvio a escribir la linea, y su mensaje debe seguir igual que siempre');
+});
