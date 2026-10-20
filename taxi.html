@@ -58,6 +58,14 @@
         <a class="mundo mundo-on" href="/taxi" aria-current="page" title="Taxi 3B">
           <img class="mundo-img" src="/logo-taxi-3b.png" width="256" height="256" alt="Taxi 3B — viajes">
         </a>
+        <!-- Pastilla del socio: SIEMPRE oculta aqui. taxi.js solo lee taxi.json, que no dice si
+             Electripower esta activo (eso vive en catalogo.json), y no se baja el catalogo
+             entero para decidir un icono. PENDIENTE: que Stock+ publique el interruptor en
+             taxi.json y taxi.js la destape. -->
+        <a class="mundo mundo-ep" id="mundo-electripower" href="/electripower" hidden title="Electripower">
+          <span class="mundo-emoji" aria-hidden="true">⚡</span>
+          <span class="sr-only">Electripower — baterías e inversores</span>
+        </a>
       </nav>
     </div>
   </header>
