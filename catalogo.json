@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-20T15:42:03.236Z",
+  "generado": "2026-10-20T19:54:20.318Z",
   "tasa": 815,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -1082,27 +1082,6 @@
       "precioNormalCUP": 6520
     },
     {
-      "id": "p_1790965760166",
-      "codigo": "PJ4H",
-      "name": "Audífono Bluetooth tipo Cascos 3",
-      "cat": "Bocinas Celulares y Accesorios",
-      "subcat": "",
-      "notes": "Audífonos inalámbricos tipo casco, con almohadillas acolchadas para uso prolongado",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790965642/productos/jss9vmgdeoy0g5alq399.jpg",
-      "precioUSD": 6,
-      "precioCUP": 4890,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "max": 1,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1790965760166
-    },
-    {
       "id": "p_1781552195237",
       "codigo": "MY9U",
       "name": "Audífonos de cable",
@@ -1386,26 +1365,6 @@
       },
       "envioGratis": true,
       "creado": 1785182779881
-    },
-    {
-      "id": "p_1781215403591",
-      "codigo": "AEAV",
-      "name": "Cable tipo C 3metros",
-      "cat": "Bocinas Celulares y Accesorios",
-      "subcat": "",
-      "notes": "Cable de Carga Rápida USB C Cable de Carga USB A a Tipo C Trenzado de Nylon. Calidad Premium. Largo alcance (3metros)",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791165695/productos/ccwcaxqppjt5e9gs083u.jpg",
-      "precioUSD": 2.21,
-      "precioCUP": 1800,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false,
-      "max": 3,
-      "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      },
-      "creado": 1781215403591
     },
     {
       "id": "p_1787540422288",
@@ -2656,7 +2615,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 5,
+      "max": 4,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
