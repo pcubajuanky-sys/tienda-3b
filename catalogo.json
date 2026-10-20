@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-20T21:00:15.692Z",
+  "generado": "2026-10-20T21:32:23.826Z",
   "tasa": 815,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -5025,37 +5025,6 @@
       "creado": 1791836377621
     },
     {
-      "id": "p_1789241914026",
-      "codigo": "KHXC",
-      "name": "Pulover Unisex Navideño \"JESÚS\"",
-      "cat": "Ropa",
-      "subcat": "",
-      "notes": "Pulover algodonada elastizado . Importado de USA",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789241807/productos/nvc54lxofwfrczxstfar.jpg",
-      "precioUSD": 4,
-      "precioCUP": 3260,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "variantes": {
-        "ejes": [
-          "Talla"
-        ],
-        "opciones": [
-          "XL"
-        ]
-      },
-      "maxOpciones": {
-        "XL": 1
-      },
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1789241914026
-    },
-    {
       "id": "p_1789242386934",
       "codigo": "D5K2",
       "name": "Pulover Unisex Navideño \"Muñecos de Nieve\"",
@@ -5154,7 +5123,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 3,
+      "max": 2,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
