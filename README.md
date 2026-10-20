@@ -124,6 +124,10 @@ número de `CACHE` en `sw.js`** (`tienda-3b-v1` → `v2`…), o los clientes seg
 vieja. Y si se **añade** un `<script src>` o un archivo nuevo al `index.html`, hay que añadirlo también a
 `ARMAZON`: lo que falte en esa lista no está disponible sin conexión.
 
+🔴 Hay DOS cáscaras (`index.html` y `electripower.html`) que cargan el MISMO `app.js`. Si
+añades un elemento o un `<script src>` a una, añádelo a la otra: `app.js` corre en las
+dos y buscaría un elemento que no existe.
+
 **Botón de pánico.** Si un service worker sale mal en producción, se publica un `sw.js` cuyo contenido
 entero sea esto; desinstala el service worker y vacía la caché en todos los teléfonos:
 
