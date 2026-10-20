@@ -1418,9 +1418,6 @@ function medirHeader() {
   document.documentElement.style.setProperty('--header-h', h + 'px');
 }
 
-// Pinta el panel modal (móvil y respaldo en escritorio) Y el aside lateral
-// (solo visible ≥1024px) con las MISMAS líneas (lineaCarritoHtml) y el mismo
-// total CUP — una sola fuente de verdad, nada de lógica duplicada.
 // ── La libreta de direcciones del cliente ──
 // 🔴 Vive SOLO en su telefono (localStorage). La tienda no tiene servidor y estos datos
 // no salen de ahi mas que en el mensaje de WhatsApp que el propio cliente envia.
@@ -1509,6 +1506,9 @@ function cerrarAvisoEnviado(vaciar) {
   }
 }
 
+// Pinta el panel modal (móvil y respaldo en escritorio) Y el aside lateral
+// (solo visible ≥1024px) con las MISMAS líneas (lineaCarritoHtml) y el mismo
+// total CUP — una sola fuente de verdad, nada de lógica duplicada.
 function renderCarrito() {
   const items = itemsCarrito();
   const hayItems = items.length > 0;
@@ -1730,9 +1730,9 @@ function enviarPorWhatsApp(ev) {
   // preguntarle al volver si llego a enviarlo.
   const chk = document.getElementById('c-guardar');
   if (chk && chk.checked) {
-    const etiqueta = document.getElementById('c-etiqueta').value.trim();
+    const etiquetaDir = document.getElementById('c-etiqueta').value.trim();
     escribirDirecciones(window.Direcciones.guardar(leerDirecciones(), {
-      etiqueta: etiqueta, nombre: nombre, tel: tel, dir: dir, horario: horario,
+      etiqueta: etiquetaDir, nombre: nombre, tel: tel, dir: dir, horario: horario,
     }));
     pintarDirecciones();
   }
