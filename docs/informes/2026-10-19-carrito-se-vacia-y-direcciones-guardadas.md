@@ -136,10 +136,30 @@ nombre) y `2026-10-19-aviso-pedido-enviado-375px.jpg` (el aviso sobre el carrito
 que es justo lo que advierte el `CLAUDE.md`; se entiende el montaje, pero el texto no se lee.
 La prueba de que el aviso queda por delante es la medición de la fila 14, no esa imagen.
 
-## ⚠ NO VERIFICADO
+## Desplegado y verificado en producción
 
-- **Nada de esto está en producción.** No se hizo `git push`; vive en la rama
-  `carrito-y-direcciones`. `www.3bqba.com` sirve el código anterior.
+Ruth pidió fusionar y publicar. `main` estaba al día con el remoto (Stock+ no había
+publicado nada desde el push anterior), así que la fusión fue directa y `node --test` en
+`main` dio **121/121, exit 0** antes de publicar. Push: `1060ee7..079ccbf`.
+
+Comprobado en `https://www.3bqba.com` (segunda carga, por el desfase del service worker):
+
+| Comprobación | Resultado |
+|---|---|
+| Caché del service worker | `tienda-3b-v14` |
+| `cerrarAvisoEnviado`, `window.Direcciones`, `window.TrasPedido` | los tres presentes → corre el código nuevo |
+| `#aviso-enviado` | hijo directo de `<body>` ✅ |
+| Enviar un pedido (con `window.open` interceptado) | 1 llamada interceptada, **nada salió hacia WhatsApp**, carrito intacto |
+| Volver a la tienda | Aviso visible, `ESTA_ENCIMA: true`, botón «Sí» clicable, con el carrito abierto |
+| «No, conservarlo» | Aviso fuera, carrito intacto |
+
+🔴 **La prueba en producción se hizo sin enviarle un pedido falso a Ruth**: se sustituyó
+`window.open` por una función que solo cuenta la llamada, así que la URL de WhatsApp nunca
+se abrió. Después se limpiaron `carrito`, `pedidoEnviado` y `direcciones` del navegador de
+prueba. Si alguien repite esto, **que haga lo mismo**: sin interceptar, se le abre un
+WhatsApp real al número de la tienda.
+
+## ⚠ NO VERIFICADO
 - **Ningún teléfono real.** Todo en Chrome de escritorio con el viewport emulado a 375×812.
   En particular, **el viaje de verdad a WhatsApp y la vuelta** se simularon: `window.open` se
   interceptó y el regreso se disparó con `document.dispatchEvent(new Event('visibilitychange'))`,
