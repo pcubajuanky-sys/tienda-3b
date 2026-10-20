@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-20T20:59:26.324Z",
+  "generado": "2026-10-20T21:00:15.692Z",
   "tasa": 815,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -98,6 +98,10 @@
     {
       "code": "XPT9B",
       "nombre": "Camilita"
+    },
+    {
+      "code": "AQJXE",
+      "nombre": "Heidy García Castellanos"
     }
   ],
   "categorias": [
