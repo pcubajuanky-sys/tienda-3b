@@ -5,6 +5,10 @@ let CAT = null;          // el catalogo.json cargado
 // (= la casa); electripower.html lo lleva.
 const NEGOCIO = window.Negocio ? window.Negocio.deLaPagina(document) : '3b';
 const CLAVE_CARRITO = window.Negocio ? window.Negocio.claveCarrito(NEGOCIO) : 'carrito';
+// ¿Esta pagina es la de la casa? Lo usan las reglas que SOLO valen para 3B.
+function esCasaWeb() {
+  return NEGOCIO === (window.Negocio ? window.Negocio.CASA : '3b');
+}
 // La pagina de este negocio, para el historial de capas y para prepararHistorial.
 const RAIZ = NEGOCIO === (window.Negocio ? window.Negocio.CASA : '3b') ? '/' : '/' + NEGOCIO;
 // Marca de "ya envie mi pedido" (traspedido.js). Por negocio, por lo mismo que el
@@ -552,7 +556,12 @@ function pintarPregunta(termino) {
   const caja = document.getElementById('vacio-pregunta');
   if (!caja) return;
   const t = window.Faltante.limpiar(termino);
-  const destino = (gestorRecargo && gestorRecargo.telPublico) || (CAT && CAT.whatsapp);
+  // 🔴 "Quien pone precio, atiende" vale para la mercancia de la CASA. En la tienda
+  // de un negocio asociado no cae recargo ninguno (lo apaga lib/catalogoWeb.js) y
+  // precios-gestores.json no lleva sus productos: el gestor no pone ese precio, asi
+  // que el pedido va al numero de la casa, donde el bot lo anota y lo reenvia al socio.
+  // (El ?ref= y la linea `Vendedor:` NO se tocan: el gestor sigue cobrando su comision.)
+  const destino = (esCasaWeb() && gestorRecargo && gestorRecargo.telPublico) || (CAT && CAT.whatsapp);
   const url = window.Faltante.enlace(destino, t);
   if (!url) { caja.hidden = true; caja.innerHTML = ''; return; }   // vacío por el chip, no por una búsqueda
   caja.hidden = false;
@@ -1229,7 +1238,9 @@ function pintarPreguntarSocio() {
 function pintarBandaGestor() {
   const el = document.getElementById('banda-gestor');
   if (!el) return;
-  const corto = gestorRecargo ? window.PreciosGestor.nombreCorto(gestorRecargo.nombre) : '';
+  // 🔴 En la tienda del socio la banda no se enseña: insinua que los precios son de esa
+  // persona, y alli no lo son (no cae recargo y la tabla de gestores no lleva sus productos).
+  const corto = (esCasaWeb() && gestorRecargo) ? window.PreciosGestor.nombreCorto(gestorRecargo.nombre) : '';
   if (!corto) { el.hidden = true; el.innerHTML = ''; }
   else {
     el.hidden = false;
@@ -1751,7 +1762,12 @@ function enviarPorWhatsApp(ev) {
   // recargo, el numero de la casa, como siempre.
   // 🔴 NADA de `await` antes de este window.open: el bloqueador de emergentes se come el
   // enlace de WhatsApp (iOS sobre todo).
-  const destino = (gestorRecargo && gestorRecargo.telPublico) || CAT.whatsapp;
+  // 🔴 "Quien pone precio, atiende" vale para la mercancia de la CASA. En la tienda
+  // de un negocio asociado no cae recargo ninguno (lo apaga lib/catalogoWeb.js) y
+  // precios-gestores.json no lleva sus productos: el gestor no pone ese precio, asi
+  // que el pedido va al numero de la casa, donde el bot lo anota y lo reenvia al socio.
+  // (El ?ref= y la linea `Vendedor:` NO se tocan: el gestor sigue cobrando su comision.)
+  const destino = (esCasaWeb() && gestorRecargo && gestorRecargo.telPublico) || CAT.whatsapp;
   window.open(`https://api.whatsapp.com/send?phone=${destino}&text=${encodeURIComponent(lineas.join('\n'))}`, '_blank');
 
   // Ya se fue a WhatsApp. Ahora si: guardar sus datos si lo pidio, y dejar la marca para

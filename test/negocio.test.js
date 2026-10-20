@@ -140,3 +140,22 @@ test('🔴 la pagina del socio no promete mensajeria incluida a secas: es en su 
   assert.ok(html.includes('Mensajería incluida en su zona.'));
   assert.ok(!html.includes('�'), 'la codificacion se estropeo');
 });
+
+test('🔴 en la tienda del socio el pedido NO se desvia al gestor con recargo', () => {
+  const app = fs.readFileSync(path.join(__dirname, '..', 'app.js'), 'utf8');
+  // El desvio al gestor tiene que estar condicionado al negocio de la casa en los
+  // DOS sitios donde se decide el destino.
+  const desvios = app.split('gestorRecargo && gestorRecargo.telPublico').length - 1;
+  assert.equal(desvios, 2, 'hay dos sitios que deciden el destino del pedido');
+  const conGuarda = app.split('esCasaWeb() && gestorRecargo && gestorRecargo.telPublico').length - 1;
+  assert.equal(conGuarda, 2, 'los dos tienen que llevar la guarda del negocio');
+  assert.ok(app.includes('function esCasaWeb()'), 'falta el helper');
+});
+
+test('🔴 la banda «Estas en la pagina de…» no se enseña en la tienda del socio', () => {
+  // Insinua que los precios que ves son de esa persona, y en la tienda del socio no lo son.
+  const app = fs.readFileSync(path.join(__dirname, '..', 'app.js'), 'utf8');
+  const i = app.indexOf('function pintarBandaGestor');
+  const cuerpo = app.slice(i, app.indexOf(String.fromCharCode(10) + '}', i));
+  assert.ok(cuerpo.includes('esCasaWeb() && gestorRecargo'), 'pintarBandaGestor no mira el negocio');
+});
