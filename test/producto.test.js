@@ -168,7 +168,7 @@ function conCatalogoSintetico(items, fn) {
     for (const f of ['index.html', 'electripower.html']) {
       fs.copyFileSync(path.join(CWD_ORIGINAL, f), path.join(tmp, f));
     }
-    fs.writeFileSync(path.join(tmp, 'catalogo.json'), JSON.stringify({ items: items }));
+    fs.writeFileSync(path.join(tmp, 'catalogo.json'), JSON.stringify({ items: items, tienda: { nombre: '3B Store', negocios: { electripower: { nombre: 'Electripower' } } } }));
     process.chdir(tmp);
     return fn(handlerLimpio());
   } finally {
@@ -188,6 +188,7 @@ test('un codigo del socio se sirve sobre electripower.html', () => {
     assert.strictEqual(r.statusCode, 200);
     assert.ok(r.cuerpo.includes('<body data-negocio="electripower">'), 'no uso la pagina del socio');
     assert.ok(r.cuerpo.includes('Inversor 3000W'), 'no puso las etiquetas de ESE producto');
+    assert.ok(r.cuerpo.includes('<title>Inversor 3000W — Electripower</title>'), 'la tarjeta del socio no lleva su marca');
     assert.strictEqual(r.cuerpo.split('<title>').length - 1, 1);
   });
 });
@@ -197,6 +198,7 @@ test('un codigo de la casa sigue sirviendose sobre index.html', () => {
     const r = pedirCon(h, { c: 'CASA1' });
     assert.ok(!r.cuerpo.includes('data-negocio'), 'la casa no debe llevar data-negocio');
     assert.ok(r.cuerpo.includes('Sabanas'));
+    assert.ok(r.cuerpo.includes('<title>Sabanas — 3B Store</title>'), 'la de la casa debe seguir diciendo 3B Store');
   });
 });
 

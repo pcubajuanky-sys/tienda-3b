@@ -2,7 +2,7 @@
 // Se corren desde la raiz del repo con:  node --test test/
 const test = require('node:test');
 const assert = require('node:assert');
-const { ogDeProducto, bloqueOg, precioTexto, descripcionOg, imagenOg, escapar, jsonLdProducto } = require('../api/_og');
+const { ogDeProducto, bloqueOg, precioTexto, descripcionOg, imagenOg, escapar, jsonLdProducto, marcaDe } = require('../api/_og');
 
 const BASE = {
   codigo: 'U8DN',
@@ -141,4 +141,44 @@ test('bloqueOg sin producto no lleva JSON-LD (la firma vieja sigue valiendo)', (
   const p = { codigo: '5HP4', name: 'Abrigo', precioCUP: 3900, precioUSD: 5 };
   const html = bloqueOg(ogDeProducto(p, 'https://www.3bqba.com/p/5HP4'));
   assert.strictEqual(html.includes('application/ld+json'), false);
+});
+
+// ── La marca de la tarjeta es la del NEGOCIO del producto ──
+const CAT_NEG = { tienda: { nombre: '3B Store', negocios: { electripower: { nombre: 'Electripower' } } } };
+const SOCIO = Object.assign({}, BASE, { codigo: 'EP001', name: 'Inversor 3000W', negocio: 'electripower' });
+
+test('un producto del socio lleva la marca Electripower en titulo, site_name y brand', () => {
+  const marca = marcaDe(CAT_NEG, SOCIO);
+  assert.strictEqual(marca, 'Electripower');
+  const url = 'https://www.3bqba.com/p/EP001';
+  const html = bloqueOg(ogDeProducto(SOCIO, url, marca), SOCIO, url);
+  assert.ok(html.includes('<title>Inversor 3000W — Electripower</title>'), 'titulo');
+  assert.ok(html.includes('og:site_name" content="Electripower"'), 'site_name');
+  assert.ok(html.includes('"brand":{"@type":"Brand","name":"Electripower"}'), 'brand');
+  assert.ok(!html.includes('3B Store'), 'se cuela 3B Store en la tarjeta del socio');
+});
+
+test('un producto de la casa sigue diciendo 3B Store', () => {
+  const marca = marcaDe(CAT_NEG, BASE);
+  assert.strictEqual(marca, '3B Store');
+  const html = bloqueOg(ogDeProducto(BASE, URL_OK, marca), BASE, URL_OK);
+  assert.ok(html.includes('<title>Ventilador recargable — 3B Store</title>'));
+  assert.ok(html.includes('og:site_name" content="3B Store"'));
+  assert.ok(html.includes('"brand":{"@type":"Brand","name":"3B Store"}'));
+});
+
+test('sin marca explicita (firma vieja) todo sigue diciendo 3B Store', () => {
+  const html = bloqueOg(ogDeProducto(BASE, URL_OK), BASE, URL_OK);
+  assert.ok(html.includes('<title>Ventilador recargable — 3B Store</title>'));
+  assert.ok(html.includes('"name":"3B Store"'));
+});
+
+test('un producto del socio sin su bloque en el catalogo cae a 3B Store, sin romperse', () => {
+  assert.strictEqual(marcaDe({ tienda: { nombre: '3B Store' } }, SOCIO), '3B Store');
+  assert.strictEqual(marcaDe(null, SOCIO), '3B Store');
+});
+
+test('la marca va escapada: un nombre de negocio con comillas no rompe el atributo', () => {
+  const html = bloqueOg(ogDeProducto(BASE, URL_OK, 'A"B<'), BASE, URL_OK);
+  assert.ok(html.includes('og:site_name" content="A&quot;B&lt;"'));
 });

@@ -9,7 +9,7 @@
 // Solo lectura: no escribe nada, no llama a nadie, no guarda estado entre visitas.
 const fs = require('fs');
 const path = require('path');
-const { ogDeProducto, bloqueOg } = require('./_og');
+const { ogDeProducto, bloqueOg, marcaDe } = require('./_og');
 
 const INICIO = '<!-- og:inicio -->';
 const FIN = '<!-- og:fin -->';
@@ -104,7 +104,7 @@ module.exports = function handler(req, res) {
     if (p && i !== -1 && j > i) {
       const url = RAIZ + '/p/' + String(p.codigo).toUpperCase() + (ref ? '?ref=' + ref : '');
       salida = base.slice(0, i + INICIO.length) + '\n' +
-               bloqueOg(ogDeProducto(p, url), p, url) + '\n' +
+               bloqueOg(ogDeProducto(p, url, marcaDe(catalogo(), p)), p, url) + '\n' +
                base.slice(j);
     }
   } catch (e) {

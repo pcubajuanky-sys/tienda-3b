@@ -60,9 +60,24 @@ function imagenOg(p) {
   return url.slice(0, corte) + IMG_TRANSFORM + '/' + url.slice(corte);
 }
 
-function ogDeProducto(p, url) {
+// 🔴 La marca de la tarjeta compartida es la del NEGOCIO del producto. Si no, un
+// inversor compartido por WhatsApp diria "3B Store" y abriria la tienda del socio:
+// dos mensajes distintos sobre lo mismo. Los productos de la casa SIEMPRE dicen
+// "3B Store" (constante, no tienda.nombre: un nombre editado no debe cambiar sus tarjetas).
+const MARCA_CASA = '3B Store';
+function marcaDe(cat, item) {
+  const neg = String((item && item.negocio) || '').trim().toLowerCase();
+  if (!neg || neg === '3b') return MARCA_CASA;
+  const bloque = cat && cat.tienda && cat.tienda.negocios && cat.tienda.negocios[neg];
+  return (bloque && bloque.nombre) || MARCA_CASA;
+}
+
+// `marca` es opcional: sin ella, 3B Store (la firma vieja sigue valiendo).
+function ogDeProducto(p, url, marca) {
+  const m = marca || MARCA_CASA;
   return {
-    titulo: p.name + ' — 3B Store',
+    titulo: p.name + ' — ' + m,
+    marca: m,
     descripcion: descripcionOg(p),
     imagen: imagenOg(p),
     url: url,
@@ -79,7 +94,7 @@ function bloqueOg(d, p, url) {
     '<meta name="description" content="' + desc + '">',
     '<link rel="canonical" href="' + u + '">',
     '<meta property="og:type" content="product">',
-    '<meta property="og:site_name" content="3B Store">',
+    '<meta property="og:site_name" content="' + escapar(d.marca || MARCA_CASA) + '">',
     '<meta property="og:title" content="' + t + '">',
     '<meta property="og:description" content="' + desc + '">',
     '<meta property="og:url" content="' + u + '">',
@@ -97,7 +112,7 @@ function bloqueOg(d, p, url) {
   lineas.push('<meta name="twitter:description" content="' + desc + '">');
   lineas.push('<meta name="twitter:image" content="' + img + '">');
   // Sin producto no hay datos estructurados: la firma vieja bloqueOg(d) sigue valiendo.
-  if (p) lineas.push(jsonLdProducto(p, url || d.url));
+  if (p) lineas.push(jsonLdProducto(p, url || d.url, d.marca));
   return lineas.join('\n');
 }
 
@@ -110,7 +125,7 @@ function bloqueOg(d, p, url) {
 // El `</` de cualquier texto se parte para que un nombre con `</script>` dentro no pueda
 // cerrar la etiqueta antes de tiempo. Es la única forma de inyección posible aquí,
 // porque el resto ya lo escapa JSON.stringify.
-function jsonLdProducto(p, url) {
+function jsonLdProducto(p, url, marca) {
   const datos = {
     '@context': 'https://schema.org',
     '@type': 'Product',
@@ -118,7 +133,7 @@ function jsonLdProducto(p, url) {
     description: descripcionOg(p),
     image: imagenOg(p),
     sku: String(p.codigo || ''),
-    brand: { '@type': 'Brand', name: '3B Store' },
+    brand: { '@type': 'Brand', name: marca || MARCA_CASA },
     offers: {
       '@type': 'Offer',
       url: url,
@@ -131,4 +146,4 @@ function jsonLdProducto(p, url) {
   return `<script type="application/ld+json">${json}</script>`;
 }
 
-module.exports = { ogDeProducto, bloqueOg, precioTexto, descripcionOg, imagenOg, escapar, jsonLdProducto };
+module.exports = { ogDeProducto, bloqueOg, precioTexto, descripcionOg, imagenOg, escapar, jsonLdProducto, marcaDe };
