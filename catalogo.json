@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-20T19:54:20.318Z",
+  "generado": "2026-10-20T20:55:47.502Z",
   "tasa": 815,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -2594,7 +2594,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 3,
+      "max": 2,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -4055,27 +4055,6 @@
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
       },
       "creado": 1791650740477
-    },
-    {
-      "id": "p_1791230489738",
-      "codigo": "2WU6",
-      "name": "Paquete de 52 Globos graciosos",
-      "cat": "Decoración",
-      "subcat": "",
-      "notes": "Originales,coloridos, únicos y graciosos globos infantiles. Lo mejor para decoración de fiestas y para juegos",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791230365/productos/kqklyqnajcdquugbjx9c.jpg",
-      "precioUSD": 8,
-      "precioCUP": 6520,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "max": 1,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1791230489738
     },
     {
       "id": "p_1780609726389",
