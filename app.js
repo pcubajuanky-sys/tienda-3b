@@ -1421,6 +1421,65 @@ function medirHeader() {
 // Pinta el panel modal (móvil y respaldo en escritorio) Y el aside lateral
 // (solo visible ≥1024px) con las MISMAS líneas (lineaCarritoHtml) y el mismo
 // total CUP — una sola fuente de verdad, nada de lógica duplicada.
+// ── La libreta de direcciones del cliente ──
+// 🔴 Vive SOLO en su telefono (localStorage). La tienda no tiene servidor y estos datos
+// no salen de ahi mas que en el mensaje de WhatsApp que el propio cliente envia.
+// 🔴 localStorage LANZA en modo incognito y con los datos del sitio bloqueados: todo
+// acceso va en try/catch y la tienda tiene que funcionar igual sin el.
+const DIRS_CLAVE = 'direcciones';
+
+function leerDirecciones() {
+  try { return window.Direcciones.cargar(localStorage.getItem(DIRS_CLAVE)); } catch (e) { return []; }
+}
+
+function escribirDirecciones(lista) {
+  try { localStorage.setItem(DIRS_CLAVE, JSON.stringify(lista)); } catch (e) { /* sin sitio donde guardar: se sigue igual */ }
+}
+
+function pintarDirecciones() {
+  const caja = document.getElementById('dir-guardadas');
+  const tira = document.getElementById('dir-guardadas-tira');
+  if (!caja || !tira) return;
+  const lista = leerDirecciones();
+  caja.hidden = lista.length === 0;
+  tira.innerHTML = lista.map((d) =>
+    `<button type="button" class="dir-chip" data-dir="${escapeHtml(d.dir)}">${escapeHtml(d.etiqueta)}</button>`
+  ).join('');
+}
+
+// Rellena el formulario con una ficha guardada. El horario puede ser uno de los del
+// desplegable o uno escrito a mano: si no esta en la lista, se usa "Otro horario…".
+function usarDireccion(dir) {
+  const d = leerDirecciones().find((x) => window.Direcciones.mismaDireccion(x, { dir: dir }));
+  if (!d) return;
+  document.getElementById('c-nombre').value = d.nombre;
+  document.getElementById('c-tel').value = d.tel;
+  document.getElementById('c-dir').value = d.dir;
+  const sel = document.getElementById('c-horario');
+  const libre = document.getElementById('c-horario-libre');
+  const opciones = [...sel.options].map((o) => o.value);
+  if (d.horario && opciones.indexOf(d.horario) !== -1) {
+    sel.value = d.horario;
+    libre.hidden = true;
+    libre.value = '';
+  } else if (d.horario) {
+    sel.value = '__libre';
+    libre.hidden = false;
+    libre.value = d.horario;
+  }
+  // Los avisos de campo vacio que hubiera se quedarian mintiendo.
+  marcarError('c-nombre', 'err-nombre', false);
+  marcarError('c-tel', 'err-tel', false);
+  marcarError('c-dir', 'err-dir', false);
+  marcarError('c-horario', 'err-horario', false);
+}
+
+function olvidarDirecciones() {
+  if (!confirm('¿Olvidar tus datos guardados en este teléfono? Tendrás que escribirlos la próxima vez.')) return;
+  try { localStorage.removeItem(DIRS_CLAVE); } catch (e) { /* nada que borrar */ }
+  pintarDirecciones();
+}
+
 function renderCarrito() {
   const items = itemsCarrito();
   const hayItems = items.length > 0;
@@ -1503,6 +1562,7 @@ function cerrarCarrito() { pedirCierreCapa('carrito'); }
 // Pinta el carrito. NO toca el historial: la llama sincronizarCapas.
 function mostrarCarrito() {
   renderCarrito();
+  pintarDirecciones();
   elementoAnteriorFoco = document.activeElement;
   const panel = document.getElementById('panel');
   panel.hidden = false;
@@ -1858,6 +1918,13 @@ async function iniciar() {
   document.getElementById('panel-fondo').addEventListener('click', cerrarCarrito);
   document.getElementById('form-pedido').addEventListener('submit', enviarPorWhatsApp);
   engancharHorario();
+  const tiraDirs = document.getElementById('dir-guardadas-tira');
+  if (tiraDirs) tiraDirs.addEventListener('click', (e) => {
+    const chip = e.target.closest('.dir-chip');
+    if (chip) usarDireccion(chip.dataset.dir);
+  });
+  const btnOlvidar = document.getElementById('dir-olvidar');
+  if (btnOlvidar) btnOlvidar.addEventListener('click', olvidarDirecciones);
 
   document.getElementById('modal-cerrar').addEventListener('click', cerrarDetalle);
   document.getElementById('modal-fondo').addEventListener('click', cerrarDetalle);

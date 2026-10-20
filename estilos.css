@@ -1305,3 +1305,34 @@ button.footer-link{background:none;border:none;font-family:inherit;cursor:pointe
   font-size: .9rem;
   opacity: .75;
 }
+
+/* Direcciones guardadas del cliente (viven solo en su teléfono).
+   Mismos tokens que .filtro-pill, que es el chip que ya existe en la tienda. */
+.dir-guardadas { margin: -4px 0 14px; }
+.dir-guardadas-tit { display: block; font-size: var(--t-xs); color: var(--text-2); margin-bottom: 6px; }
+.dir-guardadas-tira { display: flex; flex-wrap: wrap; gap: 8px; }
+.dir-chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 8px 14px;
+  border: 1px solid var(--brand);
+  border-radius: 20px;
+  background: var(--brand-soft);
+  color: var(--brand);
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.dir-olvidar {
+  margin-top: 10px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--text-2);
+  font-family: inherit;
+  font-size: var(--t-xs);
+  text-decoration: underline;
+  cursor: pointer;
+}
