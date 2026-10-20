@@ -7,6 +7,12 @@ const NEGOCIO = window.Negocio ? window.Negocio.deLaPagina(document) : '3b';
 const CLAVE_CARRITO = window.Negocio ? window.Negocio.claveCarrito(NEGOCIO) : 'carrito';
 // La pagina de este negocio, para el historial de capas y para prepararHistorial.
 const RAIZ = NEGOCIO === (window.Negocio ? window.Negocio.CASA : '3b') ? '/' : '/' + NEGOCIO;
+// Marca de "ya envie mi pedido" (traspedido.js). Por negocio, por lo mismo que el
+// carrito: la de la casa se queda con el nombre de siempre, asi 3B se comporta
+// exactamente igual que ahora.
+const CLAVE_ENVIADO = NEGOCIO === (window.Negocio ? window.Negocio.CASA : '3b')
+  ? 'pedidoEnviado'
+  : 'pedidoEnviado:' + NEGOCIO;
 let gestorRecargo = null;   // el gestor cuyos precios se estan enseñando, si los hay
 let filtroCat = '';      // categoría activa ('' = todas)
 let filtroOferta = false;
@@ -1499,7 +1505,7 @@ function preguntarSiEnvio() {
   const caja = document.getElementById('aviso-enviado');
   if (!caja || !caja.hidden) return;   // ya esta puesto: no se repite
   let marca = null;
-  try { marca = localStorage.getItem('pedidoEnviado'); } catch (e) { return; }
+  try { marca = localStorage.getItem(CLAVE_ENVIADO); } catch (e) { return; }
   if (!window.TrasPedido.debePreguntar(marca, Date.now(), Object.keys(carrito).length > 0)) {
     olvidarMarcaPedido();
     return;
@@ -1508,7 +1514,7 @@ function preguntarSiEnvio() {
 }
 
 function olvidarMarcaPedido() {
-  try { localStorage.removeItem('pedidoEnviado'); } catch (e) { /* nada */ }
+  try { localStorage.removeItem(CLAVE_ENVIADO); } catch (e) { /* nada */ }
 }
 
 function cerrarAvisoEnviado(vaciar) {
@@ -1758,7 +1764,7 @@ function enviarPorWhatsApp(ev) {
     }));
     pintarDirecciones();
   }
-  try { localStorage.setItem('pedidoEnviado', String(Date.now())); } catch (e) { /* sin marca: no se preguntara */ }
+  try { localStorage.setItem(CLAVE_ENVIADO, String(Date.now())); } catch (e) { /* sin marca: no se preguntara */ }
 }
 
 // ── Portada: mosaico de fotos reales + dato de productos ──

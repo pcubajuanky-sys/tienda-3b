@@ -120,3 +120,14 @@ test('🔴 el contrato de la etiqueta Negocio: sigue escrito en app.js', () => {
   assert.ok(app.includes("NEGOCIO !== (window.Negocio ? window.Negocio.CASA : '3b')"),
     'la casa volvio a escribir la linea, y su mensaje debe seguir igual que siempre');
 });
+
+test('🔴 la marca de pedido enviado es por negocio y la de la casa conserva su nombre', () => {
+  // app.js no es cargable en pruebas (llama a iniciar() y toca document): se guarda por texto.
+  const app = fs.readFileSync(path.join(__dirname, '..', 'app.js'), 'utf8');
+  assert.ok(app.includes("? 'pedidoEnviado'"), 'la casa debe seguir usando la clave de siempre');
+  assert.ok(app.includes("'pedidoEnviado:' + NEGOCIO"), 'el socio debe tener su propia clave');
+  for (const op of ['getItem', 'setItem', 'removeItem']) {
+    assert.ok(!app.includes('localStorage.' + op + "('pedidoEnviado'"), 'queda un ' + op + ' con la clave cruda: mezclaria las tiendas');
+  }
+  assert.ok((app.match(/CLAVE_ENVIADO/g) || []).length >= 4, 'la definicion y los 3 accesos');
+});
