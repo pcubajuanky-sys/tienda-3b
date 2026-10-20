@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-20T21:32:23.826Z",
+  "generado": "2026-10-20T21:54:39.484Z",
   "tasa": 815,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -3517,32 +3517,6 @@
       "creado": 1786922026243,
       "precioNormalUSD": 8,
       "precioNormalCUP": 6520
-    },
-    {
-      "id": "p_1784914843855",
-      "codigo": "E8WV",
-      "name": "Nebulizador",
-      "cat": "Electrodomésticos",
-      "subcat": "",
-      "notes": "Nebulizador de sistema respiratorio portátil con aprobación de la FDA, nebulizador portátil, adecuado para uso en el hogar, la oficina y los viajes",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1784914749/productos/vv9dzqsudnufwodzfrzv.jpg",
-      "precioUSD": 33,
-      "precioCUP": 26895,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "fotos": [
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791891093/productos/urbd30x3cvlolb3yjufj.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791891100/productos/stk6gfq3ieki0ulah8h8.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791891105/productos/macvdfestpikb6gfgpob.jpg"
-      ],
-      "max": 1,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1784914843855
     },
     {
       "id": "p_1786732384337",
