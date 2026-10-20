@@ -83,6 +83,14 @@
     <button id="aviso-ajuste-cerrar" class="aviso-ajuste-x" type="button" aria-label="Cerrar aviso">✕</button>
   </div>
 
+  <div id="aviso-enviado" class="aviso-enviado" role="dialog" aria-labelledby="aviso-enviado-txt" hidden>
+    <p id="aviso-enviado-txt" class="aviso-enviado-txt">¿Ya enviaste tu pedido por WhatsApp?</p>
+    <div class="aviso-enviado-botones">
+      <button type="button" id="aviso-enviado-si" class="btn btn-primario">Sí, vaciar mi carrito</button>
+      <button type="button" id="aviso-enviado-no" class="btn btn-suave btn-secundario">No, conservarlo</button>
+    </div>
+  </div>
+
   <div id="promo-mundos" class="promo promo-mundos" hidden>
     <div class="promo-contenido">
       <p class="promo-linea">3B es más de un negocio — toca los logos 👇</p>
@@ -442,6 +450,14 @@
       <label class="campo">
         <span>Nota (opcional)</span>
         <textarea id="c-nota" rows="2"></textarea>
+      </label>
+      <label class="campo-check">
+        <input type="checkbox" id="c-guardar">
+        <span>Guardar mis datos en este teléfono para la próxima vez</span>
+      </label>
+      <label class="campo" id="campo-etiqueta" hidden>
+        <span>¿Con qué nombre?</span>
+        <input type="text" id="c-etiqueta" placeholder="Casa, Trabajo…" maxlength="20">
       </label>
       <p id="panel-politica" class="politica-texto" hidden></p>
       <p id="panel-terminos" class="terminos-nota" hidden>Al pedir aceptas <a href="terminos.html" target="_blank" rel="noopener">nuestros términos</a>.</p>
