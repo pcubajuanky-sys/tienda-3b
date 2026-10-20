@@ -152,3 +152,59 @@ test('con precios-gestores.json la tarjeta lleva el precio del gestor', () => {
     handlerLimpio();
   }
 });
+
+// ── La ficha se sirve sobre la pagina de SU negocio (Electripower) ──
+// 🔴 No se toca catalogo.json (lo publica Stock+ y esta versionado): se trabaja en un
+// directorio temporal con copias de las dos cascaras y un catalogo sintetico, y el cwd
+// se restaura en un finally Y en un after() de red.
+const os = require('os');
+const path = require('path');
+const CWD_ORIGINAL = process.cwd();
+after(() => { try { process.chdir(CWD_ORIGINAL); } catch (e) { /* nada */ } });
+
+function conCatalogoSintetico(items, fn) {
+  const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'tienda-negocio-'));
+  try {
+    for (const f of ['index.html', 'electripower.html']) {
+      fs.copyFileSync(path.join(CWD_ORIGINAL, f), path.join(tmp, f));
+    }
+    fs.writeFileSync(path.join(tmp, 'catalogo.json'), JSON.stringify({ items: items }));
+    process.chdir(tmp);
+    return fn(handlerLimpio());
+  } finally {
+    process.chdir(CWD_ORIGINAL);
+    handlerLimpio();
+    fs.rmSync(tmp, { recursive: true, force: true });
+  }
+}
+
+const BASE_ITEM = { precioUSD: 10, precioCUP: 4200, moneda: 'usd', notes: 'x', photo: '' };
+const ITEM_CASA = Object.assign({}, BASE_ITEM, { id: 'a', codigo: 'CASA1', name: 'Sabanas' });
+const ITEM_SOCIO = Object.assign({}, BASE_ITEM, { id: 'b', codigo: 'EP001', name: 'Inversor 3000W', negocio: 'electripower' });
+
+test('un codigo del socio se sirve sobre electripower.html', () => {
+  conCatalogoSintetico([ITEM_CASA, ITEM_SOCIO], (h) => {
+    const r = pedirCon(h, { c: 'EP001' });
+    assert.strictEqual(r.statusCode, 200);
+    assert.ok(r.cuerpo.includes('<body data-negocio="electripower">'), 'no uso la pagina del socio');
+    assert.ok(r.cuerpo.includes('Inversor 3000W'), 'no puso las etiquetas de ESE producto');
+    assert.strictEqual(r.cuerpo.split('<title>').length - 1, 1);
+  });
+});
+
+test('un codigo de la casa sigue sirviendose sobre index.html', () => {
+  conCatalogoSintetico([ITEM_CASA, ITEM_SOCIO], (h) => {
+    const r = pedirCon(h, { c: 'CASA1' });
+    assert.ok(!r.cuerpo.includes('data-negocio'), 'la casa no debe llevar data-negocio');
+    assert.ok(r.cuerpo.includes('Sabanas'));
+  });
+});
+
+test('si falta electripower.html, la ficha del socio cae a index.html y no se rompe', () => {
+  conCatalogoSintetico([ITEM_SOCIO], (h) => {
+    fs.unlinkSync('electripower.html');
+    const r = pedirCon(h, { c: 'EP001' });
+    assert.strictEqual(r.statusCode, 200);
+    assert.ok(!r.cuerpo.includes('data-negocio'));
+  });
+});

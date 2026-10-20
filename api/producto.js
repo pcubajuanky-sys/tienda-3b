@@ -17,16 +17,17 @@ const RAIZ = 'https://www.3bqba.com';
 
 // Se leen una sola vez por arranque en frio. Publicar el catalogo crea un
 // despliegue nuevo, asi que este cache nunca sirve datos viejos.
-let cacheHtml = null;
+let cacheHtml = {};   // una entrada por cascara: index.html y electripower.html
 let cacheCat = null;
 
 function leer(nombre) {
   return fs.readFileSync(path.join(process.cwd(), nombre), 'utf8');
 }
 
-function pagina() {
-  if (cacheHtml === null) cacheHtml = leer('index.html');
-  return cacheHtml;
+function pagina(nombre) {
+  const n = nombre || 'index.html';
+  if (!(n in cacheHtml)) cacheHtml[n] = leer(n);
+  return cacheHtml[n];
 }
 
 function catalogo() {
@@ -92,13 +93,19 @@ module.exports = function handler(req, res) {
         }
       }
     }
-    const i = html.indexOf(INICIO);
-    const j = html.indexOf(FIN);
+    // 🔴 La ficha de un producto del socio se sirve sobre SU pagina. Si se sirviera
+    // sobre index.html, el cliente abriria un enlace de un inversor y veria la tienda
+    // de 3B, con el carrito y el WhatsApp equivocados. Si la cascara del socio no
+    // esta, pagina() lanza y el catch deja la tienda normal (fallo seguro).
+    const negocio = String((p && p.negocio) || '').trim().toLowerCase();
+    const base = negocio === 'electripower' ? pagina('electripower.html') : html;
+    const i = base.indexOf(INICIO);
+    const j = base.indexOf(FIN);
     if (p && i !== -1 && j > i) {
       const url = RAIZ + '/p/' + String(p.codigo).toUpperCase() + (ref ? '?ref=' + ref : '');
-      salida = html.slice(0, i + INICIO.length) + '\n' +
+      salida = base.slice(0, i + INICIO.length) + '\n' +
                bloqueOg(ogDeProducto(p, url), p, url) + '\n' +
-               html.slice(j);
+               base.slice(j);
     }
   } catch (e) {
     salida = html;   // cualquier tropiezo: la tienda normal, nunca una pagina rota
