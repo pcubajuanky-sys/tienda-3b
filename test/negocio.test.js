@@ -131,3 +131,12 @@ test('🔴 la marca de pedido enviado es por negocio y la de la casa conserva su
   }
   assert.ok((app.match(/CLAVE_ENVIADO/g) || []).length >= 4, 'la definicion y los 3 accesos');
 });
+
+test('🔴 la pagina del socio no promete mensajeria incluida a secas: es en su zona', () => {
+  // Lo que ve Google/WhatsApp al compartir el enlace. La decision del dueño fue "incluida en
+  // su zona"; mas lejos se coordina. Prometer gratis a quien vive lejos seria mentira.
+  const html = fs.readFileSync(path.join(__dirname, '..', 'electripower.html'), 'utf8');
+  assert.ok(!html.includes('Mensajería incluida.'), 'queda una promesa de mensajeria sin "en su zona"');
+  assert.ok(html.includes('Mensajería incluida en su zona.'));
+  assert.ok(!html.includes('�'), 'la codificacion se estropeo');
+});
