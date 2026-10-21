@@ -419,7 +419,7 @@ function accionHtml(id, clave) {
   // Pedido y esperando confirmación: se ve, pero no se vende (decisión de Ruth,
   // 2026-10-20). Mismo criterio que `cerrada()` arriba: la tarjeta informa, no vende.
   if (Espera.enEspera(p, clave || null)) {
-    return `<button class="btn add" type="button" disabled>${Espera.AVISO_CORTO}</button>`;
+    return `<button class="btn add" type="button" disabled>${Espera.AVISO_BOTON}</button>`;
   }
   const v = variantesDe(p);
   if (v && !clave) {

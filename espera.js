@@ -11,6 +11,10 @@
 (function () {
   const AVISO_CORTO = '🕒 Pedido — esperando confirmación';
   const AVISO_LARGO = 'La última unidad está pedida y esperamos la confirmación del cliente. Escríbenos y te avisamos si se libera.';
+  // 🔴 El botón NO repite `AVISO_CORTO`: en la tarjeta se ven los dos a la vez y la
+  // clienta leería lo mismo dos veces. Y un texto largo se parte en tres líneas dentro
+  // del botón a 375 px, que es justo donde peor se lee.
+  const AVISO_BOTON = 'En espera';
 
   // `clave` es la combinación elegida (misma forma que variantes.opciones, 'TALLA / COLOR')
   // o null si el producto no tiene variantes o la clienta aún no eligió.
@@ -26,5 +30,5 @@
     return lista.indexOf(clave) !== -1;
   }
 
-  window.Espera = { enEspera, AVISO_CORTO, AVISO_LARGO };
+  window.Espera = { enEspera, AVISO_CORTO, AVISO_LARGO, AVISO_BOTON };
 })();

@@ -9,7 +9,7 @@ const vm = require('node:vm');
 const sandbox = { window: {} };
 vm.createContext(sandbox);
 vm.runInContext(fs.readFileSync(path.join(__dirname, '..', 'espera.js'), 'utf8'), sandbox);
-const { enEspera, AVISO_CORTO, AVISO_LARGO } = sandbox.window.Espera;
+const { enEspera, AVISO_CORTO, AVISO_LARGO, AVISO_BOTON } = sandbox.window.Espera;
 
 test('un producto sin la marca no esta en espera', () => {
   assert.strictEqual(enEspera({ id: 'a' }, null), false);
@@ -40,4 +40,11 @@ test('no lanza con basura', () => {
 test('los dos textos existen y dicen lo que Ruth aprobo', () => {
   assert.match(AVISO_CORTO, /esperando confirmaci[óo]n/i);
   assert.match(AVISO_LARGO, /te avisamos/i);
+});
+
+test('el boton lleva un texto corto, distinto del aviso largo de la tarjeta', () => {
+  // En la tarjeta salen los dos a la vez: si el boton repitiera el aviso, la clienta
+  // leeria lo mismo dos veces en 375 px (visto en la verificacion del 2026-10-20).
+  assert.ok(AVISO_BOTON.length < 15, `el texto del boton es largo: ${AVISO_BOTON}`);
+  assert.notStrictEqual(AVISO_BOTON, AVISO_CORTO);
 });
