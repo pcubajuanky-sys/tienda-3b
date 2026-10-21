@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-20T21:54:39.484Z",
+  "generado": "2026-10-21T02:44:15.729Z",
   "tasa": 815,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -85,7 +85,8 @@
     },
     {
       "code": "QGZUQ",
-      "nombre": "Alejandro"
+      "nombre": "Alejandro",
+      "telPublico": "5354572565"
     },
     {
       "code": "45UGF",
@@ -2103,13 +2104,11 @@
           "Color"
         ],
         "opciones": [
-          "AMARILLO",
-          "ROSA OSCURO"
+          "AMARILLO"
         ]
       },
       "maxOpciones": {
-        "AMARILLO": 1,
-        "ROSA OSCURO": 1
+        "AMARILLO": 1
       },
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
@@ -3852,7 +3851,7 @@
       "moneda": "cup",
       "enOferta": false,
       "destacado": false,
-      "max": 4,
+      "max": 3,
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
