@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-21T21:13:54.596Z",
+  "generado": "2026-10-21T21:17:44.020Z",
   "tasa": 815,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -4362,27 +4362,6 @@
       },
       "envioGratis": true,
       "creado": 1788206192356
-    },
-    {
-      "id": "p_1781640704239",
-      "codigo": "RYV8",
-      "name": "Pareja de neblineros con su conmutador",
-      "cat": "Motos / Accesorios",
-      "subcat": "",
-      "notes": "Calidad Premium\nNeblineros, incluye 2 focos con sus accesorios de colocación y su conmutador",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1781640623/productos/yjvrqbfpjmqofcaltal0.jpg",
-      "precioUSD": 10,
-      "precioCUP": 8150,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "espera": true,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1781640704239
     },
     {
       "id": "p_1785012145699",
