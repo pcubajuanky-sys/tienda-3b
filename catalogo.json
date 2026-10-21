@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-20T15:42:03.236Z",
+  "generado": "2026-10-21T02:44:26.313Z",
   "tasa": 815,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -85,7 +85,8 @@
     },
     {
       "code": "QGZUQ",
-      "nombre": "Alejandro"
+      "nombre": "Alejandro",
+      "telPublico": "5354572565"
     },
     {
       "code": "45UGF",
@@ -98,6 +99,10 @@
     {
       "code": "XPT9B",
       "nombre": "Camilita"
+    },
+    {
+      "code": "AQJXE",
+      "nombre": "Heidy García Castellanos"
     }
   ],
   "categorias": [
@@ -1082,27 +1087,6 @@
       "precioNormalCUP": 6520
     },
     {
-      "id": "p_1790965760166",
-      "codigo": "PJ4H",
-      "name": "Audífono Bluetooth tipo Cascos 3",
-      "cat": "Bocinas Celulares y Accesorios",
-      "subcat": "",
-      "notes": "Audífonos inalámbricos tipo casco, con almohadillas acolchadas para uso prolongado",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790965642/productos/jss9vmgdeoy0g5alq399.jpg",
-      "precioUSD": 6,
-      "precioCUP": 4890,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "max": 1,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1790965760166
-    },
-    {
       "id": "p_1781552195237",
       "codigo": "MY9U",
       "name": "Audífonos de cable",
@@ -1386,26 +1370,6 @@
       },
       "envioGratis": true,
       "creado": 1785182779881
-    },
-    {
-      "id": "p_1781215403591",
-      "codigo": "AEAV",
-      "name": "Cable tipo C 3metros",
-      "cat": "Bocinas Celulares y Accesorios",
-      "subcat": "",
-      "notes": "Cable de Carga Rápida USB C Cable de Carga USB A a Tipo C Trenzado de Nylon. Calidad Premium. Largo alcance (3metros)",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791165695/productos/ccwcaxqppjt5e9gs083u.jpg",
-      "precioUSD": 2.21,
-      "precioCUP": 1800,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false,
-      "max": 3,
-      "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      },
-      "creado": 1781215403591
     },
     {
       "id": "p_1787540422288",
@@ -2140,13 +2104,11 @@
           "Color"
         ],
         "opciones": [
-          "AMARILLO",
-          "ROSA OSCURO"
+          "AMARILLO"
         ]
       },
       "maxOpciones": {
-        "AMARILLO": 1,
-        "ROSA OSCURO": 1
+        "AMARILLO": 1
       },
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
@@ -2635,7 +2597,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 3,
+      "max": 2,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -2656,7 +2618,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 5,
+      "max": 4,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -3556,32 +3518,6 @@
       "precioNormalCUP": 6520
     },
     {
-      "id": "p_1784914843855",
-      "codigo": "E8WV",
-      "name": "Nebulizador",
-      "cat": "Electrodomésticos",
-      "subcat": "",
-      "notes": "Nebulizador de sistema respiratorio portátil con aprobación de la FDA, nebulizador portátil, adecuado para uso en el hogar, la oficina y los viajes",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1784914749/productos/vv9dzqsudnufwodzfrzv.jpg",
-      "precioUSD": 33,
-      "precioCUP": 26895,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "fotos": [
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791891093/productos/urbd30x3cvlolb3yjufj.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791891100/productos/stk6gfq3ieki0ulah8h8.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791891105/productos/macvdfestpikb6gfgpob.jpg"
-      ],
-      "max": 1,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1784914843855
-    },
-    {
       "id": "p_1786732384337",
       "codigo": "24PU",
       "name": "Nebulizador portátil",
@@ -3915,7 +3851,7 @@
       "moneda": "cup",
       "enOferta": false,
       "destacado": false,
-      "max": 4,
+      "max": 3,
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
@@ -4096,27 +4032,6 @@
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
       },
       "creado": 1791650740477
-    },
-    {
-      "id": "p_1791230489738",
-      "codigo": "2WU6",
-      "name": "Paquete de 52 Globos graciosos",
-      "cat": "Decoración",
-      "subcat": "",
-      "notes": "Originales,coloridos, únicos y graciosos globos infantiles. Lo mejor para decoración de fiestas y para juegos",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791230365/productos/kqklyqnajcdquugbjx9c.jpg",
-      "precioUSD": 8,
-      "precioCUP": 6520,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "max": 1,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1791230489738
     },
     {
       "id": "p_1780609726389",
@@ -5083,37 +4998,6 @@
       "creado": 1791836377621
     },
     {
-      "id": "p_1789241914026",
-      "codigo": "KHXC",
-      "name": "Pulover Unisex Navideño \"JESÚS\"",
-      "cat": "Ropa",
-      "subcat": "",
-      "notes": "Pulover algodonada elastizado . Importado de USA",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789241807/productos/nvc54lxofwfrczxstfar.jpg",
-      "precioUSD": 4,
-      "precioCUP": 3260,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "variantes": {
-        "ejes": [
-          "Talla"
-        ],
-        "opciones": [
-          "XL"
-        ]
-      },
-      "maxOpciones": {
-        "XL": 1
-      },
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1789241914026
-    },
-    {
       "id": "p_1789242386934",
       "codigo": "D5K2",
       "name": "Pulover Unisex Navideño \"Muñecos de Nieve\"",
@@ -5212,7 +5096,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 3,
+      "max": 2,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
