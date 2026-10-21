@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-21T09:57:14.084Z",
+  "generado": "2026-10-21T15:27:14.231Z",
   "tasa": 815,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -2291,13 +2291,18 @@
       "cat": "Accesorio de vestir",
       "subcat": "",
       "notes": "Gafas de máxima calidad, armadura metálica de color negro o dorado y cristales oscuros y semi claros\nHermoso diseño para mujeres y hombres",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788626193/productos/sgqc9dmkhiihxjloiavv.jpg",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792595902/productos/lq8dcqxixbiuzwzui3i6.jpg",
       "precioUSD": 3,
       "precioCUP": 2445,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 4,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792595904/productos/vth91vcoizzch03msuwo.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792595931/productos/evhdqpj7qvyos2mrqrbc.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792595981/productos/lgevex6ba69lug1c8cjw.jpg"
+      ],
+      "max": 3,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -2428,6 +2433,7 @@
       "moneda": "cup",
       "enOferta": false,
       "destacado": false,
+      "max": 9,
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
