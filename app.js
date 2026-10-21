@@ -416,6 +416,11 @@ function claveElegida(v, seleccion) {
 function accionHtml(id, clave) {
   if (cerrada()) return '';          // tienda cerrada: la tarjeta informa, no vende
   const p = productoDe(id);
+  // Pedido y esperando confirmación: se ve, pero no se vende (decisión de Ruth,
+  // 2026-10-20). Mismo criterio que `cerrada()` arriba: la tarjeta informa, no vende.
+  if (Espera.enEspera(p, clave || null)) {
+    return `<button class="btn add" type="button" disabled>${Espera.AVISO_CORTO}</button>`;
+  }
   const v = variantesDe(p);
   if (v && !clave) {
     const q = qtyEnCarrito(id);
@@ -466,6 +471,9 @@ function precioHtml(p) {
 const QUEDAN_AVISO_MAX = 3;
 
 function avisoQuedanHtml(p) {
+  // La marca de pedido manda sobre el «Queda 1»: decir las dos cosas a la vez sería
+  // contradictorio («queda 1» invita a comprar lo que no se puede comprar).
+  if (Espera.enEspera(p, null)) return `<div class="card-espera">${Espera.AVISO_CORTO}</div>`;
   if (variantesDe(p)) return '';
   const n = Number(p.max);
   if (!(n > 0) || n > QUEDAN_AVISO_MAX) return '';
@@ -594,13 +602,28 @@ function renderGrid() {
   renderMasVendidos();
 }
 
+// El aviso largo de la ficha. Se repinta junto a la acción porque la combinación elegida
+// puede estar pedida aunque el producto tenga otras libres.
+function pintarEsperaFicha(id, clave) {
+  const el = document.getElementById('espera-ficha');
+  if (!el) return;
+  if (Espera.enEspera(productoDe(id), clave || null)) {
+    el.textContent = Espera.AVISO_LARGO;
+    el.hidden = false;
+  } else {
+    el.hidden = true;
+  }
+}
+
 function refrescarAcciones(id) {
   const el = document.getElementById('acc-' + id);
   if (el) el.innerHTML = accionHtml(id);
   if (productoModal === id) {
     const v = variantesDe(productoDe(id));
     const m = document.getElementById('modal-accion');
-    if (m) m.innerHTML = accionHtml(id, claveElegida(v, seleccionVar));
+    const claveActual = claveElegida(v, seleccionVar);
+    if (m) m.innerHTML = accionHtml(id, claveActual);
+    pintarEsperaFicha(id, claveActual);
     pintarChipsVariante(id);
   }
 }
@@ -774,6 +797,7 @@ function mostrarDetalle(id) {
   seleccionVar = [];
   pintarChipsVariante(id);
   document.getElementById('modal-accion').innerHTML = accionHtml(id, null);
+  pintarEsperaFicha(id, null);
   pintarRelacionados(p);
   const avisoComp = document.getElementById('compartir-aviso');
   if (avisoComp) avisoComp.textContent = '';   // no arrastrar el «copiado» del producto anterior
