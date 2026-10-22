@@ -79,6 +79,22 @@ function resolverVendedor() {
   return v;
 }
 
+// Quien pone el precio, atiende: si la visita entro por la pagina de un gestor con
+// recargo, lo que se le escriba va a SU WhatsApp; si no, al numero de la casa.
+//
+// 🔴 ESTE ES EL UNICO SITIO donde se decide ese destino. Antes la expresion estaba
+// copiada en el pedido y en la busqueda sin resultados, y test/negocio.test.js contaba
+// las copias para que ninguna se quedara sin la guarda. Al aparecer un tercer sitio (el
+// boton de preguntar de la ficha, 2026-10-22) se extrajo aqui: ahora olvidarse de la
+// guarda es imposible, no solo detectable. NO vuelvas a copiar la expresion.
+//
+// 🔴 La guarda esCasaWeb() no es opcional: en la tienda de un negocio asociado NO cae
+// recargo y precios-gestores.json no lleva sus productos, asi que el gestor no pone ese
+// precio y el mensaje tiene que ir al numero de la casa.
+function destinoWhatsApp() {
+  return (esCasaWeb() && gestorRecargo && gestorRecargo.telPublico) || (CAT && CAT.whatsapp);
+}
+
 // ── Cloudinary: transformación de URL (rendimiento en móvil) ──
 // Guarda: solo se toca si la URL trae /image/upload/ y NO trae ya una transformación.
 // Los 2 productos que no están en Cloudinary se sirven tal cual (no entran a esta rama).
@@ -569,7 +585,7 @@ function pintarPregunta(termino) {
   // precios-gestores.json no lleva sus productos: el gestor no pone ese precio, asi
   // que el pedido va al numero de la casa, donde el bot lo anota y lo reenvia al socio.
   // (El ?ref= y la linea `Vendedor:` NO se tocan: el gestor sigue cobrando su comision.)
-  const destino = (esCasaWeb() && gestorRecargo && gestorRecargo.telPublico) || (CAT && CAT.whatsapp);
+  const destino = destinoWhatsApp();
   const url = window.Faltante.enlace(destino, t);
   if (!url) { caja.hidden = true; caja.innerHTML = ''; return; }   // vacío por el chip, no por una búsqueda
   caja.hidden = false;
@@ -615,6 +631,25 @@ function pintarEsperaFicha(id, clave) {
   }
 }
 
+// El botón de preguntar de la ficha. Se repinta junto a la acción porque el texto cambia
+// si la combinación elegida está pedida.
+//
+// 🔴 El destino sale de destinoWhatsApp(), el mismo que usan el pedido y la búsqueda sin
+// resultados: quien pone el precio, atiende.
+function pintarPreguntarProducto(id, clave) {
+  const caja = document.getElementById('ficha-preguntar');
+  if (!caja) return;
+  const p = productoDe(id);
+  const esperando = Espera.enEspera(p, clave || null);
+  const destino = destinoWhatsApp();
+  const url = window.Preguntar.enlace(destino, p, esperando);
+  if (!url) { caja.hidden = true; caja.innerHTML = ''; return; }   // sin número no se enseña
+  const texto = esperando ? window.Preguntar.TEXTO_BOTON_ESPERA : window.Preguntar.TEXTO_BOTON;
+  caja.hidden = false;
+  caja.innerHTML = '<a class="btn btn-suave btn-secundario ficha-preguntar-btn" href="' +
+    escapeHtml(url) + '" target="_blank" rel="noopener">💬 ' + escapeHtml(texto) + '</a>';
+}
+
 function refrescarAcciones(id) {
   const el = document.getElementById('acc-' + id);
   if (el) el.innerHTML = accionHtml(id);
@@ -624,6 +659,7 @@ function refrescarAcciones(id) {
     const claveActual = claveElegida(v, seleccionVar);
     if (m) m.innerHTML = accionHtml(id, claveActual);
     pintarEsperaFicha(id, claveActual);
+    pintarPreguntarProducto(id, claveActual);
     pintarChipsVariante(id);
   }
 }
@@ -798,6 +834,7 @@ function mostrarDetalle(id) {
   pintarChipsVariante(id);
   document.getElementById('modal-accion').innerHTML = accionHtml(id, null);
   pintarEsperaFicha(id, null);
+  pintarPreguntarProducto(id, null);
   pintarRelacionados(p);
   const avisoComp = document.getElementById('compartir-aviso');
   if (avisoComp) avisoComp.textContent = '';   // no arrastrar el «copiado» del producto anterior
@@ -1566,6 +1603,41 @@ function cerrarAvisoEnviado(vaciar) {
 // Pinta el panel modal (móvil y respaldo en escritorio) Y el aside lateral
 // (solo visible ≥1024px) con las MISMAS líneas (lineaCarritoHtml) y el mismo
 // total CUP — una sola fuente de verdad, nada de lógica duplicada.
+// La tira de «añade uno de estos y la mensajería te sale gratis». Se pinta en el panel y en
+// el aside con el MISMO html: una sola fuente de verdad, igual que lineaEnvioTexto().
+//
+// 🔴 El hueco sale de envioGratis(), que ya descuenta el transporte aparte. No lo
+// recalcules aquí: si mañana cambia la regla del umbral, cambia en un sitio.
+//
+// 🔴 Los botones llevan `data-add="<id>"`, que es exactamente lo que ya escucha la
+// delegación global de clics (la misma que usa accionHtml). Por eso completar.js descarta
+// los productos con variantes: su clave de carrito no es el id a secas.
+function completarEnvioHtml(eg) {
+  if (!eg.activo || eg.alcanzado) return '';
+  // Mismo criterio que lineaEnvioTexto: con solo transporte aparte en el carrito no hay
+  // umbral que alcanzar, así que tampoco hay nada que ofrecer.
+  if (totalCarritoElegible() === 0) return '';
+  const enCarrito = itemsCarrito().map(({ p }) => p.id);
+  const lista = window.Completar.candidatos(CAT.items || [], { falta: eg.falta, excluirIds: enCarrito });
+  if (!lista.length) return '';
+  return '<p class="completar-tit">Añade uno de estos y la mensajería te sale gratis</p>' +
+    '<div class="completar-tira">' +
+    lista.map((x) =>
+      '<button type="button" class="rel-card completar-card" data-add="' + escapeHtml(x.id) + '">' +
+      '<span class="rel-foto"><img src="' + fotoMosaico(x.photo) + '" alt="" loading="lazy"></span>' +
+      '<span class="rel-nom">' + escapeHtml(x.name) + '</span>' +
+      '<span class="rel-precio">' + fmt(x.precioCUP) + ' CUP</span>' +
+      '</button>').join('') +
+    '</div>';
+}
+
+function pintarCompletarEnvio(idCaja, html) {
+  const caja = document.getElementById(idCaja);
+  if (!caja) return;
+  caja.hidden = !html;
+  caja.innerHTML = html;
+}
+
 function renderCarrito() {
   const items = itemsCarrito();
   const hayItems = items.length > 0;
@@ -1576,6 +1648,7 @@ function renderCarrito() {
   // Con carrito vacío no tiene sentido construir el href (total sería 0):
   // se calcula solo cuando hay items, igual que el resto de bloques del total.
   const pagoHtml = hayItems && !cerrada() ? pagoWrapHtml() : '';
+  const completarHtml = hayItems && !cerrada() ? completarEnvioHtml(eg) : '';
 
   // Panel modal (sin cambios de fondo: sigue siendo el que lleva el formulario).
   document.getElementById('carrito-items').innerHTML = html;
@@ -1590,6 +1663,7 @@ function renderCarrito() {
   const panelPolitica = document.getElementById('panel-politica');
   panelPolitica.hidden = !hayItems || !politica;
   panelPolitica.innerHTML = politica ? escapeHtml(politica) : '';
+  pintarCompletarEnvio('completar-envio', completarHtml);
   document.getElementById('panel-terminos').hidden = !hayItems;
   const panelPago = document.getElementById('panel-pago-wrap');
   panelPago.hidden = !pagoHtml;
@@ -1618,6 +1692,7 @@ function renderCarrito() {
   const lateralPolitica = document.getElementById('lateral-politica');
   lateralPolitica.hidden = !hayItems || !politica;
   lateralPolitica.innerHTML = politica ? escapeHtml(politica) : '';
+  pintarCompletarEnvio('lateral-completar', completarHtml);
   document.getElementById('lateral-terminos').hidden = !hayItems;
   document.getElementById('btn-lateral-pedir').hidden = !hayItems;
   const lateralPago = document.getElementById('lateral-pago-wrap');
@@ -1791,7 +1866,7 @@ function enviarPorWhatsApp(ev) {
   // precios-gestores.json no lleva sus productos: el gestor no pone ese precio, asi
   // que el pedido va al numero de la casa, donde el bot lo anota y lo reenvia al socio.
   // (El ?ref= y la linea `Vendedor:` NO se tocan: el gestor sigue cobrando su comision.)
-  const destino = (esCasaWeb() && gestorRecargo && gestorRecargo.telPublico) || CAT.whatsapp;
+  const destino = destinoWhatsApp();
   window.open(`https://api.whatsapp.com/send?phone=${destino}&text=${encodeURIComponent(lineas.join('\n'))}`, '_blank');
 
   // Ya se fue a WhatsApp. Ahora si: guardar sus datos si lo pidio, y dejar la marca para

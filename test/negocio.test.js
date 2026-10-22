@@ -143,13 +143,19 @@ test('🔴 la pagina del socio no promete mensajeria incluida a secas: es en su 
 
 test('🔴 en la tienda del socio el pedido NO se desvia al gestor con recargo', () => {
   const app = fs.readFileSync(path.join(__dirname, '..', 'app.js'), 'utf8');
-  // El desvio al gestor tiene que estar condicionado al negocio de la casa en los
-  // DOS sitios donde se decide el destino.
+  // 🔴 El desvio al gestor vive en UN SOLO sitio: destinoWhatsApp(). Antes estaba copiado
+  // en dos y esta prueba contaba las copias; al aparecer un tercer sitio (el boton de
+  // preguntar de la ficha, 2026-10-22) se extrajo a un helper. Ahora la barrera es
+  // estructural: si alguien vuelve a escribir la expresion a mano, esto falla.
+  assert.ok(app.includes('function destinoWhatsApp()'), 'falta el helper destinoWhatsApp()');
   const desvios = app.split('gestorRecargo && gestorRecargo.telPublico').length - 1;
-  assert.equal(desvios, 2, 'hay dos sitios que deciden el destino del pedido');
+  assert.equal(desvios, 1, 'el desvio al gestor tiene que vivir SOLO en destinoWhatsApp()');
   const conGuarda = app.split('esCasaWeb() && gestorRecargo && gestorRecargo.telPublico').length - 1;
-  assert.equal(conGuarda, 2, 'los dos tienen que llevar la guarda del negocio');
+  assert.equal(conGuarda, 1, 'el unico sitio tiene que llevar la guarda del negocio');
   assert.ok(app.includes('function esCasaWeb()'), 'falta el helper');
+  // Los tres sitios que escriben a WhatsApp piden el destino al helper, no lo calculan.
+  const usos = app.split('destinoWhatsApp()').length - 1;
+  assert.ok(usos >= 4, `destinoWhatsApp() deberia definirse y usarse en 3 sitios, encontrados ${usos} apariciones`);
 });
 
 test('🔴 la banda «Estas en la pagina de…» no se enseña en la tienda del socio', () => {
