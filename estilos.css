@@ -658,6 +658,11 @@ main{padding-top:20px}
 /* Preguntar por este producto (2026-10-22). Secundario a propósito: nunca debe competir
    con «Añadir» — es la salida de quien duda, no la de quien ya decidió. Ancho completo
    para que el pulgar lo alcance a 375 px, igual que el botón de compra. */
+/* «✓ Listo — ver mi pedido» (2026-10-22). Va lleno y a todo el ancho: es la confirmación
+   que la clienta estaba esperando y el camino a pagar, así que tiene que verse. El de
+   preguntar, justo debajo, se queda en línea y secundario. */
+.ficha-listo{margin-top:var(--e1)}
+.ficha-listo-btn{display:flex;width:100%;justify-content:center;align-items:center;gap:6px}
 .ficha-preguntar{margin-top:var(--e1)}
 .ficha-preguntar-btn{display:flex;width:100%;justify-content:center;align-items:center;gap:6px}
 .espera-ficha{font-size:13px;color:var(--text-2);background:rgba(107,114,128,.08);

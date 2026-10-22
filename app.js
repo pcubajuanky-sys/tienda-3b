@@ -650,6 +650,22 @@ function pintarPreguntarProducto(id, clave) {
     escapeHtml(url) + '" target="_blank" rel="noopener">💬 ' + escapeHtml(texto) + '</a>';
 }
 
+// La confirmación de la ficha: «✓ Listo — ver mi pedido (N)». Solo sale si ESTE producto
+// tiene alguna línea en el pedido (con o sin combinación elegida).
+//
+// 🔴 Es un <button>, no un <a>: abre el carrito, que es una capa del historial. Un enlace
+// metería una entrada de más y el «atrás» dejaría de cerrar bien.
+function pintarListoFicha(id) {
+  const caja = document.getElementById('ficha-listo');
+  if (!caja) return;
+  const hay = window.Listo.enElPedido(id, carrito);
+  const txt = hay ? window.Listo.texto(unidadesEnCarrito()) : '';
+  if (!txt) { caja.hidden = true; caja.innerHTML = ''; return; }
+  caja.hidden = false;
+  caja.innerHTML = '<button type="button" class="btn btn-primario ficha-listo-btn" ' +
+    'data-ver-pedido="1">' + escapeHtml(txt) + '</button>';
+}
+
 function refrescarAcciones(id) {
   const el = document.getElementById('acc-' + id);
   if (el) el.innerHTML = accionHtml(id);
@@ -660,6 +676,7 @@ function refrescarAcciones(id) {
     if (m) m.innerHTML = accionHtml(id, claveActual);
     pintarEsperaFicha(id, claveActual);
     pintarPreguntarProducto(id, claveActual);
+    pintarListoFicha(id);
     pintarChipsVariante(id);
   }
 }
@@ -835,6 +852,7 @@ function mostrarDetalle(id) {
   document.getElementById('modal-accion').innerHTML = accionHtml(id, null);
   pintarEsperaFicha(id, null);
   pintarPreguntarProducto(id, null);
+  pintarListoFicha(id);
   pintarRelacionados(p);
   const avisoComp = document.getElementById('compartir-aviso');
   if (avisoComp) avisoComp.textContent = '';   // no arrastrar el «copiado» del producto anterior
@@ -1067,9 +1085,15 @@ function atraparFoco(e, contenedor) {
 // { id: cantidad }. Vive en localStorage para que un refresco no borre el pedido.
 let carrito = JSON.parse(localStorage.getItem(CLAVE_CARRITO) || '{}');
 
+// Unidades totales del pedido. Es lo que enseña el contador 🛒 de la cabecera y lo que
+// repite el botón «Listo» de la ficha: tienen que decir lo MISMO o se contradicen.
+function unidadesEnCarrito() {
+  return Object.values(carrito).reduce((s, q) => s + q, 0);
+}
+
 function guardarCarrito() {
   localStorage.setItem(CLAVE_CARRITO, JSON.stringify(carrito));
-  const n = Object.values(carrito).reduce((s, q) => s + q, 0);
+  const n = unidadesEnCarrito();
   document.getElementById('carrito-count').textContent = n;
   actualizarBarraMovil();
 }
@@ -2202,6 +2226,7 @@ async function iniciar() {
     // y este manejador vive en `document`, así que atraparía también sus botones.
     const quitar = e.target.closest('[data-quitar-linea]');
     const rel = e.target.closest('[data-rel]');
+    const verPedido = e.target.closest('[data-ver-pedido]');
     if (rel) {
       abrirDetalle(rel.dataset.rel);
       document.querySelector('#modal-detalle .modal-caja').scrollTop = 0;
@@ -2223,6 +2248,7 @@ async function iniciar() {
       refrescarAcciones(productoModal);
     }
     else if (irDetalle) { e.stopPropagation(); abrirDetalle(irDetalle.dataset.detalle); }
+    else if (verPedido) { e.stopPropagation(); abrirCarrito(); }
     else if (add) { e.stopPropagation(); addCarrito(add.dataset.add); }
     else if (minus) { e.stopPropagation(); quitarCarrito(minus.dataset.minus); }
     else if (plus) { e.stopPropagation(); addCarrito(plus.dataset.plus); }

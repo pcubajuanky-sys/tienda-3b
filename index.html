@@ -347,6 +347,11 @@
       <div class="modal-tallas" id="modal-tallas" hidden></div>
       <div id="banda-gestor-ficha" class="banda-gestor" hidden></div>
       <div class="modal-accion" id="modal-accion"></div>
+        <!-- «✓ Listo — ver mi pedido (N)» (2026-10-22). Va entre la acción de compra y el
+             botón de preguntar: es la confirmación de que el producto entró, que hasta hoy
+             no existía de forma visible (la barra inferior y el contador de la cabecera los
+             tapa este mismo modal). Lo pinta pintarListoFicha() en app.js. -->
+        <div class="ficha-listo" id="ficha-listo" hidden></div>
         <p class="espera-ficha" id="espera-ficha" hidden></p>
         <!-- Botón para preguntar por ESTE producto (2026-10-22). Va después del aviso de
              espera a propósito: con el producto pedido se lee «está pedido… / avísame si se
@@ -499,6 +504,7 @@
 <script src="espera.js"></script>
 <script src="preguntar.js"></script>
 <script src="completar.js"></script>
+<script src="listo.js"></script>
 <script src="tarjeta.js"></script>
 <script src="negocio.js"></script>
 <script src="app.js"></script>
