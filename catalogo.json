@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-22T22:57:11.723Z",
+  "generado": "2026-10-22T23:07:12.045Z",
   "tasa": 825,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -5555,27 +5555,6 @@
       },
       "envioGratis": true,
       "creado": 1791228936507
-    },
-    {
-      "id": "p_1791229767371",
-      "codigo": "SRDL",
-      "name": "Rollo de papel tapiz autoadhesivo Mármol negro",
-      "cat": "Decoración",
-      "subcat": "",
-      "notes": "Diseño exacto de la imagen\nMedias 80x250cm",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791229652/productos/hhxeyvyrb0hcng01zuid.jpg",
-      "precioUSD": 12,
-      "precioCUP": 9900,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "espera": true,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1791229767371
     },
     {
       "id": "p_1785875419963",
