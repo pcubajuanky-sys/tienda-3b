@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-22T12:07:36.562Z",
+  "generado": "2026-10-22T17:47:05.139Z",
   "tasa": 820,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -2274,7 +2274,7 @@
         ]
       },
       "maxOpciones": {
-        "NEGRO": 3,
+        "NEGRO": 1,
         "BLANCO": 3,
         "PUMA": 3
       },
@@ -2358,13 +2358,29 @@
       "cat": "Accesorio de vestir",
       "subcat": "",
       "notes": "Variedad de diseños tanto para hombres como para mujeres y adolescentes",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787844050/productos/lucqf8ourwaufnovjbjl.jpg",
-      "precioUSD": 1.1,
-      "precioCUP": 900,
-      "moneda": "cup",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792676965/productos/mommid6awffeluijvf27.jpg",
+      "precioUSD": 1.5,
+      "precioCUP": 1230,
+      "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 8,
+      "variantes": {
+        "ejes": [
+          "Diseño"
+        ],
+        "opciones": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ]
+      },
+      "maxOpciones": {
+        "A": 2,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
@@ -3188,7 +3204,7 @@
       },
       "maxOpciones": {
         "BLANCA": 9,
-        "GRIS": 6,
+        "GRIS": 5,
         "ROSA": 1,
         "CELESTE": 2,
         "NARANJA": 1
@@ -3424,11 +3440,13 @@
           "Color"
         ],
         "opciones": [
+          "NEGRO CON VERDE",
           "NEGRO CON NARANJA",
           "NEGRO CON GRIS"
         ]
       },
       "maxOpciones": {
+        "NEGRO CON VERDE": 2,
         "NEGRO CON NARANJA": 1,
         "NEGRO CON GRIS": 2
       },
@@ -4561,13 +4579,25 @@
       "cat": "Cabello",
       "subcat": "",
       "notes": "",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1780955096/productos/yx9kxoyq9re6l7sh5qnl.jpg",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792690987/productos/zlyliichntjgdxatnwsh.jpg",
       "precioUSD": 0.61,
       "precioCUP": 500,
       "moneda": "cup",
       "enOferta": false,
       "destacado": false,
-      "max": 7,
+      "variantes": {
+        "ejes": [
+          "Colores"
+        ],
+        "opciones": [
+          "VERDE",
+          "ROSA"
+        ]
+      },
+      "maxOpciones": {
+        "VERDE": 4,
+        "ROSA": 2
+      },
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
