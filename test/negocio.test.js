@@ -165,3 +165,15 @@ test('🔴 la banda «Estas en la pagina de…» no se enseña en la tienda del 
   const cuerpo = app.slice(i, app.indexOf(String.fromCharCode(10) + '}', i));
   assert.ok(cuerpo.includes('esCasaWeb() && gestorRecargo'), 'pintarBandaGestor no mira el negocio');
 });
+
+test('🔴 con la tienda cerrada el boton «Listo» de la ficha no se enseña', () => {
+  // La ficha informa, no vende: accionHtml() devuelve vacio y la barra inferior se
+  // esconde. Si el boton de «ver mi pedido» no mirara cerrada(), seria el unico camino
+  // al pedido abierto con el negocio cerrado (fallo real, visto en navegador el
+  // 2026-10-22 antes de arreglarlo).
+  const app = fs.readFileSync(path.join(__dirname, '..', 'app.js'), 'utf8');
+  const i = app.indexOf('function pintarListoFicha');
+  assert.ok(i !== -1, 'falta pintarListoFicha');
+  const cuerpo = app.slice(i, app.indexOf(String.fromCharCode(10) + '}', i));
+  assert.ok(cuerpo.includes('cerrada()'), 'pintarListoFicha no mira si la tienda esta cerrada');
+});
