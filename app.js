@@ -1603,6 +1603,41 @@ function cerrarAvisoEnviado(vaciar) {
 // Pinta el panel modal (móvil y respaldo en escritorio) Y el aside lateral
 // (solo visible ≥1024px) con las MISMAS líneas (lineaCarritoHtml) y el mismo
 // total CUP — una sola fuente de verdad, nada de lógica duplicada.
+// La tira de «añade uno de estos y la mensajería te sale gratis». Se pinta en el panel y en
+// el aside con el MISMO html: una sola fuente de verdad, igual que lineaEnvioTexto().
+//
+// 🔴 El hueco sale de envioGratis(), que ya descuenta el transporte aparte. No lo
+// recalcules aquí: si mañana cambia la regla del umbral, cambia en un sitio.
+//
+// 🔴 Los botones llevan `data-add="<id>"`, que es exactamente lo que ya escucha la
+// delegación global de clics (la misma que usa accionHtml). Por eso completar.js descarta
+// los productos con variantes: su clave de carrito no es el id a secas.
+function completarEnvioHtml(eg) {
+  if (!eg.activo || eg.alcanzado) return '';
+  // Mismo criterio que lineaEnvioTexto: con solo transporte aparte en el carrito no hay
+  // umbral que alcanzar, así que tampoco hay nada que ofrecer.
+  if (totalCarritoElegible() === 0) return '';
+  const enCarrito = itemsCarrito().map(({ p }) => p.id);
+  const lista = window.Completar.candidatos(CAT.items || [], { falta: eg.falta, excluirIds: enCarrito });
+  if (!lista.length) return '';
+  return '<p class="completar-tit">Añade uno de estos y la mensajería te sale gratis</p>' +
+    '<div class="completar-tira">' +
+    lista.map((x) =>
+      '<button type="button" class="rel-card completar-card" data-add="' + escapeHtml(x.id) + '">' +
+      '<span class="rel-foto"><img src="' + fotoMosaico(x.photo) + '" alt="" loading="lazy"></span>' +
+      '<span class="rel-nom">' + escapeHtml(x.name) + '</span>' +
+      '<span class="rel-precio">' + fmt(x.precioCUP) + ' CUP</span>' +
+      '</button>').join('') +
+    '</div>';
+}
+
+function pintarCompletarEnvio(idCaja, html) {
+  const caja = document.getElementById(idCaja);
+  if (!caja) return;
+  caja.hidden = !html;
+  caja.innerHTML = html;
+}
+
 function renderCarrito() {
   const items = itemsCarrito();
   const hayItems = items.length > 0;
@@ -1613,6 +1648,7 @@ function renderCarrito() {
   // Con carrito vacío no tiene sentido construir el href (total sería 0):
   // se calcula solo cuando hay items, igual que el resto de bloques del total.
   const pagoHtml = hayItems && !cerrada() ? pagoWrapHtml() : '';
+  const completarHtml = hayItems && !cerrada() ? completarEnvioHtml(eg) : '';
 
   // Panel modal (sin cambios de fondo: sigue siendo el que lleva el formulario).
   document.getElementById('carrito-items').innerHTML = html;
@@ -1627,6 +1663,7 @@ function renderCarrito() {
   const panelPolitica = document.getElementById('panel-politica');
   panelPolitica.hidden = !hayItems || !politica;
   panelPolitica.innerHTML = politica ? escapeHtml(politica) : '';
+  pintarCompletarEnvio('completar-envio', completarHtml);
   document.getElementById('panel-terminos').hidden = !hayItems;
   const panelPago = document.getElementById('panel-pago-wrap');
   panelPago.hidden = !pagoHtml;
@@ -1655,6 +1692,7 @@ function renderCarrito() {
   const lateralPolitica = document.getElementById('lateral-politica');
   lateralPolitica.hidden = !hayItems || !politica;
   lateralPolitica.innerHTML = politica ? escapeHtml(politica) : '';
+  pintarCompletarEnvio('lateral-completar', completarHtml);
   document.getElementById('lateral-terminos').hidden = !hayItems;
   document.getElementById('btn-lateral-pedir').hidden = !hayItems;
   const lateralPago = document.getElementById('lateral-pago-wrap');
