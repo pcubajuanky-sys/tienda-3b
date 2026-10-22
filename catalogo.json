@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-22T20:35:05.900Z",
+  "generado": "2026-10-22T22:57:11.723Z",
   "tasa": 825,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -791,10 +791,10 @@
       "subcat": "",
       "notes": "¡Despierta el poder natural de tu cabello!\nEl aceite esencial de jengibre no es solo un aroma… es un impulso de vida para tu melena.\nEstimula el cuero cabelludo, fortalece desde la raíz, reduce la caída y deja tu cabello más brillante, denso y con un brillo saludable que se nota.\nUnas gotas al día y tu cabello empieza a hablar por ti.\nJengibre puro. Resultados reales.\nTu cabello merece este despertar.",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786943069/productos/bm4t98qh8ogtry5nnpxt.jpg",
-      "precioUSD": 3.3,
-      "precioCUP": 2723,
+      "precioUSD": 4,
+      "precioCUP": 3300,
       "moneda": "usd",
-      "enOferta": true,
+      "enOferta": false,
       "destacado": false,
       "max": 3,
       "envio": {
@@ -802,9 +802,7 @@
         "largo": "🛵 MENSAJERÍA GRATIS"
       },
       "envioGratis": true,
-      "creado": 1786943265900,
-      "precioNormalUSD": 4,
-      "precioNormalCUP": 3300
+      "creado": 1786943265900
     },
     {
       "id": "p_1789489796373",
@@ -838,7 +836,7 @@
       "moneda": "cup",
       "enOferta": false,
       "destacado": false,
-      "max": 5,
+      "max": 4,
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
@@ -1672,7 +1670,7 @@
         "C": 2,
         "D": 1,
         "E": 1,
-        "F": 3,
+        "F": 2,
         "G": 1
       },
       "envio": {
@@ -2984,7 +2982,7 @@
       "moneda": "usd",
       "enOferta": true,
       "destacado": false,
-      "max": 4,
+      "max": 3,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -3926,7 +3924,7 @@
       "moneda": "cup",
       "enOferta": false,
       "destacado": false,
-      "max": 3,
+      "max": 2,
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
@@ -3980,7 +3978,7 @@
       "moneda": "cup",
       "enOferta": false,
       "destacado": false,
-      "max": 8,
+      "max": 6,
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
@@ -4195,9 +4193,9 @@
       "subcat": "",
       "notes": "Paquetes de 6 unidades",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786714500/productos/owftuoin0hygs5ydmefm.jpg",
-      "precioUSD": 1.21,
-      "precioCUP": 1000,
-      "moneda": "cup",
+      "precioUSD": 1.5,
+      "precioCUP": 1238,
+      "moneda": "usd",
       "enOferta": false,
       "destacado": false,
       "envio": {
@@ -4591,13 +4589,31 @@
       "cat": "Cabello",
       "subcat": "",
       "notes": "",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785274932/productos/udaqxhqoeiuqqn590yjj.jpg",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792706088/productos/apwy8zxlsjbe04kreobw.jpg",
       "precioUSD": 0.48,
       "precioCUP": 400,
       "moneda": "cup",
       "enOferta": false,
       "destacado": false,
-      "max": 6,
+      "variantes": {
+        "ejes": [
+          "Diseño"
+        ],
+        "opciones": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ]
+      },
+      "maxOpciones": {
+        "A": 1,
+        "C": 1,
+        "D": 1
+      },
+      "esperaOpciones": [
+        "B"
+      ],
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
