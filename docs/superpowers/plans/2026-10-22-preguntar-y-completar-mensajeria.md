@@ -67,7 +67,8 @@ Si al empezar no te da eso, para y avisa: alguien dejó el árbol sucio.
 | `completar.js` | Módulo puro: elige qué productos ofrecer para cruzar el umbral de mensajería gratis. | Crear |
 | `test/completar.test.js` | Sus pruebas. | Crear |
 | `index.html` | Dos contenedores vacíos + dos `<script src>`. | Modificar |
-| `app.js` | Dos funciones que pintan, y sus llamadas. | Modificar |
+| `app.js` | Dos funciones que pintan, sus llamadas, y el helper `destinoWhatsApp()`. | Modificar |
+| `test/negocio.test.js` | La prueba-barrera del destino, reescrita para el helper (ver Task 2, Step 3a). | Modificar |
 | `estilos.css` | Estilos de los dos bloques nuevos. | Modificar |
 | `sw.js` | `CACHE` a `v21` + los dos archivos nuevos en `ARMAZON`. | Modificar |
 
@@ -122,8 +123,11 @@ test('en espera el mensaje pide que le avisen', () => {
 });
 
 test('un producto sin codigo no escribe un parentesis vacio', () => {
-  const m = mensaje({ name: 'Cosa sin codigo' }, false);
-  assert.match(m, /Cosa sin codigo/);
+  // 🔴 El nombre NO puede contener la palabra «codigo»: el ultimo assert busca esa
+  // palabra en el mensaje entero, y un nombre como «Cosa sin codigo» lo hace fallar
+  // solo (error real del plan, cazado al ejecutar el 2026-10-22).
+  const m = mensaje({ name: 'Cosa sin referencia' }, false);
+  assert.match(m, /Cosa sin referencia/);
   assert.ok(!/\(\s*\)/.test(m), `parentesis vacio en: ${m}`);
   assert.ok(!/c[óo]digo/i.test(m), `habla de un codigo que no existe: ${m}`);
 });
@@ -135,8 +139,11 @@ test('sin producto no hay mensaje', () => {
 });
 
 test('el enlace lleva el telefono en digitos y el texto codificado', () => {
+  // 🔴 El «53» de delante es el prefijo de pais y SE CONSERVA: WhatsApp lo necesita para
+  // abrir el chat. Lo que se quita son el «+», los espacios y los guiones. (El plan pedia
+  // 5363268423 por error; corregido el 2026-10-22 al ejecutarlo.)
   const url = enlace('+53 5363-268423', P, false);
-  assert.match(url, /^https:\/\/api\.whatsapp\.com\/send\?phone=5363268423&text=/);
+  assert.match(url, /^https:\/\/api\.whatsapp\.com\/send\?phone=535363268423&text=/);
   assert.match(url, /24PU/);
   assert.ok(!url.includes(' '), 'el texto tiene que ir codificado');
 });
@@ -279,7 +286,44 @@ Déjala así (la nueva debajo):
 <script src="preguntar.js"></script>
 ```
 
-- [ ] **Step 3: Escribe la función que pinta, en `app.js`**
+- [ ] **Step 3a: Extrae el helper `destinoWhatsApp()` en `app.js`**
+
+> 🔴 **Esto NO estaba en la primera versión del plan: se descubrió al ejecutarlo el
+> 2026-10-22.** `test/negocio.test.js` tiene una prueba-barrera que **cuenta** cuántas veces
+> aparece `gestorRecargo && gestorRecargo.telPublico` en `app.js` y exige que todas lleven
+> la guarda `esCasaWeb()`. Existe porque esa lógica duplicada ya causó un fallo real (en la
+> tienda del socio el pedido se desviaba a un gestor que no pone ese precio). La función de
+> abajo añadía una **tercera** copia y la prueba se puso roja — con razón. La salida no es
+> subir el contador, es dejar de duplicar.
+
+Busca el final de `resolverVendedor()` y pega **justo debajo de su llave de cierre**:
+
+```js
+// Quien pone el precio, atiende: si la visita entro por la pagina de un gestor con
+// recargo, lo que se le escriba va a SU WhatsApp; si no, al numero de la casa.
+//
+// 🔴 ESTE ES EL UNICO SITIO donde se decide ese destino. NO vuelvas a copiar la expresion.
+//
+// 🔴 La guarda esCasaWeb() no es opcional: en la tienda de un negocio asociado NO cae
+// recargo y precios-gestores.json no lleva sus productos, asi que el gestor no pone ese
+// precio y el mensaje tiene que ir al numero de la casa.
+function destinoWhatsApp() {
+  return (esCasaWeb() && gestorRecargo && gestorRecargo.telPublico) || (CAT && CAT.whatsapp);
+}
+```
+
+Y sustituye la línea `const destino = ...` por `const destino = destinoWhatsApp();` en los
+**dos** sitios que ya existían: `pintarPregunta` (búsqueda sin resultados) y
+`enviarPorWhatsApp` (el pedido). 🔴 En `enviarPorWhatsApp` **solo esa línea**: el mensaje,
+el `Ref:` y el `window.open` no se tocan. Ojo, ahí la original terminaba en `|| CAT.whatsapp`
+sin la guarda `CAT &&`; el helper sí la lleva, que es la forma correcta.
+
+Luego reescribe la prueba-barrera de `test/negocio.test.js` para que exija **una sola**
+aparición (dentro del helper) más `assert.ok(app.includes('function destinoWhatsApp()'))`.
+Así la barrera pasa de contar copias a ser estructural: con un solo sitio, olvidar la guarda
+deja de ser posible en vez de solo detectable.
+
+- [ ] **Step 3b: Escribe la función que pinta, en `app.js`**
 
 Busca la función `pintarEsperaFicha` (empieza en la línea ~607) y pega **justo debajo de su
 llave de cierre** esta función nueva:
@@ -288,16 +332,14 @@ llave de cierre** esta función nueva:
 // El botón de preguntar de la ficha. Se repinta junto a la acción porque el texto cambia
 // si la combinación elegida está pedida.
 //
-// 🔴 Mismo destino que el pedido y que la búsqueda sin resultados: quien pone el precio,
-// atiende. Si la visita entró por la página de un gestor con recargo, le escribe a ÉL; si
-// no, al número de la casa. No lo "arregles" mandándolo siempre a la casa: el gestor pone
-// ese precio y es quien responde por él.
+// 🔴 El destino sale de destinoWhatsApp(), el mismo que usan el pedido y la búsqueda sin
+// resultados: quien pone el precio, atiende.
 function pintarPreguntarProducto(id, clave) {
   const caja = document.getElementById('ficha-preguntar');
   if (!caja) return;
   const p = productoDe(id);
   const esperando = Espera.enEspera(p, clave || null);
-  const destino = (esCasaWeb() && gestorRecargo && gestorRecargo.telPublico) || (CAT && CAT.whatsapp);
+  const destino = destinoWhatsApp();
   const url = window.Preguntar.enlace(destino, p, esperando);
   if (!url) { caja.hidden = true; caja.innerHTML = ''; return; }   // sin número no se enseña
   const texto = esperando ? window.Preguntar.TEXTO_BOTON_ESPERA : window.Preguntar.TEXTO_BOTON;
@@ -467,16 +509,25 @@ test('el tope se puede bajar, nunca subir por encima de MAX', () => {
   assert.strictEqual(candidatos(muchos, { falta: 100, excluirIds: [], max: 99 }).length, MAX);
 });
 
+// 🔴 Los dos tests de abajo comprueban `.length === 0` y NO `deepStrictEqual(x, [])`.
+// Motivo, medido el 2026-10-22: las salidas tempranas del modulo son `return []`, un
+// literal creado DENTRO del sandbox de node:vm, que no comparte el Array de este realm
+// (`r instanceof Array` da false) — deepStrictEqual contra un literal falla siempre.
+//
+// 🔴 Matiz que el CLAUDE.md del proyecto enuncia demasiado ancho: NO todo array que vuelve
+// del sandbox tiene el problema. `items.filter(...)` hereda el Array de `items`, que lo
+// pasamos nosotros desde FUERA, asi que ese si es un Array normal. Por eso los tests de
+// arriba pueden usar deepStrictEqual sobre `.map(...)` sin problema, y estos dos no.
 test('sin hueco que llenar no se ofrece nada', () => {
-  assert.deepStrictEqual(candidatos(items, { falta: 0, excluirIds: [] }), []);
-  assert.deepStrictEqual(candidatos(items, { falta: -5, excluirIds: [] }), []);
+  assert.strictEqual(candidatos(items, { falta: 0, excluirIds: [] }).length, 0);
+  assert.strictEqual(candidatos(items, { falta: -5, excluirIds: [] }).length, 0);
 });
 
 test('no lanza con basura', () => {
-  assert.deepStrictEqual(candidatos(null, { falta: 500, excluirIds: [] }), []);
-  assert.deepStrictEqual(candidatos(items, null), []);
-  assert.deepStrictEqual(candidatos([null, undefined, {}], { falta: 500, excluirIds: [] }), []);
-  assert.deepStrictEqual(candidatos(items, { falta: 'mucho', excluirIds: [] }), []);
+  assert.strictEqual(candidatos(null, { falta: 500, excluirIds: [] }).length, 0);
+  assert.strictEqual(candidatos(items, null).length, 0);
+  assert.strictEqual(candidatos([null, undefined, {}], { falta: 500, excluirIds: [] }).length, 0);
+  assert.strictEqual(candidatos(items, { falta: 'mucho', excluirIds: [] }).length, 0);
 });
 ```
 
