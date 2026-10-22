@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-21T21:18:55.488Z",
+  "generado": "2026-10-22T02:29:10.358Z",
   "tasa": 815,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -714,6 +714,26 @@
   },
   "items": [
     {
+      "id": "p_1782340130001",
+      "codigo": "NPRS",
+      "name": "2 Paquetes de Aplicadores",
+      "cat": "Cuidado Personal",
+      "subcat": "",
+      "notes": "",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782340086/productos/g8ijdb0wchzfnhjqkm48.jpg",
+      "precioUSD": 1,
+      "precioCUP": 815,
+      "moneda": "cup",
+      "enOferta": false,
+      "destacado": false,
+      "max": 7,
+      "envio": {
+        "corto": "🛵 Gratis desde 2,000 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
+      },
+      "creado": 1782340130001
+    },
+    {
       "id": "p_1786921885931",
       "codigo": "5HP4",
       "name": "Abrigo de Chihuahua de rayas rosas ra",
@@ -779,8 +799,8 @@
       },
       "envioGratis": true,
       "creado": 1786943265900,
-      "precioNormalUSD": 3.73,
-      "precioNormalCUP": 3040
+      "precioNormalUSD": 4,
+      "precioNormalCUP": 3260
     },
     {
       "id": "p_1789489796373",
@@ -889,25 +909,6 @@
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
       },
       "creado": 1787499027905
-    },
-    {
-      "id": "p_1782340130001",
-      "codigo": "NPRS",
-      "name": "Aplicadores",
-      "cat": "Cuidado Personal",
-      "subcat": "",
-      "notes": "",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782340086/productos/g8ijdb0wchzfnhjqkm48.jpg",
-      "precioUSD": 0.43,
-      "precioCUP": 350,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      },
-      "creado": 1782340130001
     },
     {
       "id": "p_1781551585230",
@@ -1121,16 +1122,44 @@
     {
       "id": "p_1786923820539",
       "codigo": "DATD",
-      "name": "Bálsamo labial",
+      "name": "Bálsamos labiales",
       "cat": "Cuidado Personal",
       "subcat": "",
       "notes": "Bálsamos labiales de deliciosos olores\nTodos los de la imagen disponibles",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786923515/productos/bppuqhw3rdvwcyvtbwex.jpg",
-      "precioUSD": 0.49,
-      "precioCUP": 400,
-      "moneda": "cup",
+      "precioUSD": 0.5,
+      "precioCUP": 408,
+      "moneda": "usd",
       "enOferta": false,
       "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Sabores"
+        ],
+        "opciones": [
+          "MELÓN",
+          "MELOCOTÓN",
+          "MANGO",
+          "LIMÓN",
+          "COCO",
+          "VAINILLA",
+          "ALOE",
+          "ROSA",
+          "FRAMBUESA",
+          "CEREZA",
+          "CAFÉ",
+          "MENTA"
+        ]
+      },
+      "maxOpciones": {
+        "MELOCOTÓN": 9,
+        "MANGO": 9,
+        "VAINILLA": 8,
+        "FRAMBUESA": 8,
+        "CEREZA": 8,
+        "CAFÉ": 8,
+        "MENTA": 5
+      },
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
@@ -1729,6 +1758,18 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Color"
+        ],
+        "opciones": [
+          "ROSA",
+          "NEGRO"
+        ]
+      },
+      "maxOpciones": {
+        "ROSA": 5
+      },
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
@@ -1867,9 +1908,9 @@
       "subcat": "",
       "notes": "Delineador de Ojos Negro, Punta Ultra Fina Larga, Maquillaje de Larga Duración a Prueba de Líquido y Manchas, Maquillaje Diario, Ojos Definidos, Delineador Audaz, Deslizamiento Fácil, Resistente a las Manchas, Herramienta de Belleza, Lápiz Cosmético, Maquillaje Profesional",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782259080/productos/mbfakfzkcmwaxytpwuov.jpg",
-      "precioUSD": 0.74,
-      "precioCUP": 600,
-      "moneda": "cup",
+      "precioUSD": 1,
+      "precioCUP": 815,
+      "moneda": "usd",
       "enOferta": false,
       "destacado": false,
       "envio": {
@@ -2401,39 +2442,35 @@
       "creado": 1785006638149
     },
     {
-      "id": "p_1780620383239",
-      "codigo": "K84G",
-      "name": "Gloss",
-      "cat": "Cuidado Personal",
-      "subcat": "",
-      "notes": "Set de 6 mini gloss. Hermosos y variados tonos. Mensajería gratis",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782219129/productos/kj3w0n6vt5ymzqluqaap.jpg",
-      "precioUSD": 4.91,
-      "precioCUP": 4000,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1780620383239
-    },
-    {
       "id": "p_1786923457095",
       "codigo": "WBXN",
       "name": "Gloss",
       "cat": "Cuidado Personal",
       "subcat": "",
       "notes": "Gloss de diferentes tonalidades y un olor delicioso",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786923360/productos/kc1vesnxydbkvped5xgk.jpg",
-      "precioUSD": 0.74,
-      "precioCUP": 600,
-      "moneda": "cup",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792619013/productos/kr1ocrhvx9xa6vsncrnh.jpg",
+      "precioUSD": 1,
+      "precioCUP": 815,
+      "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 9,
+      "variantes": {
+        "ejes": [
+          "Tonos"
+        ],
+        "opciones": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ]
+      },
+      "maxOpciones": {
+        "A": 2,
+        "B": 1,
+        "C": 3,
+        "D": 3
+      },
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
@@ -2699,6 +2736,38 @@
       "creado": 1782259495566
     },
     {
+      "id": "p_1792621415401",
+      "codigo": "4XWR",
+      "name": "Kit de uñas de 5 piezas",
+      "cat": "Uñas",
+      "subcat": "",
+      "notes": "El paquete contiene 5 accesorios útiles para el cuidado diario de las uñas tanto en casa como para uso profesional",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792621290/productos/dgibanohmulvz9kbnuwr.jpg",
+      "precioUSD": 2,
+      "precioCUP": 1630,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Color"
+        ],
+        "opciones": [
+          "ROSA",
+          "GRIS"
+        ]
+      },
+      "maxOpciones": {
+        "ROSA": 2,
+        "GRIS": 3
+      },
+      "envio": {
+        "corto": "🛵 Gratis desde 2,000 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
+      },
+      "creado": 1792621415401
+    },
+    {
       "id": "p_1782329548997",
       "codigo": "8YTJ",
       "name": "Labiales Carmelitas",
@@ -2726,9 +2795,9 @@
       "subcat": "",
       "notes": "Lápiz Delineador Negro Impermeable y Resistente al Sudor - Duradero, No Mancha para un Maquillaje de Ojos Audaz, Fórmula Suave",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782259227/productos/wzdbps1jg3clzkhat6tj.jpg",
-      "precioUSD": 0.49,
-      "precioCUP": 400,
-      "moneda": "cup",
+      "precioUSD": 0.5,
+      "precioCUP": 408,
+      "moneda": "usd",
       "enOferta": false,
       "destacado": false,
       "envio": {
@@ -2915,18 +2984,19 @@
       "notes": "Lima de pies de acero inoxidable con juego de repuesto gratuito, herramienta profesional para eliminar piel muerta, con mango antideslizante y apta para uso en seco y húmedo",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782339455/productos/f44wmt0fyjhno0mjzndp.jpg",
       "precioUSD": 3.07,
-      "precioCUP": 2500,
-      "moneda": "cup",
+      "precioCUP": 2502,
+      "moneda": "usd",
       "enOferta": true,
       "destacado": false,
+      "max": 4,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
       },
       "envioGratis": true,
       "creado": 1782339511897,
-      "precioNormalUSD": 3.31,
-      "precioNormalCUP": 2700
+      "precioNormalUSD": 3,
+      "precioNormalCUP": 2445
     },
     {
       "id": "p_1788314603975",
@@ -3177,11 +3247,12 @@
       "subcat": "",
       "notes": "Mascarilla facial negra de carbón de bambú,  limpieza profunda de la piel facial para puntos negros y blancos, extractos naturales, ingrediente suave, hidratante y control de grasa, ilumina la piel, apta para todo tipo de piel, la piel luce visiblemente rejuvenecida",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782259607/productos/vyo6dwsbzxnipbsgrtc9.jpg",
-      "precioUSD": 2.58,
-      "precioCUP": 2100,
-      "moneda": "cup",
+      "precioUSD": 3,
+      "precioCUP": 2445,
+      "moneda": "usd",
       "enOferta": false,
       "destacado": false,
+      "max": 2,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -3221,7 +3292,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 5,
+      "max": 6,
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
@@ -4550,12 +4621,12 @@
       "subcat": "",
       "notes": "Pestañas Postizas MAGEFY en Caja Estilo Mixto Naturales Largas Cruzadas Rizadas y Esponjosas, Adecuadas para Uso Diario y Viajes . Con su adhesivo incluído",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782329615/productos/m0im1q6zm39ylege8jxh.jpg",
-      "precioUSD": 0.61,
-      "precioCUP": 500,
-      "moneda": "cup",
+      "precioUSD": 1,
+      "precioCUP": 815,
+      "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 6,
+      "max": 4,
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
@@ -4720,8 +4791,8 @@
       "subcat": "",
       "notes": "Ideal para proteger los oídos de los niños de la entrada de agua,ya sea en el baño,la playa, piscinas, etc... También tiene un perfecto uso para evitar manchas de tintes en esa zona\nEl paquete trae 20 pares",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782343040/productos/rzxjmldhmvwxyoh1u5ld.jpg",
-      "precioUSD": 1.5,
-      "precioCUP": 1223,
+      "precioUSD": 2,
+      "precioCUP": 1630,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -5398,6 +5469,26 @@
       "creado": 1788151078303
     },
     {
+      "id": "p_1782341002481",
+      "codigo": "QW8P",
+      "name": "Repuestos de máquina de afeitar",
+      "cat": "Cuidado Personal",
+      "subcat": "",
+      "notes": "Paquete de 6 repuestos de máquinas de afeitar de 3 hojas",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782340949/productos/icgyi1gsdr1hd3mrng2u.jpg",
+      "precioUSD": 1,
+      "precioCUP": 815,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "max": 2,
+      "envio": {
+        "corto": "🛵 Gratis desde 2,000 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
+      },
+      "creado": 1782341002481
+    },
+    {
       "id": "p_1791228633743",
       "codigo": "NC68",
       "name": "Rollo de papel tapiz autoadhesivo 5m",
@@ -5585,11 +5676,12 @@
       "subcat": "",
       "notes": "Suero Facial 5 en 1 con Ácido Hialurónico, Colágeno, Niacinamida, Vitaminas C y E. Minimiza Poros, Control de Sebo, Hidratante. Adecuado para Todo Tipo de Piel, Hipoaergénico.",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782259706/productos/wewused76wjxguosoz5l.jpg",
-      "precioUSD": 2.58,
-      "precioCUP": 2100,
-      "moneda": "cup",
+      "precioUSD": 3,
+      "precioCUP": 2445,
+      "moneda": "usd",
       "enOferta": false,
       "destacado": false,
+      "max": 3,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -5605,12 +5697,12 @@
       "subcat": "",
       "notes": "Cápsulas de Ácido Hialurónico\nHidrataión profunda\nHidratante y Suavizante para la piel\nContiene Escualano Vegetal\nVitaminas E y C\nEl paquete trae 10 cápsulas",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782339669/productos/xbmibztojd4suitasup4.jpg",
-      "precioUSD": 0.98,
-      "precioCUP": 800,
-      "moneda": "cup",
+      "precioUSD": 1,
+      "precioCUP": 815,
+      "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 3,
+      "max": 2,
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
@@ -5625,12 +5717,12 @@
       "subcat": "",
       "notes": "Cápsulas de Sérum con Vitamina E y C\nGel Encapsulado de Pureza para Rostro\nLigero y No Graso\nPara Todo Tipo de Piel\nEsencia de Cuidado Diario",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782339753/productos/uq4unqxsipovpavt4qex.jpg",
-      "precioUSD": 0.98,
-      "precioCUP": 800,
-      "moneda": "cup",
+      "precioUSD": 1,
+      "precioCUP": 815,
+      "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 3,
+      "max": 2,
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
