@@ -658,6 +658,10 @@ function pintarPreguntarProducto(id, clave) {
 function pintarListoFicha(id) {
   const caja = document.getElementById('ficha-listo');
   if (!caja) return;
+  // Tienda cerrada: la ficha informa, no vende — mismo criterio que accionHtml(), que
+  // devuelve vacío, y que la barra inferior, que se esconde. Sin esto el botón sería el
+  // único camino al pedido que queda abierto justo cuando el negocio está cerrado.
+  if (cerrada()) { caja.hidden = true; caja.innerHTML = ''; return; }
   const hay = window.Listo.enElPedido(id, carrito);
   const txt = hay ? window.Listo.texto(unidadesEnCarrito()) : '';
   if (!txt) { caja.hidden = true; caja.innerHTML = ''; return; }
