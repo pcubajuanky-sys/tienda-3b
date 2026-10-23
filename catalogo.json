@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-23T23:08:13.163Z",
+  "generado": "2026-10-23T23:09:25.363Z",
   "tasa": 830,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -2317,7 +2317,6 @@
         "opciones": [
           "A",
           "B",
-          "C",
           "D",
           "E",
           "F"
@@ -2330,7 +2329,6 @@
         "E": 1
       },
       "esperaOpciones": [
-        "C",
         "F"
       ],
       "envio": {
@@ -2363,17 +2361,13 @@
         ],
         "opciones": [
           "A",
-          "B",
-          "C"
+          "B"
         ]
       },
       "maxOpciones": {
         "A": 1,
         "B": 1
       },
-      "esperaOpciones": [
-        "C"
-      ],
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -2406,13 +2400,11 @@
         ]
       },
       "maxOpciones": {
-        "A": 1,
+        "A": 2,
         "B": 1,
-        "C": 1
+        "C": 1,
+        "D": 1
       },
-      "esperaOpciones": [
-        "D"
-      ],
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
@@ -5721,27 +5713,6 @@
       },
       "envioGratis": true,
       "creado": 1792340423078
-    },
-    {
-      "id": "p_1782259924259",
-      "codigo": "5MDP",
-      "name": "Sérum 5en1",
-      "cat": "Cuidado Personal",
-      "subcat": "",
-      "notes": "Suero Facial 5 en 1 con Ácido Hialurónico, Colágeno, Niacinamida, Vitaminas C y E. Minimiza Poros, Control de Sebo, Hidratante. Adecuado para Todo Tipo de Piel, Hipoaergénico.",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782259706/productos/wewused76wjxguosoz5l.jpg",
-      "precioUSD": 3,
-      "precioCUP": 2490,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "espera": true,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1782259924259
     },
     {
       "id": "p_1782339751417",
