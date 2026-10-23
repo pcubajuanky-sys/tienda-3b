@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-23T15:33:36.019Z",
+  "generado": "2026-10-23T15:42:13.952Z",
   "tasa": 830,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -3462,7 +3462,7 @@
       "maxOpciones": {
         "NEGRO CON VERDE": 2,
         "NEGRO CON NARANJA": 1,
-        "NEGRO CON GRIS": 2
+        "NEGRO CON GRIS": 1
       },
       "envio": {
         "corto": "🛵 Mensajería gratis",
@@ -5210,7 +5210,7 @@
       "moneda": "cup",
       "enOferta": false,
       "destacado": false,
-      "max": 1,
+      "espera": true,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
