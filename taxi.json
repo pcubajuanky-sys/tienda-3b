@@ -1,9 +1,9 @@
 {
-  "generado": "2026-10-20T21:00:28.782Z",
+  "generado": "2026-10-23T17:23:42.493Z",
   "vigenciaHoras": 48,
   "activo": true,
   "electripowerActivo": false,
-  "tasa": 815,
+  "tasa": 830,
   "whatsapp": "5358856820",
   "whatsappAltas": "5354978966",
   "marca": {
@@ -15,8 +15,8 @@
   },
   "esperaHoraCUP": 0,
   "recta": {
-    "porKmCUP": 680.1990000000002,
-    "baseCUP": 3178.5000000000005,
+    "porKmCUP": 692.7180000000002,
+    "baseCUP": 3237.0000000000005,
     "redondeoCUP": 50,
     "factorCompartido": 1.25
   },
@@ -121,25 +121,18 @@
     {
       "code": "AQJXE",
       "nombre": "Heidy García Castellanos"
+    },
+    {
+      "code": "MG6K3",
+      "nombre": "Lisbet"
+    },
+    {
+      "code": "FH6W8",
+      "nombre": "Yeleni Pacheco Carvajal"
     }
   ],
   "comisionPorKmCUP": 20,
   "agenda": [
-    {
-      "fecha": "2026-10-20",
-      "manana": false,
-      "tarde": false
-    },
-    {
-      "fecha": "2026-10-21",
-      "manana": false,
-      "tarde": false
-    },
-    {
-      "fecha": "2026-10-22",
-      "manana": false,
-      "tarde": false
-    },
     {
       "fecha": "2026-10-23",
       "manana": false,
@@ -194,6 +187,21 @@
       "fecha": "2026-11-02",
       "manana": false,
       "tarde": false
+    },
+    {
+      "fecha": "2026-11-03",
+      "manana": false,
+      "tarde": false
+    },
+    {
+      "fecha": "2026-11-04",
+      "manana": false,
+      "tarde": false
+    },
+    {
+      "fecha": "2026-11-05",
+      "manana": false,
+      "tarde": false
     }
   ],
   "destinos": [
@@ -201,70 +209,70 @@
       "id": "acuario",
       "nombre": "Acuario Nacional",
       "km": 29,
-      "idaCUP": 22950,
+      "idaCUP": 23350,
       "idaUSD": 28.1,
-      "idaVueltaCUP": 22950,
+      "idaVueltaCUP": 23350,
       "idaVueltaUSD": 28.1,
       "asientoCUP": {
-        "2": 14350,
-        "3": 9550,
-        "4": 7200
+        "2": 14600,
+        "3": 9750,
+        "4": 7300
       }
     },
     {
       "id": "capitolio",
       "nombre": "Capitolio Nacional",
       "km": 42,
-      "idaCUP": 31750,
+      "idaCUP": 32350,
       "idaUSD": 38.95,
-      "idaVueltaCUP": 31750,
+      "idaVueltaCUP": 32350,
       "idaVueltaUSD": 38.95,
       "asientoCUP": {
-        "2": 19850,
-        "3": 13250,
-        "4": 9950
+        "2": 20250,
+        "3": 13500,
+        "4": 10150
       }
     },
     {
       "id": "guira",
       "nombre": "Güira de Melena",
       "km": 11,
-      "idaCUP": 10700,
+      "idaCUP": 10900,
       "idaUSD": 13.08,
-      "idaVueltaCUP": 10700,
+      "idaVueltaCUP": 10900,
       "idaVueltaUSD": 13.08,
       "asientoCUP": {
-        "2": 6700,
-        "3": 4450,
-        "4": 3350
+        "2": 6800,
+        "3": 4550,
+        "4": 3400
       }
     },
     {
       "id": "calixto",
       "nombre": "Hospital Calixto García",
       "km": 34,
-      "idaCUP": 26350,
+      "idaCUP": 26800,
       "idaUSD": 32.28,
-      "idaVueltaCUP": 26350,
+      "idaVueltaCUP": 26800,
       "idaVueltaUSD": 32.28,
       "asientoCUP": {
-        "2": 16450,
-        "3": 11000,
-        "4": 8250
+        "2": 16750,
+        "3": 11200,
+        "4": 8400
       }
     },
     {
       "id": "terminal",
       "nombre": "Terminal de Ómnibus Nacionales",
       "km": 32,
-      "idaCUP": 24950,
+      "idaCUP": 25450,
       "idaUSD": 30.61,
-      "idaVueltaCUP": 24950,
+      "idaVueltaCUP": 25450,
       "idaVueltaUSD": 30.61,
       "asientoCUP": {
-        "2": 15600,
-        "3": 10400,
-        "4": 7800
+        "2": 15900,
+        "3": 10600,
+        "4": 7950
       }
     }
   ],
