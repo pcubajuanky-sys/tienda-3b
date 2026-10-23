@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-23T21:44:43.831Z",
+  "generado": "2026-10-23T23:08:13.163Z",
   "tasa": 830,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -2285,7 +2285,7 @@
       },
       "maxOpciones": {
         "BLANCO": 2,
-        "PUMA": 1
+        "PUMA": 2
       },
       "esperaOpciones": [
         "NEGRO"
@@ -2369,9 +2369,11 @@
       },
       "maxOpciones": {
         "A": 1,
-        "B": 1,
-        "C": 1
+        "B": 1
       },
+      "esperaOpciones": [
+        "C"
+      ],
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -2826,7 +2828,7 @@
       "moneda": "cup",
       "enOferta": false,
       "destacado": false,
-      "max": 7,
+      "max": 8,
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
@@ -3941,26 +3943,6 @@
       "creado": 1788618415087
     },
     {
-      "id": "p_1780951622289",
-      "codigo": "NY5G",
-      "name": "Paquete de 20 mini Tic-Tac",
-      "cat": "Cabello",
-      "subcat": "",
-      "notes": "Cada paquete trae 20\nMaterial: Metálicos",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788098164/productos/pd3fjwiylpa6xhd6arqr.jpg",
-      "precioUSD": 1,
-      "precioCUP": 830,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "espera": true,
-      "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      },
-      "creado": 1780951622289
-    },
-    {
       "id": "p_1780608497220",
       "codigo": "2XN8",
       "name": "Paquete de 25 florecitas tipo Piojitos",
@@ -4013,6 +3995,33 @@
       "creado": 1781005769619,
       "precioNormalUSD": 2.2,
       "precioNormalCUP": 1826
+    },
+    {
+      "id": "p_1792791923752",
+      "codigo": "MX6W",
+      "name": "Paquete de 4 cintillos elegantes",
+      "cat": "Cabello",
+      "subcat": "",
+      "notes": "Los 4 diseños de la imagen principal. 3 diseños de brillos en tonos que combinan con todo, material: Plástico engomado ultra flexible. Uno en diseño de perlas blancas, material: metal dorado",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792791701/productos/ntu1yw6vvf8vxahmtogu.jpg",
+      "precioUSD": 8,
+      "precioCUP": 6640,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792792089/productos/wmxfiloq9rrb3zdhyeeb.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792792098/productos/nc8uhkjlmbswpbofku55.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792792103/productos/klxse0dwypcxsuqqb7hr.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792792115/productos/rf1p41b8td2fqhzpxckg.jpg"
+      ],
+      "max": 3,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1792791923752
     },
     {
       "id": "p_1786930924590",
@@ -4184,16 +4193,35 @@
       "subcat": "",
       "notes": "Set 6 unidades de mariposas brillantes para el cabello. Diseños en tonos rosa, celeste, lila, plateado y blanco con acabado glitter. Cierre metálico dorado seguro y resistente. Ideales para peinados infantiles, fiestas o uso diario.",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788097881/productos/agel6mi5958o93edwstf.jpg",
-      "precioUSD": 2.41,
-      "precioCUP": 2000,
-      "moneda": "cup",
+      "precioUSD": 2.4,
+      "precioCUP": 1992,
+      "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792794364/productos/vbz74rr8evacbkpzsh0m.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792794368/productos/kkjfx22s7g3jqltrzdlr.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792794372/productos/w75vqew3pfyeey4j8qne.jpg"
+      ],
+      "variantes": {
+        "ejes": [
+          "Diseños"
+        ],
+        "opciones": [
+          "A",
+          "B",
+          "MIXTOS"
+        ]
       },
-      "envioGratis": true,
+      "maxOpciones": {
+        "A": 4,
+        "B": 4,
+        "MIXTOS": 1
+      },
+      "envio": {
+        "corto": "🛵 Gratis desde 2,000 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
+      },
       "creado": 1780609726389
     },
     {
@@ -4204,9 +4232,9 @@
       "subcat": "",
       "notes": "El paquete contiene 6 unidades\nMateriales: mariposas plásticas ,gancho metálico",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788131707/productos/fnawyhmwlm29vqrhlzg7.jpg",
-      "precioUSD": 2.17,
-      "precioCUP": 1800,
-      "moneda": "cup",
+      "precioUSD": 2.2,
+      "precioCUP": 1826,
+      "moneda": "usd",
       "enOferta": false,
       "destacado": false,
       "max": 1,
