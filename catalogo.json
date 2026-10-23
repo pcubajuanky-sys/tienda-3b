@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-23T17:23:31.369Z",
+  "generado": "2026-10-23T19:12:20.673Z",
   "tasa": 830,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -2356,12 +2356,10 @@
         ]
       },
       "maxOpciones": {
+        "A": 1,
         "B": 1,
         "C": 1
       },
-      "esperaOpciones": [
-        "A"
-      ],
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -2816,7 +2814,7 @@
       "moneda": "cup",
       "enOferta": false,
       "destacado": false,
-      "max": 8,
+      "max": 7,
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
@@ -5202,27 +5200,6 @@
       },
       "envioGratis": true,
       "creado": 1789242333083
-    },
-    {
-      "id": "p_1788792642568",
-      "codigo": "S23D",
-      "name": "Pulover Unisex Negro de Pantera",
-      "cat": "Ropa",
-      "subcat": "",
-      "notes": "Tallas S (agrandadas). Tela algodonada elastizada",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791646520/productos/pefp9pwkm8acwifvz7au.jpg",
-      "precioUSD": 3.01,
-      "precioCUP": 2500,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false,
-      "espera": true,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1788792642569
     },
     {
       "id": "p_1788034256550",
