@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-23T01:42:12.016Z",
+  "generado": "2026-10-23T01:47:12.088Z",
   "tasa": 825,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -2329,11 +2329,18 @@
           "Diseño"
         ],
         "opciones": [
+          "A",
           "B",
           "C"
         ]
       },
-      "espera": true,
+      "maxOpciones": {
+        "B": 1,
+        "C": 1
+      },
+      "esperaOpciones": [
+        "A"
+      ],
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -5048,6 +5055,27 @@
       },
       "envioGratis": true,
       "creado": 1791836928935
+    },
+    {
+      "id": "p_1792719971889",
+      "codigo": "EW26",
+      "name": "Pulover de hombres \"Perro mejor amigo\"",
+      "cat": "Ropa",
+      "subcat": "",
+      "notes": "Tela algodonada elastizada",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792719851/productos/jef8mcbd3ew2cdk00h1v.jpg",
+      "precioUSD": 6,
+      "precioCUP": 4950,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "max": 1,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1792719971889
     },
     {
       "id": "p_1791836377621",
