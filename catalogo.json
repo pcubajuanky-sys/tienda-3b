@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-22T23:07:12.045Z",
+  "generado": "2026-10-23T01:07:11.947Z",
   "tasa": 825,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -2252,7 +2252,7 @@
       "maxOpciones": {
         "NEGRO": 1,
         "BLANCO": 3,
-        "PUMA": 3
+        "PUMA": 2
       },
       "envio": {
         "corto": "🛵 Mensajería gratis",
@@ -4601,7 +4601,6 @@
         ],
         "opciones": [
           "A",
-          "B",
           "C",
           "D"
         ]
@@ -4611,9 +4610,6 @@
         "C": 1,
         "D": 1
       },
-      "esperaOpciones": [
-        "B"
-      ],
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
@@ -5686,7 +5682,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 2,
+      "espera": true,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
