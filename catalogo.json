@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-24T02:48:13.576Z",
+  "generado": "2026-10-24T08:17:06.611Z",
   "tasa": 830,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -2321,9 +2321,9 @@
         ]
       },
       "maxOpciones": {
-        "A": 3,
+        "A": 2,
         "B": 5,
-        "D": 9,
+        "D": 8,
         "E": 1
       },
       "esperaOpciones": [
