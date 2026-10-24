@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-24T20:17:13.382Z",
+  "generado": "2026-10-24T21:07:13.449Z",
   "tasa": 835,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -2307,11 +2307,12 @@
           "Diseño"
         ],
         "opciones": [
-          "A",
           "B"
         ]
       },
-      "espera": true,
+      "maxOpciones": {
+        "B": 1
+      },
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
