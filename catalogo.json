@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-23T23:13:13.213Z",
+  "generado": "2026-10-24T02:48:13.576Z",
   "tasa": 830,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -881,9 +881,7 @@
           "NEGRO"
         ]
       },
-      "maxOpciones": {
-        "NEGRO": 1
-      },
+      "espera": true,
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
@@ -2853,12 +2851,17 @@
       "cat": "Cabello",
       "subcat": "",
       "notes": "Lazos aterciopelados de evilla metálica y adornados con brillantes. Ideal para niñas , adolecentes y jóvenes. Hermosos y elegantes diseños. Variedad de colores disponibles.",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790714260/productos/oxvautqjuev0sdkbkliz.jpg",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792805206/productos/ifezkjt8uue4jvapgg36.jpg",
       "precioUSD": 2,
       "precioCUP": 1660,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792805208/productos/xklqovggpbyh1sdkyuih.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792805214/productos/bvv4jund3vn9owc6ldua.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792805218/productos/wrfgkbb94mmhzzl8bytv.jpg"
+      ],
       "variantes": {
         "ejes": [
           "Color"
@@ -3840,12 +3843,17 @@
       "cat": "Cabello",
       "subcat": "",
       "notes": "10flores por paquete\nMateriales:Flor de goma y gancho metálico",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788131956/productos/pfnnrk7tq9teetv2mucs.jpg",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792805476/productos/czdmfxy4uenghq8ryxik.jpg",
       "precioUSD": 2.3,
       "precioCUP": 1909,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792805480/productos/cqbbdilo93pivfbivw6m.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792805484/productos/uf3w8weiz5x8nizrx2mv.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792805488/productos/cuggdqz7vr5r4finmwdv.jpg"
+      ],
       "max": 5,
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
@@ -3866,7 +3874,7 @@
       "moneda": "cup",
       "enOferta": false,
       "destacado": false,
-      "max": 4,
+      "max": 5,
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
@@ -3906,7 +3914,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 3,
+      "max": 4,
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
@@ -4117,27 +4125,6 @@
       "creado": 1788533425716
     },
     {
-      "id": "p_1785269406794",
-      "codigo": "UBNJ",
-      "name": "Paquete de 5 mariposas Brillantes Blancas",
-      "cat": "Cabello",
-      "subcat": "",
-      "notes": "Cada paquete trae 5 unidades\nMateriales: Mariposas de tela y ganchos metálicos",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788131774/productos/uzzzxzk5rbvv2wztosn8.jpg",
-      "precioUSD": 2.5,
-      "precioCUP": 2075,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "max": 1,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1785269406794
-    },
-    {
       "id": "p_1788150972260",
       "codigo": "5W6S",
       "name": "Paquete de 5 pellizquitos de metal",
@@ -4217,26 +4204,6 @@
       "creado": 1780609726389
     },
     {
-      "id": "p_1785271247802",
-      "codigo": "SDLS",
-      "name": "Paquete de 6 mariposas Cola de Sirena",
-      "cat": "Cabello",
-      "subcat": "",
-      "notes": "El paquete contiene 6 unidades\nMateriales: mariposas plásticas ,gancho metálico",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788131707/productos/fnawyhmwlm29vqrhlzg7.jpg",
-      "precioUSD": 2.2,
-      "precioCUP": 1826,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "max": 1,
-      "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      },
-      "creado": 1785271247806
-    },
-    {
       "id": "p_1780613171948",
       "codigo": "G6RW",
       "name": "Paquete de 6 mariposas Multialas",
@@ -4244,16 +4211,15 @@
       "subcat": "",
       "notes": "Paquete de 6Unidades\nMateriales: Mariposas de tela y ganchos metálicos",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1780613034/productos/ewezjlonywv5nm4mgcbi.jpg",
-      "precioUSD": 2.41,
-      "precioCUP": 2000,
-      "moneda": "cup",
+      "precioUSD": 2.4,
+      "precioCUP": 1992,
+      "moneda": "usd",
       "enOferta": false,
       "destacado": false,
       "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
+        "corto": "🛵 Gratis desde 2,000 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
       },
-      "envioGratis": true,
       "creado": 1780613171948
     },
     {
@@ -4264,9 +4230,9 @@
       "subcat": "",
       "notes": "El precio es por 6 pellisquitos",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787412125/productos/ljq3x7ttyw66rrs2apq7.jpg",
-      "precioUSD": 0.96,
-      "precioCUP": 800,
-      "moneda": "cup",
+      "precioUSD": 1,
+      "precioCUP": 830,
+      "moneda": "usd",
       "enOferta": false,
       "destacado": false,
       "envio": {
@@ -4283,8 +4249,8 @@
       "subcat": "",
       "notes": "Paquetes de 6 unidades",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786714500/productos/owftuoin0hygs5ydmefm.jpg",
-      "precioUSD": 1.5,
-      "precioCUP": 1245,
+      "precioUSD": 1,
+      "precioCUP": 830,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -4302,9 +4268,9 @@
       "subcat": "",
       "notes": "Paquetes de 6 unidades",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785275511/productos/bf9mpc5kyrz2osodjuj8.jpg",
-      "precioUSD": 0.96,
-      "precioCUP": 800,
-      "moneda": "cup",
+      "precioUSD": 1,
+      "precioCUP": 830,
+      "moneda": "usd",
       "enOferta": false,
       "destacado": false,
       "max": 5,
@@ -4588,8 +4554,8 @@
       "notes": "Peine profesional de barbería en plástico resistente. Diseño ergonómico con dientes ondulados y sección de peinado fino, ideal para cortes, degradados y peinados precisos. Ligero, fácil de limpiar y de agarre cómodo. Herramienta indispensable para barberos y estilistas.",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788034950/productos/h5tbbkndutfbgpuurfkv.jpg",
       "precioUSD": 0.24,
-      "precioCUP": 200,
-      "moneda": "cup",
+      "precioCUP": 199,
+      "moneda": "usd",
       "enOferta": true,
       "destacado": false,
       "max": 6,
@@ -4598,8 +4564,8 @@
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
       },
       "creado": 1780956166935,
-      "precioNormalUSD": 0.6,
-      "precioNormalCUP": 500
+      "precioNormalUSD": 0.5,
+      "precioNormalCUP": 415
     },
     {
       "id": "p_1780951069722",
@@ -4607,11 +4573,11 @@
       "name": "Pellizco de mariposa verde militar",
       "cat": "Cabello",
       "subcat": "",
-      "notes": "No queda del calado veige",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788131608/productos/cfwh7m5fs5blp0xf9n8b.jpg",
-      "precioUSD": 0.54,
-      "precioCUP": 450,
-      "moneda": "cup",
+      "notes": "",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792804767/productos/lmwneiwcuiol0jwqcweh.jpg",
+      "precioUSD": 0.6,
+      "precioCUP": 498,
+      "moneda": "usd",
       "enOferta": false,
       "destacado": false,
       "max": 2,
