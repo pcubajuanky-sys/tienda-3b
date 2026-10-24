@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-24T15:43:19.965Z",
+  "generado": "2026-10-24T16:03:47.534Z",
   "tasa": 830,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -123,6 +123,10 @@
     {
       "code": "GXNUS",
       "nombre": "Nathalie Rodríguez Rodríguez"
+    },
+    {
+      "code": "T3Q4C",
+      "nombre": "Elizabeth Tamayo"
     }
   ],
   "categorias": [
