@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-24T16:52:12.608Z",
+  "generado": "2026-10-24T17:37:13.041Z",
   "tasa": 830,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -1722,27 +1722,6 @@
       "creado": 1787947439148
     },
     {
-      "id": "p_1788150804465",
-      "codigo": "EC4V",
-      "name": "Conjunto de 2 forros de asientos",
-      "cat": "Motos / Accesorios",
-      "subcat": "",
-      "notes": "El conjunto consta de una malla negra de asiento de moto y un forro color aluminio que repele el agua y el sol",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788150599/productos/fgyzktdzuinxtzxbjmg0.jpg",
-      "precioUSD": 6,
-      "precioCUP": 4980,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "espera": true,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1788150804470
-    },
-    {
       "id": "p_1782340847017",
       "codigo": "EL4S",
       "name": "Conjunto de 5 Perfiladores",
@@ -2913,7 +2892,7 @@
         ]
       },
       "maxOpciones": {
-        "L(REDUCIDA) / GRIS🩶": 2
+        "L(REDUCIDA) / GRIS🩶": 1
       },
       "envio": {
         "corto": "🛵 Mensajería gratis",
@@ -5074,35 +5053,6 @@
       },
       "envioGratis": true,
       "creado": 1791837295509
-    },
-    {
-      "id": "p_1791836928935",
-      "codigo": "KAVV",
-      "name": "Pulover de hombre letra \"J'",
-      "cat": "Ropa",
-      "subcat": "",
-      "notes": "Tela algodonada elastizada",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791836834/productos/dd4oggnothhnu08vqclx.jpg",
-      "precioUSD": 5,
-      "precioCUP": 4150,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "variantes": {
-        "ejes": [
-          "Talla"
-        ],
-        "opciones": [
-          "S"
-        ]
-      },
-      "espera": true,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1791836928935
     },
     {
       "id": "p_1792719971889",
