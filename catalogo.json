@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-24T19:42:13.934Z",
+  "generado": "2026-10-24T19:56:28.829Z",
   "tasa": 835,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -2228,13 +2228,11 @@
           "Color"
         ],
         "opciones": [
-          "NEGRA",
           "BLANCA",
           "ROSA"
         ]
       },
       "maxOpciones": {
-        "NEGRA": 2,
         "BLANCA": 2,
         "ROSA": 2
       },
@@ -2263,7 +2261,6 @@
           "Color"
         ],
         "opciones": [
-          "NEGRO",
           "BLANCO",
           "PUMA"
         ]
@@ -2272,9 +2269,6 @@
         "BLANCO": 2,
         "PUMA": 2
       },
-      "esperaOpciones": [
-        "NEGRO"
-      ],
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -2307,7 +2301,7 @@
         ]
       },
       "maxOpciones": {
-        "A": 2,
+        "A": 3,
         "B": 5,
         "D": 8,
         "E": 1
@@ -5285,27 +5279,6 @@
       },
       "envioGratis": true,
       "creado": 1781213126913
-    },
-    {
-      "id": "p_1781213598622",
-      "codigo": "2JPR",
-      "name": "Reloj inteligente Negro",
-      "cat": "Reloj y Prendas",
-      "subcat": "",
-      "notes": "Reloj inteligente de pantalla grande compatible con iPhone y Android, reloj inteligente sin varillas con llamadas/SMS inalámbricos, monitor de actividad física, control remoto de cámara, reloj inteligente recargable por USB apto para hombres y mujeres, pantalla nítida, diseño moderno para regalo de papá\nColor negro, Manilla de silicona",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1781213510/productos/yipf6w3xkmgluh4tk5ad.jpg",
-      "precioUSD": 18,
-      "precioCUP": 15030,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "espera": true,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1781213598622
     },
     {
       "id": "p_1789489238446",
