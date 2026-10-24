@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-24T21:07:13.449Z",
+  "generado": "2026-10-24T23:07:13.966Z",
   "tasa": 835,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -1270,7 +1270,6 @@
           "S / AZUL",
           "S / ROSA",
           "S / BEIGE",
-          "M / NEGRO",
           "L / NEGRO",
           "L / BLANCO",
           "L / GRIS",
@@ -1292,9 +1291,6 @@
         "L / ROSA": 2,
         "L / BEIGE": 3
       },
-      "esperaOpciones": [
-        "M / NEGRO"
-      ],
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
@@ -1650,7 +1646,6 @@
           "Diseño"
         ],
         "opciones": [
-          "A",
           "C",
           "D",
           "E",
@@ -1665,9 +1660,6 @@
         "F": 2,
         "G": 1
       },
-      "esperaOpciones": [
-        "A"
-      ],
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
@@ -2454,7 +2446,7 @@
         "A": 2,
         "B": 1,
         "C": 3,
-        "D": 3
+        "D": 2
       },
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
@@ -3816,9 +3808,9 @@
       "subcat": "",
       "notes": "10 Unidades cada paquete\nMateriales:flor de tela y gancho de metal",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788131870/productos/wrto4ojobtjsxqnptdii.jpg",
-      "precioUSD": 1.8,
-      "precioCUP": 1500,
-      "moneda": "cup",
+      "precioUSD": 2,
+      "precioCUP": 1670,
+      "moneda": "usd",
       "enOferta": false,
       "destacado": false,
       "max": 5,
@@ -4178,26 +4170,6 @@
       "creado": 1780609726389
     },
     {
-      "id": "p_1780613171948",
-      "codigo": "G6RW",
-      "name": "Paquete de 6 mariposas Multialas",
-      "cat": "Cabello",
-      "subcat": "",
-      "notes": "Paquete de 6Unidades\nMateriales: Mariposas de tela y ganchos metálicos",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1780613034/productos/ewezjlonywv5nm4mgcbi.jpg",
-      "precioUSD": 2.4,
-      "precioCUP": 2004,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1780613171948
-    },
-    {
       "id": "p_1787412191026",
       "codigo": "7VDV",
       "name": "Paquete de 6 mini pellisquitos cuadrados",
@@ -4221,25 +4193,6 @@
       "creado": 1787412191026
     },
     {
-      "id": "p_1786714572024",
-      "codigo": "2CBG",
-      "name": "Paquete de 6 mini pellisquitos variaros",
-      "cat": "Cabello",
-      "subcat": "",
-      "notes": "Paquetes de 6 unidades",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786714500/productos/owftuoin0hygs5ydmefm.jpg",
-      "precioUSD": 1,
-      "precioCUP": 835,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      },
-      "creado": 1786714572024
-    },
-    {
       "id": "p_1785275574502",
       "codigo": "NSWC",
       "name": "Paquete de 6 pellisquitos coloridos",
@@ -4252,7 +4205,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 6,
+      "max": 7,
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
@@ -4260,24 +4213,52 @@
       "creado": 1785275574502
     },
     {
-      "id": "p_1785268500695",
-      "codigo": "8N7W",
-      "name": "Paquete de6 maripositas",
+      "id": "p_1792876705630",
+      "codigo": "FBH5",
+      "name": "Paquete de 6Pellizquitos variados",
       "cat": "Cabello",
       "subcat": "",
-      "notes": "6 Maripositas por paquete\nMateriales: Mariposas de tela y ganchos metálicos",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788098080/productos/sx2ollfms75pocmyzfgn.jpg",
-      "precioUSD": 2.16,
-      "precioCUP": 1800,
-      "moneda": "cup",
+      "notes": "Antideslizantes y de colores que combinan con todo. Se puede elegir el diseño. Los colores son aleatorios, puede haber colores repetidos, son aproximadamente los colores de la imagen",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792876377/productos/rigcmts3ey0mrm7ajuwa.jpg",
+      "precioUSD": 1.5,
+      "precioCUP": 1253,
+      "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 5,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792878516/productos/heimjcyhku22p4dirkn9.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792878521/productos/hpzfddwxk1pafrp8qmkb.jpg"
+      ],
+      "variantes": {
+        "ejes": [
+          "Diseño"
+        ],
+        "opciones": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "VARIADOS"
+        ]
+      },
+      "maxOpciones": {
+        "A": 1,
+        "B": 3,
+        "C": 3,
+        "D": 3,
+        "E": 1,
+        "F": 1,
+        "G": 3,
+        "VARIADOS": 4
+      },
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
       },
-      "creado": 1785268500695
+      "creado": 1792876705630
     },
     {
       "id": "p_1790798324777",
@@ -4473,6 +4454,84 @@
       "creado": 1785012145699
     },
     {
+      "id": "p_1785275149243",
+      "codigo": "9EX2",
+      "name": "Pareja de Pellizcos medianos blancos",
+      "cat": "Cabello",
+      "subcat": "",
+      "notes": "",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792878838/productos/iohv4paeclhinaqexbf8.jpg",
+      "precioUSD": 1,
+      "precioCUP": 835,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792880495/productos/hxmzcsqvfdrhapig45cm.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792880499/productos/j8paioxgel9m6kpx8xew.jpg"
+      ],
+      "variantes": {
+        "ejes": [
+          "Diseño"
+        ],
+        "opciones": [
+          "A CON C",
+          "B CON G",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H",
+          "I",
+          "J"
+        ]
+      },
+      "maxOpciones": {
+        "A CON C": 1,
+        "B CON G": 1,
+        "B": 1,
+        "C": 1,
+        "D": 1,
+        "E": 1,
+        "F": 1,
+        "G": 1,
+        "H": 1,
+        "I": 1,
+        "J": 1
+      },
+      "envio": {
+        "corto": "🛵 Gratis desde 2,000 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
+      },
+      "creado": 1785275149243
+    },
+    {
+      "id": "p_1785275083288",
+      "codigo": "W7BG",
+      "name": "Pareja de Pellizcos medianos negros",
+      "cat": "Cabello",
+      "subcat": "",
+      "notes": "Solo disponibles la pareja de A con B",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792706088/productos/apwy8zxlsjbe04kreobw.jpg",
+      "precioUSD": 0.48,
+      "precioCUP": 400,
+      "moneda": "cup",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792880512/productos/ard4cq6vwjw8f37yy3ts.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792880516/productos/uaiort50opqwmpvvj0hh.jpg"
+      ],
+      "max": 2,
+      "envio": {
+        "corto": "🛵 Gratis desde 2,000 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
+      },
+      "creado": 1785275083288
+    },
+    {
       "id": "p_1791650300211",
       "codigo": "RWM4",
       "name": "Pareja de pulceras cristianas",
@@ -4490,6 +4549,25 @@
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
       },
       "creado": 1791650300211
+    },
+    {
+      "id": "p_1780950975688",
+      "codigo": "7UZB",
+      "name": "Pareja Pellizcos Antideslizantes para semi recogido",
+      "cat": "Cabello",
+      "subcat": "",
+      "notes": "Mensajería incluida a partir de 4",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788098276/productos/fipt4psx7ppfrgi3mnkr.jpg",
+      "precioUSD": 1,
+      "precioCUP": 835,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 2,000 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
+      },
+      "creado": 1780950975688
     },
     {
       "id": "p_1780092503212",
@@ -4553,25 +4631,6 @@
       "creado": 1780951069722
     },
     {
-      "id": "p_1780950975688",
-      "codigo": "7UZB",
-      "name": "Pellizcos Antideslizantes para semi recogido",
-      "cat": "Cabello",
-      "subcat": "",
-      "notes": "Mensajería incluida a partir de 4",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788098276/productos/fipt4psx7ppfrgi3mnkr.jpg",
-      "precioUSD": 0.48,
-      "precioCUP": 400,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      },
-      "creado": 1780950975688
-    },
-    {
       "id": "p_1780945492775",
       "codigo": "XKYE",
       "name": "Pellizcos Mate Grandes",
@@ -4579,9 +4638,9 @@
       "subcat": "",
       "notes": "",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792690987/productos/zlyliichntjgdxatnwsh.jpg",
-      "precioUSD": 0.6,
-      "precioCUP": 500,
-      "moneda": "cup",
+      "precioUSD": 0.7,
+      "precioCUP": 585,
+      "moneda": "usd",
       "enOferta": false,
       "destacado": false,
       "variantes": {
@@ -4602,57 +4661,6 @@
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
       },
       "creado": 1780945492775
-    },
-    {
-      "id": "p_1785275083288",
-      "codigo": "W7BG",
-      "name": "Pellizcos medianos 🖤",
-      "cat": "Cabello",
-      "subcat": "",
-      "notes": "",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792706088/productos/apwy8zxlsjbe04kreobw.jpg",
-      "precioUSD": 0.48,
-      "precioCUP": 400,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false,
-      "variantes": {
-        "ejes": [
-          "Diseño"
-        ],
-        "opciones": [
-          "A",
-          "D"
-        ]
-      },
-      "maxOpciones": {
-        "A": 1,
-        "D": 1
-      },
-      "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      },
-      "creado": 1785275083288
-    },
-    {
-      "id": "p_1785275149243",
-      "codigo": "9EX2",
-      "name": "Pellizcos medianos 🤍",
-      "cat": "Cabello",
-      "subcat": "",
-      "notes": "",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785275069/productos/aru1llevcaonns9p9vsq.jpg",
-      "precioUSD": 0.48,
-      "precioCUP": 400,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      },
-      "creado": 1785275149243
     },
     {
       "id": "p_1782329655762",
@@ -4815,7 +4823,7 @@
       "moneda": "cup",
       "enOferta": true,
       "destacado": false,
-      "max": 3,
+      "max": 1,
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
