@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-24T13:48:14.890Z",
+  "generado": "2026-10-24T14:48:15.201Z",
   "tasa": 830,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -1728,7 +1728,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 1,
+      "max": 2,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -3905,12 +3905,17 @@
       "cat": "Cabello",
       "subcat": "",
       "notes": "Paquete de 10 mini mariposas metálicas para el cabello. Diseño delicado y elegante en acero plateado, con cierre de presión seguro. Ideales para peinados finos, recogidos o como accesorio decorativo. Ligeras, resistentes y de tamaño compacto, perfectas para uso diario o ocasiones especiales.",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788035311/productos/boandlf6ammxiganqiix.jpg",
-      "precioUSD": 1.5,
-      "precioCUP": 1245,
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792850712/productos/dugehfun2belizlvjkag.jpg",
+      "precioUSD": 2,
+      "precioCUP": 1660,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792850692/productos/vjrcuuovev7zhl5waear.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792850700/productos/zcvjzimigvbmmwwcwxyq.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792850705/productos/hrpemggzavf4atclgygc.jpg"
+      ],
       "max": 4,
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
@@ -3946,12 +3951,17 @@
       "cat": "Cabello",
       "subcat": "",
       "notes": "El paquete trae 25Unidades",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1780608383/productos/huixhwzn5cnjfnf3tc3s.jpg",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792851192/productos/dtbzpo8iinyurnlekwha.jpg",
       "precioUSD": 1.3,
       "precioCUP": 1079,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792851200/productos/woox0hd59l3zwi9dw5be.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792851205/productos/ypyli9sdboaaj2haiwdv.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792851210/productos/swcqibolvoroo0p57f3h.jpg"
+      ],
       "max": 1,
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
@@ -4033,6 +4043,10 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792851235/productos/bxnhd3zp3fn4ildq6byi.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792851244/productos/kpvpqu3xqm0fyz49pyqe.jpg"
+      ],
       "max": 5,
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
@@ -4141,6 +4155,11 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792851573/productos/anqt1y7i3gfergakwxgx.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792851582/productos/vb9y8z8yhywruvfumot5.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792851587/productos/aj3xuwokwlwso1jsd0cq.jpg"
+      ],
       "max": 6,
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
@@ -4239,6 +4258,10 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792851686/productos/eypgkxcjzt3gr2mojsvn.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792851691/productos/rfypumzrw4x6dptjv7ee.jpg"
+      ],
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
@@ -4277,7 +4300,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 5,
+      "max": 6,
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
@@ -4475,27 +4498,6 @@
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
       },
       "creado": 1791633427118
-    },
-    {
-      "id": "p_1788206192356",
-      "codigo": "R2C4",
-      "name": "Pareja de Mini espejos retrovisores",
-      "cat": "Motos / Accesorios",
-      "subcat": "",
-      "notes": "El precio es por la pareja. Pequeños,para múltiples uso, como doble espejo en las motos o para las bicicletas",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788205791/productos/m7iur6b6u18rt4mnyw8b.jpg",
-      "precioUSD": 5,
-      "precioCUP": 4150,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "espera": true,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1788206192356
     },
     {
       "id": "p_1785012145699",
