@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-24T19:57:15.862Z",
+  "generado": "2026-10-24T20:17:13.382Z",
   "tasa": 835,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -863,34 +863,6 @@
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
       },
       "creado": 1785092425019
-    },
-    {
-      "id": "p_1788814692844",
-      "codigo": "C76G",
-      "name": "Ajusta invisible sin tirantes",
-      "cat": "Ropa Interior",
-      "subcat": "",
-      "notes": "Útil e imprescindible prenda, reutilizable y comoda. Brinda un soporte muy estético a pechos sin importar talla,forma o edad.Colores disponibles, beige y negro.",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788814263/productos/xfb4sbqzmvfcc9cdrndb.jpg",
-      "precioUSD": 2,
-      "precioCUP": 1670,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "variantes": {
-        "ejes": [
-          "Color"
-        ],
-        "opciones": [
-          "NEGRO"
-        ]
-      },
-      "espera": true,
-      "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      },
-      "creado": 1788814692844
     },
     {
       "id": "p_1787498809174",
