@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-25T18:58:56.535Z",
+  "generado": "2026-10-25T20:53:57.445Z",
   "tasa": 835,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -1143,6 +1143,7 @@
       "maxOpciones": {
         "MELOCOTÓN": 9,
         "MANGO": 9,
+        "LIMÓN": 9,
         "COCO": 9,
         "VAINILLA": 7,
         "FRAMBUESA": 8,
@@ -1620,6 +1621,42 @@
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
       },
       "creado": 1788049609744
+    },
+    {
+      "id": "p_1792960285642",
+      "codigo": "8255",
+      "name": "Cintas elastizadas para el pelo",
+      "cat": "Cabello",
+      "subcat": "",
+      "notes": "Tela de licra, totalmente elastizada, ajustable y flexible. Unitalla,sirve tanto para niñas como para adultos.",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792960111/productos/bt3utopp7p546dh57ubv.jpg",
+      "precioUSD": 2,
+      "precioCUP": 1670,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Diseño"
+        ],
+        "opciones": [
+          "BLANCO",
+          "ROSA",
+          "BLANCO CON LUNARES",
+          "NEGRO CON LUNARES"
+        ]
+      },
+      "maxOpciones": {
+        "BLANCO": 1,
+        "ROSA": 1,
+        "BLANCO CON LUNARES": 1,
+        "NEGRO CON LUNARES": 1
+      },
+      "envio": {
+        "corto": "🛵 Gratis desde 2,000 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
+      },
+      "creado": 1792960285642
     },
     {
       "id": "p_1792294682081",
@@ -3933,31 +3970,6 @@
       "creado": 1788618415087
     },
     {
-      "id": "p_1780608497220",
-      "codigo": "2XN8",
-      "name": "Paquete de 25 florecitas tipo Piojitos",
-      "cat": "Cabello",
-      "subcat": "",
-      "notes": "El paquete trae 25Unidades",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792851192/productos/dtbzpo8iinyurnlekwha.jpg",
-      "precioUSD": 1.3,
-      "precioCUP": 1086,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "fotos": [
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792851200/productos/woox0hd59l3zwi9dw5be.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792851205/productos/ypyli9sdboaaj2haiwdv.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792851210/productos/swcqibolvoroo0p57f3h.jpg"
-      ],
-      "espera": true,
-      "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      },
-      "creado": 1780608497220
-    },
-    {
       "id": "p_1781005769619",
       "codigo": "87SU",
       "name": "Paquete de 3 Mini Embudos plegables engomados",
@@ -4602,13 +4614,35 @@
       "name": "Pareja Pellizcos Antideslizantes para semi recogido",
       "cat": "Cabello",
       "subcat": "",
-      "notes": "Mensajería incluida a partir de 4",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788098276/productos/fipt4psx7ppfrgi3mnkr.jpg",
+      "notes": "Exelente calidad, antideslizantes",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792954843/productos/xow5vuk7pjrd4z86enmb.jpg",
       "precioUSD": 1,
       "precioCUP": 835,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792954848/productos/n1g8ofy2ejdgkerokdif.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792954853/productos/b9jqcuqppqywid2glvpa.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792954866/productos/plnd6yumyvmddbsn1x5p.jpg"
+      ],
+      "variantes": {
+        "ejes": [
+          "Color"
+        ],
+        "opciones": [
+          "NEGRO",
+          "CHOCOLATE",
+          "CHOCOLATE CLARO",
+          "BEIGE"
+        ]
+      },
+      "maxOpciones": {
+        "NEGRO": 2,
+        "CHOCOLATE": 3,
+        "CHOCOLATE CLARO": 4,
+        "BEIGE": 4
+      },
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
@@ -4675,6 +4709,51 @@
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
       },
       "creado": 1780951069722
+    },
+    {
+      "id": "p_1792959153642",
+      "codigo": "SNDP",
+      "name": "Pellizcos Antideslizantes grandes",
+      "cat": "Cabello",
+      "subcat": "",
+      "notes": "",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792959343/productos/ohkg4vadttvrzhzyayos.jpg",
+      "precioUSD": 1,
+      "precioCUP": 835,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792958844/productos/c8rrr3gbzlu96deicao9.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792958849/productos/rka44gnd2kucbcj66g7p.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792959338/productos/ixad9calu1mrv5u770uq.jpg"
+      ],
+      "variantes": {
+        "ejes": [
+          "Colores"
+        ],
+        "opciones": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F"
+        ]
+      },
+      "maxOpciones": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "D": 1,
+        "E": 1,
+        "F": 1
+      },
+      "envio": {
+        "corto": "🛵 Gratis desde 2,000 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
+      },
+      "creado": 1792959153642
     },
     {
       "id": "p_1792950048689",
