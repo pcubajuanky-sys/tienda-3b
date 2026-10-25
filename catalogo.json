@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-25T20:58:57.488Z",
+  "generado": "2026-10-25T21:08:57.443Z",
   "tasa": 835,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -3223,7 +3223,6 @@
           "NEGRA",
           "BLANCA",
           "GRIS",
-          "ROSA",
           "CELESTE",
           "NARANJA"
         ]
@@ -3231,7 +3230,6 @@
       "maxOpciones": {
         "BLANCA": 9,
         "GRIS": 5,
-        "ROSA": 1,
         "CELESTE": 2,
         "NARANJA": 1
       },
@@ -5731,26 +5729,6 @@
       },
       "envioGratis": true,
       "creado": 1792340423078
-    },
-    {
-      "id": "p_1782339751417",
-      "codigo": "QW78",
-      "name": "Sérum en Capsulas de Ácidos Hialurónico",
-      "cat": "Cuidado Personal",
-      "subcat": "",
-      "notes": "Cápsulas de Ácido Hialurónico\nHidrataión profunda\nHidratante y Suavizante para la piel\nContiene Escualano Vegetal\nVitaminas E y C\nEl paquete trae 10 cápsulas",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782339669/productos/xbmibztojd4suitasup4.jpg",
-      "precioUSD": 1,
-      "precioCUP": 835,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "espera": true,
-      "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      },
-      "creado": 1782339751417
     },
     {
       "id": "p_1786917303962",
