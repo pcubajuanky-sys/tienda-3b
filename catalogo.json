@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-25T16:38:55.864Z",
+  "generado": "2026-10-25T18:48:56.551Z",
   "tasa": 835,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -2084,6 +2084,53 @@
       "creado": 1788840928879
     },
     {
+      "id": "p_1792886712538",
+      "codigo": "8HGF",
+      "name": "Evillas de mariposas multialas",
+      "cat": "Cabello",
+      "subcat": "",
+      "notes": "Paquete de 6 mariposas multialas. Seis colecciones disponibles. Seleccionar según las imágenes. Alas de tela tipo tul y evillas de metal. Alta calidad y belleza",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792886337/productos/c54h9nqox1wq9kicjzl2.jpg",
+      "precioUSD": 3,
+      "precioCUP": 2505,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792952721/productos/npmkzopef04z9ipjsukn.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792952726/productos/hpfogdwcsqvlpimmsqbk.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792952732/productos/c5zidmgxlfiwiexkgf5y.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792952736/productos/v69h5j28ub9py03rfvd0.jpg"
+      ],
+      "variantes": {
+        "ejes": [
+          "Colección"
+        ],
+        "opciones": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F"
+        ]
+      },
+      "maxOpciones": {
+        "A": 3,
+        "B": 3,
+        "C": 1,
+        "D": 1,
+        "E": 8,
+        "F": 9
+      },
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1792886712539
+    },
+    {
       "id": "p_1788839956775",
       "codigo": "EJPB",
       "name": "Exprimidor",
@@ -3903,7 +3950,7 @@
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1792851205/productos/ypyli9sdboaaj2haiwdv.jpg",
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1792851210/productos/swcqibolvoroo0p57f3h.jpg"
       ],
-      "max": 1,
+      "espera": true,
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
@@ -4204,7 +4251,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 7,
+      "max": 6,
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
@@ -4630,6 +4677,55 @@
       "creado": 1780951069722
     },
     {
+      "id": "p_1792950048689",
+      "codigo": "9RAL",
+      "name": "Pellizcos Antideslizantes medianos",
+      "cat": "Cabello",
+      "subcat": "",
+      "notes": "",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792950298/productos/qgg3usblxibgjnpxsslv.jpg",
+      "precioUSD": 1,
+      "precioCUP": 835,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792949904/productos/bw59iutukwnjygzfqpbc.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792949908/productos/pcni47l3qcsnukjibdqd.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792949916/productos/dovvypkbdwoeecqdzquu.jpg"
+      ],
+      "variantes": {
+        "ejes": [
+          "Diseños"
+        ],
+        "opciones": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H"
+        ]
+      },
+      "maxOpciones": {
+        "A": 2,
+        "B": 2,
+        "C": 2,
+        "D": 2,
+        "E": 2,
+        "F": 2,
+        "G": 2,
+        "H": 2
+      },
+      "envio": {
+        "corto": "🛵 Gratis desde 2,000 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
+      },
+      "creado": 1792950048689
+    },
+    {
       "id": "p_1780945492775",
       "codigo": "XKYE",
       "name": "Pellizcos Mate Grandes",
@@ -4637,8 +4733,8 @@
       "subcat": "",
       "notes": "",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792690987/productos/zlyliichntjgdxatnwsh.jpg",
-      "precioUSD": 0.7,
-      "precioCUP": 585,
+      "precioUSD": 1,
+      "precioCUP": 835,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
@@ -4808,28 +4904,6 @@
       "creado": 1785092176064,
       "precioNormalUSD": 0.6,
       "precioNormalCUP": 500
-    },
-    {
-      "id": "p_1780623482446",
-      "codigo": "WWYF",
-      "name": "Presillas de pelo",
-      "cat": "Cabello",
-      "subcat": "",
-      "notes": "Paquete de 50 presillas negras de metal. Resistentes y flexibles, ideales para fijar el cabello con seguridad en peinados, recogidos o cortes profesionales. Acabado liso que no daña el cabello. Prácticas y duraderas, perfectas para uso diario o en salón de belleza.",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788035042/productos/ruzhdg8v3cjawvxy7vnk.jpg",
-      "precioUSD": 1.2,
-      "precioCUP": 1000,
-      "moneda": "cup",
-      "enOferta": true,
-      "destacado": false,
-      "max": 1,
-      "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      },
-      "creado": 1780623482446,
-      "precioNormalUSD": 1.56,
-      "precioNormalCUP": 1300
     },
     {
       "id": "p_1782343083267",
@@ -5684,7 +5758,7 @@
         ]
       },
       "maxOpciones": {
-        "NEGRO": 5,
+        "NEGRO": 4,
         "CELESTE": 5
       },
       "envio": {
