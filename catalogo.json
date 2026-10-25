@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-24T23:07:13.966Z",
+  "generado": "2026-10-25T04:22:12.559Z",
   "tasa": 835,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -54,10 +54,6 @@
     {
       "code": "DZ3AH",
       "nombre": "Yessy"
-    },
-    {
-      "code": "2PT46",
-      "nombre": "Damaisi"
     },
     {
       "code": "RMUTS",
@@ -2265,7 +2261,7 @@
         ]
       },
       "maxOpciones": {
-        "A": 3,
+        "A": 2,
         "B": 5,
         "D": 8,
         "E": 1
@@ -2596,7 +2592,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 4,
+      "max": 3,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -3319,7 +3315,7 @@
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1791895206/productos/amx7y7kptworf7qavv6o.jpg",
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1791895218/productos/akgcwpttdnmzuz3q3hbk.jpg"
       ],
-      "max": 5,
+      "max": 4,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -3813,7 +3809,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 5,
+      "max": 4,
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
