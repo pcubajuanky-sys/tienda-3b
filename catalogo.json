@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-25T20:53:57.445Z",
+  "generado": "2026-10-25T20:58:57.488Z",
   "tasa": 835,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -1945,27 +1945,6 @@
       "creado": 1789256890851
     },
     {
-      "id": "p_1788212080090",
-      "codigo": "D5Q2",
-      "name": "Espejo de flor giratorio",
-      "cat": "Hogar",
-      "subcat": "",
-      "notes": "Solo disponible en color blanco\n28cm de alto",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788211960/productos/frgnqs3xs1uy6lzojds7.jpg",
-      "precioUSD": 5,
-      "precioCUP": 4175,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "espera": true,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1788212080090
-    },
-    {
       "id": "p_1788212193696",
       "codigo": "BGWX",
       "name": "Espejo de flor rosada giratorio",
@@ -2346,7 +2325,7 @@
         ]
       },
       "maxOpciones": {
-        "A": 2,
+        "A": 3,
         "B": 5,
         "D": 8,
         "E": 1
@@ -5772,26 +5751,6 @@
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
       },
       "creado": 1782339751417
-    },
-    {
-      "id": "p_1782339821859",
-      "codigo": "4JYC",
-      "name": "Sérum en Capsulas de vit C y E",
-      "cat": "Cuidado Personal",
-      "subcat": "",
-      "notes": "Cápsulas de Sérum con Vitamina E y C\nGel Encapsulado de Pureza para Rostro\nLigero y No Graso\nPara Todo Tipo de Piel\nEsencia de Cuidado Diario",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782339753/productos/uq4unqxsipovpavt4qex.jpg",
-      "precioUSD": 1,
-      "precioCUP": 835,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "espera": true,
-      "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      },
-      "creado": 1782339821867
     },
     {
       "id": "p_1786917303962",
