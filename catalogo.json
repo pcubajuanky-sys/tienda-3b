@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-26T01:41:34.193Z",
+  "generado": "2026-10-26T01:46:51.004Z",
   "tasa": 840,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -123,6 +123,10 @@
     {
       "code": "T3Q4C",
       "nombre": "Elizabeth Tamayo"
+    },
+    {
+      "code": "TJQRV",
+      "nombre": "Marilín"
     }
   ],
   "categorias": [
