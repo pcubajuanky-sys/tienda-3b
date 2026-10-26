@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-26T20:12:11.542Z",
+  "generado": "2026-10-26T20:20:59.215Z",
   "tasa": 840,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -970,7 +970,7 @@
         ]
       },
       "maxOpciones": {
-        "ROSA🩷": 5
+        "ROSA🩷": 4
       },
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
@@ -4405,7 +4405,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "espera": true,
+      "max": 1,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
