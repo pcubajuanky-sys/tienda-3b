@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-26T17:16:55.123Z",
+  "generado": "2026-10-26T17:21:56.701Z",
   "tasa": 840,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -2228,11 +2228,9 @@
         ]
       },
       "maxOpciones": {
+        "BLANCA": 1,
         "ROSA": 1
       },
-      "esperaOpciones": [
-        "BLANCA"
-      ],
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -5174,35 +5172,6 @@
       },
       "envioGratis": true,
       "creado": 1790978748079
-    },
-    {
-      "id": "p_1791837243848",
-      "codigo": "EQT3",
-      "name": "Pulover de hombre \"Barco\"",
-      "cat": "Ropa",
-      "subcat": "",
-      "notes": "Tela algodonada elastizada",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791837152/productos/x2kz8q6dt0faiuzc7ad4.jpg",
-      "precioUSD": 5,
-      "precioCUP": 4200,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "variantes": {
-        "ejes": [
-          "Talla"
-        ],
-        "opciones": [
-          "XL"
-        ]
-      },
-      "espera": true,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1791837243848
     },
     {
       "id": "p_1789240844908",
