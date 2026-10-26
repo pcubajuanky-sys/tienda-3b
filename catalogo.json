@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-26T01:46:51.004Z",
+  "generado": "2026-10-26T02:07:12.694Z",
   "tasa": 840,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -127,6 +127,10 @@
     {
       "code": "TJQRV",
       "nombre": "Marilín"
+    },
+    {
+      "code": "NFYKP",
+      "nombre": "Ivett"
     }
   ],
   "categorias": [
