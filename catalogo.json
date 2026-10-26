@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-25T21:48:58.543Z",
+  "generado": "2026-10-26T01:12:08.875Z",
   "tasa": 835,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -2027,47 +2027,6 @@
       "creado": 1785733992044
     },
     {
-      "id": "p_1784925486862",
-      "codigo": "HRTS",
-      "name": "Estrellitas Fluorescentes 100u",
-      "cat": "Niños",
-      "subcat": "",
-      "notes": "Paquete de 100 estrellitas.Fluorescentes con su adhesivo incluído. Colores varios",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1784925295/productos/yk3nbqzxca6aehscfkpk.jpg",
-      "precioUSD": 2.04,
-      "precioCUP": 1700,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false,
-      "max": 4,
-      "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      },
-      "creado": 1784925486863
-    },
-    {
-      "id": "p_1788200037557",
-      "codigo": "3TTM",
-      "name": "Estrellitas Fluorescentes 250u",
-      "cat": "Niños",
-      "subcat": "",
-      "notes": "Paquete de 250 estrellitas. Fluorescentes de colores variados con su adhesivo incluído",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788199912/productos/zi07dgtj1fxicbqru7oa.jpg",
-      "precioUSD": 4.31,
-      "precioCUP": 3600,
-      "moneda": "cup",
-      "enOferta": false,
-      "destacado": false,
-      "max": 4,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1788200037557
-    },
-    {
       "id": "p_1788840928879",
       "codigo": "B8ZZ",
       "name": "Etiquetas infantiles",
@@ -2257,7 +2216,7 @@
         ]
       },
       "maxOpciones": {
-        "BLANCA": 2,
+        "BLANCA": 1,
         "ROSA": 2
       },
       "envio": {
@@ -3194,7 +3153,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 9,
+      "max": 8,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -3873,6 +3832,11 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792976330/productos/uqbh0cysowcnot4oppgd.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792976334/productos/yotrahzlps1slucnirrd.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792976339/productos/w25vhihfiwibjxrszpsi.jpg"
+      ],
       "max": 4,
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
@@ -3945,6 +3909,30 @@
       },
       "envioGratis": true,
       "creado": 1788618415087
+    },
+    {
+      "id": "p_1792975727964",
+      "codigo": "SEDP",
+      "name": "Paquete de 20 pezoneras desechables",
+      "cat": "Ropa Interior",
+      "subcat": "",
+      "notes": "El paquete consta de 20 unidades,o sea, 10 pares.",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792975590/productos/zkdutmn8psiyrxylpfpv.jpg",
+      "precioUSD": 1,
+      "precioCUP": 835,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792975613/productos/jzzjjtm2coru4kc106wt.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792975618/productos/ipdl6jesibop1wrlf0da.jpg"
+      ],
+      "max": 3,
+      "envio": {
+        "corto": "🛵 Gratis desde 2,000 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
+      },
+      "creado": 1792975727964
     },
     {
       "id": "p_1781005769619",
@@ -4670,6 +4658,45 @@
       "precioNormalCUP": 418
     },
     {
+      "id": "p_1792975307003",
+      "codigo": "E8KZ",
+      "name": "Peines de diente ancho",
+      "cat": "Cabello",
+      "subcat": "",
+      "notes": "Peine portátil antiestático para alisar el cabello con dientes anchos. Sin nudos, sin dañar el cabello. Peine de doble propósito para lavado de cabello seco y húmedo. Adecuado para uso diario en casa y durante viajes.",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792975108/productos/j5blx5q5blr3tmgj6eei.jpg",
+      "precioUSD": 3,
+      "precioCUP": 2505,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792975111/productos/wbhgjiskyf8qjriijior.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792975116/productos/zuraqwcqzgtszikqkvym.jpg"
+      ],
+      "variantes": {
+        "ejes": [
+          "Color"
+        ],
+        "opciones": [
+          "NEGRO",
+          "MORADO",
+          "ROSADO"
+        ]
+      },
+      "maxOpciones": {
+        "NEGRO": 2,
+        "MORADO": 3,
+        "ROSADO": 3
+      },
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1792975307003
+    },
+    {
       "id": "p_1780951069722",
       "codigo": "67DD",
       "name": "Pellizco de mariposa verde militar",
@@ -4784,6 +4811,77 @@
       "creado": 1792950048689
     },
     {
+      "id": "p_1792966999876",
+      "codigo": "38KS",
+      "name": "Pellizcos Diseños Únicos y Variados",
+      "cat": "Cabello",
+      "subcat": "",
+      "notes": "",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792966647/productos/l5fcxthmjnynd08mkebo.jpg",
+      "precioUSD": 0.8,
+      "precioCUP": 668,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792966684/productos/mebu2erxiwh755fo3clk.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792967709/productos/kp8fy9nyhxhkzgpplsdv.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792967713/productos/yn9cx5cmekk69e7ngj7g.jpg"
+      ],
+      "variantes": {
+        "ejes": [
+          "Diseño"
+        ],
+        "opciones": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H",
+          "I",
+          "J",
+          "K",
+          "L",
+          "M",
+          "N",
+          "O",
+          "P",
+          "Q",
+          "R",
+          "S"
+        ]
+      },
+      "maxOpciones": {
+        "A": 2,
+        "B": 2,
+        "C": 2,
+        "D": 2,
+        "E": 4,
+        "F": 2,
+        "G": 2,
+        "H": 2,
+        "I": 2,
+        "J": 1,
+        "K": 1,
+        "L": 1,
+        "M": 1,
+        "N": 1,
+        "O": 1,
+        "P": 1,
+        "Q": 1,
+        "R": 2,
+        "S": 2
+      },
+      "envio": {
+        "corto": "🛵 Gratis desde 2,000 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
+      },
+      "creado": 1792966999877
+    },
+    {
       "id": "p_1780945492775",
       "codigo": "XKYE",
       "name": "Pellizcos Mate Grandes",
@@ -4834,6 +4932,31 @@
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
       },
       "creado": 1782329655762
+    },
+    {
+      "id": "p_1788133110062",
+      "codigo": "Z9ND",
+      "name": "Pezoneras de silicona",
+      "cat": "Ropa Interior",
+      "subcat": "",
+      "notes": "Parejas de pezoneras de silicona",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792975543/productos/cprjrjveyflqz29gf6ij.jpg",
+      "precioUSD": 1,
+      "precioCUP": 835,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792975496/productos/kkxpxlnm9eycw8fu9adu.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792975502/productos/epjtu83wg3rpvnrvsf0m.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792975505/productos/cduo86m6dsz2wrqtchss.jpg"
+      ],
+      "max": 5,
+      "envio": {
+        "corto": "🛵 Gratis desde 2,000 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
+      },
+      "creado": 1788133110062
     },
     {
       "id": "p_1786922817374",
@@ -5946,7 +6069,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 2,
+      "max": 1,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
