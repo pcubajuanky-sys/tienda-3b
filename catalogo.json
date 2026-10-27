@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-27T22:05:46.252Z",
+  "generado": "2026-10-27T23:59:01.996Z",
   "tasa": 850,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -311,7 +311,7 @@
       "avion": [
         {
           "masDeLb": 0,
-          "usdLb": 6.5
+          "usdLb": 7
         },
         {
           "masDeLb": 12,
@@ -502,25 +502,25 @@
         "nombre": "Pinza de pelo",
         "precioUSD": 2,
         "barcoUSD": 5.9,
-        "avionUSD": 8.9
+        "avionUSD": 9.4
       },
       {
         "nombre": "Pulóver o blusa",
         "precioUSD": 8,
         "barcoUSD": 13.1,
-        "avionUSD": 16.1
+        "avionUSD": 16.6
       },
       {
         "nombre": "Jean",
         "precioUSD": 15,
         "barcoUSD": 22.55,
-        "avionUSD": 26.45
+        "avionUSD": 27.1
       },
       {
         "nombre": "Tenis",
         "precioUSD": 25,
         "barcoUSD": 40.5,
-        "avionUSD": 49.5
+        "avionUSD": 51
       }
     ],
     "control": [
@@ -549,10 +549,10 @@
           }
         ],
         "modo": "avion",
-        "envioUSD": 6.5,
+        "envioUSD": 7,
         "servicioUSD": 0.4,
-        "totalUSD": 8.9,
-        "anticipoUSD": 0.89
+        "totalUSD": 9.4,
+        "anticipoUSD": 0.94
       },
       {
         "articulos": [
@@ -579,10 +579,10 @@
           }
         ],
         "modo": "avion",
-        "envioUSD": 6.5,
+        "envioUSD": 7,
         "servicioUSD": 1.6,
-        "totalUSD": 16.1,
-        "anticipoUSD": 1.61
+        "totalUSD": 16.6,
+        "anticipoUSD": 1.66
       },
       {
         "articulos": [
@@ -609,10 +609,10 @@
           }
         ],
         "modo": "avion",
-        "envioUSD": 8.45,
+        "envioUSD": 9.1,
         "servicioUSD": 3,
-        "totalUSD": 26.45,
-        "anticipoUSD": 2.65
+        "totalUSD": 27.1,
+        "anticipoUSD": 2.71
       },
       {
         "articulos": [
@@ -639,10 +639,10 @@
           }
         ],
         "modo": "avion",
-        "envioUSD": 19.5,
+        "envioUSD": 21,
         "servicioUSD": 5,
-        "totalUSD": 49.5,
-        "anticipoUSD": 4.95
+        "totalUSD": 51,
+        "anticipoUSD": 5.1
       },
       {
         "articulos": [
@@ -741,10 +741,10 @@
           }
         ],
         "modo": "avion",
-        "envioUSD": 13,
+        "envioUSD": 14,
         "servicioUSD": 6.2,
-        "totalUSD": 50.2,
-        "anticipoUSD": 5.02
+        "totalUSD": 51.2,
+        "anticipoUSD": 5.12
       }
     ]
   },
@@ -2757,6 +2757,31 @@
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
       },
       "creado": 1782329548998
+    },
+    {
+      "id": "p_1793139148847",
+      "codigo": "FBYR",
+      "name": "Lámpara de exterior con panel solar",
+      "cat": "Electrodomésticos",
+      "subcat": "",
+      "notes": "Lámpara con 3 modos de iluminación,base y mando a distancia. Incluye se panel solar",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1793139063/productos/yjendx00cyo77lwvtviv.jpg",
+      "precioUSD": 14,
+      "precioCUP": 11900,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793139066/productos/qo0vfbjdlw1gfimhxsti.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793139074/productos/vtijtogl0abuxkx2wtbk.jpg"
+      ],
+      "max": 1,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1793139148847
     },
     {
       "id": "p_1782259309845",
