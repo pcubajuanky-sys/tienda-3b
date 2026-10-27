@@ -36,7 +36,12 @@
   --surface-2: #F3EDEA;
   --text:      #1C1A22;
   --text-2:    #5C5560;
-  --text-3:    #857D89;
+  /* 🔴 No lo aclares de vuelta. #857D89 daba 3,72:1 sobre el fondo y 3,42:1 sobre las
+     zonas grises, y este token pinta el total en USD del carrito y la nota de la tasa
+     a 11-12px. Este: 5,10 / 5,44 / 4,69:1. Sigue siendo el tercer nivel de la jerarquia
+     —se ve claramente mas tenue que --text-2—, pero ahora se lee. En modo oscuro el
+     token NO cambia: alli ya pasaba (4,60-5,66:1). */
+  --text-3:    #6F6773;
   --border:    #E9E0DB;
   --brand:     #7A2E5D;
   --brand-ink: #FFFFFF;

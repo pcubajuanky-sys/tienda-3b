@@ -98,3 +98,12 @@ test('el verde de WhatsApp tambien se lee cuando es TEXTO, no fondo', () => {
     exige('--wa como texto oscuro sobre --' + fondo, oscuro('wa'), oscuro(fondo), 4.5);
   }
 });
+
+test('el gris mas tenue sigue siendo texto: tiene que leerse', () => {
+  // --text-3 pinta el equivalente en USD del total del carrito y la nota de la tasa
+  // del pie, a 11-12px. A ese tamano AA pide 4,5:1 y no hay excepcion de texto grande.
+  for (const fondo of ['bg', 'surface', 'surface-2']) {
+    exige('--text-3 claro sobre --' + fondo, claro('text-3'), claro(fondo), 4.5);
+    exige('--text-3 oscuro sobre --' + fondo, oscuro('text-3'), oscuro(fondo), 4.5);
+  }
+});
