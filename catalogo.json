@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-27T21:10:46.131Z",
+  "generado": "2026-10-27T22:05:46.252Z",
   "tasa": 850,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -2331,10 +2331,10 @@
         ]
       },
       "maxOpciones": {
-        "A": 2,
+        "A": 3,
         "B": 1,
         "C": 1,
-        "D": 1
+        "D": 2
       },
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
@@ -2569,7 +2569,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 4,
+      "max": 3,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -3884,30 +3884,6 @@
       "creado": 1788618415087
     },
     {
-      "id": "p_1792975727964",
-      "codigo": "SEDP",
-      "name": "Paquete de 20 pezoneras desechables",
-      "cat": "Ropa Interior",
-      "subcat": "",
-      "notes": "El paquete consta de 20 unidades,o sea, 10 pares.",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792975590/productos/zkdutmn8psiyrxylpfpv.jpg",
-      "precioUSD": 1,
-      "precioCUP": 850,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "fotos": [
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792975613/productos/jzzjjtm2coru4kc106wt.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792975618/productos/ipdl6jesibop1wrlf0da.jpg"
-      ],
-      "max": 2,
-      "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      },
-      "creado": 1792975727964
-    },
-    {
       "id": "p_1781005769619",
       "codigo": "87SU",
       "name": "Paquete de 3 Mini Embudos plegables engomados",
@@ -4344,27 +4320,6 @@
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
       },
       "creado": 1788234402388
-    },
-    {
-      "id": "p_1785868358275",
-      "codigo": "MSVP",
-      "name": "Pareja de lámparas de exterior (Solares)",
-      "cat": "Decoración",
-      "subcat": "",
-      "notes": "Lámparas de carga solar con panel incluí. Luces leds de alta potencia con sensor de movimiento y mando a distancia para diferentes modalidades\nSoporte y tornillos incluidos",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785868228/productos/spulocyysctmceshiooa.jpg",
-      "precioUSD": 25,
-      "precioCUP": 21250,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "max": 1,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1785868358275
     },
     {
       "id": "p_1791633427118",
@@ -5606,10 +5561,12 @@
         ]
       },
       "maxOpciones": {
-        "C": 1,
         "D": 1,
         "F": 1
       },
+      "esperaOpciones": [
+        "C"
+      ],
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
