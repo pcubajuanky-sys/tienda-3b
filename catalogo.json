@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-27T15:45:54.680Z",
+  "generado": "2026-10-27T15:50:44.927Z",
   "tasa": 845,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -5636,12 +5636,12 @@
       },
       "maxOpciones": {
         "A": 1,
-        "D": 1,
-        "E": 1
+        "D": 1
       },
       "esperaOpciones": [
         "B",
-        "C"
+        "C",
+        "E"
       ],
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
