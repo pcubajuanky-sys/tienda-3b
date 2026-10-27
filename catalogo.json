@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-27T23:59:01.996Z",
+  "generado": "2026-10-28T00:00:12.477Z",
   "tasa": 850,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -311,7 +311,7 @@
       "avion": [
         {
           "masDeLb": 0,
-          "usdLb": 7
+          "usdLb": 6.5
         },
         {
           "masDeLb": 12,
@@ -502,25 +502,25 @@
         "nombre": "Pinza de pelo",
         "precioUSD": 2,
         "barcoUSD": 5.9,
-        "avionUSD": 9.4
+        "avionUSD": 8.9
       },
       {
         "nombre": "Pulóver o blusa",
         "precioUSD": 8,
         "barcoUSD": 13.1,
-        "avionUSD": 16.6
+        "avionUSD": 16.1
       },
       {
         "nombre": "Jean",
         "precioUSD": 15,
         "barcoUSD": 22.55,
-        "avionUSD": 27.1
+        "avionUSD": 26.45
       },
       {
         "nombre": "Tenis",
         "precioUSD": 25,
         "barcoUSD": 40.5,
-        "avionUSD": 51
+        "avionUSD": 49.5
       }
     ],
     "control": [
@@ -549,10 +549,10 @@
           }
         ],
         "modo": "avion",
-        "envioUSD": 7,
+        "envioUSD": 6.5,
         "servicioUSD": 0.4,
-        "totalUSD": 9.4,
-        "anticipoUSD": 0.94
+        "totalUSD": 8.9,
+        "anticipoUSD": 0.89
       },
       {
         "articulos": [
@@ -579,10 +579,10 @@
           }
         ],
         "modo": "avion",
-        "envioUSD": 7,
+        "envioUSD": 6.5,
         "servicioUSD": 1.6,
-        "totalUSD": 16.6,
-        "anticipoUSD": 1.66
+        "totalUSD": 16.1,
+        "anticipoUSD": 1.61
       },
       {
         "articulos": [
@@ -609,10 +609,10 @@
           }
         ],
         "modo": "avion",
-        "envioUSD": 9.1,
+        "envioUSD": 8.45,
         "servicioUSD": 3,
-        "totalUSD": 27.1,
-        "anticipoUSD": 2.71
+        "totalUSD": 26.45,
+        "anticipoUSD": 2.65
       },
       {
         "articulos": [
@@ -639,10 +639,10 @@
           }
         ],
         "modo": "avion",
-        "envioUSD": 21,
+        "envioUSD": 19.5,
         "servicioUSD": 5,
-        "totalUSD": 51,
-        "anticipoUSD": 5.1
+        "totalUSD": 49.5,
+        "anticipoUSD": 4.95
       },
       {
         "articulos": [
@@ -741,10 +741,10 @@
           }
         ],
         "modo": "avion",
-        "envioUSD": 14,
+        "envioUSD": 13,
         "servicioUSD": 6.2,
-        "totalUSD": 51.2,
-        "anticipoUSD": 5.12
+        "totalUSD": 50.2,
+        "anticipoUSD": 5.02
       }
     ]
   },
