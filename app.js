@@ -17,6 +17,11 @@ const RAIZ = NEGOCIO === (window.Negocio ? window.Negocio.CASA : '3b') ? '/' : '
 const CLAVE_ENVIADO = NEGOCIO === (window.Negocio ? window.Negocio.CASA : '3b')
   ? 'pedidoEnviado'
   : 'pedidoEnviado:' + NEGOCIO;
+// Marca de «la ultima vez que estuvo aqui» (regreso.js). Por negocio, por lo mismo que
+// el carrito y la marca de pedido enviado.
+const CLAVE_VISITA = NEGOCIO === (window.Negocio ? window.Negocio.CASA : '3b')
+  ? 'ultimaVisita'
+  : 'ultimaVisita:' + NEGOCIO;
 let gestorRecargo = null;   // el gestor cuyos precios se estan enseñando, si los hay
 let filtroCat = '';      // categoría activa ('' = todas)
 let filtroOferta = false;
@@ -1632,6 +1637,26 @@ function olvidarDirecciones() {
   pintarDirecciones();
 }
 
+// Saludar a quien vuelve horas despues con el carrito puesto.
+//
+// 🔴 La marca se escribe SIEMPRE al cargar, se salude o no: es «la ultima vez que estuvo
+// aqui». Si solo se escribiera al saludar, la segunda visita del mismo dia volveria a
+// saludar.
+//
+// 🔴 Con la tienda cerrada no se saluda: el pedido no se puede mandar, asi que empujar
+// hacia el carrito solo serviria para frustrar.
+function saludarSiVuelve() {
+  let marca = null;
+  try { marca = localStorage.getItem(CLAVE_VISITA); } catch (e) { marca = null; }
+  try { localStorage.setItem(CLAVE_VISITA, String(Date.now())); } catch (e) { /* incognito: no se saluda */ }
+  const caja = document.getElementById('aviso-regreso');
+  if (!caja || cerrada()) return;
+  const unidades = unidadesEnCarrito();
+  if (!window.Regreso.debeSaludar(marca, Date.now(), unidades)) return;
+  document.getElementById('aviso-regreso-texto').textContent = window.Regreso.texto(unidades);
+  caja.hidden = false;
+}
+
 // El cliente volvio a la tienda despues de irse a WhatsApp. Como la tienda NO puede saber
 // si llego a enviar el mensaje, se le pregunta en vez de decidir por el.
 function preguntarSiEnvio() {
@@ -2142,6 +2167,7 @@ async function cargarCatalogo() {
   renderPromoEnvio();
   pintarCampana();
   pintarCierre();
+  saludarSiVuelve();   // despues de ajustarCarritoATopes: las unidades ya son las reales
   if (window.Encargos) window.Encargos.iniciar(CAT);   // encargos.js (Fase C): tarjeta + #encargos
   document.getElementById('skeleton').hidden = true;
   document.getElementById('grid').hidden = false;
@@ -2307,6 +2333,15 @@ async function iniciar() {
   document.getElementById('aviso-ajuste-cerrar').addEventListener('click', () => {
     document.getElementById('aviso-ajuste').hidden = true;
     medirHeader();
+  });
+  document.getElementById('aviso-regreso-cerrar').addEventListener('click', () => {
+    document.getElementById('aviso-regreso').hidden = true;
+  });
+  // 🔴 abrirCarrito(), NO mostrarCarrito(): el carrito es una capa del historial y
+  // enseñarlo a mano dejaria una entrada sin nada que cerrar (ver historial.js).
+  document.getElementById('aviso-regreso-ver').addEventListener('click', () => {
+    document.getElementById('aviso-regreso').hidden = true;
+    abrirCarrito();
   });
 
   window.addEventListener('scroll', actualizarHeaderScroll, { passive: true });

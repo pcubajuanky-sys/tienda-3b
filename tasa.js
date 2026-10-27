@@ -1,7 +1,7 @@
 // tasa.js — el numero con el que estan calculados los precios, a la vista.
 //
 // Modulo PURO (ni DOM ni red): compone tres textos a partir de CAT.tasa, que ya viaja
-// en catalogo.json. Lo pinta app.js en el chip de la portada, en el aviso del pie y
+// en catalogo.json. Lo pinta app.js en una linea propia de la portada, en el aviso del pie y
 // debajo del total del carrito. Se prueba con node:vm desde test/tasa.test.js.
 //
 // 🔴 La regla que manda aqui: lo que se enseña es LA TASA CON LA QUE ESTAN CALCULADOS
@@ -14,7 +14,6 @@
 (function () {
   'use strict';
 
-  const CHIP_BASE = 'Precios en CUP y USD';
   const AVISO_BASE = 'Los precios pueden variar según la tasa del día.';
 
   function valida(tasa) {

@@ -82,6 +82,16 @@
     <p id="aviso-ajuste-texto" class="aviso-ajuste-texto"></p>
     <button id="aviso-ajuste-cerrar" class="aviso-ajuste-x" type="button" aria-label="Cerrar aviso">✕</button>
   </div>
+  <!-- «Tienes N productos esperando» (2026-10-27): solo para quien vuelve mas de seis
+       horas despues con el carrito puesto. Mismo sitio y mismo patron que #aviso-ajuste
+       (dentro de .barra-fija para que medirHeader() lo cuente en --header-h) y SI se
+       puede cerrar: es un recordatorio, no el estado del negocio. Lo pinta
+       saludarSiVuelve() en app.js. -->
+  <div id="aviso-regreso" class="aviso-ajuste aviso-regreso" role="status" hidden>
+    <p id="aviso-regreso-texto" class="aviso-ajuste-texto"></p>
+    <button id="aviso-regreso-ver" class="aviso-regreso-btn" type="button">Ver mi pedido</button>
+    <button id="aviso-regreso-cerrar" class="aviso-ajuste-x" type="button" aria-label="Cerrar aviso">✕</button>
+  </div>
 
   <div id="promo-mundos" class="promo promo-mundos" hidden>
     <div class="promo-contenido">

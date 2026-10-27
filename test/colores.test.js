@@ -123,3 +123,10 @@ test('🔴 el rojo de «te equivocaste» no es el rojo de «que oportunidad»', 
   assert.ok(err[0].includes('var(--error)'), '.campo-error tiene que usar --error');
   assert.ok(!err[0].includes('var(--oferta)'), '.campo-error no puede usar el rojo de las ofertas');
 });
+
+test('el boton de marca se lee en los dos temas', () => {
+  // --brand/--brand-ink pintan .btn-primario, el contador del carrito, los chips de
+  // filtro y, desde el 2026-10-27, el boton «Ver mi pedido» del aviso de regreso.
+  exige('boton de marca claro', claro('brand-ink'), claro('brand'), 4.5);
+  exige('boton de marca oscuro', oscuro('brand-ink'), oscuro('brand'), 4.5);
+});
