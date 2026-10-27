@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-27T00:21:18.755Z",
+  "generado": "2026-10-27T00:42:42.592Z",
   "tasa": 840,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -970,7 +970,8 @@
         ]
       },
       "maxOpciones": {
-        "ROSA🩷": 4
+        "ROSA🩷": 4,
+        "AZUL💙": 8
       },
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
@@ -1706,13 +1707,13 @@
       },
       "maxOpciones": {
         "C": 1,
-        "E": 1,
         "F": 1,
         "G": 1
       },
       "esperaOpciones": [
         "B",
-        "D"
+        "D",
+        "E"
       ],
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
@@ -1830,26 +1831,6 @@
       },
       "envioGratis": true,
       "creado": 1787498299932
-    },
-    {
-      "id": "p_1787453147089",
-      "codigo": "CC3U",
-      "name": "Conjunto de tobilleras de fantasía",
-      "cat": "Reloj y Prendas",
-      "subcat": "",
-      "notes": "Exactamente el diseño de la imagen",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787844052/productos/zfbbgklbmazqnrb8rzfd.jpg",
-      "precioUSD": 2,
-      "precioCUP": 1680,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "espera": true,
-      "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      },
-      "creado": 1787453147089
     },
     {
       "id": "p_1787453447601",
@@ -3857,7 +3838,7 @@
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1792976334/productos/yotrahzlps1slucnirrd.jpg",
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1792976339/productos/w25vhihfiwibjxrszpsi.jpg"
       ],
-      "max": 3,
+      "max": 4,
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
@@ -4248,7 +4229,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 5,
+      "max": 6,
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
