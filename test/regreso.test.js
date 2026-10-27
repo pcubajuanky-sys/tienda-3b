@@ -65,6 +65,18 @@ test('🔴 el cableado existe en app.js y en las DOS paginas', () => {
   // mostrarCarrito(), o el «atras» del telefono dejaria de cerrarlo (ver historial.js).
   assert.ok(!/aviso-regreso-ver[\s\S]{0,260}mostrarCarrito\(/.test(app),
     'el boton del aviso tiene que usar abrirCarrito(), no mostrarCarrito()');
+  // 🔴 El aviso vive DENTRO de .barra-fija: aparecer o irse cambia el alto de la
+  // cabecera, y --header-h lo calcula medirHeader(). Sin esto la cabecera tapa
+  // contenido al salir el aviso y deja un hueco al cerrarlo. Las tres rutas: la que
+  // lo enseña y los dos botones que lo quitan.
+  const saluda = app.match(/function saludarSiVuelve\(\)[\s\S]*?\n\}/);
+  assert.ok(saluda, 'no se encuentra saludarSiVuelve');
+  assert.ok(saluda[0].includes('medirHeader()'), 'saludarSiVuelve tiene que remedir la cabecera');
+  for (const boton of ['aviso-regreso-cerrar', 'aviso-regreso-ver']) {
+    const h = app.match(new RegExp("getElementById\\('" + boton + "'\\)[\\s\\S]{0,320}?\\}\\);"));
+    assert.ok(h, 'no se encuentra el manejador de ' + boton);
+    assert.ok(h[0].includes('medirHeader()'), boton + ' tiene que remedir la cabecera al ocultarlo');
+  }
   for (const pagina of ['index.html', 'electripower.html']) {
     const html = fs.readFileSync(path.join(__dirname, '..', pagina), 'utf8');
     assert.ok(html.includes('id="aviso-regreso"'), pagina + ': falta el aviso');

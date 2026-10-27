@@ -1655,6 +1655,7 @@ function saludarSiVuelve() {
   if (!window.Regreso.debeSaludar(marca, Date.now(), unidades)) return;
   document.getElementById('aviso-regreso-texto').textContent = window.Regreso.texto(unidades);
   caja.hidden = false;
+  medirHeader();   // vive dentro de .barra-fija: el alto de la cabecera cambia
 }
 
 // El cliente volvio a la tienda despues de irse a WhatsApp. Como la tienda NO puede saber
@@ -2336,11 +2337,13 @@ async function iniciar() {
   });
   document.getElementById('aviso-regreso-cerrar').addEventListener('click', () => {
     document.getElementById('aviso-regreso').hidden = true;
+    medirHeader();
   });
   // 🔴 abrirCarrito(), NO mostrarCarrito(): el carrito es una capa del historial y
   // enseñarlo a mano dejaria una entrada sin nada que cerrar (ver historial.js).
   document.getElementById('aviso-regreso-ver').addEventListener('click', () => {
     document.getElementById('aviso-regreso').hidden = true;
+    medirHeader();
     abrirCarrito();
   });
 
