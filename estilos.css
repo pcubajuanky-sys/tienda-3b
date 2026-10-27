@@ -929,6 +929,9 @@ body.con-barra-movil{padding-bottom:var(--barra-movil-h, 84px)}
 .completar-card .rel-foto{width:108px;height:108px}
 .total-linea{display:block;font-size:18px;font-weight:800}
 .total-usd{display:block;font-size:12px;color:var(--text-3);font-weight:600;margin-top:2px}
+/* La tasa con la que esta hecha la conversion de arriba. Mas tenue que el total en USD
+   a proposito: es el dato que respalda la cifra, no la cifra. */
+.total-tasa{display:block;font-size:11px;color:var(--text-3);font-weight:500;margin-top:2px}
 .campos{display:flex;flex-direction:column;gap:12px;margin-top:4px}
 .campo{display:flex;flex-direction:column;gap:5px;font-size:12px;font-weight:600;color:var(--text-2)}
 .campo input,.campo textarea{

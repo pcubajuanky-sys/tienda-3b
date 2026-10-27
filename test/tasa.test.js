@@ -61,3 +61,25 @@ test('la nota del carrito es corta: cabe en 375px', () => {
   assert.strictEqual(t, '845 CUP por USD');
   assert.ok(t.length < 24, 'si crece, se parte en dos lineas debajo del total');
 });
+
+test('🔴 el cableado existe en los TRES sitios y en las DOS paginas', () => {
+  // electripower.html es la tienda del socio y comparte app.js: si solo se cablea
+  // index.html, alli se busca un id que no existe.
+  const app = fs.readFileSync(path.join(__dirname, '..', 'app.js'), 'utf8');
+  assert.ok(app.includes('TasaVista.chip('), 'falta el chip de la portada');
+  assert.ok(app.includes('TasaVista.aviso('), 'falta el aviso del pie');
+  assert.ok(app.includes('TasaVista.carrito('), 'falta la nota del carrito');
+
+  for (const pagina of ['index.html', 'electripower.html']) {
+    const html = fs.readFileSync(path.join(__dirname, '..', pagina), 'utf8');
+    assert.ok(html.includes('id="hero-dato-moneda"'), pagina + ': falta el id del chip');
+    assert.ok(html.includes('id="aviso-tasa"'), pagina + ': falta el id del aviso');
+    assert.ok(html.includes('src="tasa.js"'), pagina + ': no carga tasa.js');
+    // El texto de reserva se queda escrito en el HTML: si el JS no llega, la pagina
+    // se lee igual que siempre en vez de enseñar un hueco.
+    assert.ok(html.includes('Precios en CUP y USD'), pagina + ': falta el texto de reserva del chip');
+  }
+
+  const sw = fs.readFileSync(path.join(__dirname, '..', 'sw.js'), 'utf8');
+  assert.ok(sw.includes("'/tasa.js'"), 'tasa.js no esta en ARMAZON: sin conexion no cargaria');
+});

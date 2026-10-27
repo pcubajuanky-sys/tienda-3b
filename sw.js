@@ -30,6 +30,7 @@ const ARMAZON = [
   '/direcciones.js',
   '/traspedido.js',
   '/tarjeta.js',
+  '/tasa.js',
   '/espera.js',
   '/preguntar.js',
   '/completar.js',

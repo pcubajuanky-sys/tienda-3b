@@ -1201,7 +1201,11 @@ function totalCarritoUSD() {
 // Usa totalGeneralUSD() (productos + mensajería si aplica) para que el "≈"
 // siga siendo coherente con el total real que se cobra.
 function usdLineaHtml(clase) {
-  return `<span class="${clase}">≈ $${totalGeneralUSD().toFixed(2)} USD</span>`;
+  // La tasa va en su propia linea, no pegada al total: en 375px «≈ $12.34 USD · 845 CUP
+  // por USD» se parte feo justo donde la clienta esta mirando el dinero.
+  const nota = (window.TasaVista && TasaVista.carrito(CAT.tasa)) || '';
+  return `<span class="${clase}">≈ $${totalGeneralUSD().toFixed(2)} USD</span>`
+    + (nota ? `<span class="total-tasa">${nota}</span>` : '');
 }
 
 // Bloque de total, compartido por panel modal y aside (una sola fuente de
@@ -1927,6 +1931,11 @@ function renderHero() {
   document.getElementById('hero-mosaico').innerHTML =
     elegidos.map((p) => `<img src="${fotoMosaico(p.photo)}" alt="" loading="lazy">`).join('');
   document.getElementById('hero-dato-productos').textContent = `${(CAT.items || []).length} productos disponibles`;
+  // El numero con el que estan calculados estos precios, donde la clienta ya esta
+  // leyendo las credenciales de la tienda. Sin tasa, el <li> conserva su texto de
+  // reserva y no se ve ningun cambio.
+  const chipMoneda = document.getElementById('hero-dato-moneda');
+  if (chipMoneda) chipMoneda.textContent = TasaVista.chip(CAT.tasa);
 }
 
 // ── Marca: nombre de la tienda (CAT.tienda.nombre, con '3B Store' de reserva) ──
@@ -2079,6 +2088,10 @@ async function cargarCatalogo() {
   }
   document.getElementById('actualizado').textContent =
     'Catálogo actualizado el ' + new Date(CAT.generado).toLocaleString('es-MX');
+  // La fecha de arriba y esta linea se leen juntas: «actualizado el 27/10 … calculados
+  // a 845 CUP». Por eso el aviso no repite la fecha.
+  const avisoTasa = document.getElementById('aviso-tasa');
+  if (avisoTasa) avisoTasa.textContent = TasaVista.aviso(CAT.tasa);
 
   renderMarca();
   renderHero();
