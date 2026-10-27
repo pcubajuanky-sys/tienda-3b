@@ -177,6 +177,42 @@ momento se pulsó «Pedir por WhatsApp»**, así que a Ruth no le llegó ningún
 worker viejo sirve su caché mientras el nuevo se instala. En este despliegue la primera carga ya
 traía `v24`, pero el desfase es el comportamiento normal y se ha visto en vivo otras veces.
 
+## Añadido después: la tasa en el mensaje del pedido (`7a0276f`, caché `v25`)
+
+Petición de Ruth al leer el informe anterior. El carrito ya enseñaba el cambio debajo del
+total, pero **el mensaje que sale hacia WhatsApp iba todo en CUP y no lo llevaba**: ni el
+cliente podía comprobar la conversión, ni quedaba constancia de con qué tasa se cerró ese
+pedido si se cambia al día siguiente. `TasaVista.pedido()` nuevo (corto y sin emoji: ahí es un
+dato de factura, no el reclamo de la portada) y una línea en `enviarPorWhatsApp` pegada al
+total. Tests **226/226, exit 0**.
+
+**Corrección a este informe y al plan: la tasa SÍ sale de elTOQUE.** Lo dijo Ruth: la
+transcribe ella mirando elTOQUE, y el «espejo» también la saca de ahí. Lo que está roto es solo
+la **lectura automática por API** (falta `ELTOQUE_TOKEN`; el propio sistema lo escribe:
+`eltoque: sin-clave (falta ELTOQUE_TOKEN) | espejo: sin-articulo-de-hoy`, con `valor: null`).
+Origen y mecanismo son cosas distintas y aquí se confundieron: la atribución a elTOQUE es
+honesta, lo que no se puede prometer es **frescura**, porque depende de cuándo lo mire Ruth y
+de que republique el catálogo. Los textos de la página (`test/tasa.test.js`) **no se
+cambiaron**: siguen diciendo «Cambio que usamos» sin nombrar la fuente. Si se quiere que la
+nombren, es otra tarea.
+
+**Verificado en producción** (`c29a6c1..7a0276f`), con `window.open` **sustituido por una
+función que solo captura la URL**, así que no salió ningún pedido real hacia el WhatsApp de la
+tienda. Mensaje compuesto, tal cual:
+
+```
+Productos: 5,950 CUP
+Mensajería: GRATIS (pedido desde 2,000 CUP)
+*Total: 5,950 CUP*
+Cambio: 1 USD = 850 CUP
+```
+
+Caché `["tienda-3b-v25"]` y `enviarPorWhatsApp.toString()` contiene `TasaVista.pedido(` → corre
+el código nuevo. 🔴 **La tasa ya no es 845 sino 850**: Ruth la cambió y Stock+ republicó
+mientras se verificaba, y la línea del pedido la tomó sola — prueba de paso de que el número
+viaja del panel al mensaje sin tocar nada. `localStorage` de prueba vaciado después
+(`carrito`, `pedidoEnviado`, `direcciones`, `ultimaVisita`).
+
 ## Pendiente / próximos pasos
 
 - [ ] **Mirar con ojos lo que aquí solo está medido**: la frase del umbral y la banda de regreso
