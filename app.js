@@ -753,7 +753,7 @@ function pintarRelacionados(p) {
     `<button type="button" class="rel-card" data-rel="${x.id}">` +
     `<span class="rel-foto"><img src="${fotoMosaico(x.photo)}" alt="" loading="lazy"></span>` +
     `<span class="rel-nom">${escapeHtml(x.name)}</span>` +
-    `<span class="rel-precio">${x.moneda === 'usd' ? '$' + x.precioUSD : fmt(x.precioCUP) + ' CUP'}</span>` +
+    `<span class="rel-precio">${window.Relacionados.precioTexto(x)}</span>` +
     `</button>`).join('');
 }
 
