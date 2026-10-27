@@ -670,6 +670,33 @@ function pintarListoFicha(id) {
     'data-ver-pedido="1">' + escapeHtml(txt) + '</button>';
 }
 
+// La frase del umbral en la ficha: «añádelo y te faltarán X para la mensajería gratis».
+// Se repinta junto a la accion porque depende del carrito, y el carrito cambia sin
+// cerrar la ficha (el boton «Añadir» esta justo encima de esta linea).
+//
+// 🔴 El umbral y el elegible salen de envioGratis() / totalCarritoElegible(), que ya
+// descuentan el transporte aparte. No se recalculan aqui: si cambia la regla del
+// umbral, cambia en un solo sitio.
+//
+// 🔴 Con la tienda cerrada no se empuja a comprar: mismo criterio que accionHtml() y
+// que pintarListoFicha().
+function pintarUmbralFicha(id, clave) {
+  const caja = document.getElementById('ficha-umbral');
+  if (!caja) return;
+  const p = productoDe(id);
+  const eg = envioGratis();
+  const txt = cerrada() ? '' : window.Umbral.mensaje({
+    activo: eg.activo,
+    umbral: eg.umbral,
+    elegible: totalCarritoElegible(),
+    precio: p && p.precioCUP,
+    aparte: esAparte(p),
+    espera: Espera.enEspera(p, clave || null)
+  });
+  caja.hidden = !txt;
+  caja.textContent = txt;
+}
+
 function refrescarAcciones(id) {
   const el = document.getElementById('acc-' + id);
   if (el) el.innerHTML = accionHtml(id);
@@ -681,6 +708,7 @@ function refrescarAcciones(id) {
     pintarEsperaFicha(id, claveActual);
     pintarPreguntarProducto(id, claveActual);
     pintarListoFicha(id);
+    pintarUmbralFicha(id, claveActual);
     pintarChipsVariante(id);
   }
 }
@@ -857,6 +885,7 @@ function mostrarDetalle(id) {
   pintarEsperaFicha(id, null);
   pintarPreguntarProducto(id, null);
   pintarListoFicha(id);
+  pintarUmbralFicha(id, null);
   pintarRelacionados(p);
   const avisoComp = document.getElementById('compartir-aviso');
   if (avisoComp) avisoComp.textContent = '';   // no arrastrar el «copiado» del producto anterior

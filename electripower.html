@@ -354,6 +354,12 @@
       <div class="modal-tallas" id="modal-tallas" hidden></div>
       <div id="banda-gestor-ficha" class="banda-gestor" hidden></div>
       <div class="modal-accion" id="modal-accion"></div>
+        <!-- «Añádelo y te faltarán X CUP para la mensajería gratis» (2026-10-27). Va
+             pegado a la acción de compra porque es el empujón de ESE botón: medido sobre
+             196 pedidos reales, la mediana del pedido web cae clavada en el umbral y el
+             43 % se queda por debajo. Lo pinta pintarUmbralFicha() en app.js; sin umbral
+             configurado queda oculto y la ficha se ve como antes. -->
+        <p class="ficha-umbral" id="ficha-umbral" hidden></p>
         <p class="garantia-ficha" id="garantia-ficha" hidden></p>
         <!-- Relacionados: va DEBAJO de la accion de compra y ENCIMA de compartir. Lo
              pinta pintarRelacionados() en app.js; con menos de dos candidatos queda
