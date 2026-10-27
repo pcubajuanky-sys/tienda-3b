@@ -1,7 +1,8 @@
 # 2026-10-27 — La tasa en la portada y tres ganchos de venta
 
 **Sesión:** Opus 5 pilotando · ejecutor Sonnet 5.5 (un solo agente, reusado) ·
-**Commit inicial → final:** `0f38032` → `b97f359`, rama **`tasa-portada-y-ganchos`**, **SIN PUSH**
+**Commit inicial → final:** `0f38032` → `8be199e` (merge a `main`), **DESPLEGADO el 2026-10-27**
+(`6d2ac71..8be199e`) y verificado en producción
 **Origen:** petición del usuario («en la portada ponme el cambio de cup por usd, quiero que el
 cliente vea eso apenas entre» + «dale con los ganchos de venta») · plan
 `docs/superpowers/plans/2026-10-27-tasa-en-portada-y-ganchos.md` · revisión
@@ -19,8 +20,8 @@ su primer producto.
 
 Tests **224/224, exit 0** (baseline 199). Verificado en navegador a 375 px en los dos temas:
 las cuatro ramas de la frase del umbral, el ciclo completo del aviso de regreso y los precios
-en CUP de la tira. **Nada desplegado: la rama está sin push y el despliegue necesita el visto
-bueno de Ruth.**
+en CUP de la tira. **Desplegado el 2026-10-27** (`6d2ac71..8be199e`) y vuelto a verificar EN EL
+SITIO REAL.
 
 ## Cambios realizados
 
@@ -147,13 +148,37 @@ los chips de abajo. **La captura sale recortada por la derecha** (Chrome sin ven
 **En ningún momento se pulsó «Pedir por WhatsApp»**, y todo fue contra `127.0.0.1`, no contra
 producción.
 
+## Despliegue (2026-10-27)
+
+`git fetch` traía **21 commits** de Stock+ en `origin/main` (solo `catalogo.json`,
+`precios-gestores.json` y `sitemap.xml`): `git pull --ff-only` → `6d2ac71`, merge de la rama sin
+conflictos, y **`node --test` otra vez contra el catálogo nuevo: 224/224, exit 0**.
+`git push origin main` → **`6d2ac71..8be199e`**.
+
+Verificado **en www.3bqba.com a 375 px**, no en local:
+
+| Comprobación | Observado en producción |
+|---|---|
+| Caché y código vivo | `caches.keys()` → `["tienda-3b-v24"]`; `saludarSiVuelve` y `window.Umbral` existen → corre el código nuevo, no el de la caché vieja |
+| Línea del cambio | `💵 Cambio que usamos: 1 USD = 845 CUP` · 15 px/700 · 314×34 px · `top=427`, **encima** de los botones (`top=477`) |
+| El número no se repite | El chip dice solo `Precios en CUP y USD` |
+| Umbral, carrito vacío, «Peine de barbería» 203 CUP | «Añádelo y te faltarán **1,797** CUP para la mensajería gratis» · 327×35 px · `#0E7566` en tema claro |
+| Tira de relacionados | `608 · 1,690 · 2,535 · 1,690 · 1,943 · 1,690 CUP` — **las seis en CUP** |
+| Aviso de regreso (marca de 9 h, 3 unidades) | «Tienes 3 productos esperando en tu pedido»; `--header-h` **212,55 px** contra barra real de **213** |
+| «Ver mi pedido» | abre el carrito, oculta el aviso y `--header-h` baja a **150,55** contra barra de **151** → el arreglo de `medirHeader()` funciona en el sitio real |
+| El «atrás» | cierra el carrito y sigue en `www.3bqba.com` |
+| Sin desborde horizontal a 375 px | `scrollWidth` no supera 375 |
+
+`localStorage` del navegador de prueba vaciado al terminar (`Object.keys(localStorage)` → `[]`),
+incluidas las claves `:electripower` que habían quedado de pruebas anteriores. 🔴 **En ningún
+momento se pulsó «Pedir por WhatsApp»**, así que a Ruth no le llegó ningún pedido falso.
+
+🔴 **Si alguien abre la tienda y «no ve el cambio», que recargue una segunda vez**: el service
+worker viejo sirve su caché mientras el nuevo se instala. En este despliegue la primera carga ya
+traía `v24`, pero el desfase es el comportamiento normal y se ha visto en vivo otras veces.
+
 ## Pendiente / próximos pasos
 
-- [ ] **Decidir el despliegue.** La rama `tasa-portada-y-ganchos` está **sin push**. Para
-      desplegar: `git checkout main; git pull --ff-only; git merge tasa-portada-y-ganchos;
-      node --test; git push origin main`. 🔴 Tras publicar, **la primera carga sigue corriendo
-      el código viejo**: hay que recargar una segunda vez (comprobar con
-      `caches.keys()` → `tienda-3b-v24` y `saludarSiVuelve.toString()`).
 - [ ] **Mirar con ojos lo que aquí solo está medido**: la frase del umbral y la banda de regreso
       como píxeles, y cualquier cosa en un teléfono real.
 - [ ] **Conseguir `ELTOQUE_TOKEN`** y correr `POST /api/tasa/leer-ahora` en Stock+. Hasta
@@ -204,8 +229,6 @@ lo que deliberadamente quedó fuera y por qué.
 ## Lo que NO se verificó
 
 - ⚠ **Ningún teléfono real.** Todo en Chrome de escritorio con viewport emulado a 375×812.
-- ⚠ **Nada desplegado.** La rama está sin push; el `CACHE = v24` no se ha probado contra el
-  service worker real, solo por test de texto.
 - ⚠ **Nadie ha MIRADO** la frase del umbral ni la banda de regreso como imagen: están medidas
   (texto, color, tamaño, posición, sin desborde) pero no vistas.
 - ⚠ **Sin probar sin conexión.** `/umbral.js` y `/regreso.js` están en `ARMAZON` por test de
