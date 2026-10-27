@@ -1931,11 +1931,14 @@ function renderHero() {
   document.getElementById('hero-mosaico').innerHTML =
     elegidos.map((p) => `<img src="${fotoMosaico(p.photo)}" alt="" loading="lazy">`).join('');
   document.getElementById('hero-dato-productos').textContent = `${(CAT.items || []).length} productos disponibles`;
-  // El numero con el que estan calculados estos precios, donde la clienta ya esta
-  // leyendo las credenciales de la tienda. Sin tasa, el <li> conserva su texto de
-  // reserva y no se ve ningun cambio.
-  const chipMoneda = document.getElementById('hero-dato-moneda');
-  if (chipMoneda) chipMoneda.textContent = TasaVista.chip(CAT.tasa);
+  // El cambio, en su propia linea y arriba del todo. Sin tasa valida queda oculto: la
+  // portada se ve entonces exactamente como antes de esta tarea.
+  const tasaPortada = document.getElementById('hero-tasa');
+  if (tasaPortada) {
+    const txt = TasaVista.portada(CAT.tasa);
+    tasaPortada.textContent = txt;
+    tasaPortada.hidden = !txt;
+  }
 }
 
 // ── Marca: nombre de la tienda (CAT.tienda.nombre, con '3B Store' de reserva) ──

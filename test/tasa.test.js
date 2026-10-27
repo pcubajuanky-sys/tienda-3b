@@ -9,7 +9,7 @@ const vm = require('node:vm');
 const sandbox = { window: {} };
 vm.createContext(sandbox);
 vm.runInContext(fs.readFileSync(path.join(__dirname, '..', 'tasa.js'), 'utf8'), sandbox);
-const { valida, numero, chip, aviso, carrito } = sandbox.window.TasaVista;
+const { valida, numero, portada, aviso, carrito } = sandbox.window.TasaVista;
 
 test('valida solo acepta una tasa que sirva para convertir', () => {
   assert.strictEqual(valida(845), true);
@@ -29,21 +29,21 @@ test('numero se lee como una cifra de dinero', () => {
   assert.strictEqual(numero(845.7), '846', 'nadie enseña decimales de una tasa');
 });
 
-test('🔴 el chip dice CON QUE tasa estan calculados, no «la tasa de hoy»', () => {
+test('🔴 la portada dice CON QUE tasa estan calculados, no «la tasa de hoy»', () => {
   // La diferencia no es de estilo: el catalogo se republica cada 5 horas y un cambio
   // a mano no lo republica, asi que prometer frescura seria mentir a ratos.
-  const t = chip(845);
+  const t = portada(845);
   assert.ok(t.includes('1 USD = 845 CUP'), 'falta el numero');
-  assert.ok(t.includes('Precios en CUP y USD'), 'se perdio el texto que ya estaba');
   assert.ok(!/tasa del d[ií]a/i.test(t), 'no puede prometer que es la tasa de hoy');
   assert.ok(!/toque/i.test(t), 'no puede atribuirsela a elTOQUE');
+  assert.ok(t.length < 42, 'en 375px una linea mas larga se parte fea');
 });
 
 test('🔴 sin tasa, la pagina se ve exactamente como antes', () => {
   // Si Stock+ publicara un catalogo sin tasa, lo peor que puede pasar es que no haya
   // cambiado nada. Nunca un hueco, un «undefined» ni un «1 USD = NaN CUP».
-  assert.strictEqual(chip(undefined), 'Precios en CUP y USD');
-  assert.strictEqual(chip(0), 'Precios en CUP y USD');
+  assert.strictEqual(portada(undefined), '', 'sin tasa, la linea de la portada no se pinta');
+  assert.strictEqual(portada(0), '');
   assert.strictEqual(aviso(null), 'Los precios pueden variar según la tasa del día.');
   assert.strictEqual(carrito(undefined), '');
   assert.strictEqual(carrito('x'), '');
@@ -66,13 +66,13 @@ test('🔴 el cableado existe en los TRES sitios y en las DOS paginas', () => {
   // electripower.html es la tienda del socio y comparte app.js: si solo se cablea
   // index.html, alli se busca un id que no existe.
   const app = fs.readFileSync(path.join(__dirname, '..', 'app.js'), 'utf8');
-  assert.ok(app.includes('TasaVista.chip('), 'falta el chip de la portada');
+  assert.ok(app.includes('TasaVista.portada('), 'falta la linea de la portada');
   assert.ok(app.includes('TasaVista.aviso('), 'falta el aviso del pie');
   assert.ok(app.includes('TasaVista.carrito('), 'falta la nota del carrito');
 
   for (const pagina of ['index.html', 'electripower.html']) {
     const html = fs.readFileSync(path.join(__dirname, '..', pagina), 'utf8');
-    assert.ok(html.includes('id="hero-dato-moneda"'), pagina + ': falta el id del chip');
+    assert.ok(html.includes('id="hero-tasa"'), pagina + ': falta el id de la linea de la portada');
     assert.ok(html.includes('id="aviso-tasa"'), pagina + ': falta el id del aviso');
     assert.ok(html.includes('src="tasa.js"'), pagina + ': no carga tasa.js');
     // El texto de reserva se queda escrito en el HTML: si el JS no llega, la pagina

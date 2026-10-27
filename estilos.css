@@ -323,6 +323,15 @@ a{color:inherit}
    a dos líneas largas y la portada crecía más de lo que se ahorraba arriba. */
 .hero-sub{font-size:var(--t-md);max-width:42ch;margin:0 auto var(--e3);opacity:.92;line-height:1.45}
 @media (min-width:760px){ .hero-sub{font-size:var(--t-lg)} }
+/* El cambio en la portada. Mas peso que los chips de abajo —es lo que la clienta busca
+   al entrar— pero translucido y no solido, para no competir con los botones. Blanco
+   sobre el velo del hero, el mismo contraste que el resto de la portada (8,2:1 medido).
+   inline-block + el text-align:center de .hero-contenido lo centran solo. */
+.hero-tasa{
+  display:inline-block;margin:0 auto var(--e3);padding:6px var(--e3);
+  border-radius:var(--radio-pill);font-size:var(--t-md);font-weight:700;line-height:1.3;
+  background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.34);
+}
 .hero-acciones{display:flex;flex-wrap:wrap;justify-content:center;gap:var(--e2)}
 /* Chips translúcidos en vez de ✓ sueltos: se leen como datos, no como una lista. */
 .hero-datos{

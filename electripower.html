@@ -165,6 +165,11 @@
       <span class="hero-que-es">Baterías, inversores y respaldo energético</span>
     </h1>
     <p class="hero-sub">Mira el catálogo, arma tu pedido y nos escribes por WhatsApp.</p>
+    <!-- El cambio, lo primero que se ve (2026-10-27). Va aqui, entre el subtitulo y los
+         botones, y no en un chip al final: medido en produccion, el chip caia en y=520 a
+         375px, por debajo de los botones. Lo pinta renderHero() desde TasaVista.portada();
+         sin tasa en el catalogo se queda oculto y la portada se ve igual que antes. -->
+    <p class="hero-tasa" id="hero-tasa" hidden></p>
     <!-- Con la tienda cerrada este cartel sustituye a los botones: el cliente lo
          entiende al entrar, sin bajar. El título y el texto son los mismos de la
          franja (una sola fuente: CAT.tienda.cierre). -->
@@ -179,7 +184,7 @@
     </div>
     <ul class="hero-datos">
       <li id="hero-dato-productos">— productos disponibles</li>
-      <li id="hero-dato-moneda">Precios en CUP y USD</li>
+      <li>Precios en CUP y USD</li>
       <li>Coordinamos por WhatsApp</li>
     </ul>
   </div>
