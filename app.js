@@ -17,6 +17,11 @@ const RAIZ = NEGOCIO === (window.Negocio ? window.Negocio.CASA : '3b') ? '/' : '
 const CLAVE_ENVIADO = NEGOCIO === (window.Negocio ? window.Negocio.CASA : '3b')
   ? 'pedidoEnviado'
   : 'pedidoEnviado:' + NEGOCIO;
+// Marca de «la ultima vez que estuvo aqui» (regreso.js). Por negocio, por lo mismo que
+// el carrito y la marca de pedido enviado.
+const CLAVE_VISITA = NEGOCIO === (window.Negocio ? window.Negocio.CASA : '3b')
+  ? 'ultimaVisita'
+  : 'ultimaVisita:' + NEGOCIO;
 let gestorRecargo = null;   // el gestor cuyos precios se estan enseñando, si los hay
 let filtroCat = '';      // categoría activa ('' = todas)
 let filtroOferta = false;
@@ -670,6 +675,33 @@ function pintarListoFicha(id) {
     'data-ver-pedido="1">' + escapeHtml(txt) + '</button>';
 }
 
+// La frase del umbral en la ficha: «añádelo y te faltarán X para la mensajería gratis».
+// Se repinta junto a la accion porque depende del carrito, y el carrito cambia sin
+// cerrar la ficha (el boton «Añadir» esta justo encima de esta linea).
+//
+// 🔴 El umbral y el elegible salen de envioGratis() / totalCarritoElegible(), que ya
+// descuentan el transporte aparte. No se recalculan aqui: si cambia la regla del
+// umbral, cambia en un solo sitio.
+//
+// 🔴 Con la tienda cerrada no se empuja a comprar: mismo criterio que accionHtml() y
+// que pintarListoFicha().
+function pintarUmbralFicha(id, clave) {
+  const caja = document.getElementById('ficha-umbral');
+  if (!caja) return;
+  const p = productoDe(id);
+  const eg = envioGratis();
+  const txt = cerrada() ? '' : window.Umbral.mensaje({
+    activo: eg.activo,
+    umbral: eg.umbral,
+    elegible: totalCarritoElegible(),
+    precio: p && p.precioCUP,
+    aparte: esAparte(p),
+    espera: Espera.enEspera(p, clave || null)
+  });
+  caja.hidden = !txt;
+  caja.textContent = txt;
+}
+
 function refrescarAcciones(id) {
   const el = document.getElementById('acc-' + id);
   if (el) el.innerHTML = accionHtml(id);
@@ -681,6 +713,7 @@ function refrescarAcciones(id) {
     pintarEsperaFicha(id, claveActual);
     pintarPreguntarProducto(id, claveActual);
     pintarListoFicha(id);
+    pintarUmbralFicha(id, claveActual);
     pintarChipsVariante(id);
   }
 }
@@ -720,7 +753,7 @@ function pintarRelacionados(p) {
     `<button type="button" class="rel-card" data-rel="${x.id}">` +
     `<span class="rel-foto"><img src="${fotoMosaico(x.photo)}" alt="" loading="lazy"></span>` +
     `<span class="rel-nom">${escapeHtml(x.name)}</span>` +
-    `<span class="rel-precio">${x.moneda === 'usd' ? '$' + x.precioUSD : fmt(x.precioCUP) + ' CUP'}</span>` +
+    `<span class="rel-precio">${window.Relacionados.precioTexto(x)}</span>` +
     `</button>`).join('');
 }
 
@@ -857,6 +890,7 @@ function mostrarDetalle(id) {
   pintarEsperaFicha(id, null);
   pintarPreguntarProducto(id, null);
   pintarListoFicha(id);
+  pintarUmbralFicha(id, null);
   pintarRelacionados(p);
   const avisoComp = document.getElementById('compartir-aviso');
   if (avisoComp) avisoComp.textContent = '';   // no arrastrar el «copiado» del producto anterior
@@ -1603,6 +1637,27 @@ function olvidarDirecciones() {
   pintarDirecciones();
 }
 
+// Saludar a quien vuelve horas despues con el carrito puesto.
+//
+// 🔴 La marca se escribe SIEMPRE al cargar, se salude o no: es «la ultima vez que estuvo
+// aqui». Si solo se escribiera al saludar, la segunda visita del mismo dia volveria a
+// saludar.
+//
+// 🔴 Con la tienda cerrada no se saluda: el pedido no se puede mandar, asi que empujar
+// hacia el carrito solo serviria para frustrar.
+function saludarSiVuelve() {
+  let marca = null;
+  try { marca = localStorage.getItem(CLAVE_VISITA); } catch (e) { marca = null; }
+  try { localStorage.setItem(CLAVE_VISITA, String(Date.now())); } catch (e) { /* incognito: no se saluda */ }
+  const caja = document.getElementById('aviso-regreso');
+  if (!caja || cerrada()) return;
+  const unidades = unidadesEnCarrito();
+  if (!window.Regreso.debeSaludar(marca, Date.now(), unidades)) return;
+  document.getElementById('aviso-regreso-texto').textContent = window.Regreso.texto(unidades);
+  caja.hidden = false;
+  medirHeader();   // vive dentro de .barra-fija: el alto de la cabecera cambia
+}
+
 // El cliente volvio a la tienda despues de irse a WhatsApp. Como la tienda NO puede saber
 // si llego a enviar el mensaje, se le pregunta en vez de decidir por el.
 function preguntarSiEnvio() {
@@ -1931,11 +1986,14 @@ function renderHero() {
   document.getElementById('hero-mosaico').innerHTML =
     elegidos.map((p) => `<img src="${fotoMosaico(p.photo)}" alt="" loading="lazy">`).join('');
   document.getElementById('hero-dato-productos').textContent = `${(CAT.items || []).length} productos disponibles`;
-  // El numero con el que estan calculados estos precios, donde la clienta ya esta
-  // leyendo las credenciales de la tienda. Sin tasa, el <li> conserva su texto de
-  // reserva y no se ve ningun cambio.
-  const chipMoneda = document.getElementById('hero-dato-moneda');
-  if (chipMoneda) chipMoneda.textContent = TasaVista.chip(CAT.tasa);
+  // El cambio, en su propia linea y arriba del todo. Sin tasa valida queda oculto: la
+  // portada se ve entonces exactamente como antes de esta tarea.
+  const tasaPortada = document.getElementById('hero-tasa');
+  if (tasaPortada) {
+    const txt = TasaVista.portada(CAT.tasa);
+    tasaPortada.textContent = txt;
+    tasaPortada.hidden = !txt;
+  }
 }
 
 // ── Marca: nombre de la tienda (CAT.tienda.nombre, con '3B Store' de reserva) ──
@@ -2110,6 +2168,7 @@ async function cargarCatalogo() {
   renderPromoEnvio();
   pintarCampana();
   pintarCierre();
+  saludarSiVuelve();   // despues de ajustarCarritoATopes: las unidades ya son las reales
   if (window.Encargos) window.Encargos.iniciar(CAT);   // encargos.js (Fase C): tarjeta + #encargos
   document.getElementById('skeleton').hidden = true;
   document.getElementById('grid').hidden = false;
@@ -2275,6 +2334,17 @@ async function iniciar() {
   document.getElementById('aviso-ajuste-cerrar').addEventListener('click', () => {
     document.getElementById('aviso-ajuste').hidden = true;
     medirHeader();
+  });
+  document.getElementById('aviso-regreso-cerrar').addEventListener('click', () => {
+    document.getElementById('aviso-regreso').hidden = true;
+    medirHeader();
+  });
+  // 🔴 abrirCarrito(), NO mostrarCarrito(): el carrito es una capa del historial y
+  // enseñarlo a mano dejaria una entrada sin nada que cerrar (ver historial.js).
+  document.getElementById('aviso-regreso-ver').addEventListener('click', () => {
+    document.getElementById('aviso-regreso').hidden = true;
+    medirHeader();
+    abrirCarrito();
   });
 
   window.addEventListener('scroll', actualizarHeaderScroll, { passive: true });

@@ -35,5 +35,16 @@
     return deSub.concat(resto).slice(0, max);
   }
 
-  window.Relacionados = { elegir: elegir };
+  // El precio de la tira, SIEMPRE en CUP. La parrilla enseña la moneda del producto
+  // («$5 · 4.225 CUP»), pero aqui la tarjeta mide ~100px y la tira existe para que la
+  // clienta compre OTRA cosa: dos cifras se parten, y enseñar solo «$5» —que es lo que
+  // pasaba hasta el 2026-10-27 con los productos en moneda usd— la obliga a multiplicar
+  // por la tasa de cabeza justo en el upsell.
+  function precioTexto(p) {
+    const n = Number(p && p.precioCUP);
+    if (!Number.isFinite(n) || n <= 0) return '';
+    return Math.round(n).toLocaleString('es-MX', { maximumFractionDigits: 0 }) + ' CUP';
+  }
+
+  window.Relacionados = { elegir: elegir, precioTexto: precioTexto };
 })();

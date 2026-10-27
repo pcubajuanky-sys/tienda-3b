@@ -85,6 +85,16 @@
     <p id="aviso-ajuste-texto" class="aviso-ajuste-texto"></p>
     <button id="aviso-ajuste-cerrar" class="aviso-ajuste-x" type="button" aria-label="Cerrar aviso">✕</button>
   </div>
+  <!-- «Tienes N productos esperando» (2026-10-27): solo para quien vuelve mas de seis
+       horas despues con el carrito puesto. Mismo sitio y mismo patron que #aviso-ajuste
+       (dentro de .barra-fija para que medirHeader() lo cuente en --header-h) y SI se
+       puede cerrar: es un recordatorio, no el estado del negocio. Lo pinta
+       saludarSiVuelve() en app.js. -->
+  <div id="aviso-regreso" class="aviso-ajuste aviso-regreso" role="status" hidden>
+    <p id="aviso-regreso-texto" class="aviso-ajuste-texto"></p>
+    <button id="aviso-regreso-ver" class="aviso-regreso-btn" type="button">Ver mi pedido</button>
+    <button id="aviso-regreso-cerrar" class="aviso-ajuste-x" type="button" aria-label="Cerrar aviso">✕</button>
+  </div>
 
   <div id="promo-mundos" class="promo promo-mundos" hidden>
     <div class="promo-contenido">
@@ -165,6 +175,11 @@
       <span class="hero-que-es">Baterías, inversores y respaldo energético</span>
     </h1>
     <p class="hero-sub">Mira el catálogo, arma tu pedido y nos escribes por WhatsApp.</p>
+    <!-- El cambio, lo primero que se ve (2026-10-27). Va aqui, entre el subtitulo y los
+         botones, y no en un chip al final: medido en produccion, el chip caia en y=520 a
+         375px, por debajo de los botones. Lo pinta renderHero() desde TasaVista.portada();
+         sin tasa en el catalogo se queda oculto y la portada se ve igual que antes. -->
+    <p class="hero-tasa" id="hero-tasa" hidden></p>
     <!-- Con la tienda cerrada este cartel sustituye a los botones: el cliente lo
          entiende al entrar, sin bajar. El título y el texto son los mismos de la
          franja (una sola fuente: CAT.tienda.cierre). -->
@@ -179,7 +194,7 @@
     </div>
     <ul class="hero-datos">
       <li id="hero-dato-productos">— productos disponibles</li>
-      <li id="hero-dato-moneda">Precios en CUP y USD</li>
+      <li>Precios en CUP y USD</li>
       <li>Coordinamos por WhatsApp</li>
     </ul>
   </div>
@@ -349,6 +364,12 @@
       <div class="modal-tallas" id="modal-tallas" hidden></div>
       <div id="banda-gestor-ficha" class="banda-gestor" hidden></div>
       <div class="modal-accion" id="modal-accion"></div>
+        <!-- «Añádelo y te faltarán X CUP para la mensajería gratis» (2026-10-27). Va
+             pegado a la acción de compra porque es el empujón de ESE botón: medido sobre
+             196 pedidos reales, la mediana del pedido web cae clavada en el umbral y el
+             43 % se queda por debajo. Lo pinta pintarUmbralFicha() en app.js; sin umbral
+             configurado queda oculto y la ficha se ve como antes. -->
+        <p class="ficha-umbral" id="ficha-umbral" hidden></p>
         <p class="garantia-ficha" id="garantia-ficha" hidden></p>
         <!-- Relacionados: va DEBAJO de la accion de compra y ENCIMA de compartir. Lo
              pinta pintarRelacionados() en app.js; con menos de dos candidatos queda
@@ -488,7 +509,13 @@
 <script src="faltante.js"></script>
 <script src="direcciones.js"></script>
 <script src="traspedido.js"></script>
+<script src="espera.js"></script>
+<script src="preguntar.js"></script>
+<script src="completar.js"></script>
+<script src="listo.js"></script>
 <script src="tasa.js"></script>
+<script src="umbral.js"></script>
+<script src="regreso.js"></script>
 <script src="tarjeta.js"></script>
 <script src="negocio.js"></script>
 <script src="app.js"></script>
