@@ -43,7 +43,17 @@
   --brand-soft:#F7E9F2;
   --brand-hondo:#4E1D3B;
   --oferta:    #C81E4C;
-  --wa:        #128C7E;
+  /* Tinta del sello OFERTA. Va en un token y NO escrita a mano, porque --oferta se
+     invierte en modo oscuro y el blanco fijo caia a 2.23:1 (medido en el sitio vivo
+     el 2026-10-27). Blanco sobre el rojo claro: 5,61:1. */
+  --oferta-ink:#FFFFFF;
+  /* 🔴 El verde subio de tono (#128C7E -> #0E7566) porque --wa no solo es el fondo del
+     boton de pagar: tambien es el COLOR de texto de «🛵 MENSAJERIA GRATIS» (.envio-chip,
+     12px), de .envio-detalle, del enlace del pie y de .enc-dominio. Con el anterior,
+     blanco sobre el boton daba 4,14:1 y el texto sobre blanco otro tanto: los dos por
+     debajo del 4,5:1 de AA. Con este: boton 5,59:1 y texto 5,24/5,59/4,82:1. */
+  --wa:        #0E7566;
+  --wa-ink:    #FFFFFF;
 
   /* Portada: tonos PROPIOS que NO se invierten en oscuro. Sin esto, --brand
      pasa a rosa claro en modo oscuro y la portada entera se vuelve rosa chicle. */
@@ -107,12 +117,18 @@
     --brand-soft:#2E1B29;
     --brand-hondo:#C77FA9;
     --oferta:    #FF8AA6;
+    /* Sobre el rosa claro la tinta tiene que ser OSCURA: blanco daba 2,23:1. Este
+       mismo valor es el que ya usa --brand-ink y el sello ⭐ MAS VENDIDO. 7,98:1. */
+    --oferta-ink:#2A0E20;
     /* Sobre fondo oscuro una sombra gris no se ve: solo funciona el negro. Los
        tokens --hero-* NO se redefinen aquí a propósito (ver :root claro). */
     --sombra-1: 0 1px 2px rgba(0,0,0,.40);
     --sombra-2: 0 2px 6px rgba(0,0,0,.45), 0 10px 24px rgba(0,0,0,.50);
     --sombra-3: 0 -2px 8px rgba(0,0,0,.40), 0 18px 48px rgba(0,0,0,.60);
     --wa:        #25D366;
+    /* Blanco sobre este verde brillante daba 1,98:1: el boton de cobrar, ilegible.
+       Con tinta oscura, 8,68:1. */
+    --wa-ink:    #1C1A22;
   }
 }
 
@@ -171,7 +187,7 @@ a{color:inherit}
 .btn-primario{background:var(--brand);color:var(--brand-ink)}
 .btn-primario:hover{box-shadow:var(--sombra-2)}
 
-.btn-wa{background:var(--wa);color:#fff}
+.btn-wa{background:var(--wa);color:var(--wa-ink)}
 .btn-wa:hover{box-shadow:var(--sombra-2)}
 
 /* Los dos de la portada. Mismo alto, mismo radio, mismo relleno, misma letra.
@@ -679,7 +695,7 @@ main{padding-top:20px}
   display:flex;flex-direction:column;align-items:flex-start;gap:4px;
 }
 .card-oferta{
-  background:var(--oferta);color:#fff;
+  background:var(--oferta);color:var(--oferta-ink);
   font-size:10px;font-weight:800;letter-spacing:.03em;padding:var(--e0) var(--e1);border-radius:var(--radio-pill);
 }
 .card .body{padding:var(--e2);display:flex;flex-direction:column;gap:var(--e0);flex:1}
