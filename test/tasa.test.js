@@ -9,7 +9,7 @@ const vm = require('node:vm');
 const sandbox = { window: {} };
 vm.createContext(sandbox);
 vm.runInContext(fs.readFileSync(path.join(__dirname, '..', 'tasa.js'), 'utf8'), sandbox);
-const { valida, numero, portada, aviso, carrito } = sandbox.window.TasaVista;
+const { valida, numero, portada, aviso, carrito, pedido } = sandbox.window.TasaVista;
 
 test('valida solo acepta una tasa que sirva para convertir', () => {
   assert.strictEqual(valida(845), true);
@@ -62,6 +62,19 @@ test('la nota del carrito es corta: cabe en 375px', () => {
   assert.ok(t.length < 24, 'si crece, se parte en dos lineas debajo del total');
 });
 
+test('la linea del pedido dice el cambio sin adornos', () => {
+  // Va en el mensaje que le llega a Ruth por WhatsApp, junto al total. Corta y sin
+  // emoji: ahi es un dato de la factura, no un reclamo de la portada.
+  assert.strictEqual(pedido(845), 'Cambio: 1 USD = 845 CUP');
+  assert.strictEqual(pedido(1250), 'Cambio: 1 USD = 1,250 CUP');
+});
+
+test('🔴 sin tasa, el mensaje del pedido sale exactamente como antes', () => {
+  assert.strictEqual(pedido(undefined), '');
+  assert.strictEqual(pedido(0), '');
+  assert.strictEqual(pedido('x'), '');
+});
+
 test('🔴 el cableado existe en los TRES sitios y en las DOS paginas', () => {
   // electripower.html es la tienda del socio y comparte app.js: si solo se cablea
   // index.html, alli se busca un id que no existe.
@@ -69,6 +82,7 @@ test('🔴 el cableado existe en los TRES sitios y en las DOS paginas', () => {
   assert.ok(app.includes('TasaVista.portada('), 'falta la linea de la portada');
   assert.ok(app.includes('TasaVista.aviso('), 'falta el aviso del pie');
   assert.ok(app.includes('TasaVista.carrito('), 'falta la nota del carrito');
+  assert.ok(app.includes('TasaVista.pedido('), 'falta la linea del mensaje de WhatsApp');
 
   for (const pagina of ['index.html', 'electripower.html']) {
     const html = fs.readFileSync(path.join(__dirname, '..', pagina), 'utf8');

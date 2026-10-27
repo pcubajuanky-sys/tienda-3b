@@ -48,5 +48,14 @@
     return numero(tasa) + ' CUP por USD';
   }
 
-  window.TasaVista = { valida, numero, portada, aviso, carrito };
+  // La linea del mensaje de WhatsApp del pedido. Corta y sin emoji a proposito: ahi es
+  // un dato de la factura que le llega a Ruth y que el cliente puede comprobar, no el
+  // reclamo de la portada. Misma regla que el resto del modulo: dice el numero, no
+  // promete frescura.
+  function pedido(tasa) {
+    if (!valida(tasa)) return '';
+    return 'Cambio: 1 USD = ' + numero(tasa) + ' CUP';
+  }
+
+  window.TasaVista = { valida, numero, portada, aviso, carrito, pedido };
 })();

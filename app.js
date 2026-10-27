@@ -1919,6 +1919,11 @@ function enviarPorWhatsApp(ev) {
     lineas.push(`*Total: ${fmt(totalCarrito())} CUP*`);
     if (eg.activo && eg.alcanzado) lineas.push(`Mensajería: GRATIS (pedido desde ${fmt(eg.umbral)} CUP)`);
   }
+  // El cambio con el que estan hechas estas cuentas, pegado al total: asi el cliente
+  // puede comprobar la conversion y Ruth sabe con que tasa se cerro ESTE pedido, aunque
+  // la cambie despues. Sin tasa valida no se escribe nada.
+  const notaTasa = (window.TasaVista && TasaVista.pedido(CAT.tasa)) || '';
+  if (notaTasa) lineas.push(notaTasa);
   lineas.push('');
   const aparteWA = itemsAparte();
   if (aparteWA.length) {
