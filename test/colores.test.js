@@ -107,3 +107,19 @@ test('el gris mas tenue sigue siendo texto: tiene que leerse', () => {
     exige('--text-3 oscuro sobre --' + fondo, oscuro('text-3'), oscuro(fondo), 4.5);
   }
 });
+
+test('🔴 el rojo de «te equivocaste» no es el rojo de «que oportunidad»', () => {
+  // Hasta el 2026-10-27, --oferta pintaba el sello de descuento Y los errores de
+  // formulario Y el hover de «Vaciar». La clienta aprendia a leer ese rojo como
+  // «problema» en el formulario y arrastraba la asociacion a la parrilla.
+  assert.notStrictEqual(claro('error'), claro('oferta'), 'el error y la oferta no pueden compartir color');
+  for (const fondo of ['bg', 'surface', 'surface-2']) {
+    exige('--error claro sobre --' + fondo, claro('error'), claro(fondo), 4.5);
+    exige('--error oscuro sobre --' + fondo, oscuro('error'), oscuro(fondo), 4.5);
+  }
+  // Y las reglas de error tienen que pedirselo al token nuevo.
+  const err = CSS.match(/\.campo-error\{[^}]*\}/);
+  assert.ok(err, 'no se encuentra la regla .campo-error');
+  assert.ok(err[0].includes('var(--error)'), '.campo-error tiene que usar --error');
+  assert.ok(!err[0].includes('var(--oferta)'), '.campo-error no puede usar el rojo de las ofertas');
+});
