@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-27T19:46:34.577Z",
+  "generado": "2026-10-27T21:05:46.092Z",
   "tasa": 850,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -1424,29 +1424,6 @@
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
       },
       "creado": 1787540422288
-    },
-    {
-      "id": "p_1788892014454",
-      "codigo": "BP9X",
-      "name": "Cafetera 1 taza",
-      "cat": "Hogar",
-      "subcat": "",
-      "notes": "Cafetera italiana para café expreso",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788891782/productos/b8cptn2c5lert8u7rad6.jpg",
-      "precioUSD": 5.51,
-      "precioCUP": 4680,
-      "moneda": "cup",
-      "enOferta": true,
-      "destacado": false,
-      "espera": true,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1788892014454,
-      "precioNormalUSD": 6.42,
-      "precioNormalCUP": 5460
     },
     {
       "id": "p_1790983107410",
@@ -5623,14 +5600,12 @@
           "Diseño"
         ],
         "opciones": [
-          "A",
           "C",
           "D",
           "F"
         ]
       },
       "maxOpciones": {
-        "A": 1,
         "D": 1,
         "F": 1
       },
