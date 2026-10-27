@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-27T13:40:30.708Z",
+  "generado": "2026-10-27T15:35:44.891Z",
   "tasa": 845,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -1043,7 +1043,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 6,
+      "max": 5,
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
@@ -1161,8 +1161,7 @@
         "MELOCOTÓN": 9,
         "MANGO": 9,
         "LIMÓN": 9,
-        "COCO": 9,
-        "VAINILLA": 6,
+        "VAINILLA": 7,
         "FRAMBUESA": 6,
         "CEREZA": 8,
         "CAFÉ": 8,
@@ -2463,13 +2462,11 @@
         ]
       },
       "maxOpciones": {
-        "A": 1,
+        "A": 2,
+        "B": 1,
         "C": 3,
         "D": 2
       },
-      "esperaOpciones": [
-        "B"
-      ],
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
@@ -6023,27 +6020,6 @@
       },
       "envioGratis": true,
       "creado": 1780346613571
-    },
-    {
-      "id": "p_1788541433924",
-      "codigo": "D95V",
-      "name": "Trípode manual con mando a distancia",
-      "cat": "Bocinas Celulares y Accesorios",
-      "subcat": "",
-      "notes": "Máxima calidad y utilidad. Alcanza un alto de más de 1 metro",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788542693/productos/umskj5gg4isekmlakjfg.jpg",
-      "precioUSD": 7,
-      "precioCUP": 5915,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "espera": true,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1788541433924
     },
     {
       "id": "p_1790954066390",
