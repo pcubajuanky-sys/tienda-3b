@@ -10,6 +10,7 @@ const vm = require('node:vm');
 
 const sandbox = { window: {} };
 vm.createContext(sandbox);
+vm.runInContext(fs.readFileSync(path.join(__dirname, '..', 'descuento.js'), 'utf8'), sandbox);
 vm.runInContext(fs.readFileSync(path.join(__dirname, '..', 'tarjeta.js'), 'utf8'), sandbox);
 const { precioTarjeta, lineasNombre, nombreArchivo, enlacePie } = sandbox.window.Tarjeta._puro;
 
@@ -103,4 +104,21 @@ test('enlacePie con undefined u otra cosa que no sea texto: no lanza y da el dom
   assert.strictEqual(enlacePie(undefined), 'www.3bqba.com');
   assert.strictEqual(enlacePie({}), 'www.3bqba.com');
   assert.strictEqual(enlacePie(42), 'www.3bqba.com');
+});
+
+test('🔴 la imagen para compartir no tacha un «antes» que no es mayor', () => {
+  // El «Paquete de 4 Tic-Tacs» del catalogo real va de 595 a 612 CUP. Esa imagen se
+  // manda por WhatsApp y Facebook: si enseña «595 CUP» tachado encima de «612 CUP»,
+  // la mentira viaja mas lejos que la pagina.
+  const tictac = { name: 'Tic-Tacs', enOferta: true, moneda: 'usd', precioCUP: 612, precioNormalCUP: 595, precioUSD: 0.72, precioNormalUSD: 0.7 };
+  assert.strictEqual(precioTarjeta(tictac).antes, '');
+  const peine = { name: 'Peine', enOferta: true, moneda: 'usd', precioCUP: 204, precioNormalCUP: 425, precioUSD: 0.24, precioNormalUSD: 0.5 };
+  assert.ok(precioTarjeta(peine).antes.indexOf('0.5') >= 0, 'una rebaja real si lleva el antes');
+});
+
+test('🔴 app.js pide el sello y el tachado al modulo, no los decide a mano', () => {
+  const app = fs.readFileSync(path.join(__dirname, '..', 'app.js'), 'utf8');
+  assert.ok(app.includes('Descuento.sello('), 'el sello tiene que salir del modulo');
+  assert.ok(!/class="card-oferta">OFERTA</.test(app), 'ya no se escribe OFERTA a mano');
+  assert.ok(app.includes('Descuento.hayRebaja('), 'el tachado tiene que preguntar si hay rebaja real');
 });

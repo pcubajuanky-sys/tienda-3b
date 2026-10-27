@@ -35,7 +35,10 @@
     var esUsd = p.moneda === 'usd';
     var grande = (esUsd ? usd : cup) + ' · ' + (esUsd ? cup : usd);
     var antes = '';
-    if (p.enOferta) {
+    // 🔴 Solo si hay rebaja de verdad. Esta imagen viaja por WhatsApp y Facebook: un
+    // «antes» tachado que no es mayor que el precio de ahora miente mas lejos que la
+    // pagina. Lo decide descuento.js, que se carga antes que este modulo.
+    if (p.enOferta && window.Descuento && window.Descuento.hayRebaja(p)) {
       antes = esUsd ? '$' + p.precioNormalUSD + ' USD' : fmt(p.precioNormalCUP) + ' CUP';
     }
     return { grande: grande, antes: antes };

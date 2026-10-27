@@ -731,6 +731,14 @@ main{padding-top:20px}
    moneda fijada de un producto (2026-08-16, moneda:'usd'), no solo un dato de
    referencia — necesita el mismo mínimo AA que .politica-texto (línea 416). */
 .tachado{font-size:var(--t-xs);color:var(--text-2);text-decoration:line-through;font-variant-numeric:tabular-nums}
+/* El «-36%» de la ficha, al lado del precio grande. Mismos colores que el sello de la
+   foto (--oferta/--oferta-ink, el par ya medido en test/colores.test.js), para que se
+   lean como la misma cosa. En la parrilla no va: alli lo dice el sello. */
+.precio-desc{
+  font-size:var(--t-xs);font-weight:800;letter-spacing:.03em;
+  padding:var(--e0) var(--e1);border-radius:var(--radio-pill);
+  background:var(--oferta);color:var(--oferta-ink);
+}
 .precio{font-size:var(--t-lg);font-weight:800;font-variant-numeric:tabular-nums;letter-spacing:-.01em}
 .precio .usd{font-size:12px;color:var(--text-2);font-weight:500;margin-left:4px}
 .card-accion{margin-top:var(--e1)}

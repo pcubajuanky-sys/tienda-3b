@@ -468,16 +468,25 @@ function accionHtml(id, clave) {
 // ausente, comportamiento de siempre) ⇒ al revés. El tachado de las ofertas
 // sigue la misma moneda que el precio efectivo. Una sola función pinta la
 // tarjeta y el detalle: nunca se duplica esta lógica en dos sitios.
-function precioHtml(p) {
+// `conDescuento` solo lo pide la ficha: en la parrilla el porcentaje ya lo grita el sello
+// de la foto, y repetirlo al lado del precio seria decir dos veces lo mismo en 165 px.
+function precioHtml(p, conDescuento) {
   const usd = `$${p.precioUSD}`;
   const cup = `${fmt(p.precioCUP)} CUP`;
   const esUsd = p.moneda === 'usd';
   const principal = esUsd ? usd : cup;
   const secundario = esUsd ? cup : usd;
-  const tachado = p.enOferta
+  // 🔴 El tachado solo cuando el «antes» es MAYOR. Hay un producto en el catalogo cuya
+  // «oferta» sube el precio (595 -> 612 CUP): tacharle un 595 encima de un 612 es
+  // mentir. Lo decide descuento.js; el dato lo arregla Ruth en Stock+.
+  const tachado = window.Descuento.hayRebaja(p)
     ? `<span class="tachado">${esUsd ? `$${p.precioNormalUSD}` : `${fmt(p.precioNormalCUP)} CUP`}</span>`
     : '';
-  return tachado + `<span class="precio">${principal}<span class="usd">· ${secundario}</span></span>`;
+  const pct = conDescuento ? window.Descuento.porciento(p) : null;
+  const chip = pct !== null && pct >= window.Descuento.MINIMO
+    ? `<span class="precio-desc">-${pct}%</span>`
+    : '';
+  return tachado + `<span class="precio">${principal}<span class="usd">· ${secundario}</span></span>` + chip;
 }
 
 // Cuántas quedan, solo cuando de verdad quedan pocas.
@@ -509,7 +518,7 @@ function tarjetaHtml(p) {
         <img src="${foto.src}" ${foto.srcset ? `srcset="${foto.srcset}" sizes="(max-width:480px) 45vw, 220px"` : ''}
              alt="${escapeHtml(p.name)}" loading="lazy" decoding="async" onerror="imgFallback(this)">
         ${p.enOferta || p.destacado ? `<div class="card-sellos">
-          ${p.enOferta ? `<span class="card-oferta">OFERTA</span>` : ''}
+          ${window.Descuento.sello(p) ? `<span class="card-oferta">${window.Descuento.sello(p)}</span>` : ''}
           ${p.destacado ? `<span class="card-mv">⭐ MÁS VENDIDO</span>` : ''}
         </div>` : ''}
       </div>
@@ -882,7 +891,7 @@ function mostrarDetalle(id) {
   document.getElementById('modal-cat').textContent = p.cat || '';
   document.getElementById('modal-nombre').textContent = p.name;
   document.getElementById('modal-desc').textContent = p.notes || '';
-  document.getElementById('modal-precio').innerHTML = precioHtml(p) +
+  document.getElementById('modal-precio').innerHTML = precioHtml(p, true) +
     (p.envio ? `<div class="envio-detalle">${escapeHtml(p.envio.largo)}</div>` : '');
   seleccionVar = [];
   pintarChipsVariante(id);
