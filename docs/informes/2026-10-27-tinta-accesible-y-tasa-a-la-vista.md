@@ -1,6 +1,6 @@
 # 2026-10-27 — Tinta accesible y la tasa de cambio a la vista
 
-**Sesión:** piloto Opus (plan, verificación e informe) + dos ejecutores Sonnet (código) · **Commit inicial → final:** `63daaef` → `a5c6fb1` · **Rama:** `tinta-y-tasa`, **SIN PUSH**
+**Sesión:** piloto Opus (plan, verificación e informe) + dos ejecutores Sonnet (código) · **Commit inicial → final:** `63daaef` → `165f631` · **DESPLEGADO el 2026-10-27** (`a70f9e9..165f631` en `main`) y verificado en producción
 **Origen:** petición de Ruth (más ganchos de venta, mejor experiencia, enseñar la tasa, juicio de los colores) → revisión `docs/auditorias/2026-10-27-tasa-visible-colores-y-ganchos.md` → plan `docs/superpowers/plans/2026-10-27-tinta-accesible-y-tasa-a-la-vista.md` (tandas 1 y 2)
 
 ## TL;DR
@@ -97,7 +97,7 @@ $ git diff 63daaef..HEAD -- sw.js → exactamente 2 líneas: CACHE v22→v23 y '
 
 ## Pendiente / próximos pasos
 
-- [ ] **Desplegar.** La rama `tinta-y-tasa` está **sin push** a propósito: publicar pone esto en producción para todas las clientas y lo decide Ruth. Para desplegar: `git checkout main && git merge tinta-y-tasa && git push`. Criterio de éxito: en `https://www.3bqba.com`, `getComputedStyle(document.querySelector('#btn-enviar')).color` da `rgb(28, 26, 34)` y el chip de la portada lleva el número. 🔴 **La primera carga tras el despliegue corre el código VIEJO** (el service worker anterior sirve su caché mientras el nuevo se instala): hace falta una segunda recarga antes de dudar del cambio.
+- [x] ~~Desplegar.~~ **HECHO el 2026-10-27**, a petición de Ruth. `git pull --ff-only` (262 commits de publicación de Stock+ que faltaban en local), `git merge tinta-y-tasa` **sin conflictos** (Stock+ solo toca `catalogo.json`, `sitemap.xml`, `precios-gestores.json` y `taxi.json`), batería **199/199 exit 0 contra el catálogo NUEVO** (209 productos, tasa 845) y `git push origin main`: `a70f9e9..165f631`. **Verificado EN EL SITIO REAL a 375 px:** caché `tienda-3b-v23`, `usdLineaHtml.toString()` contiene `total-tasa` (o sea, corre el código nuevo y no el de la caché vieja), chip `Precios en CUP y USD · 1 USD = 845 CUP`, pie `Los precios están calculados a 1 USD = 845 CUP.`, `.envio-chip` en `rgb(14, 117, 102)`, y en modo oscuro `#btn-enviar` con `color: rgb(28, 26, 34)` sobre `rgb(37, 211, 102)` y los 17 sellos OFERTA con `color: rgb(42, 14, 32)`. 🔴 **La primera carga tras el despliegue corre el código VIEJO** (el service worker anterior sirve su caché mientras el nuevo se instala): si Ruth abre la tienda y «no ve el cambio», que recargue otra vez.
 - [ ] **Conseguir `ELTOQUE_TOKEN`** y comprobar una lectura real (`POST /api/tasa/leer-ahora` en Stock+). Solo entonces tiene sentido publicar la fuente y la fecha de la tasa y decir «según elTOQUE». Criterio: `config.tasaAuto.ultima.fuente === 'eltoque'` con `accion` distinta de `nada`.
 - [ ] **Republicar el catálogo al cambiar la tasa a mano** (`server.js`, `PUT /api/config`): hoy el hueco es de hasta 5 h y ahora el número es visible. Criterio: cambiar la tasa en el panel y ver `config.webUltimaPub.ts` moverse.
 - [ ] Los ganchos de la revisión del 27/10 que **no** entraron aquí: prueba social con los 196 pedidos reales (§3.2, necesita Stock+), el plazo de entrega (§3.3, **lo decide Ruth**, hoy la tienda no dice *cuándo* llega nada), y llevar el aviso de «te faltan X» a la ficha (§3.1.2).
@@ -128,4 +128,4 @@ Primer archivo a leer: `docs/auditorias/2026-10-27-tasa-visible-colores-y-gancho
 - ⚠ **Ningún teléfono real.** Todo en Chrome de escritorio con viewport emulado a 375 px y `prefers-color-scheme` emulado.
 - ⚠ **No se envió ningún pedido** ni se pulsó «Pedir por WhatsApp» de verdad.
 - ⚠ **No se probó sin conexión** (el modo offline del service worker con `/tasa.js` en la caché) — en local el service worker ni se registra, ver arriba.
-- ⚠ **No está desplegado.** La rama está sin push y en producción sigue corriendo el código anterior.
+- El carrito **sí** se abrió en producción: con un producto dentro se vio `Total 995 CUP` / `≈ $1.18 USD` / `845 CUP por USD`, esta última de 327×14 px (una sola línea) en `rgb(148,138,147)` a 11 px. Hay **dos** instancias de `.total-tasa` en el DOM (el panel modal y el aside de escritorio): la del aside mide 0×0 en móvil, que es lo esperado. **No se pulsó «Pedir por WhatsApp»** y se limpiaron `carrito`, `pedidoEnviado` y `direcciones` del navegador de prueba (comprobado: `localStorage` vacío).
