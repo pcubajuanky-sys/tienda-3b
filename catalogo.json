@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-28T17:16:16.691Z",
+  "generado": "2026-10-28T20:38:57.187Z",
   "tasa": 850,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -3947,30 +3947,6 @@
       "creado": 1792791923752
     },
     {
-      "id": "p_1786930924590",
-      "codigo": "8DEM",
-      "name": "Paquete de 4 pellizcos de perlitas",
-      "cat": "Cabello",
-      "subcat": "",
-      "notes": "Paquetes de 4unidades,",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786930842/productos/wzpik5gw8tzabbppxhn1.jpg",
-      "precioUSD": 1,
-      "precioCUP": 850,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "fotos": [
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792851235/productos/bxnhd3zp3fn4ildq6byi.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792851244/productos/kpvpqu3xqm0fyz49pyqe.jpg"
-      ],
-      "espera": true,
-      "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      },
-      "creado": 1786930924590
-    },
-    {
       "id": "p_1780614185839",
       "codigo": "FD8Z",
       "name": "Paquete de 4 Tic-Tacs Estilo variado",
@@ -4353,7 +4329,6 @@
           "L",
           "M",
           "N",
-          "O",
           "P"
         ]
       },
@@ -4371,7 +4346,6 @@
         "K": 1,
         "M": 1,
         "N": 1,
-        "O": 1,
         "P": 1
       },
       "esperaOpciones": [
@@ -4441,15 +4415,13 @@
         "A CON C": 1,
         "B CON G": 1,
         "B": 1,
+        "D": 1,
         "E": 1,
         "F": 1,
         "G": 1,
         "H": 1,
         "J": 1
       },
-      "esperaOpciones": [
-        "D"
-      ],
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
