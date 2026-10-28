@@ -648,6 +648,13 @@ main{padding-top:20px}
 .desglose-nota{font-size:11px;color:var(--text-2);line-height:1.35;margin:2px 0 6px}
 .desglose-total{margin-top:6px;padding-top:8px;border-top:1px solid var(--border)}
 .desglose-total span{font-size:16px;font-weight:800;color:var(--text)}
+/* La fila del descuento del carrito. Rojo de oferta porque es la buena noticia del desglose, no
+   un error: medido el 2026-10-28, --oferta como TEXTO da 5,61:1 en claro y 7,81:1 en oscuro
+   sobre --surface, y test/colores.test.js lo vigila. Van los dos selectores porque
+   `.desglose-linea span:last-child` ya fija color y tiene la misma especificidad: esta regla
+   gana por venir despues, asi que NO la muevas por encima de aquella. */
+.desglose-descuento span,.desglose-descuento span:last-child{color:var(--oferta)}
+.desglose-descuento span:last-child{font-weight:800}
 
 /* ── Cláusulas de entrega (2026-08-16) — tienda.politica, encima del botón
    "Pedir por WhatsApp" (ver index.html). Letra pequeña pero ≥4.5:1 de
@@ -954,6 +961,11 @@ body.con-barra-movil{padding-bottom:var(--barra-movil-h, 84px)}
 .linea-quitar{min-width:40px;min-height:40px;border:none;background:none;cursor:pointer;color:var(--text-3);font-size:16px;line-height:1;padding:6px;border-radius:8px}
 .linea-quitar:hover{color:var(--text);background:var(--surface-2)}
 .linea .linea-sub{font-weight:700;white-space:nowrap}
+/* El «antes» de una linea rebajada, encima de su subtotal y alineado con el a la derecha. Reusa
+   .tachado (el mismo estilo del tachado de la parrilla y de la ficha): aqui solo se decide la
+   colocacion, nunca el color ni el grosor. */
+.linea-precios{display:flex;flex-direction:column;align-items:flex-end;gap:1px}
+.linea-antes{display:block;white-space:nowrap}
 .total{padding:14px 0;text-align:right}
 .envio-linea{display:block;font-size:12px;font-weight:600;color:var(--brand);margin-bottom:4px}
 /* Completar para la mensajería gratis (2026-10-22). Reusa .rel-card/.rel-foto/.rel-nom/

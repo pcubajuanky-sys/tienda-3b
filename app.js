@@ -1255,10 +1255,18 @@ function usdLineaHtml(clase) {
 // con una nota de que el costo depende de la zona.
 function totalBloqueHtml(claseTotalCup, claseTotalUsd) {
   const m = mensajeria();
+  const d = window.Descuento.totales(itemsCarrito());
+  // 🔴 Sin nada rebajado en el carrito no se pinta ni una fila nueva: el bloque queda EXACTAMENTE
+  // como antes del 2026-10-28, en las dos ramas. Hay test.
+  const rebaja = d.descuento > 0
+    ? `<div class="desglose-linea"><span>Precio normal</span><span>${fmt(d.normal)} CUP</span></div>` +
+      `<div class="desglose-linea desglose-descuento"><span>Descuento</span><span>−${fmt(d.descuento)} CUP</span></div>`
+    : '';
   if (!m.activa) {
-    return notaAparteHtml() + `<span class="${claseTotalCup}">Total: ${fmt(totalCarrito())} CUP</span>` + usdLineaHtml(claseTotalUsd);
+    return rebaja + notaAparteHtml() + `<span class="${claseTotalCup}">Total: ${fmt(totalCarrito())} CUP</span>` + usdLineaHtml(claseTotalUsd);
   }
   return (
+    rebaja +
     `<div class="desglose-linea"><span>Productos</span><span>${fmt(totalCarrito())} CUP</span></div>` +
     `<div class="desglose-linea"><span>Mensajería</span><span>${m.coordinar ? 'a coordinar' : (m.gratis ? 'GRATIS' : fmt(m.monto) + ' CUP')}</span></div>` +
     // 🔴 La nota solo cuando hay algo que cobrar. Antes salía SIEMPRE, así que un pedido con
@@ -1523,6 +1531,9 @@ function lineaCarritoHtml(p, qty, clave) {
   const k = claveCarrito(p.id, clave);
   const tope = topeDe(p.id, clave);
   const alTope = tope !== null && qty >= tope;
+  // El «antes» de esta linea, solo si hay rebaja de verdad. Se deriva del ahorro para que la
+  // resta de la pantalla cuadre con el desglose del total, que usa la misma fuente.
+  const ahorro = window.Descuento.ahorroCUP(p);
   // `alt` lleva el nombre para que imgFallback saque la inicial del producto y no un «?».
   return `<div class="linea">
       <img src="${foto.src}" alt="${escapeHtml(p.name)}" loading="lazy" onerror="imgFallback(this)">
@@ -1535,7 +1546,10 @@ function lineaCarritoHtml(p, qty, clave) {
         </div>
       </div>
       <div class="linea-derecha">
-        <div class="linea-sub">${fmt(p.precioCUP * qty)} CUP</div>
+        <div class="linea-precios">
+          ${ahorro > 0 ? `<span class="tachado linea-antes">${fmt((p.precioCUP + ahorro) * qty)} CUP</span>` : ''}
+          <div class="linea-sub">${fmt(p.precioCUP * qty)} CUP</div>
+        </div>
         <button type="button" class="linea-quitar" data-quitar-linea="${escapeHtml(k)}" aria-label="Quitar ${escapeHtml(p.name)} del pedido">✕</button>
       </div>
     </div>`;
@@ -1931,6 +1945,11 @@ function enviarPorWhatsApp(ev) {
   // la cambie despues. Sin tasa valida no se escribe nada.
   const notaTasa = (window.TasaVista && TasaVista.pedido(CAT.tasa)) || '';
   if (notaTasa) lineas.push(notaTasa);
+  // Lo que se ahorro con las ofertas de ESTE pedido. Va despues de la tasa y no entre el total
+  // y la tasa: esa pareja no se separa (decision del 2026-10-27, el cambio va pegado al total).
+  // Solo si hay algo que presumir, para no escribirle a Ruth un «Ahorraste 0 CUP».
+  const dWA = window.Descuento.totales(items);
+  if (dWA.descuento > 0) lineas.push(`Ahorraste ${fmt(dWA.descuento)} CUP`);
   lineas.push('');
   const aparteWA = itemsAparte();
   if (aparteWA.length) {

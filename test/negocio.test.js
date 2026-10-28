@@ -177,3 +177,14 @@ test('🔴 con la tienda cerrada el boton «Listo» de la ficha no se enseña', 
   const cuerpo = app.slice(i, app.indexOf(String.fromCharCode(10) + '}', i));
   assert.ok(cuerpo.includes('cerrada()'), 'pintarListoFicha no mira si la tienda esta cerrada');
 });
+
+test('🔴 el desglose del ahorro sale del modulo, no de cuentas a mano en app.js', () => {
+  const app = fs.readFileSync(path.join(__dirname, '..', 'app.js'), 'utf8');
+  assert.ok(app.includes('Descuento.totales('), 'el desglose del total tiene que pedirle las cifras a descuento.js');
+  assert.ok(app.includes('Descuento.ahorroCUP('), 'el tachado de la linea del carrito, tambien');
+  assert.ok(/Ahorraste \$\{fmt\(/.test(app), 'el mensaje de WhatsApp lleva la linea del ahorro');
+  // 🔴 Hay un gestor con recargo vivo (QGZUQ) y preciosGestor.js ya sustituye precioNormalCUP:
+  // calcular el ahorro desde el USD por la tasa daria una cifra que no coincide con la que el
+  // cliente tiene delante.
+  assert.ok(!/precioNormal[A-Za-z]*\s*[*/]\s*CAT\.tasa/.test(app), 'el ahorro jamas se calcula desde el USD por la tasa');
+});
