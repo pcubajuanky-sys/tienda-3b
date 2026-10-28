@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-28T21:38:32.488Z",
+  "generado": "2026-10-28T21:48:32.506Z",
   "tasa": 850,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -1210,7 +1210,7 @@
       "fotos": [
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1791859754/productos/ai4oxxgzcnikwvwtn0gz.jpg"
       ],
-      "max": 1,
+      "espera": true,
       "envio": {
         "corto": "🚚 Transporte aparte",
         "largo": "🚚 Por su tamaño, el transporte se coordina por WhatsApp según tu zona"
