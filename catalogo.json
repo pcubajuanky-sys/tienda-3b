@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-28T20:38:57.187Z",
+  "generado": "2026-10-28T21:18:32.475Z",
   "tasa": 850,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -1807,26 +1807,6 @@
       },
       "envioGratis": true,
       "creado": 1787498299932
-    },
-    {
-      "id": "p_1787453447601",
-      "codigo": "STDF",
-      "name": "Conjunto de tobilleras plateadas de fantasía",
-      "cat": "Reloj y Prendas",
-      "subcat": "",
-      "notes": "Exactamente el diseño de la imagen",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787453332/productos/hgvzduzoya6btwnccu2f.jpg",
-      "precioUSD": 1.5,
-      "precioCUP": 1275,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "max": 1,
-      "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      },
-      "creado": 1787453447601
     },
     {
       "id": "p_1791132152189",
@@ -4304,7 +4284,7 @@
       "cat": "Reloj y Prendas",
       "subcat": "",
       "notes": "El precio es por 2 pulceras tipo Manillas, seleccionadas a su elección. Acero inoxidable alta duración y calidad. Ideal para mujeres hombres o niños. También puede ser usada como tobilleras en tobillos finos",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791633181/productos/velotls5vf76bz3acx3n.jpg",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1793221821/productos/mi9gr0f0zdq7humk70ib.jpg",
       "precioUSD": 1,
       "precioCUP": 850,
       "moneda": "usd",
@@ -4316,36 +4296,26 @@
         ],
         "opciones": [
           "A",
-          "B",
           "C",
-          "D",
           "E",
-          "F",
           "G",
-          "H",
           "I",
-          "J",
           "K",
           "L",
-          "M",
           "N",
+          "O",
           "P"
         ]
       },
       "maxOpciones": {
         "A": 1,
-        "B": 1,
         "C": 1,
-        "D": 1,
         "E": 1,
-        "F": 1,
         "G": 1,
-        "H": 1,
         "I": 1,
-        "J": 1,
         "K": 1,
-        "M": 1,
         "N": 1,
+        "O": 1,
         "P": 1
       },
       "esperaOpciones": [
@@ -4619,10 +4589,12 @@
       },
       "maxOpciones": {
         "A": 1,
-        "C": 1,
-        "E": 1,
         "F": 1
       },
+      "esperaOpciones": [
+        "C",
+        "E"
+      ],
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
@@ -4819,7 +4791,7 @@
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1792975502/productos/epjtu83wg3rpvnrvsf0m.jpg",
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1792975505/productos/cduo86m6dsz2wrqtchss.jpg"
       ],
-      "max": 1,
+      "espera": true,
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
