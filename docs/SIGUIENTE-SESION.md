@@ -8,9 +8,9 @@
 ## 1. Dónde estamos hoy
 
 Todo lo trabajado en octubre está **desplegado y verificado en producción** (www.3bqba.com).
-`main` = `origin/main` = `4690035`. Árbol limpio. Caché del service worker: **`tienda-3b-v27`**.
+`main` = `origin/main` = `c5c5aa1`. Árbol limpio. Caché del service worker: **`tienda-3b-v28`**.
 
-Lo último que entró (27/10, en este orden):
+Lo último que entró (27 y 28/10, en este orden):
 
 | Qué | Caché |
 |---|---|
@@ -18,6 +18,7 @@ Lo último que entró (27/10, en este orden):
 | La tasa en la portada + umbral + aviso de regreso + relacionados en CUP | `v24`/`v25` |
 | El sello de oferta dice `-X%` | `v26` |
 | La línea del cambio sale del centro y se pega encima del umbral | `v27` |
+| **«Ahorras X%» + el carrito cuenta el ahorro estilo Temu (28/10)** | **`v28`** |
 
 ## 2. Lo que se arregló el 28/10 (ya hecho, no lo repitas)
 
@@ -41,6 +42,26 @@ activas y CERO que no rebajen**.
 Stock+ **republique el catálogo** — solo o con «Publicar catálogo ahora». `webAutoHoras` es
 **5**, así que se arregla solo en ≤5 h. No se publicó desde aquí a propósito: eso es una
 acción hacia afuera que no se pidió.
+
+✅ **RESUELTO el 28/10 por sí solo.** Stock+ republicó el catálogo y el Tic-Tac ya no está entre
+las ofertas: medido en producción ese día, el sitio sirve **15 sellos** de oferta donde antes
+había 16. Ya no hay ninguna «oferta» que suba el precio.
+
+## 2 bis. Lo del ahorro estilo Temu (28/10, ya desplegado)
+
+El sello y el chip dicen **«Ahorras X%»**, el porcentaje se enseña **siempre** (se eliminó el
+mínimo del 10 %, decisión de Ruth) y el carrito desglosa `Precio normal / Descuento / Productos /
+Mensajería / Total`, con el «antes» tachado en cada línea rebajada; el mensaje de WhatsApp lleva
+`Ahorraste N CUP`. Todo en `docs/informes/2026-10-28-ahorro-estilo-temu.md`.
+
+Tres cosas que conviene no olvidar:
+- 🔴 **`normal` se DERIVA** de `pagas + descuento` en `Descuento.totales()`. No lo cambies por
+  una suma independiente de `precioNormalCUP`: las tres cifras de la pantalla dejarían de cuadrar.
+- 🔴 **El ahorro jamás se calcula desde el USD por la tasa.** Hay test que lo impide, porque
+  `preciosGestor.js` sustituye `precioNormalCUP` y el gestor vería cifras que no son las suyas.
+- **Verificado con el gestor `QGZUQ` vivo** (el A1 de abajo): su página enseña sus precios y su
+  ahorro (5.610 → 4.675, ahorro 935 en vez de 850). Es la primera vez que esa rama se prueba con
+  un gestor real, aunque **sigue sin probarse un pedido suyo llegando a su WhatsApp**.
 
 ## 3. 🔴 Dos cosas que el `CLAUDE.md` dice MAL
 
