@@ -323,15 +323,6 @@ a{color:inherit}
    a dos líneas largas y la portada crecía más de lo que se ahorraba arriba. */
 .hero-sub{font-size:var(--t-md);max-width:42ch;margin:0 auto var(--e3);opacity:.92;line-height:1.45}
 @media (min-width:760px){ .hero-sub{font-size:var(--t-lg)} }
-/* El cambio en la portada. Mas peso que los chips de abajo —es lo que la clienta busca
-   al entrar— pero translucido y no solido, para no competir con los botones. Blanco
-   sobre el velo del hero, el mismo contraste que el resto de la portada (8,2:1 medido).
-   inline-block + el text-align:center de .hero-contenido lo centran solo. */
-.hero-tasa{
-  display:inline-block;margin:0 auto var(--e3);padding:6px var(--e3);
-  border-radius:var(--radio-pill);font-size:var(--t-md);font-weight:700;line-height:1.3;
-  background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.34);
-}
 .hero-acciones{display:flex;flex-wrap:wrap;justify-content:center;gap:var(--e2)}
 /* Chips translúcidos en vez de ✓ sueltos: se leen como datos, no como una lista. */
 .hero-datos{
@@ -355,6 +346,17 @@ a{color:inherit}
   .hero-datos{margin-top:var(--e3)}
 }
 
+/* El cambio, en una linea fina pegada ENCIMA de la banda de mensajeria. Mismo par de
+   colores que .promo (--brand sobre --brand-soft: 7,5:1 en claro y 8,4:1 en oscuro, ver
+   el comentario de .cat-chip) para que las dos lineas se lean como un solo bloque, y un
+   paso mas pequeña que .promo-linea para que la que manda siga siendo la del umbral.
+   Antes era un pill de 15px en el centro de la portada y se veia demasiado grande
+   (peticion del dueño, 2026-10-27). */
+.banda-tasa{
+  margin:0;padding:var(--e0) var(--e3);text-align:center;
+  background:var(--brand-soft);color:var(--brand);
+  font-size:var(--t-xs);font-weight:600;line-height:1.3;
+}
 /* ── Banner de mensajería gratis (opcional, según config del panel) ──
    `hidden` por defecto en el HTML; renderPromoEnvio() (app.js) solo lo
    destapa si CAT.tienda.envioGratisCUP es > 0. Con el umbral en 0/ausente

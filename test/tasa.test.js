@@ -83,10 +83,20 @@ test('🔴 el cableado existe en los TRES sitios y en las DOS paginas', () => {
   assert.ok(app.includes('TasaVista.aviso('), 'falta el aviso del pie');
   assert.ok(app.includes('TasaVista.carrito('), 'falta la nota del carrito');
   assert.ok(app.includes('TasaVista.pedido('), 'falta la linea del mensaje de WhatsApp');
+  assert.ok(app.includes("getElementById('banda-tasa')"), 'app.js sigue buscando el id viejo');
+
+  const css = fs.readFileSync(path.join(__dirname, '..', 'estilos.css'), 'utf8');
+  assert.ok(css.includes('.banda-tasa{'), 'falta el estilo de la linea del cambio');
+  assert.ok(!css.includes('.hero-tasa'), 'quedo el estilo viejo de la portada');
 
   for (const pagina of ['index.html', 'electripower.html']) {
     const html = fs.readFileSync(path.join(__dirname, '..', pagina), 'utf8');
-    assert.ok(html.includes('id="hero-tasa"'), pagina + ': falta el id de la linea de la portada');
+    assert.ok(html.includes('id="banda-tasa"'), pagina + ': falta el id de la linea del cambio');
+    // 🔴 El sitio es parte del requisito: encima de la banda del umbral, porque las dos
+    // lineas hablan de lo mismo (lo que le va a costar) y juntas se leen como un bloque.
+    assert.ok(html.indexOf('id="banda-tasa"') < html.indexOf('id="promo-envio"'),
+      pagina + ': la linea del cambio no esta encima de la banda de mensajeria');
+    assert.ok(!html.includes('hero-tasa'), pagina + ': quedo el id viejo de la portada');
     assert.ok(html.includes('id="aviso-tasa"'), pagina + ': falta el id del aviso');
     assert.ok(html.includes('src="tasa.js"'), pagina + ': no carga tasa.js');
     // El texto de reserva se queda escrito en el HTML: si el JS no llega, la pagina

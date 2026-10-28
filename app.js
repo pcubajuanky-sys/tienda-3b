@@ -2000,13 +2000,14 @@ function renderHero() {
   document.getElementById('hero-mosaico').innerHTML =
     elegidos.map((p) => `<img src="${fotoMosaico(p.photo)}" alt="" loading="lazy">`).join('');
   document.getElementById('hero-dato-productos').textContent = `${(CAT.items || []).length} productos disponibles`;
-  // El cambio, en su propia linea y arriba del todo. Sin tasa valida queda oculto: la
-  // portada se ve entonces exactamente como antes de esta tarea.
-  const tasaPortada = document.getElementById('hero-tasa');
-  if (tasaPortada) {
+  // El cambio, en una linea fina encima de la banda del umbral (y no en el centro de la
+  // portada, donde se veia demasiado grande). Sin tasa valida queda oculto: la pagina se
+  // ve entonces exactamente como antes.
+  const tasaBanda = document.getElementById('banda-tasa');
+  if (tasaBanda) {
     const txt = TasaVista.portada(CAT.tasa);
-    tasaPortada.textContent = txt;
-    tasaPortada.hidden = !txt;
+    tasaBanda.textContent = txt;
+    tasaBanda.hidden = !txt;
   }
 }
 
