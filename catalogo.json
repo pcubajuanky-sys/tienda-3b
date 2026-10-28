@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-28T16:52:20.565Z",
+  "generado": "2026-10-28T16:59:58.585Z",
   "tasa": 850,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -1202,10 +1202,10 @@
       "subcat": "",
       "notes": "Bicicleta Eléctrica de 500W para Adultos, Batería Extraíble de 48V 15AH, Velocidad de 15-20 mph, Largo Alcance de 10-35 Millas, Plegable de 14 Pulgadas, Pantalla LCD, Frenos de Disco Duales, Súper Suspensión, Regalo para Adolescentes, Bicicleta Eléctrica para Adultos - Motocicleta\n\nNueva está en su caja sellada",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788830814/productos/mbtm7sr4opagfnenqeht.jpg",
-      "precioUSD": 465,
-      "precioCUP": 395250,
+      "precioUSD": 450,
+      "precioCUP": 382500,
       "moneda": "usd",
-      "enOferta": false,
+      "enOferta": true,
       "destacado": true,
       "fotos": [
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1791859754/productos/ai4oxxgzcnikwvwtn0gz.jpg"
@@ -1216,7 +1216,9 @@
         "largo": "🚚 Por su tamaño, el transporte se coordina por WhatsApp según tu zona"
       },
       "creado": 1788830868023,
-      "envioAparte": true
+      "envioAparte": true,
+      "precioNormalUSD": 465,
+      "precioNormalCUP": 395250
     },
     {
       "id": "p_1785877309060",
