@@ -11,9 +11,16 @@
 // por el redondeo del CUP al publicar el catalogo), asi que nadie puede pillar una
 // incoherencia entre las dos monedas de la tarjeta.
 //
-// 🔴 POR DEBAJO DEL 10 % NO SE ENSEÑA NUMERO. Hoy hay seis ofertas de 9 % o menos; un
-// sello que grita «-5%» desinfla la oferta en vez de venderla. Esas se quedan con el
-// «OFERTA» de siempre.
+// 🔴 EL MINIMO DEL 10 % YA NO EXISTE (2026-10-28, decision de Ruth). Hasta esa fecha una rebaja
+// menor del 10 % se quedaba con el «OFERTA» pelado, por no gritar un «-5%» que desinfla la
+// oferta. Ruth pidio que el numero se enseñe SIEMPRE. Si vuelves a ver un `MINIMO` por aqui es
+// que alguien revirtio una decision suya: preguntale antes de restaurarlo.
+//
+// 🔴 EL AHORRO SE COBRA EN CUP, PERO LA REBAJA SE DECIDE EN LA MONEDA DEL PRODUCTO. porciento()
+// mira el par de la moneda principal (189 de los 206 productos son 'usd'); el dinero que se
+// descuenta en el carrito sale del par de CUP, que es lo que de verdad se paga. El max(0, ...)
+// de ahorroCUP cubre el unico caso en que los dos no concuerden: que el redondeo del CUP al
+// publicar deje el «antes» igual o por debajo del precio de ahora.
 //
 // 🔴 UNA «OFERTA» QUE SUBE EL PRECIO NO ES UNA REBAJA. El «Paquete de 4 Tic-Tacs» del
 // catalogo real va de 595 a 612 CUP (0,70 -> 0,72 USD): no es redondeo, es un dato mal
@@ -22,8 +29,6 @@
 // ficha y la imagen para compartir.
 (function () {
   'use strict';
-
-  var MINIMO = 10;
 
   function num(n) {
     var v = Number(n);
@@ -61,12 +66,51 @@
     return porciento(p) !== null;
   }
 
-  // El texto del sello rojo. '' si el producto no esta en oferta.
+  // El texto del sello rojo de la parrilla y del chip de la ficha. '' si no esta en oferta.
+  // «Ahorras 52%» y no «-52%»: un porcentaje con menos delante es una resta; el ahorro es una
+  // ganancia, y la ganancia es lo que se lleva el cliente. Queda «OFERTA» a secas para el unico
+  // caso en que no hay numero honesto que dar: una oferta cuyo «antes» no es mayor (dato mal
+  // puesto en Stock+).
   function sello(p) {
     if (!p || !p.enOferta) return '';
     var pct = porciento(p);
-    return pct !== null && pct >= MINIMO ? '-' + pct + '%' : 'OFERTA';
+    return pct !== null ? 'Ahorras ' + pct + '%' : 'OFERTA';
   }
 
-  window.Descuento = { MINIMO: MINIMO, porciento: porciento, hayRebaja: hayRebaja, sello: sello };
+  // Lo que se descuenta de verdad en el carrito, en CUP. 0 cuando no hay rebaja real, asi que
+  // una «oferta» que sube el precio no resta (ni suma) nada.
+  function ahorroCUP(p) {
+    if (!hayRebaja(p)) return 0;
+    var ahora = num(p.precioCUP);
+    var antes = num(p.precioNormalCUP);
+    if (!(ahora > 0) || !(antes > 0)) return 0;
+    return Math.max(0, antes - ahora);
+  }
+
+  // El desglose del carrito: lo que costaria a precio normal, lo que se descuenta y lo que se
+  // paga. `items` es [{p, qty}], tal cual lo devuelve itemsCarrito() de app.js.
+  //
+  // 🔴 `normal` se DERIVA de los otros dos (pagas + descuento) y NO se suma aparte. Asi las tres
+  // cifras que el cliente tiene delante siempre cuadran —normal - descuento = pagas— pase lo que
+  // pase con un precioNormalCUP mal puesto en Stock+. Si algun dia alguien lo cambia por una
+  // suma independiente de precioNormalCUP, la pantalla podra mentir en la resta.
+  function totales(items) {
+    var lista = Array.isArray(items) ? items : [];
+    var pagas = 0;
+    var descuento = 0;
+    lista.forEach(function (it) {
+      if (!it || !it.p) return;
+      var qty = num(it.qty);
+      if (!(qty > 0)) return;
+      var precio = num(it.p.precioCUP);
+      if (precio > 0) pagas += precio * qty;
+      descuento += ahorroCUP(it.p) * qty;
+    });
+    return { normal: pagas + descuento, descuento: descuento, pagas: pagas };
+  }
+
+  window.Descuento = {
+    porciento: porciento, hayRebaja: hayRebaja, sello: sello,
+    ahorroCUP: ahorroCUP, totales: totales,
+  };
 })();

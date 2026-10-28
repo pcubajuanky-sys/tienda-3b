@@ -483,9 +483,7 @@ function precioHtml(p, conDescuento) {
     ? `<span class="tachado">${esUsd ? `$${p.precioNormalUSD}` : `${fmt(p.precioNormalCUP)} CUP`}</span>`
     : '';
   const pct = conDescuento ? window.Descuento.porciento(p) : null;
-  const chip = pct !== null && pct >= window.Descuento.MINIMO
-    ? `<span class="precio-desc">-${pct}%</span>`
-    : '';
+  const chip = pct !== null ? `<span class="precio-desc">Ahorras ${pct}%</span>` : '';
   return tachado + `<span class="precio">${principal}<span class="usd">· ${secundario}</span></span>` + chip;
 }
 
