@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-28T07:40:32.580Z",
+  "generado": "2026-10-28T13:10:33.897Z",
   "tasa": 850,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -1159,7 +1159,7 @@
       },
       "maxOpciones": {
         "MELOCOTÓN": 9,
-        "MANGO": 9,
+        "MANGO": 8,
         "LIMÓN": 9,
         "VAINILLA": 7,
         "FRAMBUESA": 5,
@@ -3457,7 +3457,7 @@
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1791871063/productos/flhddikbz3ovypvybz97.jpg",
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1791871072/productos/j80lkq6ozm58bvsrci3q.jpg"
       ],
-      "max": 1,
+      "espera": true,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -4001,10 +4001,10 @@
       "subcat": "",
       "notes": "4 piezas por paquete de cartoncitos con pinzas y clips para el cabello en tonos pasteles. Diseños variados que incluyen estrellas, lazos, mariposas y formas geométricas. Fabricados en material resistente y suaves al tacto, ideales para peinados infantiles o de uso diario. Presentación atractiva y práctica para regalo o uso personal.",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792849026/productos/clgdej1she1r1x1ohugy.jpg",
-      "precioUSD": 0.72,
-      "precioCUP": 612,
+      "precioUSD": 0.7,
+      "precioCUP": 595,
       "moneda": "usd",
-      "enOferta": true,
+      "enOferta": false,
       "destacado": false,
       "fotos": [
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1792849030/productos/wpgytvfgeywtwvrudfjw.jpg",
@@ -4038,9 +4038,7 @@
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
       },
-      "creado": 1780614185839,
-      "precioNormalUSD": 0.7,
-      "precioNormalCUP": 595
+      "creado": 1780614185839
     },
     {
       "id": "p_1780092645027",
@@ -4471,10 +4469,12 @@
         "E": 1,
         "F": 1,
         "G": 1,
-        "H": 1,
-        "I": 1,
         "J": 1
       },
+      "esperaOpciones": [
+        "H",
+        "I"
+      ],
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
