@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-28T13:21:01.269Z",
+  "generado": "2026-10-28T15:11:01.481Z",
   "tasa": 850,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -3439,33 +3439,6 @@
       "creado": 1789009525416
     },
     {
-      "id": "p_1790619248550",
-      "codigo": "WDWV",
-      "name": "Moledor de sazones recargable",
-      "cat": "Electrodomésticos",
-      "subcat": "",
-      "notes": "Ideal para facilitar el trabajo diario sin importar las condiciones electro energéticas. No necesita alimentación de corriente. Incluye su cable de carga, cuchillas afiladas dobles y un accesorio para batir huevos.",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791646515/productos/pamjevfzqm37iytafdzl.jpg",
-      "precioUSD": 12,
-      "precioCUP": 10200,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "fotos": [
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791871044/productos/njfkbi355vvftf3hllyf.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791871054/productos/y6j8b8rc8ud7lranqvj9.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791871063/productos/flhddikbz3ovypvybz97.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791871072/productos/j80lkq6ozm58bvsrci3q.jpg"
-      ],
-      "espera": true,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1790619248550
-    },
-    {
       "id": "p_1789218727536",
       "codigo": "6FTU",
       "name": "Mono enterizo corto",
@@ -4456,7 +4429,6 @@
           "F",
           "G",
           "H",
-          "I",
           "J"
         ]
       },
@@ -4469,12 +4441,9 @@
         "E": 1,
         "F": 1,
         "G": 1,
+        "H": 1,
         "J": 1
       },
-      "esperaOpciones": [
-        "H",
-        "I"
-      ],
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
@@ -4900,7 +4869,7 @@
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1792975502/productos/epjtu83wg3rpvnrvsf0m.jpg",
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1792975505/productos/cduo86m6dsz2wrqtchss.jpg"
       ],
-      "max": 2,
+      "max": 1,
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
