@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-28T00:00:12.477Z",
+  "generado": "2026-10-28T02:15:47.287Z",
   "tasa": 850,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -2751,7 +2751,7 @@
       "moneda": "cup",
       "enOferta": false,
       "destacado": false,
-      "max": 8,
+      "max": 7,
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
@@ -3835,7 +3835,7 @@
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1792976334/productos/yotrahzlps1slucnirrd.jpg",
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1792976339/productos/w25vhihfiwibjxrszpsi.jpg"
       ],
-      "max": 4,
+      "max": 3,
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
@@ -3986,7 +3986,7 @@
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1792851235/productos/bxnhd3zp3fn4ildq6byi.jpg",
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1792851244/productos/kpvpqu3xqm0fyz49pyqe.jpg"
       ],
-      "max": 3,
+      "espera": true,
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
