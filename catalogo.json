@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-28T15:16:10.334Z",
+  "generado": "2026-10-28T15:41:01.523Z",
   "tasa": 850,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -4523,13 +4523,11 @@
         ]
       },
       "maxOpciones": {
-        "CHOCOLATE": 3,
-        "CHOCOLATE CLARO": 4,
-        "BEIGE": 4
+        "NEGRO": 1,
+        "CHOCOLATE": 2,
+        "CHOCOLATE CLARO": 3,
+        "BEIGE": 3
       },
-      "esperaOpciones": [
-        "NEGRO"
-      ],
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
