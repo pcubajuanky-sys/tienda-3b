@@ -124,6 +124,20 @@ test('🔴 el rojo de «te equivocaste» no es el rojo de «que oportunidad»', 
   assert.ok(!err[0].includes('var(--oferta)'), '.campo-error no puede usar el rojo de las ofertas');
 });
 
+test('🔴 el rojo de la oferta tambien se lee como TEXTO, no solo como sello', () => {
+  // Desde el 2026-10-28 --oferta pinta la fila «Descuento» del carrito (13 px) ademas del
+  // «Quedan N». A ese tamano AA pide 4,5:1 y no hay excepcion de texto grande. Medido ese dia:
+  // 5,61:1 en claro y 7,81:1 en oscuro sobre --surface.
+  for (const fondo of ['bg', 'surface', 'surface-2']) {
+    exige('--oferta claro sobre --' + fondo, claro('oferta'), claro(fondo), 4.5);
+    exige('--oferta oscuro sobre --' + fondo, oscuro('oferta'), oscuro(fondo), 4.5);
+  }
+  const fila = CSS.match(/\.desglose-descuento span,[^{]*\{[^}]*\}/);
+  assert.ok(fila, 'no se encuentra la regla .desglose-descuento');
+  assert.ok(fila[0].includes('var(--oferta)'), 'la fila del descuento tiene que pedir el color al token');
+  assert.ok(!/#[0-9A-Fa-f]{3,6}/.test(fila[0]), 'la fila del descuento no puede llevar un color escrito a mano');
+});
+
 test('el boton de marca se lee en los dos temas', () => {
   // --brand/--brand-ink pintan .btn-primario, el contador del carrito, los chips de
   // filtro y, desde el 2026-10-27, el boton «Ver mi pedido» del aviso de regreso.
