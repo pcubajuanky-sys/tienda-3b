@@ -8,7 +8,7 @@
 ## 1. Dónde estamos hoy
 
 Todo lo trabajado en octubre está **desplegado y verificado en producción** (www.3bqba.com).
-Caché del service worker: **`tienda-3b-v29`**. Fecha de corte de esta línea: **29/10**.
+Caché del service worker: **`tienda-3b-v30`**. Fecha de corte de esta línea: **29/10**.
 
 Lo último que entró (27 y 28/10, en este orden):
 
@@ -20,6 +20,7 @@ Lo último que entró (27 y 28/10, en este orden):
 | La línea del cambio sale del centro y se pega encima del umbral | `v27` |
 | **«Ahorras X%» + el carrito cuenta el ahorro estilo Temu (28/10)** | **`v28`** |
 | **El carrito cuenta en USD + los 19 productos en CUP pasados a USD (28/10)** | **`v29`** |
+| **La línea del carrito, solo en USD (29/10)** | **`v30`** |
 
 ## 2. Lo que se arregló el 28/10 (ya hecho, no lo repitas)
 
@@ -81,19 +82,26 @@ Lo que no hay que olvidar:
   en Stock+ **por la API** (nunca tocando `data.json`), redondeando al múltiplo de **0,05 más**
   **cercano**. Por eso `precioHtml` empezó a enseñar el USD grande en TODAS las tarjetas solo: no se
   programó nada para eso.
-- 🔴 **El CUP de cada LÍNEA sale del catálogo** (`p.precioCUP * qty`), no de multiplicar por la tasa.
-  `Dinero.aCUP` es solo para los TOTALES. Si se cambia, la línea deja de coincidir con la tarjeta.
+- 🔴 **La LÍNEA del carrito ya NO enseña CUP** (Ruth, 29/10): solo el USD grande y el «antes»
+  tachado en USD. El equivalente en pesos vive **únicamente en el total**. La barrera de
+  `test/negocio.test.js` lo exige, y su `!/CUP/` lee el cuerpo de la función **con sus**
+  **comentarios**: escribir «CUP» en un comentario de `lineaCarritoHtml` pone el test en rojo.
+  `Dinero.aCUP` sigue siendo solo para los TOTALES.
 - 🔴 **Los 150 CUP de mensajería se suman tal cual**, nunca se convierten de ida y vuelta, y el
   **pago por adelantado (QvaPay) cobra solo los productos** — `totalGeneralUSD()` se eliminó porque
   sumaba `m.monto / CAT.tasa`.
 - 🔴 **Sin tasa válida en el catálogo, la tienda enseña solo USD** (los campos en CUP de
   `Dinero.totales` valen `null`). Falla cerrado: nunca un `NaN CUP`.
 - 🔴 **La barrera de `test/negocio.test.js` se INVIRTIÓ a propósito.** Antes prohibía derivar del
-  USD por la tasa; ahora exige lo contrario y vigila cuatro cosas (línea del catálogo, total
-  derivado, el gestor respetado, la mensajería sin convertir). Si alguien la vuelve a invertir,
-  está revirtiendo una decisión de Ruth.
+  USD por la tasa; ahora exige lo contrario y vigila cuatro cosas (la línea **sin CUP** desde el
+  29/10, total derivado, el gestor respetado, la mensajería sin convertir). Si alguien la vuelve
+  a invertir, está revirtiendo una decisión de Ruth.
 
 Tests **258/258**. Informe: `docs/informes/2026-10-28-carrito-en-usd.md`.
+✅ **Confirmado el 29/10 en producción:** el catálogo publicado trae **203 productos, los 203 en**
+**USD**, tasa 855, y el Teflón a 0,35 USD / 299 CUP. Los precios nuevos YA están en la tienda.
+El cambio del 29/10 (línea solo en USD) tiene su propio informe:
+`docs/informes/2026-10-29-carrito-solo-usd.md`.
 ⚠ **Nada se vio en un navegador** (452 MB de RAM libres y 25 procesos de Chrome; por debajo de
 600 MB abrir otro desconecta a Mía). Se ejecutó el `app.js` real en `node:vm` y se leyó el HTML y
 el mensaje que produce, pero las comprobaciones a 375 px siguen pendientes.
