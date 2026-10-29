@@ -1361,15 +1361,6 @@ function totalGeneralCUP() {
   return c === null ? null : c + mensajeria().monto;
 }
 
-// USD del total general: la mensajería se convierte con CAT.tasa (no tiene
-// precioUSD propio, a diferencia de los productos). Con mensajería inactiva
-// esto es exactamente totalCarritoUSD() — no cambia nada de lo que ya había.
-function totalGeneralUSD() {
-  const m = mensajeria();
-  const envioUSD = m.monto > 0 && CAT.tasa ? m.monto / CAT.tasa : 0;
-  return Math.round((totalCarritoUSD() + envioUSD) * 100) / 100;
-}
-
 // La garantía en positivo (tienda.garantia). Vacía o ausente ⇒ no se pinta nada, ni en la
 // portada ni en la ficha: más vale un hueco que una promesa a medias.
 function garantiaTexto() {
@@ -1455,7 +1446,12 @@ function pagoDestinoAutorizado(candidato) {
 // el camino normal sigue siendo "Pedir por WhatsApp", que es donde se
 // confirma existencia y precio final (ver .pago-link en estilos.css, nunca
 // más prominente que .btn-enviar/#btn-lateral-pedir).
-// 🔴 El importe SIEMPRE sale de totalGeneralUSD() (dólares), NUNCA del CUP:
+// 🔴 EL IMPORTE DEL ADELANTO ES EL DE LOS PRODUCTOS EN DÓLARES (totalCarritoUSD()) Y NADA MÁS
+// (decisión de Ruth, 2026-10-28). La mensajería son 150 CUP que la clienta le paga a la mensajera
+// al recibir, siempre en pesos y aparte: convertirla a dólares y meterla en este importe la
+// cobraría por adelantado y en la moneda equivocada. Antes había aquí un totalGeneralUSD() que
+// sumaba m.monto / CAT.tasa; se eliminó a propósito y test/negocio.test.js lo vigila.
+// 🔴 El importe SIEMPRE sale de dólares (totalCarritoUSD()), NUNCA del CUP:
 // pasar el total en CUP convertiría un pedido de 34.200 CUP en una petición
 // de pago de $34.200 — es el punto más importante de esta función.
 // El href SIEMPRE se arma sobre PAGO_URL_FIJA (nunca sobre el texto que venga
@@ -1468,7 +1464,7 @@ function pagoWrapHtml() {
   const t = (CAT && CAT.tienda) || {};
   if (!pagoDestinoAutorizado(t.pagoUrl)) return '';
   const sep = PAGO_URL_FIJA.indexOf('?') !== -1 ? '&' : '?';
-  const href = `${PAGO_URL_FIJA}${sep}amount=${totalGeneralUSD().toFixed(2)}`;
+  const href = `${PAGO_URL_FIJA}${sep}amount=${totalCarritoUSD().toFixed(2)}`;
   return `<a class="pago-link" href="${escapeHtml(href)}" target="_blank" rel="noopener">Pagar por adelantado (opcional) ` +
     `<span class="pago-dominio">· ${escapeHtml(PAGO_DOMINIO_FIJO)}</span></a>` +
     `<p class="pago-nota">Se cobra en dólares (USD) y no reserva el producto hasta confirmar tu pedido por WhatsApp.</p>`;

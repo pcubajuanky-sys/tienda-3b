@@ -263,7 +263,13 @@ test('🔴 la derivacion respeta al gestor: el total sale de SUS precios, no de 
 test('🔴 la mensajeria NUNCA se convierte: ni se divide ni se multiplica por la tasa', () => {
   // La tarifa (150 CUP) y el minimo gratis (2.000 CUP) son reglas del negocio en CUP. Si el
   // cliente paga en dolares paga «X USD + 150 CUP de mensajeria», y los 150 se SUMAN TAL CUAL a
-  // la rama del «o».
+  // la rama del «o». La barrera cubre TODO app.js, incluido el PAGO POR ADELANTADO (QvaPay): su
+  // importe es el de los productos en USD, y la mensajeria se le paga a la mensajera en pesos.
+  // Antes existia totalGeneralUSD(), que sumaba m.monto / CAT.tasa; se elimino el 2026-10-28.
+  assert.ok(!CODIGO.includes('totalGeneralUSD'), 'volvio totalGeneralUSD(): el adelanto en dolares no lleva la mensajeria');
+  assert.ok(!/(m\.monto|\.monto|costo)\s*[*/]\s*(CAT\.)?tasa/.test(CODIGO), 'monto/costo de la mensajeria dividido o multiplicado por la tasa');
+  assert.ok(!/(CAT\.)?tasa\s*[*/]\s*(m\.monto|\.monto|costo)/.test(CODIGO), 'la tasa multiplicada o dividida por el monto de la mensajeria');
+  assert.ok(cuerpoDe('pagoWrapHtml').includes('amount=${totalCarritoUSD().toFixed(2)}'), 'el importe del enlace de pago tiene que ser solo el de los productos en USD');
   assert.ok(!/mensajeriaCUP[^\n;]*[*/]/.test(CODIGO), 'mensajeriaCUP aparece dentro de una multiplicacion o division');
   assert.ok(!/[*/][^\n;]*mensajeriaCUP/.test(CODIGO), 'mensajeriaCUP aparece dentro de una multiplicacion o division');
   assert.ok(!/aCUP\(\s*(m\.monto|costo|[^)]*mensajeria)/.test(APP), 'la mensajeria se esta pasando por Dinero.aCUP');
@@ -273,7 +279,4 @@ test('🔴 la mensajeria NUNCA se convierte: ni se divide ni se multiplica por l
   }
   // Y el total en pesos suma los 150 tal cual.
   assert.ok(cuerpoDe('totalGeneralCUP').includes('c + mensajeria().monto'), 'los CUP de la mensajeria se suman sin convertir');
-  // Nota: totalGeneralUSD() (el importe del enlace de PAGO POR ADELANTADO, hoy apagado con
-  // pagoUrl:'') SI divide m.monto entre la tasa: es el importe a cobrar por QvaPay en dolares,
-  // no un total que se le ensene al cliente. Se deja fuera de esta barrera a proposito.
 });
