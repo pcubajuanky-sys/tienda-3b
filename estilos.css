@@ -629,7 +629,7 @@ main{padding-top:20px}
 .lateral-envio{font-size:12px;font-weight:600;color:var(--brand);margin:10px 0 0}
 .lateral-total{padding:12px 0;border-top:1px solid var(--border);margin-top:8px;text-align:right}
 .lateral-total-cup{display:block;font-size:17px;font-weight:800}
-.lateral-total-usd{display:block;font-size:12px;color:var(--text-3);font-weight:600;margin-top:2px}
+.lateral-total-o{display:block;font-size:14px;font-weight:700;color:var(--text);margin-top:2px;font-variant-numeric:tabular-nums}
 #btn-lateral-pedir{width:100%;min-height:44px;font-size:var(--t-sm);margin-top:var(--e1)}
 
 /* ── Vaciar pedido (2026-08-16) — discreto a propósito: no compite con
@@ -645,6 +645,7 @@ main{padding-top:20px}
    esto se pinta. Mismas clases en panel modal y aside (misma función). ── */
 .desglose-linea{display:flex;justify-content:space-between;gap:8px;font-size:13px;padding:2px 0;color:var(--text-2)}
 .desglose-linea span:last-child{font-weight:700;color:var(--text)}
+.desglose-cup{font-size:12px;font-weight:500;margin-left:6px}
 .desglose-nota{font-size:11px;color:var(--text-2);line-height:1.35;margin:2px 0 6px}
 .desglose-total{margin-top:6px;padding-top:8px;border-top:1px solid var(--border)}
 .desglose-total span{font-size:16px;font-weight:800;color:var(--text)}
@@ -961,6 +962,8 @@ body.con-barra-movil{padding-bottom:var(--barra-movil-h, 84px)}
 .linea-quitar{min-width:40px;min-height:40px;border:none;background:none;cursor:pointer;color:var(--text-3);font-size:16px;line-height:1;padding:6px;border-radius:8px}
 .linea-quitar:hover{color:var(--text);background:var(--surface-2)}
 .linea .linea-sub{font-weight:700;white-space:nowrap}
+/* El equivalente en pesos de la linea: pequeño y debajo del USD, que es la cifra grande. */
+.linea .linea-cup{font-size:12px;font-weight:500;color:var(--text-2);white-space:nowrap;font-variant-numeric:tabular-nums}
 /* El «antes» de una linea rebajada, encima de su subtotal y alineado con el a la derecha. Reusa
    .tachado (el mismo estilo del tachado de la parrilla y de la ficha): aqui solo se decide la
    colocacion, nunca el color ni el grosor. */
@@ -976,7 +979,13 @@ body.con-barra-movil{padding-bottom:var(--barra-movil-h, 84px)}
 .completar-card{flex:0 0 108px}
 .completar-card .rel-foto{width:108px;height:108px}
 .total-linea{display:block;font-size:18px;font-weight:800}
-.total-usd{display:block;font-size:12px;color:var(--text-3);font-weight:600;margin-top:2px}
+/* «o: 6,440 CUP»: la otra forma de pagar el mismo pedido. Es un precio real, asi que va en la
+   tinta normal y no en el gris de las notas. */
+.total-o{display:block;font-size:15px;font-weight:700;color:var(--text);margin-top:2px;font-variant-numeric:tabular-nums}
+/* « + 150 CUP de mensajería» cuelga del USD en la misma linea y pesa menos: es lo aparte. */
+.total-mas{font-size:13px;font-weight:600;color:var(--text-2)}
+/* El «Pagas / o» queda separado de las filas de arriba, como el antiguo «Total». */
+.total-pagas{margin-top:6px;padding-top:8px;border-top:1px solid var(--border)}
 /* La tasa con la que esta hecha la conversion de arriba. Mas tenue que el total en USD
    a proposito: es el dato que respalda la cifra, no la cifra. */
 .total-tasa{display:block;font-size:11px;color:var(--text-3);font-weight:500;margin-top:2px}

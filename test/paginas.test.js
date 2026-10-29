@@ -21,7 +21,7 @@ const MODULOS = [
   'mundos.js', 'negocio.js', 'orden.js', 'preciosGestor.js', 'relacionados.js',
   'galeria.js', 'historial.js', 'faltante.js', 'direcciones.js', 'traspedido.js',
   'espera.js', 'preguntar.js', 'completar.js', 'listo.js', 'tasa.js', 'umbral.js',
-  'regreso.js', 'descuento.js', 'tarjeta.js', 'app.js', 'encargos.js'
+  'regreso.js', 'descuento.js', 'dinero.js', 'tarjeta.js', 'app.js', 'encargos.js'
 ];
 
 const PAGINAS = ['index.html', 'electripower.html'];

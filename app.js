@@ -1212,70 +1212,93 @@ function itemsCarrito() {
     .filter((x) => x.p && !(variantesDe(x.p) && !x.clave));
 }
 
+// 🔴 TODA la aritmética del carrito en las dos monedas vive en dinero.js (una sola fuente). Se
+// suma el precioUSD de cada línea (la moneda de los precios) y el CUP se DERIVA del total por la
+// tasa. Aquí no se suma precioCUP a mano en ningún sitio.
+function totalesCarrito() {
+  return window.Dinero.totales(itemsCarrito(), CAT && CAT.tasa);
+}
+
+// ¿Hay una tasa con la que convertir? Sin ella la tienda enseña SOLO dólares (y la
+// mensajería, que es una regla en CUP): jamás un «NaN CUP» delante de una clienta.
+function hayTasa() {
+  return window.Dinero.aCUP(1, CAT && CAT.tasa) !== null;
+}
+
+// Total de los PRODUCTOS en CUP, derivado del USD. null sin tasa válida.
 function totalCarrito() {
-  return itemsCarrito().reduce((s, { p, qty }) => s + p.precioCUP * qty, 0);
+  return totalesCarrito().cup;
 }
 
 // Un artículo con transporte aparte no empuja al cliente hacia la mensajería gratis:
 // su precio no cuenta para el umbral, porque su envío nunca va a ser gratis.
 function esAparte(p) { return !!(p && p.envioAparte); }
 
+// En CUP porque el umbral de la mensajería gratis es una regla del negocio en CUP (no se
+// convierte a dólares). Sin tasa válida el umbral no se puede evaluar: 0, o sea que nunca se
+// promete mensajería gratis a ciegas.
 function totalCarritoElegible() {
-  return itemsCarrito().reduce((s, { p, qty }) => s + (esAparte(p) ? 0 : p.precioCUP * qty), 0);
+  const cup = window.Dinero.aCUP(window.Dinero.elegibleUSD(itemsCarrito()), CAT && CAT.tasa);
+  return cup === null ? 0 : cup;
 }
 
 function itemsAparte() {
   return itemsCarrito().filter(({ p }) => esAparte(p));
 }
 
-// El CUP manda (es lo que se cobra y viaja a WhatsApp); el USD es orientativo
-// porque el CUP de cada producto se redondea hacia arriba al publicar el
-// catálogo, así que suma(CUP) no es exactamente suma(USD) × tasa. Por eso el
-// USD del carrito siempre se pinta con "≈" delante.
+// El USD de los productos: la cifra grande del carrito (los precios están en dólares).
 function totalCarritoUSD() {
-  const n = itemsCarrito().reduce((s, { p, qty }) => s + Number(p.precioUSD) * qty, 0);
-  return Math.round(n * 100) / 100;
+  return totalesCarrito().usd;
 }
 
-// Misma función y mismo formato del USD en panel modal y aside — nunca se
-// duplica el cálculo, solo la clase CSS cambia según dónde se pinte.
-// Usa totalGeneralUSD() (productos + mensajería si aplica) para que el "≈"
-// siga siendo coherente con el total real que se cobra.
-function usdLineaHtml(clase) {
-  // La tasa va en su propia linea, no pegada al total: en 375px «≈ $12.34 USD · 845 CUP
-  // por USD» se parte feo justo donde la clienta esta mirando el dinero.
-  const nota = (window.TasaVista && TasaVista.carrito(CAT.tasa)) || '';
-  return `<span class="${clase}">≈ $${totalGeneralUSD().toFixed(2)} USD</span>`
-    + (nota ? `<span class="total-tasa">${nota}</span>` : '');
-}
+function usdTxt(n) { return '$' + Number(n).toFixed(2); }
 
-// Bloque de total, compartido por panel modal y aside (una sola fuente de
-// verdad, como el resto del carrito). Con mensajería inactiva es la línea
-// única de siempre; activa, pasa a tres líneas (Productos/Mensajería/Total)
-// con una nota de que el costo depende de la zona.
-function totalBloqueHtml(claseTotalCup, claseTotalUsd) {
+// Bloque de total, compartido por panel modal y aside (una sola fuente de verdad).
+//
+// Ruth vende en dólares y el cliente paga EN UNA MONEDA O EN LA OTRA, no en las dos: por eso el
+// total da las dos formas con un «o» en medio.
+//     Pagas: $7.40 USD + 150 CUP de mensajería
+//     o:     6,440 CUP
+// 🔴 La mensajería es una regla en CUP (tarifa fija, gratis desde un umbral en CUP) y va SIEMPRE
+// aparte y SIEMPRE en CUP: nunca dentro del total en dólares ni convertida. Los 150 CUP se SUMAN
+// TAL CUAL a la rama del «o»; no se convierten de ida y vuelta.
+// 🔴 Sin tasa válida se enseña SOLO el USD (y la mensajería en CUP): jamás un «NaN CUP».
+// 🔴 Sin nada rebajado en el carrito no se pinta ni una fila de rebaja. Hay test.
+function totalBloqueHtml(claseTotal, claseO) {
   const m = mensajeria();
-  const d = window.Descuento.totales(itemsCarrito());
-  // 🔴 Sin nada rebajado en el carrito no se pinta ni una fila nueva: el bloque queda EXACTAMENTE
-  // como antes del 2026-10-28, en las dos ramas. Hay test.
-  const rebaja = d.descuento > 0
-    ? `<div class="desglose-linea"><span>Precio normal</span><span>${fmt(d.normal)} CUP</span></div>` +
-      `<div class="desglose-linea desglose-descuento"><span>Descuento</span><span>−${fmt(d.descuento)} CUP</span></div>`
+  const d = totalesCarrito();
+  const cupTxt = (n) => (hayTasa() ? `${fmt(n)} CUP` : '');
+  // Cada fila: el USD y, pequeño al lado, su equivalente en CUP (solo si hay tasa).
+  const fila = (etiqueta, usd, cup, extra) =>
+    `<div class="desglose-linea${extra ? ' ' + extra : ''}"><span>${etiqueta}</span><span>${usd}` +
+    (cup ? ` <small class="desglose-cup">${cup}</small>` : '') + '</span></div>';
+  const rebaja = d.usdAhorro > 0
+    ? fila('Precio normal', usdTxt(d.usdNormal), cupTxt(d.cupNormal)) +
+      fila('Descuento', '−' + usdTxt(d.usdAhorro), hayTasa() ? `−${fmt(d.cupAhorro)} CUP` : '', 'desglose-descuento')
     : '';
+  const mas = m.monto > 0 ? `<span class="total-mas"> + ${fmt(m.monto)} CUP de mensajería</span>` : '';
+  const cupTotal = totalGeneralCUP();
+  const pagar =
+    `<span class="${claseTotal}">Pagas: ${usdTxt(d.usd)} USD${mas}</span>` +
+    (cupTotal !== null ? `<span class="${claseO}">o: ${fmt(cupTotal)} CUP</span>` : '');
+  // La tasa en su propia línea, no pegada al total: en 375px «o: 6,440 CUP · 850 CUP por USD»
+  // se parte feo justo donde la clienta está mirando el dinero.
+  const nota = (window.TasaVista && TasaVista.carrito(CAT && CAT.tasa)) || '';
+  const tasa = nota ? `<span class="total-tasa">${nota}</span>` : '';
   if (!m.activa) {
-    return rebaja + notaAparteHtml() + `<span class="${claseTotalCup}">Total: ${fmt(totalCarrito())} CUP</span>` + usdLineaHtml(claseTotalUsd);
+    return rebaja + notaAparteHtml() + pagar + tasa;
   }
   return (
     rebaja +
-    `<div class="desglose-linea"><span>Productos</span><span>${fmt(totalCarrito())} CUP</span></div>` +
+    fila('Productos', usdTxt(d.usd), cupTxt(d.cup)) +
     `<div class="desglose-linea"><span>Mensajería</span><span>${m.coordinar ? 'a coordinar' : (m.gratis ? 'GRATIS' : fmt(m.monto) + ' CUP')}</span></div>` +
     // 🔴 La nota solo cuando hay algo que cobrar. Antes salía SIEMPRE, así que un pedido con
     // envío gratis leía «Mensajería GRATIS» e inmediatamente debajo «el costo depende de la
     // zona»: se le sembraba la duda justo donde se le acababa de dar una buena noticia.
     (m.gratis || m.coordinar ? '' : `<p class="desglose-nota">El costo de mensajería depende de la zona; se confirma por WhatsApp.</p>`) +
     notaAparteHtml() +
-    `<div class="desglose-linea desglose-total"><span>Total</span><span>${fmt(totalGeneralCUP())} CUP</span></div>` +
-    usdLineaHtml(claseTotalUsd)
+    `<div class="total-pagas">${pagar}</div>` +
+    tasa
   );
 }
 
@@ -1331,11 +1354,11 @@ function mensajeria() {
   return { activa, costo, gratis, monto: activa && !gratis ? costo : 0, coordinar: false };
 }
 
-// Total real que se cobra: productos + mensajería (0 si es gratis o si la
-// mensajería está inactiva). Es lo que se manda por WhatsApp y lo que debe
-// coincidir con la barra móvil y el carrito.
+// Lo que se paga si se paga TODO en pesos: productos (derivados del USD) + mensajería TAL CUAL
+// (0 si es gratis o inactiva; nunca convertida de ida y vuelta). null sin tasa válida.
 function totalGeneralCUP() {
-  return totalCarrito() + mensajeria().monto;
+  const c = totalCarrito();
+  return c === null ? null : c + mensajeria().monto;
 }
 
 // USD del total general: la mensajería se convierte con CAT.tasa (no tiene
@@ -1531,9 +1554,11 @@ function lineaCarritoHtml(p, qty, clave) {
   const k = claveCarrito(p.id, clave);
   const tope = topeDe(p.id, clave);
   const alTope = tope !== null && qty >= tope;
-  // El «antes» de esta linea, solo si hay rebaja de verdad. Se deriva del ahorro para que la
-  // resta de la pantalla cuadre con el desglose del total, que usa la misma fuente.
-  const ahorro = window.Descuento.ahorroCUP(p);
+  // El USD es la cifra grande de la línea y el CUP va debajo, pequeño, como equivalente. El
+  // «antes» tachado también va en USD y solo si hay rebaja de verdad; sale de la misma fuente
+  // que el desglose del total, para que la resta de la pantalla cuadre.
+  const ahorro = window.Dinero.ahorroUSD(p);
+  const lin = window.Dinero.totales([{ p, qty }], CAT && CAT.tasa);
   // `alt` lleva el nombre para que imgFallback saque la inicial del producto y no un «?».
   return `<div class="linea">
       <img src="${foto.src}" alt="${escapeHtml(p.name)}" loading="lazy" onerror="imgFallback(this)">
@@ -1547,8 +1572,9 @@ function lineaCarritoHtml(p, qty, clave) {
       </div>
       <div class="linea-derecha">
         <div class="linea-precios">
-          ${ahorro > 0 ? `<span class="tachado linea-antes">${fmt((p.precioCUP + ahorro) * qty)} CUP</span>` : ''}
-          <div class="linea-sub">${fmt(p.precioCUP * qty)} CUP</div>
+          ${ahorro > 0 ? `<span class="tachado linea-antes">${usdTxt(lin.usdNormal)}</span>` : ''}
+          <div class="linea-sub">${usdTxt(lin.usd)}</div>
+          ${hayTasa() ? `<div class="linea-cup">${fmt(p.precioCUP * qty)} CUP</div>` : ''}
         </div>
         <button type="button" class="linea-quitar" data-quitar-linea="${escapeHtml(k)}" aria-label="Quitar ${escapeHtml(p.name)} del pedido">✕</button>
       </div>
@@ -1568,7 +1594,7 @@ function actualizarBarraMovil() {
   const eg = envioGratis();
   const aviso = eg.activo && eg.alcanzado ? ' · 🎉 Mensajería gratis' : '';
   document.getElementById('barra-movil-info').textContent =
-    `${n} producto${n === 1 ? '' : 's'} · ${fmt(totalGeneralCUP())} CUP${aviso}`;
+    `${n} producto${n === 1 ? '' : 's'} · ${usdTxt(totalCarritoUSD())} USD${aviso}`;
   reservarEspacioBarraMovil();
 }
 
@@ -1766,7 +1792,7 @@ function renderCarrito() {
   document.getElementById('form-pedido').hidden = !hayItems || cerrada();
   document.getElementById('carrito-total').innerHTML = hayItems
     ? (envioTexto ? `<span class="envio-linea">${escapeHtml(envioTexto)}</span>` : '') +
-      totalBloqueHtml('total-linea', 'total-usd')
+      totalBloqueHtml('total-linea', 'total-o')
     : '';
   const panelPolitica = document.getElementById('panel-politica');
   panelPolitica.hidden = !hayItems || !politica;
@@ -1796,7 +1822,7 @@ function renderCarrito() {
   envioEl.textContent = envioTexto;
   const totalEl = document.getElementById('lateral-total');
   totalEl.hidden = !hayItems;
-  totalEl.innerHTML = hayItems ? totalBloqueHtml('lateral-total-cup', 'lateral-total-usd') : '';
+  totalEl.innerHTML = hayItems ? totalBloqueHtml('lateral-total-cup', 'lateral-total-o') : '';
   const lateralPolitica = document.getElementById('lateral-politica');
   lateralPolitica.hidden = !hayItems || !politica;
   lateralPolitica.innerHTML = politica ? escapeHtml(politica) : '';
