@@ -214,9 +214,11 @@ function cargarMoneda() {
   return sb.window;
 }
 
-test('🔴 el CUP de cada LINEA del carrito sale del catalogo (precioCUP), no de multiplicar por la tasa', () => {
+// 2026-10-29: Ruth pidió la línea solo en USD; el equivalente en CUP vive únicamente en el total.
+test('🔴 la LINEA del carrito enseña solo USD: ni precioCUP ni conversion por la tasa', () => {
   const linea = cuerpoDe('lineaCarritoHtml');
-  assert.ok(linea.includes('p.precioCUP * qty'), 'la linea tiene que usar el precioCUP que publica el catalogo');
+  assert.ok(!linea.includes('precioCUP'), 'la linea del carrito no puede usar precioCUP');
+  assert.ok(!/CUP/.test(linea), 'la linea del carrito no puede pintar ni nombrar CUP');
   assert.ok(!/[*/]\s*(CAT\.)?tasa/.test(linea), 'la linea no puede convertir el USD a CUP con la tasa');
   // Y nadie SUMA precioCUP de varias lineas a mano: el total en CUP se deriva del USD.
   assert.ok(!/reduce\([^;]{0,160}precioCUP/.test(APP), 'queda un reduce que suma precioCUP a mano');
