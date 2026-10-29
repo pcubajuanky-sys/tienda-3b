@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-29T18:38:55.721Z",
+  "generado": "2026-10-29T18:56:39.312Z",
   "tasa": 855,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -139,6 +139,10 @@
     {
       "code": "SQVUD",
       "nombre": "Dina Rosa"
+    },
+    {
+      "code": "8S7QR",
+      "nombre": "Yaremis Parra Sánchez"
     }
   ],
   "categorias": [
