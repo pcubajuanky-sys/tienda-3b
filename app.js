@@ -1951,19 +1951,30 @@ function enviarPorWhatsApp(ev) {
     const vals = clave.split(SEP_VAR);
     return ' (' + v.ejes.map((e, i) => `${e} ${vals[i]}`).join(', ') + ')';
   };
-  items.forEach(({ p, qty, clave }) => lineas.push(`• ${p.name}${etiqueta(p, clave)} x${qty} — ${fmt(p.precioCUP * qty)} CUP`));
+  // 🔴 El USD va PRIMERO y el CUP entre paréntesis (decisión de Ruth, 2026-10-28). Sin tasa válida
+  // el mensaje va solo en USD: ni paréntesis en CUP ni línea del «o», jamás un «NaN CUP».
+  const dWA = totalesCarrito();
+  const cupTotalWA = totalGeneralCUP();
+  const parWA = (usd, cup) => `${usdTxt(usd)} USD` + (cup === null ? '' : ` (${fmt(cup)} CUP)`);
+  items.forEach(({ p, qty, clave }) => {
+    const l = window.Dinero.totales([{ p, qty }], CAT && CAT.tasa);
+    lineas.push(`• ${p.name}${etiqueta(p, clave)} x${qty} — ${usdTxt(l.usd)} USD` + (hayTasa() ? ` (${fmt(p.precioCUP * qty)} CUP)` : ''));
+  });
   lineas.push('');
   if (m.activa) {
-    // Mismo desglose que el carrito: Productos / Mensajería / Total.
-    lineas.push(`Productos: ${fmt(totalCarrito())} CUP`);
+    // Mismo desglose que el carrito: Productos / Mensajería / Total. La mensajería va SIEMPRE
+    // aparte y SIEMPRE en CUP: nunca dentro del total en dólares.
+    lineas.push(`Productos: ${parWA(dWA.usd, dWA.cup)}`);
     lineas.push(m.coordinar
       ? 'Mensajería: a coordinar (transporte aparte)'
       : (m.gratis
         ? `Mensajería: GRATIS (pedido desde ${fmt(eg.umbral)} CUP)`
         : `Mensajería: ${fmt(m.monto)} CUP (se confirma según la zona)`));
-    lineas.push(`*Total: ${fmt(totalGeneralCUP())} CUP*`);
+    lineas.push(`*Total: ${usdTxt(dWA.usd)} USD${m.monto > 0 ? ` + ${fmt(m.monto)} CUP de mensajería` : ''}*`);
+    if (cupTotalWA !== null) lineas.push(`o ${fmt(cupTotalWA)} CUP`);
   } else {
-    lineas.push(`*Total: ${fmt(totalCarrito())} CUP*`);
+    lineas.push(`*Total: ${usdTxt(dWA.usd)} USD*`);
+    if (cupTotalWA !== null) lineas.push(`o ${fmt(cupTotalWA)} CUP`);
     if (eg.activo && eg.alcanzado) lineas.push(`Mensajería: GRATIS (pedido desde ${fmt(eg.umbral)} CUP)`);
   }
   // El cambio con el que estan hechas estas cuentas, pegado al total: asi el cliente
@@ -1974,8 +1985,7 @@ function enviarPorWhatsApp(ev) {
   // Lo que se ahorro con las ofertas de ESTE pedido. Va despues de la tasa y no entre el total
   // y la tasa: esa pareja no se separa (decision del 2026-10-27, el cambio va pegado al total).
   // Solo si hay algo que presumir, para no escribirle a Ruth un «Ahorraste 0 CUP».
-  const dWA = window.Descuento.totales(items);
-  if (dWA.descuento > 0) lineas.push(`Ahorraste ${fmt(dWA.descuento)} CUP`);
+  if (dWA.usdAhorro > 0) lineas.push(`Ahorraste ${parWA(dWA.usdAhorro, dWA.cupAhorro)}`);
   lineas.push('');
   const aparteWA = itemsAparte();
   if (aparteWA.length) {

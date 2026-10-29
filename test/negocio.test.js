@@ -180,9 +180,9 @@ test('🔴 con la tienda cerrada el boton «Listo» de la ficha no se enseña', 
 
 test('🔴 el desglose del ahorro sale del modulo, no de cuentas a mano en app.js', () => {
   const app = fs.readFileSync(path.join(__dirname, '..', 'app.js'), 'utf8');
-  assert.ok(app.includes('Descuento.totales('), 'el desglose del total tiene que pedirle las cifras a descuento.js');
+  assert.ok(app.includes('Dinero.totales('), 'el desglose del total tiene que pedirle las cifras a dinero.js (desde el 2026-10-28)');
   assert.ok(app.includes('Dinero.ahorroUSD('), 'el tachado de la linea del carrito, tambien (en USD desde el 2026-10-28)');
-  assert.ok(/Ahorraste \$\{fmt\(/.test(app), 'el mensaje de WhatsApp lleva la linea del ahorro');
+  assert.ok(/Ahorraste \$\{parWA\(/.test(app), 'el mensaje de WhatsApp lleva la linea del ahorro');
   // 🔴 Hay un gestor con recargo vivo (QGZUQ) y preciosGestor.js ya sustituye precioNormalCUP:
   // calcular el ahorro desde el USD por la tasa daria una cifra que no coincide con la que el
   // cliente tiene delante.
