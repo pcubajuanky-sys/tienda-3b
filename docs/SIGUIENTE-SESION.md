@@ -8,7 +8,7 @@
 ## 1. Dónde estamos hoy
 
 Todo lo trabajado en octubre está **desplegado y verificado en producción** (www.3bqba.com).
-`main` = `origin/main` = `c5c5aa1`. Árbol limpio. Caché del service worker: **`tienda-3b-v28`**.
+Caché del service worker: **`tienda-3b-v29`**. Fecha de corte de esta línea: **29/10**.
 
 Lo último que entró (27 y 28/10, en este orden):
 
@@ -19,6 +19,7 @@ Lo último que entró (27 y 28/10, en este orden):
 | El sello de oferta dice `-X%` | `v26` |
 | La línea del cambio sale del centro y se pega encima del umbral | `v27` |
 | **«Ahorras X%» + el carrito cuenta el ahorro estilo Temu (28/10)** | **`v28`** |
+| **El carrito cuenta en USD + los 19 productos en CUP pasados a USD (28/10)** | **`v29`** |
 
 ## 2. Lo que se arregló el 28/10 (ya hecho, no lo repitas)
 
@@ -62,6 +63,41 @@ Tres cosas que conviene no olvidar:
 - **Verificado con el gestor `QGZUQ` vivo** (el A1 de abajo): su página enseña sus precios y su
   ahorro (5.610 → 4.675, ahorro 935 en vez de 850). Es la primera vez que esa rama se prueba con
   un gestor real, aunque **sigue sin probarse un pedido suyo llegando a su WhatsApp**.
+
+## 2 ter. El carrito en USD (28/10, lo último que entró)
+
+Ruth pidió que **todo se contabilice en dólares** y que el total enseñe las dos monedas. Cada línea
+del carrito lleva el **USD grande** y el CUP pequeño debajo; el total da las dos formas de pagar con
+un «o» en medio y la **mensajería siempre aparte y en CUP**:
+
+```
+Pagas:   $7.40 USD  +  150 CUP de mensajería
+   o:    6,440 CUP
+```
+
+Lo que no hay que olvidar:
+
+- 🔴 **Ya NO queda ningún producto con precio nativo en CUP.** Los 19 que lo tenían se pasaron a USD
+  en Stock+ **por la API** (nunca tocando `data.json`), redondeando al múltiplo de **0,05 más**
+  **cercano**. Por eso `precioHtml` empezó a enseñar el USD grande en TODAS las tarjetas solo: no se
+  programó nada para eso.
+- 🔴 **El CUP de cada LÍNEA sale del catálogo** (`p.precioCUP * qty`), no de multiplicar por la tasa.
+  `Dinero.aCUP` es solo para los TOTALES. Si se cambia, la línea deja de coincidir con la tarjeta.
+- 🔴 **Los 150 CUP de mensajería se suman tal cual**, nunca se convierten de ida y vuelta, y el
+  **pago por adelantado (QvaPay) cobra solo los productos** — `totalGeneralUSD()` se eliminó porque
+  sumaba `m.monto / CAT.tasa`.
+- 🔴 **Sin tasa válida en el catálogo, la tienda enseña solo USD** (los campos en CUP de
+  `Dinero.totales` valen `null`). Falla cerrado: nunca un `NaN CUP`.
+- 🔴 **La barrera de `test/negocio.test.js` se INVIRTIÓ a propósito.** Antes prohibía derivar del
+  USD por la tasa; ahora exige lo contrario y vigila cuatro cosas (línea del catálogo, total
+  derivado, el gestor respetado, la mensajería sin convertir). Si alguien la vuelve a invertir,
+  está revirtiendo una decisión de Ruth.
+
+Tests **258/258**. Informe: `docs/informes/2026-10-28-carrito-en-usd.md`.
+⚠ **Nada se vio en un navegador** (452 MB de RAM libres y 25 procesos de Chrome; por debajo de
+600 MB abrir otro desconecta a Mía). Se ejecutó el `app.js` real en `node:vm` y se leyó el HTML y
+el mensaje que produce, pero las comprobaciones a 375 px siguen pendientes.
+
 
 ## 3. 🔴 Dos cosas que el `CLAUDE.md` dice MAL
 
