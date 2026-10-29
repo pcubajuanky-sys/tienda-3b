@@ -1550,9 +1550,9 @@ function lineaCarritoHtml(p, qty, clave) {
   const k = claveCarrito(p.id, clave);
   const tope = topeDe(p.id, clave);
   const alTope = tope !== null && qty >= tope;
-  // El USD es la cifra grande de la línea y el CUP va debajo, pequeño, como equivalente. El
-  // «antes» tachado también va en USD y solo si hay rebaja de verdad; sale de la misma fuente
-  // que el desglose del total, para que la resta de la pantalla cuadre.
+  // La línea enseña SOLO USD (decisión de Ruth, 2026-10-29): las dos monedas aparecen solo en el
+  // total. El «antes» tachado también va en USD y sale de la misma fuente que el desglose del
+  // total, para que la resta de la pantalla cuadre.
   const ahorro = window.Dinero.ahorroUSD(p);
   const lin = window.Dinero.totales([{ p, qty }], CAT && CAT.tasa);
   // `alt` lleva el nombre para que imgFallback saque la inicial del producto y no un «?».
@@ -1570,7 +1570,6 @@ function lineaCarritoHtml(p, qty, clave) {
         <div class="linea-precios">
           ${ahorro > 0 ? `<span class="tachado linea-antes">${usdTxt(lin.usdNormal)}</span>` : ''}
           <div class="linea-sub">${usdTxt(lin.usd)}</div>
-          ${hayTasa() ? `<div class="linea-cup">${fmt(p.precioCUP * qty)} CUP</div>` : ''}
         </div>
         <button type="button" class="linea-quitar" data-quitar-linea="${escapeHtml(k)}" aria-label="Quitar ${escapeHtml(p.name)} del pedido">✕</button>
       </div>

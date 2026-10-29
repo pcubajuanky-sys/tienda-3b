@@ -962,8 +962,6 @@ body.con-barra-movil{padding-bottom:var(--barra-movil-h, 84px)}
 .linea-quitar{min-width:40px;min-height:40px;border:none;background:none;cursor:pointer;color:var(--text-3);font-size:16px;line-height:1;padding:6px;border-radius:8px}
 .linea-quitar:hover{color:var(--text);background:var(--surface-2)}
 .linea .linea-sub{font-weight:700;white-space:nowrap}
-/* El equivalente en pesos de la linea: pequeño y debajo del USD, que es la cifra grande. */
-.linea .linea-cup{font-size:12px;font-weight:500;color:var(--text-2);white-space:nowrap;font-variant-numeric:tabular-nums}
 /* El «antes» de una linea rebajada, encima de su subtotal y alineado con el a la derecha. Reusa
    .tachado (el mismo estilo del tachado de la parrilla y de la ficha): aqui solo se decide la
    colocacion, nunca el color ni el grosor. */
