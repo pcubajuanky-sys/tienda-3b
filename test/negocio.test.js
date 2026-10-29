@@ -183,8 +183,97 @@ test('🔴 el desglose del ahorro sale del modulo, no de cuentas a mano en app.j
   assert.ok(app.includes('Dinero.totales('), 'el desglose del total tiene que pedirle las cifras a dinero.js (desde el 2026-10-28)');
   assert.ok(app.includes('Dinero.ahorroUSD('), 'el tachado de la linea del carrito, tambien (en USD desde el 2026-10-28)');
   assert.ok(/Ahorraste \$\{parWA\(/.test(app), 'el mensaje de WhatsApp lleva la linea del ahorro');
-  // 🔴 Hay un gestor con recargo vivo (QGZUQ) y preciosGestor.js ya sustituye precioNormalCUP:
-  // calcular el ahorro desde el USD por la tasa daria una cifra que no coincide con la que el
-  // cliente tiene delante.
-  assert.ok(!/precioNormal[A-Za-z]*\s*[*/]\s*CAT\.tasa/.test(app), 'el ahorro jamas se calcula desde el USD por la tasa');
+  // 🔴 AQUI HABIA UNA BARRERA QUE PROHIBIA DERIVAR EL AHORRO DEL USD POR LA TASA (2026-10-28,
+  // por el gestor con recargo QGZUQ: su tabla sustituia el CUP y el calculo desde el USD no
+  // coincidia). SE INVIERTE A PROPOSITO EL MISMO DIA (plan 2026-10-28-carrito-en-usd): ya no
+  // queda ningun producto con precio nativo en CUP (los 202 son fixedCurrency:'usd') y la tabla
+  // del gestor sustituye precioUSD Y precioCUP, asi que sumar el USD ya da SUS precios y
+  // derivar el CUP de ese total es lo correcto tambien en su pagina. En vez de borrarla, la
+  // barrera nueva son las cuatro pruebas de abajo. Si alguien la restaura, el carrito en USD
+  // se rompe.
+});
+
+// ── Carrito en USD (2026-10-28): lo que reemplaza a la barrera de arriba ──
+
+const APP = fs.readFileSync(path.join(__dirname, '..', 'app.js'), 'utf8');
+// Sin los comentarios de linea: un // delante de mensajeriaCUP no es una division.
+const CODIGO = APP.split(/\r?\n/).map((l) => l.replace(/\/\/.*$/, '')).join(String.fromCharCode(10));
+
+function cuerpoDe(nombre) {
+  const i = APP.indexOf('function ' + nombre + '(');
+  assert.ok(i !== -1, 'falta la funcion ' + nombre);
+  return APP.slice(i, APP.indexOf(String.fromCharCode(10) + '}', i));
+}
+
+function cargarMoneda() {
+  const sb = { window: {} };
+  vm.createContext(sb);
+  for (const f of ['descuento.js', 'dinero.js', 'preciosGestor.js']) {
+    vm.runInContext(fs.readFileSync(path.join(__dirname, '..', f), 'utf8'), sb);
+  }
+  return sb.window;
+}
+
+test('🔴 el CUP de cada LINEA del carrito sale del catalogo (precioCUP), no de multiplicar por la tasa', () => {
+  const linea = cuerpoDe('lineaCarritoHtml');
+  assert.ok(linea.includes('p.precioCUP * qty'), 'la linea tiene que usar el precioCUP que publica el catalogo');
+  assert.ok(!/[*/]\s*(CAT\.)?tasa/.test(linea), 'la linea no puede convertir el USD a CUP con la tasa');
+  // Y nadie SUMA precioCUP de varias lineas a mano: el total en CUP se deriva del USD.
+  assert.ok(!/reduce\([^;]{0,160}precioCUP/.test(APP), 'queda un reduce que suma precioCUP a mano');
+});
+
+test('🔴 el CUP del TOTAL se deriva del USD (Dinero.aCUP), no se suma linea a linea', () => {
+  assert.ok(cuerpoDe('totalesCarrito').includes('Dinero.totales(') && cuerpoDe('totalesCarrito').includes('CAT.tasa'),
+    'totalesCarrito tiene que pedirle las cifras a dinero.js con la tasa del catalogo');
+  assert.ok(cuerpoDe('totalCarrito').includes('totalesCarrito().cup'), 'totalCarrito tiene que ser el CUP derivado');
+  const eleg = cuerpoDe('totalCarritoElegible');
+  assert.ok(eleg.includes('Dinero.aCUP(') && eleg.includes('Dinero.elegibleUSD('), 'el umbral se evalua en CUP derivado del USD elegible');
+  // Comportamiento: tres productos de 0,33 USD a tasa 851. Cada uno vale 281 CUP en el catalogo
+  // (843 sumando lineas) pero el total en USD (0,99) convertido da 842: manda el segundo.
+  const W = cargarMoneda();
+  const p = { moneda: 'usd', precioUSD: 0.33, precioCUP: 281, enOferta: false };
+  const t = W.Dinero.totales([{ p: p, qty: 3 }], 851);
+  assert.strictEqual(t.usd, 0.99);
+  assert.strictEqual(t.cup, W.Dinero.aCUP(0.99, 851));
+  assert.strictEqual(t.cup, 842, 'el CUP del total sale del USD');
+  assert.notStrictEqual(t.cup, p.precioCUP * 3, 'si coincide con la suma de lineas, ya no se esta derivando');
+});
+
+test('🔴 la derivacion respeta al gestor: el total sale de SUS precios, no de los de la casa', () => {
+  // Recargo del 10 %: su tabla sustituye precioUSD Y precioCUP (preciosGestor.js), igual que en
+  // produccion con QGZUQ. Sumar el USD ya da el total del gestor y su conversion, el suyo.
+  const W = cargarMoneda();
+  const casa = [
+    { codigo: 'AAAA', moneda: 'usd', precioUSD: 5, precioCUP: 4250, enOferta: false },
+    { codigo: 'BBBB', moneda: 'usd', precioUSD: 1, precioCUP: 850, enOferta: false },
+  ];
+  const tabla = { AAAA: { u: 5.5, c: 4675 }, BBBB: { u: 1.1, c: 935 } };
+  const gestor = W.PreciosGestor.aplicar(casa, tabla);
+  const lineas = (items) => items.map((p) => ({ p: p, qty: 1 }));
+  const g = W.Dinero.totales(lineas(gestor), 850);
+  assert.strictEqual(g.usd, 6.6, 'el USD que se suma es el del gestor');
+  assert.strictEqual(g.cup, 5610, 'y su conversion tambien');
+  assert.strictEqual(g.cup, 4675 + 935, 'cuadra con los CUP que publica su tabla');
+  const c = W.Dinero.totales(lineas(casa), 850);
+  assert.strictEqual(c.usd, 6, 'la casa sigue siendo la casa');
+  assert.strictEqual(c.cup, 5100);
+  assert.notStrictEqual(g.cup, c.cup);
+});
+
+test('🔴 la mensajeria NUNCA se convierte: ni se divide ni se multiplica por la tasa', () => {
+  // La tarifa (150 CUP) y el minimo gratis (2.000 CUP) son reglas del negocio en CUP. Si el
+  // cliente paga en dolares paga «X USD + 150 CUP de mensajeria», y los 150 se SUMAN TAL CUAL a
+  // la rama del «o».
+  assert.ok(!/mensajeriaCUP[^\n;]*[*/]/.test(CODIGO), 'mensajeriaCUP aparece dentro de una multiplicacion o division');
+  assert.ok(!/[*/][^\n;]*mensajeriaCUP/.test(CODIGO), 'mensajeriaCUP aparece dentro de una multiplicacion o division');
+  assert.ok(!/aCUP\(\s*(m\.monto|costo|[^)]*mensajeria)/.test(APP), 'la mensajeria se esta pasando por Dinero.aCUP');
+  // Las piezas que le ENSEÑAN dinero al cliente: sin una cuenta de monto/costo contra la tasa.
+  for (const f of ['totalBloqueHtml', 'totalGeneralCUP', 'enviarPorWhatsApp', 'actualizarBarraMovil', 'mensajeria', 'envioGratis']) {
+    assert.ok(!/(monto|costo|umbral)\s*[*/]\s*(CAT\.)?tasa/.test(cuerpoDe(f)), f + ' convierte la mensajeria o el umbral con la tasa');
+  }
+  // Y el total en pesos suma los 150 tal cual.
+  assert.ok(cuerpoDe('totalGeneralCUP').includes('c + mensajeria().monto'), 'los CUP de la mensajeria se suman sin convertir');
+  // Nota: totalGeneralUSD() (el importe del enlace de PAGO POR ADELANTADO, hoy apagado con
+  // pagoUrl:'') SI divide m.monto entre la tasa: es el importe a cobrar por QvaPay en dolares,
+  // no un total que se le ensene al cliente. Se deja fuera de esta barrera a proposito.
 });
