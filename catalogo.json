@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-30T17:54:07.645Z",
+  "generado": "2026-10-30T18:43:55.519Z",
   "tasa": 870,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -889,6 +889,31 @@
       "creado": 1785092425019
     },
     {
+      "id": "p_1787110390009",
+      "codigo": "KLNL",
+      "name": "Alarma de puertas y ventanas",
+      "cat": "Electrodomésticos",
+      "subcat": "",
+      "notes": "Alarma ideal para la protección de su casa, de habitaciones, closets o incluso gavetas, TODA SEGURIDAD ES POCA EN ESTOS TIEMPOS!!",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791861204/productos/eqbueci4m1g9m7wiqc8n.jpg",
+      "precioUSD": 2.5,
+      "precioCUP": 2175,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791861153/productos/fq3kfhciqxzputkxgkcr.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791861189/productos/p8le721er1pxu07hxvbm.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791861197/productos/gx9lfooymrsxtb8perrj.jpg"
+      ],
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1787110390009
+    },
+    {
       "id": "p_1787498809174",
       "codigo": "RWLZ",
       "name": "Anillos de acero quirúrgico",
@@ -1208,32 +1233,6 @@
       },
       "envioGratis": true,
       "creado": 1789482363354
-    },
-    {
-      "id": "p_1788830868023",
-      "codigo": "KS3Q",
-      "name": "Bicicleta Eléctrica de 500W para Adultos",
-      "cat": "Motos / Accesorios",
-      "subcat": "",
-      "notes": "Bicicleta Eléctrica de 500W para Adultos, Batería Extraíble de 48V 15AH, Velocidad de 15-20 mph, Largo Alcance de 10-35 Millas, Plegable de 14 Pulgadas, Pantalla LCD, Frenos de Disco Duales, Súper Suspensión, Regalo para Adolescentes, Bicicleta Eléctrica para Adultos - Motocicleta\n\nNueva está en su caja sellada",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788830814/productos/mbtm7sr4opagfnenqeht.jpg",
-      "precioUSD": 450,
-      "precioCUP": 391500,
-      "moneda": "usd",
-      "enOferta": true,
-      "destacado": true,
-      "fotos": [
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791859754/productos/ai4oxxgzcnikwvwtn0gz.jpg"
-      ],
-      "max": 1,
-      "envio": {
-        "corto": "🚚 Transporte aparte",
-        "largo": "🚚 Por su tamaño, el transporte se coordina por WhatsApp según tu zona"
-      },
-      "creado": 1788830868023,
-      "envioAparte": true,
-      "precioNormalUSD": 465,
-      "precioNormalCUP": 404550
     },
     {
       "id": "p_1785877309060",
@@ -3246,6 +3245,32 @@
       "creado": 1789255852332
     },
     {
+      "id": "p_1790795440877",
+      "codigo": "54WG",
+      "name": "Medidor de presión recargable",
+      "cat": "Electrodomésticos",
+      "subcat": "",
+      "notes": "Incluye todo lo de la imagen. Solo en color rosado. Recargable",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791896222/productos/crb3qw8fbzp4toylktze.jpg",
+      "precioUSD": 25,
+      "precioCUP": 21750,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791896167/productos/x3emxzkvljabovwmceng.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791896193/productos/bzkupirfjeoaidp2zgk5.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791896212/productos/wf2bsewh8zmcrkoxncag.jpg"
+      ],
+      "max": 1,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1790795440877
+    },
+    {
       "id": "p_1786916805434",
       "codigo": "2ZW2",
       "name": "Mini Bloques-Lima de uñas",
@@ -3285,6 +3310,32 @@
       },
       "envioGratis": true,
       "creado": 1781005462535
+    },
+    {
+      "id": "p_1780452122083",
+      "codigo": "LX3Z",
+      "name": "Mini Lavadora",
+      "cat": "Electrodomésticos",
+      "subcat": "",
+      "notes": "Lavadora plegable y portátil\nCompacta, ahorra espacio y se guarda fácilmente. Perfecta para lavar ropa interior, calcetines, pañales y prendas delicadas. Ahorra agua y esfuerzo. 110V -220v\nIncluye su transformador, manguera de desagüe y cesta de secado\nCapacidad 11L",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1784912344/productos/pkjeaowywyiykoigcxok.jpg",
+      "precioUSD": 35,
+      "precioCUP": 30450,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791870947/productos/bv24wn9avfesp9hd7rmw.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791870968/productos/dncpe9fphgc8v6bxtxby.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791870995/productos/wazysb6m70j6g3djrteo.jpg"
+      ],
+      "max": 2,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1780452122083
     },
     {
       "id": "p_1780451802473",
@@ -3406,6 +3457,33 @@
       },
       "envioGratis": true,
       "creado": 1789009525416
+    },
+    {
+      "id": "p_1790619248550",
+      "codigo": "WDWV",
+      "name": "Moledor de sazones recargable",
+      "cat": "Electrodomésticos",
+      "subcat": "",
+      "notes": "Ideal para facilitar el trabajo diario sin importar las condiciones electro energéticas. No necesita alimentación de corriente. Incluye su cable de carga, cuchillas afiladas dobles y un accesorio para batir huevos.",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791646515/productos/pamjevfzqm37iytafdzl.jpg",
+      "precioUSD": 12,
+      "precioCUP": 10440,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791871044/productos/njfkbi355vvftf3hllyf.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791871054/productos/y6j8b8rc8ud7lranqvj9.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791871063/productos/flhddikbz3ovypvybz97.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791871072/productos/j80lkq6ozm58bvsrci3q.jpg"
+      ],
+      "max": 5,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1790619248550
     },
     {
       "id": "p_1789218727536",
@@ -5663,6 +5741,42 @@
       },
       "envioGratis": true,
       "creado": 1790975712068
+    },
+    {
+      "id": "p_1788546447070",
+      "codigo": "G2DK",
+      "name": "Tablet de niñ@",
+      "cat": "Bocinas Celulares y Accesorios",
+      "subcat": "",
+      "notes": "Solo en Rosado con temática de astronauta. Incluye su cable de carga, un juego de audífonos de cable y un protector con sistema de apollo para mesa y para mejor sostén manual\nCaracterísticas:\nAndroid 14\n7 pulgadas\nWifi 5G\nBatería de gran Capacidad 4500mAh\nDoble camara\n4GB de ram\n128GB de almacenamiento\nPantalla IPS HD de 1280*800 de resolución",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792339393/productos/b1fvmkoxhizq7dxdooug.jpg",
+      "precioUSD": 58,
+      "precioCUP": 50460,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792339401/productos/snew9r5evw9j2ify38s8.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792339412/productos/wc12g84wqbwyzhrezqnt.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792339437/productos/l96ouuk8bbvlayyrr9d4.jpg"
+      ],
+      "variantes": {
+        "ejes": [
+          "Color"
+        ],
+        "opciones": [
+          "ROSADO"
+        ]
+      },
+      "maxOpciones": {
+        "ROSADO": 2
+      },
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1788546447071
     },
     {
       "id": "p_1785533206456",
