@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-30T01:17:11.160Z",
+  "generado": "2026-10-30T06:18:32.652Z",
   "tasa": 855,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -4224,7 +4224,7 @@
       },
       "maxOpciones": {
         "NEGRO": 6,
-        "PLATEADO": 6,
+        "PLATEADO": 5,
         "DORADO": 5
       },
       "envio": {
