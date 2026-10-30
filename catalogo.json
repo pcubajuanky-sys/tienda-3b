@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-30T18:54:39.383Z",
+  "generado": "2026-10-30T19:15:08.642Z",
   "tasa": 870,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -761,6 +761,27 @@
     ]
   },
   "items": [
+    {
+      "id": "p_1784919312828",
+      "codigo": "CLFT",
+      "name": "Organizador de Zapatos y accesorios",
+      "cat": "Muebles",
+      "subcat": "",
+      "notes": "Organizador multifuncional con perchero, zapatero y banco. Incluye ganchos para chaquetas, bolsos, sombreros y paraguas, más espacio para zapatos. Ideal para mantener la casa ordenada y ahorrar espacio.",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1784918880/productos/eoxba4ovbw1m6qgkxdlx.jpg",
+      "precioUSD": 20,
+      "precioCUP": 17400,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "max": 5,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1784919312828
+    },
     {
       "id": "p_1782340130001",
       "codigo": "NPRS",
