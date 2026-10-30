@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-30T20:04:06.868Z",
+  "generado": "2026-10-30T22:29:20.481Z",
   "tasa": 875,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -815,7 +815,7 @@
       "moneda": "usd",
       "enOferta": true,
       "destacado": false,
-      "max": 1,
+      "espera": true,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -927,7 +927,7 @@
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1791861189/productos/p8le721er1pxu07hxvbm.jpg",
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1791861197/productos/gx9lfooymrsxtb8perrj.jpg"
       ],
-      "max": 6,
+      "max": 2,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -2154,7 +2154,7 @@
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1791895092/productos/fzqrbc7s5s8b25beqrzu.jpg",
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1791895097/productos/nthq3bjm3jou4ytmoyrl.jpg"
       ],
-      "max": 2,
+      "max": 1,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -2216,7 +2216,7 @@
         ]
       },
       "maxOpciones": {
-        "BLANCO": 2,
+        "BLANCO": 1,
         "PUMA": 2
       },
       "envio": {
@@ -3351,7 +3351,7 @@
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1791870968/productos/dncpe9fphgc8v6bxtxby.jpg",
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1791870995/productos/wazysb6m70j6g3djrteo.jpg"
       ],
-      "max": 2,
+      "max": 1,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -4114,7 +4114,7 @@
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1792851582/productos/vb9y8z8yhywruvfumot5.jpg",
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1792851587/productos/aj3xuwokwlwso1jsd0cq.jpg"
       ],
-      "max": 4,
+      "max": 3,
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
@@ -4553,7 +4553,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 9,
+      "max": 8,
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
