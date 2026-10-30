@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-30T01:09:01.872Z",
+  "generado": "2026-10-30T01:14:01.896Z",
   "tasa": 855,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -1433,29 +1433,6 @@
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
       },
       "creado": 1787540422288
-    },
-    {
-      "id": "p_1788892014454",
-      "codigo": "BP9X",
-      "name": "Cafetera 1 taza",
-      "cat": "Hogar",
-      "subcat": "",
-      "notes": "Cafetera italiana para café expreso",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788891782/productos/b8cptn2c5lert8u7rad6.jpg",
-      "precioUSD": 6,
-      "precioCUP": 5130,
-      "moneda": "usd",
-      "enOferta": true,
-      "destacado": false,
-      "espera": true,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1788892014454,
-      "precioNormalUSD": 7,
-      "precioNormalCUP": 5985
     },
     {
       "id": "p_1790983107410",
@@ -4576,19 +4553,15 @@
         ],
         "opciones": [
           "A",
-          "C",
           "E",
           "F"
         ]
       },
       "maxOpciones": {
         "A": 1,
+        "E": 1,
         "F": 1
       },
-      "esperaOpciones": [
-        "C",
-        "E"
-      ],
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
@@ -4766,31 +4739,6 @@
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
       },
       "creado": 1782329655762
-    },
-    {
-      "id": "p_1788133110062",
-      "codigo": "Z9ND",
-      "name": "Pezoneras de silicona",
-      "cat": "Ropa Interior",
-      "subcat": "",
-      "notes": "Parejas de pezoneras de silicona",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792975543/productos/cprjrjveyflqz29gf6ij.jpg",
-      "precioUSD": 1,
-      "precioCUP": 855,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "fotos": [
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792975496/productos/kkxpxlnm9eycw8fu9adu.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792975502/productos/epjtu83wg3rpvnrvsf0m.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792975505/productos/cduo86m6dsz2wrqtchss.jpg"
-      ],
-      "espera": true,
-      "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      },
-      "creado": 1788133110062
     },
     {
       "id": "p_1786922817374",
