@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-29T18:56:39.312Z",
+  "generado": "2026-10-30T01:09:01.872Z",
   "tasa": 855,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -1969,27 +1969,6 @@
       "creado": 1787088450518
     },
     {
-      "id": "p_1791314349706",
-      "codigo": "C825",
-      "name": "Estrellas fosforescentes (100 unidades)",
-      "cat": "Decoración",
-      "subcat": "",
-      "notes": "✨100 unidades de  Estrellas fosforescentes que brillan en la oscuridad\nLleva el cielo a tu habitación. Pack de estrellas adhesivas en colores vivos (verde, azul, amarillo y rosa). Ideales para decorar paredes, techos o habitaciones infantiles.\nBrillan varias horas tras absorber luz. Fáciles de colocar y retirar.",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791314215/productos/t8qiszgv8ae7obbtte82.jpg",
-      "precioUSD": 2.5,
-      "precioCUP": 2138,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "espera": true,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1791314349706
-    },
-    {
       "id": "p_1785733992043",
       "codigo": "5GL5",
       "name": "Estrellitas Fluorescentes (250 unidades)",
@@ -2195,16 +2174,12 @@
           "Color"
         ],
         "opciones": [
-          "BLANCA",
           "ROSA"
         ]
       },
       "maxOpciones": {
         "ROSA": 1
       },
-      "esperaOpciones": [
-        "BLANCA"
-      ],
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -4272,7 +4247,7 @@
       },
       "maxOpciones": {
         "NEGRO": 6,
-        "PLATEADO": 7,
+        "PLATEADO": 6,
         "DORADO": 5
       },
       "envio": {
