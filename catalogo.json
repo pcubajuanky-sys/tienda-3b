@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-31T00:04:45.175Z",
+  "generado": "2026-10-31T01:29:45.870Z",
   "tasa": 875,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -507,6 +507,11 @@
         "id": "plancha-para-hacer-barquillos",
         "nombre": "plancha para hacer barquillos",
         "lb": 2.4
+      },
+      {
+        "id": "pellizco-grande-para-cabello",
+        "nombre": "pellizco grande para cabello",
+        "lb": 0.06
       }
     ],
     "ejemplos": [
@@ -801,29 +806,6 @@
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
       },
       "creado": 1782340130001
-    },
-    {
-      "id": "p_1786921885931",
-      "codigo": "5HP4",
-      "name": "Abrigo de Chihuahua de rayas rosas ra",
-      "cat": "Mascotas",
-      "subcat": "",
-      "notes": "Abrigo de perrito pequeño, dígase Chihuahua, ratonero o alguna raza sobre esa talla\nTela gruesa y esponjosa",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786921728/productos/giihqmplkgyweovdisky.jpg",
-      "precioUSD": 5,
-      "precioCUP": 4375,
-      "moneda": "usd",
-      "enOferta": true,
-      "destacado": false,
-      "espera": true,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1786921885931,
-      "precioNormalUSD": 6,
-      "precioNormalCUP": 5250
     },
     {
       "id": "p_1786921926228",
@@ -4170,7 +4152,7 @@
         ]
       },
       "maxOpciones": {
-        "A": 4,
+        "A": 3,
         "B": 4,
         "MIXTOS": 1
       },
@@ -4302,7 +4284,7 @@
       },
       "maxOpciones": {
         "VARIADOS🌈": 9,
-        "NEGRAS🖤": 8
+        "NEGRAS🖤": 7
       },
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
@@ -4642,6 +4624,52 @@
       "creado": 1780951069722
     },
     {
+      "id": "p_1793407635431",
+      "codigo": "YC89",
+      "name": "Pellizco diente amplio para cabello",
+      "cat": "Cabello",
+      "subcat": "",
+      "notes": "Pinzas para el cabello mate, pinza de mandíbula grande de sujeción fuerte para cabello grueso y fino, adornos elegantes para el cabello para mujeres, pinzas antideslizantes para peinar el cabello para uso diario, horquillas multicolores para el cabello para el hogar, la oficina y los viajes",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1793407468/productos/qhxpf3fteruoboyilzrh.jpg",
+      "precioUSD": 2,
+      "precioCUP": 1750,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793407471/productos/aasqzui1kdm8uktjinoz.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793407479/productos/sy0tytfjboc4dwffzygx.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793407483/productos/brusodlngriyhpn9f3bb.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793407488/productos/d43jwehioaptgwgt7yae.jpg"
+      ],
+      "variantes": {
+        "ejes": [
+          "Diseño"
+        ],
+        "opciones": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F"
+        ]
+      },
+      "maxOpciones": {
+        "A": 5,
+        "B": 5,
+        "C": 5,
+        "D": 5,
+        "E": 5,
+        "F": 5
+      },
+      "envio": {
+        "corto": "🛵 Gratis desde 2,000 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
+      },
+      "creado": 1793407635431
+    },
+    {
       "id": "p_1792959153642",
       "codigo": "SNDP",
       "name": "Pellizcos Antideslizantes grandes",
@@ -4799,6 +4827,50 @@
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
       },
       "creado": 1792966999877
+    },
+    {
+      "id": "p_1793409590973",
+      "codigo": "EMAA",
+      "name": "Pellizcos Grandes con flores",
+      "cat": "Cabello",
+      "subcat": "",
+      "notes": "Elegantes pinzas para el cabello con diseño de flores mate, pinzas grandes para el cabello con flores para mujer, pinzas de tiburón de plástico de estilo dulce, adecuadas para recogidos, regalos de cumpleaños, adiciones versátiles para el cabello para vacaciones en la playa",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1793409330/productos/dmkzwfhkqg0vciueoaix.jpg",
+      "precioUSD": 2,
+      "precioCUP": 1750,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793409345/productos/jvgzt301zkpkbpyn055v.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793409351/productos/tgqvcbeli9bormm4wmyj.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793409358/productos/irnmpzxm3xb7fwsanlli.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793409365/productos/hedyzah9gol8xheigyvt.jpg"
+      ],
+      "variantes": {
+        "ejes": [
+          "Diseño"
+        ],
+        "opciones": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ]
+      },
+      "maxOpciones": {
+        "A": 5,
+        "B": 5,
+        "C": 5,
+        "D": 5,
+        "E": 5
+      },
+      "envio": {
+        "corto": "🛵 Gratis desde 2,000 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
+      },
+      "creado": 1793409590973
     },
     {
       "id": "p_1780945492775",
