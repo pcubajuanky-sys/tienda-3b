@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-31T02:47:34.297Z",
+  "generado": "2026-10-31T08:10:48.168Z",
   "tasa": 880,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -1170,6 +1170,29 @@
       "precioNormalCUP": 616
     },
     {
+      "id": "p_1793417401142",
+      "codigo": "J97W",
+      "name": "Auriculares de Bluetooth",
+      "cat": "Bocinas Celulares y Accesorios",
+      "subcat": "",
+      "notes": "Alta calidad de sonido. Auriculares profesionales. Comodidad y estetica en un mismo artículo. Incluye su cable de carga",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1793417160/productos/jmd8co2wcwf2kp3grv3i.jpg",
+      "precioUSD": 5,
+      "precioCUP": 4400,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793417166/productos/a7htmptgfzfaw5mrfsyz.jpg"
+      ],
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1793417401142
+    },
+    {
       "id": "p_1786923820539",
       "codigo": "DATD",
       "name": "Bálsamos labiales",
@@ -1279,6 +1302,73 @@
       },
       "envioGratis": true,
       "creado": 1785877459055
+    },
+    {
+      "id": "p_1793418043233",
+      "codigo": "APMQ",
+      "name": "Billeteras de flores",
+      "cat": "Bolsos Carteras Mochilas monederos",
+      "subcat": "",
+      "notes": "Hermosas billeteras femeninas con diseño 3D. Alta calidad y resistencia. Bellas cómodas y funcionales",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1793417847/productos/cogr7hgkz70stw3ysbhz.jpg",
+      "precioUSD": 7,
+      "precioCUP": 6160,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793417858/productos/nszvfcjzirznyt0vn4qf.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793417862/productos/uqklb8ihivsh3lrwjnv8.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793417866/productos/dou8jjj3jewawrlkmm5i.jpg"
+      ],
+      "variantes": {
+        "ejes": [
+          "Diseño"
+        ],
+        "opciones": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ]
+      },
+      "maxOpciones": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1793418043233
+    },
+    {
+      "id": "p_1793418226409",
+      "codigo": "2ZNA",
+      "name": "Billeteras de mujer",
+      "cat": "Bolsos Carteras Mochilas monederos",
+      "subcat": "",
+      "notes": "Hermosas y elegantes billeteras femeninas. Colores neutros que pegan con cualquier atuendo y ocasión. Exactamente el diseño de la imagen original . Dese el gusto de llevar su dinero, teléfono,tarjetas y documentos en una cartera que aunque pequeña,degran uso y utilidad",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1793417990/productos/wznmaixsqlz3vfwcmwc1.jpg",
+      "precioUSD": 6,
+      "precioCUP": 5280,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793417991/productos/wymqjt2sqz2btv30ra4q.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793417994/productos/q5gbcteoprucsrddsptr.jpg"
+      ],
+      "max": 5,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1793418226409
     },
     {
       "id": "p_1788816083247",
@@ -2385,6 +2475,56 @@
       "creado": 1785006638149
     },
     {
+      "id": "p_1793417160550",
+      "codigo": "SCYK",
+      "name": "Globos navideños 12 piezas",
+      "cat": "Decoración",
+      "subcat": "",
+      "notes": "",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1793417047/productos/oht5hiomac923k81ham8.jpg",
+      "precioUSD": 5,
+      "precioCUP": 4400,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793417050/productos/kx5qivbywsihg2rq5lg7.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793417054/productos/ikd3buvrydi6exebffq9.jpg"
+      ],
+      "max": 2,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1793417160550
+    },
+    {
+      "id": "p_1793417211035",
+      "codigo": "XH4W",
+      "name": "Globos navideños 13 piezas",
+      "cat": "Decoración",
+      "subcat": "",
+      "notes": "",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1793417101/productos/uzgc7zgmzepgc4u1o58s.jpg",
+      "precioUSD": 5.2,
+      "precioCUP": 4576,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793417104/productos/oua6vj3ooudsuepxl6ti.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793417113/productos/prqauranbyipaq3lcs8z.jpg"
+      ],
+      "max": 2,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1793417211035
+    },
+    {
       "id": "p_1786923457095",
       "codigo": "WBXN",
       "name": "Gloss",
@@ -2684,6 +2824,33 @@
       },
       "envioGratis": true,
       "creado": 1792342171217
+    },
+    {
+      "id": "p_1793418630130",
+      "codigo": "A9BG",
+      "name": "Kit de coladores de acero inoxidable",
+      "cat": "Hogar",
+      "subcat": "",
+      "notes": "De la más alta calidad. Coladores de diferentes medidas, funcionales y útiles para diferentes ocasiones. Totalmente metálicos e inoxidables",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1793418446/productos/avzjaip8pze9hzuiwwcw.jpg",
+      "precioUSD": 6,
+      "precioCUP": 5280,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793418446/productos/mwh4gcsy9kpkvdskx1re.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793418450/productos/r8wi7o9ndhacpxriwljo.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793418462/productos/ckxuakndy1vpvotodjha.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793418466/productos/ep5iiqghxigmftjjqzok.jpg"
+      ],
+      "max": 9,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1793418630130
     },
     {
       "id": "p_1782259495565",
@@ -3991,6 +4158,48 @@
       "creado": 1781005769619,
       "precioNormalUSD": 2.2,
       "precioNormalCUP": 1936
+    },
+    {
+      "id": "p_1793417570266",
+      "codigo": "JWDY",
+      "name": "Paquete de 30 Globos perlados Claros",
+      "cat": "Decoración",
+      "subcat": "",
+      "notes": "",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1793417465/productos/efykumxmydcnmlkoxw8n.jpg",
+      "precioUSD": 7,
+      "precioCUP": 6160,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "max": 2,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1793417570266
+    },
+    {
+      "id": "p_1793417523428",
+      "codigo": "AFSQ",
+      "name": "Paquete de 30 Globos perlados Oscuros",
+      "cat": "Decoración",
+      "subcat": "",
+      "notes": "",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1793417415/productos/nglpjjowkysxg9tbx2b4.jpg",
+      "precioUSD": 7,
+      "precioCUP": 6160,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "max": 2,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1793417523428
     },
     {
       "id": "p_1792791923752",
