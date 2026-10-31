@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-31T21:15:51.228Z",
+  "generado": "2026-10-31T21:40:51.296Z",
   "tasa": 885,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -1761,9 +1761,11 @@
       "maxOpciones": {
         "BLANCO": 1,
         "ROSA": 1,
-        "BLANCO CON LUNARES": 1,
-        "NEGRO CON LUNARES": 1
+        "BLANCO CON LUNARES": 1
       },
+      "esperaOpciones": [
+        "NEGRO CON LUNARES"
+      ],
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
@@ -3527,32 +3529,6 @@
       "creado": 1781005462535
     },
     {
-      "id": "p_1780452122083",
-      "codigo": "LX3Z",
-      "name": "Mini Lavadora",
-      "cat": "Electrodomésticos",
-      "subcat": "",
-      "notes": "Lavadora plegable y portátil\nCompacta, ahorra espacio y se guarda fácilmente. Perfecta para lavar ropa interior, calcetines, pañales y prendas delicadas. Ahorra agua y esfuerzo. 110V -220v\nIncluye su transformador, manguera de desagüe y cesta de secado\nCapacidad 11L",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1784912344/productos/pkjeaowywyiykoigcxok.jpg",
-      "precioUSD": 35,
-      "precioCUP": 30975,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "fotos": [
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791870947/productos/bv24wn9avfesp9hd7rmw.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791870968/productos/dncpe9fphgc8v6bxtxby.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791870995/productos/wazysb6m70j6g3djrteo.jpg"
-      ],
-      "espera": true,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1780452122083
-    },
-    {
       "id": "p_1780451802473",
       "codigo": "WM7G",
       "name": "Mini Licuadora Recargable",
@@ -4723,7 +4699,6 @@
         ]
       },
       "maxOpciones": {
-        "A CON C": 1,
         "B CON G": 1,
         "B": 1,
         "D": 1,
@@ -4733,6 +4708,9 @@
         "H": 1,
         "J": 1
       },
+      "esperaOpciones": [
+        "A CON C"
+      ],
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
