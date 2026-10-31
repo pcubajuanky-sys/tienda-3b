@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-31T01:39:31.994Z",
+  "generado": "2026-10-31T02:46:34.239Z",
   "tasa": 880,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -4151,6 +4151,30 @@
       "creado": 1791650740477
     },
     {
+      "id": "p_1793413690950",
+      "codigo": "H8JV",
+      "name": "Paquete de 50 felpas",
+      "cat": "Cabello",
+      "subcat": "",
+      "notes": "",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1793413594/productos/o9tsyyk2qymvzwb8ddaf.jpg",
+      "precioUSD": 2,
+      "precioCUP": 1760,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793413599/productos/ya7zmtqfmjkgouos565k.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793413603/productos/lwvib5wg5qvccg46jhni.jpg"
+      ],
+      "max": 2,
+      "envio": {
+        "corto": "🛵 Gratis desde 2,000 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
+      },
+      "creado": 1793413690950
+    },
+    {
       "id": "p_1780609726389",
       "codigo": "NB4J",
       "name": "Paquete de 6 ariposas Brillantes",
@@ -4490,6 +4514,31 @@
       "creado": 1785275149243
     },
     {
+      "id": "p_1793414006176",
+      "codigo": "9DL3",
+      "name": "Pareja de protectores de Cable",
+      "cat": "Bocinas Celulares y Accesorios",
+      "subcat": "",
+      "notes": "El precio es por 2 protectores de cables de celular,compatibles con cualquier diseño. Colores aleatorios no elegibles. Hermosos, de alta calidad y durabilidad",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1793413756/productos/khiwibvcqfjigjvesuqp.jpg",
+      "precioUSD": 1,
+      "precioCUP": 880,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793413765/productos/mkxa1jnj9lpx7rkwg94p.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793413772/productos/xhqcltxcxsholgkenfdv.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793413778/productos/mxvttrhk36jkw0wty6e4.jpg"
+      ],
+      "max": 4,
+      "envio": {
+        "corto": "🛵 Gratis desde 2,000 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
+      },
+      "creado": 1793414006176
+    },
+    {
       "id": "p_1791650300211",
       "codigo": "RWM4",
       "name": "Pareja de pulceras cristianas",
@@ -4697,6 +4746,45 @@
       "creado": 1793407635431
     },
     {
+      "id": "p_1793412052149",
+      "codigo": "HP5L",
+      "name": "Pellizcos antideslizantes extragrandes",
+      "cat": "Cabello",
+      "subcat": "",
+      "notes": "Hermosos pellizcos para cabello abundante",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1793411771/productos/hwl5nw3edjpszqqtdcbl.jpg",
+      "precioUSD": 2,
+      "precioCUP": 1760,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793411772/productos/eohl8z9zuepsbyugmeua.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793411777/productos/dutihehy6l4zj72cbllz.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793411782/productos/hdas4pwsfztecsnc8al5.jpg"
+      ],
+      "variantes": {
+        "ejes": [
+          "Diseño"
+        ],
+        "opciones": [
+          "A",
+          "B",
+          "C"
+        ]
+      },
+      "maxOpciones": {
+        "A": 1,
+        "B": 1,
+        "C": 1
+      },
+      "envio": {
+        "corto": "🛵 Gratis desde 2,000 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
+      },
+      "creado": 1793412052149
+    },
+    {
       "id": "p_1792959153642",
       "codigo": "SNDP",
       "name": "Pellizcos Antideslizantes grandes",
@@ -4719,14 +4807,10 @@
           "Colores"
         ],
         "opciones": [
-          "A",
-          "E",
           "F"
         ]
       },
       "maxOpciones": {
-        "A": 1,
-        "E": 1,
         "F": 1
       },
       "envio": {
@@ -4887,9 +4971,9 @@
         ]
       },
       "maxOpciones": {
-        "A": 5,
+        "A": 4,
         "B": 5,
-        "C": 5,
+        "C": 4,
         "D": 5,
         "E": 5
       },
@@ -5874,7 +5958,7 @@
       "cat": "Bocinas Celulares y Accesorios",
       "subcat": "",
       "notes": "Solo en Rosado con temática de astronauta. Incluye su cable de carga, un juego de audífonos de cable y un protector con sistema de apollo para mesa y para mejor sostén manual\nCaracterísticas:\nAndroid 14\n7 pulgadas\nWifi 5G\nBatería de gran Capacidad 4500mAh\nDoble camara\n4GB de ram\n128GB de almacenamiento\nPantalla IPS HD de 1280*800 de resolución",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792339393/productos/b1fvmkoxhizq7dxdooug.jpg",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1793414574/productos/x1hgiw777ftvj4pqv9lw.jpg",
       "precioUSD": 58,
       "precioCUP": 51040,
       "moneda": "usd",
