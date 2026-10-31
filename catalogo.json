@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-31T19:27:37.435Z",
+  "generado": "2026-10-31T19:35:03.113Z",
   "tasa": 885,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -3465,10 +3465,10 @@
     {
       "id": "p_1790795440877",
       "codigo": "54WG",
-      "name": "Medidor de presión recargable",
+      "name": "Medidor de presión",
       "cat": "Electrodomésticos",
       "subcat": "",
-      "notes": "Incluye todo lo de la imagen. Solo en color rosado. Recargable",
+      "notes": "Incluye todo lo de la imagen. Solo en color rosado. Funciona o con conexión USB o con pilas ( no incluidas).",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791896222/productos/crb3qw8fbzp4toylktze.jpg",
       "precioUSD": 25,
       "precioCUP": 22125,
@@ -3480,7 +3480,7 @@
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1791896193/productos/bzkupirfjeoaidp2zgk5.jpg",
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1791896212/productos/wf2bsewh8zmcrkoxncag.jpg"
       ],
-      "max": 1,
+      "espera": true,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
