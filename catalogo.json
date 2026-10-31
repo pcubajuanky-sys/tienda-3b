@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-31T12:58:40.900Z",
+  "generado": "2026-10-31T15:15:50.493Z",
   "tasa": 880,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -1434,6 +1434,10 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793457328/productos/xopqkkjqko6rrsvz2twa.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793457332/productos/mnms4snbdqiiy71vx901.jpg"
+      ],
       "max": 1,
       "envio": {
         "corto": "🛵 Mensajería gratis",
@@ -1697,6 +1701,10 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793457347/productos/v3qvmtnuiviazalplsp1.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793457352/productos/yaifj868ojshyuk0ldyt.jpg"
+      ],
       "max": 1,
       "envio": {
         "corto": "🛵 Mensajería gratis",
@@ -2702,7 +2710,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 3,
+      "max": 2,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -3028,6 +3036,11 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793457369/productos/fbgldabloelgojknyz6m.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793457374/productos/wcmqrrqeas47smcffhbh.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793457378/productos/yi0fpasjjifvnokamuj1.jpg"
+      ],
       "variantes": {
         "ejes": [
           "Talla",
@@ -3060,6 +3073,11 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793457392/productos/orjjpvkvrhbxglztop1v.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793457399/productos/r1ioygpw6tmbghjevrzo.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793457405/productos/huqsjzpeqxo7bxfhhg1h.jpg"
+      ],
       "max": 1,
       "envio": {
         "corto": "🛵 Mensajería gratis",
@@ -5783,7 +5801,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 6,
+      "max": 5,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -5891,9 +5909,11 @@
         ]
       },
       "maxOpciones": {
-        "C": 1,
-        "B": 1
+        "C": 1
       },
+      "esperaOpciones": [
+        "B"
+      ],
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
