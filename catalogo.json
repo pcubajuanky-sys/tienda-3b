@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-31T21:40:51.296Z",
+  "generado": "2026-10-31T21:45:51.327Z",
   "tasa": 885,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -1754,8 +1754,7 @@
         "opciones": [
           "BLANCO",
           "ROSA",
-          "BLANCO CON LUNARES",
-          "NEGRO CON LUNARES"
+          "BLANCO CON LUNARES"
         ]
       },
       "maxOpciones": {
@@ -1763,9 +1762,6 @@
         "ROSA": 1,
         "BLANCO CON LUNARES": 1
       },
-      "esperaOpciones": [
-        "NEGRO CON LUNARES"
-      ],
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
@@ -4687,7 +4683,6 @@
           "Diseño"
         ],
         "opciones": [
-          "A CON C",
           "B CON G",
           "B",
           "D",
@@ -4708,9 +4703,6 @@
         "H": 1,
         "J": 1
       },
-      "esperaOpciones": [
-        "A CON C"
-      ],
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
@@ -5912,7 +5904,6 @@
           "Diseño"
         ],
         "opciones": [
-          "C",
           "D",
           "F"
         ]
@@ -5921,9 +5912,6 @@
         "D": 1,
         "F": 1
       },
-      "esperaOpciones": [
-        "C"
-      ],
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
