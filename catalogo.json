@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-31T21:45:51.327Z",
+  "generado": "2026-10-31T22:31:21.349Z",
   "tasa": 885,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -293,9 +293,9 @@
     "taxiActivo": true,
     "encargosActivo": true,
     "cierre": {
-      "activo": false,
-      "titulo": "",
-      "texto": ""
+      "activo": true,
+      "titulo": "📦 Estamos haciendo inventario",
+      "texto": "Estamos contando toda la mercancía para que las cantidades y los precios queden exactos. Mira el catálogo con calma: en cuanto terminemos, vuelves a pedir."
     }
   },
   "encargos": {
@@ -5937,14 +5937,12 @@
         ],
         "opciones": [
           "A",
-          "C",
           "D",
           "F"
         ]
       },
       "maxOpciones": {
         "A": 1,
-        "C": 1,
         "D": 1,
         "F": 1
       },
