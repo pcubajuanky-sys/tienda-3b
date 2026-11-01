@@ -8,7 +8,7 @@
 //    clientes seguiran viendo el CSS y el JS viejos.
 // 3. Solo se guarda lo del propio dominio. Las fotos de Cloudinary NO: son muchas,
 //    pesan, y la CSP de la pagina ya decide quien puede servirlas.
-const CACHE = 'tienda-3b-v31';
+const CACHE = 'tienda-3b-v32';
 
 // Los <script src> de index.html tienen que estar TODOS aqui (y los archivos nuevos que
 // cargue la pagina): lo que falte en esta lista no esta disponible sin conexion.
@@ -44,6 +44,8 @@ const ARMAZON = [
   '/encargos.js',
   '/fuentes/outfit-latin-v15.woff2',
   '/logo-3b.png',
+  '/logo-delmar.png',
+  '/delmar-emblema.png',
   '/favicon-3b.png',
 ];
 

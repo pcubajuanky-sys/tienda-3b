@@ -1186,12 +1186,13 @@ button.footer-link{background:none;border:none;font-family:inherit;cursor:pointe
 }
 /* Cada negocio late en SU color: el taxi en verde, la tienda en su morado. */
 #mundo-taxi::after{border-color:#12A24E}
+#mundo-delmar::after{border-color:#1E6FD9}
 /* Pastilla del negocio asociado mientras no haya logo propio: el emoji centrado,
    del mismo tamaño que las otras dos. Se borra cuando llegue logo-electripower.png. */
 .mundo-emoji{display:flex;align-items:center;justify-content:center;width:100%;height:100%;font-size:26px;line-height:1}
-.mundo-ep,.mundo-dm{background:var(--surface,#fff)}
+.mundo-ep{background:var(--surface,#fff)}
 /* El aro del negocio activo vive en .mundo-img; esta pastilla no tiene <img>. */
-.mundo-on.mundo-ep,.mundo-on.mundo-dm{box-shadow:0 0 0 2px var(--brand)}
+.mundo-on.mundo-ep{box-shadow:0 0 0 2px var(--brand)}
 @media (min-width:600px){ .mundo{width:52px;height:52px} }
 @media (prefers-reduced-motion:reduce){
   .mundo{transition:none}
@@ -1474,3 +1475,87 @@ button.footer-link{background:none;border:none;font-family:inherit;cursor:pointe
 .aviso-enviado-botones .btn { flex: 1 1 auto; min-height: 44px; }
 .campo-check { display: flex; align-items: flex-start; gap: 10px; margin: 4px 0 12px; font-size: var(--t-xs); }
 .campo-check input { width: 20px; height: 20px; margin-top: 2px; flex: 0 0 auto; }
+
+/* ── Del Mar (2026-11-01) ──────────────────────────────────────────────────
+   Todo cuelga de body[data-negocio="delmar"]: ni index.html, ni electripower.html ni
+   taxi.html llevan ese atributo, asi que NADA de lo de abajo les afecta.
+   Paleta del emblema: azul marino y azul mar. Se sobreescriben los MISMOS tokens que usa
+   el resto de la hoja (--brand, --hero-*), de modo que botones, chips, aros y enlaces de
+   esta pagina salen azules sin tocar una sola regla de componente.
+   Contrastes medidos: --brand sobre --bg 7,5:1; blanco sobre --brand 8,1:1; texto blanco
+   sobre --hero-1 8,3:1; en oscuro --brand sobre --bg 11:1. */
+body[data-negocio="delmar"]{
+  --brand:#0B4DA2; --brand-ink:#FFFFFF; --brand-soft:#E6F0FC; --brand-hondo:#082F66;
+  --hero-1:#0F4C9C; --hero-2:#071F47; --hero-btn-ink:#0B3A82;
+  --dm-azul:#0B3A82;
+}
+@media (prefers-color-scheme: dark){
+  body[data-negocio="delmar"]{
+    --brand:#8FC1FF; --brand-ink:#06182F; --brand-soft:#12243F; --brand-hondo:#5E9CE6;
+    --dm-azul:#9CC8FF;
+  }
+}
+/* El velo de la portada estaba tintado de ciruela (rgba 42,15,33): sobre el azul daria
+   un violeta sucio. Mismo trazado vertical, tinte marino. */
+body[data-negocio="delmar"] .hero-velo{
+  background:linear-gradient(180deg, rgba(7,31,71,.55) 0%, rgba(7,31,71,.20) 50%, rgba(7,31,71,.60) 100%);
+}
+/* Con el emblema a la vista el mosaico de fotos sobra; app.js lo sigue rellenando por id
+   (con loading=lazy, y una imagen en display:none no se descarga). */
+body[data-negocio="delmar"] .hero-mosaico{display:none}
+.dm-emblema{
+  display:block;width:clamp(176px,48vw,264px);height:auto;margin:0 auto var(--e3);
+  border-radius:50%;box-shadow:0 10px 32px rgba(0,0,0,.38);
+}
+/* El pie generico habla de 3B (quienes somos y contactos de la casa): en esta pagina
+   mandan las secciones de Del Mar. Las zonas de reparto SI se quedan. */
+body[data-negocio="delmar"] #footer-quienes,
+body[data-negocio="delmar"] #footer-contacto,
+body[data-negocio="delmar"] .footer-terminos{display:none!important}
+
+.dm-secciones{margin-top:var(--e6)}
+.dm-sec{padding:var(--e6) 0;scroll-margin-top:calc(var(--header-h, 60px) + 16px)}
+.dm-sec-alt{background:var(--surface-2)}
+.dm-titulo{font-size:var(--t-2xl);font-weight:800;letter-spacing:-.02em;line-height:1.15;color:var(--dm-azul);margin-bottom:var(--e3)}
+.dm-titulo::after{content:"";display:block;width:56px;height:4px;border-radius:2px;background:var(--brand);margin-top:var(--e1)}
+.dm-texto{font-size:var(--t-md);line-height:1.6;color:var(--text-2);max-width:68ch;margin-bottom:var(--e2)}
+.dm-texto b{color:var(--text);font-weight:700}
+.dm-pasos{list-style:none;display:grid;grid-template-columns:1fr;gap:var(--e2)}
+@media (min-width:760px){ .dm-pasos{grid-template-columns:repeat(4,1fr)} }
+.dm-pasos li{
+  display:flex;gap:var(--e2);align-items:flex-start;padding:var(--e3);
+  background:var(--surface);border:1px solid var(--border);border-radius:var(--radio-card);
+  box-shadow:var(--sombra-1);font-size:var(--t-md);line-height:1.45;color:var(--text-2);
+}
+.dm-pasos b{display:block;color:var(--text);margin-bottom:2px}
+.dm-n{
+  flex:none;width:32px;height:32px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  background:var(--brand);color:var(--brand-ink);font-weight:800;font-size:var(--t-md);
+}
+.dm-lista{list-style:none;display:grid;gap:var(--e2);max-width:72ch}
+.dm-lista li{
+  position:relative;padding:var(--e3) var(--e3) var(--e3) 44px;
+  background:var(--surface);border:1px solid var(--border);border-radius:var(--radio-card);
+  font-size:var(--t-md);line-height:1.5;color:var(--text-2);
+}
+.dm-lista li::before{
+  content:"";position:absolute;left:var(--e3);top:22px;width:10px;height:10px;
+  border-radius:50%;background:var(--brand);
+}
+.dm-lista b{color:var(--text);font-weight:700}
+.dm-contactos{display:grid;grid-template-columns:1fr;gap:var(--e3);margin-top:var(--e3);max-width:760px}
+@media (min-width:600px){ .dm-contactos{grid-template-columns:1fr 1fr} }
+.dm-contacto{
+  padding:var(--e4) var(--e3);background:var(--surface);border:1px solid var(--border);
+  border-radius:var(--radio-card);box-shadow:var(--sombra-1);
+}
+.dm-tel{font-size:var(--t-xl);font-weight:800;color:var(--dm-azul);margin-bottom:var(--e3);letter-spacing:.01em}
+.dm-contacto-bot{display:flex;flex-wrap:wrap;gap:var(--e2)}
+.dm-contacto-bot .btn{flex:1 1 120px}
+.dm-pie-links{display:flex;flex-wrap:wrap;gap:0 var(--e4);margin:var(--e1) 0 var(--e3)}
+.dm-pie-links a{
+  display:inline-flex;align-items:center;min-height:44px;
+  font-size:var(--t-md);font-weight:600;color:var(--text-2);text-decoration:underline;
+}
+.dm-pie-links a:hover{color:var(--brand)}

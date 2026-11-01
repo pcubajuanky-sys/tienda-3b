@@ -9,7 +9,7 @@
      Con los enlaces de gestor (/MARIA, un solo segmento) no pasaba, porque un
      segmento ya resuelve contra la raiz. NO LA QUITES. -->
 <base href="/">
-<meta name="theme-color" content="#7A2E5D">
+<meta name="theme-color" content="#0B3A82">
 <link rel="icon" href="/favicon-3b.png" type="image/png">
 <link rel="apple-touch-icon" href="/favicon-3b.png">
 <link rel="manifest" href="/manifest.json">
@@ -24,25 +24,22 @@
      og:image por defecto: el logo de la tienda sobre negro, servido desde este
      mismo dominio. Es lo que se ve al compartir la portada. -->
 <!-- og:inicio -->
-<title>Del Mar — Pescados y mariscos frescos</title>
-<meta name="description" content="Pescados y mariscos frescos, con reparto de 3B en San Antonio de los Baños. Pide por WhatsApp.">
+<title>Del Mar — Pescado fresco, del mar a tu mesa</title>
+<meta name="description" content="Pescado fresco en ruedas, filetes y enteros, con reparto de 3B en nevera en San Antonio de los Baños. Pide por WhatsApp y paga al recibir.">
 <link rel="canonical" href="https://www.3bqba.com/delmar">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Del Mar">
-<meta property="og:title" content="Del Mar — Pescados y mariscos frescos">
-<meta property="og:description" content="Pescados y mariscos frescos, con reparto de 3B en San Antonio de los Baños. Pide por WhatsApp.">
+<meta property="og:title" content="Del Mar — Pescado fresco, del mar a tu mesa">
+<meta property="og:description" content="Pescado fresco en ruedas, filetes y enteros, con reparto de 3B en nevera en San Antonio de los Baños. Pide por WhatsApp y paga al recibir.">
 <meta property="og:url" content="https://www.3bqba.com/delmar">
-<!-- ⚠️ PENDIENTE: es la imagen de 3B. Cuando haya una de Del Mar, ponerla aquí, en la
-     clave "image" del JSON-LD de abajo y en twitter:image. Un archivo inexistente daría
-     una imagen rota al compartir, así que mejor esta que ninguna. -->
-<meta property="og:image" content="https://www.3bqba.com/og-3b.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
+<meta property="og:image" content="https://www.3bqba.com/delmar-emblema.png">
+<meta property="og:image:width" content="640">
+<meta property="og:image:height" content="640">
 <meta property="og:locale" content="es_CU">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Del Mar — Pescados y mariscos frescos">
-<meta name="twitter:description" content="Pescados y mariscos frescos, con reparto de 3B en San Antonio de los Baños. Pide por WhatsApp.">
-<meta name="twitter:image" content="https://www.3bqba.com/og-3b.jpg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Del Mar — Pescado fresco, del mar a tu mesa">
+<meta name="twitter:description" content="Pescado fresco en ruedas, filetes y enteros, con reparto de 3B en nevera en San Antonio de los Baños. Pide por WhatsApp y paga al recibir.">
+<meta name="twitter:image" content="https://www.3bqba.com/delmar-emblema.png">
 <!-- og:fin -->
 
 <!-- La fuente, pedida ya: sin esto el navegador no se entera de que existe hasta
@@ -53,7 +50,7 @@
 <!-- Datos estructurados del negocio. Bloque de DATOS, no un script ejecutable: la CSP
      `script-src 'self'` no lo bloquea. Va fijo aquí porque no depende del catálogo. -->
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Store","name":"Del Mar","url":"https://www.3bqba.com/delmar","image":"https://www.3bqba.com/og-3b.jpg","description":"Pescados y mariscos frescos, con reparto de 3B en San Antonio de los Baños. Pide por WhatsApp.","currenciesAccepted":"CUP, USD"}
+{"@context":"https://schema.org","@type":"Store","name":"Del Mar","url":"https://www.3bqba.com/delmar","image":"https://www.3bqba.com/delmar-emblema.png","logo":"https://www.3bqba.com/logo-delmar.png","description":"Pescado fresco en ruedas, filetes y enteros, con reparto de 3B en nevera en San Antonio de los Baños. Pide por WhatsApp y paga al recibir.","currenciesAccepted":"CUP, USD"}
 </script>
 <link rel="stylesheet" href="estilos.css">
 </head>
@@ -116,8 +113,7 @@
           <span class="sr-only">Electripower — baterías e inversores</span>
         </a>
         <a class="mundo mundo-on mundo-dm" id="mundo-delmar" href="/delmar" aria-current="page" title="Del Mar">
-          <span class="mundo-emoji" aria-hidden="true">🐟</span>
-          <span class="sr-only">Del Mar — pescados y mariscos</span>
+          <img class="mundo-img" src="/logo-delmar.png" width="160" height="160" alt="Del Mar — pescados y mariscos">
         </a>
       </nav>
       <button id="btn-carrito" class="btn-carrito" aria-label="Ver tu pedido" type="button">
@@ -177,31 +173,28 @@
   <div class="hero-mosaico" id="hero-mosaico" aria-hidden="true"></div>
   <div class="hero-velo" aria-hidden="true"></div>
   <div class="hero-contenido wrap">
-    <!-- El eslogan del dueño sigue siendo lo más grande de la portada; debajo, dentro
-         del MISMO h1, una línea que dice qué es esto y dónde está. Antes el h1 era solo
-         el eslogan: para quien llega de Google o de un enlace compartido no decía ni qué
-         se vende ni dónde. -->
+    <!-- Portada de Del Mar: el emblema manda (disco blanco, se lee igual en claro y oscuro).
+         El mosaico de fotos de producto se queda en el DOM porque app.js lo rellena por id,
+         pero estilos.css lo oculta aqui: con el emblema a la vista sobraba. -->
+    <img class="dm-emblema" src="/delmar-emblema.png" width="640" height="640" alt="Del Mar — pescados y mariscos">
     <h1>
-      <span class="hero-eslogan">Del Mar</span>
-      <span class="hero-que-es">Pescados y mariscos frescos</span>
+      <span class="hero-eslogan">Del mar a tu mesa</span>
+      <span class="hero-que-es">Pescado fresco en ruedas, filetes y enteros</span>
     </h1>
-    <p class="hero-sub">Mira el catálogo, arma tu pedido y nos escribes por WhatsApp.</p>
-    <!-- Con la tienda cerrada este cartel sustituye a los botones: el cliente lo
-         entiende al entrar, sin bajar. El título y el texto son los mismos de la
-         franja (una sola fuente: CAT.tienda.cierre). -->
+    <p class="hero-sub">Lo llevamos hasta tu casa en nevera, a la hora que pidas. Pagas al recibir.</p>
     <div class="hero-cierre" id="hero-cierre" hidden>
       <p class="hero-cierre-titulo" id="hero-cierre-titulo"></p>
       <p class="hero-cierre-texto" id="hero-cierre-texto"></p>
-      <a href="#catalogo" class="btn btn-contraste hero-cta">Mirar el catálogo</a>
+      <a href="/delmar#catalogo" class="btn btn-contraste hero-cta">Ver el pescado</a>
     </div>
     <div class="hero-acciones">
-      <a href="#catalogo" class="btn btn-contraste hero-cta">Ver el catálogo</a>
+      <a href="/delmar#catalogo" class="btn btn-contraste hero-cta">Ver el pescado</a>
       <a href="#encargos" class="btn btn-contraste-linea hero-cta" id="hero-encargos" hidden>Hacer un encargo</a>
     </div>
     <ul class="hero-datos">
       <li id="hero-dato-productos">— productos disponibles</li>
-      <li>Precios en CUP y USD</li>
-      <li>Coordinamos por WhatsApp</li>
+      <li>Reparto en nevera</li>
+      <li>Pagas al recibir</li>
     </ul>
   </div>
 </section>
@@ -309,7 +302,7 @@
     <div id="lateral-total" class="lateral-total" hidden></div>
     <div id="lateral-completar" class="completar" hidden></div>
     <p id="lateral-politica" class="politica-texto" hidden></p>
-    <p id="lateral-terminos" class="terminos-nota" hidden>Al pedir aceptas <a href="terminos.html" target="_blank" rel="noopener">nuestros términos</a>.</p>
+    <p id="lateral-terminos" class="terminos-nota" hidden>Al pedir aceptas <a href="/delmar#terminos" target="_blank" rel="noopener">nuestros términos</a>.</p>
     <button id="btn-lateral-pedir" class="btn btn-wa" type="button" hidden>Pedir por WhatsApp</button>
     <!-- Pago por adelantado con QvaPay (2026-08-16, opcional): tienda.pagoUrl.
          Secundario a propósito, nunca más prominente que "Pedir por
@@ -319,11 +312,80 @@
   </aside>
 </div>
 
+<!-- Secciones propias de Del Mar (2026-11-01). Solo viven en esta cascara. 🔴 La direccion y la
+     hora de retiro del pedido en la pescaderia son PRIVADAS: no van en ningun texto de esta pagina. -->
+<div class="dm-secciones">
+  <section class="dm-sec" id="quienes-somos" aria-labelledby="dm-quienes-t">
+    <div class="wrap">
+      <h2 class="dm-titulo" id="dm-quienes-t">Quiénes somos</h2>
+      <p class="dm-texto"><b>Del Mar</b> es una pescadería aliada de <b>3B</b>. Seleccionamos cada día pescado fresco —en ruedas, en filetes y entero— y lo preparamos para que llegue a tu mesa como si lo hubieras ido a buscar tú.</p>
+      <p class="dm-texto">La mensajería de 3B lo lleva a tu casa <b>en neveras, para que llegue frío</b>, a la hora que nos pidas.</p>
+    </div>
+  </section>
+
+  <section class="dm-sec dm-sec-alt" id="como-comprar" aria-labelledby="dm-como-t">
+    <div class="wrap">
+      <h2 class="dm-titulo" id="dm-como-t">Cómo comprar</h2>
+      <ol class="dm-pasos">
+        <li><span class="dm-n" aria-hidden="true">1</span><span><b>Eliges en la web.</b> Añade al pedido lo que quieras.</span></li>
+        <li><span class="dm-n" aria-hidden="true">2</span><span><b>Envías el pedido por WhatsApp.</b> El mensaje sale escrito solo.</span></li>
+        <li><span class="dm-n" aria-hidden="true">3</span><span><b>Confirmamos y lo preparamos.</b> Te avisamos de la disponibilidad del día.</span></li>
+        <li><span class="dm-n" aria-hidden="true">4</span><span><b>Te lo llevamos en nevera</b> a la hora acordada. Pagas al recibir.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="dm-sec" id="terminos" aria-labelledby="dm-terminos-t">
+    <div class="wrap">
+      <h2 class="dm-titulo" id="dm-terminos-t">Términos y condiciones</h2>
+      <p class="dm-texto">Para que todo salga bien, te pedimos que tengas presente lo siguiente:</p>
+      <ul class="dm-lista">
+        <li><b>Revisa tu pedido delante de la mensajera</b> antes de pagar. Es el momento de comprobar que todo está como lo pediste.</li>
+        <li><b>No se aceptan devoluciones</b> una vez que recibes el pedido.</li>
+        <li><b>La mensajería se paga en cualquier caso</b>, también si rechazas el pedido en la puerta.</li>
+        <li>El pescado es un producto natural: <b>el peso de cada pieza puede variar ligeramente</b>.</li>
+        <li>Los pedidos están <b>sujetos a la disponibilidad del día</b>.</li>
+        <li><b>Guárdalo en refrigeración o congelación</b> en cuanto lo recibas.</li>
+        <li>Los precios son los <b>publicados el día del pedido</b>.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="dm-sec dm-sec-alt" id="contacto" aria-labelledby="dm-contacto-t">
+    <div class="wrap">
+      <h2 class="dm-titulo" id="dm-contacto-t">Contáctanos</h2>
+      <p class="dm-texto">¿Dudas, o quieres hacer tu pedido? Escríbenos o llámanos.</p>
+      <div class="dm-contactos">
+        <div class="dm-contacto">
+          <p class="dm-tel">+53 5885 6820</p>
+          <div class="dm-contacto-bot">
+            <a class="btn btn-wa" href="https://api.whatsapp.com/send?phone=5358856820&amp;text=Hola%2C%20quiero%20consultar%20en%20Del%20Mar" target="_blank" rel="noopener">WhatsApp</a>
+            <a class="btn btn-suave" href="tel:+5358856820">Llamar</a>
+          </div>
+        </div>
+        <div class="dm-contacto">
+          <p class="dm-tel">+53 5497 8966</p>
+          <div class="dm-contacto-bot">
+            <a class="btn btn-wa" href="https://api.whatsapp.com/send?phone=5354978966&amp;text=Hola%2C%20quiero%20consultar%20en%20Del%20Mar" target="_blank" rel="noopener">WhatsApp</a>
+            <a class="btn btn-suave" href="tel:+5354978966">Llamar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
 <footer class="footer">
   <div class="wrap footer-wrap">
     <div class="footer-marca">
       <span id="footer-nombre" class="footer-nombre-texto"></span>
     </div>
+    <nav class="dm-pie-links" aria-label="Información de Del Mar">
+      <a href="/delmar#quienes-somos">Quiénes somos</a>
+      <a href="/delmar#como-comprar">Cómo comprar</a>
+      <a href="/delmar#terminos">Términos y condiciones</a>
+      <a href="/delmar#contacto">Contáctanos</a>
+    </nav>
     <div id="vendedor" class="vendedor"></div>
 
     <div class="footer-grid" id="footer-grid" hidden>
@@ -343,7 +405,7 @@
 
     <p id="actualizado" class="actualizado"></p>
     <p id="aviso-tasa" class="aviso-tasa">Los precios pueden variar según la tasa del día.</p>
-    <p class="footer-terminos"><a href="terminos.html">Términos y condiciones</a></p>
+    <p class="footer-terminos"><a href="/delmar#terminos">Términos y condiciones</a></p>
   </div>
 </footer>
 
@@ -502,7 +564,7 @@
         <input type="text" id="c-etiqueta" placeholder="Casa, Trabajo…" maxlength="20">
       </label>
       <p id="panel-politica" class="politica-texto" hidden></p>
-      <p id="panel-terminos" class="terminos-nota" hidden>Al pedir aceptas <a href="terminos.html" target="_blank" rel="noopener">nuestros términos</a>.</p>
+      <p id="panel-terminos" class="terminos-nota" hidden>Al pedir aceptas <a href="/delmar#terminos" target="_blank" rel="noopener">nuestros términos</a>.</p>
       <button id="btn-enviar" class="btn btn-wa btn-enviar" type="submit">Pedir por WhatsApp</button>
       <!-- Pago por adelantado con QvaPay (2026-08-16, opcional): tienda.pagoUrl.
            Secundario a propósito, nunca más prominente que "Pedir por
