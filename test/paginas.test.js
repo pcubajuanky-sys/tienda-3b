@@ -24,7 +24,7 @@ const MODULOS = [
   'regreso.js', 'descuento.js', 'dinero.js', 'tarjeta.js', 'app.js', 'encargos.js'
 ];
 
-const PAGINAS = ['index.html', 'electripower.html'];
+const PAGINAS = ['index.html', 'electripower.html', 'delmar.html'];
 
 test('🔴 las dos paginas cargan todos los modulos', () => {
   for (const pagina of PAGINAS) {

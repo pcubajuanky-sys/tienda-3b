@@ -165,10 +165,10 @@ after(() => { try { process.chdir(CWD_ORIGINAL); } catch (e) { /* nada */ } });
 function conCatalogoSintetico(items, fn) {
   const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'tienda-negocio-'));
   try {
-    for (const f of ['index.html', 'electripower.html']) {
+    for (const f of ['index.html', 'electripower.html', 'delmar.html']) {
       fs.copyFileSync(path.join(CWD_ORIGINAL, f), path.join(tmp, f));
     }
-    fs.writeFileSync(path.join(tmp, 'catalogo.json'), JSON.stringify({ items: items, tienda: { nombre: '3B Store', negocios: { electripower: { nombre: 'Electripower' } } } }));
+    fs.writeFileSync(path.join(tmp, 'catalogo.json'), JSON.stringify({ items: items, tienda: { nombre: '3B Store', negocios: { electripower: { nombre: 'Electripower' }, delmar: { nombre: 'Del Mar' } } } }));
     process.chdir(tmp);
     return fn(handlerLimpio());
   } finally {
@@ -208,5 +208,24 @@ test('si falta electripower.html, la ficha del socio cae a index.html y no se ro
     const r = pedirCon(h, { c: 'EP001' });
     assert.strictEqual(r.statusCode, 200);
     assert.ok(!r.cuerpo.includes('data-negocio'));
+  });
+});
+
+const ITEM_MAR = Object.assign({}, BASE_ITEM, { id: 'c', codigo: 'DM001', name: 'Filete de pargo', negocio: 'delmar' });
+
+test('un codigo de Del Mar se sirve sobre delmar.html con su marca', () => {
+  conCatalogoSintetico([ITEM_CASA, ITEM_SOCIO, ITEM_MAR], (h) => {
+    const r = pedirCon(h, { c: 'DM001' });
+    assert.strictEqual(r.statusCode, 200);
+    assert.ok(r.cuerpo.includes('<body data-negocio="delmar">'), 'no uso la pagina de Del Mar');
+    assert.ok(r.cuerpo.includes('<title>Filete de pargo — Del Mar</title>'), 'la tarjeta no lleva la marca de Del Mar');
+    assert.strictEqual(r.cuerpo.split('<title>').length - 1, 1);
+  });
+});
+
+test('el socio Electripower sigue sobre su cascara con Del Mar presente', () => {
+  conCatalogoSintetico([ITEM_SOCIO, ITEM_MAR], (h) => {
+    const r = pedirCon(h, { c: 'EP001' });
+    assert.ok(r.cuerpo.includes('<body data-negocio="electripower">'));
   });
 });

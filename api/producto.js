@@ -14,6 +14,9 @@ const { ogDeProducto, bloqueOg, marcaDe } = require('./_og');
 const INICIO = '<!-- og:inicio -->';
 const FIN = '<!-- og:fin -->';
 const RAIZ = 'https://www.3bqba.com';
+// Negocios asociados con cascara propia (<id>.html en la raiz). Al añadir uno: su .html,
+// su rewrite en vercel.json y su nombre en includeFiles de api/producto.js.
+const CASCARAS_SOCIO = ['electripower', 'delmar'];
 
 // Se leen una sola vez por arranque en frio. Publicar el catalogo crea un
 // despliegue nuevo, asi que este cache nunca sirve datos viejos.
@@ -98,7 +101,8 @@ module.exports = function handler(req, res) {
     // de 3B, con el carrito y el WhatsApp equivocados. Si la cascara del socio no
     // esta, pagina() lanza y el catch deja la tienda normal (fallo seguro).
     const negocio = String((p && p.negocio) || '').trim().toLowerCase();
-    const base = negocio === 'electripower' ? pagina('electripower.html') : html;
+    // La cascara sale del negocio: <negocio>.html si es un socio conocido.
+    const base = CASCARAS_SOCIO.indexOf(negocio) !== -1 ? pagina(negocio + '.html') : html;
     const i = base.indexOf(INICIO);
     const j = base.indexOf(FIN);
     if (p && i !== -1 && j > i) {

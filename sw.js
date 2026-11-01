@@ -8,7 +8,7 @@
 //    clientes seguiran viendo el CSS y el JS viejos.
 // 3. Solo se guarda lo del propio dominio. Las fotos de Cloudinary NO: son muchas,
 //    pesan, y la CSP de la pagina ya decide quien puede servirlas.
-const CACHE = 'tienda-3b-v30';
+const CACHE = 'tienda-3b-v31';
 
 // Los <script src> de index.html tienen que estar TODOS aqui (y los archivos nuevos que
 // cargue la pagina): lo que falte en esta lista no esta disponible sin conexion.
@@ -17,6 +17,8 @@ const ARMAZON = [
   '/index.html',
   '/electripower',
   '/electripower.html',
+  '/delmar',
+  '/delmar.html',
   '/estilos.css',
   '/app.js',
   '/mundos.js',
@@ -49,6 +51,8 @@ const ARMAZON = [
 // se guardara con esa URL, la cache crecería una entrada por visita y sin red nunca
 // acertaria. Por eso la copia vive SIEMPRE bajo esta clave fija, sin query.
 const CATALOGO = '/catalogo.json';
+// Negocios asociados con pagina propia. Al añadir uno: tambien en ARMAZON ('/x' y '/x.html').
+const SOCIOS = ['electripower', 'delmar'];
 // Los precios por gestor son precios: misma regla que el catalogo (red primero, clave
 // fija porque app.js los pide con ?v=<fecha>).
 const PRECIOS_GESTOR = '/precios-gestores.json';
@@ -100,8 +104,9 @@ self.addEventListener('fetch', (e) => {
     // '/electripower' esta en ARMAZON: las navegaciones no se guardan solas.
     // (Una ficha /p/<codigo> sin red cae en la portada de 3B: la URL no dice de que
     // negocio es el producto y el service worker no lee el catalogo para saberlo.)
-    const esSocio = url.pathname === '/electripower' || url.pathname === '/electripower/';
-    const candidatos = esSocio ? ['/electripower', '/electripower.html'] : ['/', '/index.html'];
+    // Cada socio (electripower, delmar) cae en SU portada; el resto, en la de 3B.
+    const socio = SOCIOS.find((s) => url.pathname === '/' + s || url.pathname === '/' + s + '/');
+    const candidatos = socio ? ['/' + socio, '/' + socio + '.html'] : ['/', '/index.html'];
     e.respondWith(fetch(req).catch(() => candidatos.reduce(
       (previo, c) => previo.then((r) => r || caches.match(c)),
       Promise.resolve(null)

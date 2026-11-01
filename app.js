@@ -877,6 +877,14 @@ function abrirDetalle(id) {
   abrirCapa({ tipo: 'ficha', id: id, codigo: p.codigo });
 }
 
+// Del Mar: la mercancia viaja en nevera. El texto lo escribe el dueno en Stock+ y llega en
+// el bloque del negocio (tienda.neveraTexto). Solo se enseña en productos de Del Mar.
+function neveraHtml(p) {
+  const txt = String((CAT && CAT.tienda && CAT.tienda.neveraTexto) || '').trim();
+  if (!txt || !p || p.negocio !== 'delmar') return '';
+  return `<div class="envio-detalle nevera-detalle">${escapeHtml(txt)}</div>`;
+}
+
 // Pinta la ficha. NO toca el historial: la llama sincronizarCapas.
 function mostrarDetalle(id) {
   const p = (CAT.items || []).find((x) => x.id === id);
@@ -890,7 +898,8 @@ function mostrarDetalle(id) {
   document.getElementById('modal-nombre').textContent = p.name;
   document.getElementById('modal-desc').textContent = p.notes || '';
   document.getElementById('modal-precio').innerHTML = precioHtml(p, true) +
-    (p.envio ? `<div class="envio-detalle">${escapeHtml(p.envio.largo)}</div>` : '');
+    (p.envio ? `<div class="envio-detalle">${escapeHtml(p.envio.largo)}</div>` : '') +
+    neveraHtml(p);
   seleccionVar = [];
   pintarChipsVariante(id);
   document.getElementById('modal-accion').innerHTML = accionHtml(id, null);
@@ -2151,6 +2160,10 @@ function renderMundos() {
   // Tercera pastilla: el negocio asociado, con su propio interruptor en el catalogo.
   const pastillaEp = document.getElementById('mundo-electripower');
   if (pastillaEp) pastillaEp.hidden = !(CAT && CAT.tienda && CAT.tienda.electripowerActivo);
+  // Cuarta pastilla: Del Mar. Se ve solo si el catalogo trae su bloque (Stock+ lo publica
+  // unicamente con el negocio encendido). Negocio.aplicar conserva tienda.negocios en todas las paginas.
+  const pastillaDm = document.getElementById('mundo-delmar');
+  if (pastillaDm) pastillaDm.hidden = !(CAT && CAT.tienda && CAT.tienda.negocios && CAT.tienda.negocios.delmar);
   if (window.Mundos) window.Mundos.refrescar();   // el aviso depende de cuantos negocios se ven
   medirHeader();                                   // la franja cambia el alto de la barra fija
 }
