@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-01T13:11:08.425Z",
+  "generado": "2026-11-01T17:26:24.893Z",
   "tasa": 890,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -151,6 +151,10 @@
     {
       "code": "GXYT3",
       "nombre": "Belkis M"
+    },
+    {
+      "code": "5WZ5C",
+      "nombre": "Emma Bello"
     }
   ],
   "categorias": [
@@ -890,6 +894,32 @@
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
       },
       "creado": 1785092425019
+    },
+    {
+      "id": "p_1787110390009",
+      "codigo": "KLNL",
+      "name": "Alarma de puertas y ventanas",
+      "cat": "Electrodomésticos",
+      "subcat": "",
+      "notes": "Alarma ideal para la protección de su casa, de habitaciones, closets o incluso gavetas, TODA SEGURIDAD ES POCA EN ESTOS TIEMPOS!!",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791861204/productos/eqbueci4m1g9m7wiqc8n.jpg",
+      "precioUSD": 2.5,
+      "precioCUP": 2225,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791861153/productos/fq3kfhciqxzputkxgkcr.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791861189/productos/p8le721er1pxu07hxvbm.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791861197/productos/gx9lfooymrsxtb8perrj.jpg"
+      ],
+      "max": 1,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1787110390009
     },
     {
       "id": "p_1787498809174",
