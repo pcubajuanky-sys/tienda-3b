@@ -1,5 +1,5 @@
 {
-  "generado": "2026-10-31T22:31:21.349Z",
+  "generado": "2026-11-01T00:35:51.981Z",
   "tasa": 885,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -909,7 +909,7 @@
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1791861189/productos/p8le721er1pxu07hxvbm.jpg",
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1791861197/productos/gx9lfooymrsxtb8perrj.jpg"
       ],
-      "espera": true,
+      "max": 1,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -3458,32 +3458,6 @@
       "creado": 1789255852332
     },
     {
-      "id": "p_1790795440877",
-      "codigo": "54WG",
-      "name": "Medidor de presión",
-      "cat": "Electrodomésticos",
-      "subcat": "",
-      "notes": "Incluye todo lo de la imagen. Solo en color rosado. Funciona o con conexión USB o con pilas ( no incluidas).",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791896222/productos/crb3qw8fbzp4toylktze.jpg",
-      "precioUSD": 25,
-      "precioCUP": 22125,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "fotos": [
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791896167/productos/x3emxzkvljabovwmceng.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791896193/productos/bzkupirfjeoaidp2zgk5.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791896212/productos/wf2bsewh8zmcrkoxncag.jpg"
-      ],
-      "espera": true,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1790795440877
-    },
-    {
       "id": "p_1786916805434",
       "codigo": "2ZW2",
       "name": "Mini Bloques-Lima de uñas",
@@ -4492,7 +4466,7 @@
         "D": 3,
         "F": 1,
         "G": 3,
-        "VARIADOS": 2
+        "VARIADOS": 3
       },
       "esperaOpciones": [
         "E"
@@ -4532,7 +4506,7 @@
         ]
       },
       "maxOpciones": {
-        "VARIADOS🌈": 9,
+        "VARIADOS🌈": 8,
         "NEGRAS🖤": 7
       },
       "envio": {
@@ -4776,14 +4750,12 @@
           "Color"
         ],
         "opciones": [
-          "NEGRO",
           "CHOCOLATE",
           "CHOCOLATE CLARO",
           "BEIGE"
         ]
       },
       "maxOpciones": {
-        "NEGRO": 1,
         "CHOCOLATE": 3,
         "CHOCOLATE CLARO": 4,
         "BEIGE": 3
@@ -5202,11 +5174,9 @@
         ]
       },
       "maxOpciones": {
-        "VERDE": 3
+        "VERDE": 3,
+        "ROSA": 1
       },
-      "esperaOpciones": [
-        "ROSA"
-      ],
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
@@ -5749,7 +5719,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "espera": true,
+      "max": 1,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
