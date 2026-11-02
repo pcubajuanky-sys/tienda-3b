@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-02T12:04:05.452Z",
+  "generado": "2026-11-02T13:31:55.006Z",
   "tasa": 900,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -271,6 +271,21 @@
     ],
     "campana": null,
     "taxiActivo": true,
+    "negocios": {
+      "delmar": {
+        "nombre": "Del Mar",
+        "emoji": "🐟",
+        "whatsapp": "",
+        "quienSomos": "",
+        "garantia": "",
+        "politica": "",
+        "envioIncluidoTexto": "",
+        "envioAparteTexto": "",
+        "mensajeriaCUP": 150,
+        "envioGratisCUP": 2000,
+        "neveraTexto": "Producto refrigerado: llévalo en nevera"
+      }
+    },
     "encargosActivo": true,
     "cierre": {
       "activo": false,
