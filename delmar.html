@@ -109,8 +109,7 @@
           <img class="mundo-img" src="/logo-taxi-3b.png" width="256" height="256" alt="Taxi 3B — viajes">
         </a>
         <a class="mundo mundo-ep" id="mundo-electripower" href="/electripower" hidden title="Electripower">
-          <span class="mundo-emoji" aria-hidden="true">⚡</span>
-          <span class="sr-only">Electripower — baterías e inversores</span>
+          <img class="mundo-img" src="/logo-electripower.png" width="160" height="160" alt="Electripower — baterías e inversores">
         </a>
         <a class="mundo mundo-on mundo-dm" id="mundo-delmar" href="/delmar" aria-current="page" title="Del Mar">
           <img class="mundo-img" src="/logo-delmar.png" width="160" height="160" alt="Del Mar — pescados y mariscos">
@@ -189,7 +188,7 @@
     </div>
     <div class="hero-acciones">
       <a href="/delmar#catalogo" class="btn btn-contraste hero-cta">Ver el pescado</a>
-      <a href="#encargos" class="btn btn-contraste-linea hero-cta" id="hero-encargos" hidden>Hacer un encargo</a>
+      <a href="/delmar#encargos" class="btn btn-contraste-linea hero-cta" id="hero-encargos" hidden>Hacer un encargo</a>
     </div>
     <ul class="hero-datos">
       <li id="hero-dato-productos">— productos disponibles</li>
@@ -205,21 +204,6 @@
      (y=948). Ahora es hermano directo en la columna 2 desde la primera fila
      (ver estilos.css, @media min-width:1024px) — visible sin hacer scroll.
      Por debajo de 1024px es display:block y no cambia nada. -->
-<!-- Confianza, antes de que el cliente baje al catálogo. Los tres pasos van fijos aquí
-     porque describen cómo funciona la tienda; la garantía NO, porque habla de dinero: la
-     pinta app.js desde `tienda.garantia` para que Ruth la pueda cambiar sin tocar código. -->
-<section class="confianza wrap" aria-labelledby="confianza-titulo">
-  <h2 id="confianza-titulo" class="sr-only">Cómo comprar en Del Mar</h2>
-  <ol class="pasos">
-    <li class="paso"><span class="paso-n" aria-hidden="true">1</span><span class="paso-txt"><b>Elige</b> lo que te guste y añádelo a tu pedido.</span></li>
-    <li class="paso"><span class="paso-n" aria-hidden="true">2</span><span class="paso-txt"><b>Pide por WhatsApp.</b> El mensaje sale escrito solo.</span></li>
-    <li class="paso"><span class="paso-n" aria-hidden="true">3</span><span class="paso-txt"><b>Recibes y revisas</b> antes de pagar.</span></li>
-  </ol>
-  <p class="garantia" id="garantia" hidden></p>
-  <!-- Preguntar al socio: el href lo rellena app.js (pintarPreguntarSocio). Sin onclick:
-       la CSP de produccion lo bloquea. El PEDIDO no va aqui: sale al numero de la casa. -->
-  <p class="confianza-nota"><a id="preguntar-socio" class="btn btn-suave btn-secundario" href="#" hidden rel="noopener" target="_blank">💬 Preguntar por WhatsApp</a></p>
-</section>
 <div class="contenido">
   <section class="categorias-3d-wrap" aria-label="Categorías">
     <h2 class="categorias-3d-titulo wrap">Categorías</h2>
@@ -361,13 +345,6 @@
           <div class="dm-contacto-bot">
             <a class="btn btn-wa" href="https://api.whatsapp.com/send?phone=5358856820&amp;text=Hola%2C%20quiero%20consultar%20en%20Del%20Mar" target="_blank" rel="noopener">WhatsApp</a>
             <a class="btn btn-suave" href="tel:+5358856820">Llamar</a>
-          </div>
-        </div>
-        <div class="dm-contacto">
-          <p class="dm-tel">+53 5497 8966</p>
-          <div class="dm-contacto-bot">
-            <a class="btn btn-wa" href="https://api.whatsapp.com/send?phone=5354978966&amp;text=Hola%2C%20quiero%20consultar%20en%20Del%20Mar" target="_blank" rel="noopener">WhatsApp</a>
-            <a class="btn btn-suave" href="tel:+5354978966">Llamar</a>
           </div>
         </div>
       </div>

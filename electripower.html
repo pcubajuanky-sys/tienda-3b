@@ -9,7 +9,7 @@
      Con los enlaces de gestor (/MARIA, un solo segmento) no pasaba, porque un
      segmento ya resuelve contra la raiz. NO LA QUITES. -->
 <base href="/">
-<meta name="theme-color" content="#7A2E5D">
+<meta name="theme-color" content="#151D26">
 <link rel="icon" href="/favicon-3b.png" type="image/png">
 <link rel="apple-touch-icon" href="/favicon-3b.png">
 <link rel="manifest" href="/manifest.json">
@@ -32,17 +32,14 @@
 <meta property="og:title" content="Electripower — Baterías, inversores y respaldo energético">
 <meta property="og:description" content="Baterías, inversores y respaldo energético. Mensajería incluida en su zona. Pide por WhatsApp.">
 <meta property="og:url" content="https://www.3bqba.com/electripower">
-<!-- ⚠️ PENDIENTE: es la imagen de 3B. Cuando el dueño dé la del socio, poner aquí
-     su archivo y el mismo en la clave "image" del JSON-LD de abajo y en twitter:image.
-     Un archivo inexistente daría una imagen rota al compartir, así que mejor esta que ninguna. -->
-<meta property="og:image" content="https://www.3bqba.com/og-3b.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
+<meta property="og:image" content="https://www.3bqba.com/electripower-emblema.png">
+<meta property="og:image:width" content="600">
+<meta property="og:image:height" content="462">
 <meta property="og:locale" content="es_CU">
-<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Electripower — Baterías, inversores y respaldo energético">
 <meta name="twitter:description" content="Baterías, inversores y respaldo energético. Mensajería incluida en su zona. Pide por WhatsApp.">
-<meta name="twitter:image" content="https://www.3bqba.com/og-3b.jpg">
+<meta name="twitter:image" content="https://www.3bqba.com/electripower-emblema.png">
 <!-- og:fin -->
 
 <!-- La fuente, pedida ya: sin esto el navegador no se entera de que existe hasta
@@ -53,7 +50,7 @@
 <!-- Datos estructurados del negocio. Bloque de DATOS, no un script ejecutable: la CSP
      `script-src 'self'` no lo bloquea. Va fijo aquí porque no depende del catálogo. -->
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Store","name":"Electripower","url":"https://www.3bqba.com/electripower","image":"https://www.3bqba.com/og-3b.jpg","description":"Baterías, inversores y respaldo energético. Mensajería incluida en su zona. Pide por WhatsApp.","currenciesAccepted":"CUP, USD"}
+{"@context":"https://schema.org","@type":"Store","name":"Electripower","url":"https://www.3bqba.com/electripower","image":"https://www.3bqba.com/electripower-emblema.png","logo":"https://www.3bqba.com/logo-electripower.png","description":"Baterías, inversores y respaldo energético. Mensajería incluida en su zona. Pide por WhatsApp.","currenciesAccepted":"CUP, USD"}
 </script>
 <link rel="stylesheet" href="estilos.css">
 </head>
@@ -112,8 +109,7 @@
           <img class="mundo-img" src="/logo-taxi-3b.png" width="256" height="256" alt="Taxi 3B — viajes">
         </a>
         <a class="mundo mundo-on mundo-ep" id="mundo-electripower" href="/electripower" aria-current="page" title="Electripower">
-          <span class="mundo-emoji" aria-hidden="true">⚡</span>
-          <span class="sr-only">Electripower — baterías e inversores</span>
+          <img class="mundo-img" src="/logo-electripower.png" width="160" height="160" alt="Electripower — baterías e inversores">
         </a>
         <a class="mundo mundo-dm" id="mundo-delmar" href="/delmar" hidden title="Del Mar">
           <img class="mundo-img" src="/logo-delmar.png" width="160" height="160" alt="Del Mar — pescados y mariscos">
@@ -176,26 +172,25 @@
   <div class="hero-mosaico" id="hero-mosaico" aria-hidden="true"></div>
   <div class="hero-velo" aria-hidden="true"></div>
   <div class="hero-contenido wrap">
-    <!-- El eslogan del dueño sigue siendo lo más grande de la portada; debajo, dentro
-         del MISMO h1, una línea que dice qué es esto y dónde está. Antes el h1 era solo
-         el eslogan: para quien llega de Google o de un enlace compartido no decía ni qué
-         se vende ni dónde. -->
+    <!-- Portada de Electripower: el emblema manda. El mosaico de fotos sigue en el DOM porque
+         app.js lo rellena por id; estilos.css lo oculta aqui. -->
+    <img class="ep-emblema" src="/electripower-emblema.png" width="600" height="462" alt="Electripower — Energy Solutions">
     <h1>
-      <span class="hero-eslogan">Electripower</span>
+      <span class="hero-eslogan">Energía que no se apaga</span>
       <span class="hero-que-es">Baterías, inversores y respaldo energético</span>
     </h1>
-    <p class="hero-sub">Mira el catálogo, arma tu pedido y nos escribes por WhatsApp.</p>
+    <p class="hero-sub">Baterías, inversores y respaldo energético para tu casa o negocio. Arma tu pedido y nos escribes por WhatsApp.</p>
     <!-- Con la tienda cerrada este cartel sustituye a los botones: el cliente lo
          entiende al entrar, sin bajar. El título y el texto son los mismos de la
          franja (una sola fuente: CAT.tienda.cierre). -->
     <div class="hero-cierre" id="hero-cierre" hidden>
       <p class="hero-cierre-titulo" id="hero-cierre-titulo"></p>
       <p class="hero-cierre-texto" id="hero-cierre-texto"></p>
-      <a href="#catalogo" class="btn btn-contraste hero-cta">Mirar el catálogo</a>
+      <a href="/electripower#catalogo" class="btn btn-contraste hero-cta">Mirar el catálogo</a>
     </div>
     <div class="hero-acciones">
-      <a href="#catalogo" class="btn btn-contraste hero-cta">Ver el catálogo</a>
-      <a href="#encargos" class="btn btn-contraste-linea hero-cta" id="hero-encargos" hidden>Hacer un encargo</a>
+      <a href="/electripower#catalogo" class="btn btn-contraste hero-cta">Ver el catálogo</a>
+      <a href="/electripower#encargos" class="btn btn-contraste-linea hero-cta" id="hero-encargos" hidden>Hacer un encargo</a>
     </div>
     <ul class="hero-datos">
       <li id="hero-dato-productos">— productos disponibles</li>
@@ -211,21 +206,6 @@
      (y=948). Ahora es hermano directo en la columna 2 desde la primera fila
      (ver estilos.css, @media min-width:1024px) — visible sin hacer scroll.
      Por debajo de 1024px es display:block y no cambia nada. -->
-<!-- Confianza, antes de que el cliente baje al catálogo. Los tres pasos van fijos aquí
-     porque describen cómo funciona la tienda; la garantía NO, porque habla de dinero: la
-     pinta app.js desde `tienda.garantia` para que Ruth la pueda cambiar sin tocar código. -->
-<section class="confianza wrap" aria-labelledby="confianza-titulo">
-  <h2 id="confianza-titulo" class="sr-only">Cómo comprar en Electripower</h2>
-  <ol class="pasos">
-    <li class="paso"><span class="paso-n" aria-hidden="true">1</span><span class="paso-txt"><b>Elige</b> lo que te guste y añádelo a tu pedido.</span></li>
-    <li class="paso"><span class="paso-n" aria-hidden="true">2</span><span class="paso-txt"><b>Pide por WhatsApp.</b> El mensaje sale escrito solo.</span></li>
-    <li class="paso"><span class="paso-n" aria-hidden="true">3</span><span class="paso-txt"><b>Recibes y revisas</b> antes de pagar.</span></li>
-  </ol>
-  <p class="garantia" id="garantia" hidden></p>
-  <!-- Preguntar al socio: el href lo rellena app.js (pintarPreguntarSocio). Sin onclick:
-       la CSP de produccion lo bloquea. El PEDIDO no va aqui: sale al numero de la casa. -->
-  <p class="confianza-nota"><a id="preguntar-socio" class="btn btn-suave btn-secundario" href="#" hidden rel="noopener" target="_blank">💬 Preguntar por WhatsApp</a></p>
-</section>
 <div class="contenido">
   <section class="categorias-3d-wrap" aria-label="Categorías">
     <h2 class="categorias-3d-titulo wrap">Categorías</h2>
@@ -307,7 +287,7 @@
     <p id="lateral-envio" class="lateral-envio" hidden></p>
     <div id="lateral-total" class="lateral-total" hidden></div>
     <p id="lateral-politica" class="politica-texto" hidden></p>
-    <p id="lateral-terminos" class="terminos-nota" hidden>Al pedir aceptas <a href="terminos.html" target="_blank" rel="noopener">nuestros términos</a>.</p>
+    <p id="lateral-terminos" class="terminos-nota" hidden>Al pedir aceptas <a href="/electripower#terminos" target="_blank" rel="noopener">nuestros términos</a>.</p>
     <button id="btn-lateral-pedir" class="btn btn-wa" type="button" hidden>Pedir por WhatsApp</button>
     <!-- Pago por adelantado con QvaPay (2026-08-16, opcional): tienda.pagoUrl.
          Secundario a propósito, nunca más prominente que "Pedir por
@@ -317,11 +297,72 @@
   </aside>
 </div>
 
+<!-- Secciones propias de Electripower (2026-11-02). Solo viven en esta cascara. -->
+<div class="dm-secciones">
+  <section class="dm-sec" id="quienes-somos" aria-labelledby="ep-quienes-t">
+    <div class="wrap">
+      <h2 class="dm-titulo" id="ep-quienes-t">Quiénes somos</h2>
+      <p class="dm-texto"><b>Electripower</b> es un negocio aliado de <b>3B</b>. Vendemos baterías, inversores y equipos de respaldo energético para que tu casa o tu negocio no se quede sin corriente.</p>
+      <p class="dm-texto">Revisamos los equipos y te <b>asesoramos para elegir lo que de verdad necesitas</b>. Y la mensajería de 3B te lo lleva a domicilio.</p>
+    </div>
+  </section>
+
+  <section class="dm-sec dm-sec-alt" id="como-comprar" aria-labelledby="ep-como-t">
+    <div class="wrap">
+      <h2 class="dm-titulo" id="ep-como-t">Cómo comprar</h2>
+      <ol class="dm-pasos">
+        <li><span class="dm-n" aria-hidden="true">1</span><span><b>Eliges en la web.</b> Añade al pedido lo que quieras.</span></li>
+        <li><span class="dm-n" aria-hidden="true">2</span><span><b>Envías el pedido por WhatsApp.</b> El mensaje sale escrito solo.</span></li>
+        <li><span class="dm-n" aria-hidden="true">3</span><span><b>Te confirmamos</b> la disponibilidad y la hora de entrega.</span></li>
+        <li><span class="dm-n" aria-hidden="true">4</span><span><b>Te lo llevamos</b> a domicilio. Pagas al recibir.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="dm-sec" id="terminos" aria-labelledby="ep-terminos-t">
+    <div class="wrap">
+      <h2 class="dm-titulo" id="ep-terminos-t">Términos y condiciones</h2>
+      <p class="dm-texto">Para que todo salga bien, te pedimos que tengas presente lo siguiente:</p>
+      <ul class="dm-lista">
+        <li><b>Revisa y prueba tu equipo delante de la mensajera</b> antes de pagar. Es el momento de comprobar que todo funciona como esperas.</li>
+        <li><b>No se aceptan devoluciones</b> una vez que recibes el pedido.</li>
+        <li><b>La garantía es la que indica la ficha de cada producto.</b> Si la ficha no indica garantía, el producto no la tiene.</li>
+        <li><b>La mensajería se paga en cualquier caso</b>, también si rechazas el pedido en la puerta.</li>
+        <li>Los pedidos están <b>sujetos a disponibilidad</b>.</li>
+        <li>Los precios son los <b>publicados el día del pedido</b>.</li>
+        <li><b>Sigue las indicaciones de instalación y uso</b> de cada equipo.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="dm-sec dm-sec-alt" id="contacto" aria-labelledby="ep-contacto-t">
+    <div class="wrap">
+      <h2 class="dm-titulo" id="ep-contacto-t">Contáctanos</h2>
+      <p class="dm-texto">¿Dudas, o quieres hacer tu pedido? Escríbenos o llámanos.</p>
+      <div class="dm-contactos">
+        <div class="dm-contacto">
+          <p class="dm-tel">+53 5885 6820</p>
+          <div class="dm-contacto-bot">
+            <a class="btn btn-wa" href="https://api.whatsapp.com/send?phone=5358856820&amp;text=Hola%2C%20quiero%20consultar%20en%20Electripower" target="_blank" rel="noopener">WhatsApp</a>
+            <a class="btn btn-suave" href="tel:+5358856820">Llamar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
 <footer class="footer">
   <div class="wrap footer-wrap">
     <div class="footer-marca">
       <span id="footer-nombre" class="footer-nombre-texto"></span>
     </div>
+    <nav class="dm-pie-links" aria-label="Información de Electripower">
+      <a href="/electripower#quienes-somos">Quiénes somos</a>
+      <a href="/electripower#como-comprar">Cómo comprar</a>
+      <a href="/electripower#terminos">Términos y condiciones</a>
+      <a href="/electripower#contacto">Contáctanos</a>
+    </nav>
     <div id="vendedor" class="vendedor"></div>
 
     <div class="footer-grid" id="footer-grid" hidden>
@@ -341,7 +382,7 @@
 
     <p id="actualizado" class="actualizado"></p>
     <p id="aviso-tasa" class="aviso-tasa">Los precios pueden variar según la tasa del día.</p>
-    <p class="footer-terminos"><a href="terminos.html">Términos y condiciones</a></p>
+    <p class="footer-terminos"><a href="/electripower#terminos">Términos y condiciones</a></p>
   </div>
 </footer>
 
@@ -485,7 +526,7 @@
         <input type="text" id="c-etiqueta" placeholder="Casa, Trabajo…" maxlength="20">
       </label>
       <p id="panel-politica" class="politica-texto" hidden></p>
-      <p id="panel-terminos" class="terminos-nota" hidden>Al pedir aceptas <a href="terminos.html" target="_blank" rel="noopener">nuestros términos</a>.</p>
+      <p id="panel-terminos" class="terminos-nota" hidden>Al pedir aceptas <a href="/electripower#terminos" target="_blank" rel="noopener">nuestros términos</a>.</p>
       <button id="btn-enviar" class="btn btn-wa btn-enviar" type="submit">Pedir por WhatsApp</button>
       <!-- Pago por adelantado con QvaPay (2026-08-16, opcional): tienda.pagoUrl.
            Secundario a propósito, nunca más prominente que "Pedir por

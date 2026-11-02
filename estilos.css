@@ -1187,12 +1187,7 @@ button.footer-link{background:none;border:none;font-family:inherit;cursor:pointe
 /* Cada negocio late en SU color: el taxi en verde, la tienda en su morado. */
 #mundo-taxi::after{border-color:#12A24E}
 #mundo-delmar::after{border-color:#1E6FD9}
-/* Pastilla del negocio asociado mientras no haya logo propio: el emoji centrado,
-   del mismo tamaño que las otras dos. Se borra cuando llegue logo-electripower.png. */
-.mundo-emoji{display:flex;align-items:center;justify-content:center;width:100%;height:100%;font-size:26px;line-height:1}
-.mundo-ep{background:var(--surface,#fff)}
-/* El aro del negocio activo vive en .mundo-img; esta pastilla no tiene <img>. */
-.mundo-on.mundo-ep{box-shadow:0 0 0 2px var(--brand)}
+#mundo-electripower::after{border-color:#F5921E}
 @media (min-width:600px){ .mundo{width:52px;height:52px} }
 @media (prefers-reduced-motion:reduce){
   .mundo{transition:none}
@@ -1544,14 +1539,14 @@ body[data-negocio="delmar"] .footer-terminos{display:none!important}
   border-radius:50%;background:var(--brand);
 }
 .dm-lista b{color:var(--text);font-weight:700}
-.dm-contactos{display:grid;grid-template-columns:1fr;gap:var(--e3);margin-top:var(--e3);max-width:760px}
-@media (min-width:600px){ .dm-contactos{grid-template-columns:1fr 1fr} }
+/* Una sola tarjeta de contacto: centrada y de ancho contenido, para que no se vea descolgada. */
+.dm-contactos{display:grid;grid-template-columns:1fr;gap:var(--e3);margin:var(--e3) auto 0;max-width:440px}
 .dm-contacto{
-  padding:var(--e4) var(--e3);background:var(--surface);border:1px solid var(--border);
+  text-align:center;padding:var(--e4) var(--e3);background:var(--surface);border:1px solid var(--border);
   border-radius:var(--radio-card);box-shadow:var(--sombra-1);
 }
 .dm-tel{font-size:var(--t-xl);font-weight:800;color:var(--dm-azul);margin-bottom:var(--e3);letter-spacing:.01em}
-.dm-contacto-bot{display:flex;flex-wrap:wrap;gap:var(--e2)}
+.dm-contacto-bot{display:flex;flex-wrap:wrap;gap:var(--e2);justify-content:center}
 .dm-contacto-bot .btn{flex:1 1 120px}
 .dm-pie-links{display:flex;flex-wrap:wrap;gap:0 var(--e4);margin:var(--e1) 0 var(--e3)}
 .dm-pie-links a{
@@ -1559,3 +1554,35 @@ body[data-negocio="delmar"] .footer-terminos{display:none!important}
   font-size:var(--t-md);font-weight:600;color:var(--text-2);text-decoration:underline;
 }
 .dm-pie-links a:hover{color:var(--brand)}
+
+/* ── Electripower (2026-11-02) ─────────────────────────────────────────────
+   Todo cuelga de body[data-negocio="electripower"]: index, taxi y delmar no llevan ese
+   atributo. Paleta del logo: azul noche de fondo, azul electrico del rayo y naranja de
+   «POWER» de acento (boton principal de la portada). Reusa las clases .dm-* de Del Mar.
+   Contrastes medidos: --brand sobre --bg 5,4:1; blanco sobre --brand 5,8:1; titulo azul
+   7,4-8,0:1; tinta oscura sobre el naranja del boton 7,3:1; blanco sobre --hero-1 15,6:1;
+   en oscuro --brand sobre --bg 9,5:1. */
+body[data-negocio="electripower"]{
+  --brand:#0A6AA8; --brand-ink:#FFFFFF; --brand-soft:#E3F1FA; --brand-hondo:#084B78;
+  --hero-1:#1B2430; --hero-2:#10151C;
+  --hero-btn-bg:#F5921E; --hero-btn-ink:#151D26;
+  --dm-azul:#08507F; --ep-naranja:#F5921E;
+}
+@media (prefers-color-scheme: dark){
+  body[data-negocio="electripower"]{
+    --brand:#5CC4F2; --brand-ink:#06202F; --brand-soft:#12283A; --brand-hondo:#3FA9DB;
+    --dm-azul:#8AD6FA;
+  }
+}
+body[data-negocio="electripower"] .hero-velo{
+  background:linear-gradient(180deg, rgba(10,15,22,.45) 0%, rgba(10,15,22,.15) 50%, rgba(10,15,22,.55) 100%);
+}
+body[data-negocio="electripower"] .hero-mosaico{display:none}
+.ep-emblema{
+  display:block;width:clamp(220px,64vw,380px);height:auto;margin:0 auto var(--e3);
+  border-radius:20px;box-shadow:0 10px 32px rgba(0,0,0,.45);
+}
+body[data-negocio="electripower"] .dm-titulo::after{background:var(--ep-naranja)}
+body[data-negocio="electripower"] #footer-quienes,
+body[data-negocio="electripower"] #footer-contacto,
+body[data-negocio="electripower"] .footer-terminos{display:none!important}
