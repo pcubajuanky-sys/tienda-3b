@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-01T21:38:55.737Z",
+  "generado": "2026-11-02T02:08:56.550Z",
   "tasa": 895,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -1814,7 +1814,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 3,
+      "max": 2,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -1913,6 +1913,27 @@
       "creado": 1787498299932
     },
     {
+      "id": "p_1793585333233",
+      "codigo": "2SPT",
+      "name": "Conjunto de ropa de bebé",
+      "cat": "Niños",
+      "subcat": "",
+      "notes": "🚀 ¡Comodidad para sus pequeñas aventuras! Conjunto infantil de algodón elastizado, suave, fresco y súper cómodo, que acompaña cada movimiento de tu bebé con estilo. 💙",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1793585231/productos/h3fcd75vwz07z72u8jgl.jpg",
+      "precioUSD": 8,
+      "precioCUP": 7160,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "max": 1,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1793585333233
+    },
+    {
       "id": "p_1791132152189",
       "codigo": "7J6N",
       "name": "Correa retractil",
@@ -1946,7 +1967,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 2,
+      "espera": true,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -2070,28 +2091,38 @@
     {
       "id": "p_1788840928879",
       "codigo": "B8ZZ",
-      "name": "Etiquetas infantiles",
+      "name": "Etiquetas infantiles para Libretas y Libros",
       "cat": "Niños",
       "subcat": "",
-      "notes": "Etiquetas autoadhesivas para nombrar las libretas y demás pertenencias de los niños. Diseños femeninos y masculinos. Tamaño exacto detallado en la imagen",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788840708/productos/m1w5hcjkk89t1q4qlqxo.jpg",
+      "notes": "Etiquetas autoadhesivas para nombrar las libretas y demás pertenencias de los niños. Diseños femeninos y masculinos. Tamaño exacto detallado en la imagen. El precio es por un rollo de 20 etiquetas",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1793583973/productos/qrraioohftbauxlch7sf.jpg",
       "precioUSD": 1,
       "precioCUP": 895,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793583978/productos/qeowzyfm60sh872oqpav.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793583983/productos/ldsjhu2nzauhzknub0ct.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793583989/productos/pelfswt289sahcijawly.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793584002/productos/qig3boaqlm8cnsc67af7.jpg"
+      ],
       "variantes": {
         "ejes": [
-          "Género"
+          "Diseño"
         ],
         "opciones": [
-          "NIÑOS",
-          "NIÑAS"
+          "A",
+          "B",
+          "C",
+          "D"
         ]
       },
       "maxOpciones": {
-        "NIÑOS": 3,
-        "NIÑAS": 3
+        "A": 8,
+        "B": 4,
+        "C": 6,
+        "D": 7
       },
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
@@ -2640,6 +2671,44 @@
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
       },
       "creado": 1782340744519
+    },
+    {
+      "id": "p_1793502722172",
+      "codigo": "XHKN",
+      "name": "Juego de tiro al blanco",
+      "cat": "Niños",
+      "subcat": "",
+      "notes": "Exelente y educativo Juego para niños. Alta calidad,figura de tela de animales con diana para la práctica de la puntería y números para el entrenamiento del cálculo. Incluye pelotas autoadhesivas con velcro y gancho para colgar la figura",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1793502422/productos/xloi9voz4zf4gnbyidle.jpg",
+      "precioUSD": 4,
+      "precioCUP": 3580,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793502427/productos/valcxdvtidhylinjtai2.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793502430/productos/o0rfyltaodps6d9j4vgi.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793502452/productos/x14klmo0ggcawzrxa5h7.jpg"
+      ],
+      "variantes": {
+        "ejes": [
+          "Diseño"
+        ],
+        "opciones": [
+          "ELEFANTE",
+          "COCODRILO"
+        ]
+      },
+      "maxOpciones": {
+        "ELEFANTE": 2,
+        "COCODRILO": 1
+      },
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1793502722172
     },
     {
       "id": "p_1791140393037",
@@ -3238,7 +3307,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 9,
+      "max": 6,
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
@@ -3542,6 +3611,30 @@
       "creado": 1788037932911
     },
     {
+      "id": "p_1793502090428",
+      "codigo": "RXYA",
+      "name": "Mini presilladora",
+      "cat": "Niños",
+      "subcat": "",
+      "notes": "Pequeña presilladora con presillas incluidas.  Artículo útil para salvar el día de una emergencia inesperada. Accesorio escolar imprescindible y totalmente seguro para cualquier edad",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1793501897/productos/sraa4mgmjc8q8wefthpg.jpg",
+      "precioUSD": 2,
+      "precioCUP": 1790,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793501899/productos/odsjfu9lsy5mksidnzz3.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793501903/productos/xvpggmeziie7326jo244.jpg"
+      ],
+      "max": 3,
+      "envio": {
+        "corto": "🛵 Gratis desde 2,000 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
+      },
+      "creado": 1793502090428
+    },
+    {
       "id": "p_1785181129029",
       "codigo": "BR5L",
       "name": "Mochila con cartuchera",
@@ -3756,18 +3849,18 @@
       "name": "Nebulizador portátil",
       "cat": "Electrodomésticos",
       "subcat": "",
-      "notes": "Nebulizador portátil para adultos y niños - Inhalador de mano con tecnología de ondas de sonido y funcionamiento silencioso, compacto y apto para viajes, sistema de malla fácil de limpiar para uso de emergencia - Apto para fibrosis quística",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791891146/productos/qm5l2kunip5msjf3cxwe.jpg",
+      "notes": "Nebulizador recargable con pantalla LED; Nebulizador de malla portátil con tecnología de ondas de sonido, apto para adultos y niños; Funciona silenciosamente; Compacto y portátil; Cuenta con un sistema de limpieza automática; Apto para afecciones respiratorias",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1793581670/productos/v22bnnpvmsy8egwlry5d.jpg",
       "precioUSD": 19,
       "precioCUP": 17005,
       "moneda": "usd",
       "enOferta": true,
       "destacado": false,
       "fotos": [
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791891158/productos/lzqnmoyw2fslxedfswya.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791891167/productos/vlspaur8u3wwame38s03.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791891175/productos/zn59pbw5utfspnrstamf.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791891181/productos/eooqfgwlp88y1megleyg.jpg"
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793581706/productos/b0jdqltichizelwutrwz.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793581730/productos/vumovpmdotjvfli2h9yn.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793581750/productos/g4q0rw9hk9zs25xb3t4d.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793581755/productos/ipug2q9juutwgiwmqvom.jpg"
       ],
       "max": 3,
       "envio": {
@@ -4013,7 +4106,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 5,
+      "max": 4,
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
