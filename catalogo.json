@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-02T18:20:58.288Z",
+  "generado": "2026-11-02T21:15:49.210Z",
   "tasa": 900,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -3644,41 +3644,6 @@
       "creado": 1785181129033
     },
     {
-      "id": "p_1789009525416",
-      "codigo": "3YGM",
-      "name": "Mochila negra",
-      "cat": "Bolsos Carteras Mochilas monederos",
-      "subcat": "",
-      "notes": "Mochilas de color negro con detalles en verde💚,naranja 🧡 o gris🩶. Mochilas escolares. Tamaño exacto en la imagen.",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789009348/productos/lfuym6qdwytctqcg9uds.jpg",
-      "precioUSD": 12,
-      "precioCUP": 10800,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "variantes": {
-        "ejes": [
-          "Color"
-        ],
-        "opciones": [
-          "NEGRO CON VERDE",
-          "NEGRO CON NARANJA",
-          "NEGRO CON GRIS"
-        ]
-      },
-      "maxOpciones": {
-        "NEGRO CON VERDE": 2,
-        "NEGRO CON NARANJA": 1,
-        "NEGRO CON GRIS": 1
-      },
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1789009525416
-    },
-    {
       "id": "p_1790619248550",
       "codigo": "WDWV",
       "name": "Moledor de sazones recargable",
@@ -4595,7 +4560,7 @@
       },
       "maxOpciones": {
         "NEGRO": 6,
-        "PLATEADO": 5,
+        "PLATEADO": 4,
         "DORADO": 5
       },
       "envio": {
@@ -4997,10 +4962,12 @@
         ]
       },
       "maxOpciones": {
-        "A": 1,
         "B": 1,
         "C": 1
       },
+      "esperaOpciones": [
+        "A"
+      ],
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
@@ -5968,9 +5935,11 @@
       },
       "maxOpciones": {
         "A": 1,
-        "C": 1,
         "D": 1
       },
+      "esperaOpciones": [
+        "C"
+      ],
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
@@ -6191,7 +6160,7 @@
         ]
       },
       "maxOpciones": {
-        "ROSADO": 2
+        "ROSADO": 1
       },
       "envio": {
         "corto": "🛵 Mensajería gratis",
