@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-02T21:15:49.210Z",
+  "generado": "2026-11-02T21:22:03.997Z",
   "tasa": 900,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -131,6 +131,10 @@
     {
       "code": "5WZ5C",
       "nombre": "Emma Bello"
+    },
+    {
+      "code": "3XDFH",
+      "nombre": "Jeison"
     }
   ],
   "categorias": [
