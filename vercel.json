@@ -3,6 +3,7 @@
     { "source": "/p/:codigo", "destination": "/api/producto?c=:codigo" },
     { "source": "/taxi", "destination": "/taxi.html" },
     { "source": "/electripower", "destination": "/electripower.html" },
+    { "source": "/electricpower", "destination": "/electripower.html" },
     { "source": "/delmar", "destination": "/delmar.html" },
     { "source": "/((?!.*\\.).*)", "destination": "/index.html" }
   ],
