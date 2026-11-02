@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-02T02:08:56.550Z",
+  "generado": "2026-11-02T02:34:20.238Z",
   "tasa": 895,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -778,6 +778,31 @@
       },
       "envioGratis": true,
       "creado": 1784919312828
+    },
+    {
+      "id": "p_1793503339715",
+      "codigo": "R4NL",
+      "name": "10 tiras de stickers",
+      "cat": "Niños",
+      "subcat": "",
+      "notes": "Calcomanías de niñ@s. El paquete está conformado por 10 tiras de temáticas variadas no elegibles. No son de género marcado,sirve tanto para hembra como para varón, diseños mixtos en cada paquete",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1793503061/productos/biwwt1yz13xoefd024tk.jpg",
+      "precioUSD": 2,
+      "precioCUP": 1790,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793503066/productos/rvrjlruflf2ns3t2f1vx.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793503070/productos/kc9yclcrkkabikzqrzu7.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793503075/productos/qzfeqbnbiw89rxs1x60p.jpg"
+      ],
+      "max": 7,
+      "envio": {
+        "corto": "🛵 Gratis desde 2,000 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
+      },
+      "creado": 1793503339715
     },
     {
       "id": "p_1782340130001",
@@ -6236,6 +6261,43 @@
       },
       "envioGratis": true,
       "creado": 1785533206456
+    },
+    {
+      "id": "p_1793586236686",
+      "codigo": "EKE6",
+      "name": "Tatuajes Fluorescentes para niños y niñas",
+      "cat": "Niños",
+      "subcat": "",
+      "notes": "El precio es por 2 hojas de tatuajes de ni@s( entre 20 y 30 tatuajes). Se puede elegir si lo desea con temática de niña o de niño, no es elegible el diseño específico. Lindos, faciles de colocar, y con un hermoso brillo en la oscuridad (fluorescente)",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1793585774/productos/zc7rpfyvgg49emktznfe.jpg",
+      "precioUSD": 1,
+      "precioCUP": 895,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793585778/productos/zsahngebayjnydfn143j.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793585786/productos/k8jm43dwilop8mvqnjzu.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793585790/productos/jls6koxxw7qwihxrvtgx.jpg"
+      ],
+      "variantes": {
+        "ejes": [
+          "Género"
+        ],
+        "opciones": [
+          "NIÑOS",
+          "NIÑAS"
+        ]
+      },
+      "maxOpciones": {
+        "NIÑOS": 9,
+        "NIÑAS": 5
+      },
+      "envio": {
+        "corto": "🛵 Gratis desde 2,000 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
+      },
+      "creado": 1793586236686
     },
     {
       "id": "p_1789411311758",
