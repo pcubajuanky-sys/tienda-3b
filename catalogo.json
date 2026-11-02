@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-02T13:31:55.006Z",
+  "generado": "2026-11-02T13:38:32.037Z",
   "tasa": 900,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -271,7 +271,20 @@
     ],
     "campana": null,
     "taxiActivo": true,
+    "electripowerActivo": true,
     "negocios": {
+      "electripower": {
+        "nombre": "Electripower",
+        "emoji": "⚡",
+        "whatsapp": "5358232664",
+        "quienSomos": "",
+        "garantia": "",
+        "politica": "",
+        "envioIncluidoTexto": "Mensajería incluida en San Antonio de los Baños y alrededores",
+        "envioAparteTexto": "Si estás más lejos, el transporte se coordina por WhatsApp",
+        "mensajeriaCUP": 0,
+        "envioGratisCUP": 0
+      },
       "delmar": {
         "nombre": "Del Mar",
         "emoji": "🐟",
