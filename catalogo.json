@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-04T11:00:56.462Z",
+  "generado": "2026-11-04T13:00:26.255Z",
   "tasa": 910,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -2187,37 +2187,6 @@
       },
       "envioGratis": true,
       "creado": 1788816392396
-    },
-    {
-      "id": "p_1791773820151",
-      "codigo": "UZZC",
-      "name": "Gafas Cristal Transparente CLÁSICAS",
-      "cat": "Accesorio de vestir",
-      "subcat": "",
-      "notes": "Gafas para uso nocturno con cristal anti luz azul. Ideal para el uso constante de pantallas como celular, televisor, laptop etc.. Hermoso y elegante accesorio para salidas,fotos y eventos",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791773684/productos/pzclpats8lmxuehmfebz.jpg",
-      "precioUSD": 3,
-      "precioCUP": 2730,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "variantes": {
-        "ejes": [
-          "Color"
-        ],
-        "opciones": [
-          "ROSA"
-        ]
-      },
-      "maxOpciones": {
-        "ROSA": 1
-      },
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1791773820151
     },
     {
       "id": "p_1791773233689",
