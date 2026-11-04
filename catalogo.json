@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-04T22:51:54.736Z",
+  "generado": "2026-11-04T23:35:27.355Z",
   "tasa": 915,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -115,6 +115,10 @@
     {
       "code": "X8TDA",
       "nombre": "Yenisey Budincevich Rodriguez"
+    },
+    {
+      "code": "HRZKW",
+      "nombre": "Katherine"
     }
   ],
   "categorias": [
