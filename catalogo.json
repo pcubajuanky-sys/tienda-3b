@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-04T13:00:26.255Z",
+  "generado": "2026-11-04T17:52:00.172Z",
   "tasa": 910,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -1149,7 +1149,7 @@
       "fotos": [
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1793417166/productos/a7htmptgfzfaw5mrfsyz.jpg"
       ],
-      "max": 9,
+      "max": 8,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -2210,7 +2210,7 @@
         ]
       },
       "maxOpciones": {
-        "PUMA": 2
+        "PUMA": 1
       },
       "envio": {
         "corto": "🛵 Mensajería gratis",
@@ -2279,9 +2279,7 @@
           "B"
         ]
       },
-      "maxOpciones": {
-        "B": 1
-      },
+      "espera": true,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -3658,7 +3656,7 @@
         ]
       },
       "maxOpciones": {
-        "S / NEGRO🖤": 2,
+        "S / NEGRO🖤": 1,
         "S / MARRÓN🤎": 2,
         "M / GRIS🩶": 2
       },
@@ -5751,14 +5749,12 @@
         ],
         "opciones": [
           "D",
-          "E",
-          "H"
+          "E"
         ]
       },
       "maxOpciones": {
         "D": 1,
-        "E": 2,
-        "H": 1
+        "E": 2
       },
       "envio": {
         "corto": "🛵 Mensajería gratis",
