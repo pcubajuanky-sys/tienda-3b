@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-05T17:21:07.052Z",
+  "generado": "2026-11-05T17:28:48.979Z",
   "tasa": 915,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -265,9 +265,9 @@
     "taxiActivo": true,
     "encargosActivo": true,
     "cierre": {
-      "activo": true,
-      "titulo": "🚀 Volvemos muy pronto",
-      "texto": "Ahora mismo no estamos tomando pedidos por la web. Mira el catálogo y vuelve en un rato: te esperamos."
+      "activo": false,
+      "titulo": "",
+      "texto": ""
     }
   },
   "encargos": {
@@ -3944,8 +3944,8 @@
       "subcat": "",
       "notes": "Organizador rodante (solo quedan negro)  de 3 niveles. Estante de almacenamiento multiusos con ruedas, ideal como organizador de oficina,cocina,vestidores etc . Diseño flexible y práctico para optimizar el espacio.",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785005561/productos/f38m61h7y1oudaa6np9v.jpg",
-      "precioUSD": 10,
-      "precioCUP": 9150,
+      "precioUSD": 12,
+      "precioCUP": 10980,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
