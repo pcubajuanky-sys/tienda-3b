@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-05T00:37:05.518Z",
+  "generado": "2026-11-05T01:50:52.440Z",
   "tasa": 915,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -119,6 +119,10 @@
     {
       "code": "HRZKW",
       "nombre": "Katherine"
+    },
+    {
+      "code": "JA6CK",
+      "nombre": "Eliany"
     }
   ],
   "categorias": [
