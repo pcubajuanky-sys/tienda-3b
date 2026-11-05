@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-05T13:57:07.309Z",
+  "generado": "2026-11-05T14:03:50.318Z",
   "tasa": 915,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -265,9 +265,9 @@
     "taxiActivo": true,
     "encargosActivo": true,
     "cierre": {
-      "activo": false,
-      "titulo": "",
-      "texto": ""
+      "activo": true,
+      "titulo": "🚀 Volvemos muy pronto",
+      "texto": "Ahora mismo no estamos tomando pedidos por la web. Mira el catálogo y vuelve en un rato: te esperamos."
     }
   },
   "encargos": {
@@ -2336,7 +2336,7 @@
         ]
       },
       "maxOpciones": {
-        "NEGRO": 2
+        "NEGRO": 1
       },
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
@@ -4620,7 +4620,7 @@
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1793413772/productos/xhqcltxcxsholgkenfdv.jpg",
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1793413778/productos/mxvttrhk36jkw0wty6e4.jpg"
       ],
-      "max": 4,
+      "max": 3,
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
