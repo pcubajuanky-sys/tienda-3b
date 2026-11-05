@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-05T14:04:05.291Z",
+  "generado": "2026-11-05T17:21:07.052Z",
   "tasa": 915,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -889,6 +889,31 @@
       "creado": 1785092425019
     },
     {
+      "id": "p_1787110390009",
+      "codigo": "KLNL",
+      "name": "Alarma de puertas y ventanas",
+      "cat": "Electrodomésticos",
+      "subcat": "",
+      "notes": "Alarma ideal para la protección de su casa, de habitaciones, closets o incluso gavetas, TODA SEGURIDAD ES POCA EN ESTOS TIEMPOS!!",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791861204/productos/eqbueci4m1g9m7wiqc8n.jpg",
+      "precioUSD": 2.5,
+      "precioCUP": 2288,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791861153/productos/fq3kfhciqxzputkxgkcr.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791861189/productos/p8le721er1pxu07hxvbm.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791861197/productos/gx9lfooymrsxtb8perrj.jpg"
+      ],
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1787110390009
+    },
+    {
       "id": "p_1787498809174",
       "codigo": "RWLZ",
       "name": "Anillos de acero quirúrgico",
@@ -1140,6 +1165,27 @@
       "creado": 1781552195237,
       "precioNormalUSD": 0.7,
       "precioNormalCUP": 641
+    },
+    {
+      "id": "p_1786803816356",
+      "codigo": "DU4A",
+      "name": "Audífonos inalámbricos X15",
+      "cat": "Bocinas Celulares y Accesorios",
+      "subcat": "",
+      "notes": "Audífonos inalámbricos X15, ligeros y con su estuche de carga.",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786803730/productos/p34guyzzkxjrpwyw39ya.jpg",
+      "precioUSD": 5,
+      "precioCUP": 4575,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "max": 8,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1786803816357
     },
     {
       "id": "p_1793417401142",
@@ -1707,6 +1753,25 @@
       "creado": 1788049609744
     },
     {
+      "id": "p_1781005646366",
+      "codigo": "29UZ",
+      "name": "Cierre de seguridad cuadrado",
+      "cat": "Hogar",
+      "subcat": "",
+      "notes": "",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787956248/productos/tmjn00gx14lhjzoftwbx.jpg",
+      "precioUSD": 0,
+      "precioCUP": 0,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde 2,000 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
+      },
+      "creado": 1781005646366
+    },
+    {
       "id": "p_1792960285642",
       "codigo": "8255",
       "name": "Cintas elastizadas para el pelo",
@@ -2195,6 +2260,41 @@
       },
       "envioGratis": true,
       "creado": 1788816392396
+    },
+    {
+      "id": "p_1785357151546",
+      "codigo": "Y7AU",
+      "name": "Fajas reforzadas",
+      "cat": "Gym y Suplementos",
+      "subcat": "",
+      "notes": "Faja negra, reforzada ,de alta calidad, ideal para el uso diario y para el gim. Doble cierre y varillas con función de corset, reductora de vientre y cintura",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785357112/productos/dz1cu8j2jdy3tlzcpvjn.jpg",
+      "precioUSD": 10,
+      "precioCUP": 9150,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Tallas"
+        ],
+        "opciones": [
+          "XS",
+          "S",
+          "M"
+        ]
+      },
+      "maxOpciones": {
+        "XS": 2,
+        "S": 3,
+        "M": 3
+      },
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1785357151546
     },
     {
       "id": "p_1791773233689",
@@ -2780,6 +2880,27 @@
       },
       "envioGratis": true,
       "creado": 1793418630130
+    },
+    {
+      "id": "p_1791138282149",
+      "codigo": "BGXQ",
+      "name": "Kit de Máquinas de Pelar y Afeitar",
+      "cat": "Electrodomésticos",
+      "subcat": "",
+      "notes": "Kit de afeitado y corte de pelo para hombre de 3 piezas. Set de caja de regalo para el Día de San Valentín. Recargable por USB. Regalo para novio, regalo del Día del Padre, regalo de cumpleaños, regalo de festividades",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791138172/productos/q6cquakboa0pgukho4am.jpg",
+      "precioUSD": 30,
+      "precioCUP": 27450,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "max": 5,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1791138282149
     },
     {
       "id": "p_1782259495565",
@@ -3392,6 +3513,32 @@
       "creado": 1789255852332
     },
     {
+      "id": "p_1790795440877",
+      "codigo": "54WG",
+      "name": "Medidor de presión",
+      "cat": "Electrodomésticos",
+      "subcat": "",
+      "notes": "Incluye todo lo de la imagen. Solo en color rosado. Funciona o con conexión USB o con pilas ( no incluidas).",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791896222/productos/crb3qw8fbzp4toylktze.jpg",
+      "precioUSD": 25,
+      "precioCUP": 22875,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791896167/productos/x3emxzkvljabovwmceng.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791896193/productos/bzkupirfjeoaidp2zgk5.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791896212/productos/wf2bsewh8zmcrkoxncag.jpg"
+      ],
+      "max": 5,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1790795440877
+    },
+    {
       "id": "p_1786916805434",
       "codigo": "2ZW2",
       "name": "Mini Bloques-Lima de uñas",
@@ -3788,6 +3935,27 @@
       },
       "envioGratis": true,
       "creado": 1785183311846
+    },
+    {
+      "id": "p_1785006026614",
+      "codigo": "PYWJ",
+      "name": "Organizador Rodante 2 pisos",
+      "cat": "Muebles",
+      "subcat": "",
+      "notes": "Organizador rodante (solo quedan negro)  de 3 niveles. Estante de almacenamiento multiusos con ruedas, ideal como organizador de oficina,cocina,vestidores etc . Diseño flexible y práctico para optimizar el espacio.",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785005561/productos/f38m61h7y1oudaa6np9v.jpg",
+      "precioUSD": 10,
+      "precioCUP": 9150,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "max": 5,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1785006026615
     },
     {
       "id": "p_1788730145038",
@@ -5121,6 +5289,30 @@
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
       },
       "creado": 1782329655762
+    },
+    {
+      "id": "p_1788133110062",
+      "codigo": "Z9ND",
+      "name": "Pezoneras de silicona",
+      "cat": "Ropa Interior",
+      "subcat": "",
+      "notes": "Parejas de pezoneras de silicona",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792975543/productos/cprjrjveyflqz29gf6ij.jpg",
+      "precioUSD": 1,
+      "precioCUP": 915,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792975496/productos/kkxpxlnm9eycw8fu9adu.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792975502/productos/epjtu83wg3rpvnrvsf0m.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792975505/productos/cduo86m6dsz2wrqtchss.jpg"
+      ],
+      "envio": {
+        "corto": "🛵 Gratis desde 2,000 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
+      },
+      "creado": 1788133110062
     },
     {
       "id": "p_1786922817374",
