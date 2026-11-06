@@ -531,7 +531,7 @@ a{color:inherit}
   .cat3d-emoji{min-width:30px;height:30px;font-size:15px}
 }
 .cat3d-n{
-  display:block;margin-top:3px;font-size:11px;color:var(--text-3);font-weight:500;
+  display:block;margin-top:3px;font-size:var(--t-xs);color:var(--text-3);font-weight:500;
   overflow:hidden;white-space:nowrap;text-overflow:ellipsis;
 }
 @media (hover:hover) and (pointer:fine){
@@ -646,7 +646,7 @@ main{padding-top:20px}
 .desglose-linea{display:flex;justify-content:space-between;gap:8px;font-size:13px;padding:2px 0;color:var(--text-2)}
 .desglose-linea span:last-child{font-weight:700;color:var(--text)}
 .desglose-cup{font-size:12px;font-weight:500;margin-left:6px}
-.desglose-nota{font-size:11px;color:var(--text-2);line-height:1.35;margin:2px 0 6px}
+.desglose-nota{font-size:var(--t-xs);color:var(--text-2);line-height:1.35;margin:2px 0 6px}
 .desglose-total{margin-top:6px;padding-top:8px;border-top:1px solid var(--border)}
 .desglose-total span{font-size:16px;font-weight:800;color:var(--text)}
 /* La fila del descuento del carrito. Rojo de oferta porque es la buena noticia del desglose, no
@@ -662,7 +662,7 @@ main{padding-top:20px}
    contraste a propósito (--text-2, no --text-3: el terciario no llega al
    mínimo AA sobre el fondo claro). Vacío ⇒ no se pinta nada (lo decide
    renderCarrito() con el atributo hidden). ── */
-.politica-texto{font-size:11px;color:var(--text-2);line-height:1.4;margin:8px 0;white-space:pre-line}
+.politica-texto{font-size:var(--t-xs);color:var(--text-2);line-height:1.4;margin:8px 0;white-space:pre-line}
 /* Sin sombra en reposo: con 224 tarjetas, una sombra de 24px de blur en cada
    una ensucia el fondo y se lee como algo de 2015. Borde fino en reposo,
    elevación solo al pasar por encima. */
@@ -724,7 +724,7 @@ main{padding-top:20px}
 }
 .card-oferta{
   background:var(--oferta);color:var(--oferta-ink);
-  font-size:10px;font-weight:800;letter-spacing:.03em;padding:var(--e0) var(--e1);border-radius:var(--radio-pill);
+  font-size:11px;font-weight:800;letter-spacing:.03em;padding:var(--e0) var(--e1);border-radius:var(--radio-pill);
 }
 .card .body{padding:var(--e2);display:flex;flex-direction:column;gap:var(--e0);flex:1}
 .card .nom{
@@ -986,7 +986,7 @@ body.con-barra-movil{padding-bottom:var(--barra-movil-h, 84px)}
 .total-pagas{margin-top:6px;padding-top:8px;border-top:1px solid var(--border)}
 /* La tasa con la que esta hecha la conversion de arriba. Mas tenue que el total en USD
    a proposito: es el dato que respalda la cifra, no la cifra. */
-.total-tasa{display:block;font-size:11px;color:var(--text-3);font-weight:500;margin-top:2px}
+.total-tasa{display:block;font-size:var(--t-xs);color:var(--text-3);font-weight:500;margin-top:2px}
 .campos{display:flex;flex-direction:column;gap:12px;margin-top:4px}
 .campo{display:flex;flex-direction:column;gap:5px;font-size:12px;font-weight:600;color:var(--text-2)}
 .campo input,.campo textarea{
@@ -1001,7 +1001,7 @@ body.con-barra-movil{padding-bottom:var(--barra-movil-h, 84px)}
 .campo input.invalido,.campo textarea.invalido{border-color:var(--error)}
 .campo-error{color:var(--error);font-size:12px;font-weight:600}
 .btn-enviar{width:100%;font-size:var(--t-lg);margin-top:var(--e0)}
-.aviso{font-size:11px;color:var(--text-3);text-align:center;margin-top:10px}
+.aviso{font-size:var(--t-xs);color:var(--text-3);text-align:center;margin-top:10px}
 
 /* Pago por adelantado con QvaPay (2026-08-16) — opcional y discreto a
    propósito: el camino normal sigue siendo "Pedir por WhatsApp"
@@ -1018,13 +1018,13 @@ body.con-barra-movil{padding-bottom:var(--barra-movil-h, 84px)}
 /* Dominio de destino junto al texto del enlace (2026-08-16): el cliente tiene
    derecho a ver a dónde va el pago antes de pulsar. Más chico que el texto
    principal, sin subrayado propio (hereda el del enlace). */
-.pago-dominio{font-size:10px;font-weight:400;text-decoration:none}
-.pago-nota{font-size:11px;color:var(--text-3);line-height:1.4;margin-top:3px}
+.pago-dominio{font-size:var(--t-xs);font-weight:400;text-decoration:none}
+.pago-nota{font-size:var(--t-xs);color:var(--text-3);line-height:1.4;margin-top:3px}
 
 /* Enlace a términos y condiciones, encima del botón de pedir (panel y aside).
    Convive con .politica-texto/.aviso sin amontonarse: usa --text-2 (mismo
    mínimo AA que .politica-texto) y el enlace en --brand para que destaque. */
-.terminos-nota{font-size:11px;color:var(--text-2);line-height:1.4;margin:8px 0}
+.terminos-nota{font-size:var(--t-xs);color:var(--text-2);line-height:1.4;margin:8px 0}
 .terminos-nota a{color:var(--brand);font-weight:700;text-decoration:underline}
 
 /* Pie: enlace a términos, junto al aviso de la tasa. */
@@ -1062,20 +1062,21 @@ body.con-barra-movil{padding-bottom:var(--barra-movil-h, 84px)}
 /* ── Reclamo de gestores dentro del catálogo ──
    Ocupa la fila entera de la rejilla (grid-column:1/-1) para que se lea como
    una pieza aparte y no compita en tamaño con las tarjetas de producto.
-   El relieve es un borde inferior sólido, NO una sombra difuminada: se ve
-   igual de bien en móvil y no ensucia el fondo claro. */
+   Relieve con la sombra suave del sistema (--sombra-1, --sombra-2 al pasar), no
+   con un borde inferior grueso: ese borde chocaba con las esquinas redondas
+   (pulido 2026-11-06). */
 .cta-comi{
   grid-column:1/-1;
   background:var(--brand);color:var(--brand-ink);
-  border:none;border-bottom:4px solid var(--brand-hondo);
+  border:none;box-shadow:var(--sombra-1);
   border-radius:var(--radio-card);
   padding:var(--e4);margin:var(--e1) 0;
   display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;
   text-align:left;width:100%;font:inherit;cursor:pointer;
-  transition:transform var(--dur), border-bottom-width var(--dur);
+  transition:transform var(--dur), box-shadow var(--dur);
 }
-.cta-comi:hover{transform:translateY(-1px)}
-.cta-comi:active{transform:translateY(3px);border-bottom-width:2px}
+.cta-comi:hover{transform:translateY(-1px);box-shadow:var(--sombra-2)}
+.cta-comi:active{transform:translateY(1px);box-shadow:var(--sombra-1)}
 .cta-comi-txt{flex:1 1 220px;min-width:0}
 /* display:block en los dos (2026-09-09): son <span>, y sin esto el titulo y la
    explicacion se pegan en la misma linea y el titulo se pierde dentro de la frase. */
@@ -1120,7 +1121,7 @@ button.footer-link{background:none;border:none;font-family:inherit;cursor:pointe
 @media (min-width:700px){ .mv-tira .card{flex-basis:210px} }
 .card-mv{
   background:var(--brand);color:var(--brand-ink);
-  font-size:10px;font-weight:800;letter-spacing:.03em;padding:var(--e0) var(--e1);border-radius:var(--radio-pill);
+  font-size:11px;font-weight:800;letter-spacing:.03em;padding:var(--e0) var(--e1);border-radius:var(--radio-pill);
 }
 
 /* Tallas (2026-09-06). El chip elegido se marca con el color de marca; el que no
@@ -1270,7 +1271,7 @@ button.footer-link{background:none;border:none;font-family:inherit;cursor:pointe
   grid-column:1/-1;width:100%;margin:var(--e3) 0 var(--e1);padding:var(--e3);
   display:grid;grid-template-columns:auto 1fr;gap:var(--e2) var(--e3);align-items:center;
   background:var(--surface);color:var(--text);
-  border:1px solid var(--border);border-left:4px solid var(--brand);border-radius:var(--radio-card);
+  border:1px solid var(--border);border-radius:var(--radio-card);
   box-shadow:var(--sombra-1);font:inherit;text-align:left;cursor:pointer;
   transition:border-color var(--dur), transform var(--dur);
 }

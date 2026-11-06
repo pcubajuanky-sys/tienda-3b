@@ -137,7 +137,7 @@ function fotoDetalle(url) {
 }
 
 function fotoMosaico(url) {
-  return esCloudinary(url) ? fotoUrl(url, 'f_auto,q_auto,w_200,c_limit') : url;
+  return esCloudinary(url) ? fotoUrl(url, 'f_auto,q_auto:eco,w_120,c_limit') : url;
 }
 
 // Marcador con la inicial cuando la foto no carga (tarjetas de producto y modal).
