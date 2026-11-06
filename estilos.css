@@ -1656,3 +1656,48 @@ body[data-negocio]{--acento:var(--brand);--acento-ink:var(--brand-ink)}
 /* Lo que no dibujamos también lleva la marca. */
 ::selection{background:var(--acento);color:var(--acento-ink)}
 :root{accent-color:var(--brand);caret-color:var(--brand)}
+
+/* ══ Botones con relieve (2026-11-06) ═════════════════════════════════════
+   Petición de Ruth: «Añadir», «Quiero mi enlace» y compañía un poco más 3D, para
+   que la página no se vea tan plana. Sin imágenes: una luz arriba (degradado +
+   brillo interior de 1px), un canto oscuro abajo y una sombra suave con desplazamiento.
+   Al pulsar se HUNDE (sombra hacia dentro), que es lo que confirma el toque en el móvil.
+   El color sigue saliendo de los tokens: solo se le suma luz y sombra encima. */
+.btn-primario,.btn-wa,.btn-contraste,.cta-comi-btn{
+  background-image:linear-gradient(180deg,rgba(255,255,255,.16) 0%,rgba(255,255,255,0) 52%,rgba(0,0,0,.14) 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.22),
+    inset 0 -2px 0 rgba(0,0,0,.28),
+    0 2px 3px rgba(0,0,0,.16),
+    0 6px 14px -6px rgba(0,0,0,.35);
+}
+.btn-primario:not([disabled]):hover,.btn-wa:not([disabled]):hover,.btn-contraste:hover,.cta-comi:hover .cta-comi-btn{
+  transform:translateY(-1px);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.26),
+    inset 0 -2px 0 rgba(0,0,0,.28),
+    0 3px 5px rgba(0,0,0,.18),
+    0 10px 20px -8px rgba(0,0,0,.40);
+}
+.btn-primario:not([disabled]):active,.btn-wa:not([disabled]):active,.btn-contraste:active,.cta-comi:active .cta-comi-btn{
+  transform:translateY(1px);
+  background-image:linear-gradient(180deg,rgba(0,0,0,.10),rgba(255,255,255,0) 60%);
+  box-shadow:inset 0 2px 5px rgba(0,0,0,.35),0 1px 1px rgba(0,0,0,.10);
+}
+.btn-primario[disabled],.btn-wa[disabled]{box-shadow:none;background-image:none}
+
+/* Los + y − de la cantidad: el mismo relieve, más discreto (son botones claros). */
+.qty button{
+  background-image:linear-gradient(180deg,rgba(255,255,255,.55),rgba(255,255,255,0) 60%);
+  box-shadow:inset 0 -1px 0 rgba(0,0,0,.10),0 1px 2px rgba(0,0,0,.10);
+  transition:transform var(--dur) var(--ease),box-shadow var(--dur) var(--ease);
+}
+.qty button:not(:disabled):active{transform:translateY(1px);box-shadow:inset 0 2px 4px rgba(0,0,0,.18)}
+@media (prefers-color-scheme: dark){
+  .qty button{background-image:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,0) 60%);
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.06),0 1px 2px rgba(0,0,0,.45)}
+}
+
+@media (prefers-reduced-motion: reduce){
+  .btn-primario,.btn-wa,.btn-contraste,.cta-comi-btn,.qty button{transform:none !important}
+}
