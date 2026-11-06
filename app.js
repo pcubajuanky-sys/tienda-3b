@@ -1145,10 +1145,17 @@ function unidadesEnCarrito() {
   return Object.values(carrito).reduce((s, q) => s + q, 0);
 }
 
+let unidadesAntes = unidadesEnCarrito();
 function guardarCarrito() {
   localStorage.setItem(CLAVE_CARRITO, JSON.stringify(carrito));
   const n = unidadesEnCarrito();
   document.getElementById('carrito-count').textContent = n;
+  // El carrito salta solo cuando ENTRA algo (no al quitar ni al cargar la página).
+  if (n > unidadesAntes) {
+    const btn = document.getElementById('btn-carrito');
+    if (btn) { btn.classList.remove('salta'); void btn.offsetWidth; btn.classList.add('salta'); }
+  }
+  unidadesAntes = n;
   actualizarBarraMovil();
 }
 

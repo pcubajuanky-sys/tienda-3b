@@ -31,23 +31,28 @@
 
 :root{
   /* Claro */
-  --bg:        #FAF7F5;
+  --bg:        #F6F6F5;
   --surface:   #FFFFFF;
-  --surface-2: #F3EDEA;
-  --text:      #1C1A22;
-  --text-2:    #5C5560;
+  --surface-2: #EEEEEC;
+  --text:      #111114;
+  --text-2:    #4E4E55;
   /* 🔴 No lo aclares de vuelta. #857D89 daba 3,72:1 sobre el fondo y 3,42:1 sobre las
      zonas grises, y este token pinta el total en USD del carrito y la nota de la tasa
      a 11-12px. Este: 5,10 / 5,44 / 4,69:1. Sigue siendo el tercer nivel de la jerarquia
      —se ve claramente mas tenue que --text-2—, pero ahora se lee. En modo oscuro el
      token NO cambia: alli ya pasaba (4,60-5,66:1). */
-  --text-3:    #6F6773;
-  --border:    #E9E0DB;
-  --brand:     #7A2E5D;
+  --text-3:    #65656C;
+  --border:    #E2E2DF;
+  /* Rojo del logo (2026-11-06). #C8161D y no el #E01F26 brillante del emblema: con
+     blanco encima da 5,9:1 y como texto sobre el fondo 5,4:1 (AA). El brillante queda
+     solo para el arco decorativo de la portada (--marca-viva). */
+  --brand:     #C8161D;
   --brand-ink: #FFFFFF;
-  --brand-soft:#F7E9F2;
-  --brand-hondo:#4E1D3B;
-  --oferta:    #C81E4C;
+  --brand-soft:#FCE9EA;
+  --brand-hondo:#8E0F14;
+  --marca-viva:#E01F26;
+  --negro:     #0D0D0F;
+  --oferta:    #C8161D;
   /* Tinta del sello OFERTA. Va en un token y NO escrita a mano, porque --oferta se
      invierte en modo oscuro y el blanco fijo caia a 2.23:1 (medido en el sitio vivo
      el 2026-10-27). Blanco sobre el rojo claro: 5,61:1. */
@@ -64,15 +69,15 @@
 
   /* Portada: tonos PROPIOS que NO se invierten en oscuro. Sin esto, --brand
      pasa a rosa claro en modo oscuro y la portada entera se vuelve rosa chicle. */
-  --hero-1:    #8C3A6D;
-  --hero-2:    #4E1D3B;
+  --hero-1:    #1C1C20;
+  --hero-2:    #08080A;
   --hero-ink:  #FFFFFF;
   /* El botón principal de la portada vive SIEMPRE sobre ciruela, así que su
      color no puede depender del tema. Con --surface/--brand se volvía una caja
      casi negra con letra rosa en modo oscuro y dejaba de leerse como el botón
      principal. Blanco sobre ciruela: 8,9:1. */
-  --hero-btn-bg:  #FFFFFF;
-  --hero-btn-ink: #7A2E5D;
+  --hero-btn-bg:  #E01F26;
+  --hero-btn-ink: #FFFFFF;
 
   /* Escala de espaciado. Antes había 40+ números sueltos y cada pieza nueva
      llegaba con medidas propias: esa era la causa de que los dos botones de la
@@ -97,9 +102,9 @@
   /* Tres niveles, no uno. La sombra única de antes (blur 24px) se aplicaba
      igual a una tarjeta de producto que a una hoja modal, y en una parrilla de
      224 tarjetas eso ensucia el fondo. */
-  --sombra-1: 0 1px 2px rgba(28,26,34,.05);
-  --sombra-2: 0 2px 6px rgba(28,26,34,.08), 0 10px 24px rgba(28,26,34,.10);
-  --sombra-3: 0 -2px 8px rgba(28,26,34,.06), 0 18px 48px rgba(28,26,34,.20);
+  --sombra-1: 0 1px 2px rgba(17,17,20,.05);
+  --sombra-2: 0 2px 6px rgba(17,17,20,.08), 0 10px 24px rgba(17,17,20,.10);
+  --sombra-3: 0 -2px 8px rgba(17,17,20,.06), 0 18px 48px rgba(17,17,20,.20);
   /* Alias: las reglas que aún no se han migrado siguen funcionando. */
   --sombra: var(--sombra-1);
 
@@ -112,21 +117,21 @@
 
 @media (prefers-color-scheme: dark){
   :root{
-    --bg:        #141017;
-    --surface:   #1E1822;
-    --surface-2: #2A2231;
-    --text:      #F6F1F4;
-    --text-2:    #BDB2BB;
-    --text-3:    #948A93;
-    --border:    #332A3B;
-    --brand:     #E9A8CE;
-    --brand-ink: #2A0E20;
-    --brand-soft:#2E1B29;
-    --brand-hondo:#C77FA9;
-    --oferta:    #FF8AA6;
+    --bg:        #0E0E10;
+    --surface:   #18181B;
+    --surface-2: #232327;
+    --text:      #F4F4F5;
+    --text-2:    #BABAC0;
+    --text-3:    #92929A;
+    --border:    #2E2E33;
+    --brand:     #FF6166;
+    --brand-ink: #1A0506;
+    --brand-soft:#2B1416;
+    --brand-hondo:#FF8D90;
+    --oferta:    #FF6166;
     /* Sobre el rosa claro la tinta tiene que ser OSCURA: blanco daba 2,23:1. Este
        mismo valor es el que ya usa --brand-ink y el sello ⭐ MAS VENDIDO. 7,98:1. */
-    --oferta-ink:#2A0E20;
+    --oferta-ink:#1A0506;
     /* 8,24 / 7,61 / 6,71:1 sobre los tres fondos oscuros. */
     --error:     #FF8A80;
     /* Sobre fondo oscuro una sombra gris no se ve: solo funciona el negro. Los
@@ -233,7 +238,7 @@ a{color:inherit}
   border-bottom:1px solid transparent;
   transition:border-color var(--dur), box-shadow var(--dur), padding var(--dur);
 }
-.header.compacta{border-bottom-color:var(--border);box-shadow:0 2px 8px rgba(28,26,34,.05)}
+.header.compacta{border-bottom-color:var(--border);box-shadow:0 2px 8px rgba(17,17,20,.05)}
 .header-top{display:flex;align-items:center;justify-content:space-between;gap:var(--e2);padding:var(--e1) var(--e3)}
 .header.compacta .header-top{padding:var(--e0) var(--e3)}
 .logo{display:inline-flex;align-items:center;text-decoration:none}
@@ -251,7 +256,7 @@ a{color:inherit}
   crema. Al no depender de los tokens que cambian con el tema, el contraste
   letra-sobre-placa es idéntico en claro y oscuro (verificado ≥4.5:1 los dos).
 */
-.logo-badge{fill:#7A2E5D; stroke:rgba(242,180,65,.4); stroke-width:1}
+.logo-badge{fill:#0D0D0F; stroke:rgba(224,31,38,.5); stroke-width:1}
 .logo-mono{
   font-family:ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size:20px;font-weight:800;fill:#F2B441;
@@ -294,7 +299,7 @@ a{color:inherit}
 .hero-mosaico{
   position:absolute;inset:0;display:grid;
   grid-template-columns:repeat(6,1fr);grid-template-rows:repeat(2,1fr);
-  gap:2px;opacity:.42;filter:blur(2px) saturate(.85) brightness(.75);
+  gap:2px;opacity:.42;filter:blur(2px) grayscale(1) brightness(.75);
 }
 .hero-mosaico img{width:100%;height:100%;object-fit:cover;display:block}
 /* Velo VERTICAL en vez de un velo plano que repetía el fondo: denso donde va el
@@ -303,10 +308,10 @@ a{color:inherit}
 .hero-velo{
   position:absolute;inset:0;
   background:linear-gradient(180deg,
-    rgba(42,15,33,.86) 0%,
-    rgba(42,15,33,.72) 40%,
-    rgba(42,15,33,.80) 72%,
-    rgba(42,15,33,.94) 100%);
+    rgba(10,10,12,.86) 0%,
+    rgba(10,10,12,.70) 40%,
+    rgba(10,10,12,.80) 72%,
+    rgba(10,10,12,.95) 100%);
 }
 .hero-contenido{position:relative;padding:var(--e4) var(--e3) var(--e4);text-align:center}
 .hero-logo{display:flex;justify-content:center;margin-bottom:var(--e1)}
@@ -858,7 +863,7 @@ body.con-barra-movil{padding-bottom:var(--barra-movil-h, 84px)}
 
 /* ── Modal detalle de producto ── */
 .modal{position:fixed;inset:0;z-index:30;display:flex;align-items:flex-end;justify-content:center}
-.modal-fondo{position:absolute;inset:0;background:rgba(20,16,23,.6);-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px)}
+.modal-fondo{position:absolute;inset:0;background:rgba(10,10,12,.6);-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px)}
 .modal-caja{
   position:relative;background:var(--surface);width:100%;max-width:560px;max-height:92vh;
   overflow-y:auto;border-radius:var(--radio-hoja) var(--radio-hoja) 0 0;box-shadow:var(--sombra-3);
@@ -932,7 +937,7 @@ body.con-barra-movil{padding-bottom:var(--barra-movil-h, 84px)}
 
 /* ── Carrito (hoja) ── */
 .panel{position:fixed;inset:0;z-index:30;display:flex;align-items:flex-end;justify-content:center}
-.panel-fondo{position:absolute;inset:0;background:rgba(20,16,23,.6);-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px)}
+.panel-fondo{position:absolute;inset:0;background:rgba(10,10,12,.6);-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px)}
 .panel-caja{
   position:relative;background:var(--surface);width:100%;max-width:520px;max-height:92vh;
   overflow-y:auto;border-radius:var(--radio-hoja) var(--radio-hoja) 0 0;padding:var(--e4);box-shadow:var(--sombra-3);
@@ -1120,7 +1125,7 @@ button.footer-link{background:none;border:none;font-family:inherit;cursor:pointe
 .mv-tira .card{flex:0 0 40%;scroll-snap-align:start;max-width:230px}
 @media (min-width:700px){ .mv-tira .card{flex-basis:210px} }
 .card-mv{
-  background:var(--brand);color:var(--brand-ink);
+  background:var(--negro);color:#FFFFFF;
   font-size:11px;font-weight:800;letter-spacing:.03em;padding:var(--e0) var(--e1);border-radius:var(--radio-pill);
 }
 
@@ -1587,3 +1592,59 @@ body[data-negocio="electripower"] .dm-titulo::after{background:var(--ep-naranja)
 body[data-negocio="electripower"] #footer-quienes,
 body[data-negocio="electripower"] #footer-contacto,
 body[data-negocio="electripower"] .footer-terminos{display:none!important}
+
+/* ══ Marca del logo (2026-11-06) ═══════════════════════════════════════════
+   Solo la tienda de 3B (<body class="mundo-tienda">): Electripower, Del Mar y el
+   taxi conservan su cabecera. Todo en CSS, sin imágenes ni librerías nuevas. */
+
+/* Cabecera negra, como la placa del logo. Se redefinen los tokens DENTRO de la
+   cabecera para que buscador, carrito y logos se recoloreen solos. */
+.mundo-tienda .header{
+  background:var(--negro);color:#F4F4F5;
+  --surface:#141417;--surface-2:#1E1E22;--border:#303036;
+  --text:#F4F4F5;--text-2:#C6C6CC;--text-3:#A2A2A9;
+}
+.mundo-tienda .header.compacta{border-bottom-color:#303036;box-shadow:0 2px 12px rgba(0,0,0,.35)}
+
+/* Títulos de sección en mayúsculas espaciadas, como el «STORE» del logo, con una
+   raya corta de la marca debajo (no es una franja lateral: es la firma del título). */
+.mundo-tienda .categorias-3d-titulo,
+.mundo-tienda .grid-titulo,
+.mundo-tienda .mv-titulo,
+.mundo-tienda .servicios-titulo{
+  font-size:var(--t-lg);font-weight:800;text-transform:uppercase;letter-spacing:.07em;line-height:1.2;
+}
+.mundo-tienda .categorias-3d-titulo::after,
+.mundo-tienda .grid-titulo::after,
+.mundo-tienda .mv-titulo::after,
+.mundo-tienda .servicios-titulo::after{
+  content:"";display:block;width:28px;height:3px;margin-top:6px;border-radius:2px;background:var(--brand);
+}
+
+/* Arco rojo al pie de la portada: el trazo del logo, dibujado una sola vez al abrir.
+   pathLength="1" permite animar con dasharray 1 sin medir el trazo. */
+.hero-arco{position:absolute;left:0;right:0;bottom:0;width:100%;height:34px;display:block;pointer-events:none}
+.hero-arco path{
+  fill:none;stroke:var(--marca-viva);stroke-width:3;stroke-linecap:round;vector-effect:non-scaling-stroke;
+  stroke-dasharray:1;stroke-dashoffset:1;animation:arco-dibuja 1.1s cubic-bezier(.16,1,.3,1) .25s forwards;
+}
+.hero-arco .arco-plata{stroke:rgba(255,255,255,.35);stroke-width:1.5;animation-delay:.45s}
+@keyframes arco-dibuja{to{stroke-dashoffset:0}}
+
+/* El carrito salta cuando entra un producto: confirma sin abrir nada. */
+.btn-carrito.salta .carrito-count{animation:carrito-salta .45s cubic-bezier(.16,1,.3,1)}
+@keyframes carrito-salta{
+  0%{transform:scale(1)}
+  35%{transform:scale(1.35) rotate(-8deg)}
+  65%{transform:scale(.92) rotate(3deg)}
+  100%{transform:scale(1)}
+}
+
+@media (prefers-reduced-motion: reduce){
+  .hero-arco path{animation:none;stroke-dashoffset:0}
+  .btn-carrito.salta .carrito-count{animation:none}
+}
+
+/* Lo que no dibujamos también lleva la marca. */
+::selection{background:var(--brand);color:var(--brand-ink)}
+:root{accent-color:var(--brand);caret-color:var(--brand)}

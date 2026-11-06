@@ -22,7 +22,7 @@
   var Y_FRASE = ALTO_FOTO + 465;
   var Y_PIE = ALTO_FOTO + 595;    // centro del logo; con 96 px de alto acaba en 1683
   var ANCHO_TEXTO = 960; // 1080 menos 60 de margen a cada lado
-  var COLOR_MARCA = '#7A2E5D';
+  var COLOR_MARCA = '#C8161D';
   var FUENTE = 'system-ui, sans-serif'; // sin webfonts: la CSP no tiene font-src
 
   // Mismo formato de miles que fmt() de app.js.
