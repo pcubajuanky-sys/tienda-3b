@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-06T00:52:09.100Z",
+  "generado": "2026-11-06T02:20:11.577Z",
   "tasa": 920,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -123,6 +123,10 @@
     {
       "code": "JA6CK",
       "nombre": "Eliany"
+    },
+    {
+      "code": "3CWCU",
+      "nombre": "Vilma Carbonell de la Torre"
     }
   ],
   "categorias": [
@@ -2873,7 +2877,7 @@
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1793418462/productos/ckxuakndy1vpvotodjha.jpg",
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1793418466/productos/ep5iiqghxigmftjjqzok.jpg"
       ],
-      "max": 9,
+      "max": 8,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
