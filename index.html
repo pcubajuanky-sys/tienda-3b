@@ -217,11 +217,12 @@
 <section class="confianza wrap" aria-labelledby="confianza-titulo">
   <h2 id="confianza-titulo" class="sr-only">Cómo comprar en 3B</h2>
   <ol class="pasos">
-    <li class="paso"><span class="paso-n" aria-hidden="true">1</span><span class="paso-txt"><b>Elige</b> lo que te guste y añádelo a tu pedido.</span></li>
-    <li class="paso"><span class="paso-n" aria-hidden="true">2</span><span class="paso-txt"><b>Pide por WhatsApp.</b> El mensaje sale escrito solo.</span></li>
-    <li class="paso"><span class="paso-n" aria-hidden="true">3</span><span class="paso-txt"><b>Recibes y revisas</b> antes de pagar.</span></li>
+    <li class="paso"><span class="paso-n" aria-hidden="true">1</span><span class="paso-txt"><b>Elige</b><span class="paso-mas"> lo que te guste y añádelo a tu pedido.</span></span></li>
+    <li class="paso"><span class="paso-n" aria-hidden="true">2</span><span class="paso-txt"><b>Pide por WhatsApp</b><span class="paso-mas">. El mensaje sale escrito solo.</span></span></li>
+    <li class="paso"><span class="paso-n" aria-hidden="true">3</span><span class="paso-txt"><b>Recibes y revisas antes de pagar</b></span></li>
   </ol>
   <p class="garantia" id="garantia" hidden></p>
+  <a class="faq-enlace" id="faq-enlace" href="#faq" hidden>¿Dudas? Mira las preguntas frecuentes ↓</a>
 </section>
 <div class="contenido">
   <section class="categorias-3d-wrap" aria-label="Categorías">
@@ -314,6 +315,13 @@
     <div id="lateral-pago-wrap" class="pago-wrap" hidden></div>
   </aside>
 </div>
+
+<!-- Preguntas frecuentes (2026-11-06). La pinta renderFaq() en app.js SOLO con datos que
+     publica Stock+ (garantía, política, zonas, tarifas): una pregunta sin dato no sale. -->
+<section id="faq" class="faq wrap" hidden aria-labelledby="faq-titulo">
+  <h2 id="faq-titulo" class="faq-titulo">Preguntas frecuentes</h2>
+  <div id="faq-lista" class="faq-lista"></div>
+</section>
 
 <footer class="footer">
   <div class="wrap footer-wrap">
@@ -499,13 +507,17 @@
       </label>
       <p id="panel-politica" class="politica-texto" hidden></p>
       <p id="panel-terminos" class="terminos-nota" hidden>Al pedir aceptas <a href="terminos.html" target="_blank" rel="noopener">nuestros términos</a>.</p>
+      <ol class="que-pasa" aria-label="Qué pasa cuando pides">
+        <li><span><b>Se abre WhatsApp</b> con tu pedido ya escrito.</span></li>
+        <li><span><b>Pulsa Enviar</b> y te confirmamos disponibilidad y mensajería.</span></li>
+        <li><span><b>Pagas al recibir</b>, después de revisar todo.</span></li>
+      </ol>
       <button id="btn-enviar" class="btn btn-wa btn-enviar" type="submit">Pedir por WhatsApp</button>
       <!-- Pago por adelantado con QvaPay (2026-08-16, opcional): tienda.pagoUrl.
            Secundario a propósito, nunca más prominente que "Pedir por
            WhatsApp" (ver .pago-link en estilos.css). Contenido lo pinta
            pagoWrapHtml() en app.js; vacío/ausente ⇒ hidden y sin contenido. -->
       <div id="panel-pago-wrap" class="pago-wrap" hidden></div>
-      <p class="aviso">La mensajería y la disponibilidad se confirman por WhatsApp.</p>
     </form>
   </div>
 </div>

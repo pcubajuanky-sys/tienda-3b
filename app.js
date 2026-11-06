@@ -1384,6 +1384,44 @@ function garantiaTexto() {
   return (t.garantia || '').toString().trim();
 }
 
+// Preguntas frecuentes (2026-11-06). Cada respuesta sale de un dato que publica Stock+ en
+// catalogo.json → tienda (garantía, política, zonas, tarifas por zona). Sin dato, la pregunta
+// no se pinta: aquí no se escribe ninguna promesa que la tienda no haya puesto en el panel.
+// Solo existe en la página de 3B (#faq): en las otras cáscaras no hace nada.
+function renderFaq() {
+  const sec = document.getElementById('faq');
+  const lista = document.getElementById('faq-lista');
+  if (!sec || !lista) return;
+  const t = (CAT && CAT.tienda) || {};
+  const limpio = (v) => (v || '').toString().trim();
+  const items = [];
+  items.push(['¿Cómo hago mi pedido?',
+    'Añade lo que te guste a tu pedido y pulsa «Pedir por WhatsApp». Se abre WhatsApp con el mensaje ya escrito: solo tienes que enviarlo y te confirmamos.']);
+  if (limpio(t.garantia)) items.push(['¿Cuándo pago?', limpio(t.garantia)]);
+  const zonas = Array.isArray(t.zonasMensajeria) ? t.zonasMensajeria : [];
+  const tarifas = zonas.filter((z) => z && z.nombre && Number(z.tarifaCUP) > 0).map((z) => {
+    const umbral = Number(z.umbralGratisCUP) || 0;
+    return `${z.nombre}: ${fmt(z.tarifaCUP)} CUP` + (umbral > 0 ? `, gratis en pedidos desde ${fmt(umbral)} CUP` : '') + '.';
+  });
+  if (tarifas.length) items.push(['¿Cuánto cuesta la mensajería?', tarifas.join('\n') + (limpio(t.envioGratisTexto) ? '\n' + limpio(t.envioGratisTexto) : '')]);
+  if (limpio(t.zonas)) items.push(['¿A qué zonas llegan?', limpio(t.zonas)]);
+  if (limpio(t.politica)) items.push(['¿Puedo devolver un producto?', limpio(t.politica)]);
+  lista.textContent = '';
+  for (const [q, a] of items) {
+    const d = document.createElement('details');
+    d.className = 'faq-item';
+    const s = document.createElement('summary');
+    s.textContent = q;
+    const p = document.createElement('p');
+    p.textContent = a;
+    d.append(s, p);
+    lista.appendChild(d);
+  }
+  sec.hidden = items.length < 2;
+  const enlace = document.getElementById('faq-enlace');
+  if (enlace) enlace.hidden = sec.hidden;
+}
+
 function pintarGarantia() {
   const txt = garantiaTexto();
   for (const id of ['garantia', 'garantia-ficha']) {
@@ -2242,6 +2280,7 @@ async function cargarCatalogo() {
   renderFiltroPill();
   renderCategorias3D();
   pintarGarantia();
+  renderFaq();
   pintarPreguntarSocio();
   pintarBandaGestor();
   renderControles();   // antes de renderGrid: valida ordenSel/soloEnvioGratis contra ESTE catálogo
