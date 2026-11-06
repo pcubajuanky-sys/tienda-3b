@@ -1753,3 +1753,17 @@ body[data-negocio]{--acento:var(--brand);--acento-ink:var(--brand-ink)}
 
 /* Sombra suave bajo el texto de la portada: ahora el mosaico se ve más (2026-11-06). */
 .hero h1,.hero-sub{text-shadow:0 1px 14px rgba(0,0,0,.55)}
+
+/* ══ Más productos en la primera pantalla del móvil (2026-11-06) ═══════════════
+   Medido en el navegador a 375px: «Los más vendidos» empezaba a 1.297px y el catálogo a
+   2.027px, y en el catálogo cabían menos de dos filas por pantalla. */
+@media (max-width:599px){
+  /* El logo grande de la portada repetía el de la cabecera. */
+  .mundo-tienda .hero-logo{display:none}
+  /* La letra pequeña del envío vive ya en las preguntas frecuentes. */
+  .mundo-tienda .promo-fina{display:none}
+  /* Tarjeta: foto, nombre, precio y botón. La descripción y la condición del envío
+     siguen en la ficha. */
+  .mundo-tienda .card .desc{display:none}
+  .mundo-tienda .envio-chip-cond{display:none}
+}

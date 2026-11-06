@@ -525,7 +525,7 @@ function tarjetaHtml(p) {
         ${p.notes ? `<div class="desc">${escapeHtml(p.notes)}</div>` : ''}
         <div class="precio-linea">${precioHtml(p)}</div>
         ${avisoQuedanHtml(p)}
-        ${p.envio ? `<div class="envio-chip">${escapeHtml(p.envio.corto)}</div>` : ''}
+        ${p.envio ? `<div class="envio-chip${/desde/i.test(p.envio.corto) ? ' envio-chip-cond' : ''}">${escapeHtml(p.envio.corto)}</div>` : ''}
         <div class="card-accion" id="acc-${p.id}">${accionHtml(p.id)}</div>
       </div>
     </div>`;
@@ -775,7 +775,15 @@ function pintarGaleria(i) {
   const img = document.getElementById('modal-img');
   const tira = document.getElementById('modal-miniaturas');
   limpiarFallback(img);   // por si la foto anterior falló: si no, su inicial tapa esta
-  img.src = fotoDetalle(galeriaFotos[i]);
+  const grande = fotoDetalle(galeriaFotos[i]);
+  const rapida = fotoCard(galeriaFotos[i]).src;
+  img.src = rapida;
+  if (grande !== rapida) {
+    const pre = new Image();
+    // Solo se cambia si la ficha sigue mostrando ESTA foto (no se cerró ni se pasó a otra).
+    pre.onload = () => { if (img.getAttribute('src') === rapida) img.src = grande; };
+    pre.src = grande;
+  }
   if (galeriaFotos.length < 2) { tira.hidden = true; tira.innerHTML = ''; return; }
   tira.hidden = false;
   tira.innerHTML = galeriaFotos.map((u, n) =>
