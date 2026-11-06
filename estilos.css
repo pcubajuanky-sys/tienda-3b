@@ -1767,3 +1767,31 @@ body[data-negocio]{--acento:var(--brand);--acento-ink:var(--brand-ink)}
   .mundo-tienda .card .desc{display:none}
   .mundo-tienda .envio-chip-cond{display:none}
 }
+
+/* ══ Cabecera más baja al bajar + categorías sin círculos vacíos (2026-11-06) ══ */
+
+/* Móvil: con la página bajada, la cabecera pegada ocupaba ~143px (la franja «toca los
+   logos» + logos de 44px + buscador). Al bajar se pliega la franja y los logos se
+   achican; buscador y carrito siguen a mano, como en las tiendas grandes. Plegado con
+   transición (no display:none) para que el contenido no dé un salto brusco.
+   :has() falta en navegadores viejos: ahí la franja simplemente no se pliega. */
+@media (max-width:759px){
+  .mundo-tienda .promo-mundos{max-height:48px;overflow:hidden;transition:max-height var(--dur) var(--ease),padding var(--dur) var(--ease)}
+  .mundo-tienda .barra-fija:has(.header.compacta) .promo-mundos{max-height:0;padding-top:0;padding-bottom:0}
+  .mundo-tienda .mundo{transition:width var(--dur) var(--ease),height var(--dur) var(--ease),transform var(--dur)}
+  .mundo-tienda .header.compacta .mundo{width:34px;height:34px}
+  .mundo-tienda .header.compacta .header-buscador{padding-bottom:var(--e0)}
+}
+@media (max-width:759px) and (prefers-reduced-motion: reduce){
+  .mundo-tienda .promo-mundos,.mundo-tienda .mundo{transition:none}
+}
+
+/* Categorías: mientras la foto baja (o si no llega), el círculo enseña el emoji de la
+   categoría sobre un fondo suave, en vez de un gris vacío que parece roto. La foto,
+   al cargar, lo tapa. */
+.cat3d-foto[data-ph]{background:radial-gradient(circle at 50% 40%, var(--surface) 0%, var(--surface-2) 75%)}
+.cat3d-foto[data-ph]::before{
+  content:attr(data-ph);position:absolute;inset:0;display:grid;place-items:center;
+  font-size:32px;line-height:1;opacity:.6;
+}
+.cat3d-foto[data-ph] > *{position:relative;z-index:1}

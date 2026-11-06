@@ -26,3 +26,8 @@ Revisión en el navegador integrado (375 px y escritorio, claro y oscuro) pedida
 ## ⚠ NO VERIFICADO
 - La ficha instantánea solo se probó leyendo el código (el `app.js` publicado era el viejo
   al mirar). Comprobar tras publicar: abrir una ficha con mala conexión.
+
+## Segunda tanda (mismo día)
+- **Cabecera al bajar (móvil, <760 px):** la franja «toca los logos» se pliega (`:has(.header.compacta)`, con transición) y los logos pasan a 34 px. Medido en el navegador: barra pegada 151 → 101 px. En navegadores sin `:has()` la franja no se pliega (nada se rompe).
+- **Categorías sin círculos vacíos:** `.cat3d-foto` lleva `data-ph` con el emoji/inicial y lo pinta detrás de la foto mientras baja. Comprobado ocultando la foto de «Ropa»: sale 👕.
+- `sw.js` → `v42`. Tests 265/265.
