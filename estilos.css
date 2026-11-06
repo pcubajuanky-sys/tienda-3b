@@ -304,7 +304,7 @@ a{color:inherit}
 .hero-mosaico{
   position:absolute;inset:0;display:grid;
   grid-template-columns:repeat(6,1fr);grid-template-rows:repeat(2,1fr);
-  gap:2px;opacity:.42;filter:blur(2px) grayscale(1) brightness(.75);
+  gap:2px;opacity:.72;filter:blur(1.5px) saturate(.9) brightness(.7);
 }
 .hero-mosaico img{width:100%;height:100%;object-fit:cover;display:block}
 /* Velo VERTICAL en vez de un velo plano que repetía el fondo: denso donde va el
@@ -313,10 +313,10 @@ a{color:inherit}
 .hero-velo{
   position:absolute;inset:0;
   background:linear-gradient(180deg,
-    rgba(10,10,12,.86) 0%,
-    rgba(10,10,12,.70) 40%,
-    rgba(10,10,12,.80) 72%,
-    rgba(10,10,12,.95) 100%);
+    rgba(10,10,12,.78) 0%,
+    rgba(10,10,12,.42) 42%,
+    rgba(10,10,12,.58) 72%,
+    rgba(10,10,12,.90) 100%);
 }
 .hero-contenido{position:relative;padding:var(--e4) var(--e3) var(--e4);text-align:center}
 .hero-logo{display:flex;justify-content:center;margin-bottom:var(--e1)}
@@ -1399,7 +1399,7 @@ button.footer-link{background:none;border:none;font-family:inherit;cursor:pointe
 .confianza{margin:18px auto 6px}
 .pasos{list-style:none;display:flex;gap:10px;flex-wrap:wrap;margin:0;padding:0}
 .paso{flex:1 1 220px;display:flex;gap:10px;align-items:flex-start;font-size:14px;line-height:1.4}
-.paso-n{flex:0 0 24px;height:24px;border-radius:50%;background:var(--brand);color:var(--brand-ink,#fff);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px}
+.paso-n{flex:none;width:26px;height:26px;border-radius:50%;background:var(--brand);color:var(--brand-ink,#fff);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px}
 .garantia{margin-top:12px;padding:12px 14px;border-radius:12px;background:var(--surface-2);border:1px solid var(--border);font-size:14px;line-height:1.45}
 .garantia::before{content:"🛡️ ";}
 /* En la ficha del producto, el mismo texto pero sin caja, debajo del botón de añadir. */
@@ -1750,3 +1750,6 @@ body[data-negocio]{--acento:var(--brand);--acento-ink:var(--brand-ink)}
 .faq-item summary:focus-visible{outline:3px solid var(--brand);outline-offset:2px}
 .faq-item p{margin:0;padding:0 var(--e3) var(--e3);color:var(--text-2);font-size:var(--t-sm);line-height:1.5;white-space:pre-line}
 @media (prefers-reduced-motion: reduce){ .faq-item summary::after{transition:none} }
+
+/* Sombra suave bajo el texto de la portada: ahora el mosaico se ve más (2026-11-06). */
+.hero h1,.hero-sub{text-shadow:0 1px 14px rgba(0,0,0,.55)}
