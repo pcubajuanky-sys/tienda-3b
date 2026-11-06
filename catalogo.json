@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-06T13:07:00.676Z",
+  "generado": "2026-11-06T13:43:09.722Z",
   "tasa": 920,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -127,6 +127,10 @@
     {
       "code": "3CWCU",
       "nombre": "Vilma Carbonell de la Torre"
+    },
+    {
+      "code": "5SS7X",
+      "nombre": "Yaneiry"
     }
   ],
   "categorias": [
