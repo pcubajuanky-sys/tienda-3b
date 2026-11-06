@@ -43,13 +43,16 @@
      token NO cambia: alli ya pasaba (4,60-5,66:1). */
   --text-3:    #65656C;
   --border:    #E2E2DF;
-  /* Rojo del logo (2026-11-06). #C8161D y no el #E01F26 brillante del emblema: con
-     blanco encima da 5,9:1 y como texto sobre el fondo 5,4:1 (AA). El brillante queda
-     solo para el arco decorativo de la portada (--marca-viva). */
-  --brand:     #C8161D;
+  /* Marca = NEGRO de la placa del logo (decisión de Ruth, 2026-11-06): botones negros
+     con letra blanca y textos de marca en negro. El ROJO del logo NO pinta botones ni
+     letras: vive en --acento (contador del carrito, raya de los títulos, selección) y
+     en --marca-viva (arco de la portada). Blanco sobre --brand: 18,1:1. */
+  --brand:     #111114;
   --brand-ink: #FFFFFF;
-  --brand-soft:#FCE9EA;
-  --brand-hondo:#8E0F14;
+  --brand-soft:#EFEFED;
+  --brand-hondo:#000000;
+  --acento:    #C8161D;
+  --acento-ink:#FFFFFF;
   --marca-viva:#E01F26;
   --negro:     #0D0D0F;
   --oferta:    #C8161D;
@@ -76,8 +79,8 @@
      color no puede depender del tema. Con --surface/--brand se volvía una caja
      casi negra con letra rosa en modo oscuro y dejaba de leerse como el botón
      principal. Blanco sobre ciruela: 8,9:1. */
-  --hero-btn-bg:  #E01F26;
-  --hero-btn-ink: #FFFFFF;
+  --hero-btn-bg:  #FFFFFF;
+  --hero-btn-ink: #111114;
 
   /* Escala de espaciado. Antes había 40+ números sueltos y cada pieza nueva
      llegaba con medidas propias: esa era la causa de que los dos botones de la
@@ -124,10 +127,12 @@
     --text-2:    #BABAC0;
     --text-3:    #92929A;
     --border:    #2E2E33;
-    --brand:     #FF6166;
-    --brand-ink: #1A0506;
-    --brand-soft:#2B1416;
-    --brand-hondo:#FF8D90;
+    --brand:     #F4F4F5;
+    --brand-ink: #111114;
+    --brand-soft:#232327;
+    --brand-hondo:#FFFFFF;
+    --acento:    #FF6166;
+    --acento-ink:#1A0506;
     --oferta:    #FF6166;
     /* Sobre el rosa claro la tinta tiene que ser OSCURA: blanco daba 2,23:1. Este
        mismo valor es el que ya usa --brand-ink y el sello ⭐ MAS VENDIDO. 7,98:1. */
@@ -272,7 +277,7 @@ a{color:inherit}
 }
 .carrito-count{
   display:inline-flex;align-items:center;justify-content:center;min-width:20px;height:20px;
-  padding:0 5px;border-radius:10px;background:var(--brand);color:var(--brand-ink);
+  padding:0 5px;border-radius:10px;background:var(--acento);color:var(--acento-ink);
   font-size:12px;font-weight:700;
 }
 .header-buscador{padding:0 var(--e3) var(--e1)}
@@ -1170,7 +1175,7 @@ button.footer-link{background:none;border:none;font-family:inherit;cursor:pointe
   border-radius:50%;object-fit:cover;
   background:var(--surface-2);
 }
-.mundo-on .mundo-img{box-shadow:0 0 0 2px var(--brand)}
+.mundo-on .mundo-img{box-shadow:0 0 0 2px var(--acento,var(--brand))}
 .mundo:not(.mundo-on) .mundo-img{opacity:.82}
 .mundo:not(.mundo-on):hover .mundo-img{opacity:1}
 .mundo:hover{transform:translateY(-2px) scale(1.06)}
@@ -1603,7 +1608,10 @@ body[data-negocio="electripower"] .footer-terminos{display:none!important}
   background:var(--negro);color:#F4F4F5;
   --surface:#141417;--surface-2:#1E1E22;--border:#303036;
   --text:#F4F4F5;--text-2:#C6C6CC;--text-3:#A2A2A9;
+  --brand:#F4F4F5;--brand-ink:#111114;
 }
+/* Electripower y Del Mar: su acento es su propio color de marca, no el rojo de 3B. */
+body[data-negocio]{--acento:var(--brand);--acento-ink:var(--brand-ink)}
 .mundo-tienda .header.compacta{border-bottom-color:#303036;box-shadow:0 2px 12px rgba(0,0,0,.35)}
 
 /* Títulos de sección en mayúsculas espaciadas, como el «STORE» del logo, con una
@@ -1618,7 +1626,7 @@ body[data-negocio="electripower"] .footer-terminos{display:none!important}
 .mundo-tienda .grid-titulo::after,
 .mundo-tienda .mv-titulo::after,
 .mundo-tienda .servicios-titulo::after{
-  content:"";display:block;width:28px;height:3px;margin-top:6px;border-radius:2px;background:var(--brand);
+  content:"";display:block;width:28px;height:3px;margin-top:6px;border-radius:2px;background:var(--acento);
 }
 
 /* Arco rojo al pie de la portada: el trazo del logo, dibujado una sola vez al abrir.
@@ -1646,5 +1654,5 @@ body[data-negocio="electripower"] .footer-terminos{display:none!important}
 }
 
 /* Lo que no dibujamos también lleva la marca. */
-::selection{background:var(--brand);color:var(--brand-ink)}
+::selection{background:var(--acento);color:var(--acento-ink)}
 :root{accent-color:var(--brand);caret-color:var(--brand)}
