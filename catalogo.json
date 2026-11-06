@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-06T19:07:00.787Z",
+  "generado": "2026-11-06T20:25:13.984Z",
   "tasa": 920,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -1897,7 +1897,7 @@
         ]
       },
       "maxOpciones": {
-        "ROSA": 4
+        "ROSA": 3
       },
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
@@ -5673,6 +5673,101 @@
       "creado": 1791836377621
     },
     {
+      "id": "p_1793996642305",
+      "codigo": "G7GY",
+      "name": "Pulover Unisex de Guitarra",
+      "cat": "Ropa",
+      "subcat": "",
+      "notes": "Tela de algodón,elastizada,cómoda y de alta calidad. Ideal para uso en pareja",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1793996354/productos/hujuxbpit9wzwadjrbxc.jpg",
+      "precioUSD": 4,
+      "precioCUP": 3680,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793996361/productos/bzgkfgeu9cxrwsrjgc1p.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793996365/productos/ie8wjcpdq6zxeptcaahg.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793996373/productos/x9y9yde1o9mjsdmvq2h8.jpg"
+      ],
+      "variantes": {
+        "ejes": [
+          "Color",
+          "Talla"
+        ],
+        "opciones": [
+          "NEGRO / S",
+          "NEGRO / M",
+          "NEGRO / L",
+          "BLANCO / S",
+          "BLANCO / M",
+          "BLANCO / L"
+        ]
+      },
+      "maxOpciones": {
+        "NEGRO / S": 1,
+        "NEGRO / M": 2,
+        "NEGRO / L": 1,
+        "BLANCO / S": 1,
+        "BLANCO / M": 2,
+        "BLANCO / L": 1
+      },
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1793996642305
+    },
+    {
+      "id": "p_1793996200980",
+      "codigo": "Z2KT",
+      "name": "Pulover Unisex Estilo Asiático",
+      "cat": "Ropa",
+      "subcat": "",
+      "notes": "Tela de algodón,elastizada,cómoda y de alta calidad. Ideal para uso en pareja",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1793995971/productos/dzxrxn7td0irjzkqzibw.jpg",
+      "precioUSD": 4,
+      "precioCUP": 3680,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793995993/productos/nesxtdpjybqb65poxfdq.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793996000/productos/f9hukeaphstsv0ugyaqh.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793996004/productos/u6kt5j1ffirfjaxtofn5.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793996008/productos/fcfpbsawcddkphr3cdob.jpg"
+      ],
+      "variantes": {
+        "ejes": [
+          "Color",
+          "Talla"
+        ],
+        "opciones": [
+          "NEGRO / S",
+          "NEGRO / M",
+          "NEGRO / L",
+          "BLANCO / S",
+          "BLANCO / M",
+          "BLANCO / L"
+        ]
+      },
+      "maxOpciones": {
+        "NEGRO / S": 2,
+        "NEGRO / M": 2,
+        "NEGRO / L": 2,
+        "BLANCO / S": 2,
+        "BLANCO / M": 2,
+        "BLANCO / L": 2
+      },
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1793996200980
+    },
+    {
       "id": "p_1789242386934",
       "codigo": "D5K2",
       "name": "Pulover Unisex Navideño \"Muñecos de Nieve\"",
@@ -5809,7 +5904,7 @@
       "maxOpciones": {
         "BLANCO": 1,
         "ROJO": 2,
-        "ROSA": 2,
+        "ROSA": 1,
         "CELESTE": 1
       },
       "envio": {
@@ -6298,7 +6393,7 @@
         ]
       },
       "maxOpciones": {
-        "NIÑOS": 8,
+        "NIÑOS": 7,
         "NIÑAS": 4
       },
       "envio": {
