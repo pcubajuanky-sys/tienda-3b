@@ -422,11 +422,17 @@ function topeDe(id, clave) {
   return (typeof t === 'number' && isFinite(t) && t > 0) ? Math.floor(t) : null;
 }
 
-// Todos los valores que existen en el eje i (con existencias, porque el catálogo solo
-// publica lo disponible).
+// Combinaciones con existencias MÁS las agotadas (`variantes.agotadas`, solo nombres). Las
+// agotadas se siguen ofreciendo como chip, tachadas y elegibles, para pedir el aviso.
+function todasLasClaves(v) {
+  const ag = Array.isArray(v.agotadas) ? v.agotadas.filter((k) => v.opciones.indexOf(k) === -1) : [];
+  return v.opciones.concat(ag);
+}
+
+// Todos los valores que existen en el eje i (con existencias o agotados).
 function valoresDeEje(v, i) {
   const out = [];
-  for (const clave of v.opciones) {
+  for (const clave of todasLasClaves(v)) {
     const val = clave.split(SEP_VAR)[i];
     if (val && !out.includes(val)) out.push(val);
   }
@@ -436,11 +442,30 @@ function valoresDeEje(v, i) {
 // ¿Ese valor del eje i sigue siendo posible con lo ya elegido en los OTROS ejes? Es lo
 // que hace que, al elegir la talla M, se apaguen los colores que no vienen en M.
 function valorPosible(v, i, val, seleccion) {
-  return v.opciones.some((clave) => {
+  return todasLasClaves(v).some((clave) => {
     const partes = clave.split(SEP_VAR);
     if (partes[i] !== val) return false;
     return partes.every((p, j) => j === i || !seleccion[j] || seleccion[j] === p);
   });
+}
+
+// Posible, pero SOLO en combinaciones agotadas con lo ya elegido: se ve tachado y se puede
+// elegir (no está deshabilitado) para pedir el aviso. Distinto de lo imposible.
+function valorAgotado(v, i, val, seleccion) {
+  if (!valorPosible(v, i, val, seleccion)) return false;
+  return !v.opciones.some((clave) => {
+    const partes = clave.split(SEP_VAR);
+    if (partes[i] !== val) return false;
+    return partes.every((p, j) => j === i || !seleccion[j] || seleccion[j] === p);
+  });
+}
+
+// La combinación elegida cuando existe pero está agotada (para el botón de aviso).
+function claveAgotadaElegida(v, seleccion) {
+  if (!v || !Array.isArray(v.agotadas)) return null;
+  if (seleccion.length !== v.ejes.length || seleccion.some((x) => !x)) return null;
+  const k = seleccion.join(SEP_VAR);
+  return (v.opciones.indexOf(k) === -1 && v.agotadas.indexOf(k) !== -1) ? k : null;
 }
 
 // La combinación elegida, solo si están todos los ejes y esa combinación existe.
@@ -460,6 +485,14 @@ function accionHtml(id, clave) {
   // 2026-10-20). Mismo criterio que `cerrada()` arriba: la tarjeta informa, no vende.
   if (Espera.enEspera(p, clave || null)) {
     return `<button class="btn add" type="button" disabled>${Espera.AVISO_BOTON}</button>`;
+  }
+  // 🔴 Combinación AGOTADA elegida: en vez de «Añadir», el aviso. Va SIEMPRE al número de la
+  // casa (CAT.whatsapp), igual que el resto de avisos (contrato con lib/avisoVuelta.js).
+  if (clave && window.Aviso.esAgotada(p, clave)) {
+    const urlA = window.Aviso.enlace(CAT && CAT.whatsapp, p, clave);
+    return urlA
+      ? `<a class="btn btn-suave aviso-talla" href="${escapeHtml(urlA)}" target="_blank" rel="noopener">${escapeHtml(window.Aviso.textoBotonTalla(p, clave))}</a>`
+      : `<button class="btn add" type="button" disabled>Agotada</button>`;
   }
   const v = variantesDe(p);
   if (v && !clave) {
@@ -839,6 +872,10 @@ function pintarPreguntarProducto(id, clave) {
   const caja = document.getElementById('ficha-preguntar');
   if (!caja) return;
   const p = productoDe(id);
+  // Combinación agotada: el aviso ya va en la acción principal; no se duplica otro botón.
+  if (clave && window.Aviso.esAgotada(p, clave) && window.Aviso.enlace(CAT && CAT.whatsapp, p, clave)) {
+    caja.hidden = true; caja.innerHTML = ''; return;
+  }
   const esperando = Espera.enEspera(p, clave || null);
   // 🔴 Lo que está en espera pide «avísame»: eso lo anota Stock+ solo (aviso.js, contrato con
   // lib/avisoVuelta.js) y por eso va SIEMPRE al número de la casa, nunca al del gestor.
@@ -901,7 +938,7 @@ function pintarUmbralFicha(id, clave) {
     elegible: totalCarritoElegible(),
     precio: p && p.precioCUP,
     aparte: esAparte(p),
-    espera: Espera.enEspera(p, clave || null)
+    espera: Espera.enEspera(p, clave || null) || !!(clave && window.Aviso.esAgotada(p, clave))
   });
   caja.hidden = !txt;
   caja.textContent = txt;
@@ -913,7 +950,7 @@ function refrescarAcciones(id) {
   if (productoModal === id) {
     const v = variantesDe(productoDe(id));
     const m = document.getElementById('modal-accion');
-    const claveActual = claveElegida(v, seleccionVar);
+    const claveActual = claveElegida(v, seleccionVar) || claveAgotadaElegida(v, seleccionVar);
     if (m) m.innerHTML = accionHtml(id, claveActual);
     pintarEsperaFicha(id, claveActual);
     pintarPreguntarProducto(id, claveActual);
@@ -936,8 +973,9 @@ function pintarChipsVariante(id) {
     const chips = valoresDeEje(v, i).map((val) => {
       const sel = seleccionVar[i] === val;
       const posible = valorPosible(v, i, val, seleccionVar);
-      return `<button type="button" class="chip-var" data-eje="${i}" data-val="${escapeHtml(val)}"` +
-        ` aria-pressed="${sel}"${posible ? '' : ' disabled'}>${escapeHtml(val)}</button>`;
+      const agot = posible && valorAgotado(v, i, val, seleccionVar);
+      return `<button type="button" class="chip-var${agot ? ' chip-agotada' : ''}" data-eje="${i}" data-val="${escapeHtml(val)}"` +
+        ` aria-pressed="${sel}"${agot ? ` aria-label="${escapeHtml(val)}, agotada"` : ''}${posible ? '' : ' disabled'}>${escapeHtml(val)}</button>`;
     }).join('');
     return `<div class="var-fila"><div class="var-tit">${escapeHtml(eje)}:</div>${chips}</div>`;
   }).join('');

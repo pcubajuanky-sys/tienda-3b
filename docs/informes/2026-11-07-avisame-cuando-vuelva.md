@@ -52,3 +52,17 @@ Sin commit ni push (los hace Ruth).
   superior y margen sobre la franja, y subtítulo «Toca 🔔 y te escribimos por WhatsApp cuando vuelvan.».
 - Foto de fila atenuada (opacity .85, grayscale .35). `sw.js`: v44 → v45.
 - Tests: 294/294, 0 fallos. ⚠ NO VERIFICADO en navegador (contraste y tema oscuro por tokens, sin ver).
+
+## Ampliación: «Avísame» por talla o color (2026-11-07)
+
+- `aviso.js`: `esAgotada(p, clave)`, `textoTalla(p, clave)` («Talla M, Color ROJO») y
+  `textoBotonTalla` («🔔 Avísame cuando haya Talla M»). Tests `node:vm` en `test/aviso.test.js`.
+- `app.js`: el selector de la ficha incluye `variantes.agotadas` como combinaciones posibles. Un
+  valor cuyas combinaciones (con lo ya elegido) están todas agotadas sale como chip `.chip-agotada`
+  (tachado, borde discontinuo, `aria-label="M, agotada"`) y **se puede elegir**; lo imposible sigue
+  `disabled`. Al completar una combinación agotada (uno o dos ejes), `accionHtml` sustituye «Añadir»
+  por el enlace `Aviso.enlace(CAT.whatsapp, p, clave)` (siempre el número de la casa); sin número,
+  botón deshabilitado «Agotada». El botón «Preguntar» de la ficha se oculta en ese caso (no se
+  duplica) y la frase del umbral de mensajería no se muestra.
+- `estilos.css`: `.chip-agotada` y `.aviso-talla` (ancho completo, 44 px). `sw.js` caché `v48` → `v49`.
+- ⚠ NO VERIFICADO en pantalla (RAM). Requiere que el catálogo publicado lleve `agotadas`.

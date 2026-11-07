@@ -9,7 +9,7 @@ const vm = require('node:vm');
 const sandbox = { window: {} };
 vm.createContext(sandbox);
 vm.runInContext(fs.readFileSync(path.join(__dirname, '..', 'aviso.js'), 'utf8'), sandbox);
-const { mensaje, enlace, porCategoria, MARCA, TEXTO_BOTON, TEXTO_BOTON_ESPERA } = sandbox.window.Aviso;
+const { mensaje, enlace, porCategoria, esAgotada, textoTalla, textoBotonTalla, MARCA, TEXTO_BOTON, TEXTO_BOTON_ESPERA } = sandbox.window.Aviso;
 
 const P = { name: 'Nebulizador portátil', codigo: '24PU' };
 const PV = { name: 'Pulóver', codigo: 'K7M2', variantes: { ejes: ['Talla', 'Color'], opciones: ['M / ROJO'] } };
@@ -88,4 +88,39 @@ test('porCategoria: sin categoria o entrada rara no devuelve nada', () => {
   assert.strictEqual(porCategoria([{ cat: 'Hogar' }], null).length, 0);
   assert.strictEqual(porCategoria(null, 'Hogar').length, 0);
   assert.strictEqual(porCategoria([null, {}], 'Hogar').length, 0);
+});
+
+// ---- «Avísame» por talla o color (2026-11-07) ----
+const PA = { name: 'Pulóver', codigo: 'K7M2', variantes: { ejes: ['Talla', 'Color'], opciones: ['L / ROJO'], agotadas: ['M / ROJO', 'M / AZUL'] } };
+const PU = { name: 'Camisa', codigo: 'AB12', variantes: { ejes: ['Talla'], opciones: ['L'], agotadas: ['M'] } };
+
+test('esAgotada: solo lo que viene en variantes.agotadas', () => {
+  assert.strictEqual(esAgotada(PA, 'M / ROJO'), true);
+  assert.strictEqual(esAgotada(PA, 'L / ROJO'), false);
+  assert.strictEqual(esAgotada(PA, 'XL / ROJO'), false);
+  assert.strictEqual(esAgotada(PA, null), false);
+  assert.strictEqual(esAgotada({ name: 'x' }, 'M'), false);
+  assert.strictEqual(esAgotada(null, 'M'), false);
+});
+
+test('esAgotada: si por alguna razon la clave esta tambien en opciones, manda opciones', () => {
+  const p = { variantes: { ejes: ['Talla'], opciones: ['M'], agotadas: ['M'] } };
+  assert.strictEqual(esAgotada(p, 'M'), false);
+});
+
+test('textoTalla usa los nombres de los ejes', () => {
+  assert.strictEqual(textoTalla(PU, 'M'), 'Talla M');
+  assert.strictEqual(textoTalla(PA, 'M / ROJO'), 'Talla M, Color ROJO');
+  assert.strictEqual(textoTalla({ variantes: {} }, 'NEGRO'), 'NEGRO');
+});
+
+test('textoBotonTalla: boton con la combinacion', () => {
+  assert.strictEqual(textoBotonTalla(PU, 'M'), '🔔 Avísame cuando haya Talla M');
+  assert.strictEqual(textoBotonTalla(PA, 'M / ROJO'), '🔔 Avísame cuando haya Talla M, Color ROJO');
+});
+
+test('el mensaje de una combinacion agotada lleva la variante en el Ref (contrato)', () => {
+  const m = mensaje(PA, 'M / ROJO');
+  assert.ok(m.includes('\nTalla M, Color ROJO\n'), m);
+  assert.ok(m.endsWith('\nRef: K7M2/M+ROJO'), m);
 });

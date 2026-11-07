@@ -16,6 +16,7 @@
   const MARCA = '🔔 *AVÍSAME CUANDO VUELVA*';
   const TEXTO_BOTON = '🔔 Avísame cuando vuelva';
   const TEXTO_BOTON_ESPERA = '🔔 Avísame cuando se libere';
+  const TEXTO_BOTON_TALLA = '🔔 Avísame cuando haya';
   const SEP_VAR = ' / ';
 
   function limpiar(t) {
@@ -64,5 +65,29 @@
     return lista.filter((a) => a && limpiar(a.cat) === c).slice(0, tope);
   }
 
-  window.Aviso = { mensaje, enlace, porCategoria, MARCA, TEXTO_BOTON, TEXTO_BOTON_ESPERA };
+  // ¿Esta combinacion existe pero esta agotada? Lo dice el catalogo (`variantes.agotadas`, solo
+  // NOMBRES, nunca cantidades). Si la clave tambien esta en `opciones` manda `opciones`: hay stock.
+  function esAgotada(p, clave) {
+    const v = p && p.variantes;
+    const k = limpiar(clave);
+    if (!v || !k || !Array.isArray(v.agotadas)) return false;
+    if (Array.isArray(v.opciones) && v.opciones.indexOf(k) !== -1) return false;
+    return v.agotadas.indexOf(k) !== -1;
+  }
+
+  // 'Talla M' o 'Talla M, Color ROJO' (nombres de los ejes); sin ejes, la clave tal cual.
+  function textoTalla(p, clave) {
+    const k = limpiar(clave);
+    const vals = k.split(SEP_VAR);
+    const ejes = p && p.variantes && Array.isArray(p.variantes.ejes) ? p.variantes.ejes : null;
+    return ejes && ejes.length === vals.length
+      ? ejes.map((e, i) => e + ' ' + vals[i]).join(', ')
+      : k;
+  }
+
+  function textoBotonTalla(p, clave) {
+    return TEXTO_BOTON_TALLA + ' ' + textoTalla(p, clave);
+  }
+
+  window.Aviso = { mensaje, enlace, porCategoria, esAgotada, textoTalla, textoBotonTalla, MARCA, TEXTO_BOTON, TEXTO_BOTON_ESPERA };
 })();

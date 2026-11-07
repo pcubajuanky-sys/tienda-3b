@@ -1146,6 +1146,11 @@ button.footer-link{background:none;border:none;font-family:inherit;cursor:pointe
 }
 .chip-var[aria-pressed="true"] { background: var(--brand); border-color: var(--brand); color: var(--brand-ink); }
 .chip-var[disabled] { opacity: .35; cursor: not-allowed; text-decoration: line-through; }
+/* Combinación AGOTADA: tachada y con borde discontinuo, pero SE PUEDE elegir (pide el aviso).
+   Distinta de [disabled], que es una combinación imposible con lo ya elegido. */
+.chip-var.chip-agotada { opacity: .6; text-decoration: line-through; border-style: dashed; }
+.chip-var.chip-agotada[aria-pressed="true"] { opacity: 1; }
+.aviso-talla { display: flex; width: 100%; min-height: 44px; justify-content: center; align-items: center; gap: 6px; text-align: center; }
 .linea-talla { color: var(--text-3); font-weight: 500; }
 
 /* Mensajería por producto (2026-09-07). El texto lo compone Stock+; aquí solo se pinta. */
