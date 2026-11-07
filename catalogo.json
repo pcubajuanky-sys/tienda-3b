@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-07T02:57:50.385Z",
+  "generado": "2026-11-07T02:59:48.179Z",
   "tasa": 930,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -1476,6 +1476,52 @@
       },
       "envioGratis": true,
       "creado": 1789229417669
+    },
+    {
+      "id": "p_1794020176370",
+      "codigo": "3G93",
+      "name": "Blusas cortas sin costura",
+      "cat": "Ropa",
+      "subcat": "",
+      "notes": "Tela de poliéster super elastizada y sin costuras, incluye las esponjas que hacen función de ajustador. Tirantes tipo espagueti, más estético y cómodo ya que evita torceduras. La mejor combinación para cualquier outfit",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1794019746/productos/m6lg3qmasviltasdaapr.jpg",
+      "precioUSD": 6,
+      "precioCUP": 5580,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794019747/productos/l04o80fxlkksioou4hoz.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794019756/productos/cwb9be8hjpwf9lcccicw.jpg"
+      ],
+      "variantes": {
+        "ejes": [
+          "Color",
+          "Talla"
+        ],
+        "opciones": [
+          "NEGRO / S",
+          "NEGRO / M",
+          "GRIS / S",
+          "GRIS / M",
+          "GRIS CLARO / S",
+          "GRIS CLARO / M"
+        ]
+      },
+      "maxOpciones": {
+        "NEGRO / S": 2,
+        "NEGRO / M": 1,
+        "GRIS / S": 2,
+        "GRIS / M": 1,
+        "GRIS CLARO / S": 2,
+        "GRIS CLARO / M": 1
+      },
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1794020176370
     },
     {
       "id": "p_1781215775166",
