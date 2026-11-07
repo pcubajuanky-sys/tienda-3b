@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-07T02:55:47.986Z",
+  "generado": "2026-11-07T02:57:50.385Z",
   "tasa": 930,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -6759,33 +6759,6 @@
       },
       "envioGratis": true,
       "creado": 1790954066391
-    },
-    {
-      "id": "p_1787764782825",
-      "codigo": "TPUJ",
-      "name": "Ventilador ColdSky Doble paleta",
-      "cat": "Electrodomésticos",
-      "subcat": "",
-      "notes": "Ventilador de camping alimentado por batería de 20000Mah - Motor dual, 8 velocidades con control remoto y 4 linternas LED, ventilador portátil para exteriores con gancho para tienda de campaña, falla de energía, obra de construcción, para viajes de camping al aire libre",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787764696/productos/k2qwog2kxffnq9yeby9m.jpg",
-      "precioUSD": 60,
-      "precioCUP": 55800,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "fotos": [
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791860121/productos/ngo71i5ur3vbcpizjmsr.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791860131/productos/kmpnzv0qyy4hvxtwg4hp.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791860137/productos/jnfvkqarlunnquccmbwt.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1791860156/productos/sqeqow9ztynt5p5wisyh.jpg"
-      ],
-      "max": 1,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1787764782825
     },
     {
       "id": "p_1787765188160",
