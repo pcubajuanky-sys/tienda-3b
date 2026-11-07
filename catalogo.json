@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-06T22:30:56.850Z",
+  "generado": "2026-11-07T00:24:56.934Z",
   "tasa": 930,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -1016,7 +1016,7 @@
       },
       "maxOpciones": {
         "ROSA🩷": 4,
-        "AZUL💙": 6
+        "AZUL💙": 7
       },
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
@@ -3368,7 +3368,7 @@
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1793501512/productos/pbwxcqnismp9nvl4mnv3.jpg",
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1793501517/productos/iqcfmenpi9htzhhspjaq.jpg"
       ],
-      "max": 3,
+      "max": 6,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -5541,7 +5541,9 @@
           "S"
         ]
       },
-      "espera": true,
+      "maxOpciones": {
+        "S": 1
+      },
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -5738,9 +5740,9 @@
         ]
       },
       "maxOpciones": {
-        "NEGRO CON ROJO / M": 2,
+        "NEGRO CON ROJO / M": 1,
         "NEGRO CON ROJO / L": 2,
-        "NEGRO CON VERDE / M": 5,
+        "NEGRO CON VERDE / M": 4,
         "NEGRO CON VERDE / L": 2
       },
       "envio": {
@@ -6015,7 +6017,7 @@
       "maxOpciones": {
         "BLANCO": 1,
         "ROJO": 2,
-        "ROSA": 1,
+        "ROSA": 2,
         "CELESTE": 1
       },
       "envio": {
