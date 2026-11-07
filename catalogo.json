@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-07T21:22:00.561Z",
+  "generado": "2026-11-07T22:12:31.565Z",
   "tasa": 930,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -1095,6 +1095,9 @@
         "opciones": [
           "PLATEADO",
           "DORADO"
+        ],
+        "agotadas": [
+          "MIXTOS"
         ]
       },
       "maxOpciones": {
@@ -1211,6 +1214,9 @@
           "AZUL",
           "BLANCO",
           "AMARILLO"
+        ],
+        "agotadas": [
+          "NEGRO"
         ]
       },
       "maxOpciones": {
@@ -1478,6 +1484,9 @@
           "L / AZUL",
           "L / ROSA",
           "L / BEIGE"
+        ],
+        "agotadas": [
+          "M / NEGRO"
         ]
       },
       "maxOpciones": {
@@ -1633,6 +1642,9 @@
         ],
         "opciones": [
           "AZUL"
+        ],
+        "agotadas": [
+          "GRIS"
         ]
       },
       "espera": true,
@@ -1897,6 +1909,9 @@
           "BLANCO",
           "ROSA",
           "BLANCO CON LUNARES"
+        ],
+        "agotadas": [
+          "NEGRO CON LUNARES"
         ]
       },
       "maxOpciones": {
@@ -1936,6 +1951,11 @@
           "D",
           "F",
           "G"
+        ],
+        "agotadas": [
+          "A",
+          "B",
+          "E"
         ]
       },
       "maxOpciones": {
@@ -2169,6 +2189,11 @@
           "NEGRO",
           "BLANCO",
           "GRIS"
+        ],
+        "agotadas": [
+          "ROSA",
+          "ROSA OSCURO",
+          "MORADO"
         ]
       },
       "maxOpciones": {
@@ -2350,6 +2375,9 @@
         ],
         "opciones": [
           "AMARILLO"
+        ],
+        "agotadas": [
+          "ROSA OSCURO"
         ]
       },
       "maxOpciones": {
@@ -2480,6 +2508,10 @@
         ],
         "opciones": [
           "PUMA"
+        ],
+        "agotadas": [
+          "NEGRO",
+          "BLANCO"
         ]
       },
       "maxOpciones": {
@@ -2513,6 +2545,11 @@
           "A",
           "B",
           "D"
+        ],
+        "agotadas": [
+          "C",
+          "E",
+          "F"
         ]
       },
       "maxOpciones": {
@@ -2547,6 +2584,9 @@
           "A",
           "B",
           "D"
+        ],
+        "agotadas": [
+          "C"
         ]
       },
       "maxOpciones": {
@@ -2598,6 +2638,9 @@
         ],
         "opciones": [
           "NEGRO"
+        ],
+        "agotadas": [
+          "PLATEADO"
         ]
       },
       "maxOpciones": {
@@ -3296,6 +3339,9 @@
         ],
         "opciones": [
           "L(REDUCIDA) / GRIS🩶"
+        ],
+        "agotadas": [
+          "L(REDUCIDA) / MARRÓN🤎"
         ]
       },
       "maxOpciones": {
@@ -3656,6 +3702,10 @@
           "GRIS",
           "CELESTE",
           "NARANJA"
+        ],
+        "agotadas": [
+          "ROSA",
+          "VERDE"
         ]
       },
       "maxOpciones": {
@@ -4045,6 +4095,9 @@
         ],
         "opciones": [
           "2XL"
+        ],
+        "agotadas": [
+          "XL"
         ]
       },
       "maxOpciones": {
@@ -4786,6 +4839,10 @@
           "F",
           "G",
           "VARIADOS"
+        ],
+        "agotadas": [
+          "A",
+          "E"
         ]
       },
       "maxOpciones": {
@@ -4920,6 +4977,9 @@
           "N",
           "O",
           "P"
+        ],
+        "agotadas": [
+          "L"
         ]
       },
       "maxOpciones": {
@@ -4990,6 +5050,11 @@
           "G",
           "H",
           "J"
+        ],
+        "agotadas": [
+          "A CON C",
+          "C",
+          "I"
         ]
       },
       "maxOpciones": {
@@ -5078,6 +5143,9 @@
           "CHOCOLATE",
           "CHOCOLATE CLARO",
           "BEIGE"
+        ],
+        "agotadas": [
+          "NEGRO"
         ]
       },
       "maxOpciones": {
@@ -5263,6 +5331,9 @@
         "opciones": [
           "B",
           "C"
+        ],
+        "agotadas": [
+          "A"
         ]
       },
       "maxOpciones": {
@@ -5299,6 +5370,11 @@
         ],
         "opciones": [
           "F"
+        ],
+        "agotadas": [
+          "B",
+          "C",
+          "D"
         ]
       },
       "maxOpciones": {
@@ -5400,6 +5476,9 @@
           "Q",
           "R",
           "S"
+        ],
+        "agotadas": [
+          "O"
         ]
       },
       "maxOpciones": {
@@ -5770,6 +5849,9 @@
         ],
         "opciones": [
           "S"
+        ],
+        "agotadas": [
+          "M"
         ]
       },
       "maxOpciones": {
@@ -6162,6 +6244,9 @@
         ],
         "opciones": [
           "XL / NEGRO🖤"
+        ],
+        "agotadas": [
+          "M / GRIS🩶"
         ]
       },
       "maxOpciones": {
@@ -6243,6 +6328,10 @@
           "ROJO",
           "ROSA",
           "CELESTE"
+        ],
+        "agotadas": [
+          "NEGRO",
+          "AZUL"
         ]
       },
       "maxOpciones": {
@@ -6322,6 +6411,12 @@
           "VERDE CLARO",
           "AMARILLO",
           "NARANJA"
+        ],
+        "agotadas": [
+          "MARRÓN",
+          "NEGRO",
+          "BEIGE",
+          "VERDE"
         ]
       },
       "maxOpciones": {
@@ -6358,6 +6453,12 @@
         "opciones": [
           "D",
           "E"
+        ],
+        "agotadas": [
+          "A",
+          "C",
+          "G",
+          "H"
         ]
       },
       "maxOpciones": {
@@ -6393,6 +6494,9 @@
         ],
         "opciones": [
           "C"
+        ],
+        "agotadas": [
+          "B"
         ]
       },
       "maxOpciones": {
@@ -6467,6 +6571,11 @@
         ],
         "opciones": [
           "C"
+        ],
+        "agotadas": [
+          "A",
+          "D",
+          "F"
         ]
       },
       "maxOpciones": {
@@ -6497,6 +6606,13 @@
         ],
         "opciones": [
           "D"
+        ],
+        "agotadas": [
+          "A",
+          "B",
+          "C",
+          "E",
+          "F"
         ]
       },
       "maxOpciones": {
@@ -6719,6 +6835,9 @@
         ],
         "opciones": [
           "ROSADO"
+        ],
+        "agotadas": [
+          "AZUL"
         ]
       },
       "maxOpciones": {
@@ -7033,6 +7152,9 @@
         ],
         "opciones": [
           "M"
+        ],
+        "agotadas": [
+          "S"
         ]
       },
       "maxOpciones": {
