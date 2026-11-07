@@ -44,3 +44,11 @@ Sin commit ni push (los hace Ruth).
   `setCat`/`setOferta` y con una guarda en `agotadosAPintar` si `filtroCat` ya no coincide.
 - Caché `sw.js` se queda en v44 (nada publicado). Sin precios en las filas.
 - Tests: 294 totales, 294 pass, 0 fail (+2 de `porCategoria`). `node --check` OK. ⚠ NO VERIFICADO en navegador.
+
+## Retoque visual de la franja de agotados (caché v45)
+- Botón de las filas: discreto (contorno `var(--border)`, fondo transparente, texto `--text-2`, `--t-sm`,
+  min-height 44 px). La tarjeta `#agotado` conserva `btn-wa`.
+- Título: ahora `<h2 class="mv-titulo agotados-tit">` (mismo estilo que «Los más vendidos»), con línea
+  superior y margen sobre la franja, y subtítulo «Toca 🔔 y te escribimos por WhatsApp cuando vuelvan.».
+- Foto de fila atenuada (opacity .85, grayscale .35). `sw.js`: v44 → v45.
+- Tests: 294/294, 0 fallos. ⚠ NO VERIFICADO en navegador (contraste y tema oscuro por tokens, sin ver).

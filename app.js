@@ -1245,12 +1245,13 @@ function pintarAgotadosBusqueda(sinResultados) {
     return '<div class="agotado-fila">' +
       (f ? '<img class="agotado-fila-foto" src="' + escapeHtml(f.src) + '" alt="" loading="lazy" decoding="async">' : '') +
       '<span class="agotado-fila-nom">' + escapeHtml(a.name) + '</span>' +
-      '<a class="btn btn-wa agotado-fila-btn" href="' + escapeHtml(url) + '" target="_blank" rel="noopener">🔔 Avísame</a>' +
+      '<a class="btn agotado-fila-btn" href="' + escapeHtml(url) + '" target="_blank" rel="noopener">🔔 Avísame</a>' +
       '</div>';
   }).join('');
   if (!filas) return;
   const destino = sinResultados ? vacio : abajo;
-  destino.innerHTML = '<p class="agotados-tit">' + (busqueda.trim() ? 'Se nos agotaron' : 'Se agotaron') + ' — te avisamos cuando vuelvan</p>' + filas +
+  destino.innerHTML = '<h2 class="mv-titulo agotados-tit">' + (busqueda.trim() ? 'Se nos agotaron' : 'Se agotaron') + ' — te avisamos cuando vuelvan</h2>' +
+    '<p class="agotados-sub">Toca 🔔 y te escribimos por WhatsApp cuando vuelvan.</p>' + filas +
     (mas > 0 ? '<button type="button" class="btn btn-suave btn-secundario agotados-mas" data-agotados-mas="1">Ver más (' + mas + ')</button>' : '');
   destino.hidden = false;
 }
