@@ -49,6 +49,7 @@ let productoModal = null;
 let seleccionVar = [];   // un valor por eje, del producto abierto en el detalle
 let catsExpandidas = false;   // estado de "Ver todas" en categorías (solo escritorio); sobrevive a los re-render
 const CATS_VISIBLES_PLEGADO = 8;   // debe coincidir con :nth-child(n+9) en estilos.css
+const CTA_GRUPO_TRAS_N = 14;   // «Únete a nuestro grupo» entra tras estos (lejos de la de gestores)
 const CTA_COMI_TRAS_N = 6;   // «Gana dinero con 3B» entra en la parrilla tras estos productos
 
 // Destino de pago fijo en el código, NO en el catálogo (2026-08-16).
@@ -559,6 +560,22 @@ function tarjetaHtml(p) {
 // clics con closest('.card'), así que esto no puede confundirse con un producto.
 // Sin cifra de comisión a propósito (decisión del usuario): lo que se publica en
 // Internet compromete, y los porcentajes se hablan con Ruth caso por caso.
+// Enlace del grupo de ESTA página (''= no se enseña nada del grupo). Solo la casa tiene el suyo
+// salvo que el bloque de un socio traiga el propio (ver grupo.js).
+function enlaceGrupo() {
+  return window.Grupo.enlaceDe(CAT && CAT.tienda, NEGOCIO);
+}
+
+function tarjetaGrupoHtml(url) {
+  return `<a class="cta-grupo" id="cta-grupo" href="${escapeHtml(url)}" target="_blank" rel="noopener">
+    <span class="cta-grupo-txt">
+      <span class="cta-grupo-tit">👥 Únete a nuestro grupo de WhatsApp</span>
+      <span class="cta-grupo-sub">Las ofertas y novedades llegan primero ahí.</span>
+    </span>
+    <span class="btn cta-grupo-btn">Unirme al grupo</span>
+  </a>`;
+}
+
 function tarjetaComisionistaHtml() {
   return `<button type="button" class="cta-comi" id="cta-comi">
     <span class="cta-comi-txt">
@@ -786,6 +803,11 @@ function renderGrid() {
   // (.cta-comi trae grid-column:1/-1). Antes vivía en un hueco aparte: pegado
   // encima del catálogo competía con la tarjeta de encargos, y debajo quedaba
   // detrás de 224 productos y no lo veía nadie. Al buscar o filtrar no sale.
+  // El grupo va primero (posición mayor) para no desplazar la de gestores al insertar.
+  const urlGrupo = enlaceGrupo();
+  if (!buscando && urlGrupo && tarjetas.length > CTA_GRUPO_TRAS_N) {
+    tarjetas.splice(CTA_GRUPO_TRAS_N, 0, tarjetaGrupoHtml(urlGrupo));
+  }
   if (!buscando && tarjetas.length > CTA_COMI_TRAS_N) {
     tarjetas.splice(CTA_COMI_TRAS_N, 0, tarjetaComisionistaHtml());
   }
@@ -2080,8 +2102,36 @@ function cerrarAvisoEnviado(vaciar) {
   if (vaciar) {
     limpiarCarrito();
     cerrarCarrito();
-    mostrarAvisoTexto('¡Gracias! Tu carrito quedó vacío. Te escribimos por WhatsApp.');
+    abrirGracias();
   }
+}
+
+// ── «¡Gracias por tu pedido!» ──
+function abrirGracias() {
+  const logo = document.getElementById('gracias-logo');
+  logo.src = window.Grupo.logoDe(NEGOCIO);
+  logo.hidden = false;
+  const url = enlaceGrupo();
+  const bloque = document.getElementById('gracias-grupo');
+  if (url) { document.getElementById('gracias-grupo-btn').href = url; bloque.hidden = false; }
+  else bloque.hidden = true;
+  elementoAnteriorFoco = document.activeElement;
+  document.getElementById('gracias').hidden = false;
+  document.getElementById('gracias-seguir').focus();
+  document.addEventListener('keydown', capturarTecladoGracias);
+}
+
+function cerrarGracias() {
+  document.getElementById('gracias').hidden = true;
+  document.removeEventListener('keydown', capturarTecladoGracias);
+  if (elementoAnteriorFoco && elementoAnteriorFoco.isConnected) elementoAnteriorFoco.focus();
+}
+
+function capturarTecladoGracias(e) {
+  const modal = document.getElementById('gracias');
+  if (modal.hidden) return;
+  if (e.key === 'Escape') { cerrarGracias(); return; }
+  if (e.key === 'Tab') atraparFoco(e, modal);
 }
 
 // Pinta el panel modal (móvil y respaldo en escritorio) Y el aside lateral
@@ -2703,6 +2753,9 @@ async function iniciar() {
   document.getElementById('agotado-cerrar').addEventListener('click', cerrarAgotado);
   document.getElementById('agotado-fondo').addEventListener('click', cerrarAgotado);
   document.getElementById('agotado-ver').addEventListener('click', cerrarAgotado);
+  document.getElementById('gracias-cerrar').addEventListener('click', cerrarGracias);
+  document.getElementById('gracias-fondo').addEventListener('click', cerrarGracias);
+  document.getElementById('gracias-seguir').addEventListener('click', cerrarGracias);
   ['agotados-grid', 'agotados-vacio'].forEach((id) => {
     const caja = document.getElementById(id);
     if (caja) caja.addEventListener('click', (e) => {

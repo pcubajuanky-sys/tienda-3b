@@ -1855,3 +1855,45 @@ body[data-negocio]{--acento:var(--brand);--acento-ink:var(--brand-ink)}
 .agotado-fila-btn{flex:none;min-height:44px;padding:0 var(--e2);background:transparent;border:1px solid var(--border);color:var(--text-2);font-size:var(--t-sm);font-weight:600}
 .agotado-fila-btn:hover{background:var(--surface-2);color:var(--text)}
 .agotados-mas{width:100%;min-height:44px;justify-content:center;margin-top:var(--e2)}
+
+/* ── Marca de agua del logo en el pedido (2026-11-07) ──
+   El logo del negocio de la página, grande y muy tenue, detrás del contenido del carrito
+   (modal y aside). img-src 'self' de la CSP permite el url() local. isolation:isolate crea el
+   contexto de apilado para que el z-index:-1 quede sobre el fondo de la caja y bajo el texto. */
+:root{--marca-agua:url("/logo-3b.png");--marca-agua-op:.06}
+body[data-negocio="electripower"]{--marca-agua:url("/logo-electripower.png")}
+body[data-negocio="delmar"]{--marca-agua:url("/logo-delmar.png")}
+@media (prefers-color-scheme: dark){ :root{--marca-agua-op:.045} }
+.panel-caja,.carrito-lateral{isolation:isolate}
+.panel-caja::before,.carrito-lateral::before{
+  content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:var(--marca-agua) center / 65% auto no-repeat;opacity:var(--marca-agua-op);
+  border-radius:inherit;
+}
+
+/* ── Gracias por tu pedido ── */
+.gracias-body{display:flex;flex-direction:column;align-items:center;gap:var(--e2);text-align:center}
+.gracias-logo{width:128px;height:128px;border-radius:50%;object-fit:cover;background:var(--surface-2)}
+.gracias-body h2{margin:0;font-size:var(--t-lg)}
+.gracias-sub{margin:0;color:var(--text-2);font-size:var(--t-sm)}
+.gracias-grupo{width:100%;margin-top:var(--e2);padding:var(--e3);border:1px solid var(--border);border-left:4px solid var(--wa);border-radius:var(--radio-card);background:var(--surface-2)}
+.gracias-grupo[hidden]{display:none}
+.gracias-grupo-tit{margin:0;font-weight:700;font-size:var(--t-md)}
+.gracias-grupo-sub{margin:4px 0 var(--e2);color:var(--text-2);font-size:var(--t-sm)}
+.gracias-body .btn{width:100%;min-height:48px}
+.gracias-logo[hidden]{display:none}
+
+/* ── Tarjeta del grupo en la parrilla: hermana discreta de .cta-comi ── */
+.cta-grupo{
+  grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;
+  margin:var(--e1) 0;padding:var(--e3) var(--e4);width:100%;
+  background:var(--surface-2);color:var(--text);text-decoration:none;
+  border:1px solid var(--border);border-left:4px solid var(--wa);border-radius:var(--radio-card);
+  transition:box-shadow var(--dur);
+}
+.cta-grupo:hover{box-shadow:var(--sombra-2)}
+.cta-grupo-txt{flex:1 1 220px;min-width:0}
+.cta-grupo-tit{display:block;font-size:var(--t-md);font-weight:700;line-height:1.25}
+.cta-grupo-sub{display:block;font-size:var(--t-sm);color:var(--text-2);margin-top:4px}
+.cta-grupo-btn{flex:none;min-height:44px;background:transparent;border:1px solid var(--wa);color:var(--wa)}
+@media (prefers-reduced-motion:reduce){ .cta-grupo{transition:none} }

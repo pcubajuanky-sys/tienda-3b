@@ -458,6 +458,27 @@
   </div>
 </div>
 
+<!-- «¡Gracias por tu pedido!» (2026-11-07): sale al pulsar «Sí, vaciar mi carrito». El logo
+     lo pone abrirGracias() según el negocio; el bloque del grupo solo si hay enlace válido.
+     Idéntico en las tres cáscaras. -->
+<div id="gracias" class="modal" hidden role="dialog" aria-modal="true" aria-labelledby="gracias-titulo">
+  <div class="modal-fondo" id="gracias-fondo" tabindex="-1"></div>
+  <div class="modal-caja gracias-caja">
+    <button class="modal-cerrar" id="gracias-cerrar" aria-label="Cerrar" type="button">✕</button>
+    <div class="modal-body gracias-body">
+      <img class="gracias-logo" id="gracias-logo" width="128" height="128" alt="" hidden>
+      <h2 id="gracias-titulo">¡Gracias por tu pedido!</h2>
+      <p class="gracias-sub">Te escribimos por WhatsApp para confirmar la entrega.</p>
+      <div class="gracias-grupo" id="gracias-grupo" hidden>
+        <p class="gracias-grupo-tit">👥 Únete a nuestro grupo de WhatsApp</p>
+        <p class="gracias-grupo-sub">Las ofertas y novedades llegan primero ahí.</p>
+        <a class="btn btn-wa" id="gracias-grupo-btn" target="_blank" rel="noopener">Unirme al grupo</a>
+      </div>
+      <button class="btn btn-suave btn-secundario" id="gracias-seguir" type="button">Seguir mirando</button>
+    </div>
+  </div>
+</div>
+
 <!-- Encargos Shein/Temu (Fase C). El contenido lo pinta encargos.js; se abre con #encargos. -->
 <div id="modal-encargos" class="modal" hidden role="dialog" aria-modal="true" aria-labelledby="enc-titulo">
   <div class="modal-fondo" id="enc-fondo" tabindex="-1"></div>
@@ -571,6 +592,7 @@
 <script src="espera.js"></script>
 <script src="preguntar.js"></script>
 <script src="aviso.js"></script>
+<script src="grupo.js"></script>
 <script src="completar.js"></script>
 <script src="listo.js"></script>
 <script src="tasa.js"></script>
