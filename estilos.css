@@ -1857,22 +1857,23 @@ body[data-negocio]{--acento:var(--brand);--acento-ink:var(--brand-ink)}
 .agotados-mas{width:100%;min-height:44px;justify-content:center;margin-top:var(--e2)}
 
 /* ── Marca de agua del logo en el pedido (2026-11-07) ──
-   El logo del negocio de la página, grande y muy tenue, detrás del contenido del carrito
-   (modal y aside). img-src 'self' de la CSP permite el url() local. isolation:isolate crea el
-   contexto de apilado para que el z-index:-1 quede sobre el fondo de la caja y bajo el texto. */
-:root{--marca-agua:url("/logo-3b.png");--marca-agua-op:.08}
-body[data-negocio="electripower"]{--marca-agua:url("/logo-electripower.png")}
-body[data-negocio="delmar"]{--marca-agua:url("/logo-delmar.png")}
-/* Mismo criterio de tema que el bloque de tokens oscuros (prefers-color-scheme, sin guardas). El logo es
-   oscuro con rojo: sobre fondo negro no se veia, asi que se vuelve silueta CLARA. */
-@media (prefers-color-scheme: dark){
-  :root{--marca-agua-op:.08}
-  .panel-caja::before,.carrito-lateral::before{filter:grayscale(1) invert(1) brightness(1.2)}
-}
+   marca-*.png son siluetas BLANCAS con alfa = luminancia del logo (el fondo negro queda
+   transparente). Se usan como MASCARA sobre un color de texto: asi la marca se tiñe con el
+   tema (oscura en claro, clara en oscuro) y no sale ningun recuadro. img-src 'self' de la CSP
+   permite el url() local. isolation:isolate crea el contexto de apilado para que el z-index:-1
+   quede sobre el fondo de la caja y bajo el texto. */
+:root{--marca-agua:url("/marca-3b.png");--marca-agua-op:.07}
+body[data-negocio="electripower"]{--marca-agua:url("/marca-electripower.png")}
+body[data-negocio="delmar"]{--marca-agua:url("/marca-delmar.png")}
+/* Mismo criterio de tema que el bloque de tokens oscuros (prefers-color-scheme, sin guardas). */
+@media (prefers-color-scheme: dark){ :root{--marca-agua-op:.09} }
 .panel-caja,.carrito-lateral{isolation:isolate}
 .panel-caja::before,.carrito-lateral::before{
   content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
-  background:var(--marca-agua) center / 65% auto no-repeat;opacity:var(--marca-agua-op);
+  background-color:var(--text);
+  -webkit-mask:var(--marca-agua) center / 65% auto no-repeat;
+  mask:var(--marca-agua) center / 65% auto no-repeat;
+  opacity:var(--marca-agua-op);
   border-radius:inherit;
 }
 

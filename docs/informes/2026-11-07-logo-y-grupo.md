@@ -40,3 +40,13 @@ Sobre main (v45 publicada). Sin commit ni push. Caché `sw.js`: v45 → v46.
   los tokens): opacidad .08 y `filter: grayscale(1) invert(1) brightness(1.2)` sobre el `::before`, para que
   el emblema oscuro con rojo se lea como silueta clara. El logo de #gracias no se toca.
 - Tests: 298/298. ⚠ NO VERIFICADO a ojo (sin navegador).
+
+## Corrección: marca de agua como máscara (caché v48)
+- Causa: `logo-3b.png` es opaco con fondo negro cuadrado; en oscuro el filtro lo volvía un recuadro claro.
+- Nuevos `marca-3b.png`, `marca-electripower.png`, `marca-delmar.png`: píxeles blancos con alfa =
+  luminancia × alfa original (3b: fondo negro opaco; electripower: fondo oscuro, círculo con exterior
+  transparente; delmar: círculo transparente fuera, interior azul marino con zonas claras — la silueta por
+  luminancia deja ver lo claro, ⚠ a revisar a ojo). Tamaños: 58,9 / 15,5 / 22,5 KB.
+- CSS: `background-color: var(--text)` + `mask: var(--marca-agua) center / 65% auto no-repeat`;
+  opacidad .07 claro / .09 oscuro; sin `filter`. Los tres PNG van en ARMAZON de `sw.js`.
+- Tests: 298/298. ⚠ NO VERIFICADO a ojo.
