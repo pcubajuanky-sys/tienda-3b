@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-07T00:27:25.895Z",
+  "generado": "2026-11-07T01:33:40.578Z",
   "tasa": 930,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -131,6 +131,10 @@
     {
       "code": "5SS7X",
       "nombre": "Yaneiry"
+    },
+    {
+      "code": "FPMJQ",
+      "nombre": "Daniela Sánchez"
     }
   ],
   "categorias": [
