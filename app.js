@@ -22,12 +22,28 @@ const CLAVE_ENVIADO = NEGOCIO === (window.Negocio ? window.Negocio.CASA : '3b')
 const CLAVE_VISITA = NEGOCIO === (window.Negocio ? window.Negocio.CASA : '3b')
   ? 'ultimaVisita'
   : 'ultimaVisita:' + NEGOCIO;
+// Favoritos y «vistos hace poco» (buscar.js / favoritos.js). Por negocio, como el carrito:
+// los de la casa conservan el nombre sin sufijo.
+const CLAVE_FAV = NEGOCIO === (window.Negocio ? window.Negocio.CASA : '3b') ? 'favoritos' : 'favoritos-' + NEGOCIO;
+const CLAVE_RECIENTES = NEGOCIO === (window.Negocio ? window.Negocio.CASA : '3b') ? 'recientes' : 'recientes-' + NEGOCIO;
+const VACIO_TEXTO = 'No hay productos que coincidan con tu búsqueda.';
+const SIN_FAVORITOS_TEXTO = 'Todavía no tienes favoritos. Toca el ♡ de un producto para guardarlo.';
+// 🔴 localStorage LANZA en incognito o con los datos bloqueados: todo va en try/catch y la
+// pagina funciona igual sin el.
+function cargarFav() { try { return window.Buscar.cargarLista(localStorage.getItem(CLAVE_FAV)); } catch (e) { return []; } }
+function guardarFav() { try { localStorage.setItem(CLAVE_FAV, JSON.stringify(favoritos)); } catch (e) { /* sin almacenamiento: vive solo en esta visita */ } }
+function cargarRecientes() { try { return window.Buscar.cargarLista(localStorage.getItem(CLAVE_RECIENTES)); } catch (e) { return []; } }
+function guardarRecientes() { try { localStorage.setItem(CLAVE_RECIENTES, JSON.stringify(recientes)); } catch (e) { /* idem */ } }
 let gestorRecargo = null;   // el gestor cuyos precios se estan enseñando, si los hay
 let filtroCat = '';      // categoría activa ('' = todas)
 let filtroOferta = false;
 let ordenSel = 'az';          // criterio de orden elegido; 'az' es el de siempre
 let soloEnvioGratis = false;  // filtro de mensajería gratis incondicional
 let busqueda = '';
+let soloFavoritos = false;
+let rangoPrecio = '';
+let favoritos = cargarFav();
+let recientes = cargarRecientes();
 let elementoAnteriorFoco = null;   // para devolver el foco al cerrar modal/carrito
 let productoModal = null;
 let seleccionVar = [];   // un valor por eje, del producto abierto en el detalle
@@ -183,12 +199,14 @@ function limpiarFallback(img) {
 
 function visibles() {
   const q = normaliza(busqueda);
-  return (CAT.items || []).filter((p) => {
+  const lista = (CAT.items || []).filter((p) => {
     if (filtroOferta && !p.enOferta) return false;
     if (!filtroOferta && filtroCat && p.cat !== filtroCat) return false;
+    if (soloFavoritos && favoritos.indexOf(p.id) === -1) return false;
     if (!q) return true;
     return normaliza(p.name + ' ' + p.notes + ' ' + p.subcat).includes(q);
   });
+  return window.Orden.filtrarPrecio(lista, rangoPrecio);
 }
 
 function setCat(n) { filtroCat = n; filtroOferta = false; renderFiltroPill(); renderCategorias3D(); renderGrid(); }
@@ -508,6 +526,11 @@ function avisoQuedanHtml(p) {
   return `<div class="card-quedan">${n === 1 ? 'Queda 1' : `Quedan ${n}`}</div>`;
 }
 
+function botonFavHtml(id) {
+  const esFav = favoritos.indexOf(id) !== -1;
+  return `<button type="button" class="card-fav" data-fav="${escapeHtml(id)}" aria-pressed="${esFav}" aria-label="${esFav ? 'Quitar de favoritos' : 'Guardar en favoritos'}">${esFav ? '♥' : '♡'}</button>`;
+}
+
 function tarjetaHtml(p) {
   const foto = fotoCard(p.photo);
   return `
@@ -515,6 +538,7 @@ function tarjetaHtml(p) {
       <div class="card-foto">
         <img src="${foto.src}" ${foto.srcset ? `srcset="${foto.srcset}" sizes="(max-width:480px) 45vw, 220px"` : ''}
              alt="${escapeHtml(p.name)}" loading="lazy" decoding="async" onerror="imgFallback(this)">
+        ${botonFavHtml(p.id)}
         ${p.enOferta || p.destacado ? `<div class="card-sellos">
           ${window.Descuento.sello(p) ? `<span class="card-oferta">${window.Descuento.sello(p)}</span>` : ''}
           ${p.destacado ? `<span class="card-mv">⭐ MÁS VENDIDO</span>` : ''}
@@ -550,7 +574,7 @@ function tarjetaComisionistaHtml() {
 // `acc-<id>` y refrescarAcciones solo encontraría el primero — la cantidad de una
 // de las copias dejaría de actualizarse en silencio.
 function renderMasVendidos() {
-  const buscando = busqueda.trim() !== '' || filtroCat !== '' || filtroOferta;
+  const buscando = busqueda.trim() !== '' || filtroCat !== '' || filtroOferta || soloFavoritos || rangoPrecio !== '';
   // El chip de mensajería manda también aquí: con el filtro puesto, un carrusel de
   // productos que NO la llevan contradice lo que el cliente acaba de pedir. Si no queda
   // ninguno, la sección entera se esconde sola (lo decide `mostrar`, más abajo).
@@ -581,8 +605,144 @@ function renderControles() {
   chip.hidden = !hayEnvio;
   if (!hayEnvio) soloEnvioGratis = false;   // chip oculto => filtro apagado, o la parrilla quedaría vacía sin salida
   chip.setAttribute('aria-pressed', String(soloEnvioGratis));
-  // Con una sola opción de orden y sin filtro no hay nada que elegir: fuera.
-  cont.hidden = ops.length < 2 && !hayEnvio;
+  const selP = document.getElementById('precio-sel');
+  if (selP) {
+    const rs = window.Orden.rangosUtiles(items);
+    selP.hidden = rs.length === 0;
+    if (!rs.length) rangoPrecio = '';
+    selP.innerHTML = '<option value="">Cualquier precio</option>' +
+      rs.map((r) => `<option value="${r.id}">${escapeHtml(r.texto)}</option>`).join('');
+    selP.value = rs.some((r) => r.id === rangoPrecio) ? rangoPrecio : '';
+    rangoPrecio = selP.value;
+  }
+  // Con una sola opción de orden y sin filtro no hay nada que elegir: fuera. Lo decide
+  // renderChipFav() porque el chip de favoritos y el filtro de precio también cuentan.
+  renderChipFav();
+}
+
+// Chip de favoritos, enlace «Enviar mi lista» y visibilidad de la fila de controles.
+// 🔴 renderControles() escondia #controles entero si no habia orden ni mensajeria: el chip
+// de favoritos y el select de precio tienen que contar, o quedarian invisibles.
+function renderChipFav() {
+  if (!CAT) return;
+  const cont = document.getElementById('controles');
+  const chip = document.getElementById('btn-favoritos');
+  const selP = document.getElementById('precio-sel');
+  const items = CAT.items || [];
+  const vigentes = window.Favoritos.vigentes(favoritos, items);
+  if (chip) {
+    chip.hidden = !(vigentes.length > 0 || soloFavoritos);
+    chip.setAttribute('aria-pressed', String(soloFavoritos));
+    const n = document.getElementById('fav-n');
+    if (n) n.textContent = String(vigentes.length);
+  }
+  if (cont) {
+    const sinOrden = window.Orden.opcionesUtiles(items).length < 2;
+    const sinEnvio = !window.Orden.hayEnvioGratis(items);
+    cont.hidden = sinOrden && sinEnvio && (!chip || chip.hidden) && (!selP || selP.hidden);
+  }
+  const caja = document.getElementById('fav-enviar');
+  if (caja) {
+    const a = caja.querySelector('a');
+    const destino = destinoWhatsApp();
+    const prods = vigentes.map(productoDe).filter(Boolean);
+    const ok = soloFavoritos && prods.length > 0 && !!destino && !!a;
+    caja.hidden = !ok;
+    if (ok) a.href = 'https://api.whatsapp.com/send?phone=' + destino + '&text=' + encodeURIComponent(window.Favoritos.mensaje(prods, fmt));
+  }
+}
+
+function alternarFav(id) {
+  favoritos = window.Favoritos.alternar(favoritos, id);
+  guardarFav();
+  const esFav = favoritos.indexOf(id) !== -1;
+  document.querySelectorAll('[data-fav]').forEach((b) => {
+    if (b.dataset.fav !== id) return;
+    b.setAttribute('aria-pressed', String(esFav));
+    b.setAttribute('aria-label', esFav ? 'Quitar de favoritos' : 'Guardar en favoritos');
+    b.textContent = esFav ? '♥' : '♡';
+    if (esFav) {
+      b.classList.remove('late');
+      void b.offsetWidth;   // reinicia la animacion si se marca dos veces seguidas
+      b.classList.add('late');
+      b.addEventListener('animationend', () => b.classList.remove('late'), { once: true });
+    }
+  });
+  pintarFichaFav();
+  renderChipFav();
+  if (soloFavoritos) renderGrid();   // el que se quito tiene que desaparecer
+}
+
+// Boton «Guardar» de la ficha.
+function pintarFichaFav() {
+  const b = document.getElementById('ficha-fav');
+  if (!b) return;
+  const esFav = !!productoModal && favoritos.indexOf(productoModal) !== -1;
+  b.setAttribute('aria-pressed', String(esFav));
+  b.textContent = esFav ? '♥ Guardado' : '♡ Guardar';
+}
+
+// «Vistos hace poco». Marcado compacto (rel-card) y SIN botones de cantidad: pintar aqui
+// la tarjeta completa duplicaria el id acc-<id> de la parrilla.
+function renderRecientes() {
+  const sec = document.getElementById('recientes');
+  const tira = document.getElementById('recientes-tira');
+  if (!sec || !tira || !CAT) return;
+  const buscando = busqueda.trim() !== '' || filtroCat !== '' || filtroOferta || soloFavoritos || rangoPrecio !== '';
+  const prods = recientes.map(productoDe).filter(Boolean).slice(0, 10);
+  const mostrar = !buscando && prods.length > 0;
+  sec.hidden = !mostrar;
+  tira.innerHTML = mostrar ? prods.map((x) =>
+    '<button type="button" class="rel-card completar-card" data-reciente="' + escapeHtml(x.id) + '">' +
+    '<span class="rel-foto"><img src="' + fotoMosaico(x.photo) + '" alt="" loading="lazy"></span>' +
+    '<span class="rel-nom">' + escapeHtml(x.name) + '</span>' +
+    '<span class="rel-precio">' + fmt(x.precioCUP) + ' CUP</span>' +
+    '</button>').join('') : '';
+}
+
+// ── Sugerencias del buscador ──
+let sugActiva = -1;
+
+function resaltar(nombre, t) {
+  const n = window.Buscar.normaliza(nombre);
+  const q = window.Buscar.normaliza(t).trim();
+  const i = n.length === nombre.length ? n.indexOf(q) : -1;   // si la normalizacion cambia el largo, sin resaltar
+  if (i < 0) return escapeHtml(nombre);
+  return escapeHtml(nombre.slice(0, i)) + '<b>' + escapeHtml(nombre.slice(i, i + q.length)) + '</b>' + escapeHtml(nombre.slice(i + q.length));
+}
+
+function ocultarSugerencias() {
+  const box = document.getElementById('sugerencias');
+  if (!box) return;
+  box.hidden = true;
+  box.innerHTML = '';
+  sugActiva = -1;
+}
+
+function pintarSugerencias(valor) {
+  const box = document.getElementById('sugerencias');
+  if (!box) return;
+  const lista = CAT ? window.Buscar.sugerencias(CAT.items || [], valor) : [];
+  sugActiva = -1;
+  if (!lista.length) { ocultarSugerencias(); return; }
+  const t = valor.trim();
+  box.innerHTML = lista.map((p) =>
+    '<button type="button" class="sug" role="option" data-sug="' + escapeHtml(p.id) + '">' +
+    '<span class="sug-nom">' + resaltar(p.name, t) + '</span>' +
+    '<span class="sug-precio">' + fmt(p.precioCUP) + ' CUP</span></button>').join('') +
+    '<button type="button" class="sug sug-todos" data-sug-todos="1">Ver todos los resultados de «' + escapeHtml(t) + '»</button>';
+  box.hidden = false;
+}
+
+function moverSugerencia(delta) {
+  const box = document.getElementById('sugerencias');
+  if (!box || box.hidden) return;
+  const botones = box.querySelectorAll('.sug');
+  if (!botones.length) return;
+  botones.forEach((b) => b.classList.remove('activa'));
+  sugActiva = (sugActiva + delta + botones.length) % botones.length;
+  botones[sugActiva].classList.add('activa');
+  botones[sugActiva].scrollIntoView({ block: 'nearest' });
 }
 
 // Buscó algo que no está: en vez de un callejón sin salida, un botón que abre WhatsApp
@@ -608,7 +768,7 @@ function pintarPregunta(termino) {
 
 function renderGrid() {
   const items = visibles();
-  const buscando = busqueda.trim() !== '' || filtroCat !== '' || filtroOferta;
+  const buscando = busqueda.trim() !== '' || filtroCat !== '' || filtroOferta || soloFavoritos || rangoPrecio !== '';
   // En la portada los destacados viven en el carrusel de arriba; aquí se omiten
   // para no duplicar ids. Al buscar o filtrar no hay carrusel, así que entran.
   const base = buscando ? items : items.filter((p) => !p.destacado);
@@ -617,6 +777,8 @@ function renderGrid() {
   // el chip de mensajería cuenta como filtro: si no, al dejar la parrilla vacía solo con
   // el chip, el cliente se queda ante una pantalla en blanco sin explicación.
   document.getElementById('vacio').hidden = !(lista.length === 0 && (buscando || soloEnvioGratis));
+  const vacioP = document.querySelector('#vacio > p');
+  if (vacioP) vacioP.textContent = (soloFavoritos && window.Favoritos.vigentes(favoritos, CAT.items || []).length === 0) ? SIN_FAVORITOS_TEXTO : VACIO_TEXTO;
   pintarPregunta(busqueda);
   const tarjetas = lista.map(tarjetaHtml);
   // El reclamo de gestores va DENTRO de la parrilla, ocupando una fila entera
@@ -628,6 +790,8 @@ function renderGrid() {
   }
   document.getElementById('grid').innerHTML = tarjetas.join('');
   renderMasVendidos();
+  renderRecientes();
+  renderChipFav();
 }
 
 // El aviso largo de la ficha. Se repinta junto a la acción porque la combinación elegida
@@ -898,6 +1062,10 @@ function mostrarDetalle(id) {
   const p = (CAT.items || []).find((x) => x.id === id);
   if (!p) return;
   productoModal = id;
+  recientes = window.Buscar.anotarReciente(recientes, id);
+  guardarRecientes();
+  renderRecientes();
+  pintarFichaFav();
   document.getElementById('modal-img').alt = p.name;
   document.getElementById('modal-img').setAttribute('onerror', 'imgFallback(this)');
   galeriaFotos = window.Galeria.fotosDe(p);
@@ -2334,8 +2502,41 @@ async function iniciar() {
   document.getElementById('buscador').addEventListener('input', (e) => {
     clearTimeout(temporizadorBusqueda);
     const valor = e.target.value;
-    temporizadorBusqueda = setTimeout(() => { busqueda = valor; renderGrid(); }, 150);
+    if (valor.trim() === '') ocultarSugerencias();
+    temporizadorBusqueda = setTimeout(() => {
+      busqueda = valor; renderGrid();
+      if (valor.trim() !== '') pintarSugerencias(valor);
+    }, 150);
   });
+  const inputBuscador = document.getElementById('buscador');
+  const cajaSug = document.getElementById('sugerencias');
+  // pointerdown + preventDefault: evita que el blur del input cierre la lista antes del clic.
+  if (cajaSug) {
+    cajaSug.addEventListener('pointerdown', (e) => e.preventDefault());
+    cajaSug.addEventListener('click', (e) => {
+      const todos = e.target.closest('[data-sug-todos]');
+      const una = e.target.closest('[data-sug]');
+      if (!todos && !una) return;
+      ocultarSugerencias();
+      inputBuscador.blur();
+      if (una) abrirDetalle(una.dataset.sug);
+      else {
+        busqueda = inputBuscador.value; renderGrid();
+        const cat = document.getElementById('catalogo');
+        if (cat) cat.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  }
+  inputBuscador.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') { ocultarSugerencias(); return; }
+    if (e.key === 'ArrowDown') { e.preventDefault(); moverSugerencia(1); return; }
+    if (e.key === 'ArrowUp') { e.preventDefault(); moverSugerencia(-1); return; }
+    if (e.key === 'Enter' && sugActiva >= 0) {
+      const act = document.querySelector('#sugerencias .sug.activa');
+      if (act) { e.preventDefault(); act.click(); }
+    }
+  });
+  inputBuscador.addEventListener('blur', () => setTimeout(ocultarSugerencias, 150));
 
   document.getElementById('btn-carrito').addEventListener('click', abrirCarrito);
   document.getElementById('btn-ver-pedido').addEventListener('click', abrirCarrito);
@@ -2394,7 +2595,12 @@ async function iniciar() {
     // puesto no enseñaría todo. El ORDEN elegido sí se conserva: es una preferencia del
     // cliente, no un filtro.
     busqueda = ''; filtroCat = ''; filtroOferta = false; soloEnvioGratis = false;
+    soloFavoritos = false; rangoPrecio = '';
     document.getElementById('buscador').value = '';
+    const selPrecio = document.getElementById('precio-sel');
+    if (selPrecio) selPrecio.value = '';
+    const chipFav = document.getElementById('btn-favoritos');
+    if (chipFav) chipFav.setAttribute('aria-pressed', 'false');
     const chipEnvio = document.getElementById('btn-envio-gratis');
     if (chipEnvio) chipEnvio.setAttribute('aria-pressed', 'false');
     renderFiltroPill(); renderCategorias3D(); renderGrid();
@@ -2406,12 +2612,25 @@ async function iniciar() {
   // vendidos: el mismo gesto (tocar la tarjeta abre el detalle, tocar +/−/Añadir
   // no) tiene que funcionar igual en el carrusel que en la rejilla.
   const alPulsarEnTarjetas = (e) => {
-    if (e.target.closest('.card-accion')) return;
+    if (e.target.closest('.card-accion') || e.target.closest('.card-fav')) return;
     const card = e.target.closest('.card');
     if (card) abrirDetalle(card.dataset.id);
   };
   document.getElementById('grid').addEventListener('click', alPulsarEnTarjetas);
   document.getElementById('mv-tira').addEventListener('click', alPulsarEnTarjetas);
+  const alPulsarFav = (e) => {
+    const b = e.target.closest('.card-fav');
+    if (b) { e.stopPropagation(); alternarFav(b.dataset.fav); }
+  };
+  document.getElementById('grid').addEventListener('click', alPulsarFav);
+  document.getElementById('mv-tira').addEventListener('click', alPulsarFav);
+  const tiraRec = document.getElementById('recientes-tira');
+  if (tiraRec) tiraRec.addEventListener('click', (e) => {
+    const b = e.target.closest('[data-reciente]');
+    if (b) abrirDetalle(b.dataset.reciente);
+  });
+  const fichaFav = document.getElementById('ficha-fav');
+  if (fichaFav) fichaFav.addEventListener('click', () => { if (productoModal) alternarFav(productoModal); });
   document.getElementById('grid').addEventListener('click', (e) => {
     if (e.target.closest('#cta-comi')) abrirComisionista();
   });
@@ -2492,6 +2711,10 @@ async function iniciar() {
   engancharGestoGaleria();
   const selOrden = document.getElementById('orden-sel');
   if (selOrden) selOrden.addEventListener('change', (e) => { ordenSel = e.target.value; renderGrid(); });
+  const selPrecioEv = document.getElementById('precio-sel');
+  if (selPrecioEv) selPrecioEv.addEventListener('change', (e) => { rangoPrecio = e.target.value; renderGrid(); });
+  const chipFavEv = document.getElementById('btn-favoritos');
+  if (chipFavEv) chipFavEv.addEventListener('click', () => { soloFavoritos = !soloFavoritos; renderGrid(); });
   const chipEnvio = document.getElementById('btn-envio-gratis');
   if (chipEnvio) chipEnvio.addEventListener('click', () => {
     soloEnvioGratis = !soloEnvioGratis;

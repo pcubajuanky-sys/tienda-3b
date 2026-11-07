@@ -67,3 +67,29 @@ test('nada de esto revienta con lista vacia o basura', () => {
   assert.strictEqual(filtrar(null, true).length, 0);
   assert.ok(opcionesUtiles(null).length >= 1);
 });
+
+test('filtrarPrecio: los bordes 1000, 3000 y 10000 caen en el rango de arriba', () => {
+  const { filtrarPrecio } = sandbox.window.Orden;
+  const it = [999, 1000, 2999, 3000, 9999, 10000].map((n) => ({ id: String(n), precioCUP: n }));
+  const ids = (r) => filtrarPrecio(it, r).map((x) => x.id);
+  assert.deepStrictEqual(ids('h1000'), ['999']);
+  assert.deepStrictEqual(ids('1000-3000'), ['1000', '2999']);
+  assert.deepStrictEqual(ids('3000-10000'), ['3000', '9999']);
+  assert.deepStrictEqual(ids('m10000'), ['10000']);
+});
+
+test('filtrarPrecio: id vacio o desconocido devuelve todos, en un array nuevo', () => {
+  const { filtrarPrecio } = sandbox.window.Orden;
+  assert.strictEqual(filtrarPrecio(ITEMS, '').length, ITEMS.length);
+  assert.strictEqual(filtrarPrecio(ITEMS, 'raro').length, ITEMS.length);
+  assert.notStrictEqual(filtrarPrecio(ITEMS, ''), ITEMS);
+  assert.strictEqual(filtrarPrecio(null, 'h1000').length, 0);
+});
+
+test('rangosUtiles: solo los rangos con productos; con menos de 2 devuelve []', () => {
+  const { rangosUtiles } = sandbox.window.Orden;
+  assert.deepStrictEqual(Array.from(rangosUtiles(ITEMS), (r) => r.id), ['h1000', '1000-3000', '3000-10000']);
+  assert.strictEqual(rangosUtiles([{ precioCUP: 500 }, { precioCUP: 600 }]).length, 0);
+  assert.strictEqual(rangosUtiles([]).length, 0);
+  assert.strictEqual(rangosUtiles(null).length, 0);
+});

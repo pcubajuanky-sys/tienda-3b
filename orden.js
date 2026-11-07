@@ -55,5 +55,33 @@
     return n > 0 && n < lista.length;
   }
 
-  window.Orden = { ordenar: ordenar, filtrar: filtrar, opcionesUtiles: opcionesUtiles, hayEnvioGratis: hayEnvioGratis };
+  // Rangos de precio en CUP (la misma escala para todos). Entra si min <= precio < max.
+  var RANGOS = [
+    { id: 'h1000', texto: 'Hasta 1,000 CUP', min: 0, max: 1000 },
+    { id: '1000-3000', texto: '1,000 – 3,000 CUP', min: 1000, max: 3000 },
+    { id: '3000-10000', texto: '3,000 – 10,000 CUP', min: 3000, max: 10000 },
+    { id: 'm10000', texto: 'Más de 10,000 CUP', min: 10000, max: Infinity },
+  ];
+
+  function enRango(p, r) {
+    var c = Number(p && p.precioCUP) || 0;
+    return c >= r.min && c < r.max;
+  }
+
+  // Array NUEVO; un id vacio o desconocido devuelve todos.
+  function filtrarPrecio(items, rangoId) {
+    var lista = Array.isArray(items) ? items : [];
+    var r = RANGOS.filter(function (x) { return x.id === rangoId; })[0];
+    if (!r) return lista.slice();
+    return lista.filter(function (p) { return p && enRango(p, r); });
+  }
+
+  // Solo los rangos que tienen algun producto. Con menos de 2 un filtro no separa nada: [].
+  function rangosUtiles(items) {
+    var lista = Array.isArray(items) ? items : [];
+    var utiles = RANGOS.filter(function (r) { return lista.some(function (p) { return p && enRango(p, r); }); });
+    return utiles.length < 2 ? [] : utiles;
+  }
+
+  window.Orden = { ordenar: ordenar, filtrar: filtrar, opcionesUtiles: opcionesUtiles, hayEnvioGratis: hayEnvioGratis, RANGOS: RANGOS, filtrarPrecio: filtrarPrecio, rangosUtiles: rangosUtiles };
 })();
