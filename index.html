@@ -293,8 +293,10 @@
       <div class="card card-skel"></div><div class="card card-skel"></div>
     </div>
     <div id="grid" class="grid" hidden></div>
+    <div id="agotados-grid" class="agotados-busq" hidden></div>
     <div id="vacio" class="estado" hidden>
       <p>No hay productos que coincidan con tu búsqueda.</p>
+      <div id="agotados-vacio" class="agotados-busq" hidden></div>
       <div id="vacio-pregunta" class="vacio-pregunta" hidden></div>
       <button id="btn-ver-todo" class="btn btn-suave btn-secundario" type="button">Ver todo el catálogo</button>
     </div>
@@ -440,6 +442,22 @@
   </div>
 </div>
 
+<!-- «Se nos agotó» (2026-11-07): enlace compartido a un producto que ya no está. Lo abre
+     abrirAgotado() en app.js. Idéntico en las tres cáscaras. -->
+<div id="agotado" class="modal" hidden role="dialog" aria-modal="true" aria-labelledby="agotado-titulo">
+  <div class="modal-fondo" id="agotado-fondo" tabindex="-1"></div>
+  <div class="modal-caja agotado-caja">
+    <button class="modal-cerrar" id="agotado-cerrar" aria-label="Cerrar" type="button">✕</button>
+    <div class="modal-body agotado-body">
+      <div class="agotado-foto" id="agotado-foto"></div>
+      <h2 id="agotado-titulo"></h2>
+      <p class="agotado-sub">Se nos agotó</p>
+      <a class="btn btn-wa" id="agotado-aviso" target="_blank" rel="noopener" hidden></a>
+      <button class="btn btn-suave btn-secundario" id="agotado-ver" type="button">Ver el catálogo</button>
+    </div>
+  </div>
+</div>
+
 <!-- Encargos Shein/Temu (Fase C). El contenido lo pinta encargos.js; se abre con #encargos. -->
 <div id="modal-encargos" class="modal" hidden role="dialog" aria-modal="true" aria-labelledby="enc-titulo">
   <div class="modal-fondo" id="enc-fondo" tabindex="-1"></div>
@@ -552,6 +570,7 @@
 <script src="traspedido.js"></script>
 <script src="espera.js"></script>
 <script src="preguntar.js"></script>
+<script src="aviso.js"></script>
 <script src="completar.js"></script>
 <script src="listo.js"></script>
 <script src="tasa.js"></script>

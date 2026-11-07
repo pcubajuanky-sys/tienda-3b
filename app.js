@@ -209,8 +209,8 @@ function visibles() {
   return window.Orden.filtrarPrecio(lista, rangoPrecio);
 }
 
-function setCat(n) { filtroCat = n; filtroOferta = false; renderFiltroPill(); renderCategorias3D(); renderGrid(); }
-function setOferta() { filtroOferta = true; filtroCat = ''; renderFiltroPill(); renderCategorias3D(); renderGrid(); }
+function setCat(n) { agotadosVerTodos = ''; filtroCat = n; filtroOferta = false; renderFiltroPill(); renderCategorias3D(); renderGrid(); }
+function setOferta() { agotadosVerTodos = ''; filtroOferta = true; filtroCat = ''; renderFiltroPill(); renderCategorias3D(); renderGrid(); }
 
 // Píldora de estado junto al encabezado de la parrilla: no es un menú, solo
 // dice qué filtro está puesto (si hay alguno) y deja quitarlo con la ✕.
@@ -780,6 +780,7 @@ function renderGrid() {
   const vacioP = document.querySelector('#vacio > p');
   if (vacioP) vacioP.textContent = (soloFavoritos && window.Favoritos.vigentes(favoritos, CAT.items || []).length === 0) ? SIN_FAVORITOS_TEXTO : VACIO_TEXTO;
   pintarPregunta(busqueda);
+  pintarAgotadosBusqueda(lista.length === 0);
   const tarjetas = lista.map(tarjetaHtml);
   // El reclamo de gestores va DENTRO de la parrilla, ocupando una fila entera
   // (.cta-comi trae grid-column:1/-1). Antes vivía en un hueco aparte: pegado
@@ -817,6 +818,17 @@ function pintarPreguntarProducto(id, clave) {
   if (!caja) return;
   const p = productoDe(id);
   const esperando = Espera.enEspera(p, clave || null);
+  // 🔴 Lo que está en espera pide «avísame»: eso lo anota Stock+ solo (aviso.js, contrato con
+  // lib/avisoVuelta.js) y por eso va SIEMPRE al número de la casa, nunca al del gestor.
+  if (esperando) {
+    const urlAviso = window.Aviso.enlace(CAT && CAT.whatsapp, p, clave || null);
+    if (urlAviso) {
+      caja.hidden = false;
+      caja.innerHTML = '<a class="btn btn-suave btn-secundario ficha-preguntar-btn" href="' +
+        escapeHtml(urlAviso) + '" target="_blank" rel="noopener">' + escapeHtml(window.Aviso.TEXTO_BOTON_ESPERA) + '</a>';
+      return;
+    }
+  }
   const destino = destinoWhatsApp();
   const url = window.Preguntar.enlace(destino, p, esperando);
   if (!url) { caja.hidden = true; caja.innerHTML = ''; return; }   // sin número no se enseña
@@ -1128,7 +1140,119 @@ function codigoDeFichaDeLaUrl() {
 function abrirFichaPorCodigo(cod) {
   const p = (CAT.items || []).find((x) => String(x.codigo).toUpperCase() === cod);
   if (p) { abrirDetalle(p.id); return; }
+  // Agotado: se busca en la lista COMPLETA, sin filtrar por negocio. Un enlace /p/XXXX de un
+  // producto de un socio puede abrirse en la cáscara de la casa, y el aviso va al mismo
+  // número (el de la casa) en los dos casos. (Negocio.aplicar conserva CAT.agotados tal cual.)
+  const a = agotadosTodos().find((x) => String(x.codigo).toUpperCase() === cod);
+  if (a) { abrirAgotado(a); return; }
   mostrarAvisoTexto('Ese producto ya no está disponible. Mira el resto del catálogo.');
+}
+
+// ── «Se nos agotó — avísame cuando vuelva» ──
+// La lista `agotados` la publica Stock+ en la raíz del catálogo: {codigo, name, foto, cat, negocio?}
+// SIN stock ni precio. Ausente ≡ vacía: sin ella la tienda se comporta como siempre.
+function agotadosTodos() {
+  return (CAT && Array.isArray(CAT.agotados)) ? CAT.agotados.filter((a) => a && a.codigo && a.name) : [];
+}
+
+// Los agotados de ESTA página (casa = sin campo `negocio`; socio = el suyo), sin los que ya
+// están a la venta con ese código: un producto no puede salir a la vez disponible y agotado.
+function agotadosDeLaPagina() {
+  const visibles = new Set((CAT.items || []).map((x) => String(x.codigo).toUpperCase()));
+  return agotadosTodos().filter((a) => {
+    const neg = window.Negocio ? window.Negocio.deItem(a) : (a.negocio || '3b');
+    return neg === NEGOCIO && !visibles.has(String(a.codigo).toUpperCase());
+  });
+}
+
+function abrirAgotado(a) {
+  document.getElementById('agotado-titulo').textContent = a.name;
+  const foto = document.getElementById('agotado-foto');
+  foto.innerHTML = '';
+  if (a.foto) {
+    const f = fotoCard(a.foto);
+    const img = document.createElement('img');
+    img.src = f.src;
+    if (f.srcset) img.srcset = f.srcset;
+    img.alt = a.name;
+    img.loading = 'lazy';
+    img.decoding = 'async';
+    img.addEventListener('error', () => { img.hidden = true; });
+    foto.appendChild(img);
+  }
+  const boton = document.getElementById('agotado-aviso');
+  const url = window.Aviso.enlace(CAT && CAT.whatsapp, a, null);
+  if (url) {
+    boton.href = url;
+    boton.textContent = window.Aviso.TEXTO_BOTON;
+    boton.hidden = false;
+  } else {
+    boton.hidden = true;   // sin número no se enseña un botón que no lleva a ningún sitio
+  }
+  elementoAnteriorFoco = document.activeElement;
+  document.getElementById('agotado').hidden = false;
+  document.getElementById('agotado-cerrar').focus();
+  document.addEventListener('keydown', capturarTecladoAgotado);
+}
+
+function cerrarAgotado() {
+  document.getElementById('agotado').hidden = true;
+  document.removeEventListener('keydown', capturarTecladoAgotado);
+  if (elementoAnteriorFoco && elementoAnteriorFoco.isConnected) elementoAnteriorFoco.focus();
+}
+
+function capturarTecladoAgotado(e) {
+  const modal = document.getElementById('agotado');
+  if (modal.hidden) return;
+  if (e.key === 'Escape') { cerrarAgotado(); return; }
+  if (e.key === 'Tab') atraparFoco(e, modal);
+}
+
+// Qué agotados se pintan bajo la parrilla (la lista ya es de esta página):
+//  · búsqueda de texto  -> hasta 3 por nombre (manda sobre la categoría);
+//  · categoría elegida, sin búsqueda -> hasta 12 de esa categoría;
+//  · «Todo», ofertas, favoritos, filtro de precio o chip de envío gratis -> ninguno
+//    (los agotados no tienen precio ni oferta, y en favoritos no tienen sentido).
+// Devuelve {lista, mas}: `mas` = cuántos quedan ocultos tras «Ver más» (solo en categoría).
+// «Ver más» despliega TODOS los de la categoría; el estado vive en agotadosVerTodos (nombre de la
+// categoría desplegada) y se pierde al cambiar de categoría (setCat/setOferta y la guarda de aquí).
+let agotadosVerTodos = '';
+const AGOTADOS_CATEGORIA_MAX = 12;
+function agotadosAPintar() {
+  if (agotadosVerTodos && agotadosVerTodos !== filtroCat) agotadosVerTodos = '';
+  if (soloFavoritos || rangoPrecio !== '') return { lista: [], mas: 0 };
+  if (busqueda.trim()) return { lista: window.Buscar.sugerencias(agotadosDeLaPagina(), busqueda, 3), mas: 0 };
+  if (filtroOferta || soloEnvioGratis || !filtroCat) return { lista: [], mas: 0 };
+  const todos = window.Aviso.porCategoria(agotadosDeLaPagina(), filtroCat, Infinity);
+  if (agotadosVerTodos === filtroCat) return { lista: todos, mas: 0 };
+  return { lista: todos.slice(0, AGOTADOS_CATEGORIA_MAX), mas: Math.max(0, todos.length - AGOTADOS_CATEGORIA_MAX) };
+}
+
+// Van bajo la parrilla o, si no hay resultados, dentro del aviso de «vacío» (que con una
+// categoría o una búsqueda activa siempre se muestra cuando la parrilla queda vacía).
+function pintarAgotadosBusqueda(sinResultados) {
+  const abajo = document.getElementById('agotados-grid');
+  const vacio = document.getElementById('agotados-vacio');
+  if (!abajo || !vacio) return;
+  const { lista, mas } = agotadosAPintar();
+  abajo.hidden = true; abajo.innerHTML = '';
+  vacio.hidden = true; vacio.innerHTML = '';
+  if (!lista.length) return;
+  const filas = lista.map((a) => {
+    const url = window.Aviso.enlace(CAT && CAT.whatsapp, a, null);
+    if (!url) return '';
+    const f = a.foto ? fotoCard(a.foto) : null;
+    return '<div class="agotado-fila">' +
+      (f ? '<img class="agotado-fila-foto" src="' + escapeHtml(f.src) + '" alt="" loading="lazy" decoding="async">' : '') +
+      '<span class="agotado-fila-nom">' + escapeHtml(a.name) + '</span>' +
+      '<a class="btn btn-wa agotado-fila-btn" href="' + escapeHtml(url) + '" target="_blank" rel="noopener">🔔 Avísame</a>' +
+      '</div>';
+  }).join('');
+  if (!filas) return;
+  const destino = sinResultados ? vacio : abajo;
+  destino.innerHTML = '<p class="agotados-tit">' + (busqueda.trim() ? 'Se nos agotaron' : 'Se agotaron') + ' — te avisamos cuando vuelvan</p>' + filas +
+    (mas > 0 ? '<button type="button" class="btn btn-suave btn-secundario agotados-mas" data-agotados-mas="1">Ver más (' + mas + ')</button>' : '');
+  destino.hidden = false;
 }
 
 // ── Compartir un producto ──
@@ -2574,6 +2698,18 @@ async function iniciar() {
 
   document.getElementById('comi-cerrar').addEventListener('click', cerrarComisionista);
   document.getElementById('comi-fondo').addEventListener('click', cerrarComisionista);
+
+  document.getElementById('agotado-cerrar').addEventListener('click', cerrarAgotado);
+  document.getElementById('agotado-fondo').addEventListener('click', cerrarAgotado);
+  document.getElementById('agotado-ver').addEventListener('click', cerrarAgotado);
+  ['agotados-grid', 'agotados-vacio'].forEach((id) => {
+    const caja = document.getElementById(id);
+    if (caja) caja.addEventListener('click', (e) => {
+      if (!e.target.closest('[data-agotados-mas]')) return;
+      agotadosVerTodos = filtroCat;
+      renderGrid();
+    });
+  });
 
   document.getElementById('categorias-3d').addEventListener('click', (e) => {
     const btn = e.target.closest('.cat3d');
