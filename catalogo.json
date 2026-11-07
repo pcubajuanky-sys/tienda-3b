@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-07T15:12:28.467Z",
+  "generado": "2026-11-07T17:03:51.001Z",
   "tasa": 925,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -1076,7 +1076,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 2,
+      "max": 1,
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
@@ -7113,6 +7113,998 @@
       },
       "envioGratis": true,
       "creado": 1785533281949
+    }
+  ],
+  "agotados": [
+    {
+      "codigo": "5HP4",
+      "name": "Abrigo de Chihuahua de rayas rosas ra",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786921728/productos/giihqmplkgyweovdisky.jpg",
+      "cat": "Mascotas"
+    },
+    {
+      "codigo": "4TKD",
+      "name": "Accesorio para llave de agua",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790619459/productos/geguaz3cr1lsfh3ekwvu.jpg",
+      "cat": "Ferretería"
+    },
+    {
+      "codigo": "J8YM",
+      "name": "Accesorios variados",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786714432/productos/t5hk8itkxmcipbxwpgdr.jpg",
+      "cat": "Cabello"
+    },
+    {
+      "codigo": "8XH7",
+      "name": "Adornos de pelo con diseño de pañuelo",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786714256/productos/s8blnhjs77ekcqi5d7hb.jpg",
+      "cat": "Cabello"
+    },
+    {
+      "codigo": "U6H2",
+      "name": "Adornos Metálicos dorados",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785275613/productos/xjzrx441mcuppgdye2y5.jpg",
+      "cat": "Cabello"
+    },
+    {
+      "codigo": "5QEY",
+      "name": "Afeitadora electrica 2 en 1",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790716439/productos/lcy5aa3kwmg3tbhbjuc8.jpg",
+      "cat": "Electrodomésticos"
+    },
+    {
+      "codigo": "C76G",
+      "name": "Ajusta invisible sin tirantes",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788814263/productos/xfb4sbqzmvfcc9cdrndb.jpg",
+      "cat": "Ropa Interior"
+    },
+    {
+      "codigo": "ABFR",
+      "name": "Apollo de celular",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785088749/productos/nmqmkibborqjekkyoepr.jpg",
+      "cat": "Bocinas Celulares y Accesorios"
+    },
+    {
+      "codigo": "S55V",
+      "name": "Aretitos de fantasía",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787498339/productos/qerjq0wjoh09c54jwder.jpg",
+      "cat": "Reloj y Prendas"
+    },
+    {
+      "codigo": "DQMN",
+      "name": "Aro de luz",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788553013/productos/jszpxp6ll0ymemeilcjd.jpg",
+      "cat": "Bocinas Celulares y Accesorios"
+    },
+    {
+      "codigo": "Q9SZ",
+      "name": "Asistente de acelerador para motocicleta",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785089991/productos/fse2evmridpgqhg2h0oy.jpg",
+      "cat": "Motos / Accesorios"
+    },
+    {
+      "codigo": "FWQH",
+      "name": "Atrapa insectos Eléctrico",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786918213/productos/tjklhmiqhwxolqzqirrc.jpg",
+      "cat": "Electrodomésticos"
+    },
+    {
+      "codigo": "PJ4H",
+      "name": "Audífono Bluetooth tipo Cascos 3",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790965642/productos/jss9vmgdeoy0g5alq399.jpg",
+      "cat": "Bocinas Celulares y Accesorios"
+    },
+    {
+      "codigo": "6LA2",
+      "name": "Audífonos Bluetooth",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1780956249/productos/csnj5oiwwbll9vllkgpx.jpg",
+      "cat": "Bocinas Celulares y Accesorios"
+    },
+    {
+      "codigo": "MVJ4",
+      "name": "Audífonos Bluetooth tipo Cascos 2",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790965764/productos/hfwadlmy4ytfprylj2y1.jpg",
+      "cat": "Bocinas Celulares y Accesorios"
+    },
+    {
+      "codigo": "4TXL",
+      "name": "Audífonos caja cuadrada",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785089517/productos/af2htadoakypvnjdck6b.jpg",
+      "cat": "Bocinas Celulares y Accesorios"
+    },
+    {
+      "codigo": "FPUF",
+      "name": "Audífonos de Bluetooth tipo Casco 1",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1784919017/productos/ymppx6ylkp13y8c2vhx6.jpg",
+      "cat": "Bocinas Celulares y Accesorios"
+    },
+    {
+      "codigo": "39TD",
+      "name": "Audífonos Inalámbricos A6S",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791226956/productos/kedky7empch1tl5jw8m9.jpg",
+      "cat": "Bocinas Celulares y Accesorios"
+    },
+    {
+      "codigo": "FWZY",
+      "name": "Audífonos Inalámbricos E7S TWS",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790781910/productos/zzgc9cymptovjyjnbgmi.jpg",
+      "cat": "Bocinas Celulares y Accesorios"
+    },
+    {
+      "codigo": "MMVX",
+      "name": "Audífonos Inalámbricos G9S",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787957834/productos/vt5n582bqwmdxs3uqzhl.jpg",
+      "cat": "Bocinas Celulares y Accesorios"
+    },
+    {
+      "codigo": "QD4E",
+      "name": "Audífonos inalámbricos X55",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785089336/productos/k1vaswogj1rww7enirsk.jpg",
+      "cat": "Bocinas Celulares y Accesorios"
+    },
+    {
+      "codigo": "KS3Q",
+      "name": "Bicicleta Eléctrica de 500W para Adultos",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788830814/productos/mbtm7sr4opagfnenqeht.jpg",
+      "cat": "Motos / Accesorios"
+    },
+    {
+      "codigo": "F5H9",
+      "name": "Bolsas de malla de nailón con cremallera",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785180400/productos/m4mufoxnbeo8nqvjmage.jpg",
+      "cat": "Bolsos Carteras Mochilas monederos"
+    },
+    {
+      "codigo": "426Q",
+      "name": "Bolso Bandolera",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785179753/productos/lcudri88kzgrej0oelef.jpg",
+      "cat": "Bolsos Carteras Mochilas monederos"
+    },
+    {
+      "codigo": "EPM9",
+      "name": "Bolso bandolera mostaza",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785182905/productos/fnzafrosko3h4nehplug.jpg",
+      "cat": "Bolsos Carteras Mochilas monederos"
+    },
+    {
+      "codigo": "AEAV",
+      "name": "Cable tipo C 3metros",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791165695/productos/ccwcaxqppjt5e9gs083u.jpg",
+      "cat": "Bocinas Celulares y Accesorios"
+    },
+    {
+      "codigo": "BP9X",
+      "name": "Cafetera 1 taza",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788891782/productos/b8cptn2c5lert8u7rad6.jpg",
+      "cat": "Hogar"
+    },
+    {
+      "codigo": "ULAC",
+      "name": "Camiseta corta",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789229886/productos/cwtxkhbn1axa0pypz24r.jpg",
+      "cat": "Ropa"
+    },
+    {
+      "codigo": "JAVN",
+      "name": "Cargador de batería",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787438078/productos/kupn88b6jblzymggz1td.jpg",
+      "cat": "Respaldo energético"
+    },
+    {
+      "codigo": "9C9Q",
+      "name": "Cartera billetera",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789009495/productos/sgovgdklrsvqo2kjornd.jpg",
+      "cat": "Bolsos Carteras Mochilas monederos"
+    },
+    {
+      "codigo": "H8HN",
+      "name": "Cesta organizadora",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788842125/productos/le7zv3buhoescjdcu4em.jpg",
+      "cat": "Hogar"
+    },
+    {
+      "codigo": "YAYM",
+      "name": "Cinto negro ancho",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792276630/productos/oqbostrsrlybcb4zchpz.jpg",
+      "cat": "Accesorio de vestir"
+    },
+    {
+      "codigo": "RHH5",
+      "name": "Cintos 1",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786998257/productos/gogjyz4xkuai2twsk7l6.jpg",
+      "cat": "Accesorio de vestir"
+    },
+    {
+      "codigo": "PWSW",
+      "name": "Cintos 2",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786998742/productos/q6yotu9lsmrhn7hfinsl.jpg",
+      "cat": "Accesorio de vestir"
+    },
+    {
+      "codigo": "KYGQ",
+      "name": "Cintos finos variados",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787756837/productos/sxwqjer7oekvpoxsp8ky.jpg",
+      "cat": "Accesorio de vestir"
+    },
+    {
+      "codigo": "98M4",
+      "name": "Clóset Armario Portátil de Acero Inoxidable",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1784918319/productos/hkb9rslv9nbye3ha9kac.jpg",
+      "cat": "Muebles"
+    },
+    {
+      "codigo": "NZBR",
+      "name": "Cocina de Queroseno Militar Cuadrada",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1784914184/productos/gdscqigyotgxb2smwlbv.jpg",
+      "cat": "Respaldo energético"
+    },
+    {
+      "codigo": "RN39",
+      "name": "Coladores 4 en 1",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788233901/productos/e48mdoq7eej4zyewrpfa.jpg",
+      "cat": "Hogar"
+    },
+    {
+      "codigo": "BNMS",
+      "name": "Collar y accesorios dorados de fantasía",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787501728/productos/eh3psubx3a0fzqndvqk4.jpg",
+      "cat": "Reloj y Prendas"
+    },
+    {
+      "codigo": "EC4V",
+      "name": "Conjunto de 2 forros de asientos",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788150599/productos/fgyzktdzuinxtzxbjmg0.jpg",
+      "cat": "Motos / Accesorios"
+    },
+    {
+      "codigo": "ZBGL",
+      "name": "Conjunto de pirsings de acero",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787453126/productos/wcvd8wra1lnvrgdmmu8a.jpg",
+      "cat": "Reloj y Prendas"
+    },
+    {
+      "codigo": "2HCR",
+      "name": "Conjunto de prendas de hombre",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789009051/productos/bmzalrdyrxsxvoxqelqx.jpg",
+      "cat": "Reloj y Prendas"
+    },
+    {
+      "codigo": "LMJT",
+      "name": "Conjunto de tobilleras de acero",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787452945/productos/kcphqfvxglq6sbtux4k8.jpg",
+      "cat": "Reloj y Prendas"
+    },
+    {
+      "codigo": "CC3U",
+      "name": "Conjunto de tobilleras de fantasía",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787844052/productos/zfbbgklbmazqnrb8rzfd.jpg",
+      "cat": "Reloj y Prendas"
+    },
+    {
+      "codigo": "STDF",
+      "name": "Conjunto de tobilleras plateadas de fantasía",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787453332/productos/hgvzduzoya6btwnccu2f.jpg",
+      "cat": "Reloj y Prendas"
+    },
+    {
+      "codigo": "NAN7",
+      "name": "Correa de sujeción para motos",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785012644/productos/r50qu6njthy9w1x0kzio.jpg",
+      "cat": "Motos / Accesorios"
+    },
+    {
+      "codigo": "LX5C",
+      "name": "Cortina de baño transparente",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788039708/productos/bbnvrevhc0gyc0jshxdx.jpg",
+      "cat": "Decoración"
+    },
+    {
+      "codigo": "6AGD",
+      "name": "Cortina de luces \"Cuento de hadas\"",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791229887/productos/wcgjp0rqkewy5yqyy1jx.jpg",
+      "cat": "Decoración"
+    },
+    {
+      "codigo": "TCUU",
+      "name": "Cortina de luces \"Doradas\"",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791230118/productos/uexnmjiy6ia14oguvst1.jpg",
+      "cat": "Decoración"
+    },
+    {
+      "codigo": "953T",
+      "name": "Cortina de luces LEDS",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785768865/productos/pusrmndtmmztqnvqftzf.jpg",
+      "cat": "Decoración"
+    },
+    {
+      "codigo": "DNHA",
+      "name": "Creatina Monohidratada Micronizada",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788907712/productos/on2wggnxyfkkyazwr6g9.jpg",
+      "cat": "Gym y Suplementos"
+    },
+    {
+      "codigo": "D5Q2",
+      "name": "Espejo de flor giratorio",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788211960/productos/frgnqs3xs1uy6lzojds7.jpg",
+      "cat": "Hogar"
+    },
+    {
+      "codigo": "5C2M",
+      "name": "Espumero recargable",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1784915845/productos/emuspncwcxiww5haay85.jpg",
+      "cat": "Electrodomésticos"
+    },
+    {
+      "codigo": "8UHU",
+      "name": "Estera para el Gym",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782340028/productos/cihevmtaeacp4ciyvmas.jpg",
+      "cat": "Gym y Suplementos"
+    },
+    {
+      "codigo": "C825",
+      "name": "Estrellas fosforescentes (100 unidades)",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791314215/productos/t8qiszgv8ae7obbtte82.jpg",
+      "cat": "Decoración"
+    },
+    {
+      "codigo": "Y2AH",
+      "name": "Faro frontal",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791631877/productos/w7ddcadgayefzohyohwv.jpg",
+      "cat": "Electrodomésticos"
+    },
+    {
+      "codigo": "8WWY",
+      "name": "Felpa calada",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1780955528/productos/ybevmxuzuura07bt4k4b.jpg",
+      "cat": "Cabello"
+    },
+    {
+      "codigo": "7TQG",
+      "name": "Felpas",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785273079/productos/whewbdjl7d9qstvywsrg.jpg",
+      "cat": "Cabello"
+    },
+    {
+      "codigo": "FPKA",
+      "name": "Felpas negras",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1780955678/productos/igdiyhsptjxnxsbzdddo.jpg",
+      "cat": "Cabello"
+    },
+    {
+      "codigo": "B85M",
+      "name": "Felpas peluche",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1780955392/productos/verlvyr7i4pjbscfhmhz.jpg",
+      "cat": "Cabello"
+    },
+    {
+      "codigo": "JDT4",
+      "name": "Fogón de queroseno",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1784911382/productos/goiuvsf9ijdgaqk8csag.jpg",
+      "cat": "Respaldo energético"
+    },
+    {
+      "codigo": "36CF",
+      "name": "Fogón eléctrico doble",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1784911111/productos/ghxlyikbzu93frj3ojg2.jpg",
+      "cat": "Electrodomésticos"
+    },
+    {
+      "codigo": "RLWP",
+      "name": "Forro de asiento pequeño",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788151075/productos/dasahngxpqlgxt5dibau.jpg",
+      "cat": "Motos / Accesorios"
+    },
+    {
+      "codigo": "NMFB",
+      "name": "Fregona",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1780952475/productos/ci0k4nxjpmk9mfufwb0p.jpg",
+      "cat": "Hogar"
+    },
+    {
+      "codigo": "UZZC",
+      "name": "Gafas Cristal Transparente CLÁSICAS",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791773684/productos/pzclpats8lmxuehmfebz.jpg",
+      "cat": "Accesorio de vestir"
+    },
+    {
+      "codigo": "SG25",
+      "name": "Gafas metálicas Calidad Premium",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792595902/productos/lq8dcqxixbiuzwzui3i6.jpg",
+      "cat": "Accesorio de vestir"
+    },
+    {
+      "codigo": "DKCM",
+      "name": "Globos de corazones",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785768148/productos/kodg4hg9zyx0ahbyoupu.jpg",
+      "cat": "Decoración"
+    },
+    {
+      "codigo": "K84G",
+      "name": "Gloss",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782219129/productos/kj3w0n6vt5ymzqluqaap.jpg",
+      "cat": "Cuidado Personal"
+    },
+    {
+      "codigo": "RJAP",
+      "name": "Guaflera",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1784912469/productos/nmguwc9rnndrdkrtbzun.jpg",
+      "cat": "Electrodomésticos"
+    },
+    {
+      "codigo": "8N4Y",
+      "name": "Guantillas",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785357184/productos/p2wprzs1rrt5ab7ot3wb.jpg",
+      "cat": "Gym y Suplementos"
+    },
+    {
+      "codigo": "58XL",
+      "name": "Juego de 5 Calderos de acero inoxidable",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791143110/productos/pn03og4qehjxbqxyxqpn.jpg",
+      "cat": "Hogar"
+    },
+    {
+      "codigo": "CGUT",
+      "name": "Kit de Máquinas de pelar Profesional",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788538964/productos/l9ohqlvdz5oaimz5laiu.jpg",
+      "cat": "Electrónica"
+    },
+    {
+      "codigo": "SEJX",
+      "name": "Lámpara de techo corta",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785769141/productos/ecuea6rhnqy7bejz0lkk.jpg",
+      "cat": "Decoración"
+    },
+    {
+      "codigo": "636Y",
+      "name": "Lámpara de techo larga",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785769225/productos/kgxujlysuov9mhlgb1fu.jpg",
+      "cat": "Decoración"
+    },
+    {
+      "codigo": "JSRK",
+      "name": "Licra faja invisible",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792263645/productos/ld6jraupnrz0in6dfnie.jpg",
+      "cat": "Ropa"
+    },
+    {
+      "codigo": "JVMW",
+      "name": "Liguitas de pompón",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1780955611/productos/aghnqe1ld2uzjg5k0gxr.jpg",
+      "cat": "Cabello"
+    },
+    {
+      "codigo": "54ND",
+      "name": "Lija de pies recargable",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790796551/productos/kwe7fu2g8pws8phgffcr.jpg",
+      "cat": "Electrodomésticos"
+    },
+    {
+      "codigo": "RTWL",
+      "name": "Luces leds 5m",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785616491/productos/gz0uvxamvv29qn8j9png.jpg",
+      "cat": "Decoración"
+    },
+    {
+      "codigo": "WDQV",
+      "name": "Máquina de pelar",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1780955819/productos/tp4sqtisikgnmjepv6bn.jpg",
+      "cat": "Cabello"
+    },
+    {
+      "codigo": "4KZR",
+      "name": "Máquina de Pelar Profesional",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791896104/productos/pxnnsadz8grhw3sdhrkq.jpg",
+      "cat": "Electrodomésticos"
+    },
+    {
+      "codigo": "F4HN",
+      "name": "Merenderos térmicos",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785182649/productos/qgf9ndqstckpnxgadp02.jpg",
+      "cat": "Bolsos Carteras Mochilas monederos"
+    },
+    {
+      "codigo": "YP64",
+      "name": "Merenguera mezcladora",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789506301/productos/sa7kwkxe59m4lmbtwb8f.jpg",
+      "cat": "Electrodomésticos"
+    },
+    {
+      "codigo": "LVHN",
+      "name": "Mini Bocina Bluetooth",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1781215783/productos/zsst4rtbmvee4u6g9yds.jpg",
+      "cat": "Bocinas Celulares y Accesorios"
+    },
+    {
+      "codigo": "MDMD",
+      "name": "Mini Bolso de Mickey Mouse",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785181116/productos/piadvppnku3fy5ekniiq.jpg",
+      "cat": "Bolsos Carteras Mochilas monederos"
+    },
+    {
+      "codigo": "65DS",
+      "name": "Mini bolso de peluche de gatico",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785181461/productos/qoccwprawouuar48ahsw.jpg",
+      "cat": "Bolsos Carteras Mochilas monederos"
+    },
+    {
+      "codigo": "6UHW",
+      "name": "Mini bolso de peluche de unicornio",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785181371/productos/qlqkizbeof35t4a0e60a.jpg",
+      "cat": "Bolsos Carteras Mochilas monederos"
+    },
+    {
+      "codigo": "XP28",
+      "name": "Mini bolsos peluche",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785180705/productos/wetzjsztw8v09lrfrvxm.jpg",
+      "cat": "Bolsos Carteras Mochilas monederos"
+    },
+    {
+      "codigo": "A9ZJ",
+      "name": "Mini lámpara nocturna",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788539742/productos/uhtsctyzbjaw9ttwpwq0.jpg",
+      "cat": "Decoración"
+    },
+    {
+      "codigo": "LX3Z",
+      "name": "Mini Lavadora",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1784912344/productos/pkjeaowywyiykoigcxok.jpg",
+      "cat": "Electrodomésticos"
+    },
+    {
+      "codigo": "UESM",
+      "name": "Mini máquina selladora",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786970222/productos/fmeuv9pq9ifxozuqovm4.jpg",
+      "cat": "Electrodomésticos"
+    },
+    {
+      "codigo": "TPNW",
+      "name": "Mini ventilador de mesa",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1784915508/productos/hm0ki4xq4pece50crwlg.jpg",
+      "cat": "Electrodomésticos"
+    },
+    {
+      "codigo": "59MR",
+      "name": "Mochila con merendero térmico y cartuchera",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785181840/productos/ndf5fbiqnpecmwhzloks.jpg",
+      "cat": "Bolsos Carteras Mochilas monederos"
+    },
+    {
+      "codigo": "3YGM",
+      "name": "Mochila negra",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789009348/productos/lfuym6qdwytctqcg9uds.jpg",
+      "cat": "Bolsos Carteras Mochilas monederos"
+    },
+    {
+      "codigo": "8ARJ",
+      "name": "Mueble de puertas 3 pisos",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788897774/productos/unvimltpxn8k3vfrvqoh.jpg",
+      "cat": "Muebles"
+    },
+    {
+      "codigo": "GTZK",
+      "name": "Mueble de puertas 5 pisos",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788897736/productos/tiyjgnltdqhxewtva8zb.jpg",
+      "cat": "Muebles"
+    },
+    {
+      "codigo": "E8WV",
+      "name": "Nebulizador",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1784914749/productos/vv9dzqsudnufwodzfrzv.jpg",
+      "cat": "Electrodomésticos"
+    },
+    {
+      "codigo": "4A7B",
+      "name": "Olla de arrocera",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1780343678/productos/fjwwdpu0nh2gm5v9uu5a.jpg",
+      "cat": "Electrodomésticos"
+    },
+    {
+      "codigo": "HD6T",
+      "name": "Organizador de cables",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785091571/productos/cubmpkol8n6ndcbcgul7.jpg",
+      "cat": "Bocinas Celulares y Accesorios"
+    },
+    {
+      "codigo": "YQN3",
+      "name": "Organizador de fregadero",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787956605/productos/p1a4znh4eauvckzv0jni.jpg",
+      "cat": "Hogar"
+    },
+    {
+      "codigo": "KPM5",
+      "name": "Organizador rodante 4pisos",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789489998/productos/ynrvqpaqztcihggoqe6q.jpg",
+      "cat": "Muebles"
+    },
+    {
+      "codigo": "GQSS",
+      "name": "Palangana electrica de hidromasaje",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788203234/productos/urf72rqigvjba5wdnii0.jpg",
+      "cat": "Electrodomésticos"
+    },
+    {
+      "codigo": "XEVD",
+      "name": "Papel tapiz ROCA NEGRA Grande",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788633235/productos/exlsh5qdop0qcqi5mbgc.jpg",
+      "cat": "Decoración"
+    },
+    {
+      "codigo": "NY5G",
+      "name": "Paquete de 20 mini Tic-Tac",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788098164/productos/pd3fjwiylpa6xhd6arqr.jpg",
+      "cat": "Cabello"
+    },
+    {
+      "codigo": "SEDP",
+      "name": "Paquete de 20 pezoneras desechables",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792975590/productos/zkdutmn8psiyrxylpfpv.jpg",
+      "cat": "Ropa Interior"
+    },
+    {
+      "codigo": "2XN8",
+      "name": "Paquete de 25 florecitas tipo Piojitos",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792851192/productos/dtbzpo8iinyurnlekwha.jpg",
+      "cat": "Cabello"
+    },
+    {
+      "codigo": "8DEM",
+      "name": "Paquete de 4 pellizcos de perlitas",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786930842/productos/wzpik5gw8tzabbppxhn1.jpg",
+      "cat": "Cabello"
+    },
+    {
+      "codigo": "UBNJ",
+      "name": "Paquete de 5 mariposas Brillantes Blancas",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788131774/productos/uzzzxzk5rbvv2wztosn8.jpg",
+      "cat": "Cabello"
+    },
+    {
+      "codigo": "2WU6",
+      "name": "Paquete de 52 Globos graciosos",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791230365/productos/kqklyqnajcdquugbjx9c.jpg",
+      "cat": "Decoración"
+    },
+    {
+      "codigo": "SDLS",
+      "name": "Paquete de 6 mariposas Cola de Sirena",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788131707/productos/fnawyhmwlm29vqrhlzg7.jpg",
+      "cat": "Cabello"
+    },
+    {
+      "codigo": "MSVP",
+      "name": "Pareja de lámparas de exterior (Solares)",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785868228/productos/spulocyysctmceshiooa.jpg",
+      "cat": "Decoración"
+    },
+    {
+      "codigo": "R2C4",
+      "name": "Pareja de Mini espejos retrovisores",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788205791/productos/m7iur6b6u18rt4mnyw8b.jpg",
+      "cat": "Motos / Accesorios"
+    },
+    {
+      "codigo": "RYV8",
+      "name": "Pareja de neblineros con su conmutador",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1781640623/productos/yjvrqbfpjmqofcaltal0.jpg",
+      "cat": "Motos / Accesorios"
+    },
+    {
+      "codigo": "W7BG",
+      "name": "Pareja de Pellizcos medianos negros",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792706088/productos/apwy8zxlsjbe04kreobw.jpg",
+      "cat": "Cabello"
+    },
+    {
+      "codigo": "HVLS",
+      "name": "Peine diente ancho",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785275558/productos/ddnyhvch4yrfggl8wx4v.jpg",
+      "cat": "Cabello"
+    },
+    {
+      "codigo": "S92Y",
+      "name": "Pellizcos medianos",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786714312/productos/okyxnhfnjxbl2bsg5jpe.jpg",
+      "cat": "Cabello"
+    },
+    {
+      "codigo": "B3FW",
+      "name": "Perfume Adidas",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785009231/productos/zpidlnjylxprxzkiduam.jpg",
+      "cat": "Perfumería"
+    },
+    {
+      "codigo": "EYWB",
+      "name": "Pinceles de dibujo de uñas",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786916780/productos/morxomy39l4xadi58rwn.jpg",
+      "cat": "Uñas"
+    },
+    {
+      "codigo": "CP95",
+      "name": "Plancha de pelo Prof6",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791935450/productos/knyk0y8xthmael7iiqkb.jpg",
+      "cat": "Electrodomésticos"
+    },
+    {
+      "codigo": "JDDZ",
+      "name": "Power Bank 20 000mah",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1781214815/productos/ojoc1rk4bkcypxw2wzzy.jpg",
+      "cat": "Electrónica"
+    },
+    {
+      "codigo": "Y54X",
+      "name": "Power Bank 20000mah",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1781214420/productos/dvz7a0ursmt44t8jc0kr.jpg",
+      "cat": "Electrónica"
+    },
+    {
+      "codigo": "WWYF",
+      "name": "Presillas de pelo",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788035042/productos/ruzhdg8v3cjawvxy7vnk.jpg",
+      "cat": "Cabello"
+    },
+    {
+      "codigo": "YSQD",
+      "name": "Protector de alimentos",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788547921/productos/qh78doz9uwyq7acxdr2k.jpg",
+      "cat": "Hogar"
+    },
+    {
+      "codigo": "WPV9",
+      "name": "Pulceras rígidas doradas",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787942111/productos/mqaao6xugcariaxnsr1v.jpg",
+      "cat": "Reloj y Prendas"
+    },
+    {
+      "codigo": "JLJH",
+      "name": "Pulceras rígidas plateadas",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787942382/productos/qa3gwbbj6thh3n6zitmx.jpg",
+      "cat": "Reloj y Prendas"
+    },
+    {
+      "codigo": "XVFJ",
+      "name": "Pulover de girasol",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789236943/productos/czxnsxgenvatqpkm8wdw.jpg",
+      "cat": "Ropa"
+    },
+    {
+      "codigo": "EQT3",
+      "name": "Pulover de hombre \"Barco\"",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791837152/productos/x2kz8q6dt0faiuzc7ad4.jpg",
+      "cat": "Ropa"
+    },
+    {
+      "codigo": "WLKK",
+      "name": "Pulover de hombre 1",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789240533/productos/qcwfdts5ddd82zcwp1bv.jpg",
+      "cat": "Ropa"
+    },
+    {
+      "codigo": "DECX",
+      "name": "Pulover de hombre 2",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789240681/productos/arra6wfjbee02aq5k9jd.jpg",
+      "cat": "Ropa"
+    },
+    {
+      "codigo": "A72E",
+      "name": "Pulover de hombre elastizados",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786919512/productos/zoc681vdfrwq7ggzbns1.jpg",
+      "cat": "Ropa"
+    },
+    {
+      "codigo": "KAVV",
+      "name": "Pulover de hombre letra \"J'",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791836834/productos/dd4oggnothhnu08vqclx.jpg",
+      "cat": "Ropa"
+    },
+    {
+      "codigo": "JKD5",
+      "name": "Pulover Unisex Blanco",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788733014/productos/z5d3cppcmkwtoaxgrrfv.jpg",
+      "cat": "Ropa"
+    },
+    {
+      "codigo": "TC9K",
+      "name": "Pulover Unisex Blanco de Pantera",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788792467/productos/kmkvblu9vlsqby9h8hhc.jpg",
+      "cat": "Ropa"
+    },
+    {
+      "codigo": "9R4U",
+      "name": "Pulover Unisex Gris",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788732575/productos/z2lirmjgfaqfnxsd7vdq.jpg",
+      "cat": "Ropa"
+    },
+    {
+      "codigo": "KHXC",
+      "name": "Pulover Unisex Navideño \"JESÚS\"",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789241807/productos/nvc54lxofwfrczxstfar.jpg",
+      "cat": "Ropa"
+    },
+    {
+      "codigo": "S23D",
+      "name": "Pulover Unisex Negro de Pantera",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791646520/productos/pefp9pwkm8acwifvz7au.jpg",
+      "cat": "Ropa"
+    },
+    {
+      "codigo": "7MVS",
+      "name": "Pulover Unisex Rojo",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788733113/productos/fjgvbcls4qhgl8in0k3c.jpg",
+      "cat": "Ropa"
+    },
+    {
+      "codigo": "QG6J",
+      "name": "Puntero para pantallas digitales",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1781216225/productos/u2wd8r9aczkwgl5m051d.jpg",
+      "cat": "Electrónica"
+    },
+    {
+      "codigo": "YVVR",
+      "name": "Ratón inalámbrico (negro y gris)",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788528428/productos/are4fo73meeuwnidtlni.jpg",
+      "cat": "Electrodomésticos"
+    },
+    {
+      "codigo": "XZSS",
+      "name": "Reloj dorado de hombre marca Geneva",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790875327/productos/knt1uatmixdrimse4wrm.jpg",
+      "cat": "Reloj y Prendas"
+    },
+    {
+      "codigo": "2JPR",
+      "name": "Reloj inteligente Negro",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1781213510/productos/yipf6w3xkmgluh4tk5ad.jpg",
+      "cat": "Reloj y Prendas"
+    },
+    {
+      "codigo": "TJZE",
+      "name": "Reloj inteligente Premium",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1781213281/productos/t15rudt47vefqmhllm3n.jpg",
+      "cat": "Electrónica"
+    },
+    {
+      "codigo": "4SD3",
+      "name": "Reloj plateado de hombre 2",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787457711/productos/mxeigkzj2t54963sib1n.jpg",
+      "cat": "Reloj y Prendas"
+    },
+    {
+      "codigo": "G739",
+      "name": "Rizador de pestañas",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782340886/productos/y3yicmtgoxayzf4grayn.jpg",
+      "cat": "Cuidado Personal"
+    },
+    {
+      "codigo": "UP4H",
+      "name": "Rollo de papel tapiz autoadhesivo 3",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791228705/productos/qrz6e5vgms1rpg4bwxrv.jpg",
+      "cat": "Decoración"
+    },
+    {
+      "codigo": "PUET",
+      "name": "Rollo de papel tapiz autoadhesivo madera negra 3m",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791228516/productos/wpbbxh0fkifxcm7yik1e.jpg",
+      "cat": "Decoración"
+    },
+    {
+      "codigo": "SRDL",
+      "name": "Rollo de papel tapiz autoadhesivo Mármol negro",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791229652/productos/hhxeyvyrb0hcng01zuid.jpg",
+      "cat": "Decoración"
+    },
+    {
+      "codigo": "5Q2P",
+      "name": "Sandalias de 🌸 blancas",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785533351/productos/sjwbdzkclyaukn9islkx.jpg",
+      "cat": "Calzado"
+    },
+    {
+      "codigo": "58T6",
+      "name": "Sandalias semi altas",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785533277/productos/wpebmcgc2rkadmscxkbr.jpg",
+      "cat": "Calzado"
+    },
+    {
+      "codigo": "5VE5",
+      "name": "Sandalias suela negra 🖤",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791646522/productos/pays4the5k2mk26143ay.jpg",
+      "cat": "Calzado"
+    },
+    {
+      "codigo": "53EH",
+      "name": "Sandalias trenzadas🖤",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785533514/productos/hgfzvplmba8pq6yatybu.jpg",
+      "cat": "Calzado"
+    },
+    {
+      "codigo": "5MDP",
+      "name": "Sérum 5en1",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782259706/productos/wewused76wjxguosoz5l.jpg",
+      "cat": "Cuidado Personal"
+    },
+    {
+      "codigo": "QW78",
+      "name": "Sérum en Capsulas de Ácidos Hialurónico",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782339669/productos/xbmibztojd4suitasup4.jpg",
+      "cat": "Cuidado Personal"
+    },
+    {
+      "codigo": "4JYC",
+      "name": "Sérum en Capsulas de vit C y E",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782339753/productos/uq4unqxsipovpavt4qex.jpg",
+      "cat": "Cuidado Personal"
+    },
+    {
+      "codigo": "2KDE",
+      "name": "Smart TV 32 pulgadas Philips",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1780358987/productos/zebokfbwml1hkdo4nlfh.jpg",
+      "cat": "Electrodomésticos"
+    },
+    {
+      "codigo": "GTDT",
+      "name": "Soporte de celular y tablets flexible1",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790975519/productos/hmhohaql32jgjrdvqplh.jpg",
+      "cat": "Bocinas Celulares y Accesorios"
+    },
+    {
+      "codigo": "MAQ8",
+      "name": "Soportes para teléfono en forma de silla",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785092261/productos/hbmgly5aw4zcolnpjeun.jpg",
+      "cat": "Bocinas Celulares y Accesorios"
+    },
+    {
+      "codigo": "DAMG",
+      "name": "Tacitas 12 piezas",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789411058/productos/xhdokldz5nbz707deyqs.jpg",
+      "cat": "Porcelana"
+    },
+    {
+      "codigo": "DW5D",
+      "name": "Toallitas de floresitas",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788235088/productos/xymxcbmbcbvvwt3phemd.jpg",
+      "cat": "Hogar"
+    },
+    {
+      "codigo": "T2WZ",
+      "name": "Top Naranja 🧡",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789227577/productos/h17oyhowyaoes0p3fkzq.jpg",
+      "cat": "Ropa Interior"
+    },
+    {
+      "codigo": "3LJZ",
+      "name": "Top Rosa 🩷",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789239275/productos/pmfqwel3flhdlmn2gpgy.jpg",
+      "cat": "Ropa Interior"
+    },
+    {
+      "codigo": "D95V",
+      "name": "Trípode manual con mando a distancia",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788542693/productos/umskj5gg4isekmlakjfg.jpg",
+      "cat": "Bocinas Celulares y Accesorios"
+    },
+    {
+      "codigo": "2RXL",
+      "name": "Trípode profesional",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788541439/productos/iqykxichtc4bysouhoxv.jpg",
+      "cat": "Bocinas Celulares y Accesorios"
+    },
+    {
+      "codigo": "MF7U",
+      "name": "Velas blancas con pétalos artificiales",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785640535/productos/ib45wzcjuqumpepase2u.jpg",
+      "cat": "Decoración"
+    },
+    {
+      "codigo": "EBFN",
+      "name": "Velas rojas con pétalos artificiales",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785640796/productos/wyxuhfsvtuvqrdtkqpc3.jpg",
+      "cat": "Decoración"
+    },
+    {
+      "codigo": "TPUJ",
+      "name": "Ventilador ColdSky Doble paleta",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787764696/productos/k2qwog2kxffnq9yeby9m.jpg",
+      "cat": "Electrodomésticos"
     }
   ]
 }
