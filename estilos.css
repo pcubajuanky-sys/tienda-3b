@@ -1860,10 +1860,15 @@ body[data-negocio]{--acento:var(--brand);--acento-ink:var(--brand-ink)}
    El logo del negocio de la página, grande y muy tenue, detrás del contenido del carrito
    (modal y aside). img-src 'self' de la CSP permite el url() local. isolation:isolate crea el
    contexto de apilado para que el z-index:-1 quede sobre el fondo de la caja y bajo el texto. */
-:root{--marca-agua:url("/logo-3b.png");--marca-agua-op:.06}
+:root{--marca-agua:url("/logo-3b.png");--marca-agua-op:.08}
 body[data-negocio="electripower"]{--marca-agua:url("/logo-electripower.png")}
 body[data-negocio="delmar"]{--marca-agua:url("/logo-delmar.png")}
-@media (prefers-color-scheme: dark){ :root{--marca-agua-op:.045} }
+/* Mismo criterio de tema que el bloque de tokens oscuros (prefers-color-scheme, sin guardas). El logo es
+   oscuro con rojo: sobre fondo negro no se veia, asi que se vuelve silueta CLARA. */
+@media (prefers-color-scheme: dark){
+  :root{--marca-agua-op:.08}
+  .panel-caja::before,.carrito-lateral::before{filter:grayscale(1) invert(1) brightness(1.2)}
+}
 .panel-caja,.carrito-lateral{isolation:isolate}
 .panel-caja::before,.carrito-lateral::before{
   content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;

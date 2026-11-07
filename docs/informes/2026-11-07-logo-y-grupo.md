@@ -34,3 +34,9 @@ Sobre main (v45 publicada). Sin commit ni push. Caché `sw.js`: v45 → v46.
 - Nada visto en navegador: opacidad real de la marca de agua (en el modal con scroll la marca cubre la altura
   visible y se desplaza con el contenido), contraste, tema oscuro y la tarjeta/pantalla a 375 px.
 - Hoy ningún bloque de socio trae `grupoWA`, así que en sus páginas no sale grupo (comportamiento pedido).
+
+## Retoque: marca de agua visible en oscuro (caché v47)
+- Claro: `--marca-agua-op` .06 → .08. Oscuro (mismo `@media (prefers-color-scheme: dark)` sin guardas que
+  los tokens): opacidad .08 y `filter: grayscale(1) invert(1) brightness(1.2)` sobre el `::before`, para que
+  el emblema oscuro con rojo se lea como silueta clara. El logo de #gracias no se toca.
+- Tests: 298/298. ⚠ NO VERIFICADO a ojo (sin navegador).
