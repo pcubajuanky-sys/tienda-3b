@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-07T01:33:40.578Z",
+  "generado": "2026-11-07T02:55:47.986Z",
   "tasa": 930,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -2011,6 +2011,32 @@
       "creado": 1791132152189
     },
     {
+      "id": "p_1794019333016",
+      "codigo": "MEBH",
+      "name": "Crema sólida para callosidades",
+      "cat": "Cuidado Personal",
+      "subcat": "",
+      "notes": "Crema sólida para la hidratación de zonas duras,la eliminación de callosidades y de grietas. Ideal para talones, codos ,manos ,rodillas o cualquier zona resecada por cuestiones externas o internas",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1794019013/productos/by2b3p0ciymmwue1zbmv.jpg",
+      "precioUSD": 5,
+      "precioCUP": 4650,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794019017/productos/fralej0ayhqwnhgjba9i.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794019021/productos/mccv1s83z8gdlgvg46fp.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794019025/productos/eqoaopwxbqvtht1uxjcz.jpg"
+      ],
+      "max": 3,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1794019333017
+    },
+    {
       "id": "p_1782259192464",
       "codigo": "PLDE",
       "name": "Delineador Permanente de pincel",
@@ -2672,6 +2698,47 @@
       "creado": 1782340744519
     },
     {
+      "id": "p_1794018751239",
+      "codigo": "HLGT",
+      "name": "Juego bolsos Calidad Premium",
+      "cat": "Bolsos Carteras Mochilas monederos",
+      "subcat": "",
+      "notes": "Bolsos de alta calidad. El conjunto cuenta acon una cartera de amplia capacidad, un monedero,un tarjetero y una correa larga y ajustable",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1794018102/productos/eexuocgmkclcbopvatwa.jpg",
+      "precioUSD": 22,
+      "precioCUP": 20460,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794018105/productos/vhuh3jwtijfcuj17lyhd.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794018109/productos/m5wfoe8lbkwgvvkqinjo.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794018113/productos/mdntexjgouojabwi4ekw.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794018118/productos/q7rv9pbcuy2sqbihmcee.jpg"
+      ],
+      "variantes": {
+        "ejes": [
+          "Color"
+        ],
+        "opciones": [
+          "MARRÓN",
+          "BEIGE",
+          "GRIS"
+        ]
+      },
+      "maxOpciones": {
+        "MARRÓN": 1,
+        "BEIGE": 3,
+        "GRIS": 3
+      },
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1794018751239
+    },
+    {
       "id": "p_1793502722172",
       "codigo": "XHKN",
       "name": "Juego de tiro al blanco",
@@ -3213,6 +3280,33 @@
       },
       "envioGratis": true,
       "creado": 1789233318851
+    },
+    {
+      "id": "p_1794017363007",
+      "codigo": "2V6E",
+      "name": "Lija de pies recargable",
+      "cat": "Electrodomésticos",
+      "subcat": "",
+      "notes": "Eliminador de callosidades de alta potencia y calidad. Múltiples funciones. Incluye 10 repuestos de lija plana, 5 repuestos de lija  cilíndrica, cable de carga",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1794016936/productos/jcgkyjdazuf6nb0qkdpd.jpg",
+      "precioUSD": 12,
+      "precioCUP": 11160,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794016952/productos/uie6vlzgd807a9a9lz7z.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794016976/productos/e48b8boidopfji7mbjl0.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794017002/productos/uw5v8ie2fwj6ggv5ldr8.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794017006/productos/oqwfd8j35zlz1ecrvfx0.jpg"
+      ],
+      "max": 4,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1794017363007
     },
     {
       "id": "p_1782339511897",
