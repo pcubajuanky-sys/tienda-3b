@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-07T13:34:46.059Z",
+  "generado": "2026-11-07T14:37:31.264Z",
   "tasa": 925,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -135,6 +135,10 @@
     {
       "code": "FPMJQ",
       "nombre": "Daniela Sánchez"
+    },
+    {
+      "code": "5CFUK",
+      "nombre": "Dalia Sosa Hernández"
     }
   ],
   "categorias": [
@@ -938,7 +942,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 5,
+      "max": 4,
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
@@ -2381,6 +2385,40 @@
       "creado": 1785357151546
     },
     {
+      "id": "p_1785957052228",
+      "codigo": "8X9D",
+      "name": "Gafas Cristal transparente",
+      "cat": "Accesorio de vestir",
+      "subcat": "",
+      "notes": "Protección contra luz azul, ideal para personas que usan mucho pantallas como celulares ,laptops y televisión.\nTambién es un muy buen accesorio para personas que manejan moto en horario nocturno, protege los ojos sin afectar la visibilidad en la oscuridad",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785956773/productos/gufvuhffd4ibygz29anq.jpg",
+      "precioUSD": 2,
+      "precioCUP": 1850,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Color"
+        ],
+        "opciones": [
+          "NEGRO",
+          "TRANSPARENTE",
+          "GRIS"
+        ]
+      },
+      "maxOpciones": {
+        "NEGRO": 4,
+        "TRANSPARENTE": 4,
+        "GRIS": 4
+      },
+      "envio": {
+        "corto": "🛵 Gratis desde 2,000 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
+      },
+      "creado": 1785957052230
+    },
+    {
       "id": "p_1791773233689",
       "codigo": "DTBS",
       "name": "Gafas cristal transparente TIPO RYBAN",
@@ -3687,7 +3725,7 @@
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1791896193/productos/bzkupirfjeoaidp2zgk5.jpg",
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1791896212/productos/wf2bsewh8zmcrkoxncag.jpg"
       ],
-      "max": 5,
+      "max": 4,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -6325,6 +6363,49 @@
       "creado": 1787458002425
     },
     {
+      "id": "p_1794059743222",
+      "codigo": "Y78D",
+      "name": "Relojes de niños \"Divertidos\"",
+      "cat": "Niños",
+      "subcat": "",
+      "notes": "Digitales y tiernos relojes de niños. Correa de silicona,no produce alergias ni rozaduras. Alta calidad y durabilidad. El toque perfecto para cualquier outfit",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1794059458/productos/bllpo6itxlysn94ypzyh.jpg",
+      "precioUSD": 2,
+      "precioCUP": 1850,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794059493/productos/h4ctn76tmhsiyn9pffn5.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794059543/productos/icp880mdjsce9e5eyjah.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794059546/productos/c650p6vos3ph4bwjkeif.jpg"
+      ],
+      "variantes": {
+        "ejes": [
+          "Diseño"
+        ],
+        "opciones": [
+          "HELADO",
+          "CONEJO",
+          "CACHORRO",
+          "POLLITO",
+          "ASTRONAUTA"
+        ]
+      },
+      "maxOpciones": {
+        "HELADO": 1,
+        "CONEJO": 1,
+        "CACHORRO": 1,
+        "POLLITO": 1,
+        "ASTRONAUTA": 1
+      },
+      "envio": {
+        "corto": "🛵 Gratis desde 2,000 CUP",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
+      },
+      "creado": 1794059743222
+    },
+    {
       "id": "p_1788199586927",
       "codigo": "AUAQ",
       "name": "Relojes digitales de niños colores fuertes",
@@ -6750,6 +6831,30 @@
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
       },
       "creado": 1789425875477
+    },
+    {
+      "id": "p_1794059153922",
+      "codigo": "CWNH",
+      "name": "Toalla de cabello",
+      "cat": "Cabello",
+      "subcat": "",
+      "notes": "Tela de microfibra ultra absorbente. Extrae bien el agua del cabello de un afirma gentil con las hebras capilares. Lo mejor para la protección del cabello recién lavado. Reversible, doble capa para mejor absorción y suavidad.",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1794058677/productos/l3gsineu2yaywbzwno5e.jpg",
+      "precioUSD": 3,
+      "precioCUP": 2775,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794058721/productos/beazp965feqbqoy7eaqt.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794058743/productos/qovseumtjrndyrxs1vz2.jpg"
+      ],
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1794059153922
     },
     {
       "id": "p_1788138688106",
