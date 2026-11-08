@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-08T21:15:09.965Z",
+  "generado": "2026-11-08T22:47:25.008Z",
   "tasa": 930,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -281,9 +281,9 @@
     "taxiActivo": true,
     "encargosActivo": true,
     "cierre": {
-      "activo": true,
-      "titulo": "🚀 Volvemos muy pronto",
-      "texto": "Ahora mismo no estamos tomando pedidos por la web. Mira el catálogo y vuelve en un rato: te esperamos."
+      "activo": false,
+      "titulo": "",
+      "texto": ""
     }
   },
   "encargos": {
