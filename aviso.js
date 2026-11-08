@@ -47,9 +47,11 @@
     return lineas.join('\n');
   }
 
-  // (telefono, producto, variante) -> URL de WhatsApp, o '' si falta algo.
-  function enlace(destino, p, variante) {
-    const texto = mensaje(p, variante);
+  // (telefono, producto, variante[, id]) -> URL de WhatsApp, o '' si falta algo.
+  // Con `id` (el del buzon, ver buzon.js) el texto lleva la linea `Código: id` antes de `Ref:`.
+  function enlace(destino, p, variante, id) {
+    let texto = mensaje(p, variante);
+    if (texto && id && window.Buzon) texto = window.Buzon.conCodigo(texto, id);
     const crudo = (destino === undefined || destino === null) ? '' : String(destino);
     const tel = crudo.replace(/\D/g, '');
     if (!texto || !tel) return '';

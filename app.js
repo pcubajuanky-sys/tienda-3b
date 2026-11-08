@@ -489,9 +489,9 @@ function accionHtml(id, clave) {
   // 🔴 Combinación AGOTADA elegida: en vez de «Añadir», el aviso. Va SIEMPRE al número de la
   // casa (CAT.whatsapp), igual que el resto de avisos (contrato con lib/avisoVuelta.js).
   if (clave && window.Aviso.esAgotada(p, clave)) {
-    const urlA = window.Aviso.enlace(CAT && CAT.whatsapp, p, clave);
-    return urlA
-      ? `<a class="btn btn-suave aviso-talla" href="${escapeHtml(urlA)}" target="_blank" rel="noopener">${escapeHtml(window.Aviso.textoBotonTalla(p, clave))}</a>`
+    const avA = avisoConBuzon(p, clave);
+    return avA
+      ? `<a class="btn btn-suave aviso-talla" href="${escapeHtml(avA.url)}"${avA.attrs} target="_blank" rel="noopener">${escapeHtml(window.Aviso.textoBotonTalla(p, clave))}</a>`
       : `<button class="btn add" type="button" disabled>Agotada</button>`;
   }
   const v = variantesDe(p);
@@ -699,18 +699,44 @@ function alPulsarOpinion(e) {
 function enviarOpinion() {
   const p = productoDe(productoModal);
   if (!p || !opinionForm || !opinionForm.estrellas) return;
-  const url = window.Opinion.enlace(CAT && CAT.whatsapp, {
+  const datosOp = {
     producto: p.name,
     codigo: p.codigo,
     estrellas: opinionForm.estrellas,
     nombre: (document.getElementById('op-nombre') || {}).value || '',
     texto: (document.getElementById('op-texto') || {}).value || ''
-  });
+  };
+  const idOp = window.Buzon.nuevoId();
+  const url = window.Opinion.enlace(CAT && CAT.whatsapp, datosOp, idOp);
   if (!url) return;
+  // Copia en el buzón (mismo texto que va a WhatsApp, con su `Código:`). Síncrono.
+  window.Buzon.enviar('opinion', idOp, window.Buzon.conCodigo(window.Opinion.mensaje(datosOp), idOp));
   window.open(url, '_blank', 'noopener');
   opinionForm = null;
   opinionGracias = true;
   pintarOpiniones(p.id);
+}
+
+// 🔔 «Avísame»: enlace de WhatsApp con su `Código:` y los atributos que reconoce el escuchador
+// delegado (engancharBuzonAvisos) para dejar la copia en el buzón al pulsar. Sin enlace: null.
+function avisoConBuzon(item, clave) {
+  const id = window.Buzon.nuevoId();
+  const url = window.Aviso.enlace(CAT && CAT.whatsapp, item, clave || null, id);
+  return url ? { url, id, attrs: ' data-buzon="aviso" data-buzon-id="' + id + '"' } : null;
+}
+
+// Un solo escuchador para TODOS los «Avísame» (son <a href> y se repintan a menudo). Saca el texto
+// del propio enlace (parámetro `text`) y manda la copia al buzón; el enlace sigue su camino.
+function engancharBuzonAvisos() {
+  document.addEventListener('click', (e) => {
+    try {
+      const a = e.target && e.target.closest ? e.target.closest('a[data-buzon="aviso"]') : null;
+      if (!a) return;
+      const id = a.getAttribute('data-buzon-id');
+      const texto = new URL(a.href, location.href).searchParams.get('text');
+      if (id && texto) window.Buzon.enviar('aviso', id, texto);
+    } catch (err) { /* el buzón nunca estorba al enlace de WhatsApp */ }
+  });
 }
 
 function tarjetaHtml(p) {
@@ -1029,11 +1055,11 @@ function pintarPreguntarProducto(id, clave) {
   // 🔴 Lo que está en espera pide «avísame»: eso lo anota Stock+ solo (aviso.js, contrato con
   // lib/avisoVuelta.js) y por eso va SIEMPRE al número de la casa, nunca al del gestor.
   if (esperando) {
-    const urlAviso = window.Aviso.enlace(CAT && CAT.whatsapp, p, clave || null);
-    if (urlAviso) {
+    const avisoB = avisoConBuzon(p, clave);
+    if (avisoB) {
       caja.hidden = false;
       caja.innerHTML = '<a class="btn btn-suave btn-secundario ficha-preguntar-btn" href="' +
-        escapeHtml(urlAviso) + '" target="_blank" rel="noopener">' + escapeHtml(window.Aviso.TEXTO_BOTON_ESPERA) + '</a>';
+        escapeHtml(avisoB.url) + '"' + avisoB.attrs + ' target="_blank" rel="noopener">' + escapeHtml(window.Aviso.TEXTO_BOTON_ESPERA) + '</a>';
       return;
     }
   }
@@ -1417,9 +1443,11 @@ function abrirAgotado(a) {
     foto.appendChild(img);
   }
   const boton = document.getElementById('agotado-aviso');
-  const url = window.Aviso.enlace(CAT && CAT.whatsapp, a, null);
-  if (url) {
-    boton.href = url;
+  const avM = avisoConBuzon(a, null);
+  if (avM) {
+    boton.href = avM.url;
+    boton.setAttribute('data-buzon', 'aviso');
+    boton.setAttribute('data-buzon-id', avM.id);
     boton.textContent = window.Aviso.TEXTO_BOTON;
     boton.hidden = false;
   } else {
@@ -1475,13 +1503,14 @@ function pintarAgotadosBusqueda(sinResultados) {
   vacio.hidden = true; vacio.innerHTML = '';
   if (!lista.length) return;
   const filas = lista.map((a) => {
-    const url = window.Aviso.enlace(CAT && CAT.whatsapp, a, null);
-    if (!url) return '';
+    const avF = avisoConBuzon(a, null);
+    if (!avF) return '';
+    const url = avF.url;
     const f = a.foto ? fotoCard(a.foto) : null;
     return '<div class="agotado-fila">' +
       (f ? '<img class="agotado-fila-foto" src="' + escapeHtml(f.src) + '" alt="" loading="lazy" decoding="async">' : '') +
       '<span class="agotado-fila-nom">' + escapeHtml(a.name) + '</span>' +
-      '<a class="btn agotado-fila-btn" href="' + escapeHtml(url) + '" target="_blank" rel="noopener">🔔 Avísame</a>' +
+      '<a class="btn agotado-fila-btn" href="' + escapeHtml(url) + '"' + avF.attrs + ' target="_blank" rel="noopener">🔔 Avísame</a>' +
       '</div>';
   }).join('');
   if (!filas) return;
@@ -2666,7 +2695,12 @@ function enviarPorWhatsApp(ev) {
   // que el pedido va al numero de la casa, donde el bot lo anota y lo reenvia al socio.
   // (El ?ref= y la linea `Vendedor:` NO se tocan: el gestor sigue cobrando su comision.)
   const destino = destinoWhatsApp();
-  window.open(`https://api.whatsapp.com/send?phone=${destino}&text=${encodeURIComponent(lineas.join('\n'))}`, '_blank');
+  // Buzón: una copia del pedido queda guardada aunque Mía esté caída. El `Código:` va antes de la
+  // última `Ref:` y es la llave de deduplicación con WhatsApp. SINCRÓNICO (sendBeacon): sin await.
+  const idBuzon = window.Buzon.nuevoId();
+  const textoPedido = window.Buzon.conCodigo(lineas.join('\n'), idBuzon);
+  window.Buzon.enviar('pedido', idBuzon, textoPedido);
+  window.open(`https://api.whatsapp.com/send?phone=${destino}&text=${encodeURIComponent(textoPedido)}`, '_blank');
 
   // Ya se fue a WhatsApp. Ahora si: guardar sus datos si lo pidio, y dejar la marca para
   // preguntarle al volver si llego a enviarlo.
@@ -2973,6 +3007,7 @@ async function iniciar() {
   document.getElementById('panel-fondo').addEventListener('click', cerrarCarrito);
   document.getElementById('form-pedido').addEventListener('submit', enviarPorWhatsApp);
   engancharHorario();
+  engancharBuzonAvisos();
   const tiraDirs = document.getElementById('dir-guardadas-tira');
   if (tiraDirs) tiraDirs.addEventListener('click', (e) => {
     const chip = e.target.closest('.dir-chip');
