@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-07T22:12:31.565Z",
+  "generado": "2026-11-08T01:36:54.591Z",
   "tasa": 930,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -985,7 +985,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 3,
+      "max": 4,
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
@@ -1479,14 +1479,14 @@
           "S / ROSA",
           "S / BEIGE",
           "L / NEGRO",
-          "L / BLANCO",
           "L / GRIS",
           "L / AZUL",
           "L / ROSA",
           "L / BEIGE"
         ],
         "agotadas": [
-          "M / NEGRO"
+          "M / NEGRO",
+          "L / BLANCO"
         ]
       },
       "maxOpciones": {
@@ -1501,9 +1501,6 @@
         "L / ROSA": 2,
         "L / BEIGE": 3
       },
-      "esperaOpciones": [
-        "L / BLANCO"
-      ],
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
@@ -1622,38 +1619,6 @@
       },
       "envioGratis": true,
       "creado": 1790797351648
-    },
-    {
-      "id": "p_1785182779881",
-      "codigo": "JHP6",
-      "name": "Bolsos de pecho",
-      "cat": "Bolsos Carteras Mochilas monederos",
-      "subcat": "",
-      "notes": "Bolso de Pecho Ligero y Elegante para Hombres para Actividades al Aire Libre - Bolso Bandolera Duradero de Tela Oxford para Senderismo, Ciclismo y Viajes - Bolso de Hombro Único Portátil, Regalo Perfecto.\n(Todos los Colores de la foto)",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785182616/productos/mkiut7qu8g9eckwr9evg.jpg",
-      "precioUSD": 3.65,
-      "precioCUP": 3395,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "variantes": {
-        "ejes": [
-          "Color"
-        ],
-        "opciones": [
-          "AZUL"
-        ],
-        "agotadas": [
-          "GRIS"
-        ]
-      },
-      "espera": true,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1785182779881
     },
     {
       "id": "p_1787540422288",
@@ -2779,6 +2744,70 @@
       },
       "envioGratis": true,
       "creado": 1785357535523
+    },
+    {
+      "id": "p_1794099024902",
+      "codigo": "3QRG",
+      "name": "Guantillas Calidad Premium",
+      "cat": "Gym y Suplementos",
+      "subcat": "",
+      "notes": "Guantillas de alta calidad y durabilidad. Ideal para cualquier talla y género.",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1794098869/productos/brnb7uui5qodsuvg91lf.jpg",
+      "precioUSD": 6,
+      "precioCUP": 5580,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794098874/productos/krmkkk58f5rn0uybvrjg.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794098879/productos/abt6lb7c8epcnl34p65o.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794098883/productos/ozm7tihlhi7geltw3yxh.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794098888/productos/zxddzutlj6wnv7hzcbmi.jpg"
+      ],
+      "variantes": {
+        "ejes": [
+          "Color"
+        ],
+        "opciones": [
+          "NEGRO CON GRIS",
+          "NEGRO CON AZUL"
+        ]
+      },
+      "maxOpciones": {
+        "NEGRO CON GRIS": 3,
+        "NEGRO CON AZUL": 3
+      },
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1794099024902
+    },
+    {
+      "id": "p_1794099173283",
+      "codigo": "Q6E7",
+      "name": "Guantillas Calidad Premium TALLA GRANDE",
+      "cat": "Gym y Suplementos",
+      "subcat": "",
+      "notes": "Derroche de calidad. Lo mejor en guantillas para trabajos fuertes, práctica de deportes y levantamiento de pesas, entre otras actividades que requieren protección en las manos",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1794098964/productos/c9secstqbclzwvganpq8.jpg",
+      "precioUSD": 7,
+      "precioCUP": 6510,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794098968/productos/ijuo58go1pt0ontazuw5.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794098976/productos/lwuazhjnlwikbicbmsla.jpg"
+      ],
+      "max": 2,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1794099173283
     },
     {
       "id": "p_1785008058883",
@@ -7423,6 +7452,12 @@
       "codigo": "EPM9",
       "name": "Bolso bandolera mostaza",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785182905/productos/fnzafrosko3h4nehplug.jpg",
+      "cat": "Bolsos Carteras Mochilas monederos"
+    },
+    {
+      "codigo": "JHP6",
+      "name": "Bolsos de pecho",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785182616/productos/mkiut7qu8g9eckwr9evg.jpg",
       "cat": "Bolsos Carteras Mochilas monederos"
     },
     {
