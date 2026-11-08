@@ -70,24 +70,42 @@ function crearHandler(deps) {
   const ahora = (deps && deps.ahora) || Date.now;
 
   return async function handler(req, res) {
+    // Diagnostico: etapa alcanzada, que viaja en la cabecera X-Buzon. NUNCA lleva el token ni el
+    // repo (ni parte de ellos): solo etiquetas fijas, el status de GitHub y su campo "message".
+    let etapa = 'error:desconocido';
+    // Las variables de entorno se recortan: un espacio o salto de linea pegado al copiarlas en
+    // Vercel rompe la URL o la cabecera Authorization sin dar ningun error visible.
+    const repo = String(env.BUZON_REPO || '').trim();
+    const token = String(env.BUZON_TOKEN || '').trim();
+    const formatoRepo = /^[\w.-]+\/[\w.-]+$/.test(repo) ? 'ok' : 'raro';
+    const formatoToken = (!/\s/.test(token) && (token.startsWith('github_pat_') || token.startsWith('ghp_'))) ? 'ok' : 'raro';
     try {
-      if (req && req.method === 'POST' && doFetch && env.BUZON_REPO && env.BUZON_TOKEN) {
+      if (!(req && req.method === 'POST')) {
+        etapa = 'metodo';
+      } else if (!repo || !token) {
+        etapa = 'sin-config:' + (!repo && !token ? 'ambos' : (!repo ? 'repo' : 'token'));
+      } else if (!doFetch) {
+        etapa = 'error:sinfetch';
+      } else {
         const v = validar(await leerCuerpo(req));
-        if (v) {
+        if (!v) {
+          etapa = 'invalido';
+        } else {
           const ts = ahora();
           const ua = req.headers && typeof req.headers['user-agent'] === 'string'
             ? req.headers['user-agent'].slice(0, 200) : undefined;
           const archivo = { v: 1, tipo: v.tipo, id: v.id, texto: v.texto, ts };
           if (ua) archivo.ua = ua;
           const contenido = Buffer.from(JSON.stringify(archivo), 'utf8').toString('base64');
-          const url = 'https://api.github.com/repos/' + env.BUZON_REPO + '/contents/pendientes/' + ts + '-' + v.id + '.json';
+          const url = 'https://api.github.com/repos/' + repo + '/contents/pendientes/' + ts + '-' + v.id + '.json';
           const ctl = typeof AbortController === 'function' ? new AbortController() : null;
           const reloj = ctl ? setTimeout(() => ctl.abort(), ESPERA_MS) : null;
           try {
-            await doFetch(url, {
+            etapa = 'error:fetch';
+            const r = await doFetch(url, {
               method: 'PUT',
               headers: {
-                Authorization: 'Bearer ' + env.BUZON_TOKEN,
+                Authorization: 'Bearer ' + token,
                 Accept: 'application/vnd.github+json',
                 'X-GitHub-Api-Version': '2022-11-28',
                 'User-Agent': 'tienda-3b-buzon',
@@ -96,17 +114,37 @@ function crearHandler(deps) {
               body: JSON.stringify({ message: 'buzon: ' + v.tipo + ' ' + v.id, content: contenido }),
               signal: ctl ? ctl.signal : undefined,
             });
+            const estado = r && r.status;
+            if (r && r.ok) {
+              etapa = 'ok:' + estado;
+            } else {
+              etapa = 'github:' + estado;
+              // El "message" de GitHub (p. ej. "Bad credentials") ayuda a diagnosticar. Se deja
+              // solo ASCII imprimible y 80 caracteres: va en una cabecera HTTP.
+              try {
+                const j = r && typeof r.json === 'function' ? await r.json() : null;
+                const m = j && typeof j.message === 'string'
+                  ? j.message.replace(/[^\x20-\x7E]/g, '').trim().slice(0, 80) : '';
+                if (m) etapa += ';' + m;
+              } catch (e) { /* sin cuerpo legible: se queda solo el status */ }
+            }
           } finally {
             if (reloj) clearTimeout(reloj);
           }
         }
       }
     } catch (e) {
-      // El buzon nunca estorba: cualquier fallo se traga y se contesta igual.
+      // El buzon nunca estorba: cualquier fallo se traga y se contesta igual (con la etapa).
+      etapa = 'error:' + String((e && e.name) || 'desconocido').replace(/[^\w.-]/g, '');
     }
     try {
       res.statusCode = 204;
-      if (typeof res.setHeader === 'function') res.setHeader('Cache-Control', 'no-store');
+      if (typeof res.setHeader === 'function') {
+        res.setHeader('Cache-Control', 'no-store');
+        res.setHeader('X-Buzon', etapa);
+        res.setHeader('X-Buzon-Repo-Formato', formatoRepo);
+        res.setHeader('X-Buzon-Token-Formato', formatoToken);
+      }
       res.end();
     } catch (e) { /* nada mas que hacer */ }
   };

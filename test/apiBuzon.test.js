@@ -18,7 +18,7 @@ function montar(env, fetchImpl) {
   const f = async (url, o) => {
     llamadas.push({ url, o });
     if (fetchImpl) return fetchImpl(url, o);
-    return { ok: true };
+    return { ok: true, status: 201 };
   };
   return { llamadas, handler: crearHandler({ fetch: f, env, ahora: () => 1700000000000 }) };
 }
@@ -103,4 +103,97 @@ test('si GitHub falla (error de red o lanza), igual responde 204', async () => {
   await handler(peticion(PEDIDO), r);
   assert.strictEqual(r.statusCode, 204);
   assert.strictEqual(r.terminado, true);
+});
+
+// --- Diagnostico: cabecera X-Buzon (nunca lleva token ni repo) ---
+const TOKEN_OK = 'github_pat_ABC123';
+
+test('X-Buzon: ok:<status> cuando GitHub acepta', async () => {
+  const { handler } = montar({ BUZON_REPO: 'ruth/buzon-3b', BUZON_TOKEN: TOKEN_OK });
+  const r = res();
+  await handler(peticion(PEDIDO), r);
+  assert.strictEqual(r.headers['X-Buzon'], 'ok:201');
+  assert.strictEqual(r.headers['X-Buzon-Repo-Formato'], 'ok');
+  assert.strictEqual(r.headers['X-Buzon-Token-Formato'], 'ok');
+});
+
+test('X-Buzon: sin-config:repo / token / ambos', async () => {
+  const casos = [
+    [{ BUZON_TOKEN: 't' }, 'sin-config:repo'],
+    [{ BUZON_REPO: 'a/b' }, 'sin-config:token'],
+    [{}, 'sin-config:ambos'],
+    [{ BUZON_REPO: '   ', BUZON_TOKEN: '\n' }, 'sin-config:ambos'],
+  ];
+  for (const [env, esperado] of casos) {
+    const { handler } = montar(env);
+    const r = res();
+    await handler(peticion(PEDIDO), r);
+    assert.strictEqual(r.headers['X-Buzon'], esperado);
+    assert.strictEqual(r.statusCode, 204);
+  }
+});
+
+test('X-Buzon: metodo e invalido', async () => {
+  const a = montar(ENV); const ra = res();
+  await a.handler(peticion(PEDIDO, 'GET'), ra);
+  assert.strictEqual(ra.headers['X-Buzon'], 'metodo');
+  const b = montar(ENV); const rb = res();
+  await b.handler(peticion({ ...PEDIDO, tipo: 'otro' }), rb);
+  assert.strictEqual(rb.headers['X-Buzon'], 'invalido');
+});
+
+test('X-Buzon: github:<status>;<message> recortado a 80 y solo ASCII', async () => {
+  const largo = 'Bad credentials ñ é ' + 'x'.repeat(200);
+  const { handler } = montar(ENV, async () => ({ ok: false, status: 401, json: async () => ({ message: largo }) }));
+  const r = res();
+  await handler(peticion(PEDIDO), r);
+  const h = r.headers['X-Buzon'];
+  assert.ok(h.startsWith('github:401;Bad credentials  '), h);
+  assert.strictEqual(h.slice('github:401;'.length).length, 80);
+  assert.ok(/^[\x20-\x7E]+$/.test(h));
+  // sin cuerpo JSON legible: solo el status
+  const sin = montar(ENV, async () => ({ ok: false, status: 404, json: async () => { throw new Error('x'); } }));
+  const r2 = res();
+  await sin.handler(peticion(PEDIDO), r2);
+  assert.strictEqual(r2.headers['X-Buzon'], 'github:404');
+});
+
+test('X-Buzon: error:<name> si el fetch lanza o aborta', async () => {
+  const { handler } = montar(ENV, async () => { const e = new Error('x'); e.name = 'AbortError'; throw e; });
+  const r = res();
+  await handler(peticion(PEDIDO), r);
+  assert.strictEqual(r.headers['X-Buzon'], 'error:AbortError');
+  assert.strictEqual(r.statusCode, 204);
+});
+
+test('formatos: raro con repo/token mal formados, y trim de las variables', async () => {
+  const mal = montar({ BUZON_REPO: 'sin-barra', BUZON_TOKEN: 'abc def' });
+  const r = res();
+  await mal.handler(peticion(PEDIDO), r);
+  assert.strictEqual(r.headers['X-Buzon-Repo-Formato'], 'raro');
+  assert.strictEqual(r.headers['X-Buzon-Token-Formato'], 'raro');
+  // con espacios/saltos alrededor se recortan y el formato queda ok
+  const m = montar({ BUZON_REPO: ' ruth/buzon-3b\n', BUZON_TOKEN: ' ghp_XYZ\n' });
+  const r2 = res();
+  await m.handler(peticion(PEDIDO), r2);
+  assert.strictEqual(m.llamadas[0].url.split('/repos/')[1].split('/contents')[0], 'ruth/buzon-3b');
+  assert.strictEqual(m.llamadas[0].o.headers.Authorization, 'Bearer ghp_XYZ');
+  assert.strictEqual(r2.headers['X-Buzon-Repo-Formato'], 'ok');
+  assert.strictEqual(r2.headers['X-Buzon-Token-Formato'], 'ok');
+});
+
+test('ninguna cabecera filtra el token ni el repo', async () => {
+  const env = { BUZON_REPO: 'ruth/secreto-repo', BUZON_TOKEN: 'github_pat_SECRETO999' };
+  const fallos = [
+    undefined,
+    async () => ({ ok: false, status: 401, json: async () => ({ message: 'Bad credentials' }) }),
+    async () => { throw new Error('boom'); },
+  ];
+  for (const f of fallos) {
+    const { handler } = montar(env, f);
+    const r = res();
+    await handler(peticion(PEDIDO), r);
+    const todo = JSON.stringify(r.headers);
+    assert.ok(!todo.includes('SECRETO999') && !todo.includes('secreto-repo'), todo);
+  }
 });
