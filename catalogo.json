@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-08T01:36:54.591Z",
+  "generado": "2026-11-08T06:51:51.517Z",
   "tasa": 930,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -1108,26 +1108,6 @@
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
       },
       "creado": 1787457398463
-    },
-    {
-      "id": "p_1787495641341",
-      "codigo": "EJBN",
-      "name": "Aretes antialérgicos de piedra brillante",
-      "cat": "Reloj y Prendas",
-      "subcat": "",
-      "notes": "Conjunto de 12 pares de aretes de silicona. Antialérgicos. Colores disponibles 🖤💙💜❤️🩷\nOJO no se venden por separado 😔",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787495514/productos/lbtgzyyjjpfw4cipo1ih.jpg",
-      "precioUSD": 1,
-      "precioCUP": 930,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "max": 1,
-      "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      },
-      "creado": 1787495641341
     },
     {
       "id": "p_1787497741914",
@@ -2320,39 +2300,6 @@
       },
       "envioGratis": true,
       "creado": 1792886712539
-    },
-    {
-      "id": "p_1788839956775",
-      "codigo": "EJPB",
-      "name": "Exprimidor",
-      "cat": "Hogar",
-      "subcat": "",
-      "notes": "Útil accesorio de uso diario, exprimidor de tubos de pastas tanto dental, como tintes, cremas y demás productos",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788839767/productos/qpnmcilryql7g6ewatrl.jpg",
-      "precioUSD": 0.6,
-      "precioCUP": 558,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "variantes": {
-        "ejes": [
-          "Color"
-        ],
-        "opciones": [
-          "AMARILLO"
-        ],
-        "agotadas": [
-          "ROSA OSCURO"
-        ]
-      },
-      "maxOpciones": {
-        "AMARILLO": 1
-      },
-      "envio": {
-        "corto": "🛵 Gratis desde 2,000 CUP",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
-      },
-      "creado": 1788839956775
     },
     {
       "id": "p_1788816392396",
@@ -4269,7 +4216,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 4,
+      "max": 3,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -4635,7 +4582,7 @@
         ]
       },
       "maxOpciones": {
-        "A": 2,
+        "A": 1,
         "B": 2,
         "C": 2,
         "D": 1,
@@ -5179,7 +5126,7 @@
       },
       "maxOpciones": {
         "CHOCOLATE": 3,
-        "CHOCOLATE CLARO": 4,
+        "CHOCOLATE CLARO": 3,
         "BEIGE": 2
       },
       "envio": {
@@ -5514,7 +5461,7 @@
         "A": 2,
         "B": 2,
         "C": 2,
-        "D": 2,
+        "D": 1,
         "E": 4,
         "F": 2,
         "G": 2,
@@ -6084,7 +6031,7 @@
       "maxOpciones": {
         "NEGRO CON ROJO / M": 1,
         "NEGRO CON ROJO / L": 2,
-        "NEGRO CON VERDE / M": 4,
+        "NEGRO CON VERDE / M": 5,
         "NEGRO CON VERDE / L": 2
       },
       "envio": {
@@ -7060,7 +7007,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 3,
+      "max": 2,
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
@@ -7353,6 +7300,12 @@
       "cat": "Bocinas Celulares y Accesorios"
     },
     {
+      "codigo": "EJBN",
+      "name": "Aretes antialérgicos de piedra brillante",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787495514/productos/lbtgzyyjjpfw4cipo1ih.jpg",
+      "cat": "Reloj y Prendas"
+    },
+    {
       "codigo": "S55V",
       "name": "Aretitos de fantasía",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787498339/productos/qerjq0wjoh09c54jwder.jpg",
@@ -7639,6 +7592,12 @@
       "name": "Estrellas fosforescentes (100 unidades)",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791314215/productos/t8qiszgv8ae7obbtte82.jpg",
       "cat": "Decoración"
+    },
+    {
+      "codigo": "EJPB",
+      "name": "Exprimidor",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788839767/productos/qpnmcilryql7g6ewatrl.jpg",
+      "cat": "Hogar"
     },
     {
       "codigo": "Y2AH",
