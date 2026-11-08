@@ -420,6 +420,7 @@
       <div class="modal-tallas" id="modal-tallas" hidden></div>
       <div id="banda-gestor-ficha" class="banda-gestor" hidden></div>
       <div class="modal-accion" id="modal-accion"></div>
+      <div class="ficha-solo" id="modal-solo" hidden></div>
         <!-- «✓ Listo — ver mi pedido (N)» (2026-10-22). Va entre la acción de compra y el
              botón de preguntar: es la confirmación de que el producto entró, que hasta hoy
              no existía de forma visible (la barra inferior y el contador de la cabecera los
@@ -531,6 +532,7 @@
       <strong id="panel-titulo">Tu pedido</strong>
       <button id="btn-cerrar-carrito" class="cerrar" aria-label="Cerrar" type="button">✕</button>
     </div>
+    <p id="panel-solo" class="panel-solo" hidden></p>
     <div id="carrito-items"></div>
     <div id="carrito-vacio" class="estado" hidden>
       <p>Tu pedido está vacío.</p>
@@ -623,6 +625,7 @@
 <script src="espera.js"></script>
 <script src="preguntar.js"></script>
 <script src="aviso.js"></script>
+<script src="pedido-solo.js"></script>
 <script src="grupo.js"></script>
 <script src="completar.js"></script>
 <script src="listo.js"></script>

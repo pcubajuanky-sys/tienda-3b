@@ -897,6 +897,26 @@ function pintarPreguntarProducto(id, clave) {
     escapeHtml(url) + '" target="_blank" rel="noopener">💬 ' + escapeHtml(texto) + '</a>';
 }
 
+// «⚡ Pedir solo este» (2026-11-07): boton secundario bajo la accion de la ficha. Solo sale cuando
+// el producto se puede vender ahora. Es un <button> con `data-solo` (el CSP prohibe onclick).
+function pintarSoloFicha(id, clave) {
+  const caja = document.getElementById('modal-solo');
+  if (!caja) return;
+  const p = productoDe(id);
+  const ok = !!p && window.PedidoSolo.puede({
+    cerrada: cerrada(),
+    enEspera: Espera.enEspera(p, clave || null),
+    agotada: !!(clave && window.Aviso.esAgotada(p, clave)),
+    conVariantes: !!variantesDe(p),
+    clave: clave || null,
+    tope: topeDe(id, clave || null)
+  });
+  if (!ok) { caja.hidden = true; caja.innerHTML = ''; return; }
+  caja.hidden = false;
+  caja.innerHTML = '<button type="button" class="btn btn-texto ficha-solo-btn" data-solo="' +
+    escapeHtml(claveCarrito(id, clave || null)) + '">' + window.PedidoSolo.TEXTO_BOTON + '</button>';
+}
+
 // La confirmación de la ficha: «✓ Listo — ver mi pedido (N)». Solo sale si ESTE producto
 // tiene alguna línea en el pedido (con o sin combinación elegida).
 //
@@ -955,6 +975,7 @@ function refrescarAcciones(id) {
     pintarEsperaFicha(id, claveActual);
     pintarPreguntarProducto(id, claveActual);
     pintarListoFicha(id);
+    pintarSoloFicha(id, claveActual);
     pintarUmbralFicha(id, claveActual);
     pintarChipsVariante(id);
   }
@@ -1154,6 +1175,7 @@ function mostrarDetalle(id) {
   pintarEsperaFicha(id, null);
   pintarPreguntarProducto(id, null);
   pintarListoFicha(id);
+  pintarSoloFicha(id, null);
   pintarUmbralFicha(id, null);
   pintarRelacionados(p);
   const avisoComp = document.getElementById('compartir-aviso');
@@ -1499,6 +1521,9 @@ function atraparFoco(e, contenedor) {
 // ── Carrito ──
 // { id: cantidad }. Vive en localStorage para que un refresco no borre el pedido.
 let carrito = JSON.parse(localStorage.getItem(CLAVE_CARRITO) || '{}');
+// «⚡ Pedir solo este» (2026-11-07): { claveCarrito: qty } del pedido rapido, o null. NUNCA se guarda
+// en localStorage: el carrito de siempre queda intacto mientras el panel enseña solo este producto.
+let soloEste = null;
 
 // Unidades totales del pedido. Es lo que enseña el contador 🛒 de la cabecera y lo que
 // repite el botón «Listo» de la ficha: tienen que decir lo MISMO o se contradicen.
@@ -1526,20 +1551,35 @@ function addCarrito(clave) {
   if (cerrada()) return;             // guarda defensiva: cubre parrilla, modal y teclado
   const id = idDeClave(clave);
   const tope = topeDe(id, String(clave).split('|')[1] || null);
-  if (tope !== null && (carrito[clave] || 0) >= tope) { refrescarAcciones(id); return; }   // el + ya sale apagado: esto es la red
-  carrito[clave] = (carrito[clave] || 0) + 1;
-  guardarCarrito(); refrescarAcciones(idDeClave(clave)); renderCarrito();
+  const base = soloEste || carrito;
+  if (tope !== null && (base[clave] || 0) >= tope) { refrescarAcciones(id); return; }   // el + ya sale apagado: esto es la red
+  base[clave] = (base[clave] || 0) + 1;
+  if (!soloEste) guardarCarrito();   // en modo solo NO se toca el carrito guardado
+  refrescarAcciones(idDeClave(clave)); renderCarrito();
 }
 
 // Quita la línea ENTERA, no una unidad: es lo que espera quien pulsa la ✕. Antes la única
 // forma de sacar un producto era salir del carrito, encontrarlo en la parrilla y bajarle
 // la cantidad, o vaciar el pedido entero.
 function quitarLineaCarrito(clave) {
+  if (soloEste) {
+    delete soloEste[clave];
+    if (!Object.keys(soloEste).length) { cerrarCarrito(); return; }
+    refrescarAcciones(idDeClave(clave)); renderCarrito();
+    return;
+  }
   delete carrito[clave];
   guardarCarrito(); refrescarAcciones(idDeClave(clave)); renderCarrito();
 }
 
 function quitarCarrito(clave) {
+  if (soloEste) {
+    soloEste[clave] = (soloEste[clave] || 0) - 1;
+    if (soloEste[clave] <= 0) delete soloEste[clave];
+    if (!Object.keys(soloEste).length) { cerrarCarrito(); return; }
+    refrescarAcciones(idDeClave(clave)); renderCarrito();
+    return;
+  }
   carrito[clave] = (carrito[clave] || 0) - 1;
   if (carrito[clave] <= 0) delete carrito[clave];
   guardarCarrito(); refrescarAcciones(idDeClave(clave)); renderCarrito();
@@ -1578,7 +1618,7 @@ function mostrarAvisoAjuste(recortes) {
 }
 
 function itemsCarrito() {
-  return Object.entries(carrito)
+  return Object.entries(soloEste || carrito)
     .map(([k, qty]) => {
       const partes = String(k).split('|');
       return { p: productoDe(partes[0]), qty, clave: partes[1] || null };
@@ -2225,7 +2265,12 @@ function renderCarrito() {
   // Panel modal (sin cambios de fondo: sigue siendo el que lleva el formulario).
   document.getElementById('carrito-items').innerHTML = html;
   document.getElementById('carrito-vacio').hidden = hayItems;
-  document.getElementById('btn-vaciar-panel').hidden = !hayItems;
+  document.getElementById('btn-vaciar-panel').hidden = !hayItems || !!soloEste;   // en modo solo vaciaria el carrito guardado
+  const franjaSolo = document.getElementById('panel-solo');
+  if (franjaSolo) {
+    franjaSolo.hidden = !soloEste;
+    franjaSolo.textContent = soloEste ? window.PedidoSolo.texto(unidadesEnCarrito()) : '';
+  }
   document.getElementById('carrito-total').hidden = !hayItems;
   document.getElementById('form-pedido').hidden = !hayItems || cerrada();
   document.getElementById('carrito-total').innerHTML = hayItems
@@ -2254,7 +2299,7 @@ function renderCarrito() {
   document.getElementById('lateral-items').innerHTML = hayItems
     ? html
     : '<p class="estado-lateral">Tu pedido está vacío.</p>';
-  document.getElementById('btn-vaciar-lateral').hidden = !hayItems;
+  document.getElementById('btn-vaciar-lateral').hidden = !hayItems || !!soloEste;
   const envioEl = document.getElementById('lateral-envio');
   envioEl.hidden = !hayItems || !envioTexto;
   envioEl.textContent = envioTexto;
@@ -2288,6 +2333,7 @@ function limpiarCarrito() {
 }
 
 function vaciarPedido() {
+  if (soloEste) return;   // el modo solo no vacia el carrito guardado
   if (!Object.keys(carrito).length) return;   // guarda defensiva: el botón está oculto si ya está vacío
   const ok = confirm('¿Vaciar tu pedido? Perderás lo que agregaste y no se puede deshacer.');
   if (!ok) return;
@@ -2310,7 +2356,14 @@ function mostrarCarrito() {
 
 // Oculta el carrito. NO toca el historial: la llama sincronizarCapas.
 function ocultarCarrito() {
+  const eraSolo = !!soloEste;
+  soloEste = null;   // el modo solo se apaga siempre al cerrar el panel, por la via que sea
   document.getElementById('panel').hidden = true;
+  if (eraSolo) {
+    renderCarrito();               // franja fuera y carrito normal (panel y aside)
+    actualizarBarraMovil();
+    if (productoModal) refrescarAcciones(productoModal);
+  }
   document.removeEventListener('keydown', capturarTecladoCarrito);
   if (elementoAnteriorFoco && elementoAnteriorFoco.isConnected) elementoAnteriorFoco.focus();
 }
@@ -2471,6 +2524,9 @@ function enviarPorWhatsApp(ev) {
     }));
     pintarDirecciones();
   }
+  // Pedido rapido «solo este»: NO se deja la marca (el «¿lo enviaste? -> vaciar» borraria el carrito
+  // guardado, que este pedido no incluia) y se cierra el panel, que apaga el modo solo.
+  if (soloEste) { cerrarCarrito(); return; }
   try { localStorage.setItem(CLAVE_ENVIADO, String(Date.now())); } catch (e) { /* sin marca: no se preguntara */ }
 }
 
@@ -2880,6 +2936,7 @@ async function iniciar() {
     const quitar = e.target.closest('[data-quitar-linea]');
     const rel = e.target.closest('[data-rel]');
     const verPedido = e.target.closest('[data-ver-pedido]');
+    const solo = e.target.closest('[data-solo]');
     if (rel) {
       abrirDetalle(rel.dataset.rel);
       document.querySelector('#modal-detalle .modal-caja').scrollTop = 0;
@@ -2902,6 +2959,14 @@ async function iniciar() {
     }
     else if (irDetalle) { e.stopPropagation(); abrirDetalle(irDetalle.dataset.detalle); }
     else if (verPedido) { e.stopPropagation(); abrirCarrito(); }
+    else if (solo) {
+      e.stopPropagation();
+      const k = solo.dataset.solo;
+      if (cerrada()) return;
+      const q = window.PedidoSolo.cantidadInicial(carrito[k] || 0, topeDe(idDeClave(k), String(k).split('|')[1] || null));
+      soloEste = { [k]: q };
+      abrirCarrito();
+    }
     else if (add) { e.stopPropagation(); addCarrito(add.dataset.add); }
     else if (minus) { e.stopPropagation(); quitarCarrito(minus.dataset.minus); }
     else if (plus) { e.stopPropagation(); addCarrito(plus.dataset.plus); }

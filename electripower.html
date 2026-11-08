@@ -421,6 +421,7 @@
       <div class="modal-tallas" id="modal-tallas" hidden></div>
       <div id="banda-gestor-ficha" class="banda-gestor" hidden></div>
       <div class="modal-accion" id="modal-accion"></div>
+      <div class="ficha-solo" id="modal-solo" hidden></div>
         <!-- «Añádelo y te faltarán X CUP para la mensajería gratis» (2026-10-27). Va
              pegado a la acción de compra porque es el empujón de ESE botón: medido sobre
              196 pedidos reales, la mediana del pedido web cae clavada en el umbral y el
@@ -521,6 +522,7 @@
       <strong id="panel-titulo">Tu pedido</strong>
       <button id="btn-cerrar-carrito" class="cerrar" aria-label="Cerrar" type="button">✕</button>
     </div>
+    <p id="panel-solo" class="panel-solo" hidden></p>
     <div id="carrito-items"></div>
     <div id="carrito-vacio" class="estado" hidden>
       <p>Tu pedido está vacío.</p>
@@ -609,6 +611,7 @@
 <script src="espera.js"></script>
 <script src="preguntar.js"></script>
 <script src="aviso.js"></script>
+<script src="pedido-solo.js"></script>
 <script src="grupo.js"></script>
 <script src="completar.js"></script>
 <script src="listo.js"></script>
