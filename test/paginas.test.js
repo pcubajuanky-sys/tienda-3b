@@ -20,7 +20,7 @@ const path = require('node:path');
 const MODULOS = [
   'mundos.js', 'negocio.js', 'orden.js', 'buscar.js', 'favoritos.js', 'preciosGestor.js', 'relacionados.js',
   'galeria.js', 'historial.js', 'faltante.js', 'direcciones.js', 'traspedido.js',
-  'espera.js', 'preguntar.js', 'aviso.js', 'grupo.js', 'completar.js', 'listo.js', 'tasa.js', 'umbral.js',
+  'espera.js', 'preguntar.js', 'aviso.js', 'opinion.js', 'grupo.js', 'completar.js', 'listo.js', 'tasa.js', 'umbral.js',
   'regreso.js', 'descuento.js', 'dinero.js', 'tarjeta.js', 'app.js', 'encargos.js'
 ];
 

@@ -1913,3 +1913,35 @@ body[data-negocio="delmar"]{--marca-agua:url("/marca-delmar.png")}
 .cta-grupo-sub{display:block;font-size:var(--t-sm);color:var(--text-2);margin-top:4px}
 .cta-grupo-btn{flex:none;min-height:44px;background:transparent;border:1px solid var(--wa);color:var(--wa)}
 @media (prefers-reduced-motion:reduce){ .cta-grupo{transition:none} }
+
+/* ── Opiniones con estrellas (2026-11-08) ──
+   Ambar con contraste: #8A5600 sobre blanco da 6,1:1; #FBBF24 sobre los fondos oscuros, mas de 9:1. */
+:root{ --estrella:#8A5600; }
+@media (prefers-color-scheme: dark){ :root{ --estrella:#FBBF24; } }
+.card-estrellas{font-size:var(--t-xs);font-weight:600;color:var(--estrella);margin-top:2px}
+.ficha-opiniones{margin-top:var(--e3);padding-top:var(--e3);border-top:1px solid var(--border)}
+.op-titulo{font-size:var(--t-lg);margin:0 0 var(--e2)}
+.op-resumen{font-size:var(--t-md);font-weight:600;color:var(--estrella);margin-left:var(--e1)}
+.op-lista{list-style:none;margin:0;padding:0}
+.op-item{padding:var(--e2) 0;border-bottom:1px solid var(--border)}
+.op-item:last-child{border-bottom:0}
+.op-cab{display:flex;flex-wrap:wrap;align-items:center;gap:var(--e1)}
+.op-nombre{font-weight:700;font-size:var(--t-md)}
+.op-verif{font-size:var(--t-xs);font-weight:600;color:var(--text-2);background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radio-pill);padding:2px 8px}
+.op-meta{font-size:var(--t-sm);color:var(--text-2);margin-top:2px}
+.op-estrellas{color:var(--estrella);letter-spacing:1px}
+.op-texto{margin:var(--e1) 0 0;font-size:var(--t-md);line-height:1.45;white-space:pre-line;overflow-wrap:anywhere}
+.op-vacio{color:var(--text-2);font-size:var(--t-md);margin:0 0 var(--e2)}
+.op-gracias{margin:var(--e2) 0;padding:var(--e2);border-radius:var(--radio-control);background:var(--surface-2);border:1px solid var(--border);font-size:var(--t-md)}
+.op-mas,.op-abrir{display:flex;width:100%;min-height:44px;justify-content:center;align-items:center;margin-top:var(--e1)}
+.op-form{margin-top:var(--e2)}
+.op-estrellas-fila{display:flex;gap:var(--e1);margin-bottom:var(--e2)}
+.op-estrella{min-width:44px;min-height:44px;font-size:28px;line-height:1;border:1px solid var(--border);border-radius:var(--radio-control);background:var(--surface);color:var(--text-3);cursor:pointer}
+.op-estrella.on{color:var(--estrella);border-color:var(--estrella)}
+.op-label{display:block;font-size:var(--t-sm);font-weight:600;margin:var(--e2) 0 var(--e0)}
+.op-campo{display:block;width:100%;min-height:44px;padding:11px 14px;font:inherit;color:var(--text);background:var(--surface);border:1px solid var(--border);border-radius:var(--radio-control);box-sizing:border-box}
+textarea.op-campo{resize:vertical;min-height:96px}
+.op-contador{text-align:right;font-size:var(--t-xs);color:var(--text-2);margin-top:var(--e0)}
+.op-acciones{display:flex;flex-direction:column;gap:var(--e1);margin-top:var(--e2)}
+.op-enviar,.op-cancelar{display:flex;width:100%;min-height:44px;justify-content:center;align-items:center}
+.op-enviar[disabled]{opacity:.5;cursor:not-allowed}

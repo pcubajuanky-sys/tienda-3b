@@ -565,6 +565,154 @@ function botonFavHtml(id) {
   return `<button type="button" class="card-fav" data-fav="${escapeHtml(id)}" aria-pressed="${esFav}" aria-label="${esFav ? 'Quitar de favoritos' : 'Guardar en favoritos'}">${esFav ? '♥' : '♡'}</button>`;
 }
 
+// ── Opiniones con estrellas (2026-11-08) ──
+// Las publica Stock+ solo cuando Ruth las aprueba: `p.estrellas = {prom, n}` en cada producto y
+// `CAT.opiniones[codigo] = [{nombre, e, t, f, v}]` en la raíz. Ausentes ≡ no se pinta nada, salvo
+// el botón «Dejar mi opinión». Todo texto del cliente va escapado. El clic va por data-opinion.
+// 🔴 La opinión viaja SIEMPRE al número de la casa (CAT.whatsapp), nunca al del gestor (opinion.js).
+const OPINIONES_VISIBLES = 5;
+let opinionForm = null;       // null = cerrado | { estrellas: 0 } = formulario abierto
+let opinionTodas = false;     // «Ver todas»
+let opinionGracias = false;   // acaba de enviar
+
+function estrellasTarjetaHtml(p) {
+  const r = window.Opinion.resumen(p);
+  if (!r) return '';
+  return '<div class="card-estrellas" aria-label="' + escapeHtml('Valoración ' + r.replace('⭐ ', '')) + '">' + escapeHtml(r) + '</div>';
+}
+
+function opinionesDe(p) {
+  const l = p && CAT && CAT.opiniones && CAT.opiniones[p.codigo];
+  return Array.isArray(l) ? l.filter((o) => o && o.e >= 1) : [];
+}
+
+function fechaOpinion(f) {
+  const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(String(f || ''));
+  return m ? m[3] + '/' + m[2] + '/' + m[1] : '';
+}
+
+function opinionItemHtml(o) {
+  const fecha = fechaOpinion(o.f);
+  return '<li class="op-item">' +
+    '<div class="op-cab"><span class="op-nombre">' + escapeHtml(o.nombre || 'Cliente') + '</span>' +
+    (o.v ? '<span class="op-verif">✔ Compra verificada</span>' : '') + '</div>' +
+    '<div class="op-meta"><span class="op-estrellas" aria-label="' + escapeHtml(o.e + ' estrellas') + '">' +
+    escapeHtml(window.Opinion.estrellasTexto(o.e)) + '</span>' +
+    (fecha ? ' <span class="op-fecha">' + escapeHtml(fecha) + '</span>' : '') + '</div>' +
+    (o.t ? '<p class="op-texto">' + escapeHtml(o.t) + '</p>' : '') + '</li>';
+}
+
+// El nombre ya escrito en el pedido, o el de la primera dirección guardada.
+function opinionNombreGuardado() {
+  const c = document.getElementById('c-nombre');
+  if (c && c.value.trim()) return c.value.trim();
+  try {
+    const d = leerDirecciones()[0];
+    return d && d.nombre ? String(d.nombre) : '';
+  } catch (e) { return ''; }
+}
+
+function opinionFormHtml() {
+  const n = (opinionForm && opinionForm.estrellas) || 0;
+  let est = '';
+  for (let i = 1; i <= 5; i++) {
+    est += '<button type="button" class="op-estrella' + (i <= n ? ' on' : '') + '" data-opinion="estrella" data-n="' + i +
+      '" aria-label="' + i + (i === 1 ? ' estrella' : ' estrellas') + '" aria-pressed="' + (i === n ? 'true' : 'false') + '">' +
+      (i <= n ? '★' : '☆') + '</button>';
+  }
+  return '<div class="op-form">' +
+    '<div class="op-estrellas-fila" role="group" aria-label="Tu nota">' + est + '</div>' +
+    '<label class="op-label" for="op-nombre">Tu nombre (opcional)</label>' +
+    '<input type="text" id="op-nombre" class="op-campo" maxlength="40" autocomplete="name" value="' + escapeHtml(opinionNombreGuardado()) + '">' +
+    '<label class="op-label" for="op-texto">Tu opinión (opcional)</label>' +
+    '<textarea id="op-texto" class="op-campo" rows="4" maxlength="' + window.Opinion.MAX_TEXTO + '"></textarea>' +
+    '<div class="op-contador" id="op-contador" aria-live="polite">0/' + window.Opinion.MAX_TEXTO + '</div>' +
+    '<div class="op-acciones">' +
+    '<button type="button" class="btn btn-primario op-enviar" data-opinion="enviar"' + (n ? '' : ' disabled') + '>Enviar por WhatsApp</button>' +
+    '<button type="button" class="btn btn-texto op-cancelar" data-opinion="cancelar">Cancelar</button></div>' +
+    '</div>';
+}
+
+function pintarOpiniones(id) {
+  const caja = document.getElementById('modal-opiniones');
+  if (!caja) return;
+  const p = productoDe(id);
+  if (!p) { caja.hidden = true; caja.innerHTML = ''; return; }
+  const lista = opinionesDe(p);
+  const puedeOpinar = !!(CAT && CAT.whatsapp && p.codigo);
+  if (!lista.length && !puedeOpinar) { caja.hidden = true; caja.innerHTML = ''; return; }
+  const resumen = window.Opinion.resumen(p);
+  let h = '<h3 class="op-titulo">Opiniones' + (resumen ? ' <span class="op-resumen">' + escapeHtml(resumen) + '</span>' : '') + '</h3>';
+  if (lista.length) {
+    const vis = opinionTodas ? lista : lista.slice(0, OPINIONES_VISIBLES);
+    h += '<ul class="op-lista">' + vis.map(opinionItemHtml).join('') + '</ul>';
+    if (!opinionTodas && lista.length > OPINIONES_VISIBLES) {
+      h += '<button type="button" class="btn btn-texto op-mas" data-opinion="todas">Ver todas (' + lista.length + ')</button>';
+    }
+  } else {
+    h += '<p class="op-vacio">Todavía no hay opiniones. ¡Sé la primera persona en opinar!</p>';
+  }
+  if (puedeOpinar) {
+    if (opinionGracias) h += '<p class="op-gracias" role="status">¡Gracias! La revisamos antes de publicarla.</p>';
+    if (opinionForm) h += opinionFormHtml();
+    else h += '<button type="button" class="btn btn-suave op-abrir" data-opinion="abrir">' + escapeHtml(window.Opinion.TEXTO_BOTON) + '</button>';
+  }
+  caja.hidden = false;
+  caja.innerHTML = h;
+}
+
+function reiniciarOpiniones() { opinionForm = null; opinionTodas = false; opinionGracias = false; }
+
+// Un solo punto para todos los clics de la sección (el CSP prohíbe onclick=).
+function alPulsarOpinion(e) {
+  const b = e.target.closest('[data-opinion]');
+  if (!b || !productoModal) return false;
+  const accion = b.dataset.opinion;
+  if (accion === 'abrir') {
+    opinionForm = { estrellas: 0 };
+    opinionGracias = false;
+    pintarOpiniones(productoModal);
+  } else if (accion === 'cancelar') {
+    opinionForm = null;
+    pintarOpiniones(productoModal);
+  } else if (accion === 'todas') {
+    opinionTodas = true;
+    pintarOpiniones(productoModal);
+  } else if (accion === 'estrella' && opinionForm) {
+    opinionForm.estrellas = Number(b.dataset.n) || 0;
+    // Se actualizan las estrellas en el sitio: repintar todo borraría lo que ya escribió.
+    document.querySelectorAll('#modal-opiniones .op-estrella').forEach((el) => {
+      const i = Number(el.dataset.n);
+      el.classList.toggle('on', i <= opinionForm.estrellas);
+      el.textContent = i <= opinionForm.estrellas ? '★' : '☆';
+      el.setAttribute('aria-pressed', i === opinionForm.estrellas ? 'true' : 'false');
+    });
+    const env = document.querySelector('#modal-opiniones .op-enviar');
+    if (env) env.disabled = !opinionForm.estrellas;
+  } else if (accion === 'enviar' && opinionForm && opinionForm.estrellas) {
+    enviarOpinion();
+  }
+  return true;
+}
+
+// 🔴 Todo síncrono: NINGÚN await entre el clic y window.open (el bloqueador de ventanas de iOS).
+function enviarOpinion() {
+  const p = productoDe(productoModal);
+  if (!p || !opinionForm || !opinionForm.estrellas) return;
+  const url = window.Opinion.enlace(CAT && CAT.whatsapp, {
+    producto: p.name,
+    codigo: p.codigo,
+    estrellas: opinionForm.estrellas,
+    nombre: (document.getElementById('op-nombre') || {}).value || '',
+    texto: (document.getElementById('op-texto') || {}).value || ''
+  });
+  if (!url) return;
+  window.open(url, '_blank', 'noopener');
+  opinionForm = null;
+  opinionGracias = true;
+  pintarOpiniones(p.id);
+}
+
 function tarjetaHtml(p) {
   const foto = fotoCard(p.photo);
   return `
@@ -580,6 +728,7 @@ function tarjetaHtml(p) {
       </div>
       <div class="body">
         <div class="nom">${escapeHtml(p.name)}</div>
+        ${estrellasTarjetaHtml(p)}
         ${p.notes ? `<div class="desc">${escapeHtml(p.notes)}</div>` : ''}
         <div class="precio-linea">${precioHtml(p)}</div>
         ${avisoQuedanHtml(p)}
@@ -1177,6 +1326,8 @@ function mostrarDetalle(id) {
   pintarListoFicha(id);
   pintarSoloFicha(id, null);
   pintarUmbralFicha(id, null);
+  reiniciarOpiniones();
+  pintarOpiniones(id);
   pintarRelacionados(p);
   const avisoComp = document.getElementById('compartir-aviso');
   if (avisoComp) avisoComp.textContent = '';   // no arrastrar el «copiado» del producto anterior
@@ -1194,6 +1345,9 @@ function cerrarDetalle() { pedirCierreCapa('ficha'); }
 function ocultarDetalle() {
   document.getElementById('modal-detalle').hidden = true;
   productoModal = null;
+  reiniciarOpiniones();
+  const secOp = document.getElementById('modal-opiniones');
+  if (secOp) { secOp.hidden = true; secOp.innerHTML = ''; }
   const secRel = document.getElementById('modal-rel');
   if (secRel) { secRel.hidden = true; document.getElementById('rel-tira').innerHTML = ''; }
   seleccionVar = [];
@@ -2834,6 +2988,12 @@ async function iniciar() {
   });
 
   document.getElementById('modal-cerrar').addEventListener('click', cerrarDetalle);
+  const cajaOp = document.getElementById('modal-opiniones');
+  if (cajaOp) cajaOp.addEventListener('input', (e) => {
+    if (e.target.id !== 'op-texto') return;
+    const c = document.getElementById('op-contador');
+    if (c) c.textContent = e.target.value.length + '/' + window.Opinion.MAX_TEXTO;
+  });
   document.getElementById('modal-fondo').addEventListener('click', cerrarDetalle);
   window.addEventListener('popstate', alCambiarHistorial);
   document.getElementById('compartir-foto').addEventListener('click', compartirFoto);
@@ -2937,6 +3097,7 @@ async function iniciar() {
     const rel = e.target.closest('[data-rel]');
     const verPedido = e.target.closest('[data-ver-pedido]');
     const solo = e.target.closest('[data-solo]');
+    if (alPulsarOpinion(e)) { e.stopPropagation(); return; }
     if (rel) {
       abrirDetalle(rel.dataset.rel);
       document.querySelector('#modal-detalle .modal-caja').scrollTop = 0;
