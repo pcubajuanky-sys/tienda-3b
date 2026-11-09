@@ -1018,6 +1018,8 @@ body.con-barra-movil{padding-bottom:var(--barra-movil-h, 84px)}
 }
 .campo input.invalido,.campo textarea.invalido{border-color:var(--error)}
 .campo-error{color:var(--error);font-size:12px;font-weight:600}
+.campo-aviso{display:block;font-size:13px;line-height:1.35;color:var(--text-2,inherit);opacity:.85;margin:2px 0 4px}
+.campo-aviso[hidden]{display:none}
 .btn-enviar{width:100%;font-size:var(--t-lg);margin-top:var(--e0)}
 .aviso{font-size:var(--t-xs);color:var(--text-3);text-align:center;margin-top:10px}
 

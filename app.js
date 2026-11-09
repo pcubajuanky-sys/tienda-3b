@@ -2423,7 +2423,8 @@ function usarDireccion(dir) {
     sel.value = d.horario;
     libre.hidden = true;
     libre.value = '';
-  } else if (d.horario) {
+  } else if (d.horario && opciones.indexOf('__libre') !== -1) {
+    // Un horario viejo que ya no es una opcion (p. ej. un turno de otro dia) va a «Otro horario».
     sel.value = '__libre';
     libre.hidden = false;
     libre.value = d.horario;
@@ -2654,6 +2655,7 @@ function cerrarCarrito() { pedirCierreCapa('carrito'); }
 function mostrarCarrito() {
   renderCarrito();
   pintarDirecciones();
+  arrancarRelojTurnos();
   elementoAnteriorFoco = document.activeElement;
   const panel = document.getElementById('panel');
   panel.hidden = false;
@@ -2665,6 +2667,7 @@ function mostrarCarrito() {
 function ocultarCarrito() {
   const eraSolo = !!soloEste;
   soloEste = null;   // el modo solo se apaga siempre al cerrar el panel, por la via que sea
+  pararRelojTurnos();
   document.getElementById('panel').hidden = true;
   if (eraSolo) {
     renderCarrito();               // franja fuera y carrito normal (panel y aside)
@@ -2698,6 +2701,79 @@ function horarioElegido() {
   return sel.value;
 }
 
+// Turnos de entrega (2026-11-09). Si el catalogo trae `tienda.entregas`, el desplegable se
+// rellena con los turnos que quedan HOY y los del proximo dia de entrega (regla en entregas.js,
+// gemelo de lib/turnosEntrega.js de Stock+). Sin ese dato (servidor viejo) el desplegable queda
+// con las cuatro frases de siempre. El valor de cada opcion es el texto legible; la clave
+// `2026-11-10|t2` va en data-turno y viaja en la linea `Turno:` del mensaje.
+const MSG_HORARIO_DEF = 'Dinos cuándo puedes recibirlo.';
+const MSG_TURNO_CAIDO = 'Ese turno ya no está disponible, elige otro.';
+let relojTurnos = null;
+
+function entregasCfg() {
+  return (CAT && CAT.tienda && CAT.tienda.entregas && window.Entregas) ? CAT.tienda.entregas : null;
+}
+
+function pintarTurnos() {
+  const cfg = entregasCfg();
+  const sel = document.getElementById('c-horario');
+  if (!cfg || !sel) return;
+  const antes = sel.options[sel.selectedIndex];
+  const claveAntes = antes ? (antes.dataset.turno || '') : '';
+  const eraLibre = sel.value === '__libre';
+  const o = window.Entregas.opciones(cfg, ahoraCorregido());
+  const opcion = (valor, texto, clave) =>
+    '<option value="' + escapeHtml(valor) + '"' + (clave ? ' data-turno="' + escapeHtml(clave) + '"' : '') + '>' + escapeHtml(texto) + '</option>';
+  let html = '<option value="">Elige…</option>';
+  if (o.hoy.length) {
+    html += '<optgroup label="Hoy">' + o.hoy.map((x) => opcion(x.texto, x.texto, x.clave)).join('') + '</optgroup>';
+  }
+  if (o.proximo) {
+    const cap = o.proximo.dia.charAt(0).toUpperCase() + o.proximo.dia.slice(1);
+    html += '<optgroup label="' + escapeHtml(cap + ' ' + o.proximo.fechaCorta) + '">' +
+      o.proximo.turnos.map((x) => opcion(x.texto, x.texto, x.clave)).join('') + '</optgroup>';
+  }
+  if (cfg.otroHorario !== false) html += '<option value="__libre">Otro horario (sujeto a confirmación)…</option>';
+  sel.innerHTML = html;
+  const aviso = document.getElementById('c-horario-aviso');
+  if (aviso) { aviso.textContent = o.aviso || ''; aviso.hidden = !o.aviso; }
+  // Restaurar la eleccion. Un turno que ya paso (o se cerro) se suelta y se avisa.
+  const libre = document.getElementById('c-horario-libre');
+  if (eraLibre && sel.querySelector('option[value="__libre"]')) {
+    sel.value = '__libre';
+  } else if (claveAntes) {
+    const igual = [...sel.options].find((x) => x.dataset.turno === claveAntes);
+    if (igual) sel.value = igual.value;
+    else {
+      sel.value = '';
+      const err = document.getElementById('err-horario');
+      if (err) err.textContent = MSG_TURNO_CAIDO;
+      marcarError('c-horario', 'err-horario', true);
+    }
+  }
+  if (libre) libre.hidden = sel.value !== '__libre';
+}
+
+// Se recalcula mientras el panel del pedido esta abierto: un turno de hoy caduca con la hora.
+function arrancarRelojTurnos() {
+  pararRelojTurnos();
+  if (!entregasCfg()) return;
+  pintarTurnos();
+  relojTurnos = setInterval(pintarTurnos, 60000);
+}
+function pararRelojTurnos() {
+  if (relojTurnos) { clearInterval(relojTurnos); relojTurnos = null; }
+}
+
+// Clave del turno elegido para la linea `Turno:` ('' si el select es el de siempre).
+function turnoElegido() {
+  const sel = document.getElementById('c-horario');
+  if (!sel || !entregasCfg()) return '';
+  if (sel.value === '__libre') return 'otro';
+  const op = sel.options[sel.selectedIndex];
+  return (op && op.dataset.turno) || '';
+}
+
 function engancharHorario() {
   const sel = document.getElementById('c-horario');
   const libre = document.getElementById('c-horario-libre');
@@ -2705,6 +2781,10 @@ function engancharHorario() {
   sel.addEventListener('change', () => {
     libre.hidden = sel.value !== '__libre';
     if (!libre.hidden) libre.focus();
+    // Si se habia mostrado "ese turno ya no esta", al elegir otro el mensaje vuelve al normal.
+    const err = document.getElementById('err-horario');
+    if (err) err.textContent = MSG_HORARIO_DEF;
+    marcarError('c-horario', 'err-horario', false);
   });
 }
 
@@ -2730,6 +2810,7 @@ function enviarPorWhatsApp(ev) {
   marcarError('c-nombre', 'err-nombre', !nombre);
   marcarError('c-tel', 'err-tel', !tel);
   marcarError('c-dir', 'err-dir', !dir);
+  { const err = document.getElementById('err-horario'); if (err && !horario) err.textContent = MSG_HORARIO_DEF; }
   marcarError('c-horario', 'err-horario', !horario);
   if (!nombre || !tel || !dir || !horario) {
     const primerInvalido = !nombre ? 'c-nombre' : (!tel ? 'c-tel' : (!dir ? 'c-dir' : 'c-horario'));
@@ -2791,6 +2872,10 @@ function enviarPorWhatsApp(ev) {
     lineas.push('');
   }
   lineas.push(`Nombre: ${nombre}`, `Tel: ${tel}`, `Dirección: ${dir}`, `Horario: ${horario}`);
+  // 🔴 CONTRATO con lib/pedidoWeb.js de Stock+ (`Turno: 2026-11-10|t2` o `Turno: otro`): solo cuando
+  // el desplegable vino de `tienda.entregas`. Va justo debajo de `Horario:`.
+  const turno = turnoElegido();
+  if (turno) lineas.push(`Turno: ${turno}`);
   if (nota) lineas.push(`Nota: ${nota}`);
   const politica = politicaTexto();
   if (politica) lineas.push('', politica);
