@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-09T18:14:45.136Z",
+  "generado": "2026-11-09T18:59:45.749Z",
   "tasa": 930,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -28,14 +28,6 @@
       "nombre": "Raquel"
     },
     {
-      "code": "YPUD8",
-      "nombre": "Sahel González"
-    },
-    {
-      "code": "CXESR",
-      "nombre": "Yohanset"
-    },
-    {
       "code": "QGZUQ",
       "nombre": "Alejandro",
       "telPublico": "5354572565"
@@ -55,10 +47,6 @@
     {
       "code": "MG6K3",
       "nombre": "Lisbet"
-    },
-    {
-      "code": "FH6W8",
-      "nombre": "Yeleni Pacheco Carvajal"
     },
     {
       "code": "TRJD9",
@@ -139,6 +127,10 @@
     {
       "code": "5CFUK",
       "nombre": "Dalia Sosa Hernández"
+    },
+    {
+      "code": "7KPGR",
+      "nombre": "Diade"
     }
   ],
   "categorias": [
