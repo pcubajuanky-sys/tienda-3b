@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-09T12:46:59.985Z",
+  "generado": "2026-11-09T13:38:44.924Z",
   "tasa": 930,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -3149,10 +3149,10 @@
       "subcat": "",
       "notes": "Kit de afeitado y corte de pelo para hombre de 3 piezas. Set de caja de regalo para el Día de San Valentín. Recargable por USB. Regalo para novio, regalo del Día del Padre, regalo de cumpleaños, regalo de festividades",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791138172/productos/q6cquakboa0pgukho4am.jpg",
-      "precioUSD": 30,
-      "precioCUP": 27900,
+      "precioUSD": 28.5,
+      "precioCUP": 26505,
       "moneda": "usd",
-      "enOferta": false,
+      "enOferta": true,
       "destacado": false,
       "max": 7,
       "envio": {
@@ -3160,7 +3160,9 @@
         "largo": "🛵 MENSAJERÍA GRATIS"
       },
       "envioGratis": true,
-      "creado": 1791138282149
+      "creado": 1791138282149,
+      "precioNormalUSD": 30,
+      "precioNormalCUP": 27900
     },
     {
       "id": "p_1782259495565",
@@ -8311,5 +8313,9 @@
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787764696/productos/k2qwog2kxffnq9yeby9m.jpg",
       "cat": "Electrodomésticos"
     }
-  ]
+  ],
+  "ofertaDia": {
+    "codigo": "BGXQ",
+    "hasta": 1794286800000
+  }
 }
