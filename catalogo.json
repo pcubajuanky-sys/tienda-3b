@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-09T01:09:47.816Z",
+  "generado": "2026-11-09T01:27:13.347Z",
   "tasa": 930,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -6746,6 +6746,26 @@
       "creado": 1792340423078
     },
     {
+      "id": "p_1782259924259",
+      "codigo": "5MDP",
+      "name": "Sérum 5en1",
+      "cat": "Cuidado Personal",
+      "subcat": "",
+      "notes": "Suero Facial 5 en 1 con Ácido Hialurónico, Colágeno, Niacinamida, Vitaminas C y E. Minimiza Poros, Control de Sebo, Hidratante. Adecuado para Todo Tipo de Piel, Hipoaergénico.",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782259706/productos/wewused76wjxguosoz5l.jpg",
+      "precioUSD": 3,
+      "precioCUP": 2790,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1782259924259
+    },
+    {
       "id": "p_1786917303962",
       "codigo": "M4CQ",
       "name": "Set de uñas",
@@ -8180,12 +8200,6 @@
       "name": "Sandalias trenzadas🖤",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785533514/productos/hgfzvplmba8pq6yatybu.jpg",
       "cat": "Calzado"
-    },
-    {
-      "codigo": "5MDP",
-      "name": "Sérum 5en1",
-      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782259706/productos/wewused76wjxguosoz5l.jpg",
-      "cat": "Cuidado Personal"
     },
     {
       "codigo": "QW78",
