@@ -54,3 +54,14 @@ function paridad(cfg) {
 test('paridad con lib/turnosEntrega.js: defaults', { skip: !LIB_OK }, () => paridad(undefined));
 test('paridad: sabado y domingo cerrados', { skip: !LIB_OK }, () => paridad({ diasSinEntrega: [0, 6] }));
 test('paridad: offset -300', { skip: !LIB_OK }, () => paridad({ utcOffsetMin: -300, anticipacionMin: 30 }));
+
+test('esTextoTurno reconoce los textos de turno generados y no los libres', () => {
+  assert.ok(E.esTextoTurno('Hoy lunes 9/11 · 9–12 am'));
+  assert.ok(E.esTextoTurno('Mañana martes 10/11 · 1–4 pm'));
+  assert.ok(E.esTextoTurno('Miércoles 11/11 · 4–7 pm'));
+  assert.ok(!E.esTextoTurno('Por la tarde después de las 5'));
+  assert.ok(!E.esTextoTurno('Hoy me viene bien'));
+  assert.ok(!E.esTextoTurno(''));
+  const o = E.opciones(undefined, Date.UTC(2026, 10, 9, 12, 0));
+  assert.ok(o.hoy.concat(o.proximo.turnos).every((x) => E.esTextoTurno(x.texto)));
+});

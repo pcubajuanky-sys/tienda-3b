@@ -2423,6 +2423,11 @@ function usarDireccion(dir) {
     sel.value = d.horario;
     libre.hidden = true;
     libre.value = '';
+  } else if (d.horario && window.Entregas && window.Entregas.esTextoTurno(d.horario)) {
+    // Un turno generado que ya caduco: NO va a «Otro horario»; se deja en «Elige…».
+    sel.value = '';
+    libre.hidden = true;
+    libre.value = '';
   } else if (d.horario && opciones.indexOf('__libre') !== -1) {
     // Un horario viejo que ya no es una opcion (p. ej. un turno de otro dia) va a «Otro horario».
     sel.value = '__libre';
@@ -2734,6 +2739,10 @@ function pintarTurnos() {
       o.proximo.turnos.map((x) => opcion(x.texto, x.texto, x.clave)).join('') + '</optgroup>';
   }
   if (cfg.otroHorario !== false) html += '<option value="__libre">Otro horario (sujeto a confirmación)…</option>';
+  // Sin cambios (el reloj repinta cada 60 s) no se toca el DOM: no se pierde el foco ni la eleccion.
+  const firma = html + '|' + (o.aviso || '');
+  if (sel.dataset.firma === firma) return;
+  sel.dataset.firma = firma;
   sel.innerHTML = html;
   const aviso = document.getElementById('c-horario-aviso');
   if (aviso) { aviso.textContent = o.aviso || ''; aviso.hidden = !o.aviso; }

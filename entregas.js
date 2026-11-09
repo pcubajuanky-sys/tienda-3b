@@ -110,5 +110,10 @@
     return { hoy: hoy, proximo: proximo, aviso: aviso };
   }
 
-  window.Entregas = { DEFAULTS: DEFAULTS, config: config, etiquetaTurno: etiquetaTurno, ahoraCuba: ahoraCuba, opciones: opciones };
+  // ¿Es un texto de turno generado por opciones() ('Hoy lunes 9/11 · 9–12 am', 'Mañana martes 10/11 · …',
+  // 'Miércoles 11/11 · …')? Sirve para no copiar un turno caducado guardado a «Otro horario».
+  var RE_TURNO = /^(?:(?:Hoy|Mañana)\s+\S+|(?:Domingo|Lunes|Martes|Miércoles|Jueves|Viernes|Sábado))\s+\d{1,2}\/\d{1,2}\s·\s/;
+  function esTextoTurno(s) { return RE_TURNO.test(String(s || '')); }
+
+  window.Entregas = { DEFAULTS: DEFAULTS, config: config, etiquetaTurno: etiquetaTurno, ahoraCuba: ahoraCuba, opciones: opciones, esTextoTurno: esTextoTurno };
 })();
