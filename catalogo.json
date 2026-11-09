@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-09T13:39:01.818Z",
+  "generado": "2026-11-09T18:14:45.136Z",
   "tasa": 930,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -2237,7 +2237,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 6,
+      "max": 5,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -2424,11 +2424,11 @@
         ]
       },
       "maxOpciones": {
-        "TRANSPARENTE": 2,
-        "GRIS": 2
+        "TRANSPARENTE": 2
       },
       "esperaOpciones": [
-        "NEGRO"
+        "NEGRO",
+        "GRIS"
       ],
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
