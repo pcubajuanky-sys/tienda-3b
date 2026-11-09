@@ -72,6 +72,8 @@
   function fechaCorta(fecha) { var p = fecha.split('-'); return Number(p[2]) + '/' + Number(p[1]); }
   function cap(s) { return s.charAt(0).toUpperCase() + s.slice(1); }
 
+  var SUJETO_TXT = ' (sujeto a disponibilidad del mensajero)';
+
   function opciones(cfgEntregas, ahoraMs) {
     var c = config(cfgEntregas);
     var ahora = ahoraCuba(ahoraMs, c.utcOffsetMin);
@@ -79,11 +81,12 @@
     function cerrado(dow) { return c.diasSinEntrega.indexOf(dow) !== -1; }
     var hoyCerrado = cerrado(ahora.dow);
     var hoy = hoyCerrado ? [] : turnos
-      .filter(function (t) { return aMin(t.desde) - c.anticipacionMin >= ahora.minutos; })
+      .filter(function (t) { return ahora.minutos < aMin(t.hasta); })
       .map(function (t) {
+        var sujeto = ahora.minutos > aMin(t.hasta) - c.anticipacionMin;
         return {
-          clave: ahora.fecha + '|' + t.id, fecha: ahora.fecha, turnoId: t.id,
-          texto: 'Hoy ' + DIAS[ahora.dow] + ' ' + fechaCorta(ahora.fecha) + ' · ' + etiquetaTurno(t),
+          clave: ahora.fecha + '|' + t.id, fecha: ahora.fecha, turnoId: t.id, sujeto: sujeto,
+          texto: 'Hoy ' + DIAS[ahora.dow] + ' ' + fechaCorta(ahora.fecha) + ' · ' + etiquetaTurno(t) + (sujeto ? SUJETO_TXT : ''),
         };
       });
 
@@ -104,7 +107,7 @@
       break;
     }
     var aviso = '';
-    if (!hoy.length && proximo && (hoyCerrado || saltoCerrado) && c.avisoSinEntrega) {
+    if (!hoy.some(function (x) { return !x.sujeto; }) && proximo && (hoyCerrado || saltoCerrado) && c.avisoSinEntrega) {
       aviso = c.avisoSinEntrega.split('{dia}').join(proximo.dia).split('{hora}').join(horaCorta(turnos[0].desde));
     }
     return { hoy: hoy, proximo: proximo, aviso: aviso };
@@ -112,7 +115,7 @@
 
   // ¿Es un texto de turno generado por opciones() ('Hoy lunes 9/11 · 9–12 am', 'Mañana martes 10/11 · …',
   // 'Miércoles 11/11 · …')? Sirve para no copiar un turno caducado guardado a «Otro horario».
-  var RE_TURNO = /^(?:(?:Hoy|Mañana)\s+\S+|(?:Domingo|Lunes|Martes|Miércoles|Jueves|Viernes|Sábado))\s+\d{1,2}\/\d{1,2}\s·\s/;
+  var RE_TURNO = /^(?:(?:Hoy|Mañana)\s+\S+|(?:Domingo|Lunes|Martes|Miércoles|Jueves|Viernes|Sábado))\s+\d{1,2}\/\d{1,2}\s·\s/;  // admite la coletilla «(sujeto a disponibilidad…)» al final
   function esTextoTurno(s) { return RE_TURNO.test(String(s || '')); }
 
   window.Entregas = { DEFAULTS: DEFAULTS, config: config, etiquetaTurno: etiquetaTurno, ahoraCuba: ahoraCuba, opciones: opciones, esTextoTurno: esTextoTurno };
