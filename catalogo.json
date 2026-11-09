@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-09T23:06:01.043Z",
+  "generado": "2026-11-09T23:46:01.158Z",
   "tasa": 930,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -1939,13 +1939,13 @@
         "opciones": [
           "C",
           "D",
-          "F",
-          "G"
+          "F"
         ],
         "agotadas": [
           "A",
           "B",
-          "E"
+          "E",
+          "G"
         ]
       },
       "maxOpciones": {
@@ -1953,9 +1953,6 @@
         "D": 1,
         "F": 2
       },
-      "esperaOpciones": [
-        "G"
-      ],
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
@@ -2444,7 +2441,7 @@
       },
       "maxOpciones": {
         "NEGRO": 1,
-        "TRANSPARENTE": 2
+        "TRANSPARENTE": 4
       },
       "esperaOpciones": [
         "GRIS"
@@ -5849,18 +5846,17 @@
           "Color"
         ],
         "opciones": [
-          "NEGRO",
           "BLANCO",
           "ROSA"
+        ],
+        "agotadas": [
+          "NEGRO"
         ]
       },
       "maxOpciones": {
         "BLANCO": 2,
         "ROSA": 1
       },
-      "esperaOpciones": [
-        "NEGRO"
-      ],
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -6594,7 +6590,9 @@
           "HELADO",
           "CONEJO",
           "CACHORRO",
-          "POLLITO",
+          "POLLITO"
+        ],
+        "agotadas": [
           "ASTRONAUTA"
         ]
       },
@@ -6604,9 +6602,6 @@
         "CACHORRO": 1,
         "POLLITO": 1
       },
-      "esperaOpciones": [
-        "ASTRONAUTA"
-      ],
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
