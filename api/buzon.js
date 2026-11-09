@@ -19,6 +19,7 @@ const MARCAS = {
   pedido: 'Pedido desde la web',          // lib/comisionRef.esPedidoWeb
   aviso: '🔔 *AVÍSAME CUANDO VUELVA*',    // aviso.js
   opinion: '⭐ *MI OPINIÓN*',              // opinion.js
+  baja: '📉 *AVÍSAME SI BAJA DE PRECIO*',  // baja.js
 };
 const ESPERA_MS = 8000;
 

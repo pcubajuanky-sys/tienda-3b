@@ -722,6 +722,9 @@ main{padding-top:20px}
 .ficha-solo-btn{display:flex;width:100%;min-height:44px;justify-content:center;align-items:center;gap:6px}
 .panel-solo{margin:0 0 var(--e2);padding:var(--e2);font-size:var(--t-xs);font-weight:600;line-height:1.35;
   color:var(--text);background:rgba(107,114,128,.10);border-radius:var(--radio-md,8px)}
+/* «📉 Avísame si baja de precio» (2026-11-09): secundario discreto, 44 px; colores de .btn-suave (texto sobre --surface). */
+.ficha-baja{margin-top:var(--e1)}
+.ficha-baja-btn{display:flex;width:100%;min-height:44px;justify-content:center;align-items:center;gap:6px}
 .ficha-preguntar{margin-top:var(--e1)}
 .ficha-preguntar-btn{display:flex;width:100%;justify-content:center;align-items:center;gap:6px}
 .espera-ficha{font-size:13px;color:var(--text-2);background:rgba(107,114,128,.08);

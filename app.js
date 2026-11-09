@@ -739,6 +739,44 @@ function engancharBuzonAvisos() {
   });
 }
 
+// 📉 «Avísame si baja de precio»: igual que avisoConBuzon, SIEMPRE al número de la casa (CAT.whatsapp),
+// nunca a destinoWhatsApp() (contrato con lib/avisoBaja.js de Stock+).
+function bajaConBuzon(item) {
+  const id = window.Buzon.nuevoId();
+  const url = window.Baja.enlace(CAT, item, id);
+  return url ? { url, id, attrs: ' data-buzon="baja" data-buzon-id="' + id + '"' } : null;
+}
+
+// Mismo escuchador delegado que los avisos, para el tipo 'baja' (el enlace sigue su camino).
+function engancharBuzonBaja() {
+  document.addEventListener('click', (e) => {
+    try {
+      const a = e.target && e.target.closest ? e.target.closest('a[data-buzon="baja"]') : null;
+      if (!a) return;
+      const id = a.getAttribute('data-buzon-id');
+      const texto = new URL(a.href, location.href).searchParams.get('text');
+      if (id && texto) window.Buzon.enviar('baja', id, texto);
+    } catch (err) { /* el buzón nunca estorba al enlace de WhatsApp */ }
+  });
+}
+
+// Botón discreto de la ficha. Solo con producto a la venta y SIN oferta (si ya está rebajado no
+// tiene sentido) y sin elegir una combinación agotada (ahí ya va «Avísame cuando haya»).
+function pintarBajaFicha(id, clave) {
+  const caja = document.getElementById('ficha-baja');
+  if (!caja) return;
+  const p = productoDe(id);
+  const ok = !!p && window.Baja.puede(p, {
+    cerrada: cerrada(),
+    enEspera: Espera.enEspera(p, clave || null) || !!(clave && window.Aviso.esAgotada(p, clave))
+  });
+  const b = ok ? bajaConBuzon(p) : null;
+  if (!b) { caja.hidden = true; caja.innerHTML = ''; return; }
+  caja.hidden = false;
+  caja.innerHTML = '<a class="btn btn-suave btn-secundario ficha-baja-btn" href="' + escapeHtml(b.url) + '"' +
+    b.attrs + ' target="_blank" rel="noopener">' + escapeHtml(window.Baja.TEXTO_BOTON) + '</a>';
+}
+
 function tarjetaHtml(p) {
   const foto = fotoCard(p.photo);
   const nuevo = window.Novedades.esNuevo(p, Date.now());
@@ -1235,6 +1273,7 @@ function refrescarAcciones(id) {
     pintarPreguntarProducto(id, claveActual);
     pintarListoFicha(id);
     pintarSoloFicha(id, claveActual);
+    pintarBajaFicha(id, claveActual);
     pintarUmbralFicha(id, claveActual);
     pintarChipsVariante(id);
   }
@@ -1435,6 +1474,7 @@ function mostrarDetalle(id) {
   pintarPreguntarProducto(id, null);
   pintarListoFicha(id);
   pintarSoloFicha(id, null);
+  pintarBajaFicha(id, null);
   pintarUmbralFicha(id, null);
   reiniciarOpiniones();
   pintarOpiniones(id);
@@ -3096,6 +3136,7 @@ async function iniciar() {
   document.getElementById('form-pedido').addEventListener('submit', enviarPorWhatsApp);
   engancharHorario();
   engancharBuzonAvisos();
+  engancharBuzonBaja();
   const tiraDirs = document.getElementById('dir-guardadas-tira');
   if (tiraDirs) tiraDirs.addEventListener('click', (e) => {
     const chip = e.target.closest('.dir-chip');
