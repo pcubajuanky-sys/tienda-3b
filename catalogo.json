@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-09T19:07:04.696Z",
+  "generado": "2026-11-09T21:31:50.754Z",
   "tasa": 930,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -1311,6 +1311,7 @@
         "MANGO": 8,
         "LIMÓN": 9,
         "VAINILLA": 7,
+        "ALOE": 9,
         "FRAMBUESA": 5,
         "CEREZA": 8,
         "CAFÉ": 8,
@@ -2718,6 +2719,32 @@
       },
       "envioGratis": true,
       "creado": 1785357535523
+    },
+    {
+      "id": "p_1794251657792",
+      "codigo": "CLQM",
+      "name": "GORGIQUE – Crema Facial de Día y Noche con Colágeno y Retinol",
+      "cat": "Cuidado Personal",
+      "subcat": "",
+      "notes": "✨ ¡Cuida tu piel de día y de noche con una sola crema! ✨\n\nDescubre la crema facial GORGIQUE con colágeno y retinol, una fórmula hidratante enriquecida con ácido hialurónico, vitamina E y péptidos, diseñada para complementar tu rutina diaria de cuidado facial.\n\nBeneficios:\n\n💧 Ayuda a mantener la piel hidratada y suave.\n\n✨ Contribuye a mejorar la apariencia y textura de la piel.\n\n🌸 Ayuda a mantener la piel con una apariencia más fresca y luminosa.\n\n💎 Enriquecida con colágeno, retinol, ácido hialurónico y vitamina E.\n\n🧴 Textura ligera, de rápida absorción y sin sensación grasosa.\n\n❤️ Ideal para incorporar tanto en tu rutina de día como de noche.\n\nContenido: 50 ml.\n\nDale a tu rostro el cuidado que merece y disfruta de una piel suave, hidratada y radiante todos los días.\n\n¡Consiente tu piel y haz del cuidado facial parte de tu rutina!",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1794251495/productos/npw7pmnhkdf0vnwxz8di.jpg",
+      "precioUSD": 10,
+      "precioCUP": 9300,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794251498/productos/gqcunoe073bcz8x9ws4x.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794251502/productos/b9wtluvp67g1t188zrpv.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794251506/productos/jtxk11kifyba0pjd4f21.jpg"
+      ],
+      "max": 2,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1794251657792
     },
     {
       "id": "p_1794099024902",
@@ -6551,9 +6578,11 @@
         "HELADO": 1,
         "CONEJO": 1,
         "CACHORRO": 1,
-        "POLLITO": 1,
-        "ASTRONAUTA": 1
+        "POLLITO": 1
       },
+      "esperaOpciones": [
+        "ASTRONAUTA"
+      ],
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
