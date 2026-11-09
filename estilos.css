@@ -1134,6 +1134,10 @@ button.footer-link{background:none;border:none;font-family:inherit;cursor:pointe
 }
 .mv-tira .card{flex:0 0 40%;scroll-snap-align:start;max-width:230px}
 @media (min-width:700px){ .mv-tira .card{flex-basis:210px} }
+.card-nuevo{
+  background:var(--brand-soft);color:var(--brand);border:1px solid var(--brand);
+  font-size:11px;font-weight:800;letter-spacing:.03em;padding:var(--e0) var(--e1);border-radius:var(--radio-pill);
+}
 .card-mv{
   background:var(--negro);color:#FFFFFF;
   font-size:11px;font-weight:800;letter-spacing:.03em;padding:var(--e0) var(--e1);border-radius:var(--radio-pill);

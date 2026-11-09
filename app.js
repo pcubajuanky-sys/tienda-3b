@@ -741,14 +741,16 @@ function engancharBuzonAvisos() {
 
 function tarjetaHtml(p) {
   const foto = fotoCard(p.photo);
+  const nuevo = window.Novedades.esNuevo(p, Date.now());
   return `
     <div class="card" data-id="${p.id}" role="button" tabindex="0" aria-label="Ver detalle de ${escapeHtml(p.name)}">
       <div class="card-foto">
         <img src="${foto.src}" ${foto.srcset ? `srcset="${foto.srcset}" sizes="(max-width:480px) 45vw, 220px"` : ''}
              alt="${escapeHtml(p.name)}" loading="lazy" decoding="async" onerror="imgFallback(this)">
         ${botonFavHtml(p.id)}
-        ${p.enOferta || p.destacado ? `<div class="card-sellos">
+        ${p.enOferta || p.destacado || nuevo ? `<div class="card-sellos">
           ${window.Descuento.sello(p) ? `<span class="card-oferta">${window.Descuento.sello(p)}</span>` : ''}
+          ${nuevo ? `<span class="card-nuevo">NUEVO</span>` : ''}
           ${p.destacado ? `<span class="card-mv">⭐ MÁS VENDIDO</span>` : ''}
         </div>` : ''}
       </div>
@@ -925,6 +927,26 @@ function renderRecientes() {
     '</button>').join('') : '';
 }
 
+// «Recién llegado». Gemela de renderRecientes: marcado compacto, SIN botones de cantidad
+// (la tarjeta completa duplicaría el id acc-<id> de la parrilla).
+function renderNuevos() {
+  const sec = document.getElementById('nuevos');
+  const tira = document.getElementById('nuevos-tira');
+  if (!sec || !tira || !CAT) return;
+  const buscando = busqueda.trim() !== '' || filtroCat !== '' || filtroOferta || soloFavoritos || rangoPrecio !== '';
+  const prods = window.Novedades.lista(window.Orden.filtrar(CAT.items || [], soloEnvioGratis), Date.now());
+  const mostrar = !buscando && prods.length >= 2;
+  sec.hidden = !mostrar;
+  tira.innerHTML = mostrar ? prods.map((x) =>
+    '<button type="button" class="rel-card completar-card" data-nuevo="' + escapeHtml(x.id) + '">' +
+    '<span class="rel-foto"><img src="' + fotoMosaico(x.photo) + '" alt="" loading="lazy"></span>' +
+    '<span class="rel-nom">' + escapeHtml(x.name) + '</span>' +
+    '<span class="rel-precio">' + fmt(x.precioCUP) + ' CUP</span>' +
+    '</button>').join('') : '';
+  const ver = document.getElementById('nuevos-ver-todo');
+  if (ver) ver.hidden = !mostrar || !window.Orden.opcionesUtiles(CAT.items || []).some((o) => o.id === 'nuevo');
+}
+
 // ── Sugerencias del buscador ──
 let sugActiva = -1;
 
@@ -1021,6 +1043,7 @@ function renderGrid() {
   }
   document.getElementById('grid').innerHTML = tarjetas.join('');
   renderMasVendidos();
+  renderNuevos();
   renderRecientes();
   renderChipFav();
 }
@@ -3107,6 +3130,20 @@ async function iniciar() {
   if (tiraRec) tiraRec.addEventListener('click', (e) => {
     const b = e.target.closest('[data-reciente]');
     if (b) abrirDetalle(b.dataset.reciente);
+  });
+  const tiraNuevos = document.getElementById('nuevos-tira');
+  if (tiraNuevos) tiraNuevos.addEventListener('click', (e) => {
+    const b = e.target.closest('[data-nuevo]');
+    if (b) abrirDetalle(b.dataset.nuevo);
+  });
+  const verNuevos = document.getElementById('nuevos-ver-todo');
+  if (verNuevos) verNuevos.addEventListener('click', () => {
+    ordenSel = 'nuevo';
+    const sel = document.getElementById('orden-sel');
+    if (sel) sel.value = 'nuevo';
+    renderGrid();
+    const cab = document.querySelector('.grid-head');
+    if (cab) cab.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
   const fichaFav = document.getElementById('ficha-fav');
   if (fichaFav) fichaFav.addEventListener('click', () => { if (productoModal) alternarFav(productoModal); });
