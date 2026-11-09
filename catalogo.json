@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-09T21:31:50.754Z",
+  "generado": "2026-11-09T23:06:01.043Z",
   "tasa": 930,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -276,6 +276,32 @@
       "activo": false,
       "titulo": "",
       "texto": ""
+    },
+    "entregas": {
+      "turnos": [
+        {
+          "id": "t1",
+          "desde": "09:00",
+          "hasta": "12:00"
+        },
+        {
+          "id": "t2",
+          "desde": "13:00",
+          "hasta": "16:00"
+        },
+        {
+          "id": "t3",
+          "desde": "16:00",
+          "hasta": "19:00"
+        }
+      ],
+      "anticipacionMin": 60,
+      "diasSinEntrega": [
+        0
+      ],
+      "utcOffsetMin": -240,
+      "avisoSinEntrega": "Los domingos no hacemos entregas: empezamos el {dia} a las {hora}.",
+      "otroHorario": true
     }
   },
   "encargos": {
@@ -2417,10 +2443,10 @@
         ]
       },
       "maxOpciones": {
+        "NEGRO": 1,
         "TRANSPARENTE": 2
       },
       "esperaOpciones": [
-        "NEGRO",
         "GRIS"
       ],
       "envio": {
@@ -6086,13 +6112,11 @@
         ]
       },
       "maxOpciones": {
+        "NEGRO CON ROJO / M": 1,
         "NEGRO CON ROJO / L": 2,
         "NEGRO CON VERDE / M": 5,
         "NEGRO CON VERDE / L": 2
       },
-      "esperaOpciones": [
-        "NEGRO CON ROJO / M"
-      ],
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
