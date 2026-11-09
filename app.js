@@ -742,6 +742,7 @@ function engancharBuzonAvisos() {
 function tarjetaHtml(p) {
   const foto = fotoCard(p.photo);
   const nuevo = window.Novedades.esNuevo(p, Date.now());
+  const hoy = esOfertaDiaHoy(p);
   return `
     <div class="card" data-id="${p.id}" role="button" tabindex="0" aria-label="Ver detalle de ${escapeHtml(p.name)}">
       <div class="card-foto">
@@ -749,6 +750,7 @@ function tarjetaHtml(p) {
              alt="${escapeHtml(p.name)}" loading="lazy" decoding="async" onerror="imgFallback(this)">
         ${botonFavHtml(p.id)}
         ${p.enOferta || p.destacado || nuevo ? `<div class="card-sellos">
+          ${hoy ? `<span class="card-oferta">🔥 HOY</span>` : ''}
           ${window.Descuento.sello(p) ? `<span class="card-oferta">${window.Descuento.sello(p)}</span>` : ''}
           ${nuevo ? `<span class="card-nuevo">NUEVO</span>` : ''}
           ${p.destacado ? `<span class="card-mv">⭐ MÁS VENDIDO</span>` : ''}
@@ -927,6 +929,64 @@ function renderRecientes() {
     '</button>').join('') : '';
 }
 
+// ── 🔥 Oferta del día (ofertadia.js) ──
+// Corrige la hora del telefono con la cabecera Date de catalogo.json (DESFASE_RELOJ).
+// Marcado SIN botones de cantidad: la tarjeta completa duplicaria el id acc-<id> de la
+// parrilla. Todo con addEventListener (el CSP bloquea los manejadores en linea).
+let DESFASE_RELOJ = 0;
+let ofertaDiaActual = null;      // {item, hasta} mientras hay una oferta viva en pantalla
+let relojOfertaDia = null;       // id del setInterval de 1 s
+function ahoraCorregido() { return Date.now() + DESFASE_RELOJ; }
+
+function esOfertaDiaHoy(p) {
+  return !!(p && window.OfertaDia && CAT && window.OfertaDia.vigente({ ofertaDia: CAT.ofertaDia, items: [p] }, ahoraCorregido()));
+}
+
+function pararRelojOfertaDia() {
+  if (relojOfertaDia) { clearInterval(relojOfertaDia); relojOfertaDia = null; }
+}
+
+function tickOfertaDia() {
+  const el = document.getElementById('od-reloj');
+  if (!el || !ofertaDiaActual) { pararRelojOfertaDia(); return; }
+  const r = window.OfertaDia.restante(ofertaDiaActual.hasta, ahoraCorregido());
+  if (!r.terminada) { el.textContent = 'Termina en ' + window.OfertaDia.formato(r); return; }
+  // Llego a cero: el bloque lo dice y el catalogo se vuelve a pedir (la publicacion de la
+  // oferta nueva tarda ~1 min, por eso dos reintentos). Si el catalogo aun trae la vieja,
+  // vigente() la descarta porque hasta ya paso: el reloj no se reinicia.
+  pararRelojOfertaDia();
+  el.textContent = 'Esta oferta terminó. Mañana hay otra 🔥';
+  const ver = document.getElementById('od-ver');
+  if (ver) ver.hidden = true;
+  ofertaDiaActual = null;
+  [75000, 180000].forEach((ms) => setTimeout(() => { ultimaRevalidacion = 0; revalidarCierre(); }, ms));
+}
+
+function renderOfertaDia() {
+  const sec = document.getElementById('oferta-dia');
+  if (!sec || !CAT || !window.OfertaDia) return;
+  const buscando = busqueda.trim() !== '' || filtroCat !== '' || filtroOferta || soloFavoritos || rangoPrecio !== '';
+  const v = buscando ? null : window.OfertaDia.vigente(CAT, ahoraCorregido());
+  pararRelojOfertaDia();
+  ofertaDiaActual = v;
+  sec.hidden = !v;
+  if (!v) return;
+  const p = v.item;
+  const foto = fotoCard(p.photo);
+  const img = document.getElementById('od-foto');
+  img.src = foto.src;
+  if (foto.srcset) img.srcset = foto.srcset; else img.removeAttribute('srcset');
+  img.alt = p.name;
+  document.getElementById('od-nom').textContent = p.name;
+  document.getElementById('od-precio').innerHTML = precioHtml(p, false);
+  document.getElementById('od-sello').textContent = window.Descuento.sello(p) || '';
+  const ver = document.getElementById('od-ver');
+  ver.hidden = false;
+  ver.dataset.id = p.id;
+  tickOfertaDia();
+  if (ofertaDiaActual && !document.hidden) relojOfertaDia = setInterval(tickOfertaDia, 1000);
+}
+
 // «Recién llegado». Gemela de renderRecientes: marcado compacto, SIN botones de cantidad
 // (la tarjeta completa duplicaría el id acc-<id> de la parrilla).
 function renderNuevos() {
@@ -1043,6 +1103,7 @@ function renderGrid() {
   }
   document.getElementById('grid').innerHTML = tarjetas.join('');
   renderMasVendidos();
+  renderOfertaDia();
   renderNuevos();
   renderRecientes();
   renderChipFav();
@@ -2890,6 +2951,7 @@ async function cargarCatalogo() {
   try {
     const r = await fetch('catalogo.json?v=' + Date.now());   // sin caché: el precio tiene que ser el de ahora
     if (!r.ok) throw new Error('HTTP ' + r.status);
+    if (window.OfertaDia) DESFASE_RELOJ = window.OfertaDia.desfase(r.headers.get('Date'), Date.now());
     CAT = await r.json();
     // 🔴 EL UNICO FILTRO POR NEGOCIO DE TODA LA TIENDA. Aqui el catalogo pasa a ser
     // el de ESTA pagina: sus items, su marca, su WhatsApp. Todo lo que viene
@@ -2966,13 +3028,16 @@ async function revalidarCierre() {
   try {
     const r = await fetch('catalogo.json?v=' + Date.now());
     if (!r.ok) return;
+    if (window.OfertaDia) DESFASE_RELOJ = window.OfertaDia.desfase(r.headers.get('Date'), Date.now());
     fresco = await r.json();
     // Mismo filtro que en cargarCatalogo: en la pagina del socio `cierre` queda a null,
     // y comparar contra el cierre de 3B sin filtrar recargaria el catalogo cada minuto.
     if (window.Negocio) fresco = window.Negocio.aplicar(fresco, NEGOCIO);
   } catch (err) { return; }                                // sin red: se queda como estaba
   const ahora = !!(fresco && fresco.tienda && fresco.tienda.cierre && fresco.tienda.cierre.activo);
-  if (ahora === cerrada()) return;
+  // La oferta del dia cambio (termino la de ayer, entro la de hoy): tambien se recarga.
+  const ofertaCambio = JSON.stringify((fresco && fresco.ofertaDia) || null) !== JSON.stringify((CAT && CAT.ofertaDia) || null);
+  if (ahora === cerrada() && !ofertaCambio) return;
   await cargarCatalogo();
 }
 
@@ -3130,6 +3195,15 @@ async function iniciar() {
   if (tiraRec) tiraRec.addEventListener('click', (e) => {
     const b = e.target.closest('[data-reciente]');
     if (b) abrirDetalle(b.dataset.reciente);
+  });
+  const odVer = document.getElementById('od-ver');
+  if (odVer) odVer.addEventListener('click', () => { if (odVer.dataset.id) abrirDetalle(odVer.dataset.id); });
+  const odFoto = document.getElementById('od-foto');
+  if (odFoto) odFoto.addEventListener('click', () => { if (ofertaDiaActual) abrirDetalle(ofertaDiaActual.item.id); });
+  // El reloj de 1 s se para con la pestaña oculta y se reanuda (ya corregido) al volver.
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) { pararRelojOfertaDia(); return; }
+    if (ofertaDiaActual) { tickOfertaDia(); if (ofertaDiaActual && !relojOfertaDia) relojOfertaDia = setInterval(tickOfertaDia, 1000); }
   });
   const tiraNuevos = document.getElementById('nuevos-tira');
   if (tiraNuevos) tiraNuevos.addEventListener('click', (e) => {

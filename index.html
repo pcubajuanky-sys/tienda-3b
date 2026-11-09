@@ -259,6 +259,18 @@
   </section>
 
   <main class="wrap" id="catalogo">
+    <section id="oferta-dia" class="od" hidden aria-labelledby="od-titulo">
+      <div class="od-card">
+        <div class="od-foto"><img id="od-foto" src="" alt="" decoding="async"><span class="od-sello" id="od-sello"></span></div>
+        <div class="od-info">
+          <h2 id="od-titulo" class="od-etiqueta">🔥 OFERTA DEL DÍA</h2>
+          <div class="od-nom" id="od-nom"></div>
+          <div class="od-precio" id="od-precio"></div>
+          <p class="od-reloj" id="od-reloj" role="timer"></p>
+          <button type="button" class="btn btn-primario" id="od-ver">Ver la oferta</button>
+        </div>
+      </div>
+    </section>
     <section id="mas-vendidos" class="mv" hidden aria-labelledby="mv-titulo">
       <h2 id="mv-titulo" class="mv-titulo">Los más vendidos</h2>
       <div class="mv-tira" id="mv-tira"></div>
@@ -589,6 +601,7 @@
 <script src="mundos.js"></script>
 <script src="orden.js"></script>
 <script src="novedades.js"></script>
+<script src="ofertadia.js"></script>
 <script src="buscar.js"></script>
 <script src="favoritos.js"></script>
 <script src="preciosGestor.js"></script>

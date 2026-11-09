@@ -1134,6 +1134,33 @@ button.footer-link{background:none;border:none;font-family:inherit;cursor:pointe
 }
 .mv-tira .card{flex:0 0 40%;scroll-snap-align:start;max-width:230px}
 @media (min-width:700px){ .mv-tira .card{flex-basis:210px} }
+/* 🔥 Oferta del dia (ofertadia.js). Tokens existentes, sin colores nuevos: etiqueta en
+   --oferta sobre --surface (texto), sello en el par --oferta/--oferta-ink, resto en
+   --text/--text-2. Contrastes medidos y fijados en test/ofertaDiaCableado.test.js.
+   Sin animacion ni parpadeo: solo cambian los numeros (prefers-reduced-motion incluido). */
+.od{margin:0 0 18px}
+.od-card{
+  display:flex;flex-direction:column;overflow:hidden;
+  background:var(--surface);border:1px solid var(--border);border-radius:var(--radio-card);box-shadow:var(--sombra-1);
+}
+.od-foto{position:relative;aspect-ratio:4/3;background:var(--surface-2)}
+.od-foto img{display:block;width:100%;height:100%;object-fit:cover;cursor:pointer}
+.od-sello{
+  position:absolute;top:8px;left:8px;
+  background:var(--oferta);color:var(--oferta-ink);
+  font-size:13px;font-weight:800;letter-spacing:.03em;padding:var(--e0) var(--e2);border-radius:var(--radio-pill);
+}
+.od-sello:empty{display:none}
+.od-info{padding:var(--e3);display:flex;flex-direction:column;gap:var(--e1);align-items:flex-start}
+.od-etiqueta{margin:0;font-size:var(--t-sm);font-weight:800;letter-spacing:.04em;color:var(--oferta)}
+.od-nom{font-size:clamp(17px,2.6vw,21px);font-weight:700;line-height:1.3;color:var(--text)}
+.od-precio{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.od-reloj{margin:0;font-size:var(--t-lg,18px);font-weight:800;color:var(--text);font-variant-numeric:tabular-nums}
+@media (min-width:700px){
+  .od-card{flex-direction:row}
+  .od-foto{flex:0 0 42%;aspect-ratio:auto;min-height:240px}
+  .od-info{flex:1;justify-content:center;padding:var(--e4,24px)}
+}
 .card-nuevo{
   background:var(--brand-soft);color:var(--brand);border:1px solid var(--brand);
   font-size:11px;font-weight:800;letter-spacing:.03em;padding:var(--e0) var(--e1);border-radius:var(--radio-pill);

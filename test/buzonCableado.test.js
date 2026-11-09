@@ -48,7 +48,7 @@ test('las tres cascaras cargan buzon.js, antes de opinion.js', () => {
 test('sw.js cachea /buzon.js, sube la version y NO cachea /api/buzon', () => {
   const sw = leer('sw.js');
   assert.ok(sw.includes("'/buzon.js'"));
-  assert.ok(sw.includes("const CACHE = 'tienda-3b-v53'"));
+  assert.ok(sw.includes("const CACHE = 'tienda-3b-v54'"));
   assert.ok(!/api\/buzon/.test(sw.split('const ARMAZON')[1].split(']')[0]));
 });
 
