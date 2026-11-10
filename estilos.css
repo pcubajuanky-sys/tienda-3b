@@ -1756,8 +1756,69 @@ body[data-negocio]{--acento:var(--brand);--acento-ink:var(--brand-ink)}
     box-shadow:inset 0 1px 0 rgba(255,255,255,.06),0 1px 2px rgba(0,0,0,.45)}
 }
 
+/* Relieve para TODOS los botones (2026-11-09, petición de Ruth: «que se noten iguales a los de
+   Añadir»). Mismo gesto que el bloque de arriba —luz arriba, canto abajo, sombra, se hunde al
+   pulsar— pero sin tocar el color de cada uno: el degradado es transparente y va ENCIMA del
+   background-color. Dos familias: los llenos (mismo relieve fuerte que «Añadir») y los claros
+   con borde (relieve con luz blanca, porque un brillo al 16 % no se ve sobre fondo claro).
+   .btn-texto NO entra a propósito: es un enlace subrayado, no un botón. */
+.compartir-btn-foto,.aviso-regreso-btn{
+  background-image:linear-gradient(180deg,rgba(255,255,255,.16) 0%,rgba(255,255,255,0) 52%,rgba(0,0,0,.14) 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.22),
+    inset 0 -2px 0 rgba(0,0,0,.28),
+    0 2px 3px rgba(0,0,0,.16),
+    0 6px 14px -6px rgba(0,0,0,.35);
+}
+.btn-suave,.btn-contraste-linea,.compartir-btn:not(.compartir-btn-foto),.agotado-fila-btn,.cta-grupo-btn,.btn-carrito{
+  background-image:linear-gradient(180deg,rgba(255,255,255,.70) 0%,rgba(255,255,255,0) 55%,rgba(0,0,0,.05) 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.80),
+    inset 0 -2px 0 rgba(0,0,0,.10),
+    0 2px 3px rgba(0,0,0,.10),
+    0 6px 14px -6px rgba(0,0,0,.22);
+}
+.btn-contraste-linea{
+  background-image:linear-gradient(180deg,rgba(255,255,255,.14) 0%,rgba(255,255,255,0) 55%,rgba(0,0,0,.12) 100%);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.18),inset 0 -2px 0 rgba(0,0,0,.25),0 2px 3px rgba(0,0,0,.16),0 6px 14px -6px rgba(0,0,0,.35);
+}
+.btn-suave,.btn-contraste-linea,.compartir-btn,.agotado-fila-btn,.cta-grupo-btn,.btn-carrito,.aviso-regreso-btn{
+  transition:background-color var(--dur) var(--ease),border-color var(--dur) var(--ease),
+             box-shadow var(--dur) var(--ease),transform var(--dur) var(--ease);
+}
+.btn-suave:not([disabled]):hover,.btn-contraste-linea:hover,.compartir-btn:not(:disabled):hover,
+.agotado-fila-btn:hover,.cta-grupo-btn:hover,.btn-carrito:hover,.aviso-regreso-btn:hover{
+  transform:translateY(-1px);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.80),
+    inset 0 -2px 0 rgba(0,0,0,.12),
+    0 3px 5px rgba(0,0,0,.14),
+    0 10px 20px -8px rgba(0,0,0,.30);
+}
+.btn-suave:not([disabled]):active,.btn-contraste-linea:active,.compartir-btn:not(:disabled):active,
+.agotado-fila-btn:active,.cta-grupo-btn:active,.btn-carrito:active,.aviso-regreso-btn:active{
+  transform:translateY(1px);
+  background-image:linear-gradient(180deg,rgba(0,0,0,.08),rgba(255,255,255,0) 60%);
+  box-shadow:inset 0 2px 5px rgba(0,0,0,.22),0 1px 1px rgba(0,0,0,.08);
+}
+/* Sus :hover viejos usan el atajo `background:`, que borra el degradado: se repone aquí. */
+.compartir-btn:not(.compartir-btn-foto):not(:disabled):hover,.agotado-fila-btn:hover{
+  background-image:linear-gradient(180deg,rgba(255,255,255,.70) 0%,rgba(255,255,255,0) 55%,rgba(0,0,0,.05) 100%);
+}
+.compartir-btn-foto:not(:disabled):hover,.btn-contraste-linea:hover{
+  background-image:linear-gradient(180deg,rgba(255,255,255,.16) 0%,rgba(255,255,255,0) 52%,rgba(0,0,0,.14) 100%);
+}
+.btn-suave[disabled],.compartir-btn:disabled{box-shadow:none;background-image:none}
+@media (prefers-color-scheme: dark){
+  .btn-suave,.compartir-btn:not(.compartir-btn-foto),.agotado-fila-btn,.cta-grupo-btn,.btn-carrito{
+    background-image:linear-gradient(180deg,rgba(255,255,255,.08) 0%,rgba(255,255,255,0) 55%,rgba(0,0,0,.18) 100%);
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.08),inset 0 -2px 0 rgba(0,0,0,.40),0 2px 3px rgba(0,0,0,.45),0 6px 14px -6px rgba(0,0,0,.60);
+  }
+}
+
 @media (prefers-reduced-motion: reduce){
   .btn-primario,.btn-wa,.btn-contraste,.cta-comi-btn,.qty button{transform:none !important}
+  .btn-suave,.btn-contraste-linea,.compartir-btn,.agotado-fila-btn,.cta-grupo-btn,.btn-carrito,.aviso-regreso-btn{transform:none !important}
 }
 
 /* ══ Pedido y confianza (2026-11-06) ══════════════════════════════════════ */
