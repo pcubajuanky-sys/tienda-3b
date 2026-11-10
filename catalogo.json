@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-10T17:44:12.673Z",
+  "generado": "2026-11-10T17:54:02.839Z",
   "tasa": 920,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -879,7 +879,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 2,
+      "max": 1,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -1208,7 +1208,7 @@
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1794190120/productos/ljdkjmtpbfcvnmsp1yea.jpg",
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1794190124/productos/dummcqpv3dsbrdh2uovq.jpg"
       ],
-      "max": 3,
+      "max": 2,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -2434,19 +2434,17 @@
           "Color"
         ],
         "opciones": [
-          "TRANSPARENTE",
-          "GRIS"
+          "NEGRO",
+          "TRANSPARENTE"
         ],
         "agotadas": [
-          "NEGRO"
+          "GRIS"
         ]
       },
       "maxOpciones": {
-        "TRANSPARENTE": 4
+        "NEGRO": 1,
+        "TRANSPARENTE": 3
       },
-      "esperaOpciones": [
-        "GRIS"
-      ],
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
@@ -4496,7 +4494,7 @@
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1792850700/productos/zcvjzimigvbmmwwcwxyq.jpg",
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1792850705/productos/hrpemggzavf4atclgygc.jpg"
       ],
-      "max": 4,
+      "max": 3,
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
