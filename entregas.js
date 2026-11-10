@@ -52,11 +52,13 @@
   }
   function mitad(min) { return min === 720 ? 'm' : (min < 720 ? 'am' : 'pm'); }
 
+  function extremo(min) {
+    if (min === 720) return '12 m';
+    var h = Math.floor(min / 60), m = min % 60, h12 = h % 12 === 0 ? 12 : h % 12;
+    return h12 + ':' + (m < 10 ? '0' : '') + m + ' ' + (min < 720 ? 'am' : 'pm');
+  }
   function etiquetaTurno(t) {
-    var d = aMin(t.desde), h = aMin(t.hasta);
-    var md = mitad(d), mh = mitad(h);
-    if (md === mh || (mh === 'm' && md === 'am')) return horaTxt(d) + '–' + horaTxt(h) + ' ' + mh;
-    return horaTxt(d) + ' ' + md + '–' + horaTxt(h) + ' ' + mh;
+    return 'De ' + extremo(aMin(t.desde)) + ' a ' + extremo(aMin(t.hasta));
   }
   function horaCorta(hhmm) { var m = aMin(hhmm); return horaTxt(m) + ' ' + mitad(m); }
 
@@ -114,7 +116,7 @@
     return { hoy: hoy, proximo: proximo, aviso: aviso };
   }
 
-  // ¿Es un texto de turno generado por opciones() ('Hoy lunes 9/11 · 9–12 am', 'Mañana martes 10/11 · …',
+  // ¿Es un texto de turno generado por opciones() ('Hoy lunes 9/11 · De 9:00 am a 12 m', 'Mañana martes 10/11 · …',
   // 'Miércoles 11/11 · …')? Sirve para no copiar un turno caducado guardado a «Otro horario».
   var RE_TURNO = /^(?:(?:Hoy|Mañana)\s+\S+|(?:Domingo|Lunes|Martes|Miércoles|Jueves|Viernes|Sábado))\s+\d{1,2}\/\d{1,2}\s·\s/;  // admite la coletilla «(sujeto a disponibilidad…)» al final
   function esTextoTurno(s) { return RE_TURNO.test(String(s || '')); }

@@ -26,8 +26,8 @@ const plano = (x) => JSON.parse(JSON.stringify(x));
 test('lunes 08:00: tres turnos de hoy con dia y fecha, y el martes', () => {
   const o = E.opciones(undefined, cuba('2026-11-09', '08:00'));
   assert.deepStrictEqual(claves(o.hoy), ['2026-11-09|t1', '2026-11-09|t2', '2026-11-09|t3']);
-  assert.strictEqual(o.hoy[0].texto, 'Hoy lunes 9/11 · 9–12 m');
-  assert.strictEqual(o.proximo.turnos[1].texto, 'Mañana martes 10/11 · 1–4 pm');
+  assert.strictEqual(o.hoy[0].texto, 'Hoy lunes 9/11 · De 9:00 am a 12 m');
+  assert.strictEqual(o.proximo.turnos[1].texto, 'Mañana martes 10/11 · De 1:00 pm a 4:00 pm');
   assert.strictEqual(o.aviso, '');
 });
 
@@ -38,7 +38,7 @@ test('la anticipacion se cuenta contra el FIN: normal hasta fin-60 inclusive, lu
   const o1130 = E.opciones(undefined, cuba('2026-11-09', '11:30'));
   assert.deepStrictEqual(claves(o1130.hoy), ['2026-11-09|t1', '2026-11-09|t2', '2026-11-09|t3']);
   assert.deepStrictEqual(sujetos(o1130.hoy), ['2026-11-09|t1']);
-  assert.strictEqual(o1130.hoy[0].texto, 'Hoy lunes 9/11 · 9–12 m' + SUJ);
+  assert.strictEqual(o1130.hoy[0].texto, 'Hoy lunes 9/11 · De 9:00 am a 12 m' + SUJ);
   assert.deepStrictEqual(sujetos(E.opciones(undefined, cuba('2026-11-09', '11:00')).hoy), []);
   assert.deepStrictEqual(claves(E.opciones(undefined, cuba('2026-11-09', '12:00')).hoy), ['2026-11-09|t2', '2026-11-09|t3']);
 });
@@ -49,7 +49,7 @@ test('sabado: 18:00 t3 normal; 18:15 t3 sujeto + aviso; 19:00 hoy vacio + aviso'
   assert.strictEqual(a.aviso, '');
   const b = E.opciones(undefined, cuba('2026-11-14', '18:15'));
   assert.deepStrictEqual(claves(b.hoy), ['2026-11-14|t3']);
-  assert.strictEqual(b.hoy[0].texto, 'Hoy sábado 14/11 · 4–7 pm' + SUJ);
+  assert.strictEqual(b.hoy[0].texto, 'Hoy sábado 14/11 · De 4:00 pm a 7:00 pm' + SUJ);
   assert.match(b.aviso, /empezamos el lunes a las 9 am/);
   const c = E.opciones(undefined, cuba('2026-11-14', '19:00'));
   assert.strictEqual(c.hoy.length, 0);
@@ -83,9 +83,11 @@ test('paridad: offset -300', { skip: !LIB_OK }, () => paridad({ utcOffsetMin: -3
 
 test('esTextoTurno reconoce los textos de turno generados y no los libres', () => {
   assert.ok(E.esTextoTurno('Hoy lunes 9/11 · 9–12 am'));
-  assert.ok(E.esTextoTurno('Mañana martes 10/11 · 1–4 pm'));
-  assert.ok(E.esTextoTurno('Miércoles 11/11 · 4–7 pm'));
-  assert.ok(E.esTextoTurno('Hoy sábado 14/11 · 4–7 pm (sujeto a disponibilidad del mensajero)'));
+  assert.ok(E.esTextoTurno('Hoy lunes 9/11 · De 9:00 am a 12 m'));
+  assert.ok(E.esTextoTurno('Mañana martes 10/11 · De 1:00 pm a 4:00 pm (sujeto a disponibilidad del mensajero)'));
+  assert.ok(E.esTextoTurno('Mañana martes 10/11 · De 1:00 pm a 4:00 pm'));
+  assert.ok(E.esTextoTurno('Miércoles 11/11 · De 4:00 pm a 7:00 pm'));
+  assert.ok(E.esTextoTurno('Hoy sábado 14/11 · De 4:00 pm a 7:00 pm (sujeto a disponibilidad del mensajero)'));
   assert.ok(!E.esTextoTurno('Por la tarde después de las 5'));
   assert.ok(!E.esTextoTurno('Hoy me viene bien'));
   assert.ok(!E.esTextoTurno(''));
@@ -100,7 +102,7 @@ test('etiqueta = solo el horario (sin dia ni fecha); texto sigue completo', () =
     assert.ok(x.texto.endsWith(' · ' + x.etiqueta), x.texto);
     assert.ok(!/\d+\/\d+/.test(x.etiqueta), x.etiqueta);
   }
-  assert.strictEqual(o.proximo.turnos[1].etiqueta, '1–4 pm');
+  assert.strictEqual(o.proximo.turnos[1].etiqueta, 'De 1:00 pm a 4:00 pm');
   const tarde = E.opciones(undefined, cuba('2026-11-09', '18:15'));
-  assert.strictEqual(tarde.hoy[0].etiqueta, '4–7 pm (sujeto a disponibilidad del mensajero)');
+  assert.strictEqual(tarde.hoy[0].etiqueta, 'De 4:00 pm a 7:00 pm (sujeto a disponibilidad del mensajero)');
 });
