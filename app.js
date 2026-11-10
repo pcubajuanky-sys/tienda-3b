@@ -2731,12 +2731,11 @@ function pintarTurnos() {
     '<option value="' + escapeHtml(valor) + '"' + (clave ? ' data-turno="' + escapeHtml(clave) + '"' : '') + '>' + escapeHtml(texto) + '</option>';
   let html = '<option value="">Elige…</option>';
   if (o.hoy.length) {
-    html += '<optgroup label="Hoy">' + o.hoy.map((x) => opcion(x.texto, x.texto, x.clave)).join('') + '</optgroup>';
+    html += '<optgroup label="' + escapeHtml(o.hoy[0].texto.split(' · ')[0]) + '">' + o.hoy.map((x) => opcion(x.texto, x.etiqueta, x.clave)).join('') + '</optgroup>';
   }
   if (o.proximo) {
-    const cap = o.proximo.dia.charAt(0).toUpperCase() + o.proximo.dia.slice(1);
-    html += '<optgroup label="' + escapeHtml(cap + ' ' + o.proximo.fechaCorta) + '">' +
-      o.proximo.turnos.map((x) => opcion(x.texto, x.texto, x.clave)).join('') + '</optgroup>';
+    html += '<optgroup label="' + escapeHtml(o.proximo.turnos[0].texto.split(' · ')[0]) + '">' +
+      o.proximo.turnos.map((x) => opcion(x.texto, x.etiqueta, x.clave)).join('') + '</optgroup>';
   }
   if (cfg.otroHorario !== false) html += '<option value="__libre">Otro horario (sujeto a confirmación)…</option>';
   // Sin cambios (el reloj repinta cada 60 s) no se toca el DOM: no se pierde el foco ni la eleccion.

@@ -85,7 +85,7 @@
       .map(function (t) {
         var sujeto = ahora.minutos > aMin(t.hasta) - c.anticipacionMin;
         return {
-          clave: ahora.fecha + '|' + t.id, fecha: ahora.fecha, turnoId: t.id, sujeto: sujeto,
+          clave: ahora.fecha + '|' + t.id, fecha: ahora.fecha, turnoId: t.id, sujeto: sujeto, etiqueta: etiquetaTurno(t) + (sujeto ? SUJETO_TXT : ''),
           texto: 'Hoy ' + DIAS[ahora.dow] + ' ' + fechaCorta(ahora.fecha) + ' · ' + etiquetaTurno(t) + (sujeto ? SUJETO_TXT : ''),
         };
       });
@@ -100,6 +100,7 @@
         turnos: turnos.map(function (t) {
           return {
             clave: s.fecha + '|' + t.id, fecha: s.fecha, turnoId: t.id,
+            etiqueta: etiquetaTurno(t),
             texto: (n === 1 ? 'Mañana ' + dia : cap(dia)) + ' ' + corta + ' · ' + etiquetaTurno(t),
           };
         }),

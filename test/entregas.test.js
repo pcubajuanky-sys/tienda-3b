@@ -92,3 +92,15 @@ test('esTextoTurno reconoce los textos de turno generados y no los libres', () =
   const o = E.opciones(undefined, Date.UTC(2026, 10, 9, 12, 0));
   assert.ok(o.hoy.concat(o.proximo.turnos).every((x) => E.esTextoTurno(x.texto)));
 });
+
+test('etiqueta = solo el horario (sin dia ni fecha); texto sigue completo', () => {
+  const o = E.opciones(undefined, cuba('2026-11-09', '08:00'));
+  assert.ok(o.hoy.length > 0);
+  for (const x of Array.from(o.hoy).concat(Array.from(o.proximo.turnos))) {
+    assert.ok(x.texto.endsWith(' · ' + x.etiqueta), x.texto);
+    assert.ok(!/\d+\/\d+/.test(x.etiqueta), x.etiqueta);
+  }
+  assert.strictEqual(o.proximo.turnos[1].etiqueta, '1–4 pm');
+  const tarde = E.opciones(undefined, cuba('2026-11-09', '18:15'));
+  assert.strictEqual(tarde.hoy[0].etiqueta, '4–7 pm (sujeto a disponibilidad del mensajero)');
+});
