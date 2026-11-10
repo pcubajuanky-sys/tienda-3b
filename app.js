@@ -1210,7 +1210,7 @@ function pintarSoloFicha(id, clave) {
   });
   if (!ok) { caja.hidden = true; caja.innerHTML = ''; return; }
   caja.hidden = false;
-  caja.innerHTML = '<button type="button" class="btn btn-texto ficha-solo-btn" data-solo="' +
+  caja.innerHTML = '<button type="button" class="btn btn-suave ficha-solo-btn" data-solo="' +
     escapeHtml(claveCarrito(id, clave || null)) + '">' + window.PedidoSolo.TEXTO_BOTON + '</button>';
 }
 
