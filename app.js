@@ -2726,20 +2726,20 @@ function pintarTurnos() {
   const antes = sel.options[sel.selectedIndex];
   const claveAntes = antes ? (antes.dataset.turno || '') : '';
   const eraLibre = sel.value === '__libre';
-  const o = window.Entregas.opciones(cfg, ahoraCorregido());
+  const o = window.Entregas.opciones(cfg, ahoraCorregido(), cfg.llenos);
   const opcion = (valor, texto, clave) =>
     '<option value="' + escapeHtml(valor) + '"' + (clave ? ' data-turno="' + escapeHtml(clave) + '"' : '') + '>' + escapeHtml(texto) + '</option>';
   let html = '<option value="">Elige…</option>';
   if (o.hoy.length) {
     html += '<optgroup label="' + escapeHtml(o.hoy[0].texto.split(' · ')[0]) + '">' + o.hoy.map((x) => opcion(x.texto, x.etiqueta, x.clave)).join('') + '</optgroup>';
   }
-  if (o.proximo) {
+  if (o.proximo && o.proximo.turnos.length) {
     html += '<optgroup label="' + escapeHtml(o.proximo.turnos[0].texto.split(' · ')[0]) + '">' +
       o.proximo.turnos.map((x) => opcion(x.texto, x.etiqueta, x.clave)).join('') + '</optgroup>';
   }
   if (cfg.otroHorario !== false) html += '<option value="__libre">Otro horario (sujeto a confirmación)…</option>';
   // Sin cambios (el reloj repinta cada 60 s) no se toca el DOM: no se pierde el foco ni la eleccion.
-  const firma = html + '|' + (o.aviso || '');
+  const firma = html + '|' + (o.aviso || '') + '|' + (Array.isArray(cfg.llenos) ? cfg.llenos.join(',') : '');
   if (sel.dataset.firma === firma) return;
   sel.dataset.firma = firma;
   sel.innerHTML = html;

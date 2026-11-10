@@ -76,14 +76,17 @@
 
   var SUJETO_TXT = ' (sujeto a disponibilidad del mensajero)';
 
-  function opciones(cfgEntregas, ahoraMs) {
+  // llenosArr (opcional): claves 'fecha|turnoId' que ya alcanzaron su tope de pedidos; NO se ofrecen.
+  function opciones(cfgEntregas, ahoraMs, llenosArr) {
+    var lleno = {};
+    (Array.isArray(llenosArr) ? llenosArr : []).forEach(function (k) { lleno[k] = true; });
     var c = config(cfgEntregas);
     var ahora = ahoraCuba(ahoraMs, c.utcOffsetMin);
     var turnos = c.turnos.slice().sort(function (a, b) { return aMin(a.desde) - aMin(b.desde); });
     function cerrado(dow) { return c.diasSinEntrega.indexOf(dow) !== -1; }
     var hoyCerrado = cerrado(ahora.dow);
     var hoy = hoyCerrado ? [] : turnos
-      .filter(function (t) { return ahora.minutos < aMin(t.hasta); })
+      .filter(function (t) { return ahora.minutos < aMin(t.hasta) && !lleno[ahora.fecha + '|' + t.id]; })
       .map(function (t) {
         var sujeto = ahora.minutos > aMin(t.hasta) - c.anticipacionMin;
         return {
@@ -99,7 +102,7 @@
       var dia = DIAS[s.dow], corta = fechaCorta(s.fecha);
       proximo = {
         fecha: s.fecha, dia: dia, fechaCorta: corta,
-        turnos: turnos.map(function (t) {
+        turnos: turnos.filter(function (t) { return !lleno[s.fecha + '|' + t.id]; }).map(function (t) {
           return {
             clave: s.fecha + '|' + t.id, fecha: s.fecha, turnoId: t.id,
             etiqueta: etiquetaTurno(t),

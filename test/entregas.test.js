@@ -106,3 +106,19 @@ test('etiqueta = solo el horario (sin dia ni fecha); texto sigue completo', () =
   const tarde = E.opciones(undefined, cuba('2026-11-09', '18:15'));
   assert.strictEqual(tarde.hoy[0].etiqueta, 'De 4:00 pm a 7:00 pm (sujeto a disponibilidad del mensajero)');
 });
+
+test('con llenos (tope de pedidos): esas claves no se ofrecen; sin llenos es identico', () => {
+  const t = cuba('2026-11-09', '08:00');
+  assert.deepStrictEqual(plano(E.opciones(undefined, t, [])), plano(E.opciones(undefined, t)));
+  const o = E.opciones(undefined, t, ['2026-11-09|t1', '2026-11-10|t2']);
+  assert.deepStrictEqual(claves(o.hoy), ['2026-11-09|t2', '2026-11-09|t3']);
+  assert.deepStrictEqual(claves(o.proximo.turnos), ['2026-11-10|t1', '2026-11-10|t3']);
+});
+
+test('paridad con Stock+ usando llenos (8 dias cada 15 min)', { skip: !LIB_OK }, () => {
+  const llenos = ['2026-11-09|t1', '2026-11-10|t2', '2026-11-11|t3'];
+  const ini = Date.UTC(2026, 10, 9, 0, 0);
+  for (let t = ini; t < ini + 8 * 86400000; t += 15 * 60000) {
+    assert.deepStrictEqual(plano(E.opciones(undefined, t, llenos)), plano(lib.opciones(undefined, t, llenos)), new Date(t).toISOString());
+  }
+});
