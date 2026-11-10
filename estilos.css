@@ -473,10 +473,9 @@ a{color:inherit}
   */
   #categorias-3d.plegada .cat3d:nth-child(n+9){display:none}
 }
-/* 2026-10-11: overflow pasa a visible para que la insignia del emoji pueda
-   asomar por el borde. El recorte circular de la FOTO no se pierde: se lo
+/* 2026-10-11: overflow visible (antes alojaba la insignia del emoji, ya retirada). El recorte circular de la FOTO no se pierde: se lo
    queda .cat3d-foto, que es quien contiene el <img>. Si algun dia vuelves a
-   poner overflow:hidden aqui, la insignia se corta por la mitad.
+   poner overflow:hidden aqui, se recortaria la sombra exterior del relieve.
    min-height:0 es OBLIGATORIO con overflow:visible: con overflow:hidden el minimo
    automatico de un cuadro con aspect-ratio era 0, pero con visible pasa a ser el
    alto del contenido, y una foto vertical (p. ej. "Ropa") estiraba el circulo a
@@ -521,25 +520,6 @@ a{color:inherit}
   text-overflow:ellipsis;font-size:12.5px;font-weight:600;line-height:1.26;
   letter-spacing:.004em;color:var(--text);min-height:32px;
 }
-/* La insignia del emoji: fuera del renglon del nombre, posada en la esquina
-   del circulo. El emoji lo dibuja el telefono del cliente, no Outfit, asi que
-   lo unico que decidimos aqui es el sitio y el tamano. */
-/* Varias categorias llevan DOS emojis (p. ej. "Bocinas Celulares y Accesorios" 📢🎧).
-   Con un ancho fijo de 26/30px el segundo se partia a otro renglon y se caia FUERA
-   de la insignia (verificado en el navegador el 2026-10-11). Por eso el ancho es un
-   minimo y la insignia es una pildora (border-radius:999px): con UN emoji sigue
-   siendo un circulo exacto (min-width = height) y con dos se ensancha hacia la
-   izquierda, sin partirse (white-space:nowrap). */
-.cat3d-emoji{
-  position:absolute;right:0;bottom:0;z-index:2;
-  box-sizing:border-box;min-width:26px;height:26px;padding:0 4px;white-space:nowrap;
-  display:flex;align-items:center;justify-content:center;
-  font-size:13px;line-height:1;border-radius:999px;
-  background:var(--surface);border:1px solid var(--border);box-shadow:var(--sombra-1);
-}
-@media (min-width:760px){
-  .cat3d-emoji{min-width:30px;height:30px;font-size:15px}
-}
 .cat3d-n{
   display:block;margin-top:3px;font-size:var(--t-xs);color:var(--text-3);font-weight:500;
   overflow:hidden;white-space:nowrap;text-overflow:ellipsis;
@@ -547,14 +527,59 @@ a{color:inherit}
 @media (hover:hover) and (pointer:fine){
   .cat3d:hover .cat3d-inner,.cat3d:focus-visible .cat3d-inner{
     transform:translateY(-2px);
-    box-shadow:var(--sombra-2);
+    box-shadow:0 3px 5px rgba(0,0,0,.18),0 12px 22px -8px rgba(0,0,0,.40),0 0 0 1px rgba(0,0,0,.08);
   }
 }
 .cat3d:active .cat3d-inner{
   transform:translateY(0);
   transition-duration:.1s;
 }
-.cat3d.on .cat3d-inner{box-shadow:0 0 0 2px var(--brand), var(--sombra-2);border-color:var(--brand)}
+/* Relieve 3D (2026-11-10): boton redondo en relieve, mismo gesto que los botones (luz arriba,
+   canto abajo, sombra en capas, se hunde al pulsar). La luz/sombra interior va en ::after
+   porque la foto (hija) taparia un inset del propio .cat3d-inner. */
+.cat3d-inner{
+  background-image:linear-gradient(180deg,rgba(255,255,255,.55) 0%,rgba(255,255,255,0) 45%,rgba(0,0,0,.08) 100%);
+  border:2px solid rgba(255,255,255,.85);
+  box-shadow:0 2px 3px rgba(0,0,0,.16),0 8px 16px -6px rgba(0,0,0,.35),0 0 0 1px rgba(0,0,0,.08);
+}
+.cat3d-inner::after{
+  content:"";position:absolute;inset:0;border-radius:50%;z-index:2;pointer-events:none;
+  box-shadow:inset 0 2px 2px rgba(255,255,255,.60),inset 0 -5px 8px rgba(0,0,0,.28);
+}
+@media (prefers-color-scheme: dark){
+  .cat3d-inner{
+    background-image:linear-gradient(180deg,rgba(255,255,255,.10) 0%,rgba(255,255,255,0) 45%,rgba(0,0,0,.25) 100%);
+    border-color:rgba(255,255,255,.14);
+    box-shadow:0 2px 3px rgba(0,0,0,.5),0 8px 16px -6px rgba(0,0,0,.7),0 0 0 1px rgba(0,0,0,.5);
+  }
+  .cat3d-inner::after{box-shadow:inset 0 2px 2px rgba(255,255,255,.18),inset 0 -5px 8px rgba(0,0,0,.5)}
+}
+:root[data-theme="dark"] .cat3d-inner{
+  background-image:linear-gradient(180deg,rgba(255,255,255,.10) 0%,rgba(255,255,255,0) 45%,rgba(0,0,0,.25) 100%);
+  border-color:rgba(255,255,255,.14);
+  box-shadow:0 2px 3px rgba(0,0,0,.5),0 8px 16px -6px rgba(0,0,0,.7),0 0 0 1px rgba(0,0,0,.5);
+}
+:root[data-theme="dark"] .cat3d-inner::after{box-shadow:inset 0 2px 2px rgba(255,255,255,.18),inset 0 -5px 8px rgba(0,0,0,.5)}
+:root[data-theme="light"] .cat3d-inner{
+  background-image:linear-gradient(180deg,rgba(255,255,255,.55) 0%,rgba(255,255,255,0) 45%,rgba(0,0,0,.08) 100%);
+  border-color:rgba(255,255,255,.85);
+  box-shadow:0 2px 3px rgba(0,0,0,.16),0 8px 16px -6px rgba(0,0,0,.35),0 0 0 1px rgba(0,0,0,.08);
+}
+:root[data-theme="light"] .cat3d-inner::after{box-shadow:inset 0 2px 2px rgba(255,255,255,.60),inset 0 -5px 8px rgba(0,0,0,.28)}
+/* Activo: anillo de marca (sustituye el borde claro) */
+.cat3d.on .cat3d-inner,:root[data-theme] .cat3d.on .cat3d-inner{
+  border-color:var(--brand);
+  box-shadow:0 0 0 2px var(--brand),0 3px 4px rgba(0,0,0,.18),0 10px 18px -6px rgba(0,0,0,.38);
+}
+/* Pulsado: el circulo se hunde (menos sombra, 1-2px abajo, sombra interior mas honda) */
+.cat3d:active .cat3d-inner,:root[data-theme] .cat3d:active .cat3d-inner{
+  transform:translateY(2px);
+  box-shadow:0 1px 1px rgba(0,0,0,.14),0 0 0 1px rgba(0,0,0,.10);
+}
+.cat3d:active .cat3d-inner::after{box-shadow:inset 0 3px 7px rgba(0,0,0,.40),inset 0 -1px 2px rgba(255,255,255,.25)}
+.cat3d.on:active .cat3d-inner,:root[data-theme] .cat3d.on:active .cat3d-inner{
+  box-shadow:0 0 0 2px var(--brand),0 1px 1px rgba(0,0,0,.14);
+}
 .cat3d.on .cat3d-nombre{color:var(--brand)}
 @media (prefers-reduced-motion:reduce){
   .cat3d-inner{transition:none!important}

@@ -342,7 +342,6 @@ function renderCategorias3D() {
     return `<button class="cat3d ${activo ? 'on' : ''}" type="button" data-oferta="1" aria-pressed="${activo}">` +
       `<span class="cat3d-inner">` +
       `<span class="cat3d-foto" data-ph="🏷️">${cat3dFotoHtml(fotosOferta().slice(0, 1), '🏷️', mosaicoFuente(itemsEnOferta()))}</span>` +
-      `<span class="cat3d-emoji" aria-hidden="true">🏷️</span>` +
       `</span>` +
       `<span class="cat3d-info">` +
       `<span class="cat3d-nombre">Ofertas</span>` +
@@ -357,7 +356,6 @@ function renderCategorias3D() {
     return `<button class="cat3d ${activo ? 'on' : ''}" type="button" data-cat="${escapeHtml(c.n)}" aria-pressed="${activo}">` +
       `<span class="cat3d-inner">` +
       `<span class="cat3d-foto" data-ph="${marcador}">${cat3dFotoHtml(categoriaFotos(c.n).slice(0, 1), marcador, mosaicoFuente(itemsDeCategoria(c.n)))}</span>` +
-      `${c.e ? `<span class="cat3d-emoji" aria-hidden="true">${escapeHtml(c.e)}</span>` : ''}` +
       `</span>` +
       `<span class="cat3d-info">` +
       `<span class="cat3d-nombre">${escapeHtml(c.n)}</span>` +

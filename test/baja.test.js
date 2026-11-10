@@ -83,7 +83,7 @@ test('🔴 cableado: tres cascaras cargan baja.js (tras buzon.js), con su caja, 
   }
   const sw = leer('sw.js');
   assert.ok(sw.includes("'/baja.js'"));
-  assert.ok(sw.includes("const CACHE = 'tienda-3b-v63'"));
+  assert.ok(sw.includes("const CACHE = 'tienda-3b-v64'"));
 });
 
 test('🔴 cableado: la ficha usa window.Baja, delegacion sin onclick y el buzon manda tipo baja', () => {
