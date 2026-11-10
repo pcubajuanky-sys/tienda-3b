@@ -95,12 +95,13 @@
         };
       });
 
-    var proximo = null, saltoCerrado = false;
-    for (var n = 1; n <= 7; n++) {
+    // 🔴 `proximo` = primer dia >= manana no cerrado Y con algun turno sin llenar (hasta 14 dias); si no hay, el primer dia no cerrado con turnos vacios.
+    var proximo = null, saltoCerrado = false, fallback = null, saltoFallback = false;
+    for (var n = 1; n <= 14; n++) {
       var s = sumarDias(ahora.fecha, n);
       if (cerrado(s.dow)) { saltoCerrado = true; continue; }
       var dia = DIAS[s.dow], corta = fechaCorta(s.fecha);
-      proximo = {
+      var cand = {
         fecha: s.fecha, dia: dia, fechaCorta: corta,
         turnos: turnos.filter(function (t) { return !lleno[s.fecha + '|' + t.id]; }).map(function (t) {
           return {
@@ -110,8 +111,10 @@
           };
         }),
       };
-      break;
+      if (!fallback) { fallback = cand; saltoFallback = saltoCerrado; }
+      if (cand.turnos.length) { proximo = cand; break; }
     }
+    if (!proximo) { proximo = fallback; saltoCerrado = saltoFallback; }
     var aviso = '';
     if (!hoy.some(function (x) { return !x.sujeto; }) && proximo && (hoyCerrado || saltoCerrado) && c.avisoSinEntrega) {
       aviso = c.avisoSinEntrega.split('{dia}').join(proximo.dia).split('{hora}').join(horaCorta(turnos[0].desde));

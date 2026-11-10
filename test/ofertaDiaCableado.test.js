@@ -81,7 +81,7 @@ test('el reloj se para con la pestaña oculta', () => {
 test('sw.js precachea ofertadia.js y la cache es v54', () => {
   const sw = leer('sw.js');
   assert.ok(sw.includes("'/ofertadia.js'"));
-  assert.ok(sw.includes("const CACHE = 'tienda-3b-v62'"));
+  assert.ok(sw.includes("const CACHE = 'tienda-3b-v63'"));
 });
 
 // ── Contraste de los textos nuevos, CALCULADO con los tokens (≥ 4.5:1, claro y oscuro) ──

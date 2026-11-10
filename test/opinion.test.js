@@ -87,7 +87,7 @@ test('🔴 el cableado existe: script y #modal-opiniones en las TRES cascaras, y
   }
   const sw = fs.readFileSync(path.join(RAIZ, 'sw.js'), 'utf8');
   assert.match(sw, /'\/opinion\.js'/);
-  assert.match(sw, /tienda-3b-v62/);
+  assert.match(sw, /tienda-3b-v63/);
   const app = fs.readFileSync(path.join(RAIZ, 'app.js'), 'utf8');
   assert.match(app, /window\.Opinion/);
   assert.match(app, /data-opinion/);

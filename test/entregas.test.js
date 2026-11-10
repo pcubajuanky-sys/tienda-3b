@@ -122,3 +122,17 @@ test('paridad con Stock+ usando llenos (8 dias cada 15 min)', { skip: !LIB_OK },
     assert.deepStrictEqual(plano(E.opciones(undefined, t, llenos)), plano(lib.opciones(undefined, t, llenos)), new Date(t).toISOString());
   }
 });
+
+test('dia entero lleno: proximo salta al siguiente dia con turno libre; paridad con Stock+', () => {
+  const llenos = ['2026-11-10|t1', '2026-11-10|t2', '2026-11-10|t3'];
+  const o = E.opciones(undefined, cuba('2026-11-09', '08:00'), llenos);
+  assert.strictEqual(o.proximo.fecha, '2026-11-11');
+  assert.ok(o.proximo.turnos.length > 0);
+  assert.ok(o.proximo.turnos[0].texto.indexOf('Miércoles') === 0);
+  if (LIB_OK) {
+    const ini = Date.UTC(2026, 10, 9, 0, 0);
+    for (let t = ini; t < ini + 8 * 86400000; t += 15 * 60000) {
+      assert.deepStrictEqual(plano(E.opciones(undefined, t, llenos)), plano(lib.opciones(undefined, t, llenos)), new Date(t).toISOString());
+    }
+  }
+});
