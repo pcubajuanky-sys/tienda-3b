@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-10T15:39:04.684Z",
+  "generado": "2026-11-10T15:55:38.865Z",
   "tasa": 925,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -2434,13 +2434,14 @@
           "Color"
         ],
         "opciones": [
-          "NEGRO",
           "TRANSPARENTE",
           "GRIS"
+        ],
+        "agotadas": [
+          "NEGRO"
         ]
       },
       "maxOpciones": {
-        "NEGRO": 1,
         "TRANSPARENTE": 4
       },
       "esperaOpciones": [
