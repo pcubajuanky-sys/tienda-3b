@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-10T23:59:06.173Z",
+  "generado": "2026-11-11T02:54:07.794Z",
   "tasa": 920,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -107,10 +107,6 @@
     {
       "code": "HRZKW",
       "nombre": "Katherine"
-    },
-    {
-      "code": "JA6CK",
-      "nombre": "Eliany"
     },
     {
       "code": "3CWCU",
@@ -523,6 +519,11 @@
         "id": "chort-de-hombre",
         "nombre": "chort de hombre",
         "lb": 0.4
+      },
+      {
+        "id": "lampara-de-secado-de-gel",
+        "nombre": "lámpara de secado de gel",
+        "lb": 1.82
       }
     ],
     "ejemplos": [
@@ -957,7 +958,7 @@
       },
       "maxOpciones": {
         "NEGRO": 3,
-        "BEIGE": 4
+        "BEIGE": 3
       },
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
@@ -3300,6 +3301,32 @@
       "creado": 1793139148847
     },
     {
+      "id": "p_1794365380729",
+      "codigo": "UWEA",
+      "name": "Lámpara de uñas recargable profesional",
+      "cat": "Uñas",
+      "subcat": "",
+      "notes": "💅✨ ¡Luce uñas perfectas en menos tiempo!\n\nCon la lámpara UV/LED SUN S10, seca y cura tus esmaltes en gel de forma rápida y profesional.\n\n✅ 4 tiempos de secado: 30, 60, 90 y 120 segundos.\n✅ Pantalla LCD digital.\n✅ Diseño moderno y fácil de usar.\n✅ Batería de gran capacidad.\n✅ Ideal para manicuras impecables.\n\n💕 ¡Lleva tu experiencia de salón a casa!\n\n📩 ¡Ordena la tuya hoy!",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1794365135/productos/bnix6r2qv6y4bzgsambj.jpg",
+      "precioUSD": 35,
+      "precioCUP": 32200,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794365144/productos/lqhdjs7splou7dalhqef.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794365152/productos/w2hce30vjiaqygwk4a6g.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794365156/productos/qc6ytkpesbmtmxfeoi36.jpg"
+      ],
+      "max": 1,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1794365380729
+    },
+    {
       "id": "p_1782259309845",
       "codigo": "3EA5",
       "name": "Lápiz de ojos",
@@ -3524,7 +3551,7 @@
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1794017002/productos/uw5v8ie2fwj6ggv5ldr8.jpg",
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1794017006/productos/oqwfd8j35zlz1ecrvfx0.jpg"
       ],
-      "max": 3,
+      "max": 2,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -3545,7 +3572,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 7,
+      "max": 6,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -4468,7 +4495,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 3,
+      "max": 2,
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
@@ -6681,7 +6708,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 1,
+      "espera": true,
       "envio": {
         "corto": "🛵 Gratis desde 2,000 CUP",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde 2,000 CUP en San Antonio · puedes completar con otros artículos"
