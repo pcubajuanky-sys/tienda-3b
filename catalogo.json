@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-11T11:49:10.032Z",
+  "generado": "2026-11-11T11:54:09.765Z",
   "tasa": 920,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -2476,7 +2476,9 @@
           "BLANCO"
         ]
       },
-      "espera": true,
+      "maxOpciones": {
+        "PUMA": 1
+      },
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
