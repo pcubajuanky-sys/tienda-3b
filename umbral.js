@@ -41,7 +41,10 @@
     if (!(umbral > 0) || !(precio > 0) || !(elegible >= 0)) return '';
     if (elegible >= umbral) return '🎉 Tu pedido ya lleva mensajería gratis';
     if (elegible + precio >= umbral) return '🎉 Añádelo y tu pedido lleva mensajería gratis';
-    return 'Añádelo y te faltarán ' + cifra(umbral - elegible - precio) + ' CUP para la mensajería gratis';
+    const falta = umbral - elegible - precio;
+    // `formato` (opcional) escribe la cifra en la moneda del umbral (USD desde 2026-11-11).
+    const txt = typeof d.formato === 'function' ? d.formato(falta) : cifra(falta) + ' CUP';
+    return 'Añádelo y te faltarán ' + txt + ' para la mensajería gratis';
   }
 
   window.Umbral = { mensaje };

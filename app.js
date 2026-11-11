@@ -537,6 +537,13 @@ function precioHtml(p, conDescuento) {
   return tachado + `<span class="precio">${principal}<span class="usd">· ${secundario}</span></span>` + chip;
 }
 
+// Precio de una sola cifra para las franjas «Recién llegado» y «Vistos hace poco»
+// (decisión de Ruth, 2026-11-11): la MISMA moneda que el precio grande de la tarjeta
+// (precioHtml), no siempre CUP. moneda:'usd' ⇒ $X; si no, X CUP.
+function precioCorto(p) {
+  return p.moneda === 'usd' ? `$${p.precioUSD}` : `${fmt(p.precioCUP)} CUP`;
+}
+
 // Cuántas quedan, solo cuando de verdad quedan pocas.
 //
 // 🔴 Hasta 3 y no más: Stock+ publica `max` siempre que queden menos de 10, y hoy eso son
@@ -961,7 +968,7 @@ function renderRecientes() {
     '<button type="button" class="rel-card completar-card" data-reciente="' + escapeHtml(x.id) + '">' +
     '<span class="rel-foto"><img src="' + fotoMosaico(x.photo) + '" alt="" loading="lazy"></span>' +
     '<span class="rel-nom">' + escapeHtml(x.name) + '</span>' +
-    '<span class="rel-precio">' + fmt(x.precioCUP) + ' CUP</span>' +
+    '<span class="rel-precio">' + precioCorto(x) + '</span>' +
     '</button>').join('') : '';
 }
 
@@ -1037,7 +1044,7 @@ function renderNuevos() {
     '<button type="button" class="rel-card completar-card" data-nuevo="' + escapeHtml(x.id) + '">' +
     '<span class="rel-foto"><img src="' + fotoMosaico(x.photo) + '" alt="" loading="lazy"></span>' +
     '<span class="rel-nom">' + escapeHtml(x.name) + '</span>' +
-    '<span class="rel-precio">' + fmt(x.precioCUP) + ' CUP</span>' +
+    '<span class="rel-precio">' + precioCorto(x) + '</span>' +
     '</button>').join('') : '';
   const ver = document.getElementById('nuevos-ver-todo');
   if (ver) ver.hidden = !mostrar || !window.Orden.opcionesUtiles(CAT.items || []).some((o) => o.id === 'nuevo');
@@ -1253,7 +1260,8 @@ function pintarUmbralFicha(id, clave) {
     elegible: totalCarritoElegible(),
     precio: p && p.precioCUP,
     aparte: esAparte(p),
-    espera: Espera.enEspera(p, clave || null) || !!(clave && window.Aviso.esAgotada(p, clave))
+    espera: Espera.enEspera(p, clave || null) || !!(clave && window.Aviso.esAgotada(p, clave)),
+    formato: faltaEnvioTexto
   });
   caja.hidden = !txt;
   caja.textContent = txt;
@@ -2049,6 +2057,30 @@ function envioGratis() {
   return { activo, umbral, falta, alcanzado, textoFino: (t.envioGratisTexto || '').trim() };
 }
 
+// 💵 El mínimo de la mensajería gratis puede venir FIJADO EN USD (Stock+ publica
+// tienda.envioGratisUSD desde el 2026-11-11). La COMPARACIÓN sigue siendo en CUP contra
+// envioGratisCUP, que es lo que calcula el servidor con la tasa del día: aquí solo cambia
+// cómo se ESCRIBE la cifra. Sin envioGratisUSD (o sin tasa) todo sale en CUP, como antes.
+function umbralUSDPublicado() {
+  const u = Number(((CAT && CAT.tienda) || {}).envioGratisUSD);
+  return u > 0 ? u : 0;
+}
+function usdDe2(n) { return '$' + n.toFixed(2) + ' USD'; }
+// La cifra del umbral, ya escrita.
+function umbralEnvioTexto(eg) {
+  const u = umbralUSDPublicado();
+  return u ? usdDe2(u) : `${fmt(eg.umbral)} CUP`;
+}
+// Una cantidad que FALTA (en CUP), escrita en la moneda del umbral. En USD se redondea
+// hacia ARRIBA al centavo: decir «te faltan $0.39» cuando faltan $0.391 haría que la
+// clienta añadiera justo eso y siguiera sin llegar.
+function faltaEnvioTexto(cup) {
+  const u = umbralUSDPublicado();
+  const tasa = Number(CAT && CAT.tasa);
+  if (u && tasa > 0) return usdDe2(Math.ceil(cup / tasa * 100 - 1e-9) / 100);
+  return `${fmt(cup)} CUP`;
+}
+
 // Misma frase en aside, panel modal y barra móvil: una sola fuente de verdad.
 function lineaEnvioTexto(eg) {
   if (!eg.activo) return '';
@@ -2057,7 +2089,7 @@ function lineaEnvioTexto(eg) {
   if (totalCarritoElegible() === 0) return '';
   return eg.alcanzado
     ? '🎉 Tu pedido lleva mensajería gratis'
-    : `Te faltan ${fmt(eg.falta)} CUP para la mensajería gratis`;
+    : `Te faltan ${faltaEnvioTexto(eg.falta)} para la mensajería gratis`;
 }
 
 // Mensajería contabilizada (2026-08-16). tienda.mensajeriaCUP = costo fijo en
@@ -2107,7 +2139,9 @@ function renderFaq() {
   const zonas = Array.isArray(t.zonasMensajeria) ? t.zonasMensajeria : [];
   const tarifas = zonas.filter((z) => z && z.nombre && Number(z.tarifaCUP) > 0).map((z) => {
     const umbral = Number(z.umbralGratisCUP) || 0;
-    return `${z.nombre}: ${fmt(z.tarifaCUP)} CUP` + (umbral > 0 ? `, gratis en pedidos desde ${fmt(umbral)} CUP` : '') + '.';
+    const umbralUSD = Number(z.umbralGratisUSD) || 0;
+    const desde = umbralUSD > 0 ? usdDe2(umbralUSD) : `${fmt(umbral)} CUP`;
+    return `${z.nombre}: ${fmt(z.tarifaCUP)} CUP` + (umbral > 0 ? `, gratis en pedidos desde ${desde}` : '') + '.';
   });
   if (tarifas.length) items.push(['¿Cuánto cuesta la mensajería?', tarifas.join('\n') + (limpio(t.envioGratisTexto) ? '\n' + limpio(t.envioGratisTexto) : '')]);
   if (limpio(t.zonas)) items.push(['¿A qué zonas llegan?', limpio(t.zonas)]);
@@ -2240,7 +2274,7 @@ function renderPromoEnvio() {
   el.hidden = !eg.activo;
   if (!eg.activo) return;
   document.getElementById('promo-envio-texto').textContent =
-    `Pedidos desde ${fmt(eg.umbral)} CUP: mensajería gratis 🚚`;
+    `Pedidos desde ${umbralEnvioTexto(eg)}: mensajería gratis 🚚`;
   const fina = document.getElementById('promo-envio-fina');
   fina.hidden = !eg.textoFino;
   fina.textContent = eg.textoFino;
@@ -2853,14 +2887,14 @@ function enviarPorWhatsApp(ev) {
     lineas.push(m.coordinar
       ? 'Mensajería: a coordinar (transporte aparte)'
       : (m.gratis
-        ? `Mensajería: GRATIS (pedido desde ${fmt(eg.umbral)} CUP)`
+        ? `Mensajería: GRATIS (pedido desde ${umbralEnvioTexto(eg)})`
         : `Mensajería: ${fmt(m.monto)} CUP (se confirma según la zona)`));
     lineas.push(`*Total: ${usdTxt(dWA.usd)} USD${m.monto > 0 ? ` + ${fmt(m.monto)} CUP de mensajería` : ''}*`);
     if (cupTotalWA !== null) lineas.push(`o ${fmt(cupTotalWA)} CUP`);
   } else {
     lineas.push(`*Total: ${usdTxt(dWA.usd)} USD*`);
     if (cupTotalWA !== null) lineas.push(`o ${fmt(cupTotalWA)} CUP`);
-    if (eg.activo && eg.alcanzado) lineas.push(`Mensajería: GRATIS (pedido desde ${fmt(eg.umbral)} CUP)`);
+    if (eg.activo && eg.alcanzado) lineas.push(`Mensajería: GRATIS (pedido desde ${umbralEnvioTexto(eg)})`);
   }
   // El cambio con el que estan hechas estas cuentas, pegado al total: asi el cliente
   // puede comprobar la conversion y Ruth sabe con que tasa se cerro ESTE pedido, aunque
