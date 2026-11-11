@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-11T17:38:49.335Z",
+  "generado": "2026-11-11T22:09:37.269Z",
   "tasa": 915,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -6683,26 +6683,6 @@
       "creado": 1788151078303
     },
     {
-      "id": "p_1782341002481",
-      "codigo": "QW8P",
-      "name": "Repuestos de máquina de afeitar",
-      "cat": "Cuidado Personal",
-      "subcat": "",
-      "notes": "Paquete de 6 repuestos de máquinas de afeitar de 3 hojas",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782340949/productos/icgyi1gsdr1hd3mrng2u.jpg",
-      "precioUSD": 1,
-      "precioCUP": 915,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "espera": true,
-      "envio": {
-        "corto": "🛵 Gratis desde $2.50 USD",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
-      },
-      "creado": 1782341002481
-    },
-    {
       "id": "p_1791228633743",
       "codigo": "NC68",
       "name": "Rollo de papel tapiz autoadhesivo 5m",
@@ -8228,6 +8208,12 @@
       "name": "Reloj plateado de hombre 2",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787457711/productos/mxeigkzj2t54963sib1n.jpg",
       "cat": "Reloj y Prendas"
+    },
+    {
+      "codigo": "QW8P",
+      "name": "Repuestos de máquina de afeitar",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782340949/productos/icgyi1gsdr1hd3mrng2u.jpg",
+      "cat": "Cuidado Personal"
     },
     {
       "codigo": "G739",
