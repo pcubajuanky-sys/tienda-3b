@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-11T13:36:25.507Z",
+  "generado": "2026-11-11T17:33:49.403Z",
   "tasa": 915,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -1855,7 +1855,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 5,
+      "max": 4,
       "envio": {
         "corto": "🛵 Gratis desde $2.50 USD",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
@@ -2216,7 +2216,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 2,
+      "max": 1,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -2344,7 +2344,7 @@
         "C": 1,
         "D": 1,
         "E": 8,
-        "F": 9
+        "F": 8
       },
       "envio": {
         "corto": "🛵 Mensajería gratis",
@@ -2445,7 +2445,7 @@
         ]
       },
       "maxOpciones": {
-        "TRANSPARENTE": 3
+        "TRANSPARENTE": 1
       },
       "envio": {
         "corto": "🛵 Gratis desde $2.50 USD",
@@ -4778,30 +4778,6 @@
       "creado": 1791650740477
     },
     {
-      "id": "p_1793413690950",
-      "codigo": "H8JV",
-      "name": "Paquete de 50 felpas",
-      "cat": "Cabello",
-      "subcat": "",
-      "notes": "",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1793413594/productos/o9tsyyk2qymvzwb8ddaf.jpg",
-      "precioUSD": 2,
-      "precioCUP": 1830,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "fotos": [
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793413599/productos/ya7zmtqfmjkgouos565k.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793413603/productos/lwvib5wg5qvccg46jhni.jpg"
-      ],
-      "espera": true,
-      "envio": {
-        "corto": "🛵 Gratis desde $2.50 USD",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
-      },
-      "creado": 1793413690950
-    },
-    {
       "id": "p_1780609726389",
       "codigo": "NB4J",
       "name": "Paquete de 6 ariposas Brillantes",
@@ -6126,7 +6102,7 @@
       },
       "maxOpciones": {
         "NEGRO CON ROJO / M": 1,
-        "NEGRO CON ROJO / L": 2,
+        "NEGRO CON ROJO / L": 1,
         "NEGRO CON VERDE / M": 5,
         "NEGRO CON VERDE / L": 2
       },
@@ -8026,6 +8002,12 @@
       "codigo": "UBNJ",
       "name": "Paquete de 5 mariposas Brillantes Blancas",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788131774/productos/uzzzxzk5rbvv2wztosn8.jpg",
+      "cat": "Cabello"
+    },
+    {
+      "codigo": "H8JV",
+      "name": "Paquete de 50 felpas",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1793413594/productos/o9tsyyk2qymvzwb8ddaf.jpg",
       "cat": "Cabello"
     },
     {
