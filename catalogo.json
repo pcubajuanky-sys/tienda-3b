@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-11T02:54:52.929Z",
+  "generado": "2026-11-11T05:00:51.176Z",
   "tasa": 920,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -4271,10 +4271,10 @@
       "subcat": "",
       "notes": "Organizador Delgado (Madera) para Baño con Soporte para Papel Higiénico - Gabinete de Almacenamiento de PVC Blanco, Fácil de Montar, Adecuado para Espacios Estrechos, Ideal para Cocina/ Dormitorio/Sala de Estar/Sala de Comedor y Negocios, Estética Moderna, Diseño Minimalista",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785006024/productos/vajsqmfrccqjqcq1bydg.jpg",
-      "precioUSD": 38,
-      "precioCUP": 34960,
+      "precioUSD": 36.1,
+      "precioCUP": 33212,
       "moneda": "usd",
-      "enOferta": false,
+      "enOferta": true,
       "destacado": false,
       "max": 2,
       "envio": {
@@ -4282,7 +4282,9 @@
         "largo": "🛵 MENSAJERÍA GRATIS"
       },
       "envioGratis": true,
-      "creado": 1785006327470
+      "creado": 1785006327470,
+      "precioNormalUSD": 38,
+      "precioNormalCUP": 34960
     },
     {
       "id": "p_1785183311846",
@@ -6809,10 +6811,10 @@
       "subcat": "",
       "notes": "Secador de pelo iónico de 1875W para salón profesional y uso doméstico, 3 niveles de calor/2 velocidades con función Cool Shot, regalo para el Día de la Madre/Navidad para mujeres, negro",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792340203/productos/dgx1nkuhaansb4rmo93y.jpg",
-      "precioUSD": 39.9,
-      "precioCUP": 36708,
+      "precioUSD": 42,
+      "precioCUP": 38640,
       "moneda": "usd",
-      "enOferta": true,
+      "enOferta": false,
       "destacado": false,
       "fotos": [
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1792340210/productos/gvklxkgqwn06hbvqg3km.jpg",
@@ -6826,9 +6828,7 @@
         "largo": "🛵 MENSAJERÍA GRATIS"
       },
       "envioGratis": true,
-      "creado": 1792340423078,
-      "precioNormalUSD": 42,
-      "precioNormalCUP": 38640
+      "creado": 1792340423078
     },
     {
       "id": "p_1782259924259",
@@ -8372,7 +8372,7 @@
     }
   ],
   "ofertaDia": {
-    "codigo": "7W2G",
-    "hasta": 1794373200000
+    "codigo": "V6QG",
+    "hasta": 1794459600000
   }
 }
