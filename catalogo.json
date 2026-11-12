@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-12T00:17:03.702Z",
+  "generado": "2026-11-12T02:28:35.066Z",
   "tasa": 915,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -526,6 +526,11 @@
         "id": "lampara-de-secado-de-gel",
         "nombre": "lámpara de secado de gel",
         "lb": 1.82
+      },
+      {
+        "id": "pelota-de-futbol-desinflada",
+        "nombre": "pelota de futbol desinflada",
+        "lb": 0.66
       }
     ],
     "ejemplos": [
@@ -903,7 +908,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 8,
+      "max": 7,
       "envio": {
         "corto": "🛵 Gratis desde $2.50 USD",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
@@ -4331,6 +4336,33 @@
       "creado": 1785006026615
     },
     {
+      "id": "p_1794450502682",
+      "codigo": "4ZYB",
+      "name": "Oxímetro",
+      "cat": "Electrodomésticos",
+      "subcat": "",
+      "notes": "¡Cuida tu salud de forma fácil y rápida!\n\nCon este práctico oxímetro de dedo, mide tus niveles de oxígeno en sangre y tu pulso en segundos. Cuenta con pantalla OLED de alta definición, sensor de alta precisión y apagado automático para mayor comodidad.\n\n✨ Fácil de usar.\n✨ Resultados rápidos y claros.\n✨ Diseño compacto y portátil.\n\n¡Lleva el control de tu bienestar al alcance de tu mano! 🩺",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1794450367/productos/endmwohk6u2bltusyhmw.jpg",
+      "precioUSD": 5,
+      "precioCUP": 4575,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794450369/productos/ckj14muusoxpkjrtyqbr.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794450386/productos/vlmxdnaegq0sadxtbbyu.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794450395/productos/dy0ifebdvvwsijahdjbp.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794450403/productos/zpkr492wtmumyj2acw3s.jpg"
+      ],
+      "max": 5,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1794450502682
+    },
+    {
       "id": "p_1788730145038",
       "codigo": "3X5B",
       "name": "Papel tapiz Blanco",
@@ -5642,6 +5674,32 @@
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
       },
       "creado": 1780945492775
+    },
+    {
+      "id": "p_1794449913445",
+      "codigo": "V2Y8",
+      "name": "Pelota de futbol profesional",
+      "cat": "Niños",
+      "subcat": "",
+      "notes": "⚽🔥 ¡Lleva tu juego al siguiente nivel! 🔥⚽\n\nDisfruta de nuestras pelotas profesionales de fútbol, con un diseño moderno, colores llamativos y excelente calidad. Ideales para entrenamientos, partidos y competencias.\n\n¡Demuestra tu talento, domina la cancha y juega como un campeón! 🏆\n\n📲 ¡Consigue la tuya hoy!",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1794450114/productos/vb8urgpi8l3hywtrdxks.jpg",
+      "precioUSD": 12,
+      "precioCUP": 10980,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794449756/productos/xvhfxfyal3hcdrbk2zsw.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794450115/productos/hxufvitv0nvxznwk0jjn.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794450130/productos/dsjer1l1mpin7n9gacyg.jpg"
+      ],
+      "max": 2,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1794449913445
     },
     {
       "id": "p_1782329655762",
