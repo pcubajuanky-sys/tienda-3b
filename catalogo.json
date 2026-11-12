@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-12T19:53:28.355Z",
+  "generado": "2026-11-12T20:00:58.906Z",
   "tasa": 910,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -3161,6 +3161,33 @@
       "creado": 1792342171217
     },
     {
+      "id": "p_1794513377026",
+      "codigo": "6G97",
+      "name": "Kit de barbería Profesional de 4 piezas",
+      "cat": "Electrodomésticos",
+      "subcat": "",
+      "notes": "El set completo de cuidado personal en elegante diseño negro y dorado. Todo lo que necesitas para un look impecable en casa.\nQué incluye:\n1. Cortapelos eléctrico\nPotente, con pantalla digital de batería. Ideal para cortes de cabello y barba.\n2. Recortador de precisión\nPerfecto para contornos, patillas y detalles definidos.\n3. Recortador de nariz y orejas\nCompacto, con luces LED. Elimina el vello de forma rápida y segura.\n4. Afeitadora de láminas\nAfeitado suave y cercano, con pantalla digital.\nIncluye: peines guía, cepillo de limpieza y cables de carga USB.\nTodo inalámbrico, fácil de usar y listo para llevar.\n¡Lleva tu estilo al siguiente nivel con Wtispot!",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1794513270/productos/dqt2ro89bmo9axcesobf.jpg",
+      "precioUSD": 35,
+      "precioCUP": 31850,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794513264/productos/rn5zhmr1zho139dm8qrp.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794513278/productos/azigiffyqf3331ajjbnm.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794513284/productos/svpxo4m2qjfjditlbeqa.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794513293/productos/xan1ckofcenkwffy1bsn.jpg"
+      ],
+      "max": 5,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1794513377026
+    },
+    {
       "id": "p_1793418630130",
       "codigo": "A9BG",
       "name": "Kit de coladores de acero inoxidable",
@@ -3286,26 +3313,6 @@
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
       },
       "creado": 1792621415401
-    },
-    {
-      "id": "p_1782329548997",
-      "codigo": "8YTJ",
-      "name": "Labiales Carmelitas",
-      "cat": "Cuidado Personal",
-      "subcat": "",
-      "notes": "Solo disponible en el color más clarito",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782343113/productos/yz4hspngpz00bm2zo20p.jpg",
-      "precioUSD": 0.5,
-      "precioCUP": 455,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "max": 7,
-      "envio": {
-        "corto": "🛵 Gratis desde $2.50 USD",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
-      },
-      "creado": 1782329548998
     },
     {
       "id": "p_1793139148847",
