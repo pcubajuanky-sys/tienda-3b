@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-12T13:08:24.706Z",
+  "generado": "2026-11-12T14:38:24.701Z",
   "tasa": 910,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -1281,7 +1281,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 7,
+      "max": 5,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -2488,9 +2488,7 @@
           "BLANCO"
         ]
       },
-      "maxOpciones": {
-        "PUMA": 1
-      },
+      "espera": true,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -6983,7 +6981,7 @@
         ]
       },
       "maxOpciones": {
-        "NEGRO": 3,
+        "NEGRO": 1,
         "CELESTE": 5
       },
       "envio": {
