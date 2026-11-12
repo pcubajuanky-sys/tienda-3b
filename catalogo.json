@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-12T20:00:58.906Z",
+  "generado": "2026-11-12T20:13:29.838Z",
   "tasa": 910,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -1281,7 +1281,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 4,
+      "max": 5,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -2995,7 +2995,7 @@
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1794450851/productos/awo1p9njjlmbjuucki0t.jpg",
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1794450864/productos/zeuyvnnyokggwendberf.jpg"
       ],
-      "max": 4,
+      "max": 5,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -3215,27 +3215,6 @@
       "creado": 1793418630130
     },
     {
-      "id": "p_1791138282149",
-      "codigo": "BGXQ",
-      "name": "Kit de Máquinas de Pelar y Afeitar",
-      "cat": "Electrodomésticos",
-      "subcat": "",
-      "notes": "Kit de afeitado y corte de pelo para hombre de 3 piezas. Set de caja de regalo para el Día de San Valentín. Recargable por USB. Regalo para novio, regalo del Día del Padre, regalo de cumpleaños, regalo de festividades",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791138172/productos/q6cquakboa0pgukho4am.jpg",
-      "precioUSD": 30,
-      "precioCUP": 27300,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "espera": true,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1791138282149
-    },
-    {
       "id": "p_1782259495565",
       "codigo": "2Q88",
       "name": "Kit de pinzas de cejas",
@@ -3274,7 +3253,7 @@
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1794454942/productos/sszwhvoh7r0vs4ohwmos.jpg",
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1794454953/productos/qfddzcmakkuu5wkc30se.jpg"
       ],
-      "max": 1,
+      "max": 2,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -3890,7 +3869,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 1,
+      "max": 2,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -6904,7 +6883,6 @@
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1794455015/productos/orzhkq0d40ew84wts20d.jpg",
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1794455030/productos/v09mbuoaxsnwrmtn0zoq.jpg"
       ],
-      "max": 9,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -6956,7 +6934,7 @@
         ]
       },
       "maxOpciones": {
-        "NEGRO": 1,
+        "NEGRO": 2,
         "CELESTE": 5
       },
       "envio": {
@@ -7885,6 +7863,12 @@
       "name": "Kit de Máquinas de pelar Profesional",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788538964/productos/l9ohqlvdz5oaimz5laiu.jpg",
       "cat": "Electrónica"
+    },
+    {
+      "codigo": "BGXQ",
+      "name": "Kit de Máquinas de Pelar y Afeitar",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791138172/productos/q6cquakboa0pgukho4am.jpg",
+      "cat": "Electrodomésticos"
     },
     {
       "codigo": "SEJX",
