@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-12T03:48:19.649Z",
+  "generado": "2026-11-12T05:00:41.471Z",
   "tasa": 910,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -2852,10 +2852,10 @@
       "subcat": "",
       "notes": "Hamaca de uso personal con capacidad para adultos y niños",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785007865/productos/cpkmq5uzrq5syrnkbwg0.jpg",
-      "precioUSD": 12,
-      "precioCUP": 10920,
+      "precioUSD": 11.4,
+      "precioCUP": 10374,
       "moneda": "usd",
-      "enOferta": false,
+      "enOferta": true,
       "destacado": false,
       "max": 2,
       "envio": {
@@ -2863,7 +2863,9 @@
         "largo": "🛵 MENSAJERÍA GRATIS"
       },
       "envioGratis": true,
-      "creado": 1785008058883
+      "creado": 1785008058883,
+      "precioNormalUSD": 12,
+      "precioNormalCUP": 10920
     },
     {
       "id": "p_1785008412468",
@@ -4336,10 +4338,10 @@
       "subcat": "",
       "notes": "Organizador Delgado (Madera) para Baño con Soporte para Papel Higiénico - Gabinete de Almacenamiento de PVC Blanco, Fácil de Montar, Adecuado para Espacios Estrechos, Ideal para Cocina/ Dormitorio/Sala de Estar/Sala de Comedor y Negocios, Estética Moderna, Diseño Minimalista",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785006024/productos/vajsqmfrccqjqcq1bydg.jpg",
-      "precioUSD": 36.1,
-      "precioCUP": 32851,
+      "precioUSD": 38,
+      "precioCUP": 34580,
       "moneda": "usd",
-      "enOferta": true,
+      "enOferta": false,
       "destacado": false,
       "max": 2,
       "envio": {
@@ -4347,9 +4349,7 @@
         "largo": "🛵 MENSAJERÍA GRATIS"
       },
       "envioGratis": true,
-      "creado": 1785006327470,
-      "precioNormalUSD": 38,
-      "precioNormalCUP": 34580
+      "creado": 1785006327470
     },
     {
       "id": "p_1785183311846",
@@ -8473,7 +8473,7 @@
     }
   ],
   "ofertaDia": {
-    "codigo": "V6QG",
-    "hasta": 1794459600000
+    "codigo": "BSLH",
+    "hasta": 1794542400000
   }
 }
