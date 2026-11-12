@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-12T16:18:25.157Z",
+  "generado": "2026-11-12T19:53:28.355Z",
   "tasa": 910,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -2462,39 +2462,6 @@
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
       },
       "creado": 1785957052230
-    },
-    {
-      "id": "p_1791773233689",
-      "codigo": "DTBS",
-      "name": "Gafas cristal transparente TIPO RYBAN",
-      "cat": "Accesorio de vestir",
-      "subcat": "",
-      "notes": "Gafas para uso nocturno con cristal anti luz azul. Ideal para el uso constante de pantallas como celular, televisor, laptop etc.. Hermoso y elegante accesorio para salidas,fotos y eventos",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791773062/productos/bycyo579ql5t2imrfueq.jpg",
-      "precioUSD": 3,
-      "precioCUP": 2730,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "variantes": {
-        "ejes": [
-          "Color"
-        ],
-        "opciones": [
-          "PUMA"
-        ],
-        "agotadas": [
-          "NEGRO",
-          "BLANCO"
-        ]
-      },
-      "espera": true,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1791773233689
     },
     {
       "id": "p_1785957866193",
@@ -7280,11 +7247,11 @@
       ],
       "max": 3,
       "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
+        "corto": "🚚 Transporte aparte",
+        "largo": "🚚 Por su tamaño, el transporte se coordina por WhatsApp según tu zona"
       },
-      "envioGratis": true,
-      "creado": 1787765188160
+      "creado": 1787765188160,
+      "envioAparte": true
     },
     {
       "id": "p_1780277915922",
@@ -7862,6 +7829,12 @@
       "codigo": "UZZC",
       "name": "Gafas Cristal Transparente CLÁSICAS",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791773684/productos/pzclpats8lmxuehmfebz.jpg",
+      "cat": "Accesorio de vestir"
+    },
+    {
+      "codigo": "DTBS",
+      "name": "Gafas cristal transparente TIPO RYBAN",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791773062/productos/bycyo579ql5t2imrfueq.jpg",
       "cat": "Accesorio de vestir"
     },
     {
