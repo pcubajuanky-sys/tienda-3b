@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-12T14:38:24.701Z",
+  "generado": "2026-11-12T16:18:25.157Z",
   "tasa": 910,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -1281,7 +1281,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 5,
+      "max": 4,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -2637,7 +2637,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 5,
+      "max": 4,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -2770,7 +2770,7 @@
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1794251502/productos/b9wtluvp67g1t188zrpv.jpg",
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1794251506/productos/jtxk11kifyba0pjd4f21.jpg"
       ],
-      "max": 2,
+      "max": 1,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -3028,7 +3028,7 @@
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1794450851/productos/awo1p9njjlmbjuucki0t.jpg",
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1794450864/productos/zeuyvnnyokggwendberf.jpg"
       ],
-      "max": 5,
+      "max": 4,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -3233,7 +3233,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 5,
+      "espera": true,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -3280,7 +3280,7 @@
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1794454942/productos/sszwhvoh7r0vs4ohwmos.jpg",
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1794454953/productos/qfddzcmakkuu5wkc30se.jpg"
       ],
-      "max": 2,
+      "max": 1,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -3916,7 +3916,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 2,
+      "max": 1,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -6930,6 +6930,7 @@
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1794455015/productos/orzhkq0d40ew84wts20d.jpg",
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1794455030/productos/v09mbuoaxsnwrmtn0zoq.jpg"
       ],
+      "max": 9,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
