@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-13T00:39:28.667Z",
+  "generado": "2026-11-13T04:00:31.785Z",
   "tasa": 910,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -1793,10 +1793,10 @@
       "subcat": "",
       "notes": "Cesto de tela de alta calidad y Súper Gran Capacidad. Agarraderas metálicas",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791728837/productos/la1c8t3m8fmm5pybllmq.jpg",
-      "precioUSD": 7,
-      "precioCUP": 6370,
+      "precioUSD": 6.65,
+      "precioCUP": 6052,
       "moneda": "usd",
-      "enOferta": false,
+      "enOferta": true,
       "destacado": false,
       "max": 3,
       "envio": {
@@ -1804,7 +1804,9 @@
         "largo": "🛵 MENSAJERÍA GRATIS"
       },
       "envioGratis": true,
-      "creado": 1791729019839
+      "creado": 1791729019839,
+      "precioNormalUSD": 7,
+      "precioNormalCUP": 6370
     },
     {
       "id": "p_1785528271738",
@@ -2774,7 +2776,7 @@
         ]
       },
       "maxOpciones": {
-        "NEGRO CON GRIS": 3,
+        "NEGRO CON GRIS": 2,
         "NEGRO CON AZUL": 1
       },
       "envio": {
@@ -2801,7 +2803,7 @@
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1794098968/productos/ijuo58go1pt0ontazuw5.jpg",
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1794098976/productos/lwuazhjnlwikbicbmsla.jpg"
       ],
-      "max": 2,
+      "max": 1,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -2817,10 +2819,10 @@
       "subcat": "",
       "notes": "Hamaca de uso personal con capacidad para adultos y niños",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785007865/productos/cpkmq5uzrq5syrnkbwg0.jpg",
-      "precioUSD": 11.4,
-      "precioCUP": 10374,
+      "precioUSD": 12,
+      "precioCUP": 10920,
       "moneda": "usd",
-      "enOferta": true,
+      "enOferta": false,
       "destacado": false,
       "max": 2,
       "envio": {
@@ -2828,9 +2830,7 @@
         "largo": "🛵 MENSAJERÍA GRATIS"
       },
       "envioGratis": true,
-      "creado": 1785008058883,
-      "precioNormalUSD": 12,
-      "precioNormalCUP": 10920
+      "creado": 1785008058883
     },
     {
       "id": "p_1785008412468",
@@ -3806,7 +3806,7 @@
       },
       "maxOpciones": {
         "BLANCA": 8,
-        "GRIS": 4,
+        "GRIS": 3,
         "CELESTE": 1,
         "NARANJA": 1
       },
@@ -6907,6 +6907,51 @@
       "creado": 1786917303963
     },
     {
+      "id": "p_1794060931787",
+      "codigo": "WHR6",
+      "name": "Short de hombre",
+      "cat": "Ropa",
+      "subcat": "",
+      "notes": "Tela poliéster elastizada. Alta calidad y durabilidad. Ligero, cómodo y resistente. La mejor opción para combinar estética con comodidad",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1794060722/productos/t6stpx8xpqmgcjf6w2qu.jpg",
+      "precioUSD": 6,
+      "precioCUP": 5460,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794060725/productos/yuphokg6eu9uiyaowyo6.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794060729/productos/pr3o4m2g3ehqyl5bxvzl.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794060733/productos/hchefk50ooa4inzj99f7.jpg"
+      ],
+      "variantes": {
+        "ejes": [
+          "Color",
+          "Talla"
+        ],
+        "opciones": [
+          "NEGRO / M",
+          "GRIS / M",
+          "GRIS / L",
+          "AZUL MARINO / M",
+          "AZUL MARINO / L"
+        ]
+      },
+      "maxOpciones": {
+        "NEGRO / M": 2,
+        "GRIS / M": 2,
+        "GRIS / L": 1,
+        "AZUL MARINO / M": 2,
+        "AZUL MARINO / L": 1
+      },
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1794060931787
+    },
+    {
       "id": "p_1790975712067",
       "codigo": "DQCT",
       "name": "Soporte de sel con brazo flexible y pinzas",
@@ -7645,7 +7690,7 @@
     },
     {
       "codigo": "BNMS",
-      "name": "Collar y accesorios dorados de fantasía",
+      "name": "Collar y accesorios dorados",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787501728/productos/eh3psubx3a0fzqndvqk4.jpg",
       "cat": "Reloj y Prendas"
     },
@@ -8431,7 +8476,7 @@
     }
   ],
   "ofertaDia": {
-    "codigo": "BSLH",
-    "hasta": 1794542400000
+    "codigo": "GHDW",
+    "hasta": 1794628800000
   }
 }
