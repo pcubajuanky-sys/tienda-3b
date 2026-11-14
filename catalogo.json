@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-14T15:06:50.144Z",
+  "generado": "2026-11-14T15:28:05.272Z",
   "tasa": 910,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -127,6 +127,10 @@
     {
       "code": "7KPGR",
       "nombre": "Diade"
+    },
+    {
+      "code": "T64JQ",
+      "nombre": "Yurisleisi Calzado Rondón"
     }
   ],
   "categorias": [
