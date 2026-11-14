@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-14T03:18:05.660Z",
+  "generado": "2026-11-14T12:12:19.102Z",
   "tasa": 910,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -1793,10 +1793,10 @@
       "subcat": "",
       "notes": "Cesto de tela de alta calidad y Súper Gran Capacidad. Agarraderas metálicas",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791728837/productos/la1c8t3m8fmm5pybllmq.jpg",
-      "precioUSD": 6.65,
-      "precioCUP": 6052,
+      "precioUSD": 7,
+      "precioCUP": 6370,
       "moneda": "usd",
-      "enOferta": true,
+      "enOferta": false,
       "destacado": false,
       "max": 3,
       "envio": {
@@ -1804,9 +1804,7 @@
         "largo": "🛵 MENSAJERÍA GRATIS"
       },
       "envioGratis": true,
-      "creado": 1791729019839,
-      "precioNormalUSD": 7,
-      "precioNormalCUP": 6370
+      "creado": 1791729019839
     },
     {
       "id": "p_1785528271738",
@@ -3646,7 +3644,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 1,
+      "espera": true,
       "envio": {
         "corto": "🛵 Gratis desde $2.50 USD",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
@@ -5497,7 +5495,7 @@
         "B": 2,
         "C": 2,
         "E": 2,
-        "F": 2,
+        "F": 1,
         "G": 2,
         "H": 2
       },
@@ -7195,17 +7193,19 @@
       "subcat": "",
       "notes": "Tomacorrientes de 20A Maxima Calidad Ideal para súper consumo,no se derriten",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791079338/productos/cfkfobz84waxqznqhbq2.jpg",
-      "precioUSD": 3,
-      "precioCUP": 2730,
+      "precioUSD": 2.85,
+      "precioCUP": 2594,
       "moneda": "usd",
-      "enOferta": false,
+      "enOferta": true,
       "destacado": false,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
       },
       "envioGratis": true,
-      "creado": 1780346613571
+      "creado": 1780346613571,
+      "precioNormalUSD": 3,
+      "precioNormalCUP": 2730
     },
     {
       "id": "p_1790954066390",
@@ -8458,7 +8458,7 @@
     }
   ],
   "ofertaDia": {
-    "codigo": "GHDW",
-    "hasta": 1794628800000
+    "codigo": "YRGG",
+    "hasta": 1794715200000
   }
 }
