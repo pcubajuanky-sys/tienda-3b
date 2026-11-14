@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-14T22:19:13.370Z",
+  "generado": "2026-11-14T22:39:14.018Z",
   "tasa": 910,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -3635,26 +3635,6 @@
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
       },
       "creado": 1788036490389
-    },
-    {
-      "id": "p_1787497927674",
-      "codigo": "65R4",
-      "name": "Llaveros metálicos de gato",
-      "cat": "Accesorio de vestir",
-      "subcat": "",
-      "notes": "Metálicos, lindos, coloridos y duraderos",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787497838/productos/setjhz8tweomovizmlwb.jpg",
-      "precioUSD": 0.7,
-      "precioCUP": 637,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "espera": true,
-      "envio": {
-        "corto": "🛵 Gratis desde $2.50 USD",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
-      },
-      "creado": 1787497927674
     },
     {
       "id": "p_1788533709140",
@@ -7926,6 +7906,12 @@
       "name": "Lija de pies recargable",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790796551/productos/kwe7fu2g8pws8phgffcr.jpg",
       "cat": "Electrodomésticos"
+    },
+    {
+      "codigo": "65R4",
+      "name": "Llaveros metálicos de gato",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787497838/productos/setjhz8tweomovizmlwb.jpg",
+      "cat": "Accesorio de vestir"
     },
     {
       "codigo": "RTWL",
