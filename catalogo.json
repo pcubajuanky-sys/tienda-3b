@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-14T22:04:03.219Z",
+  "generado": "2026-11-14T22:04:32.310Z",
   "tasa": 910,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -8466,5 +8466,25 @@
   "ofertaDia": {
     "codigo": "YRGG",
     "hasta": 1794715200000
+  },
+  "cupones": {
+    "visibles": [],
+    "huellas": [
+      {
+        "h": "26665eadc10431c0d2d48d3285eb47f33f4ef60541a7ee8237fd8c57d4ec73ec",
+        "etiqueta": "",
+        "motivo": "primera",
+        "tipo": "pct",
+        "valor": 3,
+        "monedaFijo": "usd",
+        "topeCUP": 0,
+        "minimoCUP": 0,
+        "hasta": 1795064399000,
+        "conGestor": false,
+        "cats": [],
+        "personal": false,
+        "primera": true
+      }
+    ]
   }
 }
