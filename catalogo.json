@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-14T15:28:05.272Z",
+  "generado": "2026-11-14T22:04:03.219Z",
   "tasa": 910,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -61,16 +61,8 @@
       "nombre": "Nathalie Rodríguez Rodríguez"
     },
     {
-      "code": "T3Q4C",
-      "nombre": "Elizabeth Tamayo"
-    },
-    {
       "code": "TJQRV",
       "nombre": "Marilín"
-    },
-    {
-      "code": "NFYKP",
-      "nombre": "Ivett"
     },
     {
       "code": "VHKNF",
@@ -540,6 +532,16 @@
         "id": "kit-de-5-piezas-de-skincare-de-viaje",
         "nombre": "kit de 5 piezas de SkinCare de viaje",
         "lb": 0.5
+      },
+      {
+        "id": "conjunto-de-cadena-y-aretes-de-acero",
+        "nombre": "conjunto de cadena y aretes de acero",
+        "lb": 0.012
+      },
+      {
+        "id": "conjunto-de-cadena-aretes-anillo-y-dos-m",
+        "nombre": "conjunto de cadena, aretes, anillo y dos manillas metálicos",
+        "lb": 0.06
       }
     ],
     "ejemplos": [
@@ -974,7 +976,7 @@
       },
       "maxOpciones": {
         "NEGRO": 3,
-        "BEIGE": 2
+        "BEIGE": 1
       },
       "envio": {
         "corto": "🛵 Gratis desde $2.50 USD",
@@ -1949,6 +1951,32 @@
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
       },
       "creado": 1792294682081
+    },
+    {
+      "id": "p_1787501959134",
+      "codigo": "BNMS",
+      "name": "Collar y accesorios dorados",
+      "cat": "Reloj y Prendas",
+      "subcat": "",
+      "notes": "El conjunto está compuesto por collar, aretes, anillo, pulsera y pulsera rígida. Elegante y vistoso,para cualquier ocasión. Material principal: Aleación de Zing",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787501728/productos/eh3psubx3a0fzqndvqk4.jpg",
+      "precioUSD": 5,
+      "precioCUP": 4550,
+      "moneda": "cup",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794674521/productos/okj10mirfxz0bvflzjqv.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794674534/productos/eavwprvtantrslsgj3xm.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794674543/productos/x7smntoqggmu7gd5pxwi.jpg"
+      ],
+      "max": 6,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1787501959135
     },
     {
       "id": "p_1787947439148",
@@ -6619,7 +6647,7 @@
         "CONEJO": 3,
         "CACHORRO": 3,
         "POLLITO": 3,
-        "ASTRONAUTA": 2
+        "ASTRONAUTA": 1
       },
       "envio": {
         "corto": "🛵 Gratis desde $2.50 USD",
@@ -7647,12 +7675,6 @@
       "name": "Coladores 4 en 1",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788233901/productos/e48mdoq7eej4zyewrpfa.jpg",
       "cat": "Hogar"
-    },
-    {
-      "codigo": "BNMS",
-      "name": "Collar y accesorios dorados",
-      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787501728/productos/eh3psubx3a0fzqndvqk4.jpg",
-      "cat": "Reloj y Prendas"
     },
     {
       "codigo": "EC4V",
