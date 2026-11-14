@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-14T12:12:19.102Z",
+  "generado": "2026-11-14T15:06:50.144Z",
   "tasa": 910,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -913,7 +913,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 6,
+      "max": 5,
       "envio": {
         "corto": "🛵 Gratis desde $2.50 USD",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
@@ -1202,32 +1202,6 @@
       "creado": 1786922285289,
       "precioNormalUSD": 8,
       "precioNormalCUP": 7280
-    },
-    {
-      "id": "p_1794190276550",
-      "codigo": "N59Y",
-      "name": "Aspiradora recargable",
-      "cat": "Electrodomésticos",
-      "subcat": "",
-      "notes": "Aspiradora recargable, de mano con succión súper fuerte de 6000 PA, gran capacidad de 2000 mAh, de bajo ruido, incluye cinco accesorios a juego, para interiores de coche, hogar y limpieza de mascotas, accesorios de coche rosa femeninos, regalo para mujeres",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1794190107/productos/x9hjc0vrzjvtdefdxjaj.jpg",
-      "precioUSD": 25,
-      "precioCUP": 22750,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "fotos": [
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794190114/productos/xrqbeaytfgx22pghdk6g.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794190120/productos/ljdkjmtpbfcvnmsp1yea.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794190124/productos/dummcqpv3dsbrdh2uovq.jpg"
-      ],
-      "max": 1,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1794190276550
     },
     {
       "id": "p_1781552195237",
@@ -7495,6 +7469,12 @@
       "name": "Asistente de acelerador para motocicleta",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785089991/productos/fse2evmridpgqhg2h0oy.jpg",
       "cat": "Motos / Accesorios"
+    },
+    {
+      "codigo": "N59Y",
+      "name": "Aspiradora recargable",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1794190107/productos/x9hjc0vrzjvtdefdxjaj.jpg",
+      "cat": "Electrodomésticos"
     },
     {
       "codigo": "FWQH",
