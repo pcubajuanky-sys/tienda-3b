@@ -523,6 +523,17 @@
       <button id="btn-cerrar-carrito-2" class="btn btn-suave btn-secundario" type="button">Seguir viendo el catálogo</button>
     </div>
     <div class="vaciar-wrap"><button id="btn-vaciar-panel" class="btn btn-texto btn-vaciar" type="button" hidden>🗑 Vaciar pedido</button></div>
+    <!-- Cupón de descuento (2026-11-13): solo se ve si catalogo.json trae `cupones`. Lo pinta pintarCupon() en app.js. -->
+    <div id="panel-cupon" class="cupon" hidden>
+      <label for="cupon-input" class="cupon-tit">🎟️ ¿Tienes un cupón?</label>
+      <div class="cupon-fila">
+        <input id="cupon-input" class="cupon-input" type="text" inputmode="text" autocomplete="off" autocapitalize="characters" spellcheck="false" maxlength="24" placeholder="Tu código">
+        <button id="cupon-aplicar" class="btn btn-suave" type="button">Aplicar</button>
+        <button id="cupon-quitar" class="btn btn-texto" type="button" hidden>Quitar</button>
+      </div>
+      <div id="cupon-chips" class="cupon-chips" hidden></div>
+      <p id="cupon-estado" class="cupon-estado" role="status" aria-live="polite"></p>
+    </div>
     <div id="carrito-total" class="total"></div>
     <!-- «Añade uno de estos y la mensajería te sale gratis» (2026-10-22). Va ANTES del
          formulario: si fuera después, la clienta ya estaría escribiendo su dirección y no
@@ -631,6 +642,7 @@
 <script src="dinero.js"></script>
 <script src="tarjeta.js"></script>
 <script src="negocio.js"></script>
+<script src="cupon.js"></script>
 <script src="app.js"></script>
 <script src="encargos.js"></script>
 </body>

@@ -1983,6 +1983,138 @@ function totalCarritoUSD() {
 
 function usdTxt(n) { return '$' + Number(n).toFixed(2); }
 
+// ── Cupones (2026-11-13) ──────────────────────────────────────────────────────────────────────
+// El dato viene de catalogo.json -> cupones ({visibles, huellas}); AUSENTE = todo invisible y el
+// mensaje de WhatsApp sale byte a byte como antes. La regla de calculo es cupon.js (gemelo de
+// lib/cupones.js de Stock+). Solo UN cupon. Aqui es una vista previa: Stock+ decide al recibir
+// el pedido (linea `Cupón: CODIGO`) y un cupon que no vale NUNCA bloquea el pedido.
+// 🔴 La busqueda es async (huella sha256) y se hace UNA vez al aplicar: la regla resuelta queda en
+// cuponSel y todo lo demas es sincronico, para que enviarPorWhatsApp siga sin ningun await.
+let cuponSel = null;   // { codigo, regla } ya resuelto
+let cuponMsg = '';     // por que no se pudo aplicar el ultimo intento
+const CLAVE_CUPON = 'cupon:' + NEGOCIO;
+
+function cuponesBloque() { return (CAT && CAT.cupones) || null; }
+
+function guardarCupon() {
+  try {
+    if (cuponSel) localStorage.setItem(CLAVE_CUPON, cuponSel.codigo);
+    else localStorage.removeItem(CLAVE_CUPON);
+  } catch (e) { /* sin memoria: no se recuerda */ }
+}
+
+// null si no hay cupon aplicado (o no se puede calcular). Si hay: { codigo, regla, motivo, texto, desc }.
+function cuponVista() {
+  if (!cuponesBloque() || !cuponSel || !window.Cupon || !hayTasa()) return null;
+  const tasa = window.Dinero.aCUP(1, CAT && CAT.tasa);
+  const items = itemsCarrito().map(({ p, qty }) => ({
+    price: Number(p.precioCUP) || 0, qty: qty, enOferta: !!p.enOferta, cat: p.cat,
+  }));
+  const regla = cuponSel.regla;
+  const motivo = window.Cupon.motivoLocal(regla, { vendedor: !!resolverVendedor(), items });
+  const desc = motivo ? 0 : window.Cupon.calcular(items, regla, tasa).descuentoCUP;
+  return { codigo: cuponSel.codigo, regla, motivo, texto: motivo ? window.Cupon.texto(motivo, regla) : '', desc };
+}
+
+async function aplicarCupon(crudo) {
+  if (!window.Cupon) return;
+  const cod = window.Cupon.normaliza(crudo);
+  if (!cod) { cuponMsg = 'Escribe tu código de cupón.'; renderCarrito(); return; }
+  const regla = await window.Cupon.buscar(cuponesBloque(), cod);
+  if (!regla) {
+    cuponSel = null;
+    cuponMsg = window.Cupon.texto('no-existe');
+  } else {
+    cuponSel = { codigo: cod, regla };
+    cuponMsg = '';
+  }
+  guardarCupon();
+  renderCarrito();
+}
+
+function quitarCupon() {
+  cuponSel = null;
+  cuponMsg = '';
+  guardarCupon();
+  renderCarrito();
+}
+
+// Al cargar el catalogo: vuelve a poner el cupon recordado (si sigue existiendo).
+async function restaurarCupon() {
+  if (!cuponesBloque() || !window.Cupon) return;
+  let cod = '';
+  try { cod = localStorage.getItem(CLAVE_CUPON) || ''; } catch (e) { cod = ''; }
+  if (!cod) return;
+  const regla = await window.Cupon.buscar(cuponesBloque(), cod);
+  if (!regla) { guardarCupon(); return; }
+  cuponSel = { codigo: window.Cupon.normaliza(cod), regla };
+  renderCarrito();
+}
+
+// Pinta la caja del panel (casilla, chips y estado). La casilla NO se toca al repintar: si la
+// clienta esta escribiendo, no se le borra lo escrito.
+function pintarCupon() {
+  const caja = document.getElementById('panel-cupon');
+  if (!caja) return;
+  const bloque = cuponesBloque();
+  const hay = !!bloque && !!window.Cupon && hayTasa() && itemsCarrito().length > 0 && !cerrada();
+  caja.hidden = !hay;
+  if (!hay) return;
+  const chips = document.getElementById('cupon-chips');
+  const ahora = Date.now();
+  const vis = (bloque.visibles || []).filter((x) => !(x.hasta > 0 && ahora > x.hasta));
+  chips.innerHTML = vis.map((x) => {
+    const on = cuponSel && cuponSel.codigo === window.Cupon.normaliza(x.codigo);
+    return `<button type="button" class="cupon-chip${on ? ' on' : ''}" data-codigo="${escapeHtml(x.codigo)}">🎟️ ${escapeHtml(x.etiqueta || x.codigo)}</button>`;
+  }).join('');
+  chips.hidden = !vis.length;
+  document.getElementById('cupon-quitar').hidden = !cuponSel;
+  const est = document.getElementById('cupon-estado');
+  const v = cuponVista();
+  est.classList.remove('ok', 'mal');
+  if (v && !v.motivo) {
+    const confirma = (v.regla.personal || v.regla.primera) ? ' · se confirma con tu número al recibir el pedido' : '';
+    est.textContent = `✅ ${v.codigo}: −${fmt(v.desc)} CUP${confirma}`;
+    est.classList.add('ok');
+  } else if (v) {
+    est.textContent = `⚠️ ${v.texto}`;
+    est.classList.add('mal');
+  } else if (cuponMsg) {
+    est.textContent = `⚠️ ${cuponMsg}`;
+    est.classList.add('mal');
+  } else {
+    est.textContent = '';
+  }
+}
+
+function enganchaCupon() {
+  const caja = document.getElementById('panel-cupon');
+  if (!caja) return;
+  const input = document.getElementById('cupon-input');
+  document.getElementById('cupon-aplicar').addEventListener('click', () => {
+    aplicarCupon(input.value).then(() => { if (cuponSel) input.value = cuponSel.codigo; });
+  });
+  input.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') { e.preventDefault(); document.getElementById('cupon-aplicar').click(); }
+  });
+  document.getElementById('cupon-quitar').addEventListener('click', () => { input.value = ''; quitarCupon(); });
+  document.getElementById('cupon-chips').addEventListener('click', (e) => {
+    const b = e.target.closest('.cupon-chip');
+    if (!b) return;
+    input.value = b.dataset.codigo;
+    aplicarCupon(b.dataset.codigo);
+  });
+}
+
+// Filas del cupon para el bloque de total (vacio sin cupon que valga).
+function cuponTotalHtml() {
+  const v = cuponVista();
+  if (!v || v.motivo || v.desc <= 0) return '';
+  const tot = totalGeneralCUP();
+  return `<div class="desglose-linea desglose-descuento"><span>Cupón ${escapeHtml(v.codigo)}</span><span>−${fmt(v.desc)} CUP</span></div>` +
+    (tot !== null ? `<span class="total-cupon">Total con cupón: ${fmt(tot - v.desc)} CUP</span>` : '');
+}
+
 // Bloque de total, compartido por panel modal y aside (una sola fuente de verdad).
 //
 // Ruth vende en dólares y el cliente paga EN UNA MONEDA O EN LA OTRA, no en las dos: por eso el
@@ -2016,7 +2148,7 @@ function totalBloqueHtml(claseTotal, claseO) {
   const nota = (window.TasaVista && TasaVista.carrito(CAT && CAT.tasa)) || '';
   const tasa = nota ? `<span class="total-tasa">${nota}</span>` : '';
   if (!m.activa) {
-    return rebaja + notaAparteHtml() + pagar + tasa;
+    return rebaja + notaAparteHtml() + pagar + cuponTotalHtml() + tasa;
   }
   return (
     rebaja +
@@ -2028,6 +2160,7 @@ function totalBloqueHtml(claseTotal, claseO) {
     (m.gratis || m.coordinar ? '' : `<p class="desglose-nota">El costo de mensajería depende de la zona; se confirma por WhatsApp.</p>`) +
     notaAparteHtml() +
     `<div class="total-pagas">${pagar}</div>` +
+    cuponTotalHtml() +
     tasa
   );
 }
@@ -2596,6 +2729,7 @@ function pintarCompletarEnvio(idCaja, html) {
 }
 
 function renderCarrito() {
+  pintarCupon();
   const items = itemsCarrito();
   const hayItems = items.length > 0;
   const html = items.map(({ p, qty, clave }) => lineaCarritoHtml(p, qty, clave)).join('');
@@ -2905,6 +3039,14 @@ function enviarPorWhatsApp(ev) {
   // y la tasa: esa pareja no se separa (decision del 2026-10-27, el cambio va pegado al total).
   // Solo si hay algo que presumir, para no escribirle a Ruth un «Ahorraste 0 CUP».
   if (dWA.usdAhorro > 0) lineas.push(`Ahorraste ${parWA(dWA.usdAhorro, dWA.cupAhorro)}`);
+  // Cupón: líneas humanas (no son contrato; el contrato es `Cupón: CODIGO`, más abajo). Sin cupón que
+  // valga no se escribe nada y el mensaje sale como siempre.
+  const cvWA = cuponVista();
+  const cuponOk = !!(cvWA && !cvWA.motivo && cvWA.desc > 0);
+  if (cuponOk) {
+    lineas.push(`🎟️ Descuento del cupón (${cvWA.codigo}): −${fmt(cvWA.desc)} CUP`);
+    if (cupTotalWA !== null) lineas.push(`*Total con cupón: ${fmt(cupTotalWA - cvWA.desc)} CUP*`);
+  }
   lineas.push('');
   const aparteWA = itemsAparte();
   if (aparteWA.length) {
@@ -2916,6 +3058,9 @@ function enviarPorWhatsApp(ev) {
   // el desplegable vino de `tienda.entregas`. Va justo debajo de `Horario:`.
   const turno = turnoElegido();
   if (turno) lineas.push(`Turno: ${turno}`);
+  // 🔴 CONTRATO con lib/pedidoWeb.js de Stock+: `Cupón: CODIGO`, justo debajo de `Turno:` (o de `Horario:`).
+  // Solo uno. Stock+ lo vuelve a validar; si no vale, el pedido entra igual.
+  if (cuponOk) lineas.push(`Cupón: ${cvWA.codigo}`);
   if (nota) lineas.push(`Nota: ${nota}`);
   const politica = politicaTexto();
   if (politica) lineas.push('', politica);
@@ -3159,6 +3304,7 @@ async function cargarCatalogo() {
   renderHero();
   ajustarCarritoATopes();
   guardarCarrito();
+  restaurarCupon();   // async: repinta el carrito cuando resuelve
   renderCarrito();   // el aside lateral (≥1024px) no espera a que se abra el panel modal
   renderFiltroPill();
   renderCategorias3D();
@@ -3259,6 +3405,7 @@ async function iniciar() {
   document.getElementById('btn-cerrar-carrito-2').addEventListener('click', cerrarCarrito);
   document.getElementById('panel-fondo').addEventListener('click', cerrarCarrito);
   document.getElementById('form-pedido').addEventListener('submit', enviarPorWhatsApp);
+  enganchaCupon();
   engancharHorario();
   engancharBuzonAvisos();
   engancharBuzonBaja();

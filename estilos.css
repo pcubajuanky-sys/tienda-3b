@@ -2079,3 +2079,17 @@ textarea.op-campo{resize:vertical;min-height:96px}
 .op-acciones{display:flex;flex-direction:column;gap:var(--e1);margin-top:var(--e2)}
 .op-enviar,.op-cancelar{display:flex;width:100%;min-height:44px;justify-content:center;align-items:center}
 .op-enviar[disabled]{opacity:.5;cursor:not-allowed}
+
+/* Cupón de descuento (2026-11-13). Lo pinta pintarCupon() en app.js; sin catalogo.cupones queda hidden. */
+.cupon{margin:var(--e2) 0;padding:var(--e2);border:1px dashed var(--border);border-radius:var(--radio-md,12px);background:var(--surface)}
+.cupon-tit{display:block;font-size:13px;font-weight:700;color:var(--text);margin:0 0 8px}
+.cupon-fila{display:flex;gap:8px;align-items:center}
+.cupon-input{flex:1;min-width:0;min-height:44px;padding:0 12px;border:1px solid var(--border);border-radius:var(--radio-md,12px);background:var(--bg);color:var(--text);font:inherit;text-transform:uppercase;letter-spacing:.04em}
+.cupon-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.cupon-chip{min-height:36px;padding:0 12px;border:1px solid var(--border);border-radius:999px;background:var(--surface-2);color:var(--text);font:inherit;font-size:13px;font-weight:600;cursor:pointer}
+.cupon-chip.on{border-color:var(--brand);box-shadow:0 0 0 1px var(--brand)}
+.cupon-estado{margin:8px 0 0;font-size:13px;color:var(--text-2)}
+.cupon-estado:empty{display:none}
+.cupon-estado.ok{color:var(--text);font-weight:700}
+.cupon-estado.mal{color:var(--acento)}
+.total-cupon{display:block;font-size:15px;font-weight:800;color:var(--text);margin-top:4px}
