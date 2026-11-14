@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-13T20:04:38.627Z",
+  "generado": "2026-11-14T01:34:41.651Z",
   "tasa": 910,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -1221,7 +1221,7 @@
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1794190120/productos/ljdkjmtpbfcvnmsp1yea.jpg",
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1794190124/productos/dummcqpv3dsbrdh2uovq.jpg"
       ],
-      "max": 2,
+      "max": 1,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -3319,32 +3319,6 @@
       "creado": 1793139148847
     },
     {
-      "id": "p_1794365380729",
-      "codigo": "UWEA",
-      "name": "Lámpara de uñas recargable profesional",
-      "cat": "Uñas",
-      "subcat": "",
-      "notes": "💅✨ ¡Luce uñas perfectas en menos tiempo!\n\nCon la lámpara UV/LED SUN S10, seca y cura tus esmaltes en gel de forma rápida y profesional.\n\n✅ 4 tiempos de secado: 30, 60, 90 y 120 segundos.\n✅ Pantalla LCD digital.\n✅ Diseño moderno y fácil de usar.\n✅ Batería de gran capacidad.\n✅ Ideal para manicuras impecables.\n\n💕 ¡Lleva tu experiencia de salón a casa!\n\n📩 ¡Ordena la tuya hoy!",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1794365135/productos/bnix6r2qv6y4bzgsambj.jpg",
-      "precioUSD": 35,
-      "precioCUP": 31850,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "fotos": [
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794365144/productos/lqhdjs7splou7dalhqef.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794365152/productos/w2hce30vjiaqygwk4a6g.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794365156/productos/qc6ytkpesbmtmxfeoi36.jpg"
-      ],
-      "max": 1,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1794365380729
-    },
-    {
       "id": "p_1782259309845",
       "codigo": "3EA5",
       "name": "Lápiz de ojos",
@@ -3806,7 +3780,7 @@
       },
       "maxOpciones": {
         "BLANCA": 8,
-        "GRIS": 3,
+        "GRIS": 4,
         "CELESTE": 1,
         "NARANJA": 1
       },
@@ -4539,7 +4513,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 2,
+      "max": 1,
       "envio": {
         "corto": "🛵 Gratis desde $2.50 USD",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
@@ -7921,6 +7895,12 @@
       "name": "Lámpara de techo larga",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785769225/productos/kgxujlysuov9mhlgb1fu.jpg",
       "cat": "Decoración"
+    },
+    {
+      "codigo": "UWEA",
+      "name": "Lámpara de uñas recargable profesional",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1794365135/productos/bnix6r2qv6y4bzgsambj.jpg",
+      "cat": "Uñas"
     },
     {
       "codigo": "JSRK",
