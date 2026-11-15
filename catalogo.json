@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-15T14:40:21.002Z",
+  "generado": "2026-11-15T20:54:47.197Z",
   "tasa": 915,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -2067,6 +2067,44 @@
       },
       "envioGratis": true,
       "creado": 1786918098322
+    },
+    {
+      "id": "p_1787942484201",
+      "codigo": "JLJH",
+      "name": "Conjunto de pulceras rígidas plateadas y doradas",
+      "cat": "Reloj y Prendas",
+      "subcat": "",
+      "notes": "Pareja de pulseras plateadas. Aleación de zinc",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1794754143/productos/rn6qmuswrlmsbsteodhz.jpg",
+      "precioUSD": 3.8,
+      "precioCUP": 3477,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794754115/productos/mzfwmu386uaudn6oxudk.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794754126/productos/alf1gtlttfna53rnznmx.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794754139/productos/z8nfbhw09zxwslvekykg.jpg"
+      ],
+      "variantes": {
+        "ejes": [
+          "Color"
+        ],
+        "opciones": [
+          "PLATEADO",
+          "DORADO"
+        ]
+      },
+      "maxOpciones": {
+        "PLATEADO": 3,
+        "DORADO": 3
+      },
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1787942484201
     },
     {
       "id": "p_1787498299932",
@@ -4773,12 +4811,15 @@
       "cat": "Reloj y Prendas",
       "subcat": "",
       "notes": "Paquete de 5 pulseras de colores aleatorios,con lindos mensajes motivacionales, de amistad y de amor. Para amigos  y parejas familiares. Pequeño y emotivo regalo",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791650523/productos/jra0du6i5q6p89za4den.jpg",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1794757400/productos/v4siq4avqqqvjt03sbnd.jpg",
       "precioUSD": 1,
       "precioCUP": 915,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794757400/productos/o1z6qnj3xnk9n2wr4rww.jpg"
+      ],
       "max": 6,
       "envio": {
         "corto": "🛵 Gratis desde $2.50 USD",
@@ -6429,27 +6470,6 @@
       "creado": 1788551044899
     },
     {
-      "id": "p_1781213126908",
-      "codigo": "GVA7",
-      "name": "Reloj inteligente",
-      "cat": "Reloj y Prendas",
-      "subcat": "",
-      "notes": ". Nuevo Smartwatch de Pantalla Grande, Compatible con Android/iPhone, con Llamadas de Voz en HD, Múltiples Modos Deportivos, Ideal para Deportes, Actividades al Aire Libre, Monitoreo del Sueño y Uso Diario. Varias Opciones de Interfaz Disponibles. Regalo Perfecto para el Día del padre\nColor gris. Manilla de silicona y esfera en forma cuadrada de metal plateado",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1781212975/productos/etq4es8z4cjkhhz98cjq.jpg",
-      "precioUSD": 18,
-      "precioCUP": 16470,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "max": 1,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1781213126913
-    },
-    {
       "id": "p_1789489238446",
       "codigo": "MPP5",
       "name": "Reloj y prendas de hombre",
@@ -6516,6 +6536,47 @@
       "creado": 1789500476471
     },
     {
+      "id": "p_1794755288712",
+      "codigo": "R6R6",
+      "name": "Relojes de hombre",
+      "cat": "Reloj y Prendas",
+      "subcat": "",
+      "notes": "Relojes de pila. Esfera de aleación de metales y manilla de silicona, resistente y no pierde el color. Detalles de peso y medidas en las imágenes. Hermoso y elegante prenda para uso diario. El mejor regalo para papá, hermano, esposo o hijo. Presente ideal para el día del maestro",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1794755009/productos/fxqs2gavulkslizgedwo.jpg",
+      "precioUSD": 6,
+      "precioCUP": 5490,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794755017/productos/zq8xusrh9tqwyziye7qo.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794755022/productos/i5wiwtfh4rnnrohtsgx0.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794755028/productos/crek4jgyah365lthtffb.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794755039/productos/wiskmc8egbditadofe3o.jpg"
+      ],
+      "variantes": {
+        "ejes": [
+          "Diseño"
+        ],
+        "opciones": [
+          "NÚMEROS NEGROS",
+          "NÚMEROS PLATEADOS",
+          "NÚMEROS AZULES"
+        ]
+      },
+      "maxOpciones": {
+        "NÚMEROS NEGROS": 1,
+        "NÚMEROS PLATEADOS": 1,
+        "NÚMEROS AZULES": 1
+      },
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1794755288712
+    },
+    {
       "id": "p_1790875375235",
       "codigo": "95W4",
       "name": "Relojes de hombre marca Geneva",
@@ -6553,43 +6614,6 @@
       },
       "envioGratis": true,
       "creado": 1790875375235
-    },
-    {
-      "id": "p_1787458002424",
-      "codigo": "UK8L",
-      "name": "Relojes de mujer",
-      "cat": "Reloj y Prendas",
-      "subcat": "",
-      "notes": "Relojes de mujer de manilla de cuero fina y delicada y muy femenina",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790871607/productos/zwcju68qn8zj0lzwk291.jpg",
-      "precioUSD": 3,
-      "precioCUP": 2745,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "fotos": [
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792721148/productos/hgacsrvtrrad0fk0yoab.jpg"
-      ],
-      "variantes": {
-        "ejes": [
-          "Diseño"
-        ],
-        "opciones": [
-          "C"
-        ],
-        "agotadas": [
-          "B"
-        ]
-      },
-      "maxOpciones": {
-        "C": 1
-      },
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1787458002425
     },
     {
       "id": "p_1794059743222",
@@ -8196,12 +8220,6 @@
       "cat": "Reloj y Prendas"
     },
     {
-      "codigo": "JLJH",
-      "name": "Pulceras rígidas plateadas",
-      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787942382/productos/qa3gwbbj6thh3n6zitmx.jpg",
-      "cat": "Reloj y Prendas"
-    },
-    {
       "codigo": "XVFJ",
       "name": "Pulover de girasol",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789236943/productos/czxnsxgenvatqpkm8wdw.jpg",
@@ -8292,6 +8310,12 @@
       "cat": "Reloj y Prendas"
     },
     {
+      "codigo": "GVA7",
+      "name": "Reloj inteligente",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1781212975/productos/etq4es8z4cjkhhz98cjq.jpg",
+      "cat": "Reloj y Prendas"
+    },
+    {
       "codigo": "2JPR",
       "name": "Reloj inteligente Negro",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1781213510/productos/yipf6w3xkmgluh4tk5ad.jpg",
@@ -8307,6 +8331,12 @@
       "codigo": "4SD3",
       "name": "Reloj plateado de hombre 2",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787457711/productos/mxeigkzj2t54963sib1n.jpg",
+      "cat": "Reloj y Prendas"
+    },
+    {
+      "codigo": "UK8L",
+      "name": "Relojes de mujer",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790871607/productos/zwcju68qn8zj0lzwk291.jpg",
       "cat": "Reloj y Prendas"
     },
     {
