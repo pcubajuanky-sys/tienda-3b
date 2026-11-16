@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-15T20:54:47.197Z",
+  "generado": "2026-11-16T02:13:48.839Z",
   "tasa": 915,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -295,7 +295,7 @@
       ],
       "utcOffsetMin": -240,
       "avisoSinEntrega": "Los domingos no hacemos entregas: empezamos el {Lunes} a las {9.00 am}.",
-      "otroHorario": true
+      "otroHorario": false
     }
   },
   "encargos": {
@@ -1960,9 +1960,9 @@
       "subcat": "",
       "notes": "El conjunto está compuesto por collar, aretes, anillo, pulsera y pulsera rígida. Elegante y vistoso,para cualquier ocasión. Material principal: Aleación de Zing",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787501728/productos/eh3psubx3a0fzqndvqk4.jpg",
-      "precioUSD": 4.97,
-      "precioCUP": 4550,
-      "moneda": "cup",
+      "precioUSD": 5,
+      "precioCUP": 4575,
+      "moneda": "usd",
       "enOferta": false,
       "destacado": false,
       "fotos": [
@@ -3079,7 +3079,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 1,
+      "max": 2,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
