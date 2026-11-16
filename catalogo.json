@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-16T15:36:21.703Z",
+  "generado": "2026-11-16T16:45:46.882Z",
   "tasa": 915,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -2094,7 +2094,7 @@
       },
       "maxOpciones": {
         "PLATEADO": 3,
-        "DORADO": 3
+        "DORADO": 2
       },
       "envio": {
         "corto": "🛵 Mensajería gratis",
@@ -4045,27 +4045,6 @@
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
       },
       "creado": 1793502090428
-    },
-    {
-      "id": "p_1785181129029",
-      "codigo": "BR5L",
-      "name": "Mochila con cartuchera",
-      "cat": "Bolsos Carteras Mochilas monederos",
-      "subcat": "",
-      "notes": "Calidad Premium\nMochila gris con cartuchera negra de alta resistencia. Ideal para adolescentes y jóvenes\nOJO: Mochila grande pero talla escolar, no es tamaño XL para negocios, transportar mercancía etc...",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785180741/productos/ity5mizfzjit3fs0qvsl.jpg",
-      "precioUSD": 13,
-      "precioCUP": 11895,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "espera": true,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1785181129033
     },
     {
       "id": "p_1790619248550",
@@ -6973,43 +6952,6 @@
       "creado": 1790975712068
     },
     {
-      "id": "p_1788546447070",
-      "codigo": "G2DK",
-      "name": "Tablet de niñ@",
-      "cat": "Bocinas Celulares y Accesorios",
-      "subcat": "",
-      "notes": "Solo en Rosado con temática de astronauta. Incluye su cable de carga, un juego de audífonos de cable y un protector con sistema de apollo para mesa y para mejor sostén manual\nCaracterísticas:\nAndroid 14\n7 pulgadas\nWifi 5G\nBatería de gran Capacidad 4500mAh\nDoble camara\n4GB de ram\n128GB de almacenamiento\nPantalla IPS HD de 1280*800 de resolución",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1793414574/productos/x1hgiw777ftvj4pqv9lw.jpg",
-      "precioUSD": 58,
-      "precioCUP": 53070,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "fotos": [
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792339401/productos/snew9r5evw9j2ify38s8.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792339412/productos/wc12g84wqbwyzhrezqnt.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792339437/productos/l96ouuk8bbvlayyrr9d4.jpg"
-      ],
-      "variantes": {
-        "ejes": [
-          "Color"
-        ],
-        "opciones": [
-          "ROSADO"
-        ],
-        "agotadas": [
-          "AZUL"
-        ]
-      },
-      "espera": true,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1788546447071
-    },
-    {
       "id": "p_1785533206456",
       "codigo": "M82M",
       "name": "Tacones 🤍",
@@ -8023,6 +7965,12 @@
       "cat": "Electrodomésticos"
     },
     {
+      "codigo": "BR5L",
+      "name": "Mochila con cartuchera",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785180741/productos/ity5mizfzjit3fs0qvsl.jpg",
+      "cat": "Bolsos Carteras Mochilas monederos"
+    },
+    {
       "codigo": "59MR",
       "name": "Mochila con merendero térmico y cartuchera",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785181840/productos/ndf5fbiqnpecmwhzloks.jpg",
@@ -8422,6 +8370,12 @@
       "codigo": "MAQ8",
       "name": "Soportes para teléfono en forma de silla",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785092261/productos/hbmgly5aw4zcolnpjeun.jpg",
+      "cat": "Bocinas Celulares y Accesorios"
+    },
+    {
+      "codigo": "G2DK",
+      "name": "Tablet de niñ@",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1793414574/productos/x1hgiw777ftvj4pqv9lw.jpg",
       "cat": "Bocinas Celulares y Accesorios"
     },
     {
