@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-16T02:14:14.452Z",
+  "generado": "2026-11-16T02:39:55.130Z",
   "tasa": 915,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -975,9 +975,11 @@
         ]
       },
       "maxOpciones": {
-        "NEGRO": 3,
-        "BEIGE": 1
+        "NEGRO": 2
       },
+      "esperaOpciones": [
+        "BEIGE"
+      ],
       "envio": {
         "corto": "🛵 Gratis desde $2.50 USD",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
@@ -1261,7 +1263,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 5,
+      "max": 4,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -1970,7 +1972,7 @@
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1794674534/productos/eavwprvtantrslsgj3xm.jpg",
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1794674543/productos/x7smntoqggmu7gd5pxwi.jpg"
       ],
-      "max": 6,
+      "max": 1,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -2022,7 +2024,7 @@
         ]
       },
       "maxOpciones": {
-        "ROSA": 3
+        "ROSA": 2
       },
       "envio": {
         "corto": "🛵 Gratis desde $2.50 USD",
@@ -2866,7 +2868,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 2,
+      "espera": true,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -2887,7 +2889,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": true,
-      "max": 2,
+      "max": 1,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -4062,7 +4064,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 1,
+      "espera": true,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -4360,7 +4362,7 @@
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1794450395/productos/dy0ifebdvvwsijahdjbp.jpg",
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1794450403/productos/zpkr492wtmumyj2acw3s.jpg"
       ],
-      "max": 4,
+      "max": 3,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -4684,7 +4686,7 @@
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1792792103/productos/klxse0dwypcxsuqqb7hr.jpg",
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1792792115/productos/rf1p41b8td2fqhzpxckg.jpg"
       ],
-      "max": 3,
+      "max": 2,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -6522,12 +6524,14 @@
         ]
       },
       "maxOpciones": {
-        "ROJO": 1,
         "CELESTE": 1,
         "VERDE CLARO": 1,
         "AMARILLO": 1,
         "NARANJA": 1
       },
+      "esperaOpciones": [
+        "ROJO"
+      ],
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -6647,11 +6651,13 @@
       },
       "maxOpciones": {
         "HELADO": 3,
-        "CONEJO": 3,
+        "CONEJO": 2,
         "CACHORRO": 3,
-        "POLLITO": 3,
-        "ASTRONAUTA": 1
+        "POLLITO": 3
       },
+      "esperaOpciones": [
+        "ASTRONAUTA"
+      ],
       "envio": {
         "corto": "🛵 Gratis desde $2.50 USD",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
@@ -6998,9 +7004,7 @@
           "AZUL"
         ]
       },
-      "maxOpciones": {
-        "ROSADO": 1
-      },
+      "espera": true,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
