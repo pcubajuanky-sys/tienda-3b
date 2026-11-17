@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-17T18:36:01.347Z",
+  "generado": "2026-11-17T22:28:57.371Z",
   "tasa": 925,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -267,9 +267,9 @@
     "taxiActivo": true,
     "encargosActivo": true,
     "cierre": {
-      "activo": false,
-      "titulo": "",
-      "texto": ""
+      "activo": true,
+      "titulo": "🛠️ Estamos en mantenimiento",
+      "texto": "Estamos mejorando la tienda. Puedes mirar los productos, pero ahora mismo no se pueden hacer pedidos. Volvemos enseguida."
     },
     "entregas": {
       "turnos": [
@@ -3551,7 +3551,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 4,
+      "max": 3,
       "envio": {
         "corto": "🛵 Gratis desde $2.50 USD",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
@@ -5022,27 +5022,20 @@
           "Diseño"
         ],
         "opciones": [
-          "B",
+          "B CON G",
           "D",
-          "F",
-          "G",
-          "H",
-          "J"
+          "F"
         ],
         "agotadas": [
           "A CON C",
-          "B CON G",
           "C",
           "E",
           "I"
         ]
       },
       "maxOpciones": {
-        "B": 1,
-        "D": 1,
-        "G": 1,
-        "H": 1,
-        "J": 1
+        "B CON G": 1,
+        "D": 1
       },
       "esperaOpciones": [
         "F"
@@ -6945,7 +6938,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 8,
+      "max": 5,
       "envio": {
         "corto": "🛵 Gratis desde $2.50 USD",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
