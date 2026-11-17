@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-16T23:35:41.929Z",
+  "generado": "2026-11-17T00:40:48.891Z",
   "tasa": 925,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -970,8 +970,10 @@
           "Color"
         ],
         "opciones": [
-          "NEGRO",
           "BEIGE"
+        ],
+        "agotadas": [
+          "NEGRO"
         ]
       },
       "espera": true,
@@ -2461,7 +2463,7 @@
       },
       "maxOpciones": {
         "XS": 2,
-        "S": 2,
+        "S": 1,
         "M": 3
       },
       "envio": {
@@ -3149,33 +3151,6 @@
       "creado": 1791140326794
     },
     {
-      "id": "p_1793410667780",
-      "codigo": "7VS9",
-      "name": "Kit de 4 Pellizcos de pelo de flores",
-      "cat": "Cabello",
-      "subcat": "",
-      "notes": "Hermosos y elegantes pellizcos de tamaño medio. Antideslizantes y de acabado gentil con el cuero cabelludo. Paquete de 4 unidades con los tonos de la imagen",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1793410428/productos/mysuydafgv52ektmscvc.jpg",
-      "precioUSD": 5,
-      "precioCUP": 4625,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "fotos": [
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793410433/productos/zobsq31yfai6ffm0boac.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793410440/productos/cdij9raedymxbfaswbvg.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793410449/productos/zfywvwtxmwjcxdty64uh.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793410453/productos/i4uhfjgxez0yzi6gl9yw.jpg"
-      ],
-      "espera": true,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1793410667780
-    },
-    {
       "id": "p_1792342171217",
       "codigo": "F6BK",
       "name": "Kit de afeitado y corte de cabellos",
@@ -3626,7 +3601,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 6,
+      "max": 4,
       "envio": {
         "corto": "🛵 Gratis desde $2.50 USD",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
@@ -7044,6 +7019,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
+      "max": 8,
       "envio": {
         "corto": "🛵 Gratis desde $2.50 USD",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
@@ -7826,6 +7802,12 @@
       "name": "Juego de 5 Calderos de acero inoxidable",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791143110/productos/pn03og4qehjxbqxyxqpn.jpg",
       "cat": "Hogar"
+    },
+    {
+      "codigo": "7VS9",
+      "name": "Kit de 4 Pellizcos de pelo de flores",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1793410428/productos/mysuydafgv52ektmscvc.jpg",
+      "cat": "Cabello"
     },
     {
       "codigo": "CGUT",
