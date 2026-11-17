@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-17T18:26:01.354Z",
+  "generado": "2026-11-17T18:36:01.347Z",
   "tasa": 925,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -4426,26 +4426,6 @@
       "creado": 1780608108403
     },
     {
-      "id": "p_1780092427629",
-      "codigo": "XFT3",
-      "name": "Paquete de 10 ganchos de silicona",
-      "cat": "Hogar",
-      "subcat": "",
-      "notes": "Cada paquete trae 10 ganchos.",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787956401/productos/x5b7h43xmdftd8ufs5rq.jpg",
-      "precioUSD": 1.5,
-      "precioCUP": 1388,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "espera": true,
-      "envio": {
-        "corto": "🛵 Gratis desde $2.50 USD",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
-      },
-      "creado": 1780092427629
-    },
-    {
       "id": "p_1780608723108",
       "codigo": "3KD5",
       "name": "Paquete de 10 mariposas Metálicas",
@@ -7976,6 +7956,12 @@
       "name": "Papel tapiz ROCA NEGRA Grande",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788633235/productos/exlsh5qdop0qcqi5mbgc.jpg",
       "cat": "Decoración"
+    },
+    {
+      "codigo": "XFT3",
+      "name": "Paquete de 10 ganchos de silicona",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787956401/productos/x5b7h43xmdftd8ufs5rq.jpg",
+      "cat": "Hogar"
     },
     {
       "codigo": "NY5G",
