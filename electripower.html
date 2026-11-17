@@ -595,6 +595,23 @@
         <input type="text" id="c-horario-libre" placeholder="Escribe tu horario" hidden>
         <span class="campo-error" id="err-horario" hidden>Dinos cuándo puedes recibirlo.</span>
       </label>
+      <!-- ¿Hay que llevar cambio? (2026-11-17). Lo engancha app.js (sin onclick: la CSP lo bloquea).
+           Con «No» el pedido sale como siempre; con «Sí» va la línea `Cambio: 20 USD` (cambio.js). -->
+      <div class="campo" id="campo-cambio">
+        <span>¿Hay que llevar cambio?</span>
+        <div class="cambio-opciones" role="radiogroup" aria-label="¿Hay que llevar cambio?">
+          <label class="cambio-op"><input type="radio" name="c-cambio" value="no" checked> <span>No</span></label>
+          <label class="cambio-op"><input type="radio" name="c-cambio" value="si"> <span>Sí</span></label>
+        </div>
+        <div id="c-cambio-datos" class="cambio-datos" hidden>
+          <input type="number" id="c-cambio-monto" min="0" step="any" inputmode="decimal" placeholder="¿Cuánto cambio?" aria-label="Cantidad de cambio">
+          <select id="c-cambio-moneda" aria-label="Moneda del cambio">
+            <option value="usd" selected>USD</option>
+            <option value="cup">CUP</option>
+          </select>
+        </div>
+        <span class="campo-error" id="err-cambio" hidden>Dinos cuánto cambio hay que llevar.</span>
+      </div>
       <label class="campo">
         <span>Nota (opcional)</span>
         <textarea id="c-nota" rows="2"></textarea>
@@ -660,6 +677,7 @@
 <script src="tarjeta.js"></script>
 <script src="negocio.js"></script>
 <script src="cupon.js"></script>
+<script src="cambio.js"></script>
 <script src="app.js"></script>
 <script src="encargos.js"></script>
 </body>

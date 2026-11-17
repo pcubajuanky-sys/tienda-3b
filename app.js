@@ -2962,6 +2962,23 @@ function engancharHorario() {
   });
 }
 
+// ¿Hay que llevar cambio? (2026-11-17). «No» viene marcado; con «Sí» salen cantidad y moneda (USD).
+function cambioSi() {
+  const r = document.querySelector('input[name="c-cambio"]:checked');
+  return !!(r && r.value === 'si');
+}
+function engancharCambio() {
+  const datos = document.getElementById('c-cambio-datos');
+  if (!datos) return;
+  document.querySelectorAll('input[name="c-cambio"]').forEach((r) => {
+    r.addEventListener('change', () => {
+      datos.hidden = !cambioSi();
+      if (!datos.hidden) document.getElementById('c-cambio-monto').focus();
+      marcarError('c-cambio-monto', 'err-cambio', false);
+    });
+  });
+}
+
 function enviarPorWhatsApp(ev) {
   if (ev) ev.preventDefault();
   // Pestaña abierta desde antes de que Ruth cerrara: aquí se corta. La comprobación es
@@ -2990,6 +3007,15 @@ function enviarPorWhatsApp(ev) {
     const primerInvalido = !nombre ? 'c-nombre' : (!tel ? 'c-tel' : (!dir ? 'c-dir' : 'c-horario'));
     document.getElementById(primerInvalido).focus();
     return;
+  }
+  // ¿Hay que llevar cambio? Con «Sí» la cantidad es obligatoria; con «No» no se escribe nada.
+  let lineaCambio = '';
+  if (document.getElementById('c-cambio-datos') && window.Cambio) {
+    const rc = window.Cambio.linea(cambioSi(), document.getElementById('c-cambio-monto').value,
+      document.getElementById('c-cambio-moneda').value);
+    marcarError('c-cambio-monto', 'err-cambio', !rc.ok);
+    if (!rc.ok) { document.getElementById('c-cambio-monto').focus(); return; }
+    lineaCambio = rc.linea;
   }
 
   const v = resolverVendedor();
@@ -3058,6 +3084,8 @@ function enviarPorWhatsApp(ev) {
   // el desplegable vino de `tienda.entregas`. Va justo debajo de `Horario:`.
   const turno = turnoElegido();
   if (turno) lineas.push(`Turno: ${turno}`);
+  // 🔴 CONTRATO con lib/pedidoWeb.js de Stock+ (`Cambio: 20 USD`, 2026-11-17): solo si marcó «Sí».
+  if (lineaCambio) lineas.push(lineaCambio);
   // 🔴 CONTRATO con lib/pedidoWeb.js de Stock+: `Cupón: CODIGO`, justo debajo de `Turno:` (o de `Horario:`).
   // Solo uno. Stock+ lo vuelve a validar; si no vale, el pedido entra igual.
   if (cuponOk) lineas.push(`Cupón: ${cvWA.codigo}`);
@@ -3407,6 +3435,7 @@ async function iniciar() {
   document.getElementById('form-pedido').addEventListener('submit', enviarPorWhatsApp);
   enganchaCupon();
   engancharHorario();
+  engancharCambio();
   engancharBuzonAvisos();
   engancharBuzonBaja();
   const tiraDirs = document.getElementById('dir-guardadas-tira');
