@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-17T01:40:48.994Z",
+  "generado": "2026-11-17T04:00:31.230Z",
   "tasa": 925,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -2835,10 +2835,10 @@
       "subcat": "",
       "notes": "Hamaca de uso personal con capacidad para adultos y niños",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785007865/productos/cpkmq5uzrq5syrnkbwg0.jpg",
-      "precioUSD": 12,
-      "precioCUP": 11100,
+      "precioUSD": 11.4,
+      "precioCUP": 10545,
       "moneda": "usd",
-      "enOferta": false,
+      "enOferta": true,
       "destacado": false,
       "max": 1,
       "envio": {
@@ -2846,7 +2846,9 @@
         "largo": "🛵 MENSAJERÍA GRATIS"
       },
       "envioGratis": true,
-      "creado": 1785008058883
+      "creado": 1785008058883,
+      "precioNormalUSD": 12,
+      "precioNormalCUP": 11100
     },
     {
       "id": "p_1785008412468",
@@ -4186,10 +4188,10 @@
       "subcat": "",
       "notes": "Organizador Delgado (Madera) para Baño con Soporte para Papel Higiénico - Gabinete de Almacenamiento de PVC Blanco, Fácil de Montar, Adecuado para Espacios Estrechos, Ideal para Cocina/ Dormitorio/Sala de Estar/Sala de Comedor y Negocios, Estética Moderna, Diseño Minimalista",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785006024/productos/vajsqmfrccqjqcq1bydg.jpg",
-      "precioUSD": 36.1,
-      "precioCUP": 33393,
+      "precioUSD": 38,
+      "precioCUP": 35150,
       "moneda": "usd",
-      "enOferta": true,
+      "enOferta": false,
       "destacado": false,
       "max": 2,
       "envio": {
@@ -4197,9 +4199,7 @@
         "largo": "🛵 MENSAJERÍA GRATIS"
       },
       "envioGratis": true,
-      "creado": 1785006327470,
-      "precioNormalUSD": 38,
-      "precioNormalCUP": 35150
+      "creado": 1785006327470
     },
     {
       "id": "p_1785183311846",
@@ -8373,8 +8373,8 @@
     }
   ],
   "ofertaDia": {
-    "codigo": "V6QG",
-    "hasta": 1794888000000
+    "codigo": "BSLH",
+    "hasta": 1794974400000
   },
   "cupones": {
     "visibles": [],
