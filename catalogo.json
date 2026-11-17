@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-17T01:35:49.095Z",
+  "generado": "2026-11-17T01:40:15.011Z",
   "tasa": 925,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -3413,32 +3413,6 @@
       },
       "envioGratis": true,
       "creado": 1789233150296
-    },
-    {
-      "id": "p_1789235611281",
-      "codigo": "K4UQ",
-      "name": "Licra levanta/glúteos larga",
-      "cat": "Ropa",
-      "subcat": "",
-      "notes": "Licra larga estilizadora. Función reductora de cintura y levantadora de glúteos.Alta calidad, importadas de USA. Color de la imagen. Talla M reducida",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789235438/productos/pp8qmssraxnetipkstgx.jpg",
-      "precioUSD": 6,
-      "precioCUP": 5550,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "fotos": [
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793457392/productos/orjjpvkvrhbxglztop1v.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793457399/productos/r1ioygpw6tmbghjevrzo.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793457405/productos/huqsjzpeqxo7bxfhhg1h.jpg"
-      ],
-      "espera": true,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1789235611432
     },
     {
       "id": "p_1789235076276",
@@ -7819,6 +7793,12 @@
       "codigo": "JSRK",
       "name": "Licra faja invisible",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792263645/productos/ld6jraupnrz0in6dfnie.jpg",
+      "cat": "Ropa"
+    },
+    {
+      "codigo": "K4UQ",
+      "name": "Licra levanta/glúteos larga",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789235438/productos/pp8qmssraxnetipkstgx.jpg",
       "cat": "Ropa"
     },
     {
