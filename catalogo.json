@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-18T02:11:39.526Z",
+  "generado": "2026-11-18T04:00:29.470Z",
   "tasa": 925,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -1773,10 +1773,10 @@
       "subcat": "",
       "notes": "Cesto de tela de alta calidad y Súper Gran Capacidad. Agarraderas metálicas",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791728837/productos/la1c8t3m8fmm5pybllmq.jpg",
-      "precioUSD": 7,
-      "precioCUP": 6475,
+      "precioUSD": 6.65,
+      "precioCUP": 6151,
       "moneda": "usd",
-      "enOferta": false,
+      "enOferta": true,
       "destacado": false,
       "max": 3,
       "envio": {
@@ -1784,7 +1784,9 @@
         "largo": "🛵 MENSAJERÍA GRATIS"
       },
       "envioGratis": true,
-      "creado": 1791729019839
+      "creado": 1791729019839,
+      "precioNormalUSD": 7,
+      "precioNormalCUP": 6475
     },
     {
       "id": "p_1785528271738",
@@ -2835,10 +2837,10 @@
       "subcat": "",
       "notes": "Hamaca de uso personal con capacidad para adultos y niños",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785007865/productos/cpkmq5uzrq5syrnkbwg0.jpg",
-      "precioUSD": 11.4,
-      "precioCUP": 10545,
+      "precioUSD": 12,
+      "precioCUP": 11100,
       "moneda": "usd",
-      "enOferta": true,
+      "enOferta": false,
       "destacado": false,
       "max": 1,
       "envio": {
@@ -2846,9 +2848,7 @@
         "largo": "🛵 MENSAJERÍA GRATIS"
       },
       "envioGratis": true,
-      "creado": 1785008058883,
-      "precioNormalUSD": 12,
-      "precioNormalCUP": 11100
+      "creado": 1785008058883
     },
     {
       "id": "p_1785008412468",
@@ -8374,8 +8374,8 @@
     }
   ],
   "ofertaDia": {
-    "codigo": "BSLH",
-    "hasta": 1794974400000
+    "codigo": "GHDW",
+    "hasta": 1795060800000
   },
   "cupones": {
     "visibles": [],
