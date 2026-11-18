@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-18T14:55:16.465Z",
+  "generado": "2026-11-18T20:25:17.585Z",
   "tasa": 925,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -1639,6 +1639,30 @@
       "creado": 1790797351648
     },
     {
+      "id": "p_1795032311396",
+      "codigo": "NFBE",
+      "name": "Cables carga Rápida TipoC de 2 metros)",
+      "cat": "Bocinas Celulares y Accesorios",
+      "subcat": "",
+      "notes": "Cable de alta resistencia y durabilidad. Mide 2 metros de largo . Carga rápida. Puertos USB-TipoC",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1795032074/productos/ykuzaqwsg7ji01ufzouu.jpg",
+      "precioUSD": 2.2,
+      "precioCUP": 2035,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1795032123/productos/mzfuvhmdtti47lvffez1.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1795032131/productos/eylrqqumjtmzvafiuxx0.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1795032136/productos/viorc6khxdkwxrltfy5z.jpg"
+      ],
+      "envio": {
+        "corto": "🛵 Gratis desde $2.50 USD",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
+      },
+      "creado": 1795032311396
+    },
+    {
       "id": "p_1787540422288",
       "codigo": "T4RY",
       "name": "Cadena y aretes de acero inoxidable",
@@ -2144,6 +2168,45 @@
       },
       "envioGratis": true,
       "creado": 1791132152189
+    },
+    {
+      "id": "p_1795032902555",
+      "codigo": "X7ST",
+      "name": "Cortinas de luces leds",
+      "cat": "Decoración",
+      "subcat": "",
+      "notes": "Hermosos tonos a elegir, Blanco o Dorado Claro. Alimentación por 3 pilas AA (NO INCLUIDAS). Diferentes modos de alumbrado a elegir por usted. Medidas: 2 metros de altura por 2 metros de ancho.",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1795032592/productos/kmkrsnj1njms5vhcikqu.jpg",
+      "precioUSD": 15,
+      "precioCUP": 13875,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1795032596/productos/hs0v3vs8cpjxzn5oyrdc.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1795032609/productos/l6xe2lhjxkhbaj9wkhps.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1795032616/productos/ynrrh1uuk7rfwgw6zcbc.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1795032628/productos/coj4380dc2p0whr4z8ea.jpg"
+      ],
+      "variantes": {
+        "ejes": [
+          "Color"
+        ],
+        "opciones": [
+          "BLANCO",
+          "DORADO CLARO"
+        ]
+      },
+      "maxOpciones": {
+        "BLANCO": 1,
+        "DORADO CLARO": 3
+      },
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1795032902555
     },
     {
       "id": "p_1794019333016",
