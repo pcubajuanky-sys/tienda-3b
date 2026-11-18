@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-17T22:29:20.699Z",
+  "generado": "2026-11-18T02:11:39.526Z",
   "tasa": 925,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -3285,6 +3285,29 @@
       "creado": 1792621415401
     },
     {
+      "id": "p_1782329548997",
+      "codigo": "8YTJ",
+      "name": "Labiales Carmelitas",
+      "cat": "Cuidado Personal",
+      "subcat": "",
+      "notes": "Solo disponible en el color de la imagen",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1794964129/productos/qf2bbz6jgcsyhqlg1yde.jpg",
+      "precioUSD": 0.5,
+      "precioCUP": 463,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794964138/productos/vzury0mpfs6pwyl8qufa.jpg"
+      ],
+      "max": 6,
+      "envio": {
+        "corto": "🛵 Gratis desde $2.50 USD",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
+      },
+      "creado": 1782329548998
+    },
+    {
       "id": "p_1793139148847",
       "codigo": "FBYR",
       "name": "Lámpara de exterior con panel solar",
@@ -4902,7 +4925,7 @@
       },
       "maxOpciones": {
         "NEGRO": 6,
-        "PLATEADO": 2,
+        "PLATEADO": 3,
         "DORADO": 5
       },
       "envio": {
@@ -5023,13 +5046,13 @@
         ],
         "opciones": [
           "B CON G",
-          "D",
-          "F"
+          "D"
         ],
         "agotadas": [
           "A CON C",
           "C",
           "E",
+          "F",
           "I"
         ]
       },
@@ -5037,9 +5060,6 @@
         "B CON G": 1,
         "D": 1
       },
-      "esperaOpciones": [
-        "F"
-      ],
       "envio": {
         "corto": "🛵 Gratis desde $2.50 USD",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
