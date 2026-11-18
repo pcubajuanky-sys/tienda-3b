@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-18T22:06:42.809Z",
+  "generado": "2026-11-18T22:06:53.719Z",
   "tasa": 925,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -267,9 +267,9 @@
     "taxiActivo": true,
     "encargosActivo": true,
     "cierre": {
-      "activo": true,
-      "titulo": "🛠️ Estamos en mantenimiento",
-      "texto": "Estamos mejorando la tienda. Puedes mirar los productos, pero ahora mismo no se pueden hacer pedidos. Volvemos enseguida."
+      "activo": false,
+      "titulo": "",
+      "texto": ""
     },
     "entregas": {
       "turnos": [
