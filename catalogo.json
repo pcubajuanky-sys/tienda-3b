@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-19T01:45:37.255Z",
+  "generado": "2026-11-19T02:37:27.440Z",
   "tasa": 935,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -1876,13 +1876,28 @@
       "name": "Chancletas de playa 🏖️",
       "cat": "Calzado",
       "subcat": "",
-      "notes": "Tallas 36,37,38y39",
+      "notes": "Tallas 37,38y39",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785528145/productos/cwpx4f9yjkbarg0486ja.jpg",
       "precioUSD": 1.45,
       "precioCUP": 1356,
       "moneda": "usd",
       "enOferta": true,
       "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Tallas"
+        ],
+        "opciones": [
+          "37",
+          "38",
+          "39"
+        ]
+      },
+      "maxOpciones": {
+        "37": 4,
+        "38": 7,
+        "39": 4
+      },
       "envio": {
         "corto": "🛵 Gratis desde $2.50 USD",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
@@ -2915,7 +2930,7 @@
         ]
       },
       "maxOpciones": {
-        "NEGRO CON GRIS": 2,
+        "NEGRO CON GRIS": 1,
         "NEGRO CON AZUL": 1
       },
       "envio": {
@@ -6812,6 +6827,31 @@
       "creado": 1785875419963
     },
     {
+      "id": "p_1795055552021",
+      "codigo": "RSRK",
+      "name": "Sandalias de hombre",
+      "cat": "Calzado",
+      "subcat": "",
+      "notes": "Sandalias de playa Dabble para deportes de verano al aire libre con correa de talón, dos formas de uso, zapatos de jardín de interior, sandalias antideslizantes para hombre para acampar al aire libre, resistentes al desgaste con punta abierta, chanclas para playa y gimnasio. Solamente el #42",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1795055387/productos/ffdbl7btq0e9q4mrsgac.jpg",
+      "precioUSD": 8,
+      "precioCUP": 7480,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1795055390/productos/prxoyj5aai8ea5qdnmfn.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1795055399/productos/cvxc1via4jynxjxpvrdr.jpg"
+      ],
+      "max": 1,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1795055552021
+    },
+    {
       "id": "p_1785534103928",
       "codigo": "T94Y",
       "name": "Sandalias tiras lisas 🖤",
@@ -6984,6 +7024,42 @@
       },
       "envioGratis": true,
       "creado": 1790975712068
+    },
+    {
+      "id": "p_1788546447070",
+      "codigo": "G2DK",
+      "name": "Tablet de niñ@",
+      "cat": "Bocinas Celulares y Accesorios",
+      "subcat": "",
+      "notes": "Solo en Rosado con temática de astronauta. Incluye su cable de carga, un juego de audífonos de cable y un protector con sistema de apollo para mesa y para mejor sostén manual\nCaracterísticas:\nAndroid 14\n7 pulgadas\nWifi 5G\nBatería de gran Capacidad 4500mAh\nDoble camara\n4GB de ram\n128GB de almacenamiento\nPantalla IPS HD de 1280*800 de resolución",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1793414574/productos/x1hgiw777ftvj4pqv9lw.jpg",
+      "precioUSD": 58,
+      "precioCUP": 54230,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792339401/productos/snew9r5evw9j2ify38s8.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792339412/productos/wc12g84wqbwyzhrezqnt.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792339437/productos/l96ouuk8bbvlayyrr9d4.jpg"
+      ],
+      "variantes": {
+        "ejes": [
+          "Color"
+        ],
+        "opciones": [
+          "AZUL"
+        ]
+      },
+      "maxOpciones": {
+        "AZUL": 2
+      },
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1788546447071
     },
     {
       "id": "p_1785533206456",
@@ -8450,12 +8526,6 @@
       "codigo": "MAQ8",
       "name": "Soportes para teléfono en forma de silla",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785092261/productos/hbmgly5aw4zcolnpjeun.jpg",
-      "cat": "Bocinas Celulares y Accesorios"
-    },
-    {
-      "codigo": "G2DK",
-      "name": "Tablet de niñ@",
-      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1793414574/productos/x1hgiw777ftvj4pqv9lw.jpg",
       "cat": "Bocinas Celulares y Accesorios"
     },
     {
