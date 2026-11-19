@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-18T22:50:33.659Z",
+  "generado": "2026-11-19T01:45:37.255Z",
   "tasa": 935,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -542,6 +542,11 @@
         "id": "conjunto-de-cadena-aretes-anillo-y-dos-m",
         "nombre": "conjunto de cadena, aretes, anillo y dos manillas metálicos",
         "lb": 0.06
+      },
+      {
+        "id": "afeitadora-electrica-plastica",
+        "nombre": "afeitadora electrica plástica",
+        "lb": 0.25
       }
     ],
     "ejemplos": [
@@ -947,6 +952,33 @@
       "creado": 1785092425019
     },
     {
+      "id": "p_1795047312703",
+      "codigo": "X42T",
+      "name": "Afeitadora electrica 3en1",
+      "cat": "Electrodomésticos",
+      "subcat": "",
+      "notes": "Depiladora eléctrica 3 en 1 de electrónica de cuidado personal con nuevo diseño 2026 para mujer, recortadora de bikini y afeitadora corporal, recortadora de vello para nariz, orejas, cejas, cara, piernas y axilas, kit de aseo portátil inalámbrico recargable por USB",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1795047144/productos/etebvh4vdfpm4svzbyz1.jpg",
+      "precioUSD": 15,
+      "precioCUP": 14025,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1795047151/productos/qdnxn6ceddagnj05eutz.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1795047155/productos/j711vsikudrrgilxhqon.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1795047163/productos/lpcwt0yflomtay6swrmh.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1795047173/productos/zgfs7edmanysatxmqo4q.jpg"
+      ],
+      "max": 4,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1795047312705
+    },
+    {
       "id": "p_1788814692844",
       "codigo": "C76G",
       "name": "Ajusta invisible sin tirantes",
@@ -1247,6 +1279,32 @@
       "creado": 1781552195237,
       "precioNormalUSD": 0.7,
       "precioNormalCUP": 655
+    },
+    {
+      "id": "p_1790782043818",
+      "codigo": "FWZY",
+      "name": "Audífonos Inalámbricos E6S TWS",
+      "cat": "Bocinas Celulares y Accesorios",
+      "subcat": "",
+      "notes": "Auriculares Inalámbricos E7S TWS con Estuche de Carga y Pantalla Digital LED, Control Táctil, Sonido 9D, Cancelación de Ruido en Llamadas de Voz, Batería Recargable de Polímero de Litio de 150Mah USB, Compatibilidad Universal",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790781910/productos/zzgc9cymptovjyjnbgmi.jpg",
+      "precioUSD": 5,
+      "precioCUP": 4675,
+      "moneda": "cup",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1795047437/productos/yu4pz08yd8kmkcm9uh3i.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1795047443/productos/hdcj7i1kworw5txovsag.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1795047449/productos/y16ilsx3hzs9r3dl1crc.jpg"
+      ],
+      "max": 1,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1790782043818
     },
     {
       "id": "p_1786803816356",
@@ -6524,11 +6582,7 @@
           "NÚMEROS AZULES"
         ]
       },
-      "maxOpciones": {
-        "NÚMEROS NEGROS": 1,
-        "NÚMEROS PLATEADOS": 1,
-        "NÚMEROS AZULES": 1
-      },
+      "espera": true,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -6565,9 +6619,11 @@
         ]
       },
       "maxOpciones": {
-        "D": 1,
-        "E": 2
+        "E": 1
       },
+      "esperaOpciones": [
+        "D"
+      ],
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -7500,12 +7556,6 @@
       "codigo": "39TD",
       "name": "Audífonos Inalámbricos A6S",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791226956/productos/kedky7empch1tl5jw8m9.jpg",
-      "cat": "Bocinas Celulares y Accesorios"
-    },
-    {
-      "codigo": "FWZY",
-      "name": "Audífonos Inalámbricos E7S TWS",
-      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790781910/productos/zzgc9cymptovjyjnbgmi.jpg",
       "cat": "Bocinas Celulares y Accesorios"
     },
     {
