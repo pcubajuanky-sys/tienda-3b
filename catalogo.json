@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-19T14:07:50.674Z",
+  "generado": "2026-11-19T14:08:25.495Z",
   "tasa": 935,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -1090,6 +1090,9 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
+      "colecciones": [
+        "regalar"
+      ],
       "variantes": {
         "ejes": [
           "Color"
@@ -1274,6 +1277,9 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
+      "colecciones": [
+        "regalar"
+      ],
       "fotos": [
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1793417166/productos/a7htmptgfzfaw5mrfsyz.jpg"
       ],
@@ -1410,6 +1416,9 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
+      "colecciones": [
+        "regalar"
+      ],
       "fotos": [
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1793417858/productos/nszvfcjzirznyt0vn4qf.jpg",
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1793417862/productos/uqklb8ihivsh3lrwjnv8.jpg",
@@ -1452,6 +1461,9 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
+      "colecciones": [
+        "regalar"
+      ],
       "fotos": [
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1793417991/productos/wymqjt2sqz2btv30ra4q.jpg",
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1793417994/productos/q5gbcteoprucsrddsptr.jpg"
@@ -1709,6 +1721,9 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
+      "colecciones": [
+        "regalar"
+      ],
       "fotos": [
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1795062793/productos/mw3ginqxcyvsiokvys2d.jpg"
       ],
@@ -2067,6 +2082,9 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
+      "colecciones": [
+        "regalar"
+      ],
       "max": 2,
       "envio": {
         "corto": "🛵 Mensajería gratis",
@@ -2219,6 +2237,9 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
+      "colecciones": [
+        "regalar"
+      ],
       "fotos": [
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1794754115/productos/mzfwmu386uaudn6oxudk.jpg",
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1794754126/productos/alf1gtlttfna53rnznmx.jpg",
@@ -2654,6 +2675,9 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
+      "colecciones": [
+        "regalar"
+      ],
       "variantes": {
         "ejes": [
           "Diseño"
@@ -3089,6 +3113,9 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": true,
+      "colecciones": [
+        "regalar"
+      ],
       "fotos": [
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1791895898/productos/inlfhq5lnjzr48pforax.jpg",
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1791895935/productos/d9kvlfrhshmchtj9web6.jpg",
@@ -3134,6 +3161,9 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
+      "colecciones": [
+        "regalar"
+      ],
       "fotos": [
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1794018105/productos/vhuh3jwtijfcuj17lyhd.jpg",
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1794018109/productos/m5wfoe8lbkwgvvkqinjo.jpg",
@@ -3175,6 +3205,9 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
+      "colecciones": [
+        "regalar"
+      ],
       "fotos": [
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1793502427/productos/valcxdvtidhylinjtai2.jpg",
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1793502430/productos/o0rfyltaodps6d9j4vgi.jpg",
@@ -3213,6 +3246,9 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
+      "colecciones": [
+        "regalar"
+      ],
       "fotos": [
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1794450843/productos/oexeeu7oho07wk58ouaw.jpg",
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1794450851/productos/awo1p9njjlmbjuucki0t.jpg",
@@ -3493,6 +3529,9 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
+      "colecciones": [
+        "regalar"
+      ],
       "fotos": [
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1794454931/productos/breib0loyneyjr1hqaty.jpg",
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1794454936/productos/beyr8toolgiejnbiokf8.jpg",
@@ -3520,6 +3559,9 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
+      "colecciones": [
+        "regalar"
+      ],
       "variantes": {
         "ejes": [
           "Color"
@@ -3575,6 +3617,9 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
+      "colecciones": [
+        "apagones"
+      ],
       "fotos": [
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1793139066/productos/qo0vfbjdlw1gfimhxsti.jpg",
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1793139074/productos/vtijtogl0abuxkx2wtbk.jpg"
@@ -4201,6 +4246,9 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
+      "colecciones": [
+        "apagones"
+      ],
       "fotos": [
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1791895187/productos/eufbuhhx73pfwqlg3hod.jpg",
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1791895195/productos/mpux4dj88sesd9qd7ikp.jpg",
@@ -4247,6 +4295,9 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
+      "colecciones": [
+        "regalar"
+      ],
       "envio": {
         "corto": "🛵 Gratis desde $2.50 USD",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
@@ -4290,6 +4341,9 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
+      "colecciones": [
+        "apagones"
+      ],
       "fotos": [
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1791871044/productos/njfkbi355vvftf3hllyf.jpg",
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1791871054/productos/y6j8b8rc8ud7lranqvj9.jpg",
@@ -4865,6 +4919,9 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
+      "colecciones": [
+        "regalar"
+      ],
       "fotos": [
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1792792089/productos/wmxfiloq9rrb3zdhyeeb.jpg",
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1792792098/productos/nc8uhkjlmbswpbofku55.jpg",
@@ -5004,6 +5061,9 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
+      "colecciones": [
+        "regalar"
+      ],
       "fotos": [
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1794757400/productos/o1z6qnj3xnk9n2wr4rww.jpg"
       ],
@@ -5251,6 +5311,9 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
+      "colecciones": [
+        "regalar"
+      ],
       "variantes": {
         "ejes": [
           "Diseño"
@@ -5415,6 +5478,9 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
+      "colecciones": [
+        "regalar"
+      ],
       "envio": {
         "corto": "🛵 Gratis desde $2.50 USD",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
@@ -6650,6 +6716,9 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
+      "colecciones": [
+        "regalar"
+      ],
       "variantes": {
         "ejes": [
           "Colores"
@@ -6690,6 +6759,9 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
+      "colecciones": [
+        "regalar"
+      ],
       "max": 2,
       "envio": {
         "corto": "🛵 Mensajería gratis",
@@ -6711,6 +6783,9 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
+      "colecciones": [
+        "regalar"
+      ],
       "variantes": {
         "ejes": [
           "Color"
@@ -6793,6 +6868,9 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
+      "colecciones": [
+        "regalar"
+      ],
       "variantes": {
         "ejes": [
           "Diseño"
@@ -6834,6 +6912,9 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
+      "colecciones": [
+        "regalar"
+      ],
       "fotos": [
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1794059493/productos/h4ctn76tmhsiyn9pffn5.jpg",
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1794059543/productos/icp880mdjsce9e5eyjah.jpg",
@@ -7089,6 +7170,9 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
+      "colecciones": [
+        "regalar"
+      ],
       "fotos": [
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1794455001/productos/cyktqi1z98hxt8qbtmcs.jpg",
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1794455015/productos/orzhkq0d40ew84wts20d.jpg",
@@ -7114,6 +7198,9 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
+      "colecciones": [
+        "regalar"
+      ],
       "max": 3,
       "envio": {
         "corto": "🛵 Mensajería gratis",
@@ -7545,6 +7632,9 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
+      "colecciones": [
+        "apagones"
+      ],
       "fotos": [
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1791860121/productos/ngo71i5ur3vbcpizjmsr.jpg",
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1791860131/productos/kmpnzv0qyy4hvxtwg4hp.jpg",
@@ -7572,6 +7662,9 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
+      "colecciones": [
+        "apagones"
+      ],
       "fotos": [
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1791868895/productos/b86kuk4smvvz82fovr3l.jpg",
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1791868908/productos/z50obqs0d6lnljb2okaw.jpg",
@@ -7598,6 +7691,9 @@
       "moneda": "usd",
       "enOferta": true,
       "destacado": true,
+      "colecciones": [
+        "apagones"
+      ],
       "fotos": [
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1791895301/productos/j97m9uldwg3urkay6ymb.jpg",
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1791895310/productos/wunnlnfww1sxwj26kukq.jpg",
@@ -8847,5 +8943,17 @@
         "primera": true
       }
     ]
-  }
+  },
+  "colecciones": [
+    {
+      "id": "regalar",
+      "nombre": "Para regalar",
+      "emoji": "🎁"
+    },
+    {
+      "id": "apagones",
+      "nombre": "Para los apagones",
+      "emoji": "🔦"
+    }
+  ]
 }
