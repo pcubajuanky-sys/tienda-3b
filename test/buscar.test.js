@@ -75,3 +75,26 @@ test('cargarLista: basura devuelve []', () => {
 test('cargarLista: deja solo strings, sin nulos ni repetidos', () => {
   assert.deepStrictEqual(cargarLista('["a",null,"b","a",3,""]'), ['a', 'b']);
 });
+
+const { coincide } = sandbox.window.Buscar;
+
+test('coincide: palabras en cualquier orden y sin acentos', () => {
+  assert.strictEqual(coincide('Audífonos Bluetooth X15', 'bluetooth audifonos'), true);
+  assert.strictEqual(coincide('Audífonos de cable', 'audifonos bluetooth'), false);
+});
+test('coincide: encuentra por sinónimo cubano', () => {
+  assert.strictEqual(coincide('Gafas negras unisex', 'espejuelos'), true);
+  assert.strictEqual(coincide('Ajusta invisible sin tirantes', 'brasier'), true);
+  assert.strictEqual(coincide('Tomacorrientes', 'enchufe'), true);
+});
+test('coincide: un sinónimo exige inicio de palabra', () => {
+  assert.strictEqual(coincide('Desktop negro', 'brasier'), false);
+});
+test('coincide: ignora letras sueltas y texto vacío', () => {
+  assert.strictEqual(coincide('Reloj', 'reloj y'), true);
+  assert.strictEqual(coincide('Reloj', '   '), true);
+});
+test('sugerencias: usa las mismas reglas y mantiene primero lo que empieza igual', () => {
+  const r = sugerencias([{ id: 'a', name: 'Lentes X' }, { id: 'b', name: 'Espejuelos Y' }], 'espejuelos');
+  assert.deepStrictEqual(r.map((p) => p.id), ['b', 'a']);
+});

@@ -199,13 +199,12 @@ function limpiarFallback(img) {
 // ── Filtro y búsqueda ──
 
 function visibles() {
-  const q = normaliza(busqueda);
   const lista = (CAT.items || []).filter((p) => {
     if (filtroOferta && !p.enOferta) return false;
     if (!filtroOferta && filtroCat && p.cat !== filtroCat) return false;
     if (soloFavoritos && favoritos.indexOf(p.id) === -1) return false;
-    if (!q) return true;
-    return normaliza(p.name + ' ' + p.notes + ' ' + p.subcat).includes(q);
+    if (!busqueda.trim()) return true;
+    return window.Buscar.coincide(p.name + ' ' + p.notes + ' ' + p.subcat + ' ' + p.cat, busqueda);
   });
   return window.Orden.filtrarPrecio(lista, rangoPrecio);
 }

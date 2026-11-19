@@ -8,6 +8,52 @@
     return (s || '').toString().normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
   }
 
+  // Palabras que la gente usa para lo mismo. Se comparan sin acentos y al inicio de palabra.
+  const SINONIMOS = [
+    'zapato zapatos zapatilla zapatillas tenis calzado sandalia sandalias tacones',
+    'pulsera pulseras pulcera pulceras manilla manillas',
+    'hebilla hebillas evilla evillas',
+    'apoyo apoyos apollo apollos soporte soportes',
+    'piercing piercings pirsing pirsings',
+    'aretes arete pendientes argollas aretitos',
+    'camisa camisas camiseta camisetas pulover pullover polo',
+    'licra licras lycra leggins',
+    'brasier ajustador ajustadores ajusta sosten top',
+    'blumer blumers bloomer',
+    'cinto cintos cinturon',
+    'gafas espejuelos lentes',
+    'tv television televisor',
+    'cargador powerbank bateria',
+    'linterna faro lampara luces bombillo',
+    'mouse raton',
+    'enchufe tomacorriente tomacorrientes',
+    'bikini trusa',
+    'juguete juguetes juego',
+    'liga ligas felpa felpas liguitas mona',
+    'batidora merenguera espumero',
+    'escuela escolar libreta libretas',
+    'proteina suplemento creatina',
+    'perfume colonia',
+    'audifono audifonos auriculares',
+    'bocina bocinas barra',
+    'cartera carteras billetera billeteras',
+    'celular telefono movil',
+    'mueble muebles closet gavetero organizador',
+  ].map((l) => l.split(' '));
+
+  const conPalabra = (texto, s) => (' ' + texto.replace(/[^a-z0-9]+/g, ' ')).indexOf(' ' + s) !== -1;
+
+  // true si TODAS las palabras buscadas están en el texto, directas o por sinónimo.
+  function coincide(texto, q) {
+    const t = normaliza(texto);
+    const palabras = normaliza(q).trim().split(/\s+/).filter((w) => w.length > 1);
+    return palabras.every((w) => {
+      if (t.indexOf(w) !== -1) return true;
+      const grupo = SINONIMOS.find((g) => g.indexOf(w) !== -1);
+      return !!grupo && grupo.some((s) => conPalabra(t, s));
+    });
+  }
+
   // Hasta `max` productos cuyo nombre contiene lo escrito. Primero los que EMPIEZAN por
   // ello; dentro de cada grupo se respeta el orden de llegada. Con menos de 2 letras, nada.
   function sugerencias(items, q, max) {
@@ -20,7 +66,7 @@
       if (!p) continue;
       const n = normaliza(p.name);
       if (n.indexOf(t) === 0) empieza.push(p);
-      else if (n.indexOf(t) !== -1) contiene.push(p);
+      else if (coincide(p.name, q)) contiene.push(p);
     }
     return empieza.concat(contiene).slice(0, tope);
   }
@@ -44,5 +90,5 @@
     return out;
   }
 
-  window.Buscar = { normaliza: normaliza, sugerencias: sugerencias, anotarReciente: anotarReciente, cargarLista: cargarLista };
+  window.Buscar = { normaliza: normaliza, coincide: coincide, sugerencias: sugerencias, anotarReciente: anotarReciente, cargarLista: cargarLista };
 })();
