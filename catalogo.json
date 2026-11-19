@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-19T02:37:27.440Z",
+  "generado": "2026-11-19T03:25:46.763Z",
   "tasa": 935,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -131,100 +131,88 @@
       "e": "🔌"
     },
     {
-      "n": "Ropa",
-      "e": "👕"
+      "n": "Celulares y Audio",
+      "e": "🎧"
     },
     {
-      "n": "Hogar",
-      "e": "🏠"
+      "n": "Decoración y Fiestas",
+      "e": "🎈"
     },
     {
-      "n": "Muebles",
+      "n": "Salud y Gym",
+      "e": "💪"
+    },
+    {
+      "n": "Muebles y Organizadores",
       "e": "🪑"
     },
     {
-      "n": "Motos / Accesorios",
-      "e": "🏍"
+      "n": "Relojes y Prendas",
+      "e": "⌚"
     },
     {
-      "n": "Otro",
-      "e": "📦"
+      "n": "Calzado y Bolsos",
+      "e": "👜"
     },
     {
-      "n": "Cuidado Personal",
-      "e": "💆🏻"
-    },
-    {
-      "n": "Cabello",
-      "e": "💇🏻"
-    },
-    {
-      "n": "Ferretería",
+      "n": "Ferretería y Seguridad",
       "e": "🛠️"
     },
     {
-      "n": "Niños",
-      "e": "🧸👶"
+      "n": "Motos y Bicicletas",
+      "e": "🏍️"
     },
     {
-      "n": "Perfumería",
-      "e": "🧪"
+      "n": "Hogar y Limpieza",
+      "e": "🏠"
     },
     {
-      "n": "Bocinas Celulares y Accesorios",
-      "e": "📢🎧"
+      "n": "Belleza y Cuidado",
+      "e": "💄"
     },
     {
-      "n": "Bolsos Carteras Mochilas monederos",
-      "e": "🧳"
+      "n": "Barbería",
+      "e": "💈"
     },
     {
-      "n": "Reloj y Prendas",
-      "e": "⌚💍"
+      "n": "Cabello",
+      "e": "💇"
     },
     {
-      "n": "Gym y Suplementos",
-      "e": "💪🏻"
-    },
-    {
-      "n": "Calzado",
-      "e": "👟"
-    },
-    {
-      "n": "Accesorio de vestir",
+      "n": "Gafas y Accesorios",
       "e": "😎"
-    },
-    {
-      "n": "Decoración",
-      "e": "✨🪩"
-    },
-    {
-      "n": "Playa",
-      "e": "🏖️"
-    },
-    {
-      "n": "Confituras",
-      "e": "🍫"
-    },
-    {
-      "n": "Uñas",
-      "e": "💅🏻"
-    },
-    {
-      "n": "Mascotas",
-      "e": "😺🐶"
-    },
-    {
-      "n": "Respaldo energético",
-      "e": "💥"
     },
     {
       "n": "Ropa Interior",
       "e": "👙"
     },
     {
-      "n": "Porcelana",
-      "e": "☕🍽️"
+      "n": "Cocina",
+      "e": "🍳"
+    },
+    {
+      "n": "Ropa de Mujer",
+      "e": "👗"
+    },
+    {
+      "n": "Pulóveres y Ropa de Hombre",
+      "e": "👕"
+    },
+    {
+      "n": "Niños y Escuela",
+      "e": "🧸"
+    },
+    {
+      "n": "Playa y Verano",
+      "e": "🏖️"
+    },
+    {
+      "n": "Mascotas",
+      "e": "🐾"
+    },
+    {
+      "n": "Otro",
+      "e": "📦"
     }
   ],
   "tienda": {
@@ -805,7 +793,7 @@
       "id": "p_1784919312828",
       "codigo": "CLFT",
       "name": "Organizador de Zapatos y accesorios",
-      "cat": "Muebles",
+      "cat": "Muebles y Organizadores",
       "subcat": "",
       "notes": "Organizador multifuncional con perchero, zapatero y banco. Incluye ganchos para chaquetas, bolsos, sombreros y paraguas, más espacio para zapatos. Ideal para mantener la casa ordenada y ahorrar espacio.",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1784918880/productos/eoxba4ovbw1m6qgkxdlx.jpg",
@@ -826,7 +814,7 @@
       "id": "p_1793503339715",
       "codigo": "R4NL",
       "name": "10 tiras de stickers",
-      "cat": "Niños",
+      "cat": "Niños y Escuela",
       "subcat": "",
       "notes": "Calcomanías de niñ@s. El paquete está conformado por 10 tiras de temáticas variadas no elegibles. No son de género marcado,sirve tanto para hembra como para varón, diseños mixtos en cada paquete",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1793503061/productos/biwwt1yz13xoefd024tk.jpg",
@@ -851,7 +839,7 @@
       "id": "p_1782340130001",
       "codigo": "NPRS",
       "name": "2 Paquetes de Aplicadores",
-      "cat": "Cuidado Personal",
+      "cat": "Belleza y Cuidado",
       "subcat": "",
       "notes": "",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782340086/productos/g8ijdb0wchzfnhjqkm48.jpg",
@@ -893,8 +881,8 @@
     {
       "id": "p_1786943265900",
       "codigo": "GZBC",
-      "name": "Aceite especial de gengibre para cabellos",
-      "cat": "Cuidado Personal",
+      "name": "Aceite especial de jengibre para cabellos",
+      "cat": "Cabello",
       "subcat": "",
       "notes": "¡Despierta el poder natural de tu cabello!\nEl aceite esencial de jengibre no es solo un aroma… es un impulso de vida para tu melena.\nEstimula el cuero cabelludo, fortalece desde la raíz, reduce la caída y deja tu cabello más brillante, denso y con un brillo saludable que se nota.\nUnas gotas al día y tu cabello empieza a hablar por ti.\nJengibre puro. Resultados reales.\nTu cabello merece este despertar.",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786943069/productos/bm4t98qh8ogtry5nnpxt.jpg",
@@ -915,7 +903,7 @@
       "id": "p_1789489796373",
       "codigo": "MHFV",
       "name": "Adaptador para celular y tablets (TipoC)",
-      "cat": "Bocinas Celulares y Accesorios",
+      "cat": "Celulares y Audio",
       "subcat": "",
       "notes": "",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789489714/productos/fg4fdehztii5v9yybzgh.jpg",
@@ -935,7 +923,7 @@
       "id": "p_1785092425018",
       "codigo": "N9GA",
       "name": "Adaptador para celular y tablets (V8)",
-      "cat": "Bocinas Celulares y Accesorios",
+      "cat": "Celulares y Audio",
       "subcat": "",
       "notes": "Modelo para celular con entrada V8(micro USB) Colores disponibles :Negro y Blanco",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785092292/productos/qq8aofhovnmthlkpteoy.jpg",
@@ -955,7 +943,7 @@
       "id": "p_1795047312703",
       "codigo": "X42T",
       "name": "Afeitadora electrica 3en1",
-      "cat": "Electrodomésticos",
+      "cat": "Barbería",
       "subcat": "",
       "notes": "Depiladora eléctrica 3 en 1 de electrónica de cuidado personal con nuevo diseño 2026 para mujer, recortadora de bikini y afeitadora corporal, recortadora de vello para nariz, orejas, cejas, cara, piernas y axilas, kit de aseo portátil inalámbrico recargable por USB",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1795047144/productos/etebvh4vdfpm4svzbyz1.jpg",
@@ -1019,7 +1007,7 @@
       "id": "p_1787110390009",
       "codigo": "KLNL",
       "name": "Alarma de puertas y ventanas",
-      "cat": "Electrodomésticos",
+      "cat": "Ferretería y Seguridad",
       "subcat": "",
       "notes": "Alarma ideal para la protección de su casa, de habitaciones, closets o incluso gavetas, TODA SEGURIDAD ES POCA EN ESTOS TIEMPOS!!",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791861204/productos/eqbueci4m1g9m7wiqc8n.jpg",
@@ -1044,7 +1032,7 @@
       "id": "p_1787498809174",
       "codigo": "RWLZ",
       "name": "Anillos de acero quirúrgico",
-      "cat": "Reloj y Prendas",
+      "cat": "Relojes y Prendas",
       "subcat": "",
       "notes": "El precio es por 5 anillos. El paquete trae variedad de tallas y colores tal como en la imagen",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787498630/productos/wuzfqeewkc7rxfvzkhyg.jpg",
@@ -1064,7 +1052,7 @@
       "id": "p_1787499027901",
       "codigo": "7QBW",
       "name": "Anillos de acero quirúrgico fluorescentes",
-      "cat": "Reloj y Prendas",
+      "cat": "Relojes y Prendas",
       "subcat": "",
       "notes": "El precio es por 5 anillos. El paquete trae variedad en tallas y colores tal como en la imagen",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787498788/productos/g5e0hvzdgvwx8iud9jfu.jpg",
@@ -1080,74 +1068,10 @@
       "creado": 1787499027905
     },
     {
-      "id": "p_1781551585230",
-      "codigo": "CQ5X",
-      "name": "Apollo de celular y Mandos para pared",
-      "cat": "Bocinas Celulares y Accesorios",
-      "subcat": "",
-      "notes": "Apollo de celular y Mandos, para colocar en pared (ideal para cuando vas a dormir colgar tu móvil). Incluye su adhesivo para más facil colocación (colores blancos,gris y negros )",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785087860/productos/rvyuo7iwnevw6yztbsh8.jpg",
-      "precioUSD": 1,
-      "precioCUP": 935,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "variantes": {
-        "ejes": [
-          "Color"
-        ],
-        "opciones": [
-          "NEGRO",
-          "GRIS"
-        ]
-      },
-      "maxOpciones": {
-        "NEGRO": 1,
-        "GRIS": 1
-      },
-      "envio": {
-        "corto": "🛵 Gratis desde $2.50 USD",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
-      },
-      "creado": 1781551585230
-    },
-    {
-      "id": "p_1790793838226",
-      "codigo": "MKET",
-      "name": "Apollos de celular",
-      "cat": "Bocinas Celulares y Accesorios",
-      "subcat": "",
-      "notes": "Apollos plásticos para celulares o tablets. Colores disponibles: 🩷 y 💙",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790793416/productos/rpc68jeplxinlu5sylnt.jpg",
-      "precioUSD": 1,
-      "precioCUP": 935,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "variantes": {
-        "ejes": [
-          "Colores"
-        ],
-        "opciones": [
-          "ROSA🩷",
-          "AZUL💙"
-        ]
-      },
-      "maxOpciones": {
-        "ROSA🩷": 3,
-        "AZUL💙": 7
-      },
-      "envio": {
-        "corto": "🛵 Gratis desde $2.50 USD",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
-      },
-      "creado": 1790793838226
-    },
-    {
       "id": "p_1787457398463",
       "codigo": "AQA2",
       "name": "Aretes antialérgicos",
-      "cat": "Reloj y Prendas",
+      "cat": "Relojes y Prendas",
       "subcat": "",
       "notes": "Conjunto de 10 pares de aretes antialérgicos de diseño variado y pequeño. Totalmente de silicona, ideal para pieles sensibles.\nOJO: No es posible la venta por unidad 😔\n🤩",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787457165/productos/qfxp9bk6i7kvkx9gshau.jpg",
@@ -1181,7 +1105,7 @@
       "id": "p_1787497741914",
       "codigo": "987H",
       "name": "Aretes pequeños de acero",
-      "cat": "Reloj y Prendas",
+      "cat": "Relojes y Prendas",
       "subcat": "",
       "notes": "El precio es por 2 pares de aretes de acero quirúrgico. Alta duración. Preciosos diseños",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787497598/productos/kfsbsdkbg3mfgntdwbat.jpg",
@@ -1201,7 +1125,7 @@
       "id": "p_1787498656646",
       "codigo": "YY9F",
       "name": "Argollas de fantasía",
-      "cat": "Reloj y Prendas",
+      "cat": "Relojes y Prendas",
       "subcat": "",
       "notes": "El precio es por 5 pares aleatorios. Puede elegir si los quiere en dorado o en plateado",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787498445/productos/ntlohuqouh4xad5tbkva.jpg",
@@ -1244,7 +1168,7 @@
       "id": "p_1781552195237",
       "codigo": "MY9U",
       "name": "Audífonos de cable",
-      "cat": "Bocinas Celulares y Accesorios",
+      "cat": "Celulares y Audio",
       "subcat": "",
       "notes": "auriculares de cable, Disponibles en múltiples colores (amarillo, rojo, azul, blanco y negro). Ideales para uso masivo, eventos, oficinas o reventa. Conector estándar de 3.5 mm y cable resistente.",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785089518/productos/sowg1nmfxm64pqwy0f5f.jpg",
@@ -1284,7 +1208,7 @@
       "id": "p_1790782043818",
       "codigo": "FWZY",
       "name": "Audífonos Inalámbricos E6S TWS",
-      "cat": "Bocinas Celulares y Accesorios",
+      "cat": "Celulares y Audio",
       "subcat": "",
       "notes": "Auriculares Inalámbricos E7S TWS con Estuche de Carga y Pantalla Digital LED, Control Táctil, Sonido 9D, Cancelación de Ruido en Llamadas de Voz, Batería Recargable de Polímero de Litio de 150Mah USB, Compatibilidad Universal",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790781910/productos/zzgc9cymptovjyjnbgmi.jpg",
@@ -1310,7 +1234,7 @@
       "id": "p_1786803816356",
       "codigo": "DU4A",
       "name": "Audífonos inalámbricos X15",
-      "cat": "Bocinas Celulares y Accesorios",
+      "cat": "Celulares y Audio",
       "subcat": "",
       "notes": "Audífonos inalámbricos X15, ligeros y con su estuche de carga.",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786803730/productos/p34guyzzkxjrpwyw39ya.jpg",
@@ -1331,7 +1255,7 @@
       "id": "p_1793417401142",
       "codigo": "J97W",
       "name": "Auriculares de Bluetooth",
-      "cat": "Bocinas Celulares y Accesorios",
+      "cat": "Celulares y Audio",
       "subcat": "",
       "notes": "Alta calidad de sonido. Auriculares profesionales. Comodidad y estetica en un mismo artículo. Incluye su cable de carga",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1793417160/productos/jmd8co2wcwf2kp3grv3i.jpg",
@@ -1355,7 +1279,7 @@
       "id": "p_1786923820539",
       "codigo": "DATD",
       "name": "Bálsamos labiales",
-      "cat": "Cuidado Personal",
+      "cat": "Belleza y Cuidado",
       "subcat": "",
       "notes": "Bálsamos labiales de deliciosos olores\nTodos los de la imagen disponibles",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786923515/productos/bppuqhw3rdvwcyvtbwex.jpg",
@@ -1404,7 +1328,7 @@
       "id": "p_1789482363354",
       "codigo": "XTB3",
       "name": "Barra de sonido",
-      "cat": "Bocinas Celulares y Accesorios",
+      "cat": "Celulares y Audio",
       "subcat": "",
       "notes": "Altavoz Inalámbrico con Sonido HD. Portátil hasta 10H de Reproducción .Entrada AUX y Tarjeta TF y USB . Altavoces Inalámbricos 5.3 para Hogar/Fiesta/Exteriores. Solo e color negro como en la imagen",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791038875/productos/rxotqclqvwihghohipqw.jpg",
@@ -1425,7 +1349,7 @@
       "id": "p_1785877309060",
       "codigo": "JBG5",
       "name": "Bikini 3 en 1 Manga larga",
-      "cat": "Playa",
+      "cat": "Playa y Verano",
       "subcat": "",
       "notes": "Talla M",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785877196/productos/zdpp1zs4kg8bkem9taba.jpg",
@@ -1446,7 +1370,7 @@
       "id": "p_1785877459055",
       "codigo": "GDQR",
       "name": "Bikini 3en1 de pareo",
-      "cat": "Playa",
+      "cat": "Playa y Verano",
       "subcat": "",
       "notes": "Talla S",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785877334/productos/hjq5zlysusppcspt0bge.jpg",
@@ -1467,7 +1391,7 @@
       "id": "p_1793418043233",
       "codigo": "APMQ",
       "name": "Billeteras de flores",
-      "cat": "Bolsos Carteras Mochilas monederos",
+      "cat": "Calzado y Bolsos",
       "subcat": "",
       "notes": "Hermosas billeteras femeninas con diseño 3D. Alta calidad y resistencia. Bellas cómodas y funcionales",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1793417847/productos/cogr7hgkz70stw3ysbhz.jpg",
@@ -1509,7 +1433,7 @@
       "id": "p_1793418226409",
       "codigo": "2ZNA",
       "name": "Billeteras de mujer",
-      "cat": "Bolsos Carteras Mochilas monederos",
+      "cat": "Calzado y Bolsos",
       "subcat": "",
       "notes": "Hermosas y elegantes billeteras femeninas. Colores neutros que pegan con cualquier atuendo y ocasión. Exactamente el diseño de la imagen original . Dese el gusto de llevar su dinero, teléfono,tarjetas y documentos en una cartera que aunque pequeña,degran uso y utilidad",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1793417990/productos/wznmaixsqlz3vfwcmwc1.jpg",
@@ -1587,7 +1511,7 @@
       "id": "p_1789229417668",
       "codigo": "GYW4",
       "name": "Blusa manga larga",
-      "cat": "Ropa",
+      "cat": "Ropa de Mujer",
       "subcat": "",
       "notes": "Exelente calidad y comodidad. Tela elastizada y duradera. Frescura y protección contra el Sol en una misma pieza.Solo del color de la imagen y en talla S",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789229232/productos/iint1nqsydkjxzi86gsf.jpg",
@@ -1612,7 +1536,7 @@
       "id": "p_1794020176370",
       "codigo": "3G93",
       "name": "Blusas cortas sin costura",
-      "cat": "Ropa",
+      "cat": "Ropa de Mujer",
       "subcat": "",
       "notes": "Tela de poliéster super elastizada y sin costuras, incluye las esponjas que hacen función de ajustador. Tirantes tipo espagueti, más estético y cómodo ya que evita torceduras. La mejor combinación para cualquier outfit",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1794019746/productos/m6lg3qmasviltasdaapr.jpg",
@@ -1655,10 +1579,52 @@
       "creado": 1794020176370
     },
     {
+      "id": "p_1795056605817",
+      "codigo": "PRV4",
+      "name": "Blusitas finas y juveniles",
+      "cat": "Ropa de Mujer",
+      "subcat": "",
+      "notes": "",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1795056371/productos/hwq4crxazhlxjpfptsij.jpg",
+      "precioUSD": 8,
+      "precioCUP": 7480,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1795056374/productos/hzha0boi0kcfgmstxz4z.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1795056386/productos/trf4h9l39g8yvmy7xs84.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1795056395/productos/tadrpkhbokhoigvw8nph.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1795056410/productos/yboj9szv96cxzcn9icrs.jpg"
+      ],
+      "variantes": {
+        "ejes": [
+          "Talla",
+          "Colores"
+        ],
+        "opciones": [
+          "S / CELESTE",
+          "S / VERDE CLARO",
+          "S / BLANCO HUESO"
+        ]
+      },
+      "maxOpciones": {
+        "S / CELESTE": 1,
+        "S / VERDE CLARO": 1,
+        "S / BLANCO HUESO": 1
+      },
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1795056605817
+    },
+    {
       "id": "p_1781215775166",
       "codigo": "9ZY3",
       "name": "Bocina Bluetooth",
-      "cat": "Bocinas Celulares y Accesorios",
+      "cat": "Celulares y Audio",
       "subcat": "",
       "notes": "Dispositivo de audio inalámbrico con altavoces duales, estéreo TWS, llamadas manos libres, radio FM y soporte para tarjetas TF y unidades USB. Se conecta a teléfonos móviles y tabletas. Máxima calidad de sonido",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1781215701/productos/yu7wkzi3wojjmssnk4ec.jpg",
@@ -1679,7 +1645,7 @@
       "id": "p_1790797351647",
       "codigo": "J4ZJ",
       "name": "Bolso fuerte unisex",
-      "cat": "Bolsos Carteras Mochilas monederos",
+      "cat": "Calzado y Bolsos",
       "subcat": "",
       "notes": "Solo en color negro. Tela de mochila ultra resistente. Ideal para el uso diario , prenda de mujer , hombre o niño, sin distinción de género o edad.  Variedad de usos",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790797185/productos/gz6cdwegzssokij4dh6t.jpg",
@@ -1699,8 +1665,8 @@
     {
       "id": "p_1795032311396",
       "codigo": "NFBE",
-      "name": "Cables carga Rápida TipoC de 2 metros)",
-      "cat": "Bocinas Celulares y Accesorios",
+      "name": "Cables de carga rápida Tipo C de 2 metros",
+      "cat": "Celulares y Audio",
       "subcat": "",
       "notes": "Cable de alta resistencia y durabilidad. Mide 2 metros de largo . Carga rápida. Puertos USB-TipoC",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1795032074/productos/ykuzaqwsg7ji01ufzouu.jpg",
@@ -1724,7 +1690,7 @@
       "id": "p_1787540422288",
       "codigo": "T4RY",
       "name": "Cadena y aretes de acero inoxidable",
-      "cat": "Reloj y Prendas",
+      "cat": "Relojes y Prendas",
       "subcat": "",
       "notes": "Variedad de diseños. Escribir al pv para ver los disponibles en ese momento",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788630744/productos/hgygoifuzzmziys2gotz.jpg",
@@ -1744,7 +1710,7 @@
       "id": "p_1790983107410",
       "codigo": "QXG8",
       "name": "Calcomanía para tanque de moto con relieve",
-      "cat": "Motos / Accesorios",
+      "cat": "Motos y Bicicletas",
       "subcat": "",
       "notes": "Juego de almohadillas para tanque de motocicleta y protector de tapa de combustible, calcomanías de PVC para protección contra arañazos del tanque.",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790983010/productos/lrorlkseo574nqnp1ba6.jpg",
@@ -1762,31 +1728,10 @@
       "creado": 1790983107410
     },
     {
-      "id": "p_1790983047647",
-      "codigo": "NM9F",
-      "name": "Calcomanía para tanque de moto Marmoleada",
-      "cat": "Motos / Accesorios",
-      "subcat": "",
-      "notes": "Juego de almohadillas para tanque de motocicleta y protector de tapa de combustible, calcomanías de PVC para protección contra arañazos del tanque.",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791646495/productos/cobqtkiyxarw1gwdfkua.jpg",
-      "precioUSD": 5,
-      "precioCUP": 4675,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "max": 1,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1790983047649
-    },
-    {
       "id": "p_1790801699259",
       "codigo": "96J6",
       "name": "Candado/Alarma de motos y bicicletas de Pilas",
-      "cat": "Motos / Accesorios",
+      "cat": "Motos y Bicicletas",
       "subcat": "",
       "notes": "Candado de disco con alarma para motocicleta, candado antirrobo de seguridad para rueda de disco de motocicleta, sonido de alarma de 110 dB, para motocicletas ligeras, bicicletas, motocicletas y scooters.",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790801561/productos/vnj2xw8zekwu9noskula.jpg",
@@ -1807,7 +1752,7 @@
       "id": "p_1781707937680",
       "codigo": "ECQJ",
       "name": "Candado/Alarma de Motos y Bicicletas Recargable",
-      "cat": "Motos / Accesorios",
+      "cat": "Motos y Bicicletas",
       "subcat": "",
       "notes": "Alarma para Motocicleta con Cerradura de Disco y Línea Recordatoria - Recargable, 130dB de Sonido, Antirrobo e Impermeable, Carga Rápida en 2 Horas, Pasador Universal de 7mm, Adecuada para Cascos, Motos, Bicicletas Eléctricas y de Montaña, Incluye Cordón Recordatorio y Llave Hexagonal",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790879264/productos/r7vnk2bmd3ypfg6yy8vh.jpg",
@@ -1830,7 +1775,7 @@
       "id": "p_1788234125684",
       "codigo": "X8RX",
       "name": "Cesta de lavado",
-      "cat": "Hogar",
+      "cat": "Cocina",
       "subcat": "",
       "notes": "Facilita y agiliza el lavado de granos, frutas y verduras. Cómodo y útil",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788234018/productos/dfybp6rebr6hsibygml1.jpg",
@@ -1851,7 +1796,7 @@
       "id": "p_1791729019839",
       "codigo": "GHDW",
       "name": "Cesto de ropa Premium",
-      "cat": "Hogar",
+      "cat": "Hogar y Limpieza",
       "subcat": "",
       "notes": "Cesto de tela de alta calidad y Súper Gran Capacidad. Agarraderas metálicas",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791728837/productos/la1c8t3m8fmm5pybllmq.jpg",
@@ -1874,7 +1819,7 @@
       "id": "p_1785528271738",
       "codigo": "HZN2",
       "name": "Chancletas de playa 🏖️",
-      "cat": "Calzado",
+      "cat": "Calzado y Bolsos",
       "subcat": "",
       "notes": "Tallas 37,38y39",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785528145/productos/cwpx4f9yjkbarg0486ja.jpg",
@@ -1910,7 +1855,7 @@
       "id": "p_1786969504250",
       "codigo": "FL7Q",
       "name": "Chandal de mujer",
-      "cat": "Ropa",
+      "cat": "Ropa de Mujer",
       "subcat": "",
       "notes": "Pantalón de mujer de nylon, deportivo,fresco y cómodo\nTalla S",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786969396/productos/aplycgoaa7tcwpmtbx7i.jpg",
@@ -1935,7 +1880,7 @@
       "id": "p_1788049609744",
       "codigo": "49N3",
       "name": "Cierre de seguridad",
-      "cat": "Hogar",
+      "cat": "Ferretería y Seguridad",
       "subcat": "",
       "notes": "Fácil instalación adhesiva sin herramientas con un fuerte agarre para nevera, gabinete, puerta de despensa y electrodomésticos de cocina | Cerraduras seguras para puertas y gabinetes para la seguridad del hogar y la cocina - Seguro para mascotas y familiares",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788049482/productos/axnjnxg6zuntczll5kc9.jpg",
@@ -1955,7 +1900,7 @@
       "id": "p_1781005646366",
       "codigo": "29UZ",
       "name": "Cierre de seguridad cuadrado",
-      "cat": "Hogar",
+      "cat": "Ferretería y Seguridad",
       "subcat": "",
       "notes": "",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787956248/productos/tmjn00gx14lhjzoftwbx.jpg",
@@ -2011,7 +1956,7 @@
       "id": "p_1792294682081",
       "codigo": "VQ93",
       "name": "Cintos finos de mujer",
-      "cat": "Accesorio de vestir",
+      "cat": "Gafas y Accesorios",
       "subcat": "",
       "notes": "Variedad de diseños de cinturones de mujer\nMedidas: Entre 1.2 y 1.6cm de ancho y 105cm de largo",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792294486/productos/qzzq64eve7avlh6k1n6c.jpg",
@@ -2055,7 +2000,7 @@
       "id": "p_1787947439148",
       "codigo": "E3JG",
       "name": "Collares de pareja de gatitos",
-      "cat": "Reloj y Prendas",
+      "cat": "Relojes y Prendas",
       "subcat": "",
       "notes": "Pareja de collares de dije de acero quirúrgico de alta calidad",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787947303/productos/wwjl7tnmphipqjbowcip.jpg",
@@ -2076,7 +2021,7 @@
       "id": "p_1782340847017",
       "codigo": "EL4S",
       "name": "Conjunto de 5 Perfiladores",
-      "cat": "Cuidado Personal",
+      "cat": "Belleza y Cuidado",
       "subcat": "",
       "notes": "Perfiladores de cejas, bigote y demás. Exelente calidad y comodidad de uso. El precio es por 5 unidades con Mensajería Gratis",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782340778/productos/p9vpyhp3we5xjff90cb0.jpg",
@@ -2107,7 +2052,7 @@
       "id": "p_1786918098322",
       "codigo": "7NQQ",
       "name": "Conjunto de mochila, bolso y más",
-      "cat": "Bolsos Carteras Mochilas monederos",
+      "cat": "Calzado y Bolsos",
       "subcat": "",
       "notes": "Súper conjunto escolar. Todo lo de la imagen ( mochila, bolsa, carterita, cartuchera......peluche y chapillas decorativas solo para el diseño en azul)\nDisponibles los colores azul y negra\nOJO: Mochila grande pero talla escolar, no es tamaño XL para negocios, transportar mercancía etc...",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788537413/productos/slyafhkdssobyp1tgvlu.jpg",
@@ -2142,10 +2087,31 @@
       "creado": 1786918098322
     },
     {
+      "id": "p_1787498299932",
+      "codigo": "BSUE",
+      "name": "Conjunto de pulseras de cuero",
+      "cat": "Relojes y Prendas",
+      "subcat": "",
+      "notes": "Exacto los diseños de la imagen. El precio es por el conjunto completo. Prendas originales y hermosas.",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787498185/productos/xzhldk5amcaolopit8ep.jpg",
+      "precioUSD": 3,
+      "precioCUP": 2805,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "max": 1,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1787498299932
+    },
+    {
       "id": "p_1787942484201",
       "codigo": "JLJH",
-      "name": "Conjunto de pulceras rígidas plateadas y doradas",
-      "cat": "Reloj y Prendas",
+      "name": "Conjunto de pulseras rígidas plateadas y doradas",
+      "cat": "Relojes y Prendas",
       "subcat": "",
       "notes": "El conjunto consta de todos los diseños de la imagen. Elegible entre dorado o plateado Aleación de zinc",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1794754143/productos/rn6qmuswrlmsbsteodhz.jpg",
@@ -2180,31 +2146,10 @@
       "creado": 1787942484201
     },
     {
-      "id": "p_1787498299932",
-      "codigo": "BSUE",
-      "name": "Conjunto de pulseras de cuero",
-      "cat": "Reloj y Prendas",
-      "subcat": "",
-      "notes": "Exacto los diseños de la imagen. El precio es por el conjunto completo. Prendas originales y hermosas.",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787498185/productos/xzhldk5amcaolopit8ep.jpg",
-      "precioUSD": 3,
-      "precioCUP": 2805,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "max": 1,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1787498299932
-    },
-    {
       "id": "p_1793585333233",
       "codigo": "2SPT",
       "name": "Conjunto de ropa de bebé",
-      "cat": "Niños",
+      "cat": "Niños y Escuela",
       "subcat": "",
       "notes": "🚀 ¡Comodidad para sus pequeñas aventuras! Conjunto infantil de algodón elastizado, suave, fresco y súper cómodo, que acompaña cada movimiento de tu bebé con estilo. 💙",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1793585231/productos/h3fcd75vwz07z72u8jgl.jpg",
@@ -2246,7 +2191,7 @@
       "id": "p_1795032902555",
       "codigo": "X7ST",
       "name": "Cortinas de luces leds",
-      "cat": "Decoración",
+      "cat": "Decoración y Fiestas",
       "subcat": "",
       "notes": "Hermosos tonos a elegir, Blanco o Dorado Claro. Alimentación por 3 pilas AA (NO INCLUIDAS). Diferentes modos de alumbrado a elegir por usted. Medidas: 2 metros de altura por 2 metros de ancho.",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1795032592/productos/kmkrsnj1njms5vhcikqu.jpg",
@@ -2285,7 +2230,7 @@
       "id": "p_1794019333016",
       "codigo": "MEBH",
       "name": "Crema sólida para callosidades",
-      "cat": "Cuidado Personal",
+      "cat": "Belleza y Cuidado",
       "subcat": "",
       "notes": "Crema sólida para la hidratación de zonas duras,la eliminación de callosidades y de grietas. Ideal para talones, codos ,manos ,rodillas o cualquier zona resecada por cuestiones externas o internas",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1794019013/productos/by2b3p0ciymmwue1zbmv.jpg",
@@ -2311,7 +2256,7 @@
       "id": "p_1782259192464",
       "codigo": "PLDE",
       "name": "Delineador Permanente de pincel",
-      "cat": "Cuidado Personal",
+      "cat": "Belleza y Cuidado",
       "subcat": "",
       "notes": "Delineador de Ojos Negro, Punta Ultra Fina Larga, Maquillaje de Larga Duración a Prueba de Líquido y Manchas, Maquillaje Diario, Ojos Definidos, Delineador Audaz, Deslizamiento Fácil, Resistente a las Manchas, Herramienta de Belleza, Lápiz Cosmético, Maquillaje Profesional",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782259080/productos/mbfakfzkcmwaxytpwuov.jpg",
@@ -2373,7 +2318,7 @@
       "id": "p_1788212193696",
       "codigo": "BGWX",
       "name": "Espejo de flor rosada giratorio",
-      "cat": "Hogar",
+      "cat": "Hogar y Limpieza",
       "subcat": "",
       "notes": "Solo disponible en color rosado\n19cm de alto",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788212042/productos/yw0dmsoqnsurdtvaakyd.jpg",
@@ -2394,7 +2339,7 @@
       "id": "p_1787088450511",
       "codigo": "TF6K",
       "name": "Esponjas de baño",
-      "cat": "Hogar",
+      "cat": "Hogar y Limpieza",
       "subcat": "",
       "notes": "Esponjas de baño de variedad de colores 🌈",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791646509/productos/hpgyka4hnhygbxsumvre.jpg",
@@ -2413,7 +2358,7 @@
       "id": "p_1785733992043",
       "codigo": "5GL5",
       "name": "Estrellitas Fluorescentes (250 unidades)",
-      "cat": "Decoración",
+      "cat": "Decoración y Fiestas",
       "subcat": "",
       "notes": "Paquete de 250 estrellitas con su adhesivo.\nEstrellas fosforescentes que brillan en la oscuridad\nLleva el cielo a tu habitación. Pack de estrellas adhesivas en colores vivos (verde, azul, amarillo y rosa). Ideales para decorar paredes, techos o habitaciones infantiles.\nBrillan varias horas tras absorber luz. Fáciles de colocar y retirar.",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791294581/productos/j5daxkdp8nlct720u1ht.jpg",
@@ -2434,7 +2379,7 @@
       "id": "p_1788840928879",
       "codigo": "B8ZZ",
       "name": "Etiquetas infantiles para Libretas y Libros",
-      "cat": "Niños",
+      "cat": "Niños y Escuela",
       "subcat": "",
       "notes": "Etiquetas autoadhesivas para nombrar las libretas y demás pertenencias de los niños. Diseños femeninos y masculinos. Tamaño exacto detallado en la imagen. El precio es por un rollo de 20 etiquetas",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1793583973/productos/qrraioohftbauxlch7sf.jpg",
@@ -2473,9 +2418,497 @@
       "creado": 1788840928879
     },
     {
+      "id": "p_1788816392396",
+      "codigo": "5BVR",
+      "name": "Fajas Colombianas",
+      "cat": "Ropa Interior",
+      "subcat": "",
+      "notes": "Fajas colombianas tipo short de cintura alta levantadoras y moldeadora. Control de abdomen, paneles de encaje y compresión para moldear muslos, realzadoras, adecuadas para figura de reloj de arena, entrenamiento y atuendo casual",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788816300/productos/brqlriw0fxdiuf8bfv8s.jpg",
+      "precioUSD": 25,
+      "precioCUP": 23375,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Talla"
+        ],
+        "opciones": [
+          "M"
+        ]
+      },
+      "maxOpciones": {
+        "M": 2
+      },
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1788816392396
+    },
+    {
+      "id": "p_1785357151546",
+      "codigo": "Y7AU",
+      "name": "Fajas reforzadas",
+      "cat": "Salud y Gym",
+      "subcat": "",
+      "notes": "Faja negra, reforzada ,de alta calidad, ideal para el uso diario y para el gim. Doble cierre y varillas con función de corset, reductora de vientre y cintura",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785357112/productos/dz1cu8j2jdy3tlzcpvjn.jpg",
+      "precioUSD": 10,
+      "precioCUP": 9350,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Tallas"
+        ],
+        "opciones": [
+          "XS",
+          "S",
+          "M"
+        ]
+      },
+      "maxOpciones": {
+        "XS": 2,
+        "S": 1,
+        "M": 3
+      },
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1785357151546
+    },
+    {
+      "id": "p_1785957052228",
+      "codigo": "8X9D",
+      "name": "Gafas Cristal transparente",
+      "cat": "Gafas y Accesorios",
+      "subcat": "",
+      "notes": "Protección contra luz azul, ideal para personas que usan mucho pantallas como celulares ,laptops y televisión.\nTambién es un muy buen accesorio para personas que manejan moto en horario nocturno, protege los ojos sin afectar la visibilidad en la oscuridad",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785956773/productos/gufvuhffd4ibygz29anq.jpg",
+      "precioUSD": 2,
+      "precioCUP": 1870,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Color"
+        ],
+        "opciones": [
+          "TRANSPARENTE"
+        ],
+        "agotadas": [
+          "NEGRO",
+          "GRIS"
+        ]
+      },
+      "maxOpciones": {
+        "TRANSPARENTE": 1
+      },
+      "envio": {
+        "corto": "🛵 Gratis desde $2.50 USD",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
+      },
+      "creado": 1785957052230
+    },
+    {
+      "id": "p_1785957866193",
+      "codigo": "WXA3",
+      "name": "Gafas de Sol medianas",
+      "cat": "Gafas y Accesorios",
+      "subcat": "",
+      "notes": "Tamaño mediano. Modelo ideal tanto para hombres como para mujeres\nDisponibles todos los diseños de la imagen",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792326212/productos/oykcu5rbvo0c6m2dgqvm.jpg",
+      "precioUSD": 2,
+      "precioCUP": 1870,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Diseño"
+        ],
+        "opciones": [
+          "A",
+          "B",
+          "D"
+        ],
+        "agotadas": [
+          "C",
+          "E",
+          "F"
+        ]
+      },
+      "maxOpciones": {
+        "A": 3,
+        "B": 5,
+        "D": 8
+      },
+      "envio": {
+        "corto": "🛵 Gratis desde $2.50 USD",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
+      },
+      "creado": 1785957866194
+    },
+    {
+      "id": "p_1785961108734",
+      "codigo": "5PUW",
+      "name": "Gafas modelos mixtos",
+      "cat": "Gafas y Accesorios",
+      "subcat": "",
+      "notes": "Variedad de diseños tanto para hombres como para mujeres y adolescentes",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792676965/productos/mommid6awffeluijvf27.jpg",
+      "precioUSD": 1.5,
+      "precioCUP": 1403,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Diseño"
+        ],
+        "opciones": [
+          "A",
+          "B",
+          "D"
+        ],
+        "agotadas": [
+          "C"
+        ]
+      },
+      "maxOpciones": {
+        "A": 3,
+        "B": 1,
+        "D": 2
+      },
+      "envio": {
+        "corto": "🛵 Gratis desde $2.50 USD",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
+      },
+      "creado": 1785961108734
+    },
+    {
+      "id": "p_1785959109839",
+      "codigo": "Z222",
+      "name": "Gafas negras unisex",
+      "cat": "Gafas y Accesorios",
+      "subcat": "",
+      "notes": "Exactamente el diseño de la imagen",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785959018/productos/myajl2zdcccmbh4wnjqq.jpg",
+      "precioUSD": 2,
+      "precioCUP": 1870,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Gratis desde $2.50 USD",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
+      },
+      "creado": 1785959109839
+    },
+    {
+      "id": "p_1788841621469",
+      "codigo": "PCVZ",
+      "name": "Gancho de afeitadora",
+      "cat": "Barbería",
+      "subcat": "",
+      "notes": "Alarga la vida útil de las máquinas de afeitar evitando el óxido por acumulación de agua,mantiene el espacio limpio, ordenado y propicia mayor accesibilidad de este instrumento de uso diario.",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788841425/productos/sgxqsuyjleeuyulbuazw.jpg",
+      "precioUSD": 1,
+      "precioCUP": 935,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Color"
+        ],
+        "opciones": [
+          "NEGRO"
+        ],
+        "agotadas": [
+          "PLATEADO"
+        ]
+      },
+      "maxOpciones": {
+        "NEGRO": 1
+      },
+      "envio": {
+        "corto": "🛵 Gratis desde $2.50 USD",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
+      },
+      "creado": 1788841621469
+    },
+    {
+      "id": "p_1785006638149",
+      "codigo": "9TDE",
+      "name": "Gavetero blanco con espejo.",
+      "cat": "Muebles y Organizadores",
+      "subcat": "",
+      "notes": "2 gavetas con espejo giratorio vertical y organizadores laterales\nTipo Formica,no es plástico",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785006341/productos/jfqmildcf9hh18lsfmf9.jpg",
+      "precioUSD": 20,
+      "precioCUP": 18700,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "max": 4,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1785006638149
+    },
+    {
+      "id": "p_1793417160550",
+      "codigo": "SCYK",
+      "name": "Globos navideños 12 piezas",
+      "cat": "Decoración y Fiestas",
+      "subcat": "",
+      "notes": "",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1793417047/productos/oht5hiomac923k81ham8.jpg",
+      "precioUSD": 5,
+      "precioCUP": 4675,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793417050/productos/kx5qivbywsihg2rq5lg7.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793417054/productos/ikd3buvrydi6exebffq9.jpg"
+      ],
+      "max": 2,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1793417160550
+    },
+    {
+      "id": "p_1793417211035",
+      "codigo": "XH4W",
+      "name": "Globos navideños 13 piezas",
+      "cat": "Decoración y Fiestas",
+      "subcat": "",
+      "notes": "",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1793417101/productos/uzgc7zgmzepgc4u1o58s.jpg",
+      "precioUSD": 5.2,
+      "precioCUP": 4862,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793417104/productos/oua6vj3ooudsuepxl6ti.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793417113/productos/prqauranbyipaq3lcs8z.jpg"
+      ],
+      "max": 2,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1793417211035
+    },
+    {
+      "id": "p_1786923457095",
+      "codigo": "WBXN",
+      "name": "Gloss",
+      "cat": "Belleza y Cuidado",
+      "subcat": "",
+      "notes": "Gloss de diferentes tonalidades y un olor delicioso",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792619013/productos/kr1ocrhvx9xa6vsncrnh.jpg",
+      "precioUSD": 1,
+      "precioCUP": 935,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Tonos"
+        ],
+        "opciones": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ]
+      },
+      "maxOpciones": {
+        "A": 1,
+        "B": 1,
+        "C": 3,
+        "D": 2
+      },
+      "envio": {
+        "corto": "🛵 Gratis desde $2.50 USD",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
+      },
+      "creado": 1786923457095
+    },
+    {
+      "id": "p_1785357535101",
+      "codigo": "R4L3",
+      "name": "Glucomanan",
+      "cat": "Salud y Gym",
+      "subcat": "",
+      "notes": "Glucomanano: tu aliado natural para adelgazar y sentirte mejor!\nFibra soluble de konjac que absorbe agua y forma un gel en el estómago.\nBeneficios clave:\nSaciedad inmediata → comes menos sin pasar hambre\nAyuda a perder peso de forma natural\nReduce el colesterol y controla el azúcar\nMejora el tránsito intestinal y combate el estreñimiento\nCómo tomarlo: 1 g antes de cada comida + abundante agua.\nResultados reales + fórmula 100 % natural.\n¡Empieza hoy y siente la diferencia!",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791646511/productos/zs3d43e6wptfjygw2pqt.jpg",
+      "precioUSD": 25,
+      "precioCUP": 23375,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "max": 1,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1785357535523
+    },
+    {
+      "id": "p_1794251657792",
+      "codigo": "CLQM",
+      "name": "GORGIQUE – Crema Facial de Día y Noche con Colágeno y Retinol",
+      "cat": "Belleza y Cuidado",
+      "subcat": "",
+      "notes": "✨ ¡Cuida tu piel de día y de noche con una sola crema! ✨\n\nDescubre la crema facial GORGIQUE con colágeno y retinol, una fórmula hidratante enriquecida con ácido hialurónico, vitamina E y péptidos, diseñada para complementar tu rutina diaria de cuidado facial.\n\nBeneficios:\n\n💧 Ayuda a mantener la piel hidratada y suave.\n\n✨ Contribuye a mejorar la apariencia y textura de la piel.\n\n🌸 Ayuda a mantener la piel con una apariencia más fresca y luminosa.\n\n💎 Enriquecida con colágeno, retinol, ácido hialurónico y vitamina E.\n\n🧴 Textura ligera, de rápida absorción y sin sensación grasosa.\n\n❤️ Ideal para incorporar tanto en tu rutina de día como de noche.\n\nContenido: 50 ml.\n\nDale a tu rostro el cuidado que merece y disfruta de una piel suave, hidratada y radiante todos los días.\n\n¡Consiente tu piel y haz del cuidado facial parte de tu rutina!",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1794251495/productos/npw7pmnhkdf0vnwxz8di.jpg",
+      "precioUSD": 10,
+      "precioCUP": 9350,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794251498/productos/gqcunoe073bcz8x9ws4x.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794251502/productos/b9wtluvp67g1t188zrpv.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794251506/productos/jtxk11kifyba0pjd4f21.jpg"
+      ],
+      "max": 1,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1794251657792
+    },
+    {
+      "id": "p_1794099024902",
+      "codigo": "3QRG",
+      "name": "Guantillas Calidad Premium",
+      "cat": "Salud y Gym",
+      "subcat": "",
+      "notes": "Guantillas de alta calidad y durabilidad. Ideal para cualquier talla y género.",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1794098869/productos/brnb7uui5qodsuvg91lf.jpg",
+      "precioUSD": 6,
+      "precioCUP": 5610,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794098874/productos/krmkkk58f5rn0uybvrjg.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794098879/productos/abt6lb7c8epcnl34p65o.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794098883/productos/ozm7tihlhi7geltw3yxh.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794098888/productos/zxddzutlj6wnv7hzcbmi.jpg"
+      ],
+      "variantes": {
+        "ejes": [
+          "Color"
+        ],
+        "opciones": [
+          "NEGRO CON GRIS",
+          "NEGRO CON AZUL"
+        ]
+      },
+      "maxOpciones": {
+        "NEGRO CON GRIS": 1,
+        "NEGRO CON AZUL": 1
+      },
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1794099024902
+    },
+    {
+      "id": "p_1794099173283",
+      "codigo": "Q6E7",
+      "name": "Guantillas Calidad Premium TALLA GRANDE",
+      "cat": "Salud y Gym",
+      "subcat": "",
+      "notes": "Derroche de calidad. Lo mejor en guantillas para trabajos fuertes, práctica de deportes y levantamiento de pesas, entre otras actividades que requieren protección en las manos",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1794098964/productos/c9secstqbclzwvganpq8.jpg",
+      "precioUSD": 7,
+      "precioCUP": 6545,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794098968/productos/ijuo58go1pt0ontazuw5.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794098976/productos/lwuazhjnlwikbicbmsla.jpg"
+      ],
+      "max": 1,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1794099173283
+    },
+    {
+      "id": "p_1785008058883",
+      "codigo": "BSLH",
+      "name": "Hamaca azul",
+      "cat": "Playa y Verano",
+      "subcat": "",
+      "notes": "Hamaca de uso personal con capacidad para adultos y niños",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785007865/productos/cpkmq5uzrq5syrnkbwg0.jpg",
+      "precioUSD": 12,
+      "precioCUP": 11220,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "max": 1,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1785008058883
+    },
+    {
+      "id": "p_1785008412468",
+      "codigo": "7VTL",
+      "name": "Hamaca roja ❤️",
+      "cat": "Playa y Verano",
+      "subcat": "",
+      "notes": "Hamaca de uso personal con capacidad para adultos y niños",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785008341/productos/f8dhc1t8mcn3yodirdvx.jpg",
+      "precioUSD": 13,
+      "precioCUP": 12155,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": true,
+      "max": 1,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1785008412468
+    },
+    {
       "id": "p_1792886712538",
       "codigo": "8HGF",
-      "name": "Evillas de mariposas multialas",
+      "name": "Hebillas de mariposas multialas",
       "cat": "Cabello",
       "subcat": "",
       "notes": "Paquete de 6 mariposas multialas. Seis colecciones disponibles. Seleccionar según las imágenes. Alas de tela tipo tul y evillas de metal. Alta calidad y belleza",
@@ -2520,494 +2953,6 @@
       "creado": 1792886712539
     },
     {
-      "id": "p_1788816392396",
-      "codigo": "5BVR",
-      "name": "Fajas Colombianas",
-      "cat": "Ropa Interior",
-      "subcat": "",
-      "notes": "Fajas colombianas tipo short de cintura alta levantadoras y moldeadora. Control de abdomen, paneles de encaje y compresión para moldear muslos, realzadoras, adecuadas para figura de reloj de arena, entrenamiento y atuendo casual",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788816300/productos/brqlriw0fxdiuf8bfv8s.jpg",
-      "precioUSD": 25,
-      "precioCUP": 23375,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "variantes": {
-        "ejes": [
-          "Talla"
-        ],
-        "opciones": [
-          "M"
-        ]
-      },
-      "maxOpciones": {
-        "M": 2
-      },
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1788816392396
-    },
-    {
-      "id": "p_1785357151546",
-      "codigo": "Y7AU",
-      "name": "Fajas reforzadas",
-      "cat": "Gym y Suplementos",
-      "subcat": "",
-      "notes": "Faja negra, reforzada ,de alta calidad, ideal para el uso diario y para el gim. Doble cierre y varillas con función de corset, reductora de vientre y cintura",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785357112/productos/dz1cu8j2jdy3tlzcpvjn.jpg",
-      "precioUSD": 10,
-      "precioCUP": 9350,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "variantes": {
-        "ejes": [
-          "Tallas"
-        ],
-        "opciones": [
-          "XS",
-          "S",
-          "M"
-        ]
-      },
-      "maxOpciones": {
-        "XS": 2,
-        "S": 1,
-        "M": 3
-      },
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1785357151546
-    },
-    {
-      "id": "p_1785957052228",
-      "codigo": "8X9D",
-      "name": "Gafas Cristal transparente",
-      "cat": "Accesorio de vestir",
-      "subcat": "",
-      "notes": "Protección contra luz azul, ideal para personas que usan mucho pantallas como celulares ,laptops y televisión.\nTambién es un muy buen accesorio para personas que manejan moto en horario nocturno, protege los ojos sin afectar la visibilidad en la oscuridad",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785956773/productos/gufvuhffd4ibygz29anq.jpg",
-      "precioUSD": 2,
-      "precioCUP": 1870,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "variantes": {
-        "ejes": [
-          "Color"
-        ],
-        "opciones": [
-          "TRANSPARENTE"
-        ],
-        "agotadas": [
-          "NEGRO",
-          "GRIS"
-        ]
-      },
-      "maxOpciones": {
-        "TRANSPARENTE": 1
-      },
-      "envio": {
-        "corto": "🛵 Gratis desde $2.50 USD",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
-      },
-      "creado": 1785957052230
-    },
-    {
-      "id": "p_1785957866193",
-      "codigo": "WXA3",
-      "name": "Gafas de Sol medianas",
-      "cat": "Accesorio de vestir",
-      "subcat": "",
-      "notes": "Tamaño mediano. Modelo ideal tanto para hombres como para mujeres\nDisponibles todos los diseños de la imagen",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792326212/productos/oykcu5rbvo0c6m2dgqvm.jpg",
-      "precioUSD": 2,
-      "precioCUP": 1870,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "variantes": {
-        "ejes": [
-          "Diseño"
-        ],
-        "opciones": [
-          "A",
-          "B",
-          "D"
-        ],
-        "agotadas": [
-          "C",
-          "E",
-          "F"
-        ]
-      },
-      "maxOpciones": {
-        "A": 3,
-        "B": 5,
-        "D": 8
-      },
-      "envio": {
-        "corto": "🛵 Gratis desde $2.50 USD",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
-      },
-      "creado": 1785957866194
-    },
-    {
-      "id": "p_1785961108734",
-      "codigo": "5PUW",
-      "name": "Gafas modelos mixtos",
-      "cat": "Accesorio de vestir",
-      "subcat": "",
-      "notes": "Variedad de diseños tanto para hombres como para mujeres y adolescentes",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792676965/productos/mommid6awffeluijvf27.jpg",
-      "precioUSD": 1.5,
-      "precioCUP": 1403,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "variantes": {
-        "ejes": [
-          "Diseño"
-        ],
-        "opciones": [
-          "A",
-          "B",
-          "D"
-        ],
-        "agotadas": [
-          "C"
-        ]
-      },
-      "maxOpciones": {
-        "A": 3,
-        "B": 1,
-        "D": 2
-      },
-      "envio": {
-        "corto": "🛵 Gratis desde $2.50 USD",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
-      },
-      "creado": 1785961108734
-    },
-    {
-      "id": "p_1785959109839",
-      "codigo": "Z222",
-      "name": "Gafas negras unisex",
-      "cat": "Accesorio de vestir",
-      "subcat": "",
-      "notes": "Exactamente el diseño de la imagen",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785959018/productos/myajl2zdcccmbh4wnjqq.jpg",
-      "precioUSD": 2,
-      "precioCUP": 1870,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "envio": {
-        "corto": "🛵 Gratis desde $2.50 USD",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
-      },
-      "creado": 1785959109839
-    },
-    {
-      "id": "p_1788841621469",
-      "codigo": "PCVZ",
-      "name": "Gancho de afeitadora",
-      "cat": "Hogar",
-      "subcat": "",
-      "notes": "Alarga la vida útil de las máquinas de afeitar evitando el óxido por acumulación de agua,mantiene el espacio limpio, ordenado y propicia mayor accesibilidad de este instrumento de uso diario.",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788841425/productos/sgxqsuyjleeuyulbuazw.jpg",
-      "precioUSD": 1,
-      "precioCUP": 935,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "variantes": {
-        "ejes": [
-          "Color"
-        ],
-        "opciones": [
-          "NEGRO"
-        ],
-        "agotadas": [
-          "PLATEADO"
-        ]
-      },
-      "maxOpciones": {
-        "NEGRO": 1
-      },
-      "envio": {
-        "corto": "🛵 Gratis desde $2.50 USD",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
-      },
-      "creado": 1788841621469
-    },
-    {
-      "id": "p_1785006638149",
-      "codigo": "9TDE",
-      "name": "Gavetero blanco con espejo.",
-      "cat": "Muebles",
-      "subcat": "",
-      "notes": "2 gavetas con espejo giratorio vertical y organizadores laterales\nTipo Formica,no es plástico",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785006341/productos/jfqmildcf9hh18lsfmf9.jpg",
-      "precioUSD": 20,
-      "precioCUP": 18700,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "max": 4,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1785006638149
-    },
-    {
-      "id": "p_1793417160550",
-      "codigo": "SCYK",
-      "name": "Globos navideños 12 piezas",
-      "cat": "Decoración",
-      "subcat": "",
-      "notes": "",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1793417047/productos/oht5hiomac923k81ham8.jpg",
-      "precioUSD": 5,
-      "precioCUP": 4675,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "fotos": [
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793417050/productos/kx5qivbywsihg2rq5lg7.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793417054/productos/ikd3buvrydi6exebffq9.jpg"
-      ],
-      "max": 2,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1793417160550
-    },
-    {
-      "id": "p_1793417211035",
-      "codigo": "XH4W",
-      "name": "Globos navideños 13 piezas",
-      "cat": "Decoración",
-      "subcat": "",
-      "notes": "",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1793417101/productos/uzgc7zgmzepgc4u1o58s.jpg",
-      "precioUSD": 5.2,
-      "precioCUP": 4862,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "fotos": [
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793417104/productos/oua6vj3ooudsuepxl6ti.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793417113/productos/prqauranbyipaq3lcs8z.jpg"
-      ],
-      "max": 2,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1793417211035
-    },
-    {
-      "id": "p_1786923457095",
-      "codigo": "WBXN",
-      "name": "Gloss",
-      "cat": "Cuidado Personal",
-      "subcat": "",
-      "notes": "Gloss de diferentes tonalidades y un olor delicioso",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792619013/productos/kr1ocrhvx9xa6vsncrnh.jpg",
-      "precioUSD": 1,
-      "precioCUP": 935,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "variantes": {
-        "ejes": [
-          "Tonos"
-        ],
-        "opciones": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ]
-      },
-      "maxOpciones": {
-        "A": 1,
-        "B": 1,
-        "C": 3,
-        "D": 2
-      },
-      "envio": {
-        "corto": "🛵 Gratis desde $2.50 USD",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
-      },
-      "creado": 1786923457095
-    },
-    {
-      "id": "p_1785357535101",
-      "codigo": "R4L3",
-      "name": "Glucomanan",
-      "cat": "Gym y Suplementos",
-      "subcat": "",
-      "notes": "Glucomanano: tu aliado natural para adelgazar y sentirte mejor!\nFibra soluble de konjac que absorbe agua y forma un gel en el estómago.\nBeneficios clave:\nSaciedad inmediata → comes menos sin pasar hambre\nAyuda a perder peso de forma natural\nReduce el colesterol y controla el azúcar\nMejora el tránsito intestinal y combate el estreñimiento\nCómo tomarlo: 1 g antes de cada comida + abundante agua.\nResultados reales + fórmula 100 % natural.\n¡Empieza hoy y siente la diferencia!",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791646511/productos/zs3d43e6wptfjygw2pqt.jpg",
-      "precioUSD": 25,
-      "precioCUP": 23375,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "max": 1,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1785357535523
-    },
-    {
-      "id": "p_1794251657792",
-      "codigo": "CLQM",
-      "name": "GORGIQUE – Crema Facial de Día y Noche con Colágeno y Retinol",
-      "cat": "Cuidado Personal",
-      "subcat": "",
-      "notes": "✨ ¡Cuida tu piel de día y de noche con una sola crema! ✨\n\nDescubre la crema facial GORGIQUE con colágeno y retinol, una fórmula hidratante enriquecida con ácido hialurónico, vitamina E y péptidos, diseñada para complementar tu rutina diaria de cuidado facial.\n\nBeneficios:\n\n💧 Ayuda a mantener la piel hidratada y suave.\n\n✨ Contribuye a mejorar la apariencia y textura de la piel.\n\n🌸 Ayuda a mantener la piel con una apariencia más fresca y luminosa.\n\n💎 Enriquecida con colágeno, retinol, ácido hialurónico y vitamina E.\n\n🧴 Textura ligera, de rápida absorción y sin sensación grasosa.\n\n❤️ Ideal para incorporar tanto en tu rutina de día como de noche.\n\nContenido: 50 ml.\n\nDale a tu rostro el cuidado que merece y disfruta de una piel suave, hidratada y radiante todos los días.\n\n¡Consiente tu piel y haz del cuidado facial parte de tu rutina!",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1794251495/productos/npw7pmnhkdf0vnwxz8di.jpg",
-      "precioUSD": 10,
-      "precioCUP": 9350,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "fotos": [
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794251498/productos/gqcunoe073bcz8x9ws4x.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794251502/productos/b9wtluvp67g1t188zrpv.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794251506/productos/jtxk11kifyba0pjd4f21.jpg"
-      ],
-      "max": 1,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1794251657792
-    },
-    {
-      "id": "p_1794099024902",
-      "codigo": "3QRG",
-      "name": "Guantillas Calidad Premium",
-      "cat": "Gym y Suplementos",
-      "subcat": "",
-      "notes": "Guantillas de alta calidad y durabilidad. Ideal para cualquier talla y género.",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1794098869/productos/brnb7uui5qodsuvg91lf.jpg",
-      "precioUSD": 6,
-      "precioCUP": 5610,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "fotos": [
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794098874/productos/krmkkk58f5rn0uybvrjg.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794098879/productos/abt6lb7c8epcnl34p65o.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794098883/productos/ozm7tihlhi7geltw3yxh.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794098888/productos/zxddzutlj6wnv7hzcbmi.jpg"
-      ],
-      "variantes": {
-        "ejes": [
-          "Color"
-        ],
-        "opciones": [
-          "NEGRO CON GRIS",
-          "NEGRO CON AZUL"
-        ]
-      },
-      "maxOpciones": {
-        "NEGRO CON GRIS": 1,
-        "NEGRO CON AZUL": 1
-      },
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1794099024902
-    },
-    {
-      "id": "p_1794099173283",
-      "codigo": "Q6E7",
-      "name": "Guantillas Calidad Premium TALLA GRANDE",
-      "cat": "Gym y Suplementos",
-      "subcat": "",
-      "notes": "Derroche de calidad. Lo mejor en guantillas para trabajos fuertes, práctica de deportes y levantamiento de pesas, entre otras actividades que requieren protección en las manos",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1794098964/productos/c9secstqbclzwvganpq8.jpg",
-      "precioUSD": 7,
-      "precioCUP": 6545,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "fotos": [
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794098968/productos/ijuo58go1pt0ontazuw5.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794098976/productos/lwuazhjnlwikbicbmsla.jpg"
-      ],
-      "max": 1,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1794099173283
-    },
-    {
-      "id": "p_1785008058883",
-      "codigo": "BSLH",
-      "name": "Hamaca azul",
-      "cat": "Muebles",
-      "subcat": "",
-      "notes": "Hamaca de uso personal con capacidad para adultos y niños",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785007865/productos/cpkmq5uzrq5syrnkbwg0.jpg",
-      "precioUSD": 12,
-      "precioCUP": 11220,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "max": 1,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1785008058883
-    },
-    {
-      "id": "p_1785008412468",
-      "codigo": "7VTL",
-      "name": "Hamaca roja ❤️",
-      "cat": "Muebles",
-      "subcat": "",
-      "notes": "Hamaca de uso personal con capacidad para adultos y niños",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785008341/productos/f8dhc1t8mcn3yodirdvx.jpg",
-      "precioUSD": 13,
-      "precioCUP": 12155,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": true,
-      "max": 1,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1785008412468
-    },
-    {
       "id": "p_1781005179627",
       "codigo": "TVQU",
       "name": "Humidificador y Difusor de aromas con 2 aceites escenciales",
@@ -3037,7 +2982,7 @@
       "id": "p_1782340744519",
       "codigo": "K22T",
       "name": "Incienso Anti-Mosquitos",
-      "cat": "Cuidado Personal",
+      "cat": "Hogar y Limpieza",
       "subcat": "",
       "notes": "Bastoncillos alargados de aceite de citronela y hierba de limón - Tiempo de combustión de 45 minutos, aroma artificial de madera de verano para el hogar, camping, patio, piscina y actividades al aire libre - Purificación de aire ,relajante.El paquete trae 5 varillas",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782340629/productos/tw5yu7clzxberkh7gflt.jpg",
@@ -3056,7 +3001,7 @@
       "id": "p_1794018751239",
       "codigo": "HLGT",
       "name": "Juego bolsos Calidad Premium",
-      "cat": "Bolsos Carteras Mochilas monederos",
+      "cat": "Calzado y Bolsos",
       "subcat": "",
       "notes": "Bolsos de alta calidad. El conjunto cuenta acon una cartera de amplia capacidad, un monedero,un tarjetero y una correa larga y ajustable",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1794018102/productos/eexuocgmkclcbopvatwa.jpg",
@@ -3097,7 +3042,7 @@
       "id": "p_1793502722172",
       "codigo": "XHKN",
       "name": "Juego de tiro al blanco",
-      "cat": "Niños",
+      "cat": "Niños y Escuela",
       "subcat": "",
       "notes": "Exelente y educativo Juego para niños. Alta calidad,figura de tela de animales con diana para la práctica de la puntería y números para el entrenamiento del cálculo. Incluye pelotas autoadhesivas con velcro y gancho para colgar la figura",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1793502422/productos/xloi9voz4zf4gnbyidle.jpg",
@@ -3135,7 +3080,7 @@
       "id": "p_1794450995208",
       "codigo": "KTHZ",
       "name": "Kit completo de SkinCare",
-      "cat": "Cuidado Personal",
+      "cat": "Belleza y Cuidado",
       "subcat": "",
       "notes": "¡Lleva tu rutina de colágeno a donde vayas! ✈️✨\nDescubre el Travel Set de Colágeno SADOER: el kit completo y compacto que cabe en tu bolso y te da una piel suave, hidratada y luminosa en cualquier destino. 💖🧴\nIncluye:\nCleanser (30 g) 🧼\nFace Toner (30 ml) 💧\nFace Lotion (30 ml) 🌿\nFace Serum ✨\nCream 💮\nFácil de llevar. Fácil de usar. 👜\nSigue el orden perfecto:\nCleanser → Toner → Lotion → Serum → Cream 🔄\nFórmula con colágeno que limpia, tonifica, hidrata, nutre y sella la humedad. Ideal para viajes, el gym o el día a día. 🌍💪\nPiel radiante… ¡incluso de viaje! 🌟\nConsigue el tuyo y siente la diferencia SADOER. 🛍️💫",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1794450841/productos/beybcg6ssh6h9pgqjrgx.jpg",
@@ -3161,7 +3106,7 @@
       "id": "p_1791140393037",
       "codigo": "NU4W",
       "name": "Kit de 30 Globos 💙 💛",
-      "cat": "Decoración",
+      "cat": "Decoración y Fiestas",
       "subcat": "",
       "notes": "El paquete contiene 30 globos entre dorado,color y con brillos tal como la imagen muestra. Las cantidades de cada diseño están también plasmadas en la imagen.",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791140331/productos/k4egjgvuqqkxvqpdw2mg.jpg",
@@ -3182,7 +3127,7 @@
       "id": "p_1791140430195",
       "codigo": "X6FK",
       "name": "Kit de 30 Globos 💙🩶",
-      "cat": "Decoración",
+      "cat": "Decoración y Fiestas",
       "subcat": "",
       "notes": "El paquete contiene 30 globos entre dorado,color y con brillos tal como la imagen muestra. Las cantidades de cada diseño están también plasmadas en la imagen.",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791140370/productos/m5yxwmqt164n0bzipqjv.jpg",
@@ -3203,7 +3148,7 @@
       "id": "p_1791140226984",
       "codigo": "5QM6",
       "name": "Kit de 30 Globos 🖤",
-      "cat": "Decoración",
+      "cat": "Decoración y Fiestas",
       "subcat": "",
       "notes": "El paquete contiene 30 globos entre dorado,color y con brillos tal como la imagen muestra. Las cantidades de cada diseño están también plasmadas en la imagen.",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791139941/productos/k4mhq9sttgckfwyg9uua.jpg",
@@ -3224,7 +3169,7 @@
       "id": "p_1791140286324",
       "codigo": "5GKQ",
       "name": "Kit de 30 Globos 🤍",
-      "cat": "Decoración",
+      "cat": "Decoración y Fiestas",
       "subcat": "",
       "notes": "El paquete contiene 30 globos entre dorado,color y con brillos tal como la imagen muestra. Las cantidades de cada diseño están también plasmadas en la imagen.",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791140202/productos/mf9u4foircufryhoh8io.jpg",
@@ -3245,7 +3190,7 @@
       "id": "p_1791140326794",
       "codigo": "KK34",
       "name": "Kit de 30 Globos 🩷",
-      "cat": "Decoración",
+      "cat": "Decoración y Fiestas",
       "subcat": "",
       "notes": "El paquete contiene 30 globos entre dorado,color y con brillos tal como la imagen muestra. Las cantidades de cada diseño están también plasmadas en la imagen.",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791140236/productos/vvllebrndvrrlcce8ibt.jpg",
@@ -3266,7 +3211,7 @@
       "id": "p_1792342171217",
       "codigo": "F6BK",
       "name": "Kit de afeitado y corte de cabellos",
-      "cat": "Electrodomésticos",
+      "cat": "Barbería",
       "subcat": "",
       "notes": "Kit de afeitado y corte de pelo para hombre de 2 piezas. Set de caja de regalo para el Día de San Valentín. Recargable por USB. Regalo para novio, regalo del Día del Padre, regalo de cumpleaños, regalo de festividades",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792357425/productos/amllbqtskswfbmgwzgix.jpg",
@@ -3291,7 +3236,7 @@
       "id": "p_1794513377026",
       "codigo": "6G97",
       "name": "Kit de barbería Profesional de 4 piezas",
-      "cat": "Electrodomésticos",
+      "cat": "Barbería",
       "subcat": "",
       "notes": "El set completo de cuidado personal en elegante diseño negro y dorado. Todo lo que necesitas para un look impecable en casa.\nQué incluye:\n1. Cortapelos eléctrico\nPotente, con pantalla digital de batería. Ideal para cortes de cabello y barba.\n2. Recortador de precisión\nPerfecto para contornos, patillas y detalles definidos.\n3. Recortador de nariz y orejas\nCompacto, con luces LED. Elimina el vello de forma rápida y segura.\n4. Afeitadora de láminas\nAfeitado suave y cercano, con pantalla digital.\nIncluye: peines guía, cepillo de limpieza y cables de carga USB.\nTodo inalámbrico, fácil de usar y listo para llevar.\n¡Lleva tu estilo al siguiente nivel con Wtispot!",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1794513270/productos/dqt2ro89bmo9axcesobf.jpg",
@@ -3318,7 +3263,7 @@
       "id": "p_1793418630130",
       "codigo": "A9BG",
       "name": "Kit de coladores de acero inoxidable",
-      "cat": "Hogar",
+      "cat": "Cocina",
       "subcat": "",
       "notes": "De la más alta calidad. Coladores de diferentes medidas, funcionales y útiles para diferentes ocasiones. Totalmente metálicos e inoxidables",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1793418446/productos/avzjaip8pze9hzuiwwcw.jpg",
@@ -3345,7 +3290,7 @@
       "id": "p_1782259495565",
       "codigo": "2Q88",
       "name": "Kit de pinzas de cejas",
-      "cat": "Cuidado Personal",
+      "cat": "Belleza y Cuidado",
       "subcat": "",
       "notes": "Pinzas de cejas(4en1):Juego de 4 pinzas de acero inoxidable de alta densidad. Adecuadas para herramientas de depilación, recorte de barba y diseño de cejas. Un ayudante versátil, duradero y esencial para todas las estaciones.",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790863888/productos/sywejap0dlykstcxr9mq.jpg",
@@ -3365,7 +3310,7 @@
       "id": "p_1794451729488",
       "codigo": "9LHT",
       "name": "Kit de SkinCare de gran capacidad",
-      "cat": "Cuidado Personal",
+      "cat": "Belleza y Cuidado",
       "subcat": "",
       "notes": "Control de grasa y tono uniforme\nSérums SEYHZE\nTres fórmulas potentes para una piel equilibrada, luminosa y sin exceso de grasa:\nRetinol 0.1%: Suave e hidratante. Reduce manchas,decoloraciones y líneas de expresión\nNiacinamida 5%: Ilumina, minimiza poros, unifica el tono y controla el brillo.\nÁcido Salicílico 0.2%: Ayuda a reducir manchas y controlar la grasa y los puntos negros.\nIdeal para todo tipo de piel. 60 ml con gotero de precisión.\n¡Piel más uniforme, limpia y radiante todos los días!",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1794454925/productos/sgwaydjhmlttfcfqkdny.jpg",
@@ -3392,7 +3337,7 @@
       "id": "p_1792621415401",
       "codigo": "4XWR",
       "name": "Kit de uñas de 5 piezas",
-      "cat": "Uñas",
+      "cat": "Belleza y Cuidado",
       "subcat": "",
       "notes": "El paquete contiene 5 accesorios útiles para el cuidado diario de las uñas tanto en casa como para uso profesional",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792621290/productos/dgibanohmulvz9kbnuwr.jpg",
@@ -3424,7 +3369,7 @@
       "id": "p_1782329548997",
       "codigo": "8YTJ",
       "name": "Labiales Carmelitas",
-      "cat": "Cuidado Personal",
+      "cat": "Belleza y Cuidado",
       "subcat": "",
       "notes": "Solo disponible en el color de la imagen",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1794964129/productos/qf2bbz6jgcsyhqlg1yde.jpg",
@@ -3472,7 +3417,7 @@
       "id": "p_1782259309845",
       "codigo": "3EA5",
       "name": "Lápiz de ojos",
-      "cat": "Cuidado Personal",
+      "cat": "Belleza y Cuidado",
       "subcat": "",
       "notes": "Lápiz Delineador Negro Impermeable y Resistente al Sudor - Duradero, No Mancha para un Maquillaje de Ojos Audaz, Fórmula Suave",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782259227/productos/wzdbps1jg3clzkhat6tj.jpg",
@@ -3539,7 +3484,7 @@
       "id": "p_1789233150296",
       "codigo": "NU2L",
       "name": "Licra levanta/glúteos con pliegue lateral",
-      "cat": "Ropa",
+      "cat": "Ropa de Mujer",
       "subcat": "",
       "notes": "Licra levanta glúteos corta. Alta calidad, importadas de USA.Talla reducida, viene siendo una M",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789232992/productos/jilgowubjhhnw3ymicjw.jpg",
@@ -3579,7 +3524,7 @@
       "id": "p_1789235076276",
       "codigo": "44JV",
       "name": "Licra levanta/glúteos semi estampadas",
-      "cat": "Ropa",
+      "cat": "Ropa de Mujer",
       "subcat": "",
       "notes": "Licras cortas levanta glúteos. Alta calidad, importadas de USA. Exactamente los tonos de la imagen,talla reducida.",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789234896/productos/pqkfzohmt0pphqz08mdc.jpg",
@@ -3615,7 +3560,7 @@
       "id": "p_1789233318851",
       "codigo": "KRG9",
       "name": "Licras levanta/glúteos color entero",
-      "cat": "Ropa",
+      "cat": "Ropa de Mujer",
       "subcat": "",
       "notes": "Licra corta levanta glúteos.Alta calidad, importadas de USA. Fiel a la talla. Exactamente los tonos de la imagen",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789233113/productos/iobfneseakk7fo5p9d5q.jpg",
@@ -3653,7 +3598,7 @@
       "id": "p_1794017363007",
       "codigo": "2V6E",
       "name": "Lija de pies recargable",
-      "cat": "Electrodomésticos",
+      "cat": "Belleza y Cuidado",
       "subcat": "",
       "notes": "Eliminador de callosidades de alta potencia y calidad. Múltiples funciones. Incluye 10 repuestos de lija plana, 5 repuestos de lija  cilíndrica, cable de carga",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1794016936/productos/jcgkyjdazuf6nb0qkdpd.jpg",
@@ -3680,7 +3625,7 @@
       "id": "p_1782339511897",
       "codigo": "K2RE",
       "name": "Lima de pies",
-      "cat": "Cuidado Personal",
+      "cat": "Belleza y Cuidado",
       "subcat": "",
       "notes": "Lima de pies de acero inoxidable con juego de repuesto gratuito, herramienta profesional para eliminar piel muerta, con mango antideslizante y apta para uso en seco y húmedo",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782339455/productos/f44wmt0fyjhno0mjzndp.jpg",
@@ -3701,7 +3646,7 @@
       "id": "p_1788314603975",
       "codigo": "H458",
       "name": "Llave de paso 3/4",
-      "cat": "Ferretería",
+      "cat": "Ferretería y Seguridad",
       "subcat": "",
       "notes": "Válvula de bola de PVC blanca de ¾ de pulgada, con manija azul tipo mariposa y conexiones de rosca. Ideal para controlar el flujo de agua en sistemas de plomería residencial o comercial. Construcción resistente y de fácil instalación.",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788314496/productos/r65thrkwopmgo5meeauu.jpg",
@@ -3721,7 +3666,7 @@
       "id": "p_1788314424331",
       "codigo": "55F5",
       "name": "Llave de paso de 1/2",
-      "cat": "Ferretería",
+      "cat": "Ferretería y Seguridad",
       "subcat": "",
       "notes": "Válvula de bola de PVC blanca de ½ pulgada, con manija azul tipo mariposa y conexiones de rosca. Ideal para controlar el flujo de agua en sistemas de plomería residencial o comercial. Construcción resistente y de fácil instalación.",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788314293/productos/eevo4jbcarjiswsjmdao.jpg",
@@ -3741,7 +3686,7 @@
       "id": "p_1788036490389",
       "codigo": "H2FN",
       "name": "Llaveros de medicos",
-      "cat": "Accesorio de vestir",
+      "cat": "Gafas y Accesorios",
       "subcat": "",
       "notes": "Perfectos para un presentico a un médico, enfermera, dentista etc...variados diseños.",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788036154/productos/j69760zcybhe8pzxcx6k.jpg",
@@ -3760,7 +3705,7 @@
       "id": "p_1788533709140",
       "codigo": "TDTS",
       "name": "Malla de fregado",
-      "cat": "Hogar",
+      "cat": "Cocina",
       "subcat": "",
       "notes": "Paquete de 5 mallas para fregar. Diseñado para zonas difíciles, limpieza fuerte y profunda. No ralla ni maltrata, ideal para cuidar el teflón y el esmalte de los artículos de la cocina",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788533526/productos/ih6lcxwtznvuhj4viazn.jpg",
@@ -3785,7 +3730,7 @@
       "id": "p_1788540627385",
       "codigo": "UAYQ",
       "name": "Malla de playa",
-      "cat": "Playa",
+      "cat": "Playa y Verano",
       "subcat": "",
       "notes": "Hermosa malla para la playa. Unitalla. Solo en negra. No incluye bikini",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788540492/productos/wwhowrwzkv7f2q8rny0v.jpg",
@@ -3806,7 +3751,7 @@
       "id": "p_1791834504483",
       "codigo": "4CD7",
       "name": "Malla de protección solar (2m x 2m)",
-      "cat": "Decoración",
+      "cat": "Hogar y Limpieza",
       "subcat": "",
       "notes": "Malla de protección solar, Malla de aislamiento para patio al aire libre, Malla de sombra para patio, Balcón de camping duradero resistente a los rayos UV, Malla de sombra encriptada.con sus ojales",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791834204/productos/ebruqxzo2wrck8jrlokj.jpg",
@@ -3832,7 +3777,7 @@
       "id": "p_1785768634737",
       "codigo": "74GQ",
       "name": "Malla de protección solar (3m x 2m)",
-      "cat": "Decoración",
+      "cat": "Hogar y Limpieza",
       "subcat": "",
       "notes": "Color y diseño exactamente como en la imagen, con sus ojales de fabrica,es solo llegar y colocar\nMedidas :3mx2m\nMaterial: Malla de nylon",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785768595/productos/hkkmrijuemjfntdqb1be.jpg",
@@ -3858,7 +3803,7 @@
       "id": "p_1781640150594",
       "codigo": "LZJ5",
       "name": "Mangas para el sol",
-      "cat": "Motos / Accesorios",
+      "cat": "Motos y Bicicletas",
       "subcat": "",
       "notes": "Tela muy elastizada y ultra transpirable.\nDisponibles todos los colores de la imagen\nEn más de uno Mensajería gratis",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790865870/productos/jlb3kytez3v1awgem47j.jpg",
@@ -3899,7 +3844,7 @@
       "id": "p_1791925032570",
       "codigo": "AJV9",
       "name": "Mariposas decorativas",
-      "cat": "Decoración",
+      "cat": "Decoración y Fiestas",
       "subcat": "",
       "notes": "Kit de 12 hermosas mariposas decorativas. Variadas en tamaño y diseño.imcluye su cinta de doble contacto. Color a elegir entre los 4 de la imagen",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791924633/productos/wxo6bbmvmpgn7fedebkd.jpg",
@@ -3939,7 +3884,7 @@
       "id": "p_1782259680772",
       "codigo": "4NDS",
       "name": "Mascarilla para puntos negros",
-      "cat": "Cuidado Personal",
+      "cat": "Belleza y Cuidado",
       "subcat": "",
       "notes": "Mascarilla facial negra de carbón de bambú,  limpieza profunda de la piel facial para puntos negros y blancos, extractos naturales, ingrediente suave, hidratante y control de grasa, ilumina la piel, apta para todo tipo de piel, la piel luce visiblemente rejuvenecida",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782259607/productos/vyo6dwsbzxnipbsgrtc9.jpg",
@@ -3979,7 +3924,7 @@
       "id": "p_1790795440877",
       "codigo": "54WG",
       "name": "Medidor de presión",
-      "cat": "Electrodomésticos",
+      "cat": "Salud y Gym",
       "subcat": "",
       "notes": "Incluye todo lo de la imagen. Solo en color rosado. Funciona o con conexión USB o con pilas ( no incluidas).",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791896222/productos/crb3qw8fbzp4toylktze.jpg",
@@ -4005,7 +3950,7 @@
       "id": "p_1786916805434",
       "codigo": "2ZW2",
       "name": "Mini Bloques-Lima de uñas",
-      "cat": "Uñas",
+      "cat": "Belleza y Cuidado",
       "subcat": "",
       "notes": "El paquete contiene 8 bloquesitos de uñas negros. Medidas exactas en la imagen",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786916683/productos/nmkkdiogx2oxwgwc0hcx.jpg",
@@ -4025,7 +3970,7 @@
       "id": "p_1781005462535",
       "codigo": "98F3",
       "name": "Mini Gavetero con Espejo",
-      "cat": "Muebles",
+      "cat": "Muebles y Organizadores",
       "subcat": "",
       "notes": "2 gavetas con espejo giratorio vertical.\nTipo Formica,no es plástico",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1781005431/productos/iyjmo4dxvnedrjvbitog.jpg",
@@ -4073,7 +4018,7 @@
       "id": "p_1788038065429",
       "codigo": "8REP",
       "name": "Mini llavero patito",
-      "cat": "Accesorio de vestir",
+      "cat": "Gafas y Accesorios",
       "subcat": "",
       "notes": "Pequeño y tierno. Apx 1 pulgada de alto",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788037899/productos/keorkqpov28iabssgfi6.jpg",
@@ -4092,7 +4037,7 @@
       "id": "p_1788037932911",
       "codigo": "YXUF",
       "name": "Mini llavero Stitch",
-      "cat": "Accesorio de vestir",
+      "cat": "Gafas y Accesorios",
       "subcat": "",
       "notes": "Pequeño y tierno, apx 1pulgada de alto",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788037785/productos/jpvqqkzip4dpgcbo3skz.jpg",
@@ -4111,7 +4056,7 @@
       "id": "p_1793502090428",
       "codigo": "RXYA",
       "name": "Mini presilladora",
-      "cat": "Niños",
+      "cat": "Niños y Escuela",
       "subcat": "",
       "notes": "Pequeña presilladora con presillas incluidas.  Artículo útil para salvar el día de una emergencia inesperada. Accesorio escolar imprescindible y totalmente seguro para cualquier edad",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1793501897/productos/sraa4mgmjc8q8wefthpg.jpg",
@@ -4162,7 +4107,7 @@
       "id": "p_1789218727536",
       "codigo": "6FTU",
       "name": "Mono enterizo corto",
-      "cat": "Ropa",
+      "cat": "Ropa de Mujer",
       "subcat": "",
       "notes": "Mono peto con tirantes y pantalones cortos de moda casual para mujer, primavera y verano 2026",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789315739/productos/sp8qmj6mbsnlpdbwq9lq.jpg",
@@ -4198,7 +4143,7 @@
       "id": "p_1789228482999",
       "codigo": "ZREY",
       "name": "Mono enterizo levanta/glúteos",
-      "cat": "Ropa",
+      "cat": "Ropa de Mujer",
       "subcat": "",
       "notes": "Monos deportivos tela de licra,largos,para ancha,levanta glúteos y estilizadores . Máxima calidad y confort",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791646518/productos/i6sf0yhnphkhq3yhiyef.jpg",
@@ -4234,7 +4179,7 @@
       "id": "p_1787080747584",
       "codigo": "JSMN",
       "name": "Mono enterizo oversize",
-      "cat": "Ropa",
+      "cat": "Ropa de Mujer",
       "subcat": "",
       "notes": "Solo en color negro. Exelente tela, ligero, cómodo y elegante.",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787080610/productos/tm0xsuiwvxmdn5kvgeug.jpg",
@@ -4291,7 +4236,7 @@
       "id": "p_1786732384337",
       "codigo": "24PU",
       "name": "Nebulizador portátil",
-      "cat": "Electrodomésticos",
+      "cat": "Salud y Gym",
       "subcat": "",
       "notes": "Nebulizador recargable con pantalla LED; Nebulizador de malla portátil con tecnología de ondas de sonido, apto para adultos y niños; Funciona silenciosamente; Compacto y portátil; Cuenta con un sistema de limpieza automática; Apto para afecciones respiratorias",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1793581670/productos/v22bnnpvmsy8egwlry5d.jpg",
@@ -4320,7 +4265,7 @@
       "id": "p_1786708481607",
       "codigo": "5FSB",
       "name": "Nesquik de chocolate 🍫",
-      "cat": "Confituras",
+      "cat": "Cocina",
       "subcat": "",
       "notes": "Delicioso Nesquik de chocolate. Pote gigante de 2.8 libras sabor chocolate con vitaminas añadidas. Importado directamente de USA",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786929207/productos/fig57zzkbowjpuo3ws8i.jpg",
@@ -4343,7 +4288,7 @@
       "id": "p_1785006327470",
       "codigo": "V6QG",
       "name": "Organizador Delgado (Madera)",
-      "cat": "Muebles",
+      "cat": "Muebles y Organizadores",
       "subcat": "",
       "notes": "Organizador Delgado (Madera) para Baño con Soporte para Papel Higiénico - Gabinete de Almacenamiento de PVC Blanco, Fácil de Montar, Adecuado para Espacios Estrechos, Ideal para Cocina/ Dormitorio/Sala de Estar/Sala de Comedor y Negocios, Estética Moderna, Diseño Minimalista",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785006024/productos/vajsqmfrccqjqcq1bydg.jpg",
@@ -4364,7 +4309,7 @@
       "id": "p_1785183311846",
       "codigo": "KMUW",
       "name": "Organizador en forma de bolsa",
-      "cat": "Bolsos Carteras Mochilas monederos",
+      "cat": "Muebles y Organizadores",
       "subcat": "",
       "notes": "Organizador con siper y asas. Tela similar a las bolsas Vima. Gran capacidad. Ideal para guardar ropa de cama, ropa de invierno , accesorios de poco uso y también para transportación de artículos ligeros.Solo en color negro",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791378065/productos/kg8hzspvx5npklnjjj2x.jpg",
@@ -4385,7 +4330,7 @@
       "id": "p_1785006026614",
       "codigo": "PYWJ",
       "name": "Organizador Rodante 2 pisos",
-      "cat": "Muebles",
+      "cat": "Muebles y Organizadores",
       "subcat": "",
       "notes": "Organizador rodante (solo quedan negro)  de 3 niveles. Estante de almacenamiento multiusos con ruedas, ideal como organizador de oficina,cocina,vestidores etc . Diseño flexible y práctico para optimizar el espacio.",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785005561/productos/f38m61h7y1oudaa6np9v.jpg",
@@ -4406,7 +4351,7 @@
       "id": "p_1794450502682",
       "codigo": "4ZYB",
       "name": "Oxímetro",
-      "cat": "Electrodomésticos",
+      "cat": "Salud y Gym",
       "subcat": "",
       "notes": "¡Cuida tu salud de forma fácil y rápida!\n\nCon este práctico oxímetro de dedo, mide tus niveles de oxígeno en sangre y tu pulso en segundos. Cuenta con pantalla OLED de alta definición, sensor de alta precisión y apagado automático para mayor comodidad.\n\n✨ Fácil de usar.\n✨ Resultados rápidos y claros.\n✨ Diseño compacto y portátil.\n\n¡Lleva el control de tu bienestar al alcance de tu mano! 🩺",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1794450367/productos/endmwohk6u2bltusyhmw.jpg",
@@ -4433,7 +4378,7 @@
       "id": "p_1788730145038",
       "codigo": "3X5B",
       "name": "Papel tapiz Blanco",
-      "cat": "Decoración",
+      "cat": "Decoración y Fiestas",
       "subcat": "",
       "notes": "Forros para pared Ideal para cubrir humedades, ayuda a insonorizar, repeler el calor, es lavable, y duradero, además de altamente estético La caja contiene 50 hojas Cada hoja mide 35cmx30cm",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788730056/productos/zzsmdd4b5l50rzgmcahf.jpg",
@@ -4454,7 +4399,7 @@
       "id": "p_1791836341972",
       "codigo": "RNCH",
       "name": "Papel Tapiz Mármol Negro",
-      "cat": "Decoración",
+      "cat": "Decoración y Fiestas",
       "subcat": "",
       "notes": "Forros para pared Ideal para cubrir humedades, ayuda a insonorizar, repeler el calor, es lavable, y duradero, además de altamente estético La caja contiene 50 hojas Cada hoja mide 35cmx30cm",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791836204/productos/bhk5mekf40eu67gzyafn.jpg",
@@ -4475,7 +4420,7 @@
       "id": "p_1788729005365",
       "codigo": "35H3",
       "name": "Papel tapiz Negro",
-      "cat": "Decoración",
+      "cat": "Decoración y Fiestas",
       "subcat": "",
       "notes": "Forros para pared Ideal para cubrir humedades, ayuda a insonorizar, repeler el calor, es lavable, y duradero, además de altamente estético La caja contiene 50 hojas Cada hoja mide 35cmx30cm",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788728920/productos/kyv00tgbmwpgndror7dl.jpg",
@@ -4495,8 +4440,8 @@
     {
       "id": "p_1788728922579",
       "codigo": "7B57",
-      "name": "Papel tapiz Roca Marrona",
-      "cat": "Decoración",
+      "name": "Papel tapiz Roca Marrón",
+      "cat": "Decoración y Fiestas",
       "subcat": "",
       "notes": "Forros para pared Ideal para cubrir humedades, ayuda a insonorizar, repeler el calor, es lavable, y duradero, además de altamente estético La caja contiene 50 hojas Cada hoja mide 35cmx30cm",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788728842/productos/v6ev02i92n0tiezu2fel.jpg",
@@ -4516,8 +4461,8 @@
     {
       "id": "p_1788728731980",
       "codigo": "2Q7H",
-      "name": "Papel tapiz Roca Marrona Grande",
-      "cat": "Decoración",
+      "name": "Papel tapiz Roca Marrón Grande",
+      "cat": "Decoración y Fiestas",
       "subcat": "",
       "notes": "Forros para pared Ideal para cubrir humedades, ayuda a insonorizar, repeler el calor, es lavable, y duradero, además de altamente estético La caja contiene 50 hojas Cada hoja mide 35cmx38cm",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788728656/productos/j254gfososgqlksickeg.jpg",
@@ -4613,7 +4558,7 @@
       "id": "p_1788618415087",
       "codigo": "4BJ2",
       "name": "Paquete de 100 pajillas",
-      "cat": "Hogar",
+      "cat": "Cocina",
       "subcat": "",
       "notes": "Pajillas negras de alta calidad",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788618088/productos/sfp8rofru3m2g8xdcmvz.jpg",
@@ -4634,7 +4579,7 @@
       "id": "p_1781005769619",
       "codigo": "87SU",
       "name": "Paquete de 3 Mini Embudos plegables engomados",
-      "cat": "Hogar",
+      "cat": "Cocina",
       "subcat": "",
       "notes": "Juego de 3 mini embudos de diferentes tamaños. De silicona,plegables. Tonos azules o rosados según su elección",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787956513/productos/gyr60uzsoyvpsrfdbczp.jpg",
@@ -4668,7 +4613,7 @@
       "id": "p_1793417570266",
       "codigo": "JWDY",
       "name": "Paquete de 30 Globos perlados Claros",
-      "cat": "Decoración",
+      "cat": "Decoración y Fiestas",
       "subcat": "",
       "notes": "",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1793417465/productos/efykumxmydcnmlkoxw8n.jpg",
@@ -4689,7 +4634,7 @@
       "id": "p_1793417523428",
       "codigo": "AFSQ",
       "name": "Paquete de 30 Globos perlados Oscuros",
-      "cat": "Decoración",
+      "cat": "Decoración y Fiestas",
       "subcat": "",
       "notes": "",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1793417415/productos/nglpjjowkysxg9tbx2b4.jpg",
@@ -4785,7 +4730,7 @@
       "id": "p_1780092645027",
       "codigo": "CNQV",
       "name": "Paquete de 5 esponjas de Fregar",
-      "cat": "Hogar",
+      "cat": "Cocina",
       "subcat": "",
       "notes": "El precio es por un paquete de 5 esponjas",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787956344/productos/bobyh23bclobciqvbiws.jpg",
@@ -4804,7 +4749,7 @@
       "id": "p_1788533425716",
       "codigo": "XNAA",
       "name": "Paquete de 5 estropajos de aluminio",
-      "cat": "Hogar",
+      "cat": "Cocina",
       "subcat": "",
       "notes": "Paquete de 5 estropajos de aluminio de alta calidad. Inoxidable y muy duradero",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788533301/productos/txglc57hsr3munkrokuz.jpg",
@@ -4849,7 +4794,7 @@
       "id": "p_1791650740474",
       "codigo": "X357",
       "name": "Paquete de 5 pulseras",
-      "cat": "Reloj y Prendas",
+      "cat": "Relojes y Prendas",
       "subcat": "",
       "notes": "Paquete de 5 pulseras de colores aleatorios,con lindos mensajes motivacionales, de amistad y de amor. Para amigos  y parejas familiares. Pequeño y emotivo regalo",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1794757400/productos/v4siq4avqqqvjt03sbnd.jpg",
@@ -4871,7 +4816,7 @@
     {
       "id": "p_1780609726389",
       "codigo": "NB4J",
-      "name": "Paquete de 6 ariposas Brillantes",
+      "name": "Paquete de 6 mariposas Brillantes",
       "cat": "Cabello",
       "subcat": "",
       "notes": "Set 6 unidades de mariposas brillantes para el cabello. Diseños en tonos rosa, celeste, lila, plateado y blanco con acabado glitter. Cierre metálico dorado seguro y resistente. Ideales para peinados infantiles, fiestas o uso diario.",
@@ -4910,7 +4855,7 @@
     {
       "id": "p_1787412191026",
       "codigo": "7VDV",
-      "name": "Paquete de 6 mini pellisquitos cuadrados",
+      "name": "Paquete de 6 mini pellizquitos cuadrados",
       "cat": "Cabello",
       "subcat": "",
       "notes": "El precio es por 6 pellisquitos",
@@ -4933,7 +4878,7 @@
     {
       "id": "p_1785275574502",
       "codigo": "NSWC",
-      "name": "Paquete de 6 pellisquitos coloridos",
+      "name": "Paquete de 6 pellizquitos coloridos",
       "cat": "Cabello",
       "subcat": "",
       "notes": "Paquetes de 6 unidades",
@@ -4953,7 +4898,7 @@
     {
       "id": "p_1792876705630",
       "codigo": "FBH5",
-      "name": "Paquete de 6Pellizquitos variados",
+      "name": "Paquete de 6 pellizquitos variados",
       "cat": "Cabello",
       "subcat": "",
       "notes": "Antideslizantes y de colores que combinan con todo. Se puede elegir el diseño. Los colores son aleatorios, puede haber colores repetidos, son aproximadamente los colores de la imagen",
@@ -5040,7 +4985,7 @@
       "id": "p_1791638013723",
       "codigo": "VR7X",
       "name": "Pareja de anillos de acero",
-      "cat": "Reloj y Prendas",
+      "cat": "Relojes y Prendas",
       "subcat": "",
       "notes": "El kit cuenta con una pareja de anillos de acero inoxidable al azar. Lo que si puede elegir es el color, entre negro, plateado o dorado",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791634281/productos/ulqpdkm0of5ggizdtx3r.jpg",
@@ -5074,7 +5019,7 @@
       "id": "p_1788234402387",
       "codigo": "JHP9",
       "name": "Pareja de Brochitas de cocina",
-      "cat": "Hogar",
+      "cat": "Cocina",
       "subcat": "",
       "notes": "El precio es por una pareja de brochitas. Silicona resistente y duradera\nEn más de una pareja",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788234263/productos/nlp5eqskagx2n7xozs98.jpg",
@@ -5093,7 +5038,7 @@
       "id": "p_1791633427118",
       "codigo": "HR8P",
       "name": "Pareja de Manillas",
-      "cat": "Reloj y Prendas",
+      "cat": "Relojes y Prendas",
       "subcat": "",
       "notes": "El precio es por 2 pulceras tipo Manillas, seleccionadas a su elección. Acero inoxidable alta duración y calidad. Ideal para mujeres hombres o niños. También puede ser usada como tobilleras en tobillos finos",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1793221821/productos/mi9gr0f0zdq7humk70ib.jpg",
@@ -5142,7 +5087,7 @@
       "id": "p_1785012145699",
       "codigo": "SFQC",
       "name": "Pareja de Neblineros sin conmutador",
-      "cat": "Motos / Accesorios",
+      "cat": "Motos y Bicicletas",
       "subcat": "",
       "notes": "neblineros de alta calidad, incluye dos focos con sus accesorios de colocación",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785012775/productos/wnbezgm1ucncea9sqkr1.jpg",
@@ -5206,7 +5151,7 @@
       "id": "p_1793414006176",
       "codigo": "9DL3",
       "name": "Pareja de protectores de Cable",
-      "cat": "Bocinas Celulares y Accesorios",
+      "cat": "Celulares y Audio",
       "subcat": "",
       "notes": "El precio es por 2 protectores de cables de celular,compatibles con cualquier diseño. Colores aleatorios no elegibles. Hermosos, de alta calidad y durabilidad",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1793413756/productos/khiwibvcqfjigjvesuqp.jpg",
@@ -5230,8 +5175,8 @@
     {
       "id": "p_1791650300211",
       "codigo": "RWM4",
-      "name": "Pareja de pulceras cristianas",
-      "cat": "Reloj y Prendas",
+      "name": "Pareja de pulseras cristianas",
+      "cat": "Relojes y Prendas",
       "subcat": "",
       "notes": "Colores aleatorios",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791650195/productos/yf9jtj2qboa0we6ioulq.jpg",
@@ -5292,7 +5237,7 @@
       "id": "p_1780092503212",
       "codigo": "ETBN",
       "name": "Pasamontañas",
-      "cat": "Motos / Accesorios",
+      "cat": "Motos y Bicicletas",
       "subcat": "",
       "notes": "Solo en negro. Máxima calidad, unitalla, tela súper elastizada y transpirable\nPara más de uno",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1781638470/productos/e2aiy18ffaqquznhmmv2.jpg",
@@ -5311,7 +5256,7 @@
       "id": "p_1780956166935",
       "codigo": "WL4Q",
       "name": "Peine de barbería",
-      "cat": "Cabello",
+      "cat": "Barbería",
       "subcat": "",
       "notes": "Peine profesional de barbería en plástico resistente. Diseño ergonómico con dientes ondulados y sección de peinado fino, ideal para cortes, degradados y peinados precisos. Ligero, fácil de limpiar y de agarre cómodo. Herramienta indispensable para barberos y estilistas.",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788034950/productos/h5tbbkndutfbgpuurfkv.jpg",
@@ -5716,7 +5661,7 @@
       "id": "p_1794449913445",
       "codigo": "V2Y8",
       "name": "Pelota de futbol profesional",
-      "cat": "Niños",
+      "cat": "Niños y Escuela",
       "subcat": "",
       "notes": "⚽🔥 ¡Lleva tu juego al siguiente nivel! 🔥⚽\n\nDisfruta de nuestras pelotas profesionales de fútbol, con un diseño moderno, colores llamativos y excelente calidad. Ideales para entrenamientos, partidos y competencias.\n\n¡Demuestra tu talento, domina la cancha y juega como un campeón! 🏆\n\n📲 ¡Consigue la tuya hoy!",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1794450114/productos/vb8urgpi8l3hywtrdxks.jpg",
@@ -5742,7 +5687,7 @@
       "id": "p_1782329655762",
       "codigo": "EKM9",
       "name": "Pestañas postizas",
-      "cat": "Cuidado Personal",
+      "cat": "Belleza y Cuidado",
       "subcat": "",
       "notes": "Pestañas Postizas MAGEFY en Caja Estilo Mixto Naturales Largas Cruzadas Rizadas y Esponjosas, Adecuadas para Uso Diario y Viajes . Con su adhesivo incluído",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782329615/productos/m0im1q6zm39ylege8jxh.jpg",
@@ -5786,7 +5731,7 @@
       "id": "p_1786922817374",
       "codigo": "LGJZ",
       "name": "Piercing de aro dorado",
-      "cat": "Reloj y Prendas",
+      "cat": "Relojes y Prendas",
       "subcat": "",
       "notes": "Paquete de 5 unidades Acero quirúrgico.Color dorado\nMaterial: acero quirúrgico",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786922771/productos/zee1y6oacy7auhrguet3.jpg",
@@ -5805,8 +5750,8 @@
     {
       "id": "p_1786922877587",
       "codigo": "3XT7",
-      "name": "Pirsing de aro plateado",
-      "cat": "Reloj y Prendas",
+      "name": "Piercing de aro plateado",
+      "cat": "Relojes y Prendas",
       "subcat": "",
       "notes": "Paquete de 5 unidades. Acero quirúrgico.Color Plateado\nMaterial: acero quirúrgico",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786922786/productos/i15won8t85rv2ywx9dhc.jpg",
@@ -5825,8 +5770,8 @@
     {
       "id": "p_1788038977633",
       "codigo": "UMMS",
-      "name": "Pirsing de punto",
-      "cat": "Reloj y Prendas",
+      "name": "Piercing de punto",
+      "cat": "Relojes y Prendas",
       "subcat": "",
       "notes": "Paquete de 5 .Pequeño y de acero quirúrgico. Diamantes solo en blanco",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788038766/productos/thd4dzqujwol8jofq87w.jpg",
@@ -5845,7 +5790,7 @@
       "id": "p_1788842619496",
       "codigo": "7WEB",
       "name": "Piscina",
-      "cat": "Niños",
+      "cat": "Playa y Verano",
       "subcat": "",
       "notes": "Piscina infantil inflable, la mejor opción para pasar una agradable tarde en familia y para el entretenimiento de los pequeños. Medidas en la imagen. Bombita de aire incluída",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788842305/productos/n7ucg0ccllewtwv4pc7a.jpg",
@@ -5892,7 +5837,7 @@
       "id": "p_1785092176064",
       "codigo": "PUJL",
       "name": "PopSockets",
-      "cat": "Bocinas Celulares y Accesorios",
+      "cat": "Celulares y Audio",
       "subcat": "",
       "notes": "Accesorio ideal para el sostén y seguridad del celular a demás de brindar color y belleza. Solo disponibles los diseños de la imagen",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785092078/productos/pxb3tokwdqnd2tt8yagh.jpg",
@@ -5914,7 +5859,7 @@
       "id": "p_1782343083267",
       "codigo": "GQNJ",
       "name": "Protector de oídos",
-      "cat": "Cuidado Personal",
+      "cat": "Salud y Gym",
       "subcat": "",
       "notes": "Ideal para proteger los oídos de los niños de la entrada de agua,ya sea en el baño,la playa, piscinas, etc... También tiene un perfecto uso para evitar manchas de tintes en esa zona\nEl paquete trae 20 pares",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782343040/productos/rzxjmldhmvwxyoh1u5ld.jpg",
@@ -5933,7 +5878,7 @@
       "id": "p_1785877916356",
       "codigo": "C75K",
       "name": "Protector de teléfono para agua",
-      "cat": "Bocinas Celulares y Accesorios",
+      "cat": "Celulares y Audio",
       "subcat": "",
       "notes": "Protector hermético para celular, permite tomar fotos y utilizar la pantalla bajo el agua sin arriesgar la integridad del teléfono. También muy útil para días de lluvias y personas que su trabajo constante es con las manos mojadas\nColores disponibles 🖤💜🩷",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785877702/productos/dae2dqoqxjjctvsgynmo.jpg",
@@ -5969,7 +5914,7 @@
       "id": "p_1790978748079",
       "codigo": "TQQ6",
       "name": "Protector de Xiaomi Note14 pro",
-      "cat": "Bocinas Celulares y Accesorios",
+      "cat": "Celulares y Audio",
       "subcat": "",
       "notes": "Exactamente el diseño de la imagen",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790978626/productos/k3xrqptl8sy6ympxbqbu.jpg",
@@ -5990,7 +5935,7 @@
       "id": "p_1789240844908",
       "codigo": "N53J",
       "name": "Pulover de hombre \"Cara Molesta\"",
-      "cat": "Ropa",
+      "cat": "Pulóveres y Ropa de Hombre",
       "subcat": "",
       "notes": "Pulover de poliéster elastizado. Importado de USA",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789240755/productos/isanspupljjdhuye6xbo.jpg",
@@ -6024,7 +5969,7 @@
       "id": "p_1789242483636",
       "codigo": "AY6T",
       "name": "Pulover de hombre \"Eres mi Rey\"",
-      "cat": "Ropa",
+      "cat": "Pulóveres y Ropa de Hombre",
       "subcat": "",
       "notes": "Pulover algodonada elastizado. Importado de USA",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791647061/productos/tuc6kyfzvdr6bu69guul.jpg",
@@ -6055,7 +6000,7 @@
       "id": "p_1791837295509",
       "codigo": "SJU6",
       "name": "Pulover de hombre \"Memes\"",
-      "cat": "Ropa",
+      "cat": "Pulóveres y Ropa de Hombre",
       "subcat": "",
       "notes": "Tela algodonada elastizada",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791837241/productos/vdywxkkwybohpohuv44k.jpg",
@@ -6088,7 +6033,7 @@
       "id": "p_1793997729489",
       "codigo": "UGAA",
       "name": "Pulover de hombre Diseño Corcel",
-      "cat": "Ropa",
+      "cat": "Pulóveres y Ropa de Hombre",
       "subcat": "",
       "notes": "Tela de algodón,elastizada,cómoda y de alta calidad. Ideal para uso de adolescentes, jóvenes y hombres maduros.",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1793997548/productos/blj7nsw7ivyjlmqqsvon.jpg",
@@ -6127,7 +6072,7 @@
       "id": "p_1792719971889",
       "codigo": "EW26",
       "name": "Pulover de hombres \"Perro mejor amigo\"",
-      "cat": "Ropa",
+      "cat": "Pulóveres y Ropa de Hombre",
       "subcat": "",
       "notes": "Tela algodonada elastizada",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792719851/productos/jef8mcbd3ew2cdk00h1v.jpg",
@@ -6148,7 +6093,7 @@
       "id": "p_1793997236819",
       "codigo": "UQX2",
       "name": "Pulover Diseño Tanque Rojo",
-      "cat": "Ropa",
+      "cat": "Pulóveres y Ropa de Hombre",
       "subcat": "",
       "notes": "Tela de algodón,elastizada,cómoda y de alta calidad. Ideal para uso de adolescentes, jóvenes y hombres maduros.",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1793996948/productos/cqhkanojlr3yzji0qv2m.jpg",
@@ -6187,7 +6132,7 @@
       "id": "p_1791836377621",
       "codigo": "8QV7",
       "name": "Pulover linea lateral",
-      "cat": "Ropa",
+      "cat": "Pulóveres y Ropa de Hombre",
       "subcat": "",
       "notes": "Tela elastizada de alta calidad",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791836055/productos/kvuqeq1yjssivmcupogb.jpg",
@@ -6225,7 +6170,7 @@
       "id": "p_1793997809698",
       "codigo": "BS9P",
       "name": "Pulover para hombre Cumpleañero",
-      "cat": "Ropa",
+      "cat": "Pulóveres y Ropa de Hombre",
       "subcat": "",
       "notes": "Tela de algodón,elastizada,cómoda y de alta calidad. Ideal para uso de adolescentes, jóvenes y hombres maduros. Celebración de Cumpleaños",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1793997666/productos/z4uumupxo4cny0nc4ujm.jpg",
@@ -6258,7 +6203,7 @@
       "id": "p_1793996642305",
       "codigo": "G7GY",
       "name": "Pulover Unisex de Guitarra",
-      "cat": "Ropa",
+      "cat": "Pulóveres y Ropa de Hombre",
       "subcat": "",
       "notes": "Tela de algodón,elastizada,cómoda y de alta calidad. Ideal para uso en pareja",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1793996354/productos/hujuxbpit9wzwadjrbxc.jpg",
@@ -6305,7 +6250,7 @@
       "id": "p_1793996200980",
       "codigo": "Z2KT",
       "name": "Pulover Unisex Estilo Asiático",
-      "cat": "Ropa",
+      "cat": "Pulóveres y Ropa de Hombre",
       "subcat": "",
       "notes": "Tela de algodón,elastizada,cómoda y de alta calidad. Ideal para uso en pareja",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1793995971/productos/dzxrxn7td0irjzkqzibw.jpg",
@@ -6353,7 +6298,7 @@
       "id": "p_1789242386934",
       "codigo": "D5K2",
       "name": "Pulover Unisex Navideño \"Muñecos de Nieve\"",
-      "cat": "Ropa",
+      "cat": "Pulóveres y Ropa de Hombre",
       "subcat": "",
       "notes": "Pulover algodonada elastizado. Importado de USA",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791647059/productos/tivxwdhtdakn1ru5sjij.jpg",
@@ -6384,7 +6329,7 @@
       "id": "p_1789242333082",
       "codigo": "4QLL",
       "name": "Pulover Unisex Navideño \"Somos Familia\"",
-      "cat": "Ropa",
+      "cat": "Pulóveres y Ropa de Hombre",
       "subcat": "",
       "notes": "Pulover algodonada elastizado. Importado de USA",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789242098/productos/u6uvk5zmxtesf0aekplu.jpg",
@@ -6419,7 +6364,7 @@
       "id": "p_1788034256550",
       "codigo": "ZST8",
       "name": "Rallador cortador multiusos",
-      "cat": "Hogar",
+      "cat": "Cocina",
       "subcat": "",
       "notes": "Cqortadora de verduras 6 en 1, herramienta de cocina multifunción con cuchillas de acero inoxidable para cortar, rallar, cortar en juliana y en forma de gofre",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788034096/productos/x41uqbrddleitll256n4.jpg",
@@ -6440,7 +6385,7 @@
       "id": "p_1788528610951",
       "codigo": "L53P",
       "name": "Ratón inalámbrico",
-      "cat": "Electrodomésticos",
+      "cat": "Celulares y Audio",
       "subcat": "",
       "notes": "Ratón Inalámbrico Silencioso – Ratón Inalámbrico para Computadora, Ratón para Laptop, Ratón USB, Ratón para Chromebook, Ratón Inalámbrico, Ratón Inalámbrico, Ratón para PC, Ratones para Computadora, Ratón Silencioso",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788528508/productos/te3bwxztbrhsvbm7kjgt.jpg",
@@ -6466,7 +6411,7 @@
       "id": "p_1788551044899",
       "codigo": "9LFV",
       "name": "Reloj digital de silicona",
-      "cat": "Reloj y Prendas",
+      "cat": "Relojes y Prendas",
       "subcat": "",
       "notes": "Colores de la imagen. Manilla resistente y ajustable de silicona. Para uso de cualquier edad y género",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788552124/productos/gjut3ljtezdjji8bjkx1.jpg",
@@ -6506,7 +6451,7 @@
       "id": "p_1789489238446",
       "codigo": "MPP5",
       "name": "Reloj y prendas de hombre",
-      "cat": "Reloj y Prendas",
+      "cat": "Relojes y Prendas",
       "subcat": "",
       "notes": "Conjunto de reloj ,con Cadena, Manilla y anillo. Todo tal como en la foto .",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789489062/productos/bxwgrqn13j8iyn5lmkgh.jpg",
@@ -6527,7 +6472,7 @@
       "id": "p_1789500476471",
       "codigo": "HYDB",
       "name": "Relojes de colores",
-      "cat": "Reloj y Prendas",
+      "cat": "Relojes y Prendas",
       "subcat": "",
       "notes": "Hermosos diseños.",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789500243/productos/qrccwlgkrgjj8z7tzybe.jpg",
@@ -6572,7 +6517,7 @@
       "id": "p_1794755288712",
       "codigo": "R6R6",
       "name": "Relojes de hombre",
-      "cat": "Reloj y Prendas",
+      "cat": "Relojes y Prendas",
       "subcat": "",
       "notes": "Relojes de pila. Esfera de aleación de metales y manilla de silicona, resistente y no pierde el color. Detalles de peso y medidas en las imágenes. Hermoso y elegante prenda para uso diario. El mejor regalo para papá, hermano, esposo o hijo. Presente ideal para el día del maestro",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1794755009/productos/fxqs2gavulkslizgedwo.jpg",
@@ -6609,7 +6554,7 @@
       "id": "p_1790875375235",
       "codigo": "95W4",
       "name": "Relojes de hombre marca Geneva",
-      "cat": "Reloj y Prendas",
+      "cat": "Relojes y Prendas",
       "subcat": "",
       "notes": "Diseños de relojes masculinos de alta calidad. Variedad de estilos. Perfecto regalo 🎁",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790875193/productos/wno0qlj1igxllfn3w1k8.jpg",
@@ -6650,7 +6595,7 @@
       "id": "p_1794059743222",
       "codigo": "Y78D",
       "name": "Relojes de niños \"Divertidos\"",
-      "cat": "Niños",
+      "cat": "Niños y Escuela",
       "subcat": "",
       "notes": "Digitales y tiernos relojes de niños. Correa de silicona,no produce alergias ni rozaduras. Alta calidad y durabilidad. El toque perfecto para cualquier outfit",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1794059458/productos/bllpo6itxlysn94ypzyh.jpg",
@@ -6695,7 +6640,7 @@
       "id": "p_1788199586927",
       "codigo": "AUAQ",
       "name": "Relojes digitales de niños colores fuertes",
-      "cat": "Niños",
+      "cat": "Niños y Escuela",
       "subcat": "",
       "notes": "Hermosos diseños y colores.\nTodos disponibles a excepción del negro astronauta",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791641462/productos/ywhlxrewc4vm3cx1rt4f.jpg",
@@ -6730,7 +6675,7 @@
       "id": "p_1788151078303",
       "codigo": "EYNJ",
       "name": "Relojes digitales de niños colores pastel",
-      "cat": "Niños",
+      "cat": "Niños y Escuela",
       "subcat": "",
       "notes": "Hermosos diseños y colores.\nTodos exepto el negro🐼 y el beige 🐿️",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792238033/productos/gklefbybffulzxh47bvy.jpg",
@@ -6767,7 +6712,7 @@
       "id": "p_1791228633743",
       "codigo": "NC68",
       "name": "Rollo de papel tapiz autoadhesivo 5m",
-      "cat": "Decoración",
+      "cat": "Decoración y Fiestas",
       "subcat": "",
       "notes": "Diseño exacto de la imagen\nMedias 40x500cm",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791228550/productos/ue2pjtni9oahlhjhatzn.jpg",
@@ -6788,7 +6733,7 @@
       "id": "p_1791228936507",
       "codigo": "32B8",
       "name": "Rollo de papel tapiz autoadhesivo Mármol Gris",
-      "cat": "Decoración",
+      "cat": "Decoración y Fiestas",
       "subcat": "",
       "notes": "Diseño exacto de la imagen\nMedias 40x1000cm",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791228873/productos/fj7to0y16532rq21z6uw.jpg",
@@ -6809,7 +6754,7 @@
       "id": "p_1785875419963",
       "codigo": "V6X9",
       "name": "Salvavidas",
-      "cat": "Playa",
+      "cat": "Playa y Verano",
       "subcat": "",
       "notes": "Ideal para niños pequeños porque no es de hueco abierto totalmente, son de 2 huequitos para los 2 pies y proporcionar sostén y seguridad al bebé",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785875253/productos/x856nne0x9jf6ed9j7ve.jpg",
@@ -6830,7 +6775,7 @@
       "id": "p_1795055552021",
       "codigo": "RSRK",
       "name": "Sandalias de hombre",
-      "cat": "Calzado",
+      "cat": "Calzado y Bolsos",
       "subcat": "",
       "notes": "Sandalias de playa Dabble para deportes de verano al aire libre con correa de talón, dos formas de uso, zapatos de jardín de interior, sandalias antideslizantes para hombre para acampar al aire libre, resistentes al desgaste con punta abierta, chanclas para playa y gimnasio. Solamente el #42",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1795055387/productos/ffdbl7btq0e9q4mrsgac.jpg",
@@ -6855,7 +6800,7 @@
       "id": "p_1785534103928",
       "codigo": "T94Y",
       "name": "Sandalias tiras lisas 🖤",
-      "cat": "Calzado",
+      "cat": "Calzado y Bolsos",
       "subcat": "",
       "notes": "#36",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785534019/productos/bxgaav8laeeipdgxkwf5.jpg",
@@ -6878,7 +6823,7 @@
       "id": "p_1792340423078",
       "codigo": "7W2G",
       "name": "Secador de pelo iónico de 1875W para salón profesional",
-      "cat": "Electrodomésticos",
+      "cat": "Cabello",
       "subcat": "",
       "notes": "Secador de pelo iónico de 1875W para salón profesional y uso doméstico, 3 niveles de calor/2 velocidades con función Cool Shot, regalo para el Día de la Madre/Navidad para mujeres, negro",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792340203/productos/dgx1nkuhaansb4rmo93y.jpg",
@@ -6905,7 +6850,7 @@
       "id": "p_1782259924259",
       "codigo": "5MDP",
       "name": "Sérum 5en1",
-      "cat": "Cuidado Personal",
+      "cat": "Belleza y Cuidado",
       "subcat": "",
       "notes": "Suero Facial 5 en 1 con Ácido Hialurónico, Colágeno, Niacinamida, Vitaminas C y E. Minimiza Poros, Control de Sebo, Hidratante. Adecuado para Todo Tipo de Piel, Hipoaergénico.",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782259706/productos/wewused76wjxguosoz5l.jpg",
@@ -6930,7 +6875,7 @@
       "id": "p_1786917303962",
       "codigo": "M4CQ",
       "name": "Set de uñas",
-      "cat": "Uñas",
+      "cat": "Belleza y Cuidado",
       "subcat": "",
       "notes": "Conjunto de 4 productos escenciales para el cuidado de las uñas. El kit contiene Deshidratador - Primer - Base - Top Coat\nTodo lo necesario para una perfecta aplicación de manicura en gel, tanto casera como profesional",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786917082/productos/qz13ovqg9b20lilzffk9.jpg",
@@ -6951,7 +6896,7 @@
       "id": "p_1794060931787",
       "codigo": "WHR6",
       "name": "Short de hombre",
-      "cat": "Ropa",
+      "cat": "Pulóveres y Ropa de Hombre",
       "subcat": "",
       "notes": "Tela poliéster elastizada. Alta calidad y durabilidad. Ligero, cómodo y resistente. La mejor opción para combinar estética con comodidad",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1794060722/productos/t6stpx8xpqmgcjf6w2qu.jpg",
@@ -6995,8 +6940,8 @@
     {
       "id": "p_1790975712067",
       "codigo": "DQCT",
-      "name": "Soporte de sel con brazo flexible y pinzas",
-      "cat": "Bocinas Celulares y Accesorios",
+      "name": "Soporte de celular con brazo flexible y pinzas",
+      "cat": "Celulares y Audio",
       "subcat": "",
       "notes": "",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790975570/productos/u6r6whchv81o5vhwlxgi.jpg",
@@ -7026,10 +6971,74 @@
       "creado": 1790975712068
     },
     {
+      "id": "p_1781551585230",
+      "codigo": "CQ5X",
+      "name": "Soporte de celular y Mandos para pared",
+      "cat": "Celulares y Audio",
+      "subcat": "",
+      "notes": "Apollo de celular y Mandos, para colocar en pared (ideal para cuando vas a dormir colgar tu móvil). Incluye su adhesivo para más facil colocación (colores blancos,gris y negros )",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785087860/productos/rvyuo7iwnevw6yztbsh8.jpg",
+      "precioUSD": 1,
+      "precioCUP": 935,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Color"
+        ],
+        "opciones": [
+          "NEGRO",
+          "GRIS"
+        ]
+      },
+      "maxOpciones": {
+        "NEGRO": 1,
+        "GRIS": 1
+      },
+      "envio": {
+        "corto": "🛵 Gratis desde $2.50 USD",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
+      },
+      "creado": 1781551585230
+    },
+    {
+      "id": "p_1790793838226",
+      "codigo": "MKET",
+      "name": "Soportes de celular",
+      "cat": "Celulares y Audio",
+      "subcat": "",
+      "notes": "Apollos plásticos para celulares o tablets. Colores disponibles: 🩷 y 💙",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790793416/productos/rpc68jeplxinlu5sylnt.jpg",
+      "precioUSD": 1,
+      "precioCUP": 935,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Colores"
+        ],
+        "opciones": [
+          "ROSA🩷",
+          "AZUL💙"
+        ]
+      },
+      "maxOpciones": {
+        "ROSA🩷": 3,
+        "AZUL💙": 7
+      },
+      "envio": {
+        "corto": "🛵 Gratis desde $2.50 USD",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
+      },
+      "creado": 1790793838226
+    },
+    {
       "id": "p_1788546447070",
       "codigo": "G2DK",
-      "name": "Tablet de niñ@",
-      "cat": "Bocinas Celulares y Accesorios",
+      "name": "Tablet para niños",
+      "cat": "Celulares y Audio",
       "subcat": "",
       "notes": "Solo en Rosado con temática de astronauta. Incluye su cable de carga, un juego de audífonos de cable y un protector con sistema de apollo para mesa y para mejor sostén manual\nCaracterísticas:\nAndroid 14\n7 pulgadas\nWifi 5G\nBatería de gran Capacidad 4500mAh\nDoble camara\n4GB de ram\n128GB de almacenamiento\nPantalla IPS HD de 1280*800 de resolución",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1793414574/productos/x1hgiw777ftvj4pqv9lw.jpg",
@@ -7065,7 +7074,7 @@
       "id": "p_1785533206456",
       "codigo": "M82M",
       "name": "Tacones 🤍",
-      "cat": "Calzado",
+      "cat": "Calzado y Bolsos",
       "subcat": "",
       "notes": "Solo #38",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785533118/productos/n6kufln4qr2nektpeatg.jpg",
@@ -7086,7 +7095,7 @@
       "id": "p_1793586236686",
       "codigo": "EKE6",
       "name": "Tatuajes Fluorescentes para niños y niñas",
-      "cat": "Niños",
+      "cat": "Niños y Escuela",
       "subcat": "",
       "notes": "El precio es por 2 hojas de tatuajes de ni@s( entre 20 y 30 tatuajes). Se puede elegir si lo desea con temática de niña o de niño, no es elegible el diseño específico. Lindos, faciles de colocar, y con un hermoso brillo en la oscuridad (fluorescente)",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1793585774/productos/zc7rpfyvgg49emktznfe.jpg",
@@ -7110,7 +7119,7 @@
         ]
       },
       "maxOpciones": {
-        "NIÑOS": 7,
+        "NIÑOS": 3,
         "NIÑAS": 4
       },
       "envio": {
@@ -7123,7 +7132,7 @@
       "id": "p_1789411311758",
       "codigo": "5TLQ",
       "name": "Tazas 5 piezas",
-      "cat": "Porcelana",
+      "cat": "Cocina",
       "subcat": "",
       "notes": "Hermoso conjunto de 4 tazas de 8oz y su base metálica.",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789411149/productos/piydqwkezskbp3pf0se3.jpg",
@@ -7144,7 +7153,7 @@
       "id": "p_1786991410391",
       "codigo": "YUTD",
       "name": "Teflón",
-      "cat": "Ferretería",
+      "cat": "Ferretería y Seguridad",
       "subcat": "",
       "notes": "",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786991339/productos/c2rea2w2ux9tn9zixgmg.jpg",
@@ -7164,7 +7173,7 @@
       "id": "p_1788537976001",
       "codigo": "6ESE",
       "name": "Timbre Inalámbrico Impermeable",
-      "cat": "Electrodomésticos",
+      "cat": "Ferretería y Seguridad",
       "subcat": "",
       "notes": "Timbre Inalámbrico Impermeable, Funciona a 100 Metros, 36 Tonos y Volumen Ajustable, 2 Receptores y 1 Transmisor Remoto con Botón de Presión",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791157524/productos/qyfve7zqeh8vcla4gye9.jpg",
@@ -7234,7 +7243,7 @@
       "id": "p_1788138688106",
       "codigo": "CMSD",
       "name": "Toallitas de patito",
-      "cat": "Hogar",
+      "cat": "Hogar y Limpieza",
       "subcat": "",
       "notes": "Toallitas ultra suaves\nEn más de una",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788138399/productos/kqmjxder2nlypy2kbxcs.jpg",
@@ -7254,7 +7263,7 @@
       "id": "p_1780346613571",
       "codigo": "YRGG",
       "name": "Tomacorrientes",
-      "cat": "Ferretería",
+      "cat": "Ferretería y Seguridad",
       "subcat": "",
       "notes": "Tomacorrientes de 20A Maxima Calidad Ideal para súper consumo,no se derriten",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791079338/productos/cfkfobz84waxqznqhbq2.jpg",
@@ -7274,7 +7283,7 @@
       "id": "p_1790954066390",
       "codigo": "82HF",
       "name": "Velocímetro",
-      "cat": "Motos / Accesorios",
+      "cat": "Motos y Bicicletas",
       "subcat": "",
       "notes": "Velocímetro y Odómetro Digital con Cable para Bicicletas, Pantalla LCD Multifunción para Carretera y Montaña, Caja de ABS Negra, Accesorios Ciclismo, Monitorización de Velocidad, Diseño Ligero, Funciona con Pila (No Incluida)",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790954256/productos/irq5mozfnze5v4cjmh8m.jpg",
@@ -7376,7 +7385,7 @@
       "id": "p_1789226088397",
       "codigo": "SPYY",
       "name": "Vestido corto",
-      "cat": "Ropa",
+      "cat": "Ropa de Mujer",
       "subcat": "",
       "notes": "Vestido de verano floral sin espalda con tirantes y lazo para vacaciones de verano",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789225996/productos/dmbonwu1kteatwyrkh51.jpg",
@@ -7410,7 +7419,7 @@
       "id": "p_1789219477837",
       "codigo": "62JK",
       "name": "Vestido largo hombro cubierto",
-      "cat": "Ropa",
+      "cat": "Ropa de Mujer",
       "subcat": "",
       "notes": "Vestido largo de moda y elegante con estampado vintage para mujer, cuello en V y manga corta.",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789218865/productos/foqqnbk1jhtpqxjkznau.jpg",
@@ -7444,7 +7453,7 @@
       "id": "p_1789221251954",
       "codigo": "SGL2",
       "name": "Vestido largo manga de tirantes",
-      "cat": "Ropa",
+      "cat": "Ropa de Mujer",
       "subcat": "",
       "notes": "Vestido de línea A con estampado floral y cuello en V - Diseño transpirable y suelto de manga corta - Ideal para la ropa de primavera y verano",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789221188/productos/sa3fysvkulzbgcjzvfb0.jpg",
@@ -7480,7 +7489,7 @@
       "id": "p_1785358002090",
       "codigo": "ZDRY",
       "name": "Vitamina E",
-      "cat": "Gym y Suplementos",
+      "cat": "Salud y Gym",
       "subcat": "",
       "notes": "Beneficios del suplemento de Vitamina E\n✅ Potente antioxidante\nProtege tus células del daño de los radicales libres y del estrés oxidativo.\n✅ Apoya el sistema inmunológico\nAyuda a mantener las defensas del organismo activas y fuertes.\n✅ Cuidado de la piel\nContribuye a mantener la barrera natural de la piel, favorece la hidratación y ayuda a combatir el envejecimiento prematuro.\n✅ Salud ocular\nImportante para la visión y el cuidado de los ojos.\n✅ Salud cardiovascular y de la sangre\nColabora en el mantenimiento de vasos sanguíneos sanos y en la circulación normal.\n✅ Bienestar general\nApoya la salud celular, la función cerebral y el equilibrio del organismo.",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785357950/productos/vttg5w9ocijutikiacna.jpg",
@@ -7501,7 +7510,7 @@
       "id": "p_1785533281949",
       "codigo": "HFRR",
       "name": "Zapatillas🖤",
-      "cat": "Calzado",
+      "cat": "Calzado y Bolsos",
       "subcat": "",
       "notes": "#37",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785533204/productos/c5vkffaygtzfqq1liff2.jpg",
@@ -7530,7 +7539,7 @@
       "codigo": "4TKD",
       "name": "Accesorio para llave de agua",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790619459/productos/geguaz3cr1lsfh3ekwvu.jpg",
-      "cat": "Ferretería"
+      "cat": "Ferretería y Seguridad"
     },
     {
       "codigo": "J8YM",
@@ -7554,37 +7563,31 @@
       "codigo": "5QEY",
       "name": "Afeitadora electrica 2 en 1",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790716439/productos/lcy5aa3kwmg3tbhbjuc8.jpg",
-      "cat": "Electrodomésticos"
-    },
-    {
-      "codigo": "ABFR",
-      "name": "Apollo de celular",
-      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785088749/productos/nmqmkibborqjekkyoepr.jpg",
-      "cat": "Bocinas Celulares y Accesorios"
+      "cat": "Barbería"
     },
     {
       "codigo": "EJBN",
       "name": "Aretes antialérgicos de piedra brillante",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787495514/productos/lbtgzyyjjpfw4cipo1ih.jpg",
-      "cat": "Reloj y Prendas"
+      "cat": "Relojes y Prendas"
     },
     {
       "codigo": "S55V",
       "name": "Aretitos de fantasía",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787498339/productos/qerjq0wjoh09c54jwder.jpg",
-      "cat": "Reloj y Prendas"
+      "cat": "Relojes y Prendas"
     },
     {
       "codigo": "DQMN",
       "name": "Aro de luz",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788553013/productos/jszpxp6ll0ymemeilcjd.jpg",
-      "cat": "Bocinas Celulares y Accesorios"
+      "cat": "Celulares y Audio"
     },
     {
       "codigo": "Q9SZ",
       "name": "Asistente de acelerador para motocicleta",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785089991/productos/fse2evmridpgqhg2h0oy.jpg",
-      "cat": "Motos / Accesorios"
+      "cat": "Motos y Bicicletas"
     },
     {
       "codigo": "N59Y",
@@ -7602,241 +7605,247 @@
       "codigo": "PJ4H",
       "name": "Audífono Bluetooth tipo Cascos 3",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790965642/productos/jss9vmgdeoy0g5alq399.jpg",
-      "cat": "Bocinas Celulares y Accesorios"
+      "cat": "Celulares y Audio"
     },
     {
       "codigo": "6LA2",
       "name": "Audífonos Bluetooth",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1780956249/productos/csnj5oiwwbll9vllkgpx.jpg",
-      "cat": "Bocinas Celulares y Accesorios"
+      "cat": "Celulares y Audio"
     },
     {
       "codigo": "MVJ4",
       "name": "Audífonos Bluetooth tipo Cascos 2",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790965764/productos/hfwadlmy4ytfprylj2y1.jpg",
-      "cat": "Bocinas Celulares y Accesorios"
+      "cat": "Celulares y Audio"
     },
     {
       "codigo": "4TXL",
       "name": "Audífonos caja cuadrada",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785089517/productos/af2htadoakypvnjdck6b.jpg",
-      "cat": "Bocinas Celulares y Accesorios"
+      "cat": "Celulares y Audio"
     },
     {
       "codigo": "FPUF",
       "name": "Audífonos de Bluetooth tipo Casco 1",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1784919017/productos/ymppx6ylkp13y8c2vhx6.jpg",
-      "cat": "Bocinas Celulares y Accesorios"
+      "cat": "Celulares y Audio"
     },
     {
       "codigo": "39TD",
       "name": "Audífonos Inalámbricos A6S",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791226956/productos/kedky7empch1tl5jw8m9.jpg",
-      "cat": "Bocinas Celulares y Accesorios"
+      "cat": "Celulares y Audio"
     },
     {
       "codigo": "MMVX",
       "name": "Audífonos Inalámbricos G9S",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787957834/productos/vt5n582bqwmdxs3uqzhl.jpg",
-      "cat": "Bocinas Celulares y Accesorios"
+      "cat": "Celulares y Audio"
     },
     {
       "codigo": "QD4E",
       "name": "Audífonos inalámbricos X55",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785089336/productos/k1vaswogj1rww7enirsk.jpg",
-      "cat": "Bocinas Celulares y Accesorios"
+      "cat": "Celulares y Audio"
     },
     {
       "codigo": "KS3Q",
       "name": "Bicicleta Eléctrica de 500W para Adultos",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788830814/productos/mbtm7sr4opagfnenqeht.jpg",
-      "cat": "Motos / Accesorios"
+      "cat": "Motos y Bicicletas"
     },
     {
       "codigo": "F5H9",
       "name": "Bolsas de malla de nailón con cremallera",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785180400/productos/m4mufoxnbeo8nqvjmage.jpg",
-      "cat": "Bolsos Carteras Mochilas monederos"
+      "cat": "Muebles y Organizadores"
     },
     {
       "codigo": "426Q",
       "name": "Bolso Bandolera",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785179753/productos/lcudri88kzgrej0oelef.jpg",
-      "cat": "Bolsos Carteras Mochilas monederos"
+      "cat": "Calzado y Bolsos"
     },
     {
       "codigo": "EPM9",
       "name": "Bolso bandolera mostaza",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785182905/productos/fnzafrosko3h4nehplug.jpg",
-      "cat": "Bolsos Carteras Mochilas monederos"
+      "cat": "Calzado y Bolsos"
     },
     {
       "codigo": "JHP6",
       "name": "Bolsos de pecho",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785182616/productos/mkiut7qu8g9eckwr9evg.jpg",
-      "cat": "Bolsos Carteras Mochilas monederos"
+      "cat": "Calzado y Bolsos"
     },
     {
       "codigo": "AEAV",
       "name": "Cable tipo C 3metros",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791165695/productos/ccwcaxqppjt5e9gs083u.jpg",
-      "cat": "Bocinas Celulares y Accesorios"
+      "cat": "Celulares y Audio"
     },
     {
       "codigo": "BP9X",
       "name": "Cafetera 1 taza",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788891782/productos/b8cptn2c5lert8u7rad6.jpg",
-      "cat": "Hogar"
+      "cat": "Cocina"
+    },
+    {
+      "codigo": "NM9F",
+      "name": "Calcomanía para tanque de moto Marmoleada",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791646495/productos/cobqtkiyxarw1gwdfkua.jpg",
+      "cat": "Motos y Bicicletas"
     },
     {
       "codigo": "ULAC",
       "name": "Camiseta corta",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789229886/productos/cwtxkhbn1axa0pypz24r.jpg",
-      "cat": "Ropa"
+      "cat": "Ropa de Mujer"
     },
     {
       "codigo": "JAVN",
       "name": "Cargador de batería",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787438078/productos/kupn88b6jblzymggz1td.jpg",
-      "cat": "Respaldo energético"
+      "cat": "Electrodomésticos"
     },
     {
       "codigo": "9C9Q",
       "name": "Cartera billetera",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789009495/productos/sgovgdklrsvqo2kjornd.jpg",
-      "cat": "Bolsos Carteras Mochilas monederos"
+      "cat": "Calzado y Bolsos"
     },
     {
       "codigo": "H8HN",
       "name": "Cesta organizadora",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788842125/productos/le7zv3buhoescjdcu4em.jpg",
-      "cat": "Hogar"
+      "cat": "Muebles y Organizadores"
     },
     {
       "codigo": "YAYM",
       "name": "Cinto negro ancho",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792276630/productos/oqbostrsrlybcb4zchpz.jpg",
-      "cat": "Accesorio de vestir"
+      "cat": "Gafas y Accesorios"
     },
     {
       "codigo": "RHH5",
       "name": "Cintos 1",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786998257/productos/gogjyz4xkuai2twsk7l6.jpg",
-      "cat": "Accesorio de vestir"
+      "cat": "Gafas y Accesorios"
     },
     {
       "codigo": "PWSW",
       "name": "Cintos 2",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786998742/productos/q6yotu9lsmrhn7hfinsl.jpg",
-      "cat": "Accesorio de vestir"
+      "cat": "Gafas y Accesorios"
     },
     {
       "codigo": "KYGQ",
       "name": "Cintos finos variados",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787756837/productos/sxwqjer7oekvpoxsp8ky.jpg",
-      "cat": "Accesorio de vestir"
+      "cat": "Gafas y Accesorios"
     },
     {
       "codigo": "98M4",
       "name": "Clóset Armario Portátil de Acero Inoxidable",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1784918319/productos/hkb9rslv9nbye3ha9kac.jpg",
-      "cat": "Muebles"
+      "cat": "Muebles y Organizadores"
     },
     {
       "codigo": "NZBR",
       "name": "Cocina de Queroseno Militar Cuadrada",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1784914184/productos/gdscqigyotgxb2smwlbv.jpg",
-      "cat": "Respaldo energético"
+      "cat": "Cocina"
     },
     {
       "codigo": "RN39",
       "name": "Coladores 4 en 1",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788233901/productos/e48mdoq7eej4zyewrpfa.jpg",
-      "cat": "Hogar"
+      "cat": "Cocina"
     },
     {
       "codigo": "BNMS",
       "name": "Collar y accesorios dorados",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787501728/productos/eh3psubx3a0fzqndvqk4.jpg",
-      "cat": "Reloj y Prendas"
+      "cat": "Relojes y Prendas"
     },
     {
       "codigo": "EC4V",
       "name": "Conjunto de 2 forros de asientos",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788150599/productos/fgyzktdzuinxtzxbjmg0.jpg",
-      "cat": "Motos / Accesorios"
+      "cat": "Motos y Bicicletas"
     },
     {
       "codigo": "ZBGL",
-      "name": "Conjunto de pirsings de acero",
+      "name": "Conjunto de piercings de acero",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787453126/productos/wcvd8wra1lnvrgdmmu8a.jpg",
-      "cat": "Reloj y Prendas"
+      "cat": "Relojes y Prendas"
     },
     {
       "codigo": "2HCR",
       "name": "Conjunto de prendas de hombre",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789009051/productos/bmzalrdyrxsxvoxqelqx.jpg",
-      "cat": "Reloj y Prendas"
+      "cat": "Relojes y Prendas"
     },
     {
       "codigo": "LMJT",
       "name": "Conjunto de tobilleras de acero",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787452945/productos/kcphqfvxglq6sbtux4k8.jpg",
-      "cat": "Reloj y Prendas"
+      "cat": "Relojes y Prendas"
     },
     {
       "codigo": "CC3U",
       "name": "Conjunto de tobilleras de fantasía",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787844052/productos/zfbbgklbmazqnrb8rzfd.jpg",
-      "cat": "Reloj y Prendas"
+      "cat": "Relojes y Prendas"
     },
     {
       "codigo": "STDF",
       "name": "Conjunto de tobilleras plateadas de fantasía",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787453332/productos/hgvzduzoya6btwnccu2f.jpg",
-      "cat": "Reloj y Prendas"
+      "cat": "Relojes y Prendas"
     },
     {
       "codigo": "NAN7",
       "name": "Correa de sujeción para motos",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785012644/productos/r50qu6njthy9w1x0kzio.jpg",
-      "cat": "Motos / Accesorios"
+      "cat": "Motos y Bicicletas"
     },
     {
       "codigo": "LX5C",
       "name": "Cortina de baño transparente",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788039708/productos/bbnvrevhc0gyc0jshxdx.jpg",
-      "cat": "Decoración"
+      "cat": "Hogar y Limpieza"
     },
     {
       "codigo": "6AGD",
       "name": "Cortina de luces \"Cuento de hadas\"",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791229887/productos/wcgjp0rqkewy5yqyy1jx.jpg",
-      "cat": "Decoración"
+      "cat": "Decoración y Fiestas"
     },
     {
       "codigo": "TCUU",
       "name": "Cortina de luces \"Doradas\"",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791230118/productos/uexnmjiy6ia14oguvst1.jpg",
-      "cat": "Decoración"
+      "cat": "Decoración y Fiestas"
     },
     {
       "codigo": "953T",
       "name": "Cortina de luces LEDS",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785768865/productos/pusrmndtmmztqnvqftzf.jpg",
-      "cat": "Decoración"
+      "cat": "Decoración y Fiestas"
     },
     {
       "codigo": "DNHA",
       "name": "Creatina Monohidratada Micronizada",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788907712/productos/on2wggnxyfkkyazwr6g9.jpg",
-      "cat": "Gym y Suplementos"
+      "cat": "Salud y Gym"
     },
     {
       "codigo": "D5Q2",
       "name": "Espejo de flor giratorio",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788211960/productos/frgnqs3xs1uy6lzojds7.jpg",
-      "cat": "Hogar"
+      "cat": "Hogar y Limpieza"
     },
     {
       "codigo": "5C2M",
@@ -7848,19 +7857,19 @@
       "codigo": "8UHU",
       "name": "Estera para el Gym",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782340028/productos/cihevmtaeacp4ciyvmas.jpg",
-      "cat": "Gym y Suplementos"
+      "cat": "Salud y Gym"
     },
     {
       "codigo": "C825",
       "name": "Estrellas fosforescentes (100 unidades)",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791314215/productos/t8qiszgv8ae7obbtte82.jpg",
-      "cat": "Decoración"
+      "cat": "Decoración y Fiestas"
     },
     {
       "codigo": "EJPB",
       "name": "Exprimidor",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788839767/productos/qpnmcilryql7g6ewatrl.jpg",
-      "cat": "Hogar"
+      "cat": "Cocina"
     },
     {
       "codigo": "Y2AH",
@@ -7896,7 +7905,7 @@
       "codigo": "JDT4",
       "name": "Fogón de queroseno",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1784911382/productos/goiuvsf9ijdgaqk8csag.jpg",
-      "cat": "Respaldo energético"
+      "cat": "Cocina"
     },
     {
       "codigo": "36CF",
@@ -7908,43 +7917,43 @@
       "codigo": "RLWP",
       "name": "Forro de asiento pequeño",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788151075/productos/dasahngxpqlgxt5dibau.jpg",
-      "cat": "Motos / Accesorios"
+      "cat": "Motos y Bicicletas"
     },
     {
       "codigo": "NMFB",
       "name": "Fregona",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1780952475/productos/ci0k4nxjpmk9mfufwb0p.jpg",
-      "cat": "Hogar"
+      "cat": "Hogar y Limpieza"
     },
     {
       "codigo": "UZZC",
       "name": "Gafas Cristal Transparente CLÁSICAS",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791773684/productos/pzclpats8lmxuehmfebz.jpg",
-      "cat": "Accesorio de vestir"
+      "cat": "Gafas y Accesorios"
     },
     {
       "codigo": "DTBS",
       "name": "Gafas cristal transparente TIPO RYBAN",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791773062/productos/bycyo579ql5t2imrfueq.jpg",
-      "cat": "Accesorio de vestir"
+      "cat": "Gafas y Accesorios"
     },
     {
       "codigo": "SG25",
       "name": "Gafas metálicas Calidad Premium",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792595902/productos/lq8dcqxixbiuzwzui3i6.jpg",
-      "cat": "Accesorio de vestir"
+      "cat": "Gafas y Accesorios"
     },
     {
       "codigo": "DKCM",
       "name": "Globos de corazones",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785768148/productos/kodg4hg9zyx0ahbyoupu.jpg",
-      "cat": "Decoración"
+      "cat": "Decoración y Fiestas"
     },
     {
       "codigo": "K84G",
       "name": "Gloss",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782219129/productos/kj3w0n6vt5ymzqluqaap.jpg",
-      "cat": "Cuidado Personal"
+      "cat": "Belleza y Cuidado"
     },
     {
       "codigo": "RJAP",
@@ -7956,13 +7965,13 @@
       "codigo": "8N4Y",
       "name": "Guantillas",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785357184/productos/p2wprzs1rrt5ab7ot3wb.jpg",
-      "cat": "Gym y Suplementos"
+      "cat": "Salud y Gym"
     },
     {
       "codigo": "58XL",
       "name": "Juego de 5 Calderos de acero inoxidable",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791143110/productos/pn03og4qehjxbqxyxqpn.jpg",
-      "cat": "Hogar"
+      "cat": "Cocina"
     },
     {
       "codigo": "7VS9",
@@ -7974,43 +7983,43 @@
       "codigo": "CGUT",
       "name": "Kit de Máquinas de pelar Profesional",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788538964/productos/l9ohqlvdz5oaimz5laiu.jpg",
-      "cat": "Electrónica"
+      "cat": "Barbería"
     },
     {
       "codigo": "BGXQ",
       "name": "Kit de Máquinas de Pelar y Afeitar",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791138172/productos/q6cquakboa0pgukho4am.jpg",
-      "cat": "Electrodomésticos"
+      "cat": "Barbería"
     },
     {
       "codigo": "SEJX",
       "name": "Lámpara de techo corta",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785769141/productos/ecuea6rhnqy7bejz0lkk.jpg",
-      "cat": "Decoración"
+      "cat": "Decoración y Fiestas"
     },
     {
       "codigo": "636Y",
       "name": "Lámpara de techo larga",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785769225/productos/kgxujlysuov9mhlgb1fu.jpg",
-      "cat": "Decoración"
+      "cat": "Decoración y Fiestas"
     },
     {
       "codigo": "UWEA",
       "name": "Lámpara de uñas recargable profesional",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1794365135/productos/bnix6r2qv6y4bzgsambj.jpg",
-      "cat": "Uñas"
+      "cat": "Belleza y Cuidado"
     },
     {
       "codigo": "JSRK",
       "name": "Licra faja invisible",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792263645/productos/ld6jraupnrz0in6dfnie.jpg",
-      "cat": "Ropa"
+      "cat": "Ropa de Mujer"
     },
     {
       "codigo": "K4UQ",
       "name": "Licra levanta/glúteos larga",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789235438/productos/pp8qmssraxnetipkstgx.jpg",
-      "cat": "Ropa"
+      "cat": "Ropa de Mujer"
     },
     {
       "codigo": "JVMW",
@@ -8022,37 +8031,37 @@
       "codigo": "54ND",
       "name": "Lija de pies recargable",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790796551/productos/kwe7fu2g8pws8phgffcr.jpg",
-      "cat": "Electrodomésticos"
+      "cat": "Belleza y Cuidado"
     },
     {
       "codigo": "65R4",
       "name": "Llaveros metálicos de gato",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787497838/productos/setjhz8tweomovizmlwb.jpg",
-      "cat": "Accesorio de vestir"
+      "cat": "Gafas y Accesorios"
     },
     {
       "codigo": "RTWL",
       "name": "Luces leds 5m",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785616491/productos/gz0uvxamvv29qn8j9png.jpg",
-      "cat": "Decoración"
+      "cat": "Decoración y Fiestas"
     },
     {
       "codigo": "WDQV",
       "name": "Máquina de pelar",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1780955819/productos/tp4sqtisikgnmjepv6bn.jpg",
-      "cat": "Cabello"
+      "cat": "Barbería"
     },
     {
       "codigo": "4KZR",
       "name": "Máquina de Pelar Profesional",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791896104/productos/pxnnsadz8grhw3sdhrkq.jpg",
-      "cat": "Electrodomésticos"
+      "cat": "Barbería"
     },
     {
       "codigo": "F4HN",
       "name": "Merenderos térmicos",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785182649/productos/qgf9ndqstckpnxgadp02.jpg",
-      "cat": "Bolsos Carteras Mochilas monederos"
+      "cat": "Calzado y Bolsos"
     },
     {
       "codigo": "YP64",
@@ -8064,37 +8073,37 @@
       "codigo": "LVHN",
       "name": "Mini Bocina Bluetooth",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1781215783/productos/zsst4rtbmvee4u6g9yds.jpg",
-      "cat": "Bocinas Celulares y Accesorios"
+      "cat": "Celulares y Audio"
     },
     {
       "codigo": "MDMD",
       "name": "Mini Bolso de Mickey Mouse",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785181116/productos/piadvppnku3fy5ekniiq.jpg",
-      "cat": "Bolsos Carteras Mochilas monederos"
+      "cat": "Calzado y Bolsos"
     },
     {
       "codigo": "65DS",
       "name": "Mini bolso de peluche de gatico",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785181461/productos/qoccwprawouuar48ahsw.jpg",
-      "cat": "Bolsos Carteras Mochilas monederos"
+      "cat": "Calzado y Bolsos"
     },
     {
       "codigo": "6UHW",
       "name": "Mini bolso de peluche de unicornio",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785181371/productos/qlqkizbeof35t4a0e60a.jpg",
-      "cat": "Bolsos Carteras Mochilas monederos"
+      "cat": "Calzado y Bolsos"
     },
     {
       "codigo": "XP28",
       "name": "Mini bolsos peluche",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785180705/productos/wetzjsztw8v09lrfrvxm.jpg",
-      "cat": "Bolsos Carteras Mochilas monederos"
+      "cat": "Calzado y Bolsos"
     },
     {
       "codigo": "A9ZJ",
       "name": "Mini lámpara nocturna",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788539742/productos/uhtsctyzbjaw9ttwpwq0.jpg",
-      "cat": "Decoración"
+      "cat": "Decoración y Fiestas"
     },
     {
       "codigo": "LX3Z",
@@ -8118,37 +8127,37 @@
       "codigo": "BR5L",
       "name": "Mochila con cartuchera",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785180741/productos/ity5mizfzjit3fs0qvsl.jpg",
-      "cat": "Bolsos Carteras Mochilas monederos"
+      "cat": "Calzado y Bolsos"
     },
     {
       "codigo": "59MR",
       "name": "Mochila con merendero térmico y cartuchera",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785181840/productos/ndf5fbiqnpecmwhzloks.jpg",
-      "cat": "Bolsos Carteras Mochilas monederos"
+      "cat": "Calzado y Bolsos"
     },
     {
       "codigo": "3YGM",
       "name": "Mochila negra",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789009348/productos/lfuym6qdwytctqcg9uds.jpg",
-      "cat": "Bolsos Carteras Mochilas monederos"
+      "cat": "Calzado y Bolsos"
     },
     {
       "codigo": "8ARJ",
       "name": "Mueble de puertas 3 pisos",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788897774/productos/unvimltpxn8k3vfrvqoh.jpg",
-      "cat": "Muebles"
+      "cat": "Muebles y Organizadores"
     },
     {
       "codigo": "GTZK",
       "name": "Mueble de puertas 5 pisos",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788897736/productos/tiyjgnltdqhxewtva8zb.jpg",
-      "cat": "Muebles"
+      "cat": "Muebles y Organizadores"
     },
     {
       "codigo": "E8WV",
       "name": "Nebulizador",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1784914749/productos/vv9dzqsudnufwodzfrzv.jpg",
-      "cat": "Electrodomésticos"
+      "cat": "Salud y Gym"
     },
     {
       "codigo": "4A7B",
@@ -8160,19 +8169,19 @@
       "codigo": "HD6T",
       "name": "Organizador de cables",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785091571/productos/cubmpkol8n6ndcbcgul7.jpg",
-      "cat": "Bocinas Celulares y Accesorios"
+      "cat": "Celulares y Audio"
     },
     {
       "codigo": "YQN3",
       "name": "Organizador de fregadero",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787956605/productos/p1a4znh4eauvckzv0jni.jpg",
-      "cat": "Hogar"
+      "cat": "Cocina"
     },
     {
       "codigo": "KPM5",
       "name": "Organizador rodante 4pisos",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789489998/productos/ynrvqpaqztcihggoqe6q.jpg",
-      "cat": "Muebles"
+      "cat": "Muebles y Organizadores"
     },
     {
       "codigo": "GQSS",
@@ -8184,13 +8193,13 @@
       "codigo": "XEVD",
       "name": "Papel tapiz ROCA NEGRA Grande",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788633235/productos/exlsh5qdop0qcqi5mbgc.jpg",
-      "cat": "Decoración"
+      "cat": "Decoración y Fiestas"
     },
     {
       "codigo": "XFT3",
       "name": "Paquete de 10 ganchos de silicona",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787956401/productos/x5b7h43xmdftd8ufs5rq.jpg",
-      "cat": "Hogar"
+      "cat": "Hogar y Limpieza"
     },
     {
       "codigo": "NY5G",
@@ -8232,7 +8241,7 @@
       "codigo": "2WU6",
       "name": "Paquete de 52 Globos graciosos",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791230365/productos/kqklyqnajcdquugbjx9c.jpg",
-      "cat": "Decoración"
+      "cat": "Decoración y Fiestas"
     },
     {
       "codigo": "SDLS",
@@ -8244,19 +8253,19 @@
       "codigo": "MSVP",
       "name": "Pareja de lámparas de exterior (Solares)",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785868228/productos/spulocyysctmceshiooa.jpg",
-      "cat": "Decoración"
+      "cat": "Electrodomésticos"
     },
     {
       "codigo": "R2C4",
       "name": "Pareja de Mini espejos retrovisores",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788205791/productos/m7iur6b6u18rt4mnyw8b.jpg",
-      "cat": "Motos / Accesorios"
+      "cat": "Motos y Bicicletas"
     },
     {
       "codigo": "RYV8",
       "name": "Pareja de neblineros con su conmutador",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1781640623/productos/yjvrqbfpjmqofcaltal0.jpg",
-      "cat": "Motos / Accesorios"
+      "cat": "Motos y Bicicletas"
     },
     {
       "codigo": "W7BG",
@@ -8280,31 +8289,31 @@
       "codigo": "B3FW",
       "name": "Perfume Adidas",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785009231/productos/zpidlnjylxprxzkiduam.jpg",
-      "cat": "Perfumería"
+      "cat": "Belleza y Cuidado"
     },
     {
       "codigo": "EYWB",
       "name": "Pinceles de dibujo de uñas",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786916780/productos/morxomy39l4xadi58rwn.jpg",
-      "cat": "Uñas"
+      "cat": "Belleza y Cuidado"
     },
     {
       "codigo": "CP95",
       "name": "Plancha de pelo Prof6",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791935450/productos/knyk0y8xthmael7iiqkb.jpg",
-      "cat": "Electrodomésticos"
+      "cat": "Cabello"
     },
     {
       "codigo": "JDDZ",
       "name": "Power Bank 20 000mah",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1781214815/productos/ojoc1rk4bkcypxw2wzzy.jpg",
-      "cat": "Electrónica"
+      "cat": "Celulares y Audio"
     },
     {
       "codigo": "Y54X",
       "name": "Power Bank 20000mah",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1781214420/productos/dvz7a0ursmt44t8jc0kr.jpg",
-      "cat": "Electrónica"
+      "cat": "Celulares y Audio"
     },
     {
       "codigo": "WWYF",
@@ -8316,199 +8325,199 @@
       "codigo": "YSQD",
       "name": "Protector de alimentos",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788547921/productos/qh78doz9uwyq7acxdr2k.jpg",
-      "cat": "Hogar"
-    },
-    {
-      "codigo": "WPV9",
-      "name": "Pulceras rígidas doradas",
-      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787942111/productos/mqaao6xugcariaxnsr1v.jpg",
-      "cat": "Reloj y Prendas"
+      "cat": "Cocina"
     },
     {
       "codigo": "XVFJ",
       "name": "Pulover de girasol",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789236943/productos/czxnsxgenvatqpkm8wdw.jpg",
-      "cat": "Ropa"
+      "cat": "Pulóveres y Ropa de Hombre"
     },
     {
       "codigo": "EQT3",
       "name": "Pulover de hombre \"Barco\"",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791837152/productos/x2kz8q6dt0faiuzc7ad4.jpg",
-      "cat": "Ropa"
+      "cat": "Pulóveres y Ropa de Hombre"
     },
     {
       "codigo": "WLKK",
       "name": "Pulover de hombre 1",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789240533/productos/qcwfdts5ddd82zcwp1bv.jpg",
-      "cat": "Ropa"
+      "cat": "Pulóveres y Ropa de Hombre"
     },
     {
       "codigo": "DECX",
       "name": "Pulover de hombre 2",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789240681/productos/arra6wfjbee02aq5k9jd.jpg",
-      "cat": "Ropa"
+      "cat": "Pulóveres y Ropa de Hombre"
     },
     {
       "codigo": "A72E",
       "name": "Pulover de hombre elastizados",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786919512/productos/zoc681vdfrwq7ggzbns1.jpg",
-      "cat": "Ropa"
+      "cat": "Pulóveres y Ropa de Hombre"
     },
     {
       "codigo": "KAVV",
       "name": "Pulover de hombre letra \"J'",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791836834/productos/dd4oggnothhnu08vqclx.jpg",
-      "cat": "Ropa"
+      "cat": "Pulóveres y Ropa de Hombre"
     },
     {
       "codigo": "JKD5",
       "name": "Pulover Unisex Blanco",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788733014/productos/z5d3cppcmkwtoaxgrrfv.jpg",
-      "cat": "Ropa"
+      "cat": "Pulóveres y Ropa de Hombre"
     },
     {
       "codigo": "TC9K",
       "name": "Pulover Unisex Blanco de Pantera",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788792467/productos/kmkvblu9vlsqby9h8hhc.jpg",
-      "cat": "Ropa"
+      "cat": "Pulóveres y Ropa de Hombre"
     },
     {
       "codigo": "9R4U",
       "name": "Pulover Unisex Gris",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788732575/productos/z2lirmjgfaqfnxsd7vdq.jpg",
-      "cat": "Ropa"
+      "cat": "Pulóveres y Ropa de Hombre"
     },
     {
       "codigo": "KHXC",
       "name": "Pulover Unisex Navideño \"JESÚS\"",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789241807/productos/nvc54lxofwfrczxstfar.jpg",
-      "cat": "Ropa"
+      "cat": "Pulóveres y Ropa de Hombre"
     },
     {
       "codigo": "S23D",
       "name": "Pulover Unisex Negro de Pantera",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791646520/productos/pefp9pwkm8acwifvz7au.jpg",
-      "cat": "Ropa"
+      "cat": "Pulóveres y Ropa de Hombre"
     },
     {
       "codigo": "7MVS",
       "name": "Pulover Unisex Rojo",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788733113/productos/fjgvbcls4qhgl8in0k3c.jpg",
-      "cat": "Ropa"
+      "cat": "Pulóveres y Ropa de Hombre"
+    },
+    {
+      "codigo": "WPV9",
+      "name": "Pulseras rígidas doradas",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787942111/productos/mqaao6xugcariaxnsr1v.jpg",
+      "cat": "Relojes y Prendas"
     },
     {
       "codigo": "QG6J",
       "name": "Puntero para pantallas digitales",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1781216225/productos/u2wd8r9aczkwgl5m051d.jpg",
-      "cat": "Electrónica"
+      "cat": "Celulares y Audio"
     },
     {
       "codigo": "YVVR",
       "name": "Ratón inalámbrico (negro y gris)",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788528428/productos/are4fo73meeuwnidtlni.jpg",
-      "cat": "Electrodomésticos"
+      "cat": "Celulares y Audio"
     },
     {
       "codigo": "XZSS",
       "name": "Reloj dorado de hombre marca Geneva",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790875327/productos/knt1uatmixdrimse4wrm.jpg",
-      "cat": "Reloj y Prendas"
+      "cat": "Relojes y Prendas"
     },
     {
       "codigo": "GVA7",
       "name": "Reloj inteligente",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1781212975/productos/etq4es8z4cjkhhz98cjq.jpg",
-      "cat": "Reloj y Prendas"
+      "cat": "Relojes y Prendas"
     },
     {
       "codigo": "2JPR",
       "name": "Reloj inteligente Negro",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1781213510/productos/yipf6w3xkmgluh4tk5ad.jpg",
-      "cat": "Reloj y Prendas"
+      "cat": "Relojes y Prendas"
     },
     {
       "codigo": "TJZE",
       "name": "Reloj inteligente Premium",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1781213281/productos/t15rudt47vefqmhllm3n.jpg",
-      "cat": "Electrónica"
+      "cat": "Relojes y Prendas"
     },
     {
       "codigo": "4SD3",
       "name": "Reloj plateado de hombre 2",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787457711/productos/mxeigkzj2t54963sib1n.jpg",
-      "cat": "Reloj y Prendas"
+      "cat": "Relojes y Prendas"
     },
     {
       "codigo": "UK8L",
       "name": "Relojes de mujer",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790871607/productos/zwcju68qn8zj0lzwk291.jpg",
-      "cat": "Reloj y Prendas"
+      "cat": "Relojes y Prendas"
     },
     {
       "codigo": "QW8P",
       "name": "Repuestos de máquina de afeitar",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782340949/productos/icgyi1gsdr1hd3mrng2u.jpg",
-      "cat": "Cuidado Personal"
+      "cat": "Barbería"
     },
     {
       "codigo": "G739",
       "name": "Rizador de pestañas",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782340886/productos/y3yicmtgoxayzf4grayn.jpg",
-      "cat": "Cuidado Personal"
+      "cat": "Belleza y Cuidado"
     },
     {
       "codigo": "UP4H",
       "name": "Rollo de papel tapiz autoadhesivo 3",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791228705/productos/qrz6e5vgms1rpg4bwxrv.jpg",
-      "cat": "Decoración"
+      "cat": "Decoración y Fiestas"
     },
     {
       "codigo": "PUET",
       "name": "Rollo de papel tapiz autoadhesivo madera negra 3m",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791228516/productos/wpbbxh0fkifxcm7yik1e.jpg",
-      "cat": "Decoración"
+      "cat": "Decoración y Fiestas"
     },
     {
       "codigo": "SRDL",
       "name": "Rollo de papel tapiz autoadhesivo Mármol negro",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791229652/productos/hhxeyvyrb0hcng01zuid.jpg",
-      "cat": "Decoración"
+      "cat": "Decoración y Fiestas"
     },
     {
       "codigo": "5Q2P",
       "name": "Sandalias de 🌸 blancas",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785533351/productos/sjwbdzkclyaukn9islkx.jpg",
-      "cat": "Calzado"
+      "cat": "Calzado y Bolsos"
     },
     {
       "codigo": "58T6",
       "name": "Sandalias semi altas",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785533277/productos/wpebmcgc2rkadmscxkbr.jpg",
-      "cat": "Calzado"
+      "cat": "Calzado y Bolsos"
     },
     {
       "codigo": "5VE5",
       "name": "Sandalias suela negra 🖤",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791646522/productos/pays4the5k2mk26143ay.jpg",
-      "cat": "Calzado"
+      "cat": "Calzado y Bolsos"
     },
     {
       "codigo": "53EH",
       "name": "Sandalias trenzadas🖤",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785533514/productos/hgfzvplmba8pq6yatybu.jpg",
-      "cat": "Calzado"
+      "cat": "Calzado y Bolsos"
     },
     {
       "codigo": "QW78",
       "name": "Sérum en Capsulas de Ácidos Hialurónico",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782339669/productos/xbmibztojd4suitasup4.jpg",
-      "cat": "Cuidado Personal"
+      "cat": "Belleza y Cuidado"
     },
     {
       "codigo": "4JYC",
       "name": "Sérum en Capsulas de vit C y E",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782339753/productos/uq4unqxsipovpavt4qex.jpg",
-      "cat": "Cuidado Personal"
+      "cat": "Belleza y Cuidado"
     },
     {
       "codigo": "2KDE",
@@ -8517,28 +8526,34 @@
       "cat": "Electrodomésticos"
     },
     {
+      "codigo": "ABFR",
+      "name": "Soporte de celular",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785088749/productos/nmqmkibborqjekkyoepr.jpg",
+      "cat": "Celulares y Audio"
+    },
+    {
       "codigo": "GTDT",
       "name": "Soporte de celular y tablets flexible1",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790975519/productos/hmhohaql32jgjrdvqplh.jpg",
-      "cat": "Bocinas Celulares y Accesorios"
+      "cat": "Celulares y Audio"
     },
     {
       "codigo": "MAQ8",
       "name": "Soportes para teléfono en forma de silla",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785092261/productos/hbmgly5aw4zcolnpjeun.jpg",
-      "cat": "Bocinas Celulares y Accesorios"
+      "cat": "Celulares y Audio"
     },
     {
       "codigo": "DAMG",
       "name": "Tacitas 12 piezas",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789411058/productos/xhdokldz5nbz707deyqs.jpg",
-      "cat": "Porcelana"
+      "cat": "Cocina"
     },
     {
       "codigo": "DW5D",
-      "name": "Toallitas de floresitas",
+      "name": "Toallitas de florecitas",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788235088/productos/xymxcbmbcbvvwt3phemd.jpg",
-      "cat": "Hogar"
+      "cat": "Hogar y Limpieza"
     },
     {
       "codigo": "T2WZ",
@@ -8556,25 +8571,25 @@
       "codigo": "D95V",
       "name": "Trípode manual con mando a distancia",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788542693/productos/umskj5gg4isekmlakjfg.jpg",
-      "cat": "Bocinas Celulares y Accesorios"
+      "cat": "Celulares y Audio"
     },
     {
       "codigo": "2RXL",
       "name": "Trípode profesional",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788541439/productos/iqykxichtc4bysouhoxv.jpg",
-      "cat": "Bocinas Celulares y Accesorios"
+      "cat": "Celulares y Audio"
     },
     {
       "codigo": "MF7U",
       "name": "Velas blancas con pétalos artificiales",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785640535/productos/ib45wzcjuqumpepase2u.jpg",
-      "cat": "Decoración"
+      "cat": "Decoración y Fiestas"
     },
     {
       "codigo": "EBFN",
       "name": "Velas rojas con pétalos artificiales",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785640796/productos/wyxuhfsvtuvqrdtkqpc3.jpg",
-      "cat": "Decoración"
+      "cat": "Decoración y Fiestas"
     }
   ],
   "ofertaDia": {
