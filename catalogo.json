@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-19T09:24:14.709Z",
+  "generado": "2026-11-19T14:07:50.674Z",
   "tasa": 935,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -1224,7 +1224,7 @@
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790781910/productos/zzgc9cymptovjyjnbgmi.jpg",
       "precioUSD": 5,
       "precioCUP": 4675,
-      "moneda": "cup",
+      "moneda": "usd",
       "enOferta": false,
       "destacado": false,
       "fotos": [
@@ -1253,7 +1253,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 4,
+      "max": 3,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -5195,6 +5195,9 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
+      "colecciones": [
+        "regalar"
+      ],
       "variantes": {
         "ejes": [
           "Color"
