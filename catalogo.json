@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-19T04:00:20.122Z",
+  "generado": "2026-11-19T09:24:14.709Z",
   "tasa": 935,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -535,6 +535,16 @@
         "id": "afeitadora-electrica-plastica",
         "nombre": "afeitadora electrica plástica",
         "lb": 0.25
+      },
+      {
+        "id": "maquina-de-pelar-pequena",
+        "nombre": "máquina de pelar pequeña",
+        "lb": 0.35
+      },
+      {
+        "id": "neblineros-buho",
+        "nombre": "neblineros búho",
+        "lb": 0.2
       }
     ],
     "ejemplos": [
@@ -1693,13 +1703,15 @@
       "cat": "Relojes y Prendas",
       "subcat": "",
       "notes": "Variedad de diseños. Escribir al pv para ver los disponibles en ese momento",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788630744/productos/hgygoifuzzmziys2gotz.jpg",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1795062766/productos/slste2qy5dduzilzt8ea.jpg",
       "precioUSD": 1.3,
       "precioCUP": 1216,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 3,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1795062793/productos/mw3ginqxcyvsiokvys2d.jpg"
+      ],
       "envio": {
         "corto": "🛵 Gratis desde $2.50 USD",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
@@ -1951,6 +1963,54 @@
       "creado": 1792960285642
     },
     {
+      "id": "p_1795062641207",
+      "codigo": "AYWU",
+      "name": "Cintillos plásticos",
+      "cat": "Cabello",
+      "subcat": "",
+      "notes": "",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1795062414/productos/sh8h4vsllmw7hs01qyk3.jpg",
+      "precioUSD": 1.2,
+      "precioCUP": 1122,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1795062416/productos/wobaszq0gpzcrmtw5gtk.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1795062420/productos/ijazqfukrcc691fxhi90.jpg"
+      ],
+      "variantes": {
+        "ejes": [
+          "Colores"
+        ],
+        "opciones": [
+          "NEGRO",
+          "GRIS",
+          "AZUL OSCURO",
+          "VERDE",
+          "BEIGE",
+          "ROJO",
+          "VINO",
+          "ROSA"
+        ]
+      },
+      "maxOpciones": {
+        "NEGRO": 2,
+        "GRIS": 2,
+        "AZUL OSCURO": 2,
+        "VERDE": 1,
+        "BEIGE": 1,
+        "ROJO": 1,
+        "VINO": 1,
+        "ROSA": 1
+      },
+      "envio": {
+        "corto": "🛵 Gratis desde $2.50 USD",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
+      },
+      "creado": 1795062641207
+    },
+    {
       "id": "p_1792294682081",
       "codigo": "VQ93",
       "name": "Cintos finos de mujer",
@@ -2014,6 +2074,47 @@
       },
       "envioGratis": true,
       "creado": 1787947439148
+    },
+    {
+      "id": "p_1795062786203",
+      "codigo": "HPXA",
+      "name": "Collares Estilo Bohemio",
+      "cat": "Relojes y Prendas",
+      "subcat": "",
+      "notes": "",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1795062612/productos/yed45llhv54gznjnxb51.jpg",
+      "precioUSD": 3,
+      "precioCUP": 2805,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1795062619/productos/a8j2zh4onkmyulbsjbsn.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1795062626/productos/ricaoi6gy3pfhefwnqon.jpg"
+      ],
+      "variantes": {
+        "ejes": [
+          "Diseño"
+        ],
+        "opciones": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ]
+      },
+      "maxOpciones": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1795062786203
     },
     {
       "id": "p_1782340847017",
@@ -2090,7 +2191,7 @@
       "name": "Conjunto de pulseras de cuero",
       "cat": "Relojes y Prendas",
       "subcat": "",
-      "notes": "Exacto los diseños de la imagen. El precio es por el conjunto completo. Prendas originales y hermosas.",
+      "notes": "Exacto los diseños de la imagen. El precio es por el conjunto completo. Prendas originales y hermosas(solo disponible el diseño de la esquina derecha inferior)",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787498185/productos/xzhldk5amcaolopit8ep.jpg",
       "precioUSD": 3,
       "precioCUP": 2805,
@@ -2459,6 +2560,11 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1795062008/productos/mutmn0cahuwzhv8galig.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1795062012/productos/duilvem1m8kil2kb6hsw.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1795062018/productos/gydc4z1e1u8zwnen28cr.jpg"
+      ],
       "variantes": {
         "ejes": [
           "Tallas"
@@ -2480,6 +2586,26 @@
       },
       "envioGratis": true,
       "creado": 1785357151546
+    },
+    {
+      "id": "p_1795063077665",
+      "codigo": "UM8S",
+      "name": "Gafa rosada grande",
+      "cat": "Gafas y Accesorios",
+      "subcat": "",
+      "notes": "",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1795062971/productos/q3lys7yuwgyfrskqrszu.jpg",
+      "precioUSD": 2,
+      "precioCUP": 1870,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "max": 1,
+      "envio": {
+        "corto": "🛵 Gratis desde $2.50 USD",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
+      },
+      "creado": 1795063077665
     },
     {
       "id": "p_1785957052228",
@@ -3101,6 +3227,32 @@
       "creado": 1794450995208
     },
     {
+      "id": "p_1795062326838",
+      "codigo": "LMQ8",
+      "name": "Kit de 16 piezas de brochas y esponjas de maquillaje",
+      "cat": "Belleza y Cuidado",
+      "subcat": "",
+      "notes": "",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1795062116/productos/ilahwtpikqjzcxpdgk4p.jpg",
+      "precioUSD": 8,
+      "precioCUP": 7480,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1795062124/productos/anvcvfnjsekc1v435bx9.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1795062131/productos/aeuybg7kiuvpnmlvvydk.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1795062137/productos/pesyxwpp8ytkaxaflynp.jpg"
+      ],
+      "max": 3,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1795062326838
+    },
+    {
       "id": "p_1791140393037",
       "codigo": "NU4W",
       "name": "Kit de 30 Globos 💙 💛",
@@ -3204,6 +3356,30 @@
       },
       "envioGratis": true,
       "creado": 1791140326794
+    },
+    {
+      "id": "p_1795063354984",
+      "codigo": "RMRC",
+      "name": "Kit de 5 silbatos",
+      "cat": "Decoración y Fiestas",
+      "subcat": "",
+      "notes": "El precio es por un paquete de 5 silbatos de colores variados y aleatorios NO ELEGIBLES. Todos hermosos, ideales tanto para niños y niñas. La alegría de las fiestas y actividades al aire libre. Entrenamiento de deportes y mascotas.",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1795063171/productos/sdt68gsyjrglk4fqao0a.jpg",
+      "precioUSD": 1,
+      "precioCUP": 935,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1795063173/productos/pi420h8d9tptjzieh1rb.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1795063177/productos/loy7al91u8f2q0eswd3a.jpg"
+      ],
+      "max": 5,
+      "envio": {
+        "corto": "🛵 Gratis desde $2.50 USD",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
+      },
+      "creado": 1795063354984
     },
     {
       "id": "p_1792342171217",
@@ -3837,6 +4013,33 @@
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
       },
       "creado": 1781640150595
+    },
+    {
+      "id": "p_1795061301140",
+      "codigo": "7W9Y",
+      "name": "Máquina de pelar de precisión Profesional",
+      "cat": "Barbería",
+      "subcat": "",
+      "notes": "Máquina de pelar recargable profesional ideal para cortes y pelados. Totalmente metálica. Incluye 4 números, brocha de limpieza y cable de carga",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1795061057/productos/qsu1z6m79tj8hkimm5x3.jpg",
+      "precioUSD": 8,
+      "precioCUP": 7480,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1795061059/productos/pgfepe15qjav0cs5kovv.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1795061077/productos/hrjsn3qzvcp62pdw8yqf.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1795061083/productos/urdj3swwzaztskcijpzk.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1795061087/productos/hmvtrkjkcdelfpttlpqz.jpg"
+      ],
+      "max": 2,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1795061301140
     },
     {
       "id": "p_1791925032570",
@@ -4545,7 +4748,7 @@
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1792850700/productos/zcvjzimigvbmmwwcwxyq.jpg",
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1792850705/productos/hrpemggzavf4atclgygc.jpg"
       ],
-      "max": 2,
+      "max": 1,
       "envio": {
         "corto": "🛵 Gratis desde $2.50 USD",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
@@ -4971,7 +5174,7 @@
       },
       "maxOpciones": {
         "VARIADOS🌈": 7,
-        "NEGRAS🖤": 5
+        "NEGRAS🖤": 4
       },
       "envio": {
         "corto": "🛵 Gratis desde $2.50 USD",
@@ -5080,6 +5283,32 @@
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
       },
       "creado": 1791633427118
+    },
+    {
+      "id": "p_1795061567569",
+      "codigo": "PR93",
+      "name": "Pareja de neblineros diseño Búho",
+      "cat": "Motos y Bicicletas",
+      "subcat": "",
+      "notes": "2pcs Faros de Motocicleta de Doble Color Diseño Búho 4 Modos Focos Auxiliares Scooter de Motocicleta Lámpara Antiniebla Luces de Circulación, Luces de Motocicleta, Accesorios de Motocicleta, Iluminación de Motocicleta, Luces de Motocicleta Elegantes, Diseño de Luz de Búho, Luz Resistente a la Intemperie",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1795061443/productos/jczniwdpwaf4llcuitlv.jpg",
+      "precioUSD": 13,
+      "precioCUP": 12155,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1795061449/productos/vck5lw39zrg7cvogbm0a.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1795061455/productos/hjunjcwh1urc9l1qfwvn.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1795061463/productos/xdf1zsumpplw8r8cvakb.jpg"
+      ],
+      "max": 3,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1795061567569
     },
     {
       "id": "p_1785012145699",
