@@ -28,7 +28,7 @@
     'mouse raton',
     'enchufe tomacorriente tomacorrientes',
     'bikini trusa',
-    'juguete juguetes juego',
+    'juguete juguetes',
     'liga ligas felpa felpas liguitas mona',
     'batidora merenguera espumero',
     'escuela escolar libreta libretas',

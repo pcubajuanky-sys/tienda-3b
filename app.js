@@ -204,7 +204,7 @@ function visibles() {
     if (!filtroOferta && filtroCat && p.cat !== filtroCat) return false;
     if (soloFavoritos && favoritos.indexOf(p.id) === -1) return false;
     if (!busqueda.trim()) return true;
-    return window.Buscar.coincide(p.name + ' ' + p.notes + ' ' + p.subcat + ' ' + p.cat, busqueda, p.name + ' ' + p.subcat + ' ' + p.cat);
+    return window.Buscar.coincide(p.name + ' ' + p.notes + ' ' + p.subcat + ' ' + p.cat, busqueda, p.name + ' ' + p.subcat);
   });
   return window.Orden.filtrarPrecio(lista, rangoPrecio);
 }

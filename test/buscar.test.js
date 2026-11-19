@@ -112,3 +112,6 @@ test('coincide: una sola letra filtra por subcadena', () => {
   assert.strictEqual(coincide('Reloj', 'x'), false);
   assert.strictEqual(coincide('Reloj', 'r'), true);
 });
+test('coincide: juego no es sinónimo de juguete', () => {
+  assert.strictEqual(coincide('Juego de bolsos', 'juguetes'), false);
+});
