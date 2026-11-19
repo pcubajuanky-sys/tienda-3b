@@ -98,3 +98,17 @@ test('sugerencias: usa las mismas reglas y mantiene primero lo que empieza igual
   const r = sugerencias([{ id: 'a', name: 'Lentes X' }, { id: 'b', name: 'Espejuelos Y' }], 'espejuelos');
   assert.deepStrictEqual(r.map((p) => p.id), ['b', 'a']);
 });
+
+test('coincide: un sinónimo no casa con una palabra más larga', () => {
+  assert.strictEqual(coincide('Arnés ajustable', 'brasier'), false);
+});
+test('coincide: los sinónimos solo se buscan en textoSinonimos', () => {
+  assert.strictEqual(coincide('Cinto bonito con lentes', 'espejuelos', 'Cinto bonito'), false);
+});
+test('coincide: el sinónimo admite plural', () => {
+  assert.strictEqual(coincide('Lámparas solares', 'linterna'), true);
+});
+test('coincide: una sola letra filtra por subcadena', () => {
+  assert.strictEqual(coincide('Reloj', 'x'), false);
+  assert.strictEqual(coincide('Reloj', 'r'), true);
+});

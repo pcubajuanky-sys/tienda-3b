@@ -41,16 +41,21 @@
     'mueble muebles closet gavetero organizador',
   ].map((l) => l.split(' '));
 
-  const conPalabra = (texto, s) => (' ' + texto.replace(/[^a-z0-9]+/g, ' ')).indexOf(' ' + s) !== -1;
+  // true si la palabra completa `s` (o su plural) aparece en el texto ya normalizado.
+  const conPalabra = (texto, s) =>
+    texto.split(/[^a-z0-9]+/).some((w) => w === s || w === s + 's' || w === s + 'es');
 
-  // true si TODAS las palabras buscadas están en el texto, directas o por sinónimo.
-  function coincide(texto, q) {
+  // true si TODAS las palabras buscadas están en `texto` (subcadena) o, por sinónimo,
+  // como palabra completa en `textoSinonimos` (por defecto, el mismo texto).
+  function coincide(texto, q, textoSinonimos) {
     const t = normaliza(texto);
+    const ts = textoSinonimos === undefined ? t : normaliza(textoSinonimos);
     const palabras = normaliza(q).trim().split(/\s+/).filter((w) => w.length > 1);
+    if (!palabras.length) return t.indexOf(normaliza(q).trim()) !== -1;
     return palabras.every((w) => {
       if (t.indexOf(w) !== -1) return true;
       const grupo = SINONIMOS.find((g) => g.indexOf(w) !== -1);
-      return !!grupo && grupo.some((s) => conPalabra(t, s));
+      return !!grupo && grupo.some((s) => conPalabra(ts, s));
     });
   }
 
