@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-19T17:36:43.000Z",
+  "generado": "2026-11-19T23:06:40.357Z",
   "tasa": 935,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -889,6 +889,27 @@
       "precioNormalCUP": 5610
     },
     {
+      "id": "p_1790619584689",
+      "codigo": "4TKD",
+      "name": "Accesorio para llave de agua",
+      "cat": "Ferretería y Seguridad",
+      "subcat": "",
+      "notes": "Adaptador multifuncional para grifo o llave de agua. Tiene 3 funciones,fácil colocación",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790619459/productos/geguaz3cr1lsfh3ekwvu.jpg",
+      "precioUSD": 10,
+      "precioCUP": 9350,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "max": 1,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1790619584689
+    },
+    {
       "id": "p_1786943265900",
       "codigo": "GZBC",
       "name": "Aceite especial de jengibre para cabellos",
@@ -1244,27 +1265,6 @@
       "creado": 1790782043818
     },
     {
-      "id": "p_1786803816356",
-      "codigo": "DU4A",
-      "name": "Audífonos inalámbricos X15",
-      "cat": "Celulares y Audio",
-      "subcat": "",
-      "notes": "Audífonos inalámbricos X15, ligeros y con su estuche de carga.",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786803730/productos/p34guyzzkxjrpwyw39ya.jpg",
-      "precioUSD": 5,
-      "precioCUP": 4675,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "max": 3,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1786803816357
-    },
-    {
       "id": "p_1793417401142",
       "codigo": "J97W",
       "name": "Auriculares de Bluetooth",
@@ -1283,7 +1283,7 @@
       "fotos": [
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1793417166/productos/a7htmptgfzfaw5mrfsyz.jpg"
       ],
-      "max": 5,
+      "max": 4,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -1685,6 +1685,40 @@
       "creado": 1790797351648
     },
     {
+      "id": "p_1785182779881",
+      "codigo": "JHP6",
+      "name": "Bolsos de pecho",
+      "cat": "Calzado y Bolsos",
+      "subcat": "",
+      "notes": "Bolso de Pecho Ligero y Elegante para Hombres para Actividades al Aire Libre - Bolso Bandolera Duradero de Tela Oxford para Senderismo, Ciclismo y Viajes - Bolso de Hombro Único Portátil, Regalo Perfecto.\n(Todos los Colores de la foto)",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785182616/productos/mkiut7qu8g9eckwr9evg.jpg",
+      "precioUSD": 3.65,
+      "precioCUP": 3413,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Color"
+        ],
+        "opciones": [
+          "AZUL"
+        ],
+        "agotadas": [
+          "GRIS"
+        ]
+      },
+      "maxOpciones": {
+        "AZUL": 1
+      },
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1785182779881
+    },
+    {
       "id": "p_1795032311396",
       "codigo": "NFBE",
       "name": "Cables de carga rápida Tipo C de 2 metros",
@@ -1914,7 +1948,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 4,
+      "max": 3,
       "envio": {
         "corto": "🛵 Gratis desde $2.50 USD",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
@@ -2625,7 +2659,7 @@
       "maxOpciones": {
         "XS": 2,
         "S": 1,
-        "M": 3
+        "M": 2
       },
       "envio": {
         "corto": "🛵 Mensajería gratis",
@@ -2633,6 +2667,27 @@
       },
       "envioGratis": true,
       "creado": 1785357151546
+    },
+    {
+      "id": "p_1795127511541",
+      "codigo": "3JV3",
+      "name": "Foquitos Recargables",
+      "cat": "Ferretería y Seguridad",
+      "subcat": "",
+      "notes": "",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1795127333/productos/jvegtaaq4myvo6ojqjjb.jpg",
+      "precioUSD": 3,
+      "precioCUP": 2805,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "max": 4,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1795127511541
     },
     {
       "id": "p_1795063077665",
@@ -3866,7 +3921,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 3,
+      "max": 2,
       "envio": {
         "corto": "🛵 Gratis desde $2.50 USD",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
@@ -3886,7 +3941,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 6,
+      "max": 7,
       "envio": {
         "corto": "🛵 Gratis desde $2.50 USD",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
@@ -7471,7 +7526,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 5,
+      "max": 3,
       "envio": {
         "corto": "🛵 Gratis desde $2.50 USD",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
@@ -7856,12 +7911,6 @@
       "cat": "Mascotas"
     },
     {
-      "codigo": "4TKD",
-      "name": "Accesorio para llave de agua",
-      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790619459/productos/geguaz3cr1lsfh3ekwvu.jpg",
-      "cat": "Ferretería y Seguridad"
-    },
-    {
       "codigo": "J8YM",
       "name": "Accesorios variados",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786714432/productos/t5hk8itkxmcipbxwpgdr.jpg",
@@ -7964,6 +8013,12 @@
       "cat": "Celulares y Audio"
     },
     {
+      "codigo": "DU4A",
+      "name": "Audífonos inalámbricos X15",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786803730/productos/p34guyzzkxjrpwyw39ya.jpg",
+      "cat": "Celulares y Audio"
+    },
+    {
       "codigo": "QD4E",
       "name": "Audífonos inalámbricos X55",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785089336/productos/k1vaswogj1rww7enirsk.jpg",
@@ -7991,12 +8046,6 @@
       "codigo": "EPM9",
       "name": "Bolso bandolera mostaza",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785182905/productos/fnzafrosko3h4nehplug.jpg",
-      "cat": "Calzado y Bolsos"
-    },
-    {
-      "codigo": "JHP6",
-      "name": "Bolsos de pecho",
-      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785182616/productos/mkiut7qu8g9eckwr9evg.jpg",
       "cat": "Calzado y Bolsos"
     },
     {
