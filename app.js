@@ -1049,6 +1049,32 @@ function renderNuevos() {
   if (ver) ver.hidden = !mostrar || !window.Orden.opcionesUtiles(CAT.items || []).some((o) => o.id === 'nuevo');
 }
 
+// Colecciones de la portada (2026-11-19). Gemela de renderNuevos: marcado compacto, SIN botones
+// de cantidad. Solo existe en index.html: si el elemento no esta, no se pinta.
+function renderColecciones() {
+  if (!CAT || !window.Colecciones) return;
+  const buscando = busqueda.trim() !== '' || filtroCat !== '' || filtroOferta || soloFavoritos || rangoPrecio !== '';
+  const cols = buscando ? [] : window.Colecciones.deCatalogo({
+    colecciones: CAT.colecciones,
+    items: window.Orden.filtrar(CAT.items || [], soloEnvioGratis),
+  });
+  ['regalar', 'apagones'].forEach((id) => {
+    const sec = document.getElementById('col-' + id);
+    const tira = document.getElementById('col-' + id + '-tira');
+    const tit = document.getElementById('col-' + id + '-tit');
+    if (!sec || !tira) return;
+    const c = cols.find((x) => x.id === id);
+    sec.hidden = !c;
+    if (tit) tit.textContent = c ? c.titulo : '';
+    tira.innerHTML = c ? c.items.map((x) =>
+      '<button type="button" class="rel-card completar-card" data-col="' + escapeHtml(x.id) + '">' +
+      '<span class="rel-foto"><img src="' + fotoMosaico(x.photo) + '" alt="" loading="lazy"></span>' +
+      '<span class="rel-nom">' + escapeHtml(x.name) + '</span>' +
+      '<span class="rel-precio">' + precioCorto(x) + '</span>' +
+      '</button>').join('') : '';
+  });
+}
+
 // ── Sugerencias del buscador ──
 let sugActiva = -1;
 
@@ -3550,6 +3576,13 @@ async function iniciar() {
   if (tiraNuevos) tiraNuevos.addEventListener('click', (e) => {
     const b = e.target.closest('[data-nuevo]');
     if (b) abrirDetalle(b.dataset.nuevo);
+  });
+  ['regalar', 'apagones'].forEach((id) => {
+    const t = document.getElementById('col-' + id + '-tira');
+    if (t) t.addEventListener('click', (e) => {
+      const b = e.target.closest('[data-col]');
+      if (b) abrirDetalle(b.dataset.col);
+    });
   });
   const verNuevos = document.getElementById('nuevos-ver-todo');
   if (verNuevos) verNuevos.addEventListener('click', () => {
