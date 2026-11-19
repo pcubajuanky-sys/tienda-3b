@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-19T14:16:38.736Z",
+  "generado": "2026-11-19T17:36:43.000Z",
   "tasa": 935,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -1051,7 +1051,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 5,
+      "max": 4,
       "envio": {
         "corto": "🛵 Gratis desde $2.50 USD",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
@@ -2026,6 +2026,32 @@
       "creado": 1795062641207
     },
     {
+      "id": "p_1792276934627",
+      "codigo": "YAYM",
+      "name": "Cinto negro ancho",
+      "cat": "Gafas y Accesorios",
+      "subcat": "",
+      "notes": "Elegante cinto ancho de mujer. Solo el color y diseño de la imagen.\nMedidas: 7.5cm de ancho, 64cm de circunferencia (expandible,es elastizado)",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792276630/productos/oqbostrsrlybcb4zchpz.jpg",
+      "precioUSD": 4,
+      "precioCUP": 3740,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792279158/productos/pfsk6vwpmajc5psqm55y.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792279173/productos/wpdck0cpuvifqy4ndf1g.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792279177/productos/q7ukohevdahntd7mmjwp.jpg"
+      ],
+      "max": 2,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1792276934627
+    },
+    {
       "id": "p_1792294682081",
       "codigo": "VQ93",
       "name": "Cintos finos de mujer",
@@ -2627,40 +2653,6 @@
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
       },
       "creado": 1795063077665
-    },
-    {
-      "id": "p_1785957052228",
-      "codigo": "8X9D",
-      "name": "Gafas Cristal transparente",
-      "cat": "Gafas y Accesorios",
-      "subcat": "",
-      "notes": "Protección contra luz azul, ideal para personas que usan mucho pantallas como celulares ,laptops y televisión.\nTambién es un muy buen accesorio para personas que manejan moto en horario nocturno, protege los ojos sin afectar la visibilidad en la oscuridad",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785956773/productos/gufvuhffd4ibygz29anq.jpg",
-      "precioUSD": 2,
-      "precioCUP": 1870,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "variantes": {
-        "ejes": [
-          "Color"
-        ],
-        "opciones": [
-          "TRANSPARENTE"
-        ],
-        "agotadas": [
-          "NEGRO",
-          "GRIS"
-        ]
-      },
-      "maxOpciones": {
-        "TRANSPARENTE": 1
-      },
-      "envio": {
-        "corto": "🛵 Gratis desde $2.50 USD",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
-      },
-      "creado": 1785957052230
     },
     {
       "id": "p_1785957866193",
@@ -4802,7 +4794,7 @@
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1792850700/productos/zcvjzimigvbmmwwcwxyq.jpg",
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1792850705/productos/hrpemggzavf4atclgygc.jpg"
       ],
-      "max": 1,
+      "espera": true,
       "envio": {
         "corto": "🛵 Gratis desde $2.50 USD",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
@@ -5666,7 +5658,7 @@
         "B": 5,
         "C": 5,
         "D": 5,
-        "E": 5,
+        "E": 4,
         "F": 5
       },
       "envio": {
@@ -8050,12 +8042,6 @@
       "cat": "Muebles y Organizadores"
     },
     {
-      "codigo": "YAYM",
-      "name": "Cinto negro ancho",
-      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792276630/productos/oqbostrsrlybcb4zchpz.jpg",
-      "cat": "Gafas y Accesorios"
-    },
-    {
       "codigo": "RHH5",
       "name": "Cintos 1",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786998257/productos/gogjyz4xkuai2twsk7l6.jpg",
@@ -8252,6 +8238,12 @@
       "name": "Fregona",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1780952475/productos/ci0k4nxjpmk9mfufwb0p.jpg",
       "cat": "Hogar y Limpieza"
+    },
+    {
+      "codigo": "8X9D",
+      "name": "Gafas Cristal transparente",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785956773/productos/gufvuhffd4ibygz29anq.jpg",
+      "cat": "Gafas y Accesorios"
     },
     {
       "codigo": "UZZC",
