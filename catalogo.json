@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-19T03:25:46.763Z",
+  "generado": "2026-11-19T04:00:20.122Z",
   "tasa": 935,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -1800,10 +1800,10 @@
       "subcat": "",
       "notes": "Cesto de tela de alta calidad y Súper Gran Capacidad. Agarraderas metálicas",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791728837/productos/la1c8t3m8fmm5pybllmq.jpg",
-      "precioUSD": 6.65,
-      "precioCUP": 6218,
+      "precioUSD": 7,
+      "precioCUP": 6545,
       "moneda": "usd",
-      "enOferta": true,
+      "enOferta": false,
       "destacado": false,
       "max": 3,
       "envio": {
@@ -1811,9 +1811,7 @@
         "largo": "🛵 MENSAJERÍA GRATIS"
       },
       "envioGratis": true,
-      "creado": 1791729019839,
-      "precioNormalUSD": 7,
-      "precioNormalCUP": 6545
+      "creado": 1791729019839
     },
     {
       "id": "p_1785528271738",
@@ -7267,17 +7265,19 @@
       "subcat": "",
       "notes": "Tomacorrientes de 20A Maxima Calidad Ideal para súper consumo,no se derriten",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791079338/productos/cfkfobz84waxqznqhbq2.jpg",
-      "precioUSD": 3,
-      "precioCUP": 2805,
+      "precioUSD": 2.85,
+      "precioCUP": 2665,
       "moneda": "usd",
-      "enOferta": false,
+      "enOferta": true,
       "destacado": false,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
       },
       "envioGratis": true,
-      "creado": 1780346613571
+      "creado": 1780346613571,
+      "precioNormalUSD": 3,
+      "precioNormalCUP": 2805
     },
     {
       "id": "p_1790954066390",
@@ -8593,8 +8593,8 @@
     }
   ],
   "ofertaDia": {
-    "codigo": "GHDW",
-    "hasta": 1795060800000
+    "codigo": "YRGG",
+    "hasta": 1795147200000
   },
   "cupones": {
     "visibles": [],
