@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-20T17:25:07.364Z",
+  "generado": "2026-11-20T18:00:07.361Z",
   "tasa": 945,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -1222,7 +1222,7 @@
         ]
       },
       "maxOpciones": {
-        "ROSA": 9,
+        "ROSA": 7,
         "AZUL": 8,
         "BLANCO": 8,
         "AMARILLO": 9
@@ -1321,6 +1321,7 @@
         ]
       },
       "maxOpciones": {
+        "MELÓN": 8,
         "MELOCOTÓN": 9,
         "MANGO": 8,
         "LIMÓN": 9,
@@ -2660,7 +2661,7 @@
       "maxOpciones": {
         "XS": 1,
         "S": 1,
-        "M": 3
+        "M": 2
       },
       "envio": {
         "corto": "🛵 Mensajería gratis",
@@ -2724,7 +2725,7 @@
       "maxOpciones": {
         "A": 3,
         "B": 5,
-        "D": 8
+        "D": 7
       },
       "envio": {
         "corto": "🛵 Gratis desde $2.50 USD",
@@ -3627,7 +3628,7 @@
       "fotos": [
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1794964138/productos/vzury0mpfs6pwyl8qufa.jpg"
       ],
-      "max": 5,
+      "max": 3,
       "envio": {
         "corto": "🛵 Gratis desde $2.50 USD",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
@@ -6149,7 +6150,7 @@
       "moneda": "usd",
       "enOferta": true,
       "destacado": false,
-      "max": 3,
+      "max": 1,
       "envio": {
         "corto": "🛵 Gratis desde $2.50 USD",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
@@ -6653,9 +6654,7 @@
           "M / GRIS🩶"
         ]
       },
-      "maxOpciones": {
-        "XL / NEGRO🖤": 1
-      },
+      "espera": true,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
