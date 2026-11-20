@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-20T19:57:24.621Z",
+  "generado": "2026-11-20T20:04:37.125Z",
   "tasa": 950,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -127,6 +127,10 @@
     {
       "code": "KVKRN",
       "nombre": "Elizabet"
+    },
+    {
+      "code": "5JZ7K",
+      "nombre": "anamary"
     }
   ],
   "categorias": [
