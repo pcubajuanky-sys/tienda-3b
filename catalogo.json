@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-20T02:32:12.403Z",
+  "generado": "2026-11-20T04:00:59.774Z",
   "tasa": 945,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -6689,10 +6689,10 @@
       "subcat": "",
       "notes": "Ratón Inalámbrico Silencioso – Ratón Inalámbrico para Computadora, Ratón para Laptop, Ratón USB, Ratón para Chromebook, Ratón Inalámbrico, Ratón Inalámbrico, Ratón para PC, Ratones para Computadora, Ratón Silencioso",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788528508/productos/te3bwxztbrhsvbm7kjgt.jpg",
-      "precioUSD": 15,
-      "precioCUP": 14175,
+      "precioUSD": 14.25,
+      "precioCUP": 13466,
       "moneda": "usd",
-      "enOferta": false,
+      "enOferta": true,
       "destacado": false,
       "fotos": [
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1791895246/productos/qmekoufeciroszddpozn.jpg",
@@ -6705,7 +6705,9 @@
         "largo": "🛵 MENSAJERÍA GRATIS"
       },
       "envioGratis": true,
-      "creado": 1788528610951
+      "creado": 1788528610951,
+      "precioNormalUSD": 15,
+      "precioNormalCUP": 14175
     },
     {
       "id": "p_1788551044899",
@@ -7591,19 +7593,17 @@
       "subcat": "",
       "notes": "Tomacorrientes de 20A Maxima Calidad Ideal para súper consumo,no se derriten",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791079338/productos/cfkfobz84waxqznqhbq2.jpg",
-      "precioUSD": 2.85,
-      "precioCUP": 2693,
+      "precioUSD": 3,
+      "precioCUP": 2835,
       "moneda": "usd",
-      "enOferta": true,
+      "enOferta": false,
       "destacado": false,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
       },
       "envioGratis": true,
-      "creado": 1780346613571,
-      "precioNormalUSD": 3,
-      "precioNormalCUP": 2835
+      "creado": 1780346613571
     },
     {
       "id": "p_1790954066390",
@@ -8934,8 +8934,8 @@
     }
   ],
   "ofertaDia": {
-    "codigo": "YRGG",
-    "hasta": 1795147200000
+    "codigo": "L53P",
+    "hasta": 1795233600000
   },
   "cupones": {
     "visibles": [],
