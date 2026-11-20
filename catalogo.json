@@ -1,12 +1,8 @@
 {
-  "generado": "2026-11-20T15:50:29.570Z",
+  "generado": "2026-11-20T16:13:10.663Z",
   "tasa": 945,
   "whatsapp": "5354978966",
   "vendedores": [
-    {
-      "code": "9H5MM",
-      "nombre": "Elaine Ocampo Pino"
-    },
     {
       "code": "D75W3",
       "nombre": "Lianet Cruz Avila"
@@ -47,10 +43,6 @@
     {
       "code": "MG6K3",
       "nombre": "Lisbet"
-    },
-    {
-      "code": "TRJD9",
-      "nombre": "Danaisy Milian"
     },
     {
       "code": "2DFG8",
@@ -123,6 +115,10 @@
     {
       "code": "T64JQ",
       "nombre": "Yurisleisi Calzado Rondón"
+    },
+    {
+      "code": "5WG9X",
+      "nombre": "Emily"
     }
   ],
   "categorias": [
@@ -943,7 +939,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 6,
+      "max": 5,
       "envio": {
         "corto": "🛵 Gratis desde $2.50 USD",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
@@ -1226,7 +1222,8 @@
         ]
       },
       "maxOpciones": {
-        "AZUL": 9,
+        "ROSA": 9,
+        "AZUL": 8,
         "BLANCO": 8,
         "AMARILLO": 9
       },
@@ -2320,7 +2317,7 @@
       },
       "maxOpciones": {
         "PLATEADO": 2,
-        "DORADO": 2
+        "DORADO": 1
       },
       "envio": {
         "corto": "🛵 Mensajería gratis",
