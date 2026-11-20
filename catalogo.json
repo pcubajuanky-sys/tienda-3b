@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-20T20:20:19.139Z",
+  "generado": "2026-11-20T20:30:18.613Z",
   "tasa": 950,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -4526,35 +4526,6 @@
       "precioNormalCUP": 7600
     },
     {
-      "id": "p_1786732384337",
-      "codigo": "24PU",
-      "name": "Nebulizador portátil",
-      "cat": "Salud y Gym",
-      "subcat": "",
-      "notes": "Nebulizador recargable con pantalla LED; Nebulizador de malla portátil con tecnología de ondas de sonido, apto para adultos y niños; Funciona silenciosamente; Compacto y portátil; Cuenta con un sistema de limpieza automática; Apto para afecciones respiratorias",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1793581670/productos/v22bnnpvmsy8egwlry5d.jpg",
-      "precioUSD": 19,
-      "precioCUP": 18050,
-      "moneda": "usd",
-      "enOferta": true,
-      "destacado": false,
-      "fotos": [
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793581706/productos/b0jdqltichizelwutrwz.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793581730/productos/vumovpmdotjvfli2h9yn.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793581750/productos/g4q0rw9hk9zs25xb3t4d.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793581755/productos/ipug2q9juutwgiwmqvom.jpg"
-      ],
-      "espera": true,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1786732384382,
-      "precioNormalUSD": 20,
-      "precioNormalCUP": 19000
-    },
-    {
       "id": "p_1786708481607",
       "codigo": "5FSB",
       "name": "Nesquik de chocolate 🍫",
@@ -8519,6 +8490,12 @@
       "codigo": "E8WV",
       "name": "Nebulizador",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1784914749/productos/vv9dzqsudnufwodzfrzv.jpg",
+      "cat": "Salud y Gym"
+    },
+    {
+      "codigo": "24PU",
+      "name": "Nebulizador portátil",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1793581670/productos/v22bnnpvmsy8egwlry5d.jpg",
       "cat": "Salud y Gym"
     },
     {
