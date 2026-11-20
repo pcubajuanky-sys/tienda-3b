@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-20T22:11:50.076Z",
+  "generado": "2026-11-20T23:26:51.202Z",
   "tasa": 950,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -2927,8 +2927,8 @@
       },
       "maxOpciones": {
         "B": 1,
-        "C": 3,
-        "D": 2
+        "C": 2,
+        "D": 1
       },
       "envio": {
         "corto": "🛵 Gratis desde $2.50 USD",
@@ -3316,7 +3316,7 @@
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1795062131/productos/aeuybg7kiuvpnmlvvydk.jpg",
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1795062137/productos/pesyxwpp8ytkaxaflynp.jpg"
       ],
-      "max": 3,
+      "max": 2,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -3633,7 +3633,7 @@
       "fotos": [
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1794964138/productos/vzury0mpfs6pwyl8qufa.jpg"
       ],
-      "max": 1,
+      "espera": true,
       "envio": {
         "corto": "🛵 Gratis desde $2.50 USD",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
