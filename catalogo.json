@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-20T20:04:37.125Z",
+  "generado": "2026-11-20T20:20:19.139Z",
   "tasa": 950,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -2663,10 +2663,12 @@
         ]
       },
       "maxOpciones": {
-        "XS": 1,
         "S": 1,
         "M": 2
       },
+      "esperaOpciones": [
+        "XS"
+      ],
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -4727,6 +4729,27 @@
       },
       "envioGratis": true,
       "creado": 1788729005365
+    },
+    {
+      "id": "p_1795205471498",
+      "codigo": "75SL",
+      "name": "Papel tapiz roca clara",
+      "cat": "Decoración y Fiestas",
+      "subcat": "",
+      "notes": "Forros para pared Ideal para cubrir humedades, ayuda a insonorizar, repeler el calor, es lavable, y duradero, además de altamente estético La caja contiene 50 hojas Cada hoja mide 31cmx36cm",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1795205333/productos/biube985czkdubgzgyqy.jpg",
+      "precioUSD": 35,
+      "precioCUP": 33250,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "max": 2,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1795205471499
     },
     {
       "id": "p_1788728922579",
