@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-20T01:37:13.573Z",
+  "generado": "2026-11-20T01:42:12.271Z",
   "tasa": 935,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -2094,9 +2094,11 @@
       },
       "maxOpciones": {
         "C": 1,
-        "D": 1,
         "F": 2
       },
+      "esperaOpciones": [
+        "D"
+      ],
       "envio": {
         "corto": "🛵 Gratis desde $2.50 USD",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
@@ -2633,9 +2635,9 @@
         ]
       },
       "maxOpciones": {
-        "XS": 2,
+        "XS": 1,
         "S": 1,
-        "M": 2
+        "M": 3
       },
       "envio": {
         "corto": "🛵 Mensajería gratis",
@@ -2912,11 +2914,13 @@
         ]
       },
       "maxOpciones": {
-        "A": 1,
         "B": 1,
-        "C": 3,
-        "D": 2
+        "C": 2,
+        "D": 1
       },
+      "esperaOpciones": [
+        "A"
+      ],
       "envio": {
         "corto": "🛵 Gratis desde $2.50 USD",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
@@ -4162,7 +4166,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 2,
+      "max": 1,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -4808,31 +4812,6 @@
       "creado": 1780608108403
     },
     {
-      "id": "p_1780608723108",
-      "codigo": "3KD5",
-      "name": "Paquete de 10 mariposas Metálicas",
-      "cat": "Cabello",
-      "subcat": "",
-      "notes": "Paquete de 10 mini mariposas metálicas para el cabello. Diseño delicado y elegante en acero plateado, con cierre de presión seguro. Ideales para peinados finos, recogidos o como accesorio decorativo. Ligeras, resistentes y de tamaño compacto, perfectas para uso diario o ocasiones especiales.",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792850712/productos/dugehfun2belizlvjkag.jpg",
-      "precioUSD": 2,
-      "precioCUP": 1870,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "fotos": [
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792850692/productos/vjrcuuovev7zhl5waear.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792850700/productos/zcvjzimigvbmmwwcwxyq.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792850705/productos/hrpemggzavf4atclgygc.jpg"
-      ],
-      "espera": true,
-      "envio": {
-        "corto": "🛵 Gratis desde $2.50 USD",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
-      },
-      "creado": 1780608723108
-    },
-    {
       "id": "p_1788618415087",
       "codigo": "4BJ2",
       "name": "Paquete de 100 pajillas",
@@ -5257,7 +5236,7 @@
       },
       "maxOpciones": {
         "VARIADOS🌈": 7,
-        "NEGRAS🖤": 4
+        "NEGRAS🖤": 3
       },
       "envio": {
         "corto": "🛵 Gratis desde $2.50 USD",
@@ -5453,10 +5432,7 @@
           "I"
         ]
       },
-      "maxOpciones": {
-        "B CON G": 1,
-        "D": 1
-      },
+      "espera": true,
       "envio": {
         "corto": "🛵 Gratis desde $2.50 USD",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
@@ -8554,6 +8530,12 @@
       "name": "Paquete de 10 ganchos de silicona",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787956401/productos/x5b7h43xmdftd8ufs5rq.jpg",
       "cat": "Hogar y Limpieza"
+    },
+    {
+      "codigo": "3KD5",
+      "name": "Paquete de 10 mariposas Metálicas",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792850712/productos/dugehfun2belizlvjkag.jpg",
+      "cat": "Cabello"
     },
     {
       "codigo": "NY5G",
