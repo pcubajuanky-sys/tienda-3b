@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-20T19:55:15.773Z",
+  "generado": "2026-11-20T19:57:24.621Z",
   "tasa": 950,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -123,6 +123,10 @@
     {
       "code": "RFWV6",
       "nombre": "Rachel Martinez Alarcon"
+    },
+    {
+      "code": "KVKRN",
+      "nombre": "Elizabet"
     }
   ],
   "categorias": [
