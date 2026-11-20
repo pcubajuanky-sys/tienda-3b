@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-20T13:57:15.267Z",
+  "generado": "2026-11-20T15:50:29.570Z",
   "tasa": 945,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -901,7 +901,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 1,
+      "max": 2,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -943,7 +943,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 4,
+      "max": 6,
       "envio": {
         "corto": "🛵 Gratis desde $2.50 USD",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
@@ -1239,6 +1239,32 @@
       "precioNormalCUP": 662
     },
     {
+      "id": "p_1790782043818",
+      "codigo": "FWZY",
+      "name": "Audífonos Inalámbricos E6S TWS",
+      "cat": "Celulares y Audio",
+      "subcat": "",
+      "notes": "Auriculares Inalámbricos E7S TWS con Estuche de Carga y Pantalla Digital LED, Control Táctil, Sonido 9D, Cancelación de Ruido en Llamadas de Voz, Batería Recargable de Polímero de Litio de 150Mah USB, Compatibilidad Universal",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790781910/productos/zzgc9cymptovjyjnbgmi.jpg",
+      "precioUSD": 5,
+      "precioCUP": 4725,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "fotos": [
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1795047437/productos/yu4pz08yd8kmkcm9uh3i.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1795047443/productos/hdcj7i1kworw5txovsag.jpg",
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1795047449/productos/y16ilsx3hzs9r3dl1crc.jpg"
+      ],
+      "max": 1,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1790782043818
+    },
+    {
       "id": "p_1793417401142",
       "codigo": "J97W",
       "name": "Auriculares de Bluetooth",
@@ -1257,7 +1283,7 @@
       "fotos": [
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1793417166/productos/a7htmptgfzfaw5mrfsyz.jpg"
       ],
-      "max": 4,
+      "max": 3,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -3604,7 +3630,7 @@
       "fotos": [
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1794964138/productos/vzury0mpfs6pwyl8qufa.jpg"
       ],
-      "max": 6,
+      "max": 5,
       "envio": {
         "corto": "🛵 Gratis desde $2.50 USD",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
@@ -7944,12 +7970,6 @@
       "codigo": "39TD",
       "name": "Audífonos Inalámbricos A6S",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791226956/productos/kedky7empch1tl5jw8m9.jpg",
-      "cat": "Celulares y Audio"
-    },
-    {
-      "codigo": "FWZY",
-      "name": "Audífonos Inalámbricos E6S TWS",
-      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790781910/productos/zzgc9cymptovjyjnbgmi.jpg",
       "cat": "Celulares y Audio"
     },
     {
