@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-20T01:32:12.814Z",
+  "generado": "2026-11-20T01:33:28.042Z",
   "tasa": 935,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -1237,32 +1237,6 @@
       "creado": 1781552195237,
       "precioNormalUSD": 0.7,
       "precioNormalCUP": 655
-    },
-    {
-      "id": "p_1790782043818",
-      "codigo": "FWZY",
-      "name": "Audífonos Inalámbricos E6S TWS",
-      "cat": "Celulares y Audio",
-      "subcat": "",
-      "notes": "Auriculares Inalámbricos E7S TWS con Estuche de Carga y Pantalla Digital LED, Control Táctil, Sonido 9D, Cancelación de Ruido en Llamadas de Voz, Batería Recargable de Polímero de Litio de 150Mah USB, Compatibilidad Universal",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790781910/productos/zzgc9cymptovjyjnbgmi.jpg",
-      "precioUSD": 5,
-      "precioCUP": 4675,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "fotos": [
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1795047437/productos/yu4pz08yd8kmkcm9uh3i.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1795047443/productos/hdcj7i1kworw5txovsag.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1795047449/productos/y16ilsx3hzs9r3dl1crc.jpg"
-      ],
-      "espera": true,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1790782043818
     },
     {
       "id": "p_1793417401142",
@@ -8009,6 +7983,12 @@
       "codigo": "39TD",
       "name": "Audífonos Inalámbricos A6S",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791226956/productos/kedky7empch1tl5jw8m9.jpg",
+      "cat": "Celulares y Audio"
+    },
+    {
+      "codigo": "FWZY",
+      "name": "Audífonos Inalámbricos E6S TWS",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790781910/productos/zzgc9cymptovjyjnbgmi.jpg",
       "cat": "Celulares y Audio"
     },
     {
