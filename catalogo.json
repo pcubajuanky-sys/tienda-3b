@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-20T22:06:50.004Z",
+  "generado": "2026-11-20T22:11:50.076Z",
   "tasa": 950,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -1235,7 +1235,7 @@
       },
       "maxOpciones": {
         "ROSA": 7,
-        "AZUL": 8,
+        "AZUL": 9,
         "BLANCO": 8,
         "AMARILLO": 9
       },
@@ -2657,18 +2657,17 @@
           "Tallas"
         ],
         "opciones": [
-          "XS",
           "S",
           "M"
+        ],
+        "agotadas": [
+          "XS"
         ]
       },
       "maxOpciones": {
         "S": 1,
         "M": 2
       },
-      "esperaOpciones": [
-        "XS"
-      ],
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
