@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-20T13:27:15.220Z",
+  "generado": "2026-11-20T13:57:15.267Z",
   "tasa": 945,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -2668,26 +2668,6 @@
       "creado": 1795127511541
     },
     {
-      "id": "p_1795063077665",
-      "codigo": "UM8S",
-      "name": "Gafa rosada grande",
-      "cat": "Gafas y Accesorios",
-      "subcat": "",
-      "notes": "",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1795062971/productos/q3lys7yuwgyfrskqrszu.jpg",
-      "precioUSD": 2,
-      "precioCUP": 1890,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "espera": true,
-      "envio": {
-        "corto": "🛵 Gratis desde $2.50 USD",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
-      },
-      "creado": 1795063077665
-    },
-    {
       "id": "p_1785957866193",
       "codigo": "WXA3",
       "name": "Gafas de Sol medianas",
@@ -5043,7 +5023,7 @@
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1792851582/productos/vb9y8z8yhywruvfumot5.jpg",
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1792851587/productos/aj3xuwokwlwso1jsd0cq.jpg"
       ],
-      "max": 3,
+      "max": 2,
       "envio": {
         "corto": "🛵 Gratis desde $2.50 USD",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
@@ -8253,6 +8233,12 @@
       "name": "Fregona",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1780952475/productos/ci0k4nxjpmk9mfufwb0p.jpg",
       "cat": "Hogar y Limpieza"
+    },
+    {
+      "codigo": "UM8S",
+      "name": "Gafa rosada grande",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1795062971/productos/q3lys7yuwgyfrskqrszu.jpg",
+      "cat": "Gafas y Accesorios"
     },
     {
       "codigo": "8X9D",
