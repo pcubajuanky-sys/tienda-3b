@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-20T09:02:10.708Z",
+  "generado": "2026-11-20T13:27:15.220Z",
   "tasa": 945,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -2194,9 +2194,9 @@
           "NEGRO"
         ]
       },
-      "maxOpciones": {
-        "ROSA": 1
-      },
+      "esperaOpciones": [
+        "ROSA"
+      ],
       "envio": {
         "corto": "🛵 Gratis desde $2.50 USD",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
@@ -4855,7 +4855,7 @@
         ]
       },
       "maxOpciones": {
-        "AZUL": 4,
+        "AZUL": 3,
         "ROSA": 5
       },
       "envio": {
