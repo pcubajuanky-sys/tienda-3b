@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-20T01:27:12.380Z",
+  "generado": "2026-11-20T01:32:12.814Z",
   "tasa": 935,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -6892,11 +6892,16 @@
         ],
         "opciones": [
           "NÚMEROS NEGROS",
-          "NÚMEROS PLATEADOS",
           "NÚMEROS AZULES"
+        ],
+        "agotadas": [
+          "NÚMEROS PLATEADOS"
         ]
       },
-      "espera": true,
+      "maxOpciones": {
+        "NÚMEROS NEGROS": 1,
+        "NÚMEROS AZULES": 1
+      },
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -6936,11 +6941,9 @@
         ]
       },
       "maxOpciones": {
-        "E": 1
+        "D": 1,
+        "E": 2
       },
-      "esperaOpciones": [
-        "D"
-      ],
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -7485,7 +7488,7 @@
         ]
       },
       "maxOpciones": {
-        "NIÑOS": 3,
+        "NIÑOS": 7,
         "NIÑAS": 4
       },
       "envio": {
