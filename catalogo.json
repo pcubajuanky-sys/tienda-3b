@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-20T19:45:12.580Z",
+  "generado": "2026-11-20T19:50:17.116Z",
   "tasa": 950,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -2109,15 +2109,18 @@
           "Diseño"
         ],
         "opciones": [
+          "B",
           "C"
         ],
         "agotadas": [
           "A",
-          "B",
           "E"
         ]
       },
-      "espera": true,
+      "maxOpciones": {
+        "B": 1,
+        "C": 1
+      },
       "envio": {
         "corto": "🛵 Gratis desde $2.50 USD",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
@@ -2170,10 +2173,12 @@
           "Diseño"
         ],
         "opciones": [
-          "A",
           "B",
           "C",
           "D"
+        ],
+        "agotadas": [
+          "A"
         ]
       },
       "maxOpciones": {
@@ -2181,9 +2186,6 @@
         "C": 1,
         "D": 1
       },
-      "esperaOpciones": [
-        "A"
-      ],
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -2907,20 +2909,19 @@
           "Tonos"
         ],
         "opciones": [
-          "A",
           "B",
           "C",
           "D"
+        ],
+        "agotadas": [
+          "A"
         ]
       },
       "maxOpciones": {
         "B": 1,
-        "C": 2,
-        "D": 1
+        "C": 3,
+        "D": 2
       },
-      "esperaOpciones": [
-        "A"
-      ],
       "envio": {
         "corto": "🛵 Gratis desde $2.50 USD",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
@@ -5422,11 +5423,11 @@
           "Diseño"
         ],
         "opciones": [
-          "B CON G",
           "D"
         ],
         "agotadas": [
           "A CON C",
+          "B CON G",
           "C",
           "E",
           "F",
@@ -5436,9 +5437,6 @@
       "maxOpciones": {
         "D": 1
       },
-      "esperaOpciones": [
-        "B CON G"
-      ],
       "envio": {
         "corto": "🛵 Gratis desde $2.50 USD",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
