@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-21T13:27:08.638Z",
+  "generado": "2026-11-21T14:40:40.094Z",
   "tasa": 950,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -3420,7 +3420,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 4,
+      "max": 3,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -3615,29 +3615,6 @@
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
       },
       "creado": 1792621415401
-    },
-    {
-      "id": "p_1782329548997",
-      "codigo": "8YTJ",
-      "name": "Labiales Carmelitas",
-      "cat": "Belleza y Cuidado",
-      "subcat": "",
-      "notes": "Solo disponible en el color de la imagen",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1794964129/productos/qf2bbz6jgcsyhqlg1yde.jpg",
-      "precioUSD": 0.5,
-      "precioCUP": 475,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "fotos": [
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794964138/productos/vzury0mpfs6pwyl8qufa.jpg"
-      ],
-      "espera": true,
-      "envio": {
-        "corto": "🛵 Gratis desde $2.50 USD",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
-      },
-      "creado": 1782329548998
     },
     {
       "id": "p_1793139148847",
@@ -8321,6 +8298,12 @@
       "name": "Kit de Máquinas de Pelar y Afeitar",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791138172/productos/q6cquakboa0pgukho4am.jpg",
       "cat": "Barbería"
+    },
+    {
+      "codigo": "8YTJ",
+      "name": "Labiales Carmelitas",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1794964129/productos/qf2bbz6jgcsyhqlg1yde.jpg",
+      "cat": "Belleza y Cuidado"
     },
     {
       "codigo": "SEJX",
