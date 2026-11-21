@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-21T20:02:07.763Z",
+  "generado": "2026-11-21T20:12:07.645Z",
   "tasa": 955,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -1004,43 +1004,6 @@
       },
       "envioGratis": true,
       "creado": 1795047312705
-    },
-    {
-      "id": "p_1788814692844",
-      "codigo": "C76G",
-      "name": "Ajusta invisible sin tirantes",
-      "cat": "Ropa Interior",
-      "subcat": "",
-      "notes": "Útil e imprescindible prenda, reutilizable y comoda. Brinda un soporte muy estético a pechos sin importar talla,forma o edad.Colores disponibles, beige y negro.",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1794082956/productos/ep26qe6lejun9i5hvyd3.jpg",
-      "precioUSD": 2,
-      "precioCUP": 1910,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "fotos": [
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794082965/productos/r22hu92jkrd9gjbqudr5.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794082977/productos/fgxhuuoesmtzx5me2xhu.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794082983/productos/usajypwxijlq1dfmdgey.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794082991/productos/eg46ndosac3s44krsrdd.jpg"
-      ],
-      "variantes": {
-        "ejes": [
-          "Color"
-        ],
-        "opciones": [
-          "BEIGE"
-        ],
-        "agotadas": [
-          "NEGRO"
-        ]
-      },
-      "espera": true,
-      "envio": {
-        "corto": "🛵 Gratis desde $2.50 USD",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
-      },
-      "creado": 1788814692844
     },
     {
       "id": "p_1787110390009",
@@ -2054,8 +2017,8 @@
         ]
       },
       "maxOpciones": {
-        "NEGRO": 2,
-        "GRIS": 2,
+        "NEGRO": 1,
+        "GRIS": 1,
         "AZUL OSCURO": 2,
         "VERDE": 1,
         "BEIGE": 1,
@@ -6918,11 +6881,9 @@
         "HELADO": 3,
         "CONEJO": 2,
         "CACHORRO": 3,
-        "POLLITO": 3
+        "POLLITO": 3,
+        "ASTRONAUTA": 1
       },
-      "esperaOpciones": [
-        "ASTRONAUTA"
-      ],
       "envio": {
         "corto": "🛵 Gratis desde $2.50 USD",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
@@ -7866,6 +7827,12 @@
       "name": "Afeitadora electrica 2 en 1",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1790716439/productos/lcy5aa3kwmg3tbhbjuc8.jpg",
       "cat": "Barbería"
+    },
+    {
+      "codigo": "C76G",
+      "name": "Ajusta invisible sin tirantes",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1794082956/productos/ep26qe6lejun9i5hvyd3.jpg",
+      "cat": "Ropa Interior"
     },
     {
       "codigo": "EJBN",
