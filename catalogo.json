@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-21T20:12:07.645Z",
+  "generado": "2026-11-21T21:32:07.850Z",
   "tasa": 955,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -2360,16 +2360,15 @@
           "Color"
         ],
         "opciones": [
-          "BLANCO",
           "DORADO CLARO"
+        ],
+        "agotadas": [
+          "BLANCO"
         ]
       },
       "maxOpciones": {
         "DORADO CLARO": 3
       },
-      "esperaOpciones": [
-        "BLANCO"
-      ],
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -2892,8 +2891,8 @@
       },
       "maxOpciones": {
         "B": 1,
-        "C": 2,
-        "D": 1
+        "C": 3,
+        "D": 2
       },
       "envio": {
         "corto": "🛵 Gratis desde $2.50 USD",
@@ -3029,27 +3028,6 @@
       },
       "envioGratis": true,
       "creado": 1785008058883
-    },
-    {
-      "id": "p_1785008412468",
-      "codigo": "7VTL",
-      "name": "Hamaca roja ❤️",
-      "cat": "Playa y Verano",
-      "subcat": "",
-      "notes": "Hamaca de uso personal con capacidad para adultos y niños",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785008341/productos/f8dhc1t8mcn3yodirdvx.jpg",
-      "precioUSD": 13,
-      "precioCUP": 12415,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": true,
-      "espera": true,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1785008412468
     },
     {
       "id": "p_1792886712538",
@@ -4610,7 +4588,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 2,
+      "max": 1,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -4751,27 +4729,6 @@
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
       },
       "creado": 1780608108403
-    },
-    {
-      "id": "p_1788618415087",
-      "codigo": "4BJ2",
-      "name": "Paquete de 100 pajillas",
-      "cat": "Cocina",
-      "subcat": "",
-      "notes": "Pajillas negras de alta calidad",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788618088/productos/sfp8rofru3m2g8xdcmvz.jpg",
-      "precioUSD": 3,
-      "precioCUP": 2865,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "espera": true,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1788618415087
     },
     {
       "id": "p_1781005769619",
@@ -8243,6 +8200,12 @@
       "cat": "Salud y Gym"
     },
     {
+      "codigo": "7VTL",
+      "name": "Hamaca roja ❤️",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785008341/productos/f8dhc1t8mcn3yodirdvx.jpg",
+      "cat": "Playa y Verano"
+    },
+    {
       "codigo": "58XL",
       "name": "Juego de 5 Calderos de acero inoxidable",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791143110/productos/pn03og4qehjxbqxyxqpn.jpg",
@@ -8493,6 +8456,12 @@
       "name": "Paquete de 10 mariposas Metálicas",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792850712/productos/dugehfun2belizlvjkag.jpg",
       "cat": "Cabello"
+    },
+    {
+      "codigo": "4BJ2",
+      "name": "Paquete de 100 pajillas",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788618088/productos/sfp8rofru3m2g8xdcmvz.jpg",
+      "cat": "Cocina"
     },
     {
       "codigo": "NY5G",
