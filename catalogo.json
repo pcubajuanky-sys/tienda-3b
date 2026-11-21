@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-21T02:56:54.432Z",
+  "generado": "2026-11-21T04:00:25.565Z",
   "tasa": 950,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -6111,10 +6111,10 @@
       "subcat": "",
       "notes": "Plancha antiadherente para hacer barquillos,tabaquitos, cesticas y demás.",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789488621/productos/ruwvkfvlywf73grlk01m.jpg",
-      "precioUSD": 30,
-      "precioCUP": 28500,
+      "precioUSD": 28.5,
+      "precioCUP": 27075,
       "moneda": "usd",
-      "enOferta": false,
+      "enOferta": true,
       "destacado": false,
       "fotos": [
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1792356818/productos/gipz8bvnsfpghb0tbphk.jpg",
@@ -6127,7 +6127,9 @@
         "largo": "🛵 MENSAJERÍA GRATIS"
       },
       "envioGratis": true,
-      "creado": 1789488822597
+      "creado": 1789488822597,
+      "precioNormalUSD": 30,
+      "precioNormalCUP": 28500
     },
     {
       "id": "p_1785092176064",
@@ -6683,10 +6685,10 @@
       "subcat": "",
       "notes": "Ratón Inalámbrico Silencioso – Ratón Inalámbrico para Computadora, Ratón para Laptop, Ratón USB, Ratón para Chromebook, Ratón Inalámbrico, Ratón Inalámbrico, Ratón para PC, Ratones para Computadora, Ratón Silencioso",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788528508/productos/te3bwxztbrhsvbm7kjgt.jpg",
-      "precioUSD": 14.25,
-      "precioCUP": 13538,
+      "precioUSD": 15,
+      "precioCUP": 14250,
       "moneda": "usd",
-      "enOferta": true,
+      "enOferta": false,
       "destacado": false,
       "fotos": [
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1791895246/productos/qmekoufeciroszddpozn.jpg",
@@ -6699,9 +6701,7 @@
         "largo": "🛵 MENSAJERÍA GRATIS"
       },
       "envioGratis": true,
-      "creado": 1788528610951,
-      "precioNormalUSD": 15,
-      "precioNormalCUP": 14250
+      "creado": 1788528610951
     },
     {
       "id": "p_1788551044899",
@@ -8934,8 +8934,8 @@
     }
   ],
   "ofertaDia": {
-    "codigo": "L53P",
-    "hasta": 1795233600000
+    "codigo": "MNJC",
+    "hasta": 1795320000000
   },
   "cupones": {
     "visibles": [],
