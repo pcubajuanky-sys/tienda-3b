@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-20T23:26:51.202Z",
+  "generado": "2026-11-21T02:56:54.432Z",
   "tasa": 950,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -1338,9 +1338,9 @@
         "MANGO": 8,
         "LIMÓN": 9,
         "VAINILLA": 7,
-        "ALOE": 9,
+        "ALOE": 7,
         "FRAMBUESA": 5,
-        "CEREZA": 8,
+        "CEREZA": 6,
         "CAFÉ": 8,
         "MENTA": 5
       },
@@ -3011,10 +3011,7 @@
           "NEGRO CON AZUL"
         ]
       },
-      "maxOpciones": {
-        "NEGRO CON GRIS": 1,
-        "NEGRO CON AZUL": 1
-      },
+      "espera": true,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
