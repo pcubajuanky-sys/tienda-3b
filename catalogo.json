@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-22T01:42:08.573Z",
+  "generado": "2026-11-22T02:57:08.842Z",
   "tasa": 955,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -886,7 +886,7 @@
       "moneda": "usd",
       "enOferta": true,
       "destacado": false,
-      "max": 1,
+      "espera": true,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -1119,7 +1119,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 4,
+      "max": 2,
       "envio": {
         "corto": "🛵 Gratis desde $2.50 USD",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
@@ -4083,27 +4083,6 @@
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
       },
       "creado": 1791925032570
-    },
-    {
-      "id": "p_1782259680772",
-      "codigo": "4NDS",
-      "name": "Mascarilla para puntos negros",
-      "cat": "Belleza y Cuidado",
-      "subcat": "",
-      "notes": "Mascarilla facial negra de carbón de bambú,  limpieza profunda de la piel facial para puntos negros y blancos, extractos naturales, ingrediente suave, hidratante y control de grasa, ilumina la piel, apta para todo tipo de piel, la piel luce visiblemente rejuvenecida",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782259607/productos/vyo6dwsbzxnipbsgrtc9.jpg",
-      "precioUSD": 3,
-      "precioCUP": 2865,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "max": 1,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1782259680772
     },
     {
       "id": "p_1789255852331",
@@ -8302,6 +8281,12 @@
       "name": "Máquina de Pelar Profesional",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791896104/productos/pxnnsadz8grhw3sdhrkq.jpg",
       "cat": "Barbería"
+    },
+    {
+      "codigo": "4NDS",
+      "name": "Mascarilla para puntos negros",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1782259607/productos/vyo6dwsbzxnipbsgrtc9.jpg",
+      "cat": "Belleza y Cuidado"
     },
     {
       "codigo": "F4HN",
