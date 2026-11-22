@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-22T17:27:15.450Z",
+  "generado": "2026-11-22T18:52:17.299Z",
   "tasa": 960,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -886,7 +886,7 @@
       "moneda": "usd",
       "enOferta": true,
       "destacado": false,
-      "espera": true,
+      "max": 1,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -1921,7 +1921,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 3,
+      "max": 2,
       "envio": {
         "corto": "🛵 Gratis desde $2.50 USD",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
@@ -4492,7 +4492,7 @@
     {
       "id": "p_1785006026614",
       "codigo": "PYWJ",
-      "name": "Organizador Rodante 2 pisos",
+      "name": "Organizador Rodante",
       "cat": "Muebles y Organizadores",
       "subcat": "",
       "notes": "Organizador rodante (solo quedan negro)  de 3 niveles. Estante de almacenamiento multiusos con ruedas, ideal como organizador de oficina,cocina,vestidores etc . Diseño flexible y práctico para optimizar el espacio.",
@@ -4760,7 +4760,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 1,
+      "max": 2,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
