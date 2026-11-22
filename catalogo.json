@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-22T02:57:08.842Z",
+  "generado": "2026-11-22T03:52:09.034Z",
   "tasa": 955,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -5853,7 +5853,7 @@
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1794450115/productos/hxufvitv0nvxznwk0jjn.jpg",
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1794450130/productos/dsjer1l1mpin7n9gacyg.jpg"
       ],
-      "max": 1,
+      "espera": true,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
