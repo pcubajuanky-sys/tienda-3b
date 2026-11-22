@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-21T22:17:07.910Z",
+  "generado": "2026-11-22T01:42:08.573Z",
   "tasa": 955,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -3067,10 +3067,12 @@
         "A": 3,
         "B": 3,
         "C": 1,
-        "D": 1,
         "E": 7,
         "F": 8
       },
+      "esperaOpciones": [
+        "D"
+      ],
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -4779,7 +4781,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 2,
+      "max": 1,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -5937,7 +5939,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 6,
+      "max": 4,
       "envio": {
         "corto": "🛵 Gratis desde $2.50 USD",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
@@ -6012,25 +6014,23 @@
       "subcat": "",
       "notes": "Plancha antiadherente para hacer barquillos,tabaquitos, cesticas y demás.",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789488621/productos/ruwvkfvlywf73grlk01m.jpg",
-      "precioUSD": 28.5,
-      "precioCUP": 27218,
+      "precioUSD": 30,
+      "precioCUP": 28650,
       "moneda": "usd",
-      "enOferta": true,
+      "enOferta": false,
       "destacado": false,
       "fotos": [
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1792356818/productos/gipz8bvnsfpghb0tbphk.jpg",
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1792356824/productos/vq75aao5kwjnpaoxzc39.jpg",
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1792356829/productos/onv8dh8zmiyni4yo6nu6.jpg"
       ],
-      "max": 1,
+      "max": 3,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
       },
       "envioGratis": true,
-      "creado": 1789488822597,
-      "precioNormalUSD": 30,
-      "precioNormalCUP": 28650
+      "creado": 1789488822597
     },
     {
       "id": "p_1785092176064",
@@ -8856,10 +8856,6 @@
       "cat": "Decoración y Fiestas"
     }
   ],
-  "ofertaDia": {
-    "codigo": "MNJC",
-    "hasta": 1795320000000
-  },
   "cupones": {
     "visibles": [],
     "huellas": [
