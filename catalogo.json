@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-23T21:15:19.434Z",
+  "generado": "2026-11-23T21:21:01.042Z",
   "tasa": 965,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -1310,7 +1310,7 @@
         "VAINILLA": 7,
         "ALOE": 8,
         "FRAMBUESA": 5,
-        "CEREZA": 7,
+        "CEREZA": 8,
         "CAFÉ": 8,
         "MENTA": 5
       },
@@ -2013,7 +2013,6 @@
           "Colores"
         ],
         "opciones": [
-          "NEGRO",
           "GRIS",
           "AZUL OSCURO",
           "VERDE",
@@ -2021,6 +2020,9 @@
           "ROJO",
           "VINO",
           "ROSA"
+        ],
+        "agotadas": [
+          "NEGRO"
         ]
       },
       "maxOpciones": {
@@ -2032,9 +2034,6 @@
         "VINO": 1,
         "ROSA": 1
       },
-      "esperaOpciones": [
-        "NEGRO"
-      ],
       "envio": {
         "corto": "🛵 Gratis desde $2.50 USD",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
@@ -2983,7 +2982,9 @@
           "NEGRO CON GRIS"
         ]
       },
-      "espera": true,
+      "maxOpciones": {
+        "NEGRO CON GRIS": 1
+      },
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -6439,39 +6440,6 @@
       "creado": 1789242386935
     },
     {
-      "id": "p_1789242333082",
-      "codigo": "4QLL",
-      "name": "Pulover Unisex Navideño \"Somos Familia\"",
-      "cat": "Pulóveres y Ropa de Hombre",
-      "subcat": "",
-      "notes": "Pulover algodonada elastizado. Importado de USA",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789242098/productos/u6uvk5zmxtesf0aekplu.jpg",
-      "precioUSD": 4,
-      "precioCUP": 3860,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "variantes": {
-        "ejes": [
-          "Talla",
-          "Color"
-        ],
-        "opciones": [
-          "XL / NEGRO🖤"
-        ],
-        "agotadas": [
-          "M / GRIS🩶"
-        ]
-      },
-      "espera": true,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1789242333083
-    },
-    {
       "id": "p_1788034256550",
       "codigo": "ZST8",
       "name": "Rallador cortador multiusos",
@@ -7153,16 +7121,15 @@
           "Colores"
         ],
         "opciones": [
-          "ROSA🩷",
           "AZUL💙"
+        ],
+        "agotadas": [
+          "ROSA🩷"
         ]
       },
       "maxOpciones": {
         "AZUL💙": 7
       },
-      "esperaOpciones": [
-        "ROSA🩷"
-      ],
       "envio": {
         "corto": "🛵 Gratis desde $2.50 USD",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
@@ -8583,6 +8550,12 @@
       "codigo": "KHXC",
       "name": "Pulover Unisex Navideño \"JESÚS\"",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789241807/productos/nvc54lxofwfrczxstfar.jpg",
+      "cat": "Pulóveres y Ropa de Hombre"
+    },
+    {
+      "codigo": "4QLL",
+      "name": "Pulover Unisex Navideño \"Somos Familia\"",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1789242098/productos/u6uvk5zmxtesf0aekplu.jpg",
       "cat": "Pulóveres y Ropa de Hombre"
     },
     {
