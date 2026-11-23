@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-23T16:45:58.194Z",
+  "generado": "2026-11-23T18:35:58.432Z",
   "tasa": 965,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -2400,7 +2400,7 @@
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1794019021/productos/mccv1s83z8gdlgvg46fp.jpg",
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1794019025/productos/eqoaopwxbqvtht1uxjcz.jpg"
       ],
-      "max": 1,
+      "espera": true,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -2977,8 +2977,7 @@
           "Color"
         ],
         "opciones": [
-          "NEGRO CON GRIS",
-          "NEGRO CON AZUL"
+          "NEGRO CON GRIS"
         ]
       },
       "espera": true,
@@ -3816,7 +3815,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 5,
+      "max": 4,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
