@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-23T20:10:59.396Z",
+  "generado": "2026-11-23T20:15:59.234Z",
   "tasa": 965,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -5794,32 +5794,6 @@
       "creado": 1780945492775
     },
     {
-      "id": "p_1794449913445",
-      "codigo": "V2Y8",
-      "name": "Pelota de futbol profesional",
-      "cat": "Niños y Escuela",
-      "subcat": "",
-      "notes": "⚽🔥 ¡Lleva tu juego al siguiente nivel! 🔥⚽\n\nDisfruta de nuestras pelotas profesionales de fútbol, con un diseño moderno, colores llamativos y excelente calidad. Ideales para entrenamientos, partidos y competencias.\n\n¡Demuestra tu talento, domina la cancha y juega como un campeón! 🏆\n\n📲 ¡Consigue la tuya hoy!",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1794450114/productos/vb8urgpi8l3hywtrdxks.jpg",
-      "precioUSD": 12,
-      "precioCUP": 11580,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "fotos": [
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794449756/productos/xvhfxfyal3hcdrbk2zsw.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794450115/productos/hxufvitv0nvxznwk0jjn.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794450130/productos/dsjer1l1mpin7n9gacyg.jpg"
-      ],
-      "espera": true,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1794449913445
-    },
-    {
       "id": "p_1782329655762",
       "codigo": "EKM9",
       "name": "Pestañas postizas",
@@ -8499,6 +8473,12 @@
       "name": "Pellizcos medianos",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786714312/productos/okyxnhfnjxbl2bsg5jpe.jpg",
       "cat": "Cabello"
+    },
+    {
+      "codigo": "V2Y8",
+      "name": "Pelota de futbol profesional",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1794450114/productos/vb8urgpi8l3hywtrdxks.jpg",
+      "cat": "Niños y Escuela"
     },
     {
       "codigo": "B3FW",
