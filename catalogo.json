@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-23T13:15:56.484Z",
+  "generado": "2026-11-23T13:54:25.061Z",
   "tasa": 960,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -131,6 +131,10 @@
     {
       "code": "5JZ7K",
       "nombre": "anamary"
+    },
+    {
+      "code": "GKFQJ",
+      "nombre": "Lazara"
     }
   ],
   "categorias": [
@@ -3489,6 +3493,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
+      "max": 9,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -4820,54 +4825,6 @@
       },
       "envioGratis": true,
       "creado": 1792791923752
-    },
-    {
-      "id": "p_1780614185839",
-      "codigo": "FD8Z",
-      "name": "Paquete de 4 Tic-Tacs Estilo variado",
-      "cat": "Cabello",
-      "subcat": "",
-      "notes": "4 piezas por paquete de cartoncitos con pinzas y clips para el cabello en tonos pasteles. Diseños variados que incluyen estrellas, lazos, mariposas y formas geométricas. Fabricados en material resistente y suaves al tacto, ideales para peinados infantiles o de uso diario. Presentación atractiva y práctica para regalo o uso personal.",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792849026/productos/clgdej1she1r1x1ohugy.jpg",
-      "precioUSD": 0.7,
-      "precioCUP": 672,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "fotos": [
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792849030/productos/wpgytvfgeywtwvrudfjw.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792849035/productos/hlywrzhdrbdzuc63zboc.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1792849041/productos/flvsdcpmbbkkn4zi5ffa.jpg"
-      ],
-      "variantes": {
-        "ejes": [
-          "Diseño"
-        ],
-        "opciones": [
-          "B",
-          "C",
-          "D",
-          "E",
-          "F",
-          "G"
-        ],
-        "agotadas": [
-          "A"
-        ]
-      },
-      "maxOpciones": {
-        "B": 2,
-        "C": 2,
-        "D": 1,
-        "E": 1,
-        "F": 1,
-        "G": 1
-      },
-      "envio": {
-        "corto": "🛵 Gratis desde $2.50 USD",
-        "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
-      },
-      "creado": 1780614185839
     },
     {
       "id": "p_1780092645027",
@@ -8471,6 +8428,12 @@
       "codigo": "8DEM",
       "name": "Paquete de 4 pellizcos de perlitas",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1786930842/productos/wzpik5gw8tzabbppxhn1.jpg",
+      "cat": "Cabello"
+    },
+    {
+      "codigo": "FD8Z",
+      "name": "Paquete de 4 Tic-Tacs Estilo variado",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792849026/productos/clgdej1she1r1x1ohugy.jpg",
       "cat": "Cabello"
     },
     {
