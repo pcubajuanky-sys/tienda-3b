@@ -3004,6 +3004,9 @@ function engancharCambio() {
   });
 }
 
+// Primer nombre del gestor (sin asteriscos de negrita), para el mensaje del pedido.
+function primerNombre(s) { return String(s || '').replace(/\*/g, ' ').trim().split(/\s+/)[0] || ''; }
+
 function enviarPorWhatsApp(ev) {
   if (ev) ev.preventDefault();
   // Pestaña abierta desde antes de que Ruth cerrara: aquí se corta. La comprobación es
@@ -3047,7 +3050,7 @@ function enviarPorWhatsApp(ev) {
   const eg = envioGratis();
   const m = mensajeria();
   const lineas = ['🛒 *Pedido desde la web*'];
-  if (v) lineas.push(`👤 Vendedor: ${v.code}`);
+  if (v) { const pn = primerNombre(v.nombre); lineas.push(`👤 Vendedor: ${v.code}${pn ? ' (' + pn + ')' : ''}`); }
   lineas.push('');
   const etiqueta = (p, clave) => {
     const v = variantesDe(p);

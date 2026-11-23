@@ -276,7 +276,7 @@
     const b = estado.bloque;
     const v = typeof resolverVendedor === 'function' ? resolverVendedor() : null;
     const L = [`🛍️ *${MARCA}*`];
-    if (v) L.push(`👤 Vendedor: ${v.code}`);
+    if (v) { const pn = typeof primerNombre === 'function' ? primerNombre(v.nombre) : ''; L.push(`👤 Vendedor: ${v.code}${pn ? ' (' + pn + ')' : ''}`); }
     estado.articulos.forEach((a, i) => {
       const t = tipoDe(a.tipo);
       L.push('', `*Producto ${i + 1}* — ${a.tienda === 'temu' ? 'Temu' : 'Shein'}`);
