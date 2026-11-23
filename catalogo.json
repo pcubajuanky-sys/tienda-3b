@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-23T20:15:59.234Z",
+  "generado": "2026-11-23T21:15:19.434Z",
   "tasa": 965,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -295,7 +295,10 @@
       ],
       "utcOffsetMin": -240,
       "avisoSinEntrega": "Los domingos no hacemos entregas: empezamos el {Lunes} a las {9.00 am}.",
-      "otroHorario": false
+      "otroHorario": false,
+      "llenos": [
+        "2026-11-23|t3"
+      ]
     }
   },
   "encargos": {
