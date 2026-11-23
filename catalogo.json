@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-22T18:52:17.299Z",
+  "generado": "2026-11-23T00:02:44.528Z",
   "tasa": 960,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -5918,7 +5918,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 4,
+      "max": 6,
       "envio": {
         "corto": "🛵 Gratis desde $2.50 USD",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
@@ -6729,10 +6729,7 @@
           "NÚMEROS PLATEADOS"
         ]
       },
-      "maxOpciones": {
-        "NÚMEROS NEGROS": 1,
-        "NÚMEROS AZULES": 1
-      },
+      "espera": true,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
