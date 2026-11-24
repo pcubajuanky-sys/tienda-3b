@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-23T21:21:01.042Z",
+  "generado": "2026-11-24T01:21:02.271Z",
   "tasa": 965,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -2385,32 +2385,6 @@
       "creado": 1795032902555
     },
     {
-      "id": "p_1794019333016",
-      "codigo": "MEBH",
-      "name": "Crema sólida para callosidades",
-      "cat": "Belleza y Cuidado",
-      "subcat": "",
-      "notes": "Crema sólida para la hidratación de zonas duras,la eliminación de callosidades y de grietas. Ideal para talones, codos ,manos ,rodillas o cualquier zona resecada por cuestiones externas o internas",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1794019013/productos/by2b3p0ciymmwue1zbmv.jpg",
-      "precioUSD": 5,
-      "precioCUP": 4825,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "fotos": [
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794019017/productos/fralej0ayhqwnhgjba9i.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794019021/productos/mccv1s83z8gdlgvg46fp.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794019025/productos/eqoaopwxbqvtht1uxjcz.jpg"
-      ],
-      "espera": true,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1794019333017
-    },
-    {
       "id": "p_1782259192464",
       "codigo": "PLDE",
       "name": "Delineador Permanente de pincel",
@@ -3065,9 +3039,11 @@
           "A",
           "B",
           "C",
-          "D",
           "E",
           "F"
+        ],
+        "agotadas": [
+          "D"
         ]
       },
       "maxOpciones": {
@@ -3077,9 +3053,6 @@
         "E": 7,
         "F": 8
       },
-      "esperaOpciones": [
-        "D"
-      ],
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -4512,7 +4485,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 3,
+      "max": 2,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -7945,6 +7918,12 @@
       "name": "Creatina Monohidratada Micronizada",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788907712/productos/on2wggnxyfkkyazwr6g9.jpg",
       "cat": "Salud y Gym"
+    },
+    {
+      "codigo": "MEBH",
+      "name": "Crema sólida para callosidades",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1794019013/productos/by2b3p0ciymmwue1zbmv.jpg",
+      "cat": "Belleza y Cuidado"
     },
     {
       "codigo": "D5Q2",
