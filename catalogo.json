@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-26T20:11:44.687Z",
+  "generado": "2026-11-26T20:17:09.807Z",
   "tasa": 975,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -3247,7 +3247,7 @@
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1795062131/productos/aeuybg7kiuvpnmlvvydk.jpg",
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1795062137/productos/pesyxwpp8ytkaxaflynp.jpg"
       ],
-      "max": 2,
+      "max": 9,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -6878,10 +6878,10 @@
       "subcat": "",
       "notes": "Secador de pelo iónico de 1875W para salón profesional y uso doméstico, 3 niveles de calor/2 velocidades con función Cool Shot, regalo para el Día de la Madre/Navidad para mujeres, negro",
       "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1792340203/productos/dgx1nkuhaansb4rmo93y.jpg",
-      "precioUSD": 42,
-      "precioCUP": 40950,
+      "precioUSD": 40,
+      "precioCUP": 39000,
       "moneda": "usd",
-      "enOferta": false,
+      "enOferta": true,
       "destacado": false,
       "fotos": [
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1792340210/productos/gvklxkgqwn06hbvqg3km.jpg",
@@ -6889,13 +6889,15 @@
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1792340234/productos/nupp5xz7k67xrnv0tn0u.jpg",
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1792340240/productos/ekgsj2hbfjnmt7pys9ti.jpg"
       ],
-      "max": 1,
+      "max": 3,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
       },
       "envioGratis": true,
-      "creado": 1792340423078
+      "creado": 1792340423078,
+      "precioNormalUSD": 42,
+      "precioNormalCUP": 40950
     },
     {
       "id": "p_1782259924259",
