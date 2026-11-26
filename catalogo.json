@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-26T13:24:06.827Z",
+  "generado": "2026-11-26T13:25:09.502Z",
   "tasa": 975,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -267,9 +267,9 @@
     "taxiActivo": true,
     "encargosActivo": true,
     "cierre": {
-      "activo": true,
-      "titulo": "🚀 Volvemos muy pronto",
-      "texto": "Aviso: Debido a las inclemencias del clima, hoy permaneceremos con la tienda cerrada. Las condiciones actuales no nos permiten realizar las entregas por mensajería de forma segura."
+      "activo": false,
+      "titulo": "",
+      "texto": ""
     },
     "entregas": {
       "turnos": [
