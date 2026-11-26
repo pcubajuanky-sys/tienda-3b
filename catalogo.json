@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-26T13:47:58.945Z",
+  "generado": "2026-11-26T14:53:00.485Z",
   "tasa": 975,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -1635,7 +1635,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 1,
+      "espera": true,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -3144,13 +3144,11 @@
           "Color"
         ],
         "opciones": [
-          "MARRÓN",
           "BEIGE",
           "GRIS"
         ]
       },
       "maxOpciones": {
-        "MARRÓN": 1,
         "BEIGE": 3,
         "GRIS": 3
       },
@@ -4014,17 +4012,15 @@
       "cat": "Barbería",
       "subcat": "",
       "notes": "Máquina de pelar recargable profesional ideal para cortes y pelados. Totalmente metálica. Incluye 4 números, brocha de limpieza y cable de carga",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1795061057/productos/qsu1z6m79tj8hkimm5x3.jpg",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1795704180/productos/j0zzrs2tdya2wqavx7am.jpg",
       "precioUSD": 8,
       "precioCUP": 7800,
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
       "fotos": [
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1795061059/productos/pgfepe15qjav0cs5kovv.jpg",
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1795061077/productos/hrjsn3qzvcp62pdw8yqf.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1795061083/productos/urdj3swwzaztskcijpzk.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1795061087/productos/hmvtrkjkcdelfpttlpqz.jpg"
+        "https://res.cloudinary.com/dvahidqdw/image/upload/v1795061083/productos/urdj3swwzaztskcijpzk.jpg"
       ],
       "max": 2,
       "envio": {
