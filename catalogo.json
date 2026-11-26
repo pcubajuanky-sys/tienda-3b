@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-26T14:53:00.485Z",
+  "generado": "2026-11-26T15:13:01.568Z",
   "tasa": 975,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -5786,7 +5786,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 4,
+      "max": 2,
       "envio": {
         "corto": "🛵 Gratis desde $2.50 USD",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
@@ -6696,10 +6696,12 @@
       "maxOpciones": {
         "HELADO": 3,
         "CONEJO": 2,
-        "CACHORRO": 3,
-        "POLLITO": 3,
-        "ASTRONAUTA": 1
+        "CACHORRO": 2,
+        "POLLITO": 3
       },
+      "esperaOpciones": [
+        "ASTRONAUTA"
+      ],
       "envio": {
         "corto": "🛵 Gratis desde $2.50 USD",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
