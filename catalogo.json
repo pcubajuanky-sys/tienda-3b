@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-26T20:17:09.807Z",
+  "generado": "2026-11-26T22:17:04.138Z",
   "tasa": 975,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -267,9 +267,9 @@
     "taxiActivo": true,
     "encargosActivo": true,
     "cierre": {
-      "activo": false,
-      "titulo": "",
-      "texto": ""
+      "activo": true,
+      "titulo": "📦 Estamos haciendo inventario",
+      "texto": "📢 Aviso importante\n\nNuestra página permanecerá cerrada temporalmente mientras realizamos inventario y algunos arreglos en nuestro sistema. Estamos trabajando para volver lo antes posible. \n¡Gracias por su paciencia y comprensión! 💛"
     },
     "entregas": {
       "turnos": [
@@ -2639,7 +2639,7 @@
         ]
       },
       "maxOpciones": {
-        "NEGRO": 7,
+        "NEGRO": 6,
         "TRANSPARENTE": 7,
         "GRIS": 7
       },
@@ -7122,7 +7122,7 @@
         ]
       },
       "maxOpciones": {
-        "AZUL": 2
+        "AZUL": 1
       },
       "envio": {
         "corto": "🛵 Mensajería gratis",
