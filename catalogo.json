@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-26T19:58:48.782Z",
+  "generado": "2026-11-26T20:11:30.413Z",
   "tasa": 975,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -1216,6 +1216,27 @@
       "creado": 1781552195237,
       "precioNormalUSD": 0.7,
       "precioNormalCUP": 683
+    },
+    {
+      "id": "p_1787957504529",
+      "codigo": "39TD",
+      "name": "Audífonos Inalámbricos A6S",
+      "cat": "Celulares y Audio",
+      "subcat": "",
+      "notes": "Auriculares Inalámbricos A6S, Audífonos Inalámbricos, Auriculares Internos, Control de Botones, Soporte para Reducción de Ruido en Llamadas, Luz Indicadora de Energía, Calidad de Sonido de Alta Definición, Puerto de Carga Tipo-C [Cable de Carga USB No Incluido]",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791226956/productos/kedky7empch1tl5jw8m9.jpg",
+      "precioUSD": 4.5,
+      "precioCUP": 4388,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "max": 5,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1787957504529
     },
     {
       "id": "p_1790782043818",
@@ -4514,7 +4535,7 @@
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1794450395/productos/dy0ifebdvvwsijahdjbp.jpg",
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1794450403/productos/zpkr492wtmumyj2acw3s.jpg"
       ],
-      "max": 3,
+      "max": 2,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -7678,12 +7699,6 @@
       "codigo": "FPUF",
       "name": "Audífonos de Bluetooth tipo Casco 1",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1784919017/productos/ymppx6ylkp13y8c2vhx6.jpg",
-      "cat": "Celulares y Audio"
-    },
-    {
-      "codigo": "39TD",
-      "name": "Audífonos Inalámbricos A6S",
-      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1791226956/productos/kedky7empch1tl5jw8m9.jpg",
       "cat": "Celulares y Audio"
     },
     {
