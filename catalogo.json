@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-26T19:28:14.129Z",
+  "generado": "2026-11-26T19:58:48.782Z",
   "tasa": 975,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -4136,6 +4136,26 @@
       "creado": 1781005462535
     },
     {
+      "id": "p_1788539890691",
+      "codigo": "A9ZJ",
+      "name": "Mini lámpara nocturna",
+      "cat": "Decoración y Fiestas",
+      "subcat": "",
+      "notes": "Linda lámpara de estrellitas y sin ellas, puede ser una luz que abarque todo el cuarto con estrellas o puede ser una pequeña luz colorida. Trae su cable de alimentación. Bajo consumo",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788539742/productos/uhtsctyzbjaw9ttwpwq0.jpg",
+      "precioUSD": 7,
+      "precioCUP": 6825,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "envio": {
+        "corto": "🛵 Mensajería gratis",
+        "largo": "🛵 MENSAJERÍA GRATIS"
+      },
+      "envioGratis": true,
+      "creado": 1788539890691
+    },
+    {
       "id": "p_1780451802473",
       "codigo": "WM7G",
       "name": "Mini Licuadora Recargable",
@@ -8163,12 +8183,6 @@
       "name": "Mini bolsos peluche",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785180705/productos/wetzjsztw8v09lrfrvxm.jpg",
       "cat": "Calzado y Bolsos"
-    },
-    {
-      "codigo": "A9ZJ",
-      "name": "Mini lámpara nocturna",
-      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788539742/productos/uhtsctyzbjaw9ttwpwq0.jpg",
-      "cat": "Decoración y Fiestas"
     },
     {
       "codigo": "LX3Z",
