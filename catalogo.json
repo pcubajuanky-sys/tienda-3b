@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-26T17:43:07.024Z",
+  "generado": "2026-11-26T19:18:13.074Z",
   "tasa": 975,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -1235,7 +1235,6 @@
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1795047443/productos/hdcj7i1kworw5txovsag.jpg",
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1795047449/productos/y16ilsx3hzs9r3dl1crc.jpg"
       ],
-      "espera": true,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -2596,6 +2595,40 @@
       "creado": 1795127511541
     },
     {
+      "id": "p_1785957052228",
+      "codigo": "8X9D",
+      "name": "Gafas Cristal transparente",
+      "cat": "Gafas y Accesorios",
+      "subcat": "",
+      "notes": "Protección contra luz azul, ideal para personas que usan mucho pantallas como celulares ,laptops y televisión.\nTambién es un muy buen accesorio para personas que manejan moto en horario nocturno, protege los ojos sin afectar la visibilidad en la oscuridad",
+      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785956773/productos/gufvuhffd4ibygz29anq.jpg",
+      "precioUSD": 2,
+      "precioCUP": 1950,
+      "moneda": "usd",
+      "enOferta": false,
+      "destacado": false,
+      "variantes": {
+        "ejes": [
+          "Color"
+        ],
+        "opciones": [
+          "NEGRO",
+          "TRANSPARENTE",
+          "GRIS"
+        ]
+      },
+      "maxOpciones": {
+        "NEGRO": 7,
+        "TRANSPARENTE": 7,
+        "GRIS": 7
+      },
+      "envio": {
+        "corto": "🛵 Gratis desde $2.50 USD",
+        "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
+      },
+      "creado": 1785957052230
+    },
+    {
       "id": "p_1785957866193",
       "codigo": "WXA3",
       "name": "Gafas de Sol medianas",
@@ -3345,7 +3378,7 @@
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1792357434/productos/dacuvxu3bvtduzmp7e2r.jpg",
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1792357439/productos/mlgso4zkjxqkihtjureb.jpg"
       ],
-      "max": 1,
+      "max": 3,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -7935,12 +7968,6 @@
       "codigo": "UM8S",
       "name": "Gafa rosada grande",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1795062971/productos/q3lys7yuwgyfrskqrszu.jpg",
-      "cat": "Gafas y Accesorios"
-    },
-    {
-      "codigo": "8X9D",
-      "name": "Gafas Cristal transparente",
-      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1785956773/productos/gufvuhffd4ibygz29anq.jpg",
       "cat": "Gafas y Accesorios"
     },
     {
