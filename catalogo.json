@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-26T15:13:01.568Z",
+  "generado": "2026-11-26T17:33:06.814Z",
   "tasa": 975,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -1004,7 +1004,7 @@
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1795047163/productos/lpcwt0yflomtay6swrmh.jpg",
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1795047173/productos/zgfs7edmanysatxmqo4q.jpg"
       ],
-      "max": 4,
+      "max": 3,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -1050,7 +1050,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 2,
+      "max": 4,
       "envio": {
         "corto": "🛵 Gratis desde $2.50 USD",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
@@ -1146,7 +1146,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "max": 2,
+      "max": 3,
       "envio": {
         "corto": "🛵 Gratis desde $2.50 USD",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
@@ -1242,33 +1242,6 @@
       },
       "envioGratis": true,
       "creado": 1790782043818
-    },
-    {
-      "id": "p_1793417401142",
-      "codigo": "J97W",
-      "name": "Auriculares de Bluetooth",
-      "cat": "Celulares y Audio",
-      "subcat": "",
-      "notes": "Alta calidad de sonido. Auriculares profesionales. Comodidad y estetica en un mismo artículo. Incluye su cable de carga",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1793417160/productos/jmd8co2wcwf2kp3grv3i.jpg",
-      "precioUSD": 5,
-      "precioCUP": 4875,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "colecciones": [
-        "regalar"
-      ],
-      "fotos": [
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1793417166/productos/a7htmptgfzfaw5mrfsyz.jpg"
-      ],
-      "espera": true,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1793417401142
     },
     {
       "id": "p_1786923820539",
@@ -2013,7 +1986,6 @@
           "Colores"
         ],
         "opciones": [
-          "GRIS",
           "AZUL OSCURO",
           "VERDE",
           "BEIGE",
@@ -2022,20 +1994,18 @@
           "ROSA"
         ],
         "agotadas": [
-          "NEGRO"
+          "NEGRO",
+          "GRIS"
         ]
       },
       "maxOpciones": {
         "AZUL OSCURO": 2,
         "VERDE": 1,
+        "BEIGE": 1,
         "ROJO": 1,
+        "VINO": 1,
         "ROSA": 1
       },
-      "esperaOpciones": [
-        "GRIS",
-        "BEIGE",
-        "VINO"
-      ],
       "envio": {
         "corto": "🛵 Gratis desde $2.50 USD",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
@@ -2099,11 +2069,9 @@
         ]
       },
       "maxOpciones": {
+        "B": 1,
         "C": 1
       },
-      "esperaOpciones": [
-        "B"
-      ],
       "envio": {
         "corto": "🛵 Gratis desde $2.50 USD",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
@@ -2382,7 +2350,7 @@
         ]
       },
       "maxOpciones": {
-        "DORADO CLARO": 2
+        "DORADO CLARO": 3
       },
       "envio": {
         "corto": "🛵 Mensajería gratis",
@@ -2452,27 +2420,6 @@
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
       },
       "creado": 1789256890851
-    },
-    {
-      "id": "p_1788212193696",
-      "codigo": "BGWX",
-      "name": "Espejo de flor rosada giratorio",
-      "cat": "Hogar y Limpieza",
-      "subcat": "",
-      "notes": "Solo disponible en color rosado\n19cm de alto",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788212042/productos/yw0dmsoqnsurdtvaakyd.jpg",
-      "precioUSD": 3,
-      "precioCUP": 2925,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "espera": true,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1788212193696
     },
     {
       "id": "p_1787088450511",
@@ -3428,7 +3375,7 @@
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1794513284/productos/svpxo4m2qjfjditlbeqa.jpg",
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1794513293/productos/xan1ckofcenkwffy1bsn.jpg"
       ],
-      "max": 5,
+      "max": 4,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -5091,7 +5038,7 @@
       },
       "maxOpciones": {
         "NEGRO": 6,
-        "PLATEADO": 3,
+        "PLATEADO": 2,
         "DORADO": 5
       },
       "envio": {
@@ -6496,11 +6443,9 @@
       "maxOpciones": {
         "BLANCO": 1,
         "ROJO": 2,
+        "ROSA": 1,
         "CELESTE": 1
       },
-      "esperaOpciones": [
-        "ROSA"
-      ],
       "envio": {
         "corto": "🛵 Gratis desde $2.50 USD",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
@@ -6580,45 +6525,6 @@
       "creado": 1789500476471
     },
     {
-      "id": "p_1794755288712",
-      "codigo": "R6R6",
-      "name": "Relojes de hombre",
-      "cat": "Relojes y Prendas",
-      "subcat": "",
-      "notes": "Relojes de pila. Esfera de aleación de metales y manilla de silicona, resistente y no pierde el color. Detalles de peso y medidas en las imágenes. Hermoso y elegante prenda para uso diario. El mejor regalo para papá, hermano, esposo o hijo. Presente ideal para el día del maestro",
-      "photo": "https://res.cloudinary.com/dvahidqdw/image/upload/v1794755009/productos/fxqs2gavulkslizgedwo.jpg",
-      "precioUSD": 6,
-      "precioCUP": 5850,
-      "moneda": "usd",
-      "enOferta": false,
-      "destacado": false,
-      "fotos": [
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794755017/productos/zq8xusrh9tqwyziye7qo.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794755022/productos/i5wiwtfh4rnnrohtsgx0.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794755028/productos/crek4jgyah365lthtffb.jpg",
-        "https://res.cloudinary.com/dvahidqdw/image/upload/v1794755039/productos/wiskmc8egbditadofe3o.jpg"
-      ],
-      "variantes": {
-        "ejes": [
-          "Diseño"
-        ],
-        "opciones": [
-          "NÚMEROS AZULES"
-        ],
-        "agotadas": [
-          "NÚMEROS NEGROS",
-          "NÚMEROS PLATEADOS"
-        ]
-      },
-      "espera": true,
-      "envio": {
-        "corto": "🛵 Mensajería gratis",
-        "largo": "🛵 MENSAJERÍA GRATIS"
-      },
-      "envioGratis": true,
-      "creado": 1794755288712
-    },
-    {
       "id": "p_1790875375235",
       "codigo": "95W4",
       "name": "Relojes de hombre marca Geneva",
@@ -6695,8 +6601,8 @@
       },
       "maxOpciones": {
         "HELADO": 3,
-        "CONEJO": 2,
-        "CACHORRO": 2,
+        "CONEJO": 1,
+        "CACHORRO": 1,
         "POLLITO": 3
       },
       "esperaOpciones": [
@@ -7404,7 +7310,7 @@
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1791860137/productos/jnfvkqarlunnquccmbwt.jpg",
         "https://res.cloudinary.com/dvahidqdw/image/upload/v1791860156/productos/sqeqow9ztynt5p5wisyh.jpg"
       ],
-      "max": 2,
+      "max": 6,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -7747,6 +7653,12 @@
       "cat": "Celulares y Audio"
     },
     {
+      "codigo": "J97W",
+      "name": "Auriculares de Bluetooth",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1793417160/productos/jmd8co2wcwf2kp3grv3i.jpg",
+      "cat": "Celulares y Audio"
+    },
+    {
       "codigo": "KS3Q",
       "name": "Bicicleta Eléctrica de 500W para Adultos",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788830814/productos/mbtm7sr4opagfnenqeht.jpg",
@@ -7936,6 +7848,12 @@
       "codigo": "D5Q2",
       "name": "Espejo de flor giratorio",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788211960/productos/frgnqs3xs1uy6lzojds7.jpg",
+      "cat": "Hogar y Limpieza"
+    },
+    {
+      "codigo": "BGWX",
+      "name": "Espejo de flor rosada giratorio",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1788212042/productos/yw0dmsoqnsurdtvaakyd.jpg",
       "cat": "Hogar y Limpieza"
     },
     {
@@ -8602,6 +8520,12 @@
       "codigo": "4SD3",
       "name": "Reloj plateado de hombre 2",
       "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1787457711/productos/mxeigkzj2t54963sib1n.jpg",
+      "cat": "Relojes y Prendas"
+    },
+    {
+      "codigo": "R6R6",
+      "name": "Relojes de hombre",
+      "foto": "https://res.cloudinary.com/dvahidqdw/image/upload/v1794755009/productos/fxqs2gavulkslizgedwo.jpg",
       "cat": "Relojes y Prendas"
     },
     {
