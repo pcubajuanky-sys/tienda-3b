@@ -1,5 +1,5 @@
 {
-  "generado": "2026-11-27T01:23:33.318Z",
+  "generado": "2026-11-27T01:28:33.382Z",
   "tasa": 975,
   "whatsapp": "5354978966",
   "vendedores": [
@@ -1628,7 +1628,7 @@
       "moneda": "usd",
       "enOferta": false,
       "destacado": false,
-      "espera": true,
+      "max": 1,
       "envio": {
         "corto": "🛵 Mensajería gratis",
         "largo": "🛵 MENSAJERÍA GRATIS"
@@ -2639,7 +2639,7 @@
         ]
       },
       "maxOpciones": {
-        "NEGRO": 6,
+        "NEGRO": 7,
         "TRANSPARENTE": 7,
         "GRIS": 7
       },
@@ -6672,12 +6672,10 @@
       "maxOpciones": {
         "HELADO": 3,
         "CONEJO": 2,
-        "CACHORRO": 1,
-        "POLLITO": 3
+        "CACHORRO": 2,
+        "POLLITO": 3,
+        "ASTRONAUTA": 1
       },
-      "esperaOpciones": [
-        "ASTRONAUTA"
-      ],
       "envio": {
         "corto": "🛵 Gratis desde $2.50 USD",
         "largo": "🛵 MENSAJERÍA GRATIS en compras desde $2.50 USD en San Antonio · puedes completar con otros artículos"
